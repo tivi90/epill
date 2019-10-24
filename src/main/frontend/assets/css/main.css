@@ -307,6 +307,29 @@ a.wide { display : block }
 	z-index: 20;
 }
 
+.form-control {
+	display: block;
+	width: 75% !important;
+	border-radius: 0px!important;
+
+}
+
+.btn-search {
+	background: #0da59b !important;
+	height: 34px !important;;
+	border-radius: 0px!important;
+
+}
+
+.text_home p{
+	height: 160px;
+	text-align: justify;
+}
+
+.text-center{
+	text-align: center !important;
+}
+
 /* Flip around the padding for proper display in narrow viewports */
 .navbar-wrapper>.container {
 	padding-right: 0;
@@ -412,6 +435,10 @@ a.wide { display : block }
 	/* The navbar becomes detached from the top, so we round the corners */
 	.navbar-wrapper .navbar {
 		border-radius: 4px;
+	}
+
+	.carousel-caption {
+		padding-bottom: 150px !important;
 	}
 
 	/* Bump up size of carousel content */

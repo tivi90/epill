@@ -31,7 +31,7 @@ class Navigation extends React.Component {
 	                <div>
 		                <div className="navbar-wrapper">
 		            		<div className ="container">
-		            			<nav className="navbar navbar-inverse navbar-static-top">
+		            			<nav className="navbar navbar-default navbar-fixed-top">
 		            				<div className="container">
 		            					<div className="navbar-header">
 		            						<button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">

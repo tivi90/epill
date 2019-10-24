@@ -55,6 +55,7 @@ class Carousel extends React.Component {
         					{User.isAuthenticated() && 
         						<div className="carousel-caption">
 	        						{this.generatePersonalizedAddress()}
+	        						<br/>
 									<AutoComplete {...this.props} />
 								</div>
         					}
