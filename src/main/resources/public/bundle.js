@@ -30142,6 +30142,7 @@ var Carousel = function (_React$Component) {
                                 "div",
                                 { className: "carousel-caption" },
                                 this.generatePersonalizedAddress(),
+                                _react2.default.createElement("br", null),
                                 _react2.default.createElement(_auto_complete2.default, this.props)
                             )
                         )
@@ -30164,7 +30165,7 @@ exports.default = (0, _reactI18next.translate)()(Carousel);
 
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
+    value: true
 });
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -30202,587 +30203,939 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 var DrugDetail = function (_React$Component) {
-  _inherits(DrugDetail, _React$Component);
+    _inherits(DrugDetail, _React$Component);
 
-  function DrugDetail(props) {
-    _classCallCheck(this, DrugDetail);
+    function DrugDetail(props) {
+        _classCallCheck(this, DrugDetail);
 
-    var _this = _possibleConstructorReturn(this, (DrugDetail.__proto__ || Object.getPrototypeOf(DrugDetail)).call(this));
+        var _this = _possibleConstructorReturn(this, (DrugDetail.__proto__ || Object.getPrototypeOf(DrugDetail)).call(this));
 
-    _this.state = {
-      drug: undefined,
-      showAdditionalInfo: false
-    };
+        _this.state = {
+            drug: undefined,
+            showAdditionalInfo: false
+        };
 
-    _this.toggleShowAdditionalInfo = _this.toggleShowAdditionalInfo.bind(_this);
-    _this.toggleOriginalAndTailoredText = _this.toggleOriginalAndTailoredText.bind(_this);
-    return _this;
-  }
-
-  _createClass(DrugDetail, [{
-    key: "init",
-    value: function init() {
-      var _this2 = this;
-
-      _axios2.default.get("/drug/" + this.props.match.params.id + "/de").then(function (_ref) {
-        var data = _ref.data,
-            status = _ref.status;
-
-        _this2.setState({
-          drug: data
-        });
-      });
+        _this.toggleShowAdditionalInfo = _this.toggleShowAdditionalInfo.bind(_this);
+        _this.toggleOriginalAndTailoredText = _this.toggleOriginalAndTailoredText.bind(_this);
+        return _this;
     }
-  }, {
-    key: "componentWillMount",
-    value: function componentWillMount() {
-      this.init();
-    }
-  }, {
-    key: "componentWillReceiveProps",
-    value: function componentWillReceiveProps(props) {
-      this.props = props;
-      this.init();
-    }
-  }, {
-    key: "createMarkup",
-    value: function createMarkup(text) {
-      return { __html: text };
-    }
-  }, {
-    key: "toggleShowAdditionalInfo",
+
+    _createClass(DrugDetail, [{
+        key: "init",
+        value: function init() {
+            var _this2 = this;
+
+            _axios2.default.get("/drug/" + this.props.match.params.id + "/de").then(function (_ref) {
+                var data = _ref.data,
+                    status = _ref.status;
+
+                _this2.setState({
+                    drug: data
+                });
+            });
+        }
+    }, {
+        key: "componentWillMount",
+        value: function componentWillMount() {
+            this.init();
+        }
+    }, {
+        key: "componentWillReceiveProps",
+        value: function componentWillReceiveProps(props) {
+            this.props = props;
+            this.init();
+        }
+    }, {
+        key: "createMarkup",
+        value: function createMarkup(text) {
+            return { __html: text };
+        }
+    }, {
+        key: "toggleShowAdditionalInfo",
 
 
-    //=============================
+        //=============================
 
-    value: function toggleShowAdditionalInfo() {
-      this.setState({ showAdditionalInfo: !this.state.showAdditionalInfo });
-    }
-  }, {
-    key: "toggleOriginalAndTailoredText",
-    value: function toggleOriginalAndTailoredText(section) {
-      var _this3 = this;
+        value: function toggleShowAdditionalInfo() {
+            this.setState({ showAdditionalInfo: !this.state.showAdditionalInfo });
+        }
+    }, {
+        key: "toggleOriginalAndTailoredText",
+        value: function toggleOriginalAndTailoredText(section) {
+            var _this3 = this;
 
-      var url = section.isTailored ? "packagingSection/tailored/" + section.topic.id + "/" + this.props.match.params.id : "packagingSection/" + section.topic.id + "/" + this.props.match.params.id;
+            var url = section.isTailored ? "packagingSection/tailored/" + section.topic.id + "/" + this.props.match.params.id : "packagingSection/" + section.topic.id + "/" + this.props.match.params.id;
 
-      _axios2.default.get(url).then(function (_ref2) {
-        var data = _ref2.data,
-            status = _ref2.status;
+            _axios2.default.get(url).then(function (_ref2) {
+                var data = _ref2.data,
+                    status = _ref2.status;
 
 
-        switch (status) {
-          case 200:
-            var idx = -1;
-            for (var i = 0; i < _this3.state.drug.packagingSection.length; i++) {
-              if (_this3.state.drug.packagingSection[i]["id"] == section["id"]) {
-                idx = i;
-                break;
-              }
+                switch (status) {
+                    case 200:
+                        var idx = -1;
+                        for (var i = 0; i < _this3.state.drug.packagingSection.length; i++) {
+                            if (_this3.state.drug.packagingSection[i]["id"] == section["id"]) {
+                                idx = i;
+                                break;
+                            }
+                        }
+
+                        _this3.state.drug.packagingSection[idx] = data;
+                        _this3.setState(_this3.state);
+
+                        break;
+                    default:
+                        var t = _this3.props.t;
+
+                        var options = {
+                            position: _reactToastify.toast.POSITION.BOTTOM_CENTER
+                        };
+                        _reactToastify.toast.error(t('errorOccured'), options);
+                        break;
+                }
+            });
+        }
+
+        //=============================
+
+    }, {
+        key: "toggleTaking",
+        value: function toggleTaking(drug) {
+            if (drug.isTaken) {
+                this.removeFromTakingList(drug.id);
+            } else {
+                this.addToTakingList(drug.id);
             }
-
-            _this3.state.drug.packagingSection[idx] = data;
-            _this3.setState(_this3.state);
-
-            break;
-          default:
-            var t = _this3.props.t;
-
-            var options = {
-              position: _reactToastify.toast.POSITION.BOTTOM_CENTER
-            };
-            _reactToastify.toast.error(t('errorOccured'), options);
-            break;
         }
-      });
-    }
+    }, {
+        key: "addToTakingList",
+        value: function addToTakingList(id) {
+            var _this4 = this;
 
-    //=============================
+            _axios2.default.post('/drug/taking/add', { id: id }, {
+                validateStatus: function validateStatus(status) {
+                    return status >= 200 && status < 300 || status == 400 || status == 401;
+                }
+            }).then(function (_ref3) {
+                var data = _ref3.data,
+                    status = _ref3.status;
+                var t = _this4.props.t;
 
-  }, {
-    key: "toggleTaking",
-    value: function toggleTaking(drug) {
-      if (drug.isTaken) {
-        this.removeFromTakingList(drug.id);
-      } else {
-        this.addToTakingList(drug.id);
-      }
-    }
-  }, {
-    key: "addToTakingList",
-    value: function addToTakingList(id) {
-      var _this4 = this;
+                var options = {
+                    position: _reactToastify.toast.POSITION.BOTTOM_CENTER
+                };
 
-      _axios2.default.post('/drug/taking/add', { id: id }, {
-        validateStatus: function validateStatus(status) {
-          return status >= 200 && status < 300 || status == 400 || status == 401;
+                switch (status) {
+                    case 200:
+                        _reactToastify.toast.success(t('addToTakingListSuccess'), options);
+                        _this4.state.drug.isTaken = true;
+                        _this4.setState(_this4.state.drug);
+                        break;
+                    case 400:
+                        _reactToastify.toast.error(t('addToTakingListFailed'), options);
+                        break;
+                    case 401:
+                        console.log(data, "not permitted");
+                        break;
+                }
+            });
         }
-      }).then(function (_ref3) {
-        var data = _ref3.data,
-            status = _ref3.status;
-        var t = _this4.props.t;
+    }, {
+        key: "removeFromTakingList",
+        value: function removeFromTakingList(id) {
+            var _this5 = this;
 
-        var options = {
-          position: _reactToastify.toast.POSITION.BOTTOM_CENTER
-        };
+            _axios2.default.post('/drug/taking/remove', { id: id }, {
+                validateStatus: function validateStatus(status) {
+                    return status >= 200 && status < 300 || status == 400 || status == 401;
+                }
+            }).then(function (_ref4) {
+                var data = _ref4.data,
+                    status = _ref4.status;
+                var t = _this5.props.t;
 
-        switch (status) {
-          case 200:
-            _reactToastify.toast.success(t('addToTakingListSuccess'), options);
-            _this4.state.drug.isTaken = true;
-            _this4.setState(_this4.state.drug);
-            break;
-          case 400:
-            _reactToastify.toast.error(t('addToTakingListFailed'), options);
-            break;
-          case 401:
-            console.log(data, "not permitted");
-            break;
+                var options = {
+                    position: _reactToastify.toast.POSITION.BOTTOM_CENTER
+                };
+
+                switch (status) {
+                    case 200:
+                        _reactToastify.toast.success(t('removeFromTakingListSuccess'), options);
+                        _this5.state.drug.isTaken = !_this5.state.drug.isTaken;
+                        _this5.setState(_this5.state.drug);
+                        break;
+                    case 400:
+                        _reactToastify.toast.error(t('removeFromTakingListFailed'), options);
+                        break;
+                    case 401:
+                        console.log(data, "not permitted");
+                        break;
+                }
+            });
         }
-      });
-    }
-  }, {
-    key: "removeFromTakingList",
-    value: function removeFromTakingList(id) {
-      var _this5 = this;
 
-      _axios2.default.post('/drug/taking/remove', { id: id }, {
-        validateStatus: function validateStatus(status) {
-          return status >= 200 && status < 300 || status == 400 || status == 401;
+        /**
+         * toggle add/remove to/from remember/taking list
+         */
+
+    }, {
+        key: "toggleRemember",
+        value: function toggleRemember(drug) {
+            if (drug.isRemembered) {
+                this.removeFromRememberList(drug.id);
+            } else {
+                this.addToRememberList(drug.id);
+            }
         }
-      }).then(function (_ref4) {
-        var data = _ref4.data,
-            status = _ref4.status;
-        var t = _this5.props.t;
+    }, {
+        key: "addToRememberList",
+        value: function addToRememberList(id) {
+            var _this6 = this;
 
-        var options = {
-          position: _reactToastify.toast.POSITION.BOTTOM_CENTER
-        };
+            _axios2.default.post('/drug/remember/add', { id: id }, {
+                validateStatus: function validateStatus(status) {
+                    return status >= 200 && status < 300 || status == 400 || status == 401 || status == 405;
+                }
+            }).then(function (_ref5) {
+                var data = _ref5.data,
+                    status = _ref5.status;
+                var t = _this6.props.t;
 
-        switch (status) {
-          case 200:
-            _reactToastify.toast.success(t('removeFromTakingListSuccess'), options);
-            _this5.state.drug.isTaken = !_this5.state.drug.isTaken;
-            _this5.setState(_this5.state.drug);
-            break;
-          case 400:
-            _reactToastify.toast.error(t('removeFromTakingListFailed'), options);
-            break;
-          case 401:
-            console.log(data, "not permitted");
-            break;
+                var options = {
+                    position: _reactToastify.toast.POSITION.BOTTOM_CENTER
+                };
+
+                switch (status) {
+                    case 200:
+                        _reactToastify.toast.success(t('addToRememberListSuccess'), options);
+                        _this6.state.drug.isRemembered = true;
+                        _this6.setState(_this6.state.drug);
+                        break;
+                    case 400:
+                        _reactToastify.toast.error(t('addToRememberListFailed'), options);
+                        break;
+                    case 401:
+                        console.log(data, "not permitted");
+                        break;
+                    case 405:
+                        console.log(data, "Method not allowed");
+                        break;
+                }
+            });
         }
-      });
-    }
+    }, {
+        key: "removeFromRememberList",
+        value: function removeFromRememberList(id) {
+            var _this7 = this;
 
-    /**
-     * toggle add/remove to/from remember/taking list
-     */
+            _axios2.default.post('/drug/remember/remove', { id: id }, {
+                validateStatus: function validateStatus(status) {
+                    return status >= 200 && status < 300 || status == 400 || status == 401 || status == 405;
+                }
+            }).then(function (_ref6) {
+                var data = _ref6.data,
+                    status = _ref6.status;
+                var t = _this7.props.t;
 
-  }, {
-    key: "toggleRemember",
-    value: function toggleRemember(drug) {
-      if (drug.isRemembered) {
-        this.removeFromRememberList(drug.id);
-      } else {
-        this.addToRememberList(drug.id);
-      }
-    }
-  }, {
-    key: "addToRememberList",
-    value: function addToRememberList(id) {
-      var _this6 = this;
+                var options = {
+                    position: _reactToastify.toast.POSITION.BOTTOM_CENTER
+                };
 
-      _axios2.default.post('/drug/remember/add', { id: id }, {
-        validateStatus: function validateStatus(status) {
-          return status >= 200 && status < 300 || status == 400 || status == 401 || status == 405;
+                switch (status) {
+                    case 200:
+                        _reactToastify.toast.success(t('removeFromRememberListSuccess'), options);
+                        _this7.state.drug.isRemembered = !_this7.state.drug.isRemembered;
+                        _this7.setState(_this7.state.drug);
+                        break;
+                    case 400:
+                        _reactToastify.toast.error(t('removeFromRememberListFailed'), options);
+                        break;
+                    case 401:
+                        console.log(data, "not permitted");
+                        break;
+                    case 405:
+                        console.log(data, "Method not allowed");
+                        break;
+                }
+            });
         }
-      }).then(function (_ref5) {
-        var data = _ref5.data,
-            status = _ref5.status;
-        var t = _this6.props.t;
 
-        var options = {
-          position: _reactToastify.toast.POSITION.BOTTOM_CENTER
-        };
-
-        switch (status) {
-          case 200:
-            _reactToastify.toast.success(t('addToRememberListSuccess'), options);
-            _this6.state.drug.isRemembered = true;
-            _this6.setState(_this6.state.drug);
-            break;
-          case 400:
-            _reactToastify.toast.error(t('addToRememberListFailed'), options);
-            break;
-          case 401:
-            console.log(data, "not permitted");
-            break;
-          case 405:
-            console.log(data, "Method not allowed");
-            break;
-        }
-      });
-    }
-  }, {
-    key: "removeFromRememberList",
-    value: function removeFromRememberList(id) {
-      var _this7 = this;
-
-      _axios2.default.post('/drug/remember/remove', { id: id }, {
-        validateStatus: function validateStatus(status) {
-          return status >= 200 && status < 300 || status == 400 || status == 401 || status == 405;
-        }
-      }).then(function (_ref6) {
-        var data = _ref6.data,
-            status = _ref6.status;
-        var t = _this7.props.t;
-
-        var options = {
-          position: _reactToastify.toast.POSITION.BOTTOM_CENTER
-        };
-
-        switch (status) {
-          case 200:
-            _reactToastify.toast.success(t('removeFromRememberListSuccess'), options);
-            _this7.state.drug.isRemembered = !_this7.state.drug.isRemembered;
-            _this7.setState(_this7.state.drug);
-            break;
-          case 400:
-            _reactToastify.toast.error(t('removeFromRememberListFailed'), options);
-            break;
-          case 401:
-            console.log(data, "not permitted");
-            break;
-          case 405:
-            console.log(data, "Method not allowed");
-            break;
-        }
-      });
-    }
-
-    //=============================
+        //=============================
 
 
-  }, {
-    key: "renderDrugFeatures",
-    value: function renderDrugFeatures(drug) {
+    }, {
+        key: "renderDrugFeatures",
+        value: function renderDrugFeatures(drug) {
 
-      if (!drug.drugFeature) return;
+            if (!drug.drugFeature) return;
 
-      return _react2.default.createElement(
-        "p",
-        null,
-        drug.drugFeature.map(function (feature) {
-          return _react2.default.createElement("img", { key: feature.id, src: "./../../assets/icons/" + feature.id + ".svg", alt: feature.drugFeature, title: feature.drugFeature, className: "drug-feature-icon" });
-        })
-      );
-    }
-  }, {
-    key: "renderDisease",
-    value: function renderDisease(drug) {
-      if (!drug.disease) {
-        return;
-      }
-
-      var t = this.props.t;
-
-      return _react2.default.createElement(
-        "section",
-        { className: "diseases" },
-        t('usedWhen') + ": ",
-        drug.disease.map(function (disease) {
-          return _react2.default.createElement(
-            "span",
-            { key: disease.id },
-            disease.name
-          );
-        }).reduce(function (prev, curr) {
-          return [prev, ', ', curr];
-        })
-      );
-    }
-  }, {
-    key: "renderPharmaceuticalForm",
-    value: function renderPharmaceuticalForm(drug) {
-      if (!drug.pharmaceuticalForm) {
-        return;
-      }
-
-      var t = this.props.t;
-
-      return _react2.default.createElement(
-        "section",
-        { className: "diseases" },
-        t('pharmaceuticalForm') + ": ",
-        drug.pharmaceuticalForm.map(function (pharmaceuticalForm) {
-          return _react2.default.createElement(
-            "span",
-            { key: pharmaceuticalForm.id },
-            pharmaceuticalForm.name
-          );
-        }).reduce(function (prev, curr) {
-          return [prev, ', ', curr];
-        })
-      );
-    }
-  }, {
-    key: "renderActiveSubstance",
-    value: function renderActiveSubstance(drug) {
-      if (!drug.activeSubstance) return null;
-
-      var t = this.props.t;
-
-
-      return _react2.default.createElement(
-        "p",
-        null,
-        " ",
-        t('activeSubstance') + ": ",
-        drug.activeSubstance.map(function (substance) {
-          return _react2.default.createElement(
-            "span",
-            { key: substance.id },
-            substance.name
-          );
-        }).reduce(function (prev, curr) {
-          return [prev, ', ', curr];
-        })
-      );
-    }
-  }, {
-    key: "renderPZN",
-    value: function renderPZN(drug) {
-      if (!drug.packaging) return null;
-
-      var t = this.props.t;
-
-
-      return _react2.default.createElement(
-        "section",
-        { className: "pzn" },
-        t('pzn') + ": ",
-        drug.packaging.map(function (packaging) {
-          return _react2.default.createElement(
-            "span",
-            { key: packaging.id },
-            packaging.name,
-            " ",
-            packaging.pzn
-          );
-        }).reduce(function (prev, curr) {
-          return [prev, ', ', curr];
-        })
-      );
-    }
-  }, {
-    key: "renderIndicationGroup",
-    value: function renderIndicationGroup(drug) {
-      if (!drug.indicationGroup || !drug.indicationGroup.name) return null;
-
-      var t = this.props.t;
-
-
-      return _react2.default.createElement(
-        "section",
-        null,
-        t('indicationGroup') + ": " + drug.indicationGroup.name
-      );
-    }
-  }, {
-    key: "renderProductGroup",
-    value: function renderProductGroup(drug) {
-
-      if (!drug.productGroup || !drug.productGroup.name) return null;
-
-      var t = this.props.t;
-
-
-      return _react2.default.createElement(
-        "section",
-        null,
-        t('productGroup') + ": " + drug.productGroup.name
-      );
-    }
-  }, {
-    key: "renderSectionOverview",
-    value: function renderSectionOverview(drug) {
-      if (!drug.packagingSection) {
-        return null;
-      }
-
-      return drug.packagingSection.map(function (section) {
-        return _react2.default.createElement(
-          "li",
-          { key: section.id },
-          section.topic.title
-        );
-      });
-    }
-  }, {
-    key: "renderSectionList",
-    value: function renderSectionList(drug) {
-      var _this8 = this;
-
-      if (!drug.packagingSection) {
-        return null;
-      }
-
-      return drug.packagingSection.map(function (section) {
-        return _react2.default.createElement(_accordion2.default, { section: section, toggleOriginalAndTailoredText: _this8.toggleOriginalAndTailoredText, key: section.id });
-      });
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      var _this9 = this;
-
-      var t = this.props.t;
-
-      var drug = this.state.drug;
-      var showAdditionalInfo = this.state.showAdditionalInfo;
-
-      if (!drug) {
-        // Do not show anything while loading.
-        return _react2.default.createElement(
-          "div",
-          { className: "container marketing no-banner" },
-          _react2.default.createElement(
-            "div",
-            { className: "page-header" },
-            _react2.default.createElement(
-              "h3",
-              null,
-              " "
-            )
-          ),
-          _react2.default.createElement(_loading2.default, null)
-        );
-      }
-
-      return _react2.default.createElement(
-        "div",
-        { className: "container marketing no-banner" },
-        _react2.default.createElement(
-          "div",
-          { className: "page-header" },
-          _react2.default.createElement(
-            "div",
-            { className: "btn-toolbar pull-right" },
-            _react2.default.createElement("div", { className: "btn-group" })
-          ),
-          _User2.default.isAuthenticated() && _react2.default.createElement(
-            "div",
-            { className: "btn-toolbar pull-right" },
-            _react2.default.createElement(
-              "div",
-              { className: "btn-group" },
-              _react2.default.createElement(
-                "button",
-                { type: "button", className: "btn btn-like", onClick: function onClick() {
-                    return _this9.toggleTaking(drug);
-                  } },
-                _react2.default.createElement("span", { className: "glyphicon white" + (!drug.isTaken ? " glyphicon-heart" : " glyphicon-minus") })
-              ),
-              _react2.default.createElement(
-                "button",
-                { type: "button", className: "btn btn-add", onClick: function onClick() {
-                    return _this9.toggleRemember(drug);
-                  } },
-                _react2.default.createElement("span", { className: "glyphicon white" + (!drug.isRemembered ? " glyphicon-plus" : " glyphicon-minus") })
-              )
-            )
-          ),
-          _react2.default.createElement(
-            "h3",
-            null,
-            drug.name,
-            " ",
-            drug.productGroup && drug.productGroup.name && _react2.default.createElement(
-              "span",
-              { className: "text-muted" },
-              drug.productGroup.name
-            )
-          ),
-          _react2.default.createElement(
-            "span",
-            null,
-            "v. ",
-            drug.version,
-            " | ",
-            t('publishingDate'),
-            ": ",
-            new Date(drug.year).toLocaleDateString()
-          )
-        ),
-        _react2.default.createElement(
-          "div",
-          { className: "row featurette drug-detail-header" },
-          _react2.default.createElement(
-            "div",
-            { className: "col-xs-12 col-sm-12 col-md-3" },
-            _react2.default.createElement("img", { className: "featurette-image img-responsive center-block", alt: drug.name, title: drug.name, src: "/image/drug/" + drug.id }),
-            _react2.default.createElement(
-              "div",
-              { className: "drug-features margin-s" },
-              this.renderDrugFeatures(drug)
-            )
-          ),
-          _react2.default.createElement(
-            "div",
-            { className: "col-xs-12 col-sm-12 col-md-9" },
-            _User2.default.isAuthenticated() && drug.personalizedInformation && _react2.default.createElement(
-              "div",
-              { className: "alert alert-info alert-dismissable" },
-              _react2.default.createElement(
-                "a",
-                { href: "#", className: "close", "data-dismiss": "alert", "aria-label": "close" },
-                "\xD7"
-              ),
-              _react2.default.createElement("span", { dangerouslySetInnerHTML: this.createMarkup(drug.personalizedInformation) })
-            ),
-            this.renderPharmaceuticalForm(drug),
-            this.renderDisease(drug),
-            this.renderActiveSubstance(drug),
-            _react2.default.createElement(
-              "div",
-              { className: "additional-information" },
-              showAdditionalInfo && _react2.default.createElement(
-                "section",
-                null,
-                this.renderIndicationGroup(drug),
-                this.renderProductGroup(drug),
-                this.renderPZN(drug)
-              ),
-              _react2.default.createElement(
+            return _react2.default.createElement(
                 "p",
                 null,
-                _react2.default.createElement(
-                  "a",
-                  { onClick: this.toggleShowAdditionalInfo },
-                  "[",
-                  !showAdditionalInfo && _react2.default.createElement(
-                    "span",
-                    null,
-                    t('viewDetails')
-                  ),
-                  showAdditionalInfo && _react2.default.createElement(
-                    "span",
-                    null,
-                    t('hideDetails')
-                  ),
-                  "]"
-                )
-              )
-            )
-          )
-        ),
-        _react2.default.createElement("hr", null),
-        this.renderSectionList(drug)
-      );
-    }
-  }]);
+                drug.drugFeature.map(function (feature) {
+                    return _react2.default.createElement("img", { key: feature.id,
+                        src: "./../../assets/icons/" + feature.id + ".svg",
+                        alt: feature.drugFeature, title: feature.drugFeature,
+                        className: "drug-feature-icon" });
+                })
+            );
+        }
+    }, {
+        key: "renderDisease",
+        value: function renderDisease(drug) {
+            if (!drug.disease) {
+                return;
+            }
 
-  return DrugDetail;
+            var t = this.props.t;
+
+            return _react2.default.createElement(
+                "section",
+                { className: "diseases" },
+                t('usedWhen') + ": ",
+                drug.disease.map(function (disease) {
+                    return _react2.default.createElement(
+                        "span",
+                        { key: disease.id },
+                        disease.name
+                    );
+                }).reduce(function (prev, curr) {
+                    return [prev, ', ', curr];
+                })
+            );
+        }
+    }, {
+        key: "renderPharmaceuticalForm",
+        value: function renderPharmaceuticalForm(drug) {
+            if (!drug.pharmaceuticalForm) {
+                return;
+            }
+
+            var t = this.props.t;
+
+            return _react2.default.createElement(
+                "section",
+                { className: "diseases" },
+                t('pharmaceuticalForm') + ": ",
+                drug.pharmaceuticalForm.map(function (pharmaceuticalForm) {
+                    return _react2.default.createElement(
+                        "span",
+                        {
+                            key: pharmaceuticalForm.id },
+                        pharmaceuticalForm.name
+                    );
+                }).reduce(function (prev, curr) {
+                    return [prev, ', ', curr];
+                })
+            );
+        }
+    }, {
+        key: "renderActiveSubstance",
+        value: function renderActiveSubstance(drug) {
+            if (!drug.activeSubstance) return null;
+
+            var t = this.props.t;
+
+
+            return _react2.default.createElement(
+                "p",
+                null,
+                " ",
+                t('activeSubstance') + ": ",
+                drug.activeSubstance.map(function (substance) {
+                    return _react2.default.createElement(
+                        "span",
+                        { key: substance.id },
+                        substance.name
+                    );
+                }).reduce(function (prev, curr) {
+                    return [prev, ', ', curr];
+                })
+            );
+        }
+    }, {
+        key: "renderPZN",
+        value: function renderPZN(drug) {
+            if (!drug.packaging) return null;
+
+            var t = this.props.t;
+
+
+            return _react2.default.createElement(
+                "section",
+                { className: "pzn" },
+                t('pzn') + ": ",
+                drug.packaging.map(function (packaging) {
+                    return _react2.default.createElement(
+                        "span",
+                        { key: packaging.id },
+                        packaging.name,
+                        " ",
+                        packaging.pzn
+                    );
+                }).reduce(function (prev, curr) {
+                    return [prev, ', ', curr];
+                })
+            );
+        }
+    }, {
+        key: "renderIndicationGroup",
+        value: function renderIndicationGroup(drug) {
+            if (!drug.indicationGroup || !drug.indicationGroup.name) return null;
+
+            var t = this.props.t;
+
+
+            return _react2.default.createElement(
+                "section",
+                null,
+                t('indicationGroup') + ": " + drug.indicationGroup.name
+            );
+        }
+    }, {
+        key: "renderProductGroup",
+        value: function renderProductGroup(drug) {
+
+            if (!drug.productGroup || !drug.productGroup.name) return null;
+
+            var t = this.props.t;
+
+
+            return _react2.default.createElement(
+                "section",
+                null,
+                t('productGroup') + ": " + drug.productGroup.name
+            );
+        }
+    }, {
+        key: "renderSectionOverview",
+        value: function renderSectionOverview(drug) {
+            if (!drug.packagingSection) {
+                return null;
+            }
+
+            return drug.packagingSection.map(function (section) {
+                return _react2.default.createElement(
+                    "li",
+                    { key: section.id },
+                    section.topic.title
+                );
+            });
+        }
+    }, {
+        key: "renderSectionList",
+        value: function renderSectionList(drug) {
+            var _this8 = this;
+
+            if (!drug.packagingSection) {
+                return null;
+            }
+
+            return drug.packagingSection.map(function (section) {
+                return _react2.default.createElement(_accordion2.default, { section: section, toggleOriginalAndTailoredText: _this8.toggleOriginalAndTailoredText,
+                    key: section.id });
+            });
+        }
+    }, {
+        key: "render",
+        value: function render() {
+            var _this9 = this;
+
+            var t = this.props.t;
+
+            var drug = this.state.drug;
+            var showAdditionalInfo = this.state.showAdditionalInfo;
+
+            if (!drug) {
+                // Do not show anything while loading.
+                return _react2.default.createElement(
+                    "div",
+                    { className: "container marketing no-banner" },
+                    _react2.default.createElement(
+                        "div",
+                        { className: "page-header" },
+                        _react2.default.createElement("h3", null)
+                    ),
+                    _react2.default.createElement(_loading2.default, null)
+                );
+            }
+
+            return _react2.default.createElement(
+                "div",
+                { className: "container marketing no-banner" },
+                _react2.default.createElement(
+                    "div",
+                    { className: "round-button-outer report-round-button" },
+                    _react2.default.createElement(
+                        "div",
+                        { id: "reportBtn", className: "round-button-inner-main", "data-toggle": "modal", "data-target": "#info" },
+                        _react2.default.createElement("i", { className: "fas fa-info" })
+                    )
+                ),
+                _react2.default.createElement(
+                    "div",
+                    { className: "modal fade", id: "info", tabIndex: "-1", role: "dialog", "aria-labelledby": "adressLabel",
+                        "aria-hidden": "true" },
+                    _react2.default.createElement(
+                        "div",
+                        { className: "modal-dialog", role: "document" },
+                        _react2.default.createElement(
+                            "div",
+                            { className: "modal-content" },
+                            _react2.default.createElement(
+                                "div",
+                                { className: "modal-header" },
+                                _react2.default.createElement(
+                                    "h1",
+                                    null,
+                                    "Pharmazeutischer Unternehmer und Hersteller"
+                                ),
+                                _react2.default.createElement(
+                                    "button",
+                                    { type: "button", className: "close", "data-dismiss": "modal", "aria-label": "Close" },
+                                    _react2.default.createElement(
+                                        "span",
+                                        { "aria-hidden": "true" },
+                                        "\xD7"
+                                    )
+                                )
+                            ),
+                            _react2.default.createElement(
+                                "div",
+                                { className: "modal-body", style: { color: "black" } },
+                                _react2.default.createElement(
+                                    "div",
+                                    { className: "row" },
+                                    _react2.default.createElement(
+                                        "div",
+                                        { className: "col-lg-8" },
+                                        _react2.default.createElement(
+                                            "p",
+                                            null,
+                                            " Engelhard Arzneimittel GmbH & Co. KG ",
+                                            _react2.default.createElement("br", null),
+                                            "Herzbergstr. 3 ",
+                                            _react2.default.createElement("br", null),
+                                            "61138 Niederdorfelden ",
+                                            _react2.default.createElement("br", null),
+                                            _react2.default.createElement(
+                                                "b",
+                                                null,
+                                                "Tel.:"
+                                            ),
+                                            " 06101 / 539 \u2013 300 ",
+                                            _react2.default.createElement("br", null),
+                                            _react2.default.createElement(
+                                                "b",
+                                                null,
+                                                "Fax:"
+                                            ),
+                                            " 06101 / 539 \u2013 315 ",
+                                            _react2.default.createElement("br", null),
+                                            _react2.default.createElement(
+                                                "b",
+                                                null,
+                                                " Internet:"
+                                            ),
+                                            " ",
+                                            _react2.default.createElement(
+                                                "a",
+                                                {
+                                                    href: "http://www.engelhard-am.de" },
+                                                "http://www.engelhard-am.de"
+                                            ),
+                                            " ",
+                                            _react2.default.createElement("br", null),
+                                            _react2.default.createElement(
+                                                "b",
+                                                null,
+                                                " E-Mail:"
+                                            ),
+                                            " ",
+                                            _react2.default.createElement(
+                                                "a",
+                                                {
+                                                    href: "mailto:info@engelhard-am.de" },
+                                                "info@engelhard-am.de"
+                                            ),
+                                            " ",
+                                            _react2.default.createElement("br", null)
+                                        )
+                                    ),
+                                    _react2.default.createElement(
+                                        "div",
+                                        { className: "col-lg-4" },
+                                        _react2.default.createElement("img", { className: "img-responsive", src: "./img/Engelhard_Logo_2013.png" })
+                                    )
+                                )
+                            ),
+                            _react2.default.createElement(
+                                "div",
+                                { className: "modal-footer" },
+                                _react2.default.createElement(
+                                    "button",
+                                    { type: "button", className: "btn btn-secondary", "data-dismiss": "modal" },
+                                    "Schlie\xDFen"
+                                )
+                            )
+                        )
+                    )
+                ),
+                _react2.default.createElement(
+                    "div",
+                    { className: "round-button-outer report-round-button no_animation", style: { top: "190px" } },
+                    _react2.default.createElement(
+                        "div",
+                        { id: "reportBtn", className: "round-button-inner-main no_animation", "data-toggle": "modal", "data-target": "#adress" },
+                        _react2.default.createElement("i", { className: "fas fa-address-card" })
+                    )
+                ),
+                _react2.default.createElement(
+                    "div",
+                    { className: "modal fade", id: "info", tabIndex: "-1", role: "dialog", "aria-labelledby": "adressLabel",
+                        "aria-hidden": "true" },
+                    _react2.default.createElement(
+                        "div",
+                        { className: "modal-dialog", role: "document" },
+                        _react2.default.createElement(
+                            "div",
+                            { className: "modal-content" },
+                            _react2.default.createElement(
+                                "div",
+                                { className: "modal-header" },
+                                _react2.default.createElement(
+                                    "h1",
+                                    null,
+                                    "Pharmazeutischer Unternehmer und Hersteller"
+                                ),
+                                _react2.default.createElement(
+                                    "button",
+                                    { type: "button", className: "close", "data-dismiss": "modal", "aria-label": "Close" },
+                                    _react2.default.createElement(
+                                        "span",
+                                        { "aria-hidden": "true" },
+                                        "\xD7"
+                                    )
+                                )
+                            ),
+                            _react2.default.createElement(
+                                "div",
+                                { className: "modal-body", style: { color: "black" } },
+                                _react2.default.createElement(
+                                    "div",
+                                    { className: "row" },
+                                    _react2.default.createElement(
+                                        "div",
+                                        { className: "col-lg-8" },
+                                        _react2.default.createElement(
+                                            "p",
+                                            null,
+                                            " Engelhard Arzneimittel GmbH & Co. KG ",
+                                            _react2.default.createElement("br", null),
+                                            "Herzbergstr. 3 ",
+                                            _react2.default.createElement("br", null),
+                                            "61138 Niederdorfelden ",
+                                            _react2.default.createElement("br", null),
+                                            _react2.default.createElement(
+                                                "b",
+                                                null,
+                                                "Tel.:"
+                                            ),
+                                            " 06101 / 539 \u2013 300 ",
+                                            _react2.default.createElement("br", null),
+                                            _react2.default.createElement(
+                                                "b",
+                                                null,
+                                                "Fax:"
+                                            ),
+                                            " 06101 / 539 \u2013 315 ",
+                                            _react2.default.createElement("br", null),
+                                            _react2.default.createElement(
+                                                "b",
+                                                null,
+                                                " Internet:"
+                                            ),
+                                            " ",
+                                            _react2.default.createElement(
+                                                "a",
+                                                {
+                                                    href: "http://www.engelhard-am.de" },
+                                                "http://www.engelhard-am.de"
+                                            ),
+                                            " ",
+                                            _react2.default.createElement("br", null),
+                                            _react2.default.createElement(
+                                                "b",
+                                                null,
+                                                " E-Mail:"
+                                            ),
+                                            " ",
+                                            _react2.default.createElement(
+                                                "a",
+                                                {
+                                                    href: "mailto:info@engelhard-am.de" },
+                                                "info@engelhard-am.de"
+                                            ),
+                                            " ",
+                                            _react2.default.createElement("br", null)
+                                        )
+                                    ),
+                                    _react2.default.createElement(
+                                        "div",
+                                        { className: "col-lg-4" },
+                                        _react2.default.createElement("img", { className: "img-responsive", src: "./img/Engelhard_Logo_2013.png" })
+                                    )
+                                )
+                            ),
+                            _react2.default.createElement(
+                                "div",
+                                { className: "modal-footer" },
+                                _react2.default.createElement(
+                                    "button",
+                                    { type: "button", className: "btn btn-secondary", "data-dismiss": "modal" },
+                                    "Schlie\xDFen"
+                                )
+                            )
+                        )
+                    )
+                ),
+                _react2.default.createElement(
+                    "div",
+                    { className: "round-button-outer report-round-button no_animation", style: { top: "280px" } },
+                    _react2.default.createElement(
+                        "div",
+                        { id: "reportBtn", className: "round-button-inner-main no_animation", "data-toggle": "modal", "data-target": "#melden" },
+                        _react2.default.createElement("i", { className: "fas fa-comment-medical" })
+                    )
+                ),
+                _react2.default.createElement(
+                    "div",
+                    { className: "modal fade", id: "info", tabIndex: "-1", role: "dialog", "aria-labelledby": "adressLabel",
+                        "aria-hidden": "true" },
+                    _react2.default.createElement(
+                        "div",
+                        { className: "modal-dialog", role: "document" },
+                        _react2.default.createElement(
+                            "div",
+                            { className: "modal-content" },
+                            _react2.default.createElement(
+                                "div",
+                                { className: "modal-header" },
+                                _react2.default.createElement(
+                                    "h1",
+                                    null,
+                                    "Pharmazeutischer Unternehmer und Hersteller"
+                                ),
+                                _react2.default.createElement(
+                                    "button",
+                                    { type: "button", className: "close", "data-dismiss": "modal", "aria-label": "Close" },
+                                    _react2.default.createElement(
+                                        "span",
+                                        { "aria-hidden": "true" },
+                                        "\xD7"
+                                    )
+                                )
+                            ),
+                            _react2.default.createElement(
+                                "div",
+                                { className: "modal-body", style: { color: "black" } },
+                                _react2.default.createElement(
+                                    "div",
+                                    { className: "row" },
+                                    _react2.default.createElement(
+                                        "div",
+                                        { className: "col-lg-8" },
+                                        _react2.default.createElement(
+                                            "p",
+                                            null,
+                                            " Engelhard Arzneimittel GmbH & Co. KG ",
+                                            _react2.default.createElement("br", null),
+                                            "Herzbergstr. 3 ",
+                                            _react2.default.createElement("br", null),
+                                            "61138 Niederdorfelden ",
+                                            _react2.default.createElement("br", null),
+                                            _react2.default.createElement(
+                                                "b",
+                                                null,
+                                                "Tel.:"
+                                            ),
+                                            " 06101 / 539 \u2013 300 ",
+                                            _react2.default.createElement("br", null),
+                                            _react2.default.createElement(
+                                                "b",
+                                                null,
+                                                "Fax:"
+                                            ),
+                                            " 06101 / 539 \u2013 315 ",
+                                            _react2.default.createElement("br", null),
+                                            _react2.default.createElement(
+                                                "b",
+                                                null,
+                                                " Internet:"
+                                            ),
+                                            " ",
+                                            _react2.default.createElement(
+                                                "a",
+                                                {
+                                                    href: "http://www.engelhard-am.de" },
+                                                "http://www.engelhard-am.de"
+                                            ),
+                                            " ",
+                                            _react2.default.createElement("br", null),
+                                            _react2.default.createElement(
+                                                "b",
+                                                null,
+                                                " E-Mail:"
+                                            ),
+                                            " ",
+                                            _react2.default.createElement(
+                                                "a",
+                                                {
+                                                    href: "mailto:info@engelhard-am.de" },
+                                                "info@engelhard-am.de"
+                                            ),
+                                            " ",
+                                            _react2.default.createElement("br", null)
+                                        )
+                                    ),
+                                    _react2.default.createElement(
+                                        "div",
+                                        { className: "col-lg-4" },
+                                        _react2.default.createElement("img", { className: "img-responsive", src: "./img/Engelhard_Logo_2013.png" })
+                                    )
+                                )
+                            ),
+                            _react2.default.createElement(
+                                "div",
+                                { className: "modal-footer" },
+                                _react2.default.createElement(
+                                    "button",
+                                    { type: "button", className: "btn btn-secondary", "data-dismiss": "modal" },
+                                    "Schlie\xDFen"
+                                )
+                            )
+                        )
+                    )
+                ),
+                _react2.default.createElement(
+                    "div",
+                    { className: "page-header" },
+                    _react2.default.createElement(
+                        "div",
+                        { className: "btn-toolbar pull-right" },
+                        _react2.default.createElement("div", { className: "btn-group" })
+                    ),
+                    _User2.default.isAuthenticated() && _react2.default.createElement(
+                        "div",
+                        { className: "btn-toolbar pull-right" },
+                        _react2.default.createElement(
+                            "div",
+                            { className: "btn-group" },
+                            _react2.default.createElement(
+                                "button",
+                                { type: "button", className: "btn btn-like", onClick: function onClick() {
+                                        return _this9.toggleTaking(drug);
+                                    } },
+                                _react2.default.createElement("span", {
+                                    className: "glyphicon white" + (!drug.isTaken ? " glyphicon-heart" : " glyphicon-minus") })
+                            ),
+                            _react2.default.createElement(
+                                "button",
+                                { type: "button", className: "btn btn-add", onClick: function onClick() {
+                                        return _this9.toggleRemember(drug);
+                                    } },
+                                _react2.default.createElement("span", {
+                                    className: "glyphicon white" + (!drug.isRemembered ? " glyphicon-plus" : " glyphicon-minus") })
+                            )
+                        )
+                    ),
+                    _react2.default.createElement(
+                        "div",
+                        { className: "row med_head" },
+                        _react2.default.createElement(
+                            "h1",
+                            null,
+                            drug.name,
+                            " ",
+                            drug.productGroup && drug.productGroup.name && _react2.default.createElement(
+                                "span",
+                                { className: "text-muted" },
+                                drug.productGroup.name
+                            )
+                        )
+                    )
+                ),
+                _react2.default.createElement(
+                    "div",
+                    { className: "row featurette drug-detail-header" },
+                    _react2.default.createElement(
+                        "div",
+                        { className: "col-xs-12 col-sm-12 col-md-4" },
+                        _react2.default.createElement("img", { className: "featurette-image img-responsive center-block", alt: drug.name, title: drug.name,
+                            src: "/image/drug/" + drug.id }),
+                        _react2.default.createElement(
+                            "div",
+                            { className: "drug-features margin-s" },
+                            this.renderDrugFeatures(drug)
+                        )
+                    ),
+                    _react2.default.createElement(
+                        "div",
+                        { className: "col-xs-12 col-sm-12 col-md-8 med_desc" },
+                        _User2.default.isAuthenticated() && drug.personalizedInformation && _react2.default.createElement(
+                            "div",
+                            { className: "alert alert-info alert-dismissable" },
+                            _react2.default.createElement(
+                                "a",
+                                { href: "#", className: "close", "data-dismiss": "alert", "aria-label": "close" },
+                                "\xD7"
+                            ),
+                            _react2.default.createElement("span", { dangerouslySetInnerHTML: this.createMarkup(drug.personalizedInformation) })
+                        ),
+                        this.renderPharmaceuticalForm(drug),
+                        this.renderDisease(drug),
+                        this.renderActiveSubstance(drug),
+                        _react2.default.createElement(
+                            "div",
+                            { className: "additional-information" },
+                            showAdditionalInfo && _react2.default.createElement(
+                                "section",
+                                null,
+                                this.renderIndicationGroup(drug),
+                                this.renderProductGroup(drug),
+                                this.renderPZN(drug)
+                            ),
+                            _react2.default.createElement(
+                                "p",
+                                null,
+                                _react2.default.createElement(
+                                    "a",
+                                    { onClick: this.toggleShowAdditionalInfo },
+                                    "[",
+                                    !showAdditionalInfo && _react2.default.createElement(
+                                        "span",
+                                        null,
+                                        t('viewDetails')
+                                    ),
+                                    showAdditionalInfo && _react2.default.createElement(
+                                        "span",
+                                        null,
+                                        t('hideDetails')
+                                    ),
+                                    "]"
+                                )
+                            )
+                        )
+                    )
+                ),
+                _react2.default.createElement("hr", null),
+                this.renderSectionList(drug)
+            );
+        }
+    }]);
+
+    return DrugDetail;
 }(_react2.default.Component);
 
 exports.default = (0, _reactI18next.translate)()(DrugDetail);
@@ -31912,7 +32265,7 @@ var Home = function (_React$Component) {
                     _User2.default.isAuthenticated() && _react2.default.createElement(_most_visited_items2.default, null),
                     _react2.default.createElement(
                         "div",
-                        { className: "row" },
+                        { className: "row text_home" },
                         _react2.default.createElement(
                             "div",
                             { className: "col-lg-4" },
@@ -31929,7 +32282,7 @@ var Home = function (_React$Component) {
                             ),
                             _react2.default.createElement(
                                 "p",
-                                null,
+                                { className: "text-center" },
                                 _react2.default.createElement(
                                     "a",
                                     { className: "btn btn-default", href: "#/about", role: "button" },
@@ -31954,7 +32307,7 @@ var Home = function (_React$Component) {
                             ),
                             _react2.default.createElement(
                                 "p",
-                                null,
+                                { className: "text-center" },
                                 _react2.default.createElement(
                                     "a",
                                     { className: "btn btn-default", href: "http://www.aifb.kit.edu/web/Critical_Information_Infrastructures/en", role: "button", target: "blank" },
@@ -31966,7 +32319,7 @@ var Home = function (_React$Component) {
                         _react2.default.createElement(
                             "div",
                             { className: "col-lg-4" },
-                            _react2.default.createElement("img", { className: "img-circle", src: "/assets/images/articles.jpg", alt: "Generic placeholder image", width: "140", height: "140" }),
+                            _react2.default.createElement("img", { className: "img-circle", src: "/assets/images/article.jpg", alt: "Generic placeholder image", width: "140", height: "140" }),
                             _react2.default.createElement(
                                 "h2",
                                 null,
@@ -31979,7 +32332,7 @@ var Home = function (_React$Component) {
                             ),
                             _react2.default.createElement(
                                 "p",
-                                null,
+                                { className: "text-center" },
                                 _react2.default.createElement(
                                     "a",
                                     { className: "btn btn-default", href: "http://www.aifb.kit.edu/web/Critical_Information_Infrastructures/en", role: "button", target: "blank" },
@@ -32340,7 +32693,7 @@ var Navigation = function (_React$Component) {
 						{ className: "container" },
 						_react2.default.createElement(
 							"nav",
-							{ className: "navbar navbar-inverse navbar-static-top" },
+							{ className: "navbar navbar-default navbar-fixed-top" },
 							_react2.default.createElement(
 								"div",
 								{ className: "container" },
