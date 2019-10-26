@@ -7,6 +7,15 @@ import {toast} from 'react-toastify';
 import Accordion from "./accordion";
 import Loading from "./loading";
 import User from "./../util/User";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
+import { faHome } from "@fortawesome/free-solid-svg-icons";
+import { faInfo } from "@fortawesome/free-solid-svg-icons";
+import { faCommentMedical } from "@fortawesome/free-solid-svg-icons";
+import { faAddressCard } from "@fortawesome/free-solid-svg-icons";
+
+
+
 
 class DrugDetail extends React.Component {
     constructor(props) {
@@ -377,7 +386,7 @@ class DrugDetail extends React.Component {
                 {/*Button INFO*/}
                 <div className="round-button-outer report-round-button">
                     <div id="reportBtn" className="round-button-inner-main" data-toggle="modal" data-target="#info">
-                        <i className="fas fa-info"></i>
+                        <FontAwesomeIcon icon={faInfo} />   <i className="fas fa-info"></i>
                     </div>
                 </div>
                 <div className="modal fade" id="info" tabIndex="-1" role="dialog" aria-labelledby="adressLabel"
@@ -394,6 +403,7 @@ class DrugDetail extends React.Component {
                             <div className="modal-body" style={{color: "black"}}>
                                 <p style={{fontWeight: "bold"}}> Lesen Sie die gesamte e-Packungsbeilage sorgfältig
                                     durch,
+
                                     denn
                                     sie enthält wichtige Informationen für Sie.
                                     Um einen bestmöglichen Behandlungserfolg zu erzielen, muss Prospan®
@@ -434,7 +444,7 @@ class DrugDetail extends React.Component {
                 <div className="round-button-outer report-round-button no_animation" style={{top: "190px"}}>
                     <div id="reportBtn" className="round-button-inner-main no_animation" data-toggle="modal"
                          data-target="#adress">
-                        <i className="fas fa-address-card"></i></div>
+                        <FontAwesomeIcon icon={faAddressCard} />       <i className="fas fa-address-card"></i></div>
                 </div>
                 <div className="modal fade" id="adress" tabIndex="-1" role="dialog" aria-labelledby="adressLabel"
                      aria-hidden="true">
@@ -463,7 +473,7 @@ class DrugDetail extends React.Component {
                                         </p>
                                     </div>
                                     <div className="col-lg-4">
-                                        <img className="img-responsive" src="./images/Engelhard_Logo_2013.png"/>
+                                        <img className="img-responsive" src="/assets/images/Engelhard_Logo_2013.png"/>
                                     </div>
                                 </div>
                             </div>
@@ -481,7 +491,7 @@ class DrugDetail extends React.Component {
                 <div className="round-button-outer report-round-button no_animation" style={{top: "280px"}}>
                     <div id="reportBtn" className="round-button-inner-main no_animation" data-toggle="modal"
                          data-target="#melden">
-                        <i className="fas fa-comment-medical"></i>
+                        <FontAwesomeIcon icon={faCommentMedical} />  <i className="fas fa-comment-medical"></i>
                     </div>
                 </div>
                 <div className="modal fade" id="melden" tabIndex="-1" role="dialog" aria-labelledby="adressLabel"
