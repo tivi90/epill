@@ -372,7 +372,7 @@ class DrugDetail extends React.Component {
             );
         }
 
-          return (
+        return (
             <div className="container marketing no-banner">
                 {/*Button INFO*/}
                 <div className="round-button-outer report-round-button">
@@ -385,28 +385,38 @@ class DrugDetail extends React.Component {
                     <div className="modal-dialog" role="document">
                         <div className="modal-content">
                             <div className="modal-header">
-                                <h1>Pharmazeutischer Unternehmer und Hersteller</h1>
-
+                                <h2>Informationen
+                                </h2>
                                 <button type="button" className="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
-                            <div className="modal-body" style={{color: "black"}} >
-                                <div className="row">
-                                    <div className="col-lg-8">
-                                        <p> Engelhard Arzneimittel GmbH & Co. KG <br/>
-                                            Herzbergstr. 3 <br/>
-                                            61138 Niederdorfelden <br/>
-                                            <b>Tel.:</b> 06101 / 539 – 300 <br/>
-                                            <b>Fax:</b> 06101 / 539 – 315 <br/>
-                                            <b> Internet:</b> <a
-                                            href="http://www.engelhard-am.de">http://www.engelhard-am.de</a> <br/>
-                                            <b> E-Mail:</b> <a
-                                            href="mailto:info@engelhard-am.de">info@engelhard-am.de</a> <br/>
-                                        </p>
-                                    </div>
-                                    <div className="col-lg-4">
-                                        <img className="img-responsive" src="./img/Engelhard_Logo_2013.png"/>
+                            <div className="modal-body" style={{color: "black"}}>
+                                <p style={{fontWeight: "bold"}}> Lesen Sie die gesamte e-Packungsbeilage sorgfältig
+                                    durch,
+                                    denn
+                                    sie enthält wichtige Informationen für Sie.
+                                    Um einen bestmöglichen Behandlungserfolg zu erzielen, muss Prospan®
+                                    Hustensaft jedoch vorschriftsmäßig angewendet werden.</p>
+
+                                <ul>
+                                    <li>Fragen Sie Ihren Apotheker, wenn Sie weitere Informationen oder
+                                        einen Rat benötigen.
+                                    </li>
+                                    <li>Wenn sich Ihre Symptome verschlimmern oder nach 7 Tagen keine
+                                        Besserung eintritt, müssen Sie auf jeden Fall einen Arzt aufsuchen.
+                                    </li>
+
+                                </ul>
+                                <div className="row alert alert-danger" role="alert">
+                                    <div className="col-lg-1 alert_style">
+                                        <i className="fas fa-exclamation"></i></div>
+                                    <div className="col-lg-11">
+                                        <p> Wenn eine der aufgeführten Nebenwirkungen Sie erheblich beeinträchtigt oder
+                                            Sie Nebenwirkungen
+                                            bemerken, die nicht in dieser
+                                            Gebrauchsinformation angegeben sind, informieren Sie bitte Ihren
+                                            <b>Arzt oder Apotheker</b>.</p>
                                     </div>
                                 </div>
                             </div>
@@ -422,21 +432,22 @@ class DrugDetail extends React.Component {
 
                 {/*Button Address*/}
                 <div className="round-button-outer report-round-button no_animation" style={{top: "190px"}}>
-                    <div id="reportBtn" className="round-button-inner-main no_animation" data-toggle="modal" data-target="#adress">
+                    <div id="reportBtn" className="round-button-inner-main no_animation" data-toggle="modal"
+                         data-target="#adress">
                         <i className="fas fa-address-card"></i></div>
                 </div>
-                <div className="modal fade" id="info" tabIndex="-1" role="dialog" aria-labelledby="adressLabel"
+                <div className="modal fade" id="adress" tabIndex="-1" role="dialog" aria-labelledby="adressLabel"
                      aria-hidden="true">
                     <div className="modal-dialog" role="document">
                         <div className="modal-content">
                             <div className="modal-header">
-                                <h1>Pharmazeutischer Unternehmer und Hersteller</h1>
+                                <h2>Pharmazeutischer Unternehmer und Hersteller</h2>
 
                                 <button type="button" className="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
-                            <div className="modal-body" style={{color: "black"}} >
+                            <div className="modal-body" style={{color: "black"}}>
                                 <div className="row">
                                     <div className="col-lg-8">
                                         <p> Engelhard Arzneimittel GmbH & Co. KG <br/>
@@ -448,70 +459,88 @@ class DrugDetail extends React.Component {
                                                 href="http://www.engelhard-am.de">http://www.engelhard-am.de</a> <br/>
                                             <b> E-Mail:</b> <a
                                                 href="mailto:info@engelhard-am.de">info@engelhard-am.de</a> <br/>
+
                                         </p>
                                     </div>
                                     <div className="col-lg-4">
-                                        <img className="img-responsive" src="./img/Engelhard_Logo_2013.png"/>
+                                        <img className="img-responsive" src="./images/Engelhard_Logo_2013.png"/>
                                     </div>
                                 </div>
                             </div>
                             <div className="modal-footer">
                                 <button type="button" className="btn btn-secondary" data-dismiss="modal">Schließen
                                 </button>
-
                             </div>
                         </div>
                     </div>
                 </div>
+
                 {/*Button  Address ENDE*/}
 
                 {/*Button REPORT*/}
                 <div className="round-button-outer report-round-button no_animation" style={{top: "280px"}}>
-                    <div id="reportBtn" className="round-button-inner-main no_animation" data-toggle="modal" data-target="#melden">
-                        <i className="fas fa-comment-medical"></i></div>
+                    <div id="reportBtn" className="round-button-inner-main no_animation" data-toggle="modal"
+                         data-target="#melden">
+                        <i className="fas fa-comment-medical"></i>
+                    </div>
                 </div>
-                <div className="modal fade" id="info" tabIndex="-1" role="dialog" aria-labelledby="adressLabel"
+                <div className="modal fade" id="melden" tabIndex="-1" role="dialog" aria-labelledby="adressLabel"
                      aria-hidden="true">
                     <div className="modal-dialog" role="document">
                         <div className="modal-content">
                             <div className="modal-header">
-                                <h1>Pharmazeutischer Unternehmer und Hersteller</h1>
-
+                                <h2>Meldung von Nebenwirkungen </h2>
                                 <button type="button" className="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
-                            <div className="modal-body" style={{color: "black"}} >
-                                <div className="row">
-                                    <div className="col-lg-8">
-                                        <p> Engelhard Arzneimittel GmbH & Co. KG <br/>
-                                            Herzbergstr. 3 <br/>
-                                            61138 Niederdorfelden <br/>
-                                            <b>Tel.:</b> 06101 / 539 – 300 <br/>
-                                            <b>Fax:</b> 06101 / 539 – 315 <br/>
-                                            <b> Internet:</b> <a
-                                                href="http://www.engelhard-am.de">http://www.engelhard-am.de</a> <br/>
-                                            <b> E-Mail:</b> <a
-                                                href="mailto:info@engelhard-am.de">info@engelhard-am.de</a> <br/>
+                            <div className="modal-body" style={{color: "black"}}>
+                                <div className="row  alert alert-success" role="alert">
+                                    <div className="col-lg-10">
+                                        <p>Indem Sie Nebenwirkungen melden, können Sie dazu beitragen,
+                                            dass mehr Informationen über die Sicherheit dieses Arzneimittels
+                                            zur Verfügung gestellt werden.
                                         </p>
                                     </div>
-                                    <div className="col-lg-4">
-                                        <img className="img-responsive" src="./img/Engelhard_Logo_2013.png"/>
+                                    <div className="col-lg-2 icon_modal">
+                                        <i className="fas fa-thumbs-up"></i>
+                                    </div>
+                                </div>
+                                <div className="row">
+                                    <div className="col-lg-10">
+                                        <p>Wenn Sie Nebenwirkungen bemerken, wenden Sie sich an Ihren <b>Arzt oder
+                                            Apotheker</b>.
+                                            Dies gilt auch für Nebenwirkungen, die nicht in dieser Packungsbeilage
+                                            angegeben
+                                            sind.
+                                        </p>
+                                    </div>
+                                    <div className="col-lg-2 icon_modal">
+                                        <i className="fas fa-user-md"></i>
+                                    </div>
+                                </div>
+                                <div className="row">
+                                    <div className="col-lg-12">
+                                        <p><b>Weitere Möglichkeit:</b><br/>
+                                            Bundesinstitut für Arzneimittel und Medizinprodukte <br/>
+                                            Abt. Pharmakovigilanz<br/>
+                                            Kurt-Georg-Kiesinger Allee 3,<br/> D-53175 Bonn<br/>
+                                            <b>Website:</b> <a href="www.bfarm.de">www.bfarm.de
+                                            </a></p>
                                     </div>
                                 </div>
                             </div>
+
                             <div className="modal-footer">
                                 <button type="button" className="btn btn-secondary" data-dismiss="modal">Schließen
                                 </button>
-
                             </div>
                         </div>
                     </div>
                 </div>
-                {/*Button REPORT ENDE*/}
 
-
-
+                {/*Button REPORT ENDE*/
+                }
 
                 <div className='page-header'>
                     <div className='btn-toolbar pull-right'>
@@ -541,59 +570,70 @@ class DrugDetail extends React.Component {
                     {/*<span>v. {drug.version} | {t('publishingDate')}: {new Date(drug.year).toLocaleDateString()}</span>*/}
 
                 </div>
-                <div className="row featurette drug-detail-header">
-                    <div className="col-xs-12 col-sm-12 col-md-4">
-                        <img className="featurette-image img-responsive center-block" alt={drug.name} title={drug.name}
-                             src={`/image/drug/${drug.id}`}></img>
-                        <div className="drug-features margin-s">
-                            {this.renderDrugFeatures(drug)}
-                        </div>
+                < div
+                    className="row featurette drug-detail-header">
+                    < div
+                        className="col-xs-12 col-sm-12 col-md-4">
+                        < img
+                            className="featurette-image img-responsive center-block"
+                            alt={drug.name}
+                            title={drug.name}
+                            src={`/image/drug/${drug.id}`
+                            }><
+                            /img>
+                            <div className="drug-features margin-s">
+                                {this.renderDrugFeatures(drug)}
+                            </div>
+                            < /div>
+                                <div className="col-xs-12 col-sm-12 col-md-8 med_desc">
+                                    {User.isAuthenticated() && drug.personalizedInformation &&
+                                    <div className="alert alert-info alert-dismissable">
+                                        <a href="#" className="close" data-dismiss="alert"
+                                           aria-label="close">&times;</a>
+                                        <span
+                                            dangerouslySetInnerHTML={this.createMarkup(drug.personalizedInformation)}/>
+                                    </div>
+                                    }
+
+                                    {this.renderPharmaceuticalForm(drug)}
+
+                                    {this.renderDisease(drug)}
+
+                                    {this.renderActiveSubstance(drug)}
+
+
+                                    <div className="additional-information">
+                                        {showAdditionalInfo &&
+                                        <section>
+                                            {this.renderIndicationGroup(drug)}
+
+                                            {this.renderProductGroup(drug)}
+
+                                            {this.renderPZN(drug)}
+                                        </section>
+                                        }
+
+                                        <p>
+                                            <a onClick={this.toggleShowAdditionalInfo}>
+                                                [{!showAdditionalInfo && <span>{t('viewDetails')}</span>}
+                                                {showAdditionalInfo && <span>{t('hideDetails')}</span>}]
+                                            </a>
+                                        </p>
+                                    </div>
+
+                                </div>
+                                < /div>
+
+
+                                    <hr/>
+
+                                    {
+                                        this.renderSectionList(drug)
+                                    }
+
                     </div>
-                    <div className="col-xs-12 col-sm-12 col-md-8 med_desc">
-                        {User.isAuthenticated() && drug.personalizedInformation &&
-                        <div className="alert alert-info alert-dismissable">
-                            <a href="#" className="close" data-dismiss="alert" aria-label="close">&times;</a>
-                            <span dangerouslySetInnerHTML={this.createMarkup(drug.personalizedInformation)}/>
-                        </div>
-                        }
+                    );
+                    }
+                    }
 
-                        {this.renderPharmaceuticalForm(drug)}
-
-                        {this.renderDisease(drug)}
-
-                        {this.renderActiveSubstance(drug)}
-
-
-                        <div className="additional-information">
-                            {showAdditionalInfo &&
-                            <section>
-                                {this.renderIndicationGroup(drug)}
-
-                                {this.renderProductGroup(drug)}
-
-                                {this.renderPZN(drug)}
-                            </section>
-                            }
-
-                            <p>
-                                <a onClick={this.toggleShowAdditionalInfo}>
-                                    [{!showAdditionalInfo && <span>{t('viewDetails')}</span>}
-                                    {showAdditionalInfo && <span>{t('hideDetails')}</span>}]
-                                </a>
-                            </p>
-                        </div>
-
-                    </div>
-                </div>
-
-
-                <hr/>
-
-                {this.renderSectionList(drug)}
-
-            </div>
-        );
-    }
-}
-
-export default translate()(DrugDetail);
+                    export default translate()(DrugDetail);

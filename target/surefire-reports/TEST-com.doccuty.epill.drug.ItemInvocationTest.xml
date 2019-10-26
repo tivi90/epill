@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.doccuty.epill.drug.ItemInvocationTest" time="1.604" tests="5" errors="0" skipped="0" failures="0">
+<testsuite name="com.doccuty.epill.drug.ItemInvocationTest" time="1.755" tests="5" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="java.vm.version" value="10.0.2+13"/>
@@ -63,9 +63,9 @@
     <property name="sun.desktop" value="gnome"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase name="testUserDrugTaking" classname="com.doccuty.epill.drug.ItemInvocationTest" time="0.18"/>
-  <testcase name="testGetDrugByIdAndSerializeProductGroup" classname="com.doccuty.epill.drug.ItemInvocationTest" time="0.691"/>
-  <testcase name="testGetDrugByIdAndSerializeIndicationGroup" classname="com.doccuty.epill.drug.ItemInvocationTest" time="0.234"/>
-  <testcase name="testGetDrugById" classname="com.doccuty.epill.drug.ItemInvocationTest" time="0.491"/>
-  <testcase name="notNull" classname="com.doccuty.epill.drug.ItemInvocationTest" time="0.008"/>
+  <testcase name="testUserDrugTaking" classname="com.doccuty.epill.drug.ItemInvocationTest" time="0.187"/>
+  <testcase name="testGetDrugByIdAndSerializeProductGroup" classname="com.doccuty.epill.drug.ItemInvocationTest" time="0.775"/>
+  <testcase name="testGetDrugByIdAndSerializeIndicationGroup" classname="com.doccuty.epill.drug.ItemInvocationTest" time="0.27"/>
+  <testcase name="testGetDrugById" classname="com.doccuty.epill.drug.ItemInvocationTest" time="0.513"/>
+  <testcase name="notNull" classname="com.doccuty.epill.drug.ItemInvocationTest" time="0.01"/>
 </testsuite>

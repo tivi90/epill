@@ -30687,9 +30687,9 @@ var DrugDetail = function (_React$Component) {
                                 "div",
                                 { className: "modal-header" },
                                 _react2.default.createElement(
-                                    "h1",
+                                    "h2",
                                     null,
-                                    "Pharmazeutischer Unternehmer und Hersteller"
+                                    "Informationen"
                                 ),
                                 _react2.default.createElement(
                                     "button",
@@ -30705,68 +30705,46 @@ var DrugDetail = function (_React$Component) {
                                 "div",
                                 { className: "modal-body", style: { color: "black" } },
                                 _react2.default.createElement(
+                                    "p",
+                                    { style: { fontWeight: "bold" } },
+                                    " Lesen Sie die gesamte e-Packungsbeilage sorgf\xE4ltig durch, denn sie enth\xE4lt wichtige Informationen f\xFCr Sie. Um einen bestm\xF6glichen Behandlungserfolg zu erzielen, muss Prospan\xAE Hustensaft jedoch vorschriftsm\xE4\xDFig angewendet werden."
+                                ),
+                                _react2.default.createElement(
+                                    "ul",
+                                    null,
+                                    _react2.default.createElement(
+                                        "li",
+                                        null,
+                                        "Fragen Sie Ihren Apotheker, wenn Sie weitere Informationen oder einen Rat ben\xF6tigen."
+                                    ),
+                                    _react2.default.createElement(
+                                        "li",
+                                        null,
+                                        "Wenn sich Ihre Symptome verschlimmern oder nach 7 Tagen keine Besserung eintritt, m\xFCssen Sie auf jeden Fall einen Arzt aufsuchen."
+                                    )
+                                ),
+                                _react2.default.createElement(
                                     "div",
-                                    { className: "row" },
+                                    { className: "row alert alert-danger", role: "alert" },
                                     _react2.default.createElement(
                                         "div",
-                                        { className: "col-lg-8" },
-                                        _react2.default.createElement(
-                                            "p",
-                                            null,
-                                            " Engelhard Arzneimittel GmbH & Co. KG ",
-                                            _react2.default.createElement("br", null),
-                                            "Herzbergstr. 3 ",
-                                            _react2.default.createElement("br", null),
-                                            "61138 Niederdorfelden ",
-                                            _react2.default.createElement("br", null),
-                                            _react2.default.createElement(
-                                                "b",
-                                                null,
-                                                "Tel.:"
-                                            ),
-                                            " 06101 / 539 \u2013 300 ",
-                                            _react2.default.createElement("br", null),
-                                            _react2.default.createElement(
-                                                "b",
-                                                null,
-                                                "Fax:"
-                                            ),
-                                            " 06101 / 539 \u2013 315 ",
-                                            _react2.default.createElement("br", null),
-                                            _react2.default.createElement(
-                                                "b",
-                                                null,
-                                                " Internet:"
-                                            ),
-                                            " ",
-                                            _react2.default.createElement(
-                                                "a",
-                                                {
-                                                    href: "http://www.engelhard-am.de" },
-                                                "http://www.engelhard-am.de"
-                                            ),
-                                            " ",
-                                            _react2.default.createElement("br", null),
-                                            _react2.default.createElement(
-                                                "b",
-                                                null,
-                                                " E-Mail:"
-                                            ),
-                                            " ",
-                                            _react2.default.createElement(
-                                                "a",
-                                                {
-                                                    href: "mailto:info@engelhard-am.de" },
-                                                "info@engelhard-am.de"
-                                            ),
-                                            " ",
-                                            _react2.default.createElement("br", null)
-                                        )
+                                        { className: "col-lg-1 alert_style" },
+                                        _react2.default.createElement("i", { className: "fas fa-exclamation" })
                                     ),
                                     _react2.default.createElement(
                                         "div",
-                                        { className: "col-lg-4" },
-                                        _react2.default.createElement("img", { className: "img-responsive", src: "./img/Engelhard_Logo_2013.png" })
+                                        { className: "col-lg-11" },
+                                        _react2.default.createElement(
+                                            "p",
+                                            null,
+                                            " Wenn eine der aufgef\xFChrten Nebenwirkungen Sie erheblich beeintr\xE4chtigt oder Sie Nebenwirkungen bemerken, die nicht in dieser Gebrauchsinformation angegeben sind, informieren Sie bitte Ihren",
+                                            _react2.default.createElement(
+                                                "b",
+                                                null,
+                                                "Arzt oder Apotheker"
+                                            ),
+                                            "."
+                                        )
                                     )
                                 )
                             ),
@@ -30787,13 +30765,14 @@ var DrugDetail = function (_React$Component) {
                     { className: "round-button-outer report-round-button no_animation", style: { top: "190px" } },
                     _react2.default.createElement(
                         "div",
-                        { id: "reportBtn", className: "round-button-inner-main no_animation", "data-toggle": "modal", "data-target": "#adress" },
+                        { id: "reportBtn", className: "round-button-inner-main no_animation", "data-toggle": "modal",
+                            "data-target": "#adress" },
                         _react2.default.createElement("i", { className: "fas fa-address-card" })
                     )
                 ),
                 _react2.default.createElement(
                     "div",
-                    { className: "modal fade", id: "info", tabIndex: "-1", role: "dialog", "aria-labelledby": "adressLabel",
+                    { className: "modal fade", id: "adress", tabIndex: "-1", role: "dialog", "aria-labelledby": "adressLabel",
                         "aria-hidden": "true" },
                     _react2.default.createElement(
                         "div",
@@ -30805,7 +30784,7 @@ var DrugDetail = function (_React$Component) {
                                 "div",
                                 { className: "modal-header" },
                                 _react2.default.createElement(
-                                    "h1",
+                                    "h2",
                                     null,
                                     "Pharmazeutischer Unternehmer und Hersteller"
                                 ),
@@ -30884,7 +30863,7 @@ var DrugDetail = function (_React$Component) {
                                     _react2.default.createElement(
                                         "div",
                                         { className: "col-lg-4" },
-                                        _react2.default.createElement("img", { className: "img-responsive", src: "./img/Engelhard_Logo_2013.png" })
+                                        _react2.default.createElement("img", { className: "img-responsive", src: "./images/Engelhard_Logo_2013.png" })
                                     )
                                 )
                             ),
@@ -30905,13 +30884,14 @@ var DrugDetail = function (_React$Component) {
                     { className: "round-button-outer report-round-button no_animation", style: { top: "280px" } },
                     _react2.default.createElement(
                         "div",
-                        { id: "reportBtn", className: "round-button-inner-main no_animation", "data-toggle": "modal", "data-target": "#melden" },
+                        { id: "reportBtn", className: "round-button-inner-main no_animation", "data-toggle": "modal",
+                            "data-target": "#melden" },
                         _react2.default.createElement("i", { className: "fas fa-comment-medical" })
                     )
                 ),
                 _react2.default.createElement(
                     "div",
-                    { className: "modal fade", id: "info", tabIndex: "-1", role: "dialog", "aria-labelledby": "adressLabel",
+                    { className: "modal fade", id: "melden", tabIndex: "-1", role: "dialog", "aria-labelledby": "adressLabel",
                         "aria-hidden": "true" },
                     _react2.default.createElement(
                         "div",
@@ -30923,9 +30903,9 @@ var DrugDetail = function (_React$Component) {
                                 "div",
                                 { className: "modal-header" },
                                 _react2.default.createElement(
-                                    "h1",
+                                    "h2",
                                     null,
-                                    "Pharmazeutischer Unternehmer und Hersteller"
+                                    "Meldung von Nebenwirkungen "
                                 ),
                                 _react2.default.createElement(
                                     "button",
@@ -30942,67 +30922,81 @@ var DrugDetail = function (_React$Component) {
                                 { className: "modal-body", style: { color: "black" } },
                                 _react2.default.createElement(
                                     "div",
-                                    { className: "row" },
+                                    { className: "row  alert alert-success", role: "alert" },
                                     _react2.default.createElement(
                                         "div",
-                                        { className: "col-lg-8" },
+                                        { className: "col-lg-10" },
                                         _react2.default.createElement(
                                             "p",
                                             null,
-                                            " Engelhard Arzneimittel GmbH & Co. KG ",
-                                            _react2.default.createElement("br", null),
-                                            "Herzbergstr. 3 ",
-                                            _react2.default.createElement("br", null),
-                                            "61138 Niederdorfelden ",
-                                            _react2.default.createElement("br", null),
-                                            _react2.default.createElement(
-                                                "b",
-                                                null,
-                                                "Tel.:"
-                                            ),
-                                            " 06101 / 539 \u2013 300 ",
-                                            _react2.default.createElement("br", null),
-                                            _react2.default.createElement(
-                                                "b",
-                                                null,
-                                                "Fax:"
-                                            ),
-                                            " 06101 / 539 \u2013 315 ",
-                                            _react2.default.createElement("br", null),
-                                            _react2.default.createElement(
-                                                "b",
-                                                null,
-                                                " Internet:"
-                                            ),
-                                            " ",
-                                            _react2.default.createElement(
-                                                "a",
-                                                {
-                                                    href: "http://www.engelhard-am.de" },
-                                                "http://www.engelhard-am.de"
-                                            ),
-                                            " ",
-                                            _react2.default.createElement("br", null),
-                                            _react2.default.createElement(
-                                                "b",
-                                                null,
-                                                " E-Mail:"
-                                            ),
-                                            " ",
-                                            _react2.default.createElement(
-                                                "a",
-                                                {
-                                                    href: "mailto:info@engelhard-am.de" },
-                                                "info@engelhard-am.de"
-                                            ),
-                                            " ",
-                                            _react2.default.createElement("br", null)
+                                            "Indem Sie Nebenwirkungen melden, k\xF6nnen Sie dazu beitragen, dass mehr Informationen \xFCber die Sicherheit dieses Arzneimittels zur Verf\xFCgung gestellt werden."
                                         )
                                     ),
                                     _react2.default.createElement(
                                         "div",
-                                        { className: "col-lg-4" },
-                                        _react2.default.createElement("img", { className: "img-responsive", src: "./img/Engelhard_Logo_2013.png" })
+                                        { className: "col-lg-2 icon_modal" },
+                                        _react2.default.createElement("i", { className: "fas fa-thumbs-up" })
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    "div",
+                                    { className: "row" },
+                                    _react2.default.createElement(
+                                        "div",
+                                        { className: "col-lg-10" },
+                                        _react2.default.createElement(
+                                            "p",
+                                            null,
+                                            "Wenn Sie Nebenwirkungen bemerken, wenden Sie sich an Ihren ",
+                                            _react2.default.createElement(
+                                                "b",
+                                                null,
+                                                "Arzt oder Apotheker"
+                                            ),
+                                            ". Dies gilt auch f\xFCr Nebenwirkungen, die nicht in dieser Packungsbeilage angegeben sind."
+                                        )
+                                    ),
+                                    _react2.default.createElement(
+                                        "div",
+                                        { className: "col-lg-2 icon_modal" },
+                                        _react2.default.createElement("i", { className: "fas fa-user-md" })
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    "div",
+                                    { className: "row" },
+                                    _react2.default.createElement(
+                                        "div",
+                                        { className: "col-lg-12" },
+                                        _react2.default.createElement(
+                                            "p",
+                                            null,
+                                            _react2.default.createElement(
+                                                "b",
+                                                null,
+                                                "Weitere M\xF6glichkeit:"
+                                            ),
+                                            _react2.default.createElement("br", null),
+                                            "Bundesinstitut f\xFCr Arzneimittel und Medizinprodukte ",
+                                            _react2.default.createElement("br", null),
+                                            "Abt. Pharmakovigilanz",
+                                            _react2.default.createElement("br", null),
+                                            "Kurt-Georg-Kiesinger Allee 3,",
+                                            _react2.default.createElement("br", null),
+                                            " D-53175 Bonn",
+                                            _react2.default.createElement("br", null),
+                                            _react2.default.createElement(
+                                                "b",
+                                                null,
+                                                "Website:"
+                                            ),
+                                            " ",
+                                            _react2.default.createElement(
+                                                "a",
+                                                { href: "www.bfarm.de" },
+                                                "www.bfarm.de"
+                                            )
+                                        )
                                     )
                                 )
                             ),
@@ -31068,11 +31062,16 @@ var DrugDetail = function (_React$Component) {
                 ),
                 _react2.default.createElement(
                     "div",
-                    { className: "row featurette drug-detail-header" },
+                    {
+                        className: "row featurette drug-detail-header" },
                     _react2.default.createElement(
                         "div",
-                        { className: "col-xs-12 col-sm-12 col-md-4" },
-                        _react2.default.createElement("img", { className: "featurette-image img-responsive center-block", alt: drug.name, title: drug.name,
+                        {
+                            className: "col-xs-12 col-sm-12 col-md-4" },
+                        _react2.default.createElement("img", {
+                            className: "featurette-image img-responsive center-block",
+                            alt: drug.name,
+                            title: drug.name,
                             src: "/image/drug/" + drug.id }),
                         _react2.default.createElement(
                             "div",
@@ -31088,10 +31087,12 @@ var DrugDetail = function (_React$Component) {
                             { className: "alert alert-info alert-dismissable" },
                             _react2.default.createElement(
                                 "a",
-                                { href: "#", className: "close", "data-dismiss": "alert", "aria-label": "close" },
+                                { href: "#", className: "close", "data-dismiss": "alert",
+                                    "aria-label": "close" },
                                 "\xD7"
                             ),
-                            _react2.default.createElement("span", { dangerouslySetInnerHTML: this.createMarkup(drug.personalizedInformation) })
+                            _react2.default.createElement("span", {
+                                dangerouslySetInnerHTML: this.createMarkup(drug.personalizedInformation) })
                         ),
                         this.renderPharmaceuticalForm(drug),
                         this.renderDisease(drug),

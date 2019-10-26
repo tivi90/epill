@@ -70,10 +70,20 @@
 }
 
 
-.no_animation{
-    animation: none!important;
+.no_animation {
+    animation: none !important;
 }
 
+.icon_modal {
+    text-align: center;
+    font-size: 51px;
+    color: #0da59b;
+}
+
+.alert_style{
+    font-size: 44px;
+    color:red;
+}
 
 @media (min-width: 768px) {
     .modal-dialog {
