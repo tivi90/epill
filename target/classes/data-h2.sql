@@ -114,7 +114,7 @@ INSERT INTO product_group (id, name) VALUES (3,'Produkt Gruppe 3');
 --
 
 INSERT INTO image (id, filename, filetype, uploaded_at, image) VALUES (1,'default','image/jpg', NOW(), FILE_READ('src/main/frontend/assets/images/drug-placeholder.jpg'));
-INSERT INTO image (id, filename, filetype, uploaded_at, image) VALUES (2,'Accupro','image/jpg', NOW(), FILE_READ('src/main/frontend/assets/images/accupro.jpg'));
+INSERT INTO image (id, filename, filetype, uploaded_at, image) VALUES (2,'Accupro','image/png', NOW(), FILE_READ('src/main/frontend/assets/images/accupro.png'));
 INSERT INTO image (id, filename, filetype, uploaded_at, image) VALUES (3,'Baymycard','image/jpg', NOW(), FILE_READ('src/main/frontend/assets/images/baymycard.jpg'));
 INSERT INTO image (id, filename, filetype, uploaded_at, image) VALUES (4,'Beloc-Zok','image/jpg', NOW(), FILE_READ('src/main/frontend/assets/images/beloc-zok.jpg'));
 INSERT INTO image (id, filename, filetype, uploaded_at, image) VALUES (5,'Cardular','image/jpg', NOW(), FILE_READ('src/main/frontend/assets/images/cardura.jpg'));

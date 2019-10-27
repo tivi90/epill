@@ -49,7 +49,8 @@ class Accordion extends React.Component {
 
 		const {t} = this.props;
 		  
-	    return (	
+	    return (
+	    	<div className="container">
                 <div className="panel panel-default">
                 		<div className="panel-heading">
                 			{show && User.isAuthenticated() && this.props.toggleOriginalAndTailoredText &&
@@ -67,6 +68,7 @@ class Accordion extends React.Component {
 		                			<div className="panel-body" dangerouslySetInnerHTML={this.createMarkup(this.state.section.text)}></div>
 		                		</div> }
                 	</div>
+			</div>
           );
 	  }
 	}

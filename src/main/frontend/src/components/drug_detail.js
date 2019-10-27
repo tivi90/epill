@@ -7,14 +7,10 @@ import {toast} from 'react-toastify';
 import Accordion from "./accordion";
 import Loading from "./loading";
 import User from "./../util/User";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 
-import { faHome } from "@fortawesome/free-solid-svg-icons";
-import { faInfo } from "@fortawesome/free-solid-svg-icons";
-import { faCommentMedical } from "@fortawesome/free-solid-svg-icons";
-import { faAddressCard } from "@fortawesome/free-solid-svg-icons";
-
-
+import {faHome} from "@fortawesome/free-solid-svg-icons";
+import {faInfo, faCommentMedical, faAddressCard, faThumbsUp, faUserMd} from "@fortawesome/free-solid-svg-icons";
 
 
 class DrugDetail extends React.Component {
@@ -382,11 +378,12 @@ class DrugDetail extends React.Component {
         }
 
         return (
-            <div className="container marketing no-banner">
+            <div className="  no-banner">
+
                 {/*Button INFO*/}
                 <div className="round-button-outer report-round-button">
                     <div id="reportBtn" className="round-button-inner-main" data-toggle="modal" data-target="#info">
-                        <FontAwesomeIcon icon={faInfo} />   <i className="fas fa-info"></i>
+                        <FontAwesomeIcon icon={faInfo}/> <i className="fas fa-info"></i>
                     </div>
                 </div>
                 <div className="modal fade" id="info" tabIndex="-1" role="dialog" aria-labelledby="adressLabel"
@@ -444,7 +441,7 @@ class DrugDetail extends React.Component {
                 <div className="round-button-outer report-round-button no_animation" style={{top: "190px"}}>
                     <div id="reportBtn" className="round-button-inner-main no_animation" data-toggle="modal"
                          data-target="#adress">
-                        <FontAwesomeIcon icon={faAddressCard} />       <i className="fas fa-address-card"></i></div>
+                        <FontAwesomeIcon icon={faAddressCard}/> <i className="fas fa-address-card"></i></div>
                 </div>
                 <div className="modal fade" id="adress" tabIndex="-1" role="dialog" aria-labelledby="adressLabel"
                      aria-hidden="true">
@@ -491,7 +488,7 @@ class DrugDetail extends React.Component {
                 <div className="round-button-outer report-round-button no_animation" style={{top: "280px"}}>
                     <div id="reportBtn" className="round-button-inner-main no_animation" data-toggle="modal"
                          data-target="#melden">
-                        <FontAwesomeIcon icon={faCommentMedical} />  <i className="fas fa-comment-medical"></i>
+                        <FontAwesomeIcon icon={faCommentMedical}/>
                     </div>
                 </div>
                 <div className="modal fade" id="melden" tabIndex="-1" role="dialog" aria-labelledby="adressLabel"
@@ -513,7 +510,7 @@ class DrugDetail extends React.Component {
                                         </p>
                                     </div>
                                     <div className="col-lg-2 icon_modal">
-                                        <i className="fas fa-thumbs-up"></i>
+                                        <FontAwesomeIcon icon={faThumbsUp}/>
                                     </div>
                                 </div>
                                 <div className="row">
@@ -526,7 +523,7 @@ class DrugDetail extends React.Component {
                                         </p>
                                     </div>
                                     <div className="col-lg-2 icon_modal">
-                                        <i className="fas fa-user-md"></i>
+                                        <FontAwesomeIcon icon={faUserMd}/>
                                     </div>
                                 </div>
                                 <div className="row">
@@ -552,7 +549,9 @@ class DrugDetail extends React.Component {
                 {/*Button REPORT ENDE*/
                 }
 
-                <div className='page-header'>
+                <div className='page-header bg_grey'>
+                    <div className="container  no-banner">
+
                     <div className='btn-toolbar pull-right'>
                         <div className='btn-group'></div>
                     </div>
@@ -561,13 +560,11 @@ class DrugDetail extends React.Component {
                     <div className='btn-toolbar pull-right'>
                         <div className='btn-group'>
                             <button type="button" className="btn btn-like" onClick={() => this.toggleTaking(drug)}>
-                                <span
-                                    className={"glyphicon white" + ((!drug.isTaken) ? " glyphicon-heart" : " glyphicon-minus")}></span>
+                                <span className={"glyphicon white" + ((!drug.isTaken) ? " glyphicon-heart" : " glyphicon-minus")}></span>
                             </button>
 
                             <button type="button" className="btn btn-add" onClick={() => this.toggleRemember(drug)}>
-                                <span
-                                    className={"glyphicon white" + ((!drug.isRemembered) ? " glyphicon-plus" : " glyphicon-minus")}></span>
+                                <span className={"glyphicon white" + ((!drug.isRemembered) ? " glyphicon-plus" : " glyphicon-minus")}></span>
                             </button>
                         </div>
                     </div>
@@ -579,69 +576,68 @@ class DrugDetail extends React.Component {
                     {/*<h3>{drug.name} {drug.productGroup && drug.productGroup.name && <span className="text-muted">{drug.productGroup.name}</span> }</h3>*/}
                     {/*<span>v. {drug.version} | {t('publishingDate')}: {new Date(drug.year).toLocaleDateString()}</span>*/}
 
-                </div>
-                < div
-                    className="row featurette drug-detail-header">
-                    < div
-                        className="col-xs-12 col-sm-12 col-md-4">
-                        < img
-                            className="featurette-image img-responsive center-block"
-                            alt={drug.name}
-                            title={drug.name}
-                            src={`/image/drug/${drug.id}`
-                            }><
-                            /img>
-                            <div className="drug-features margin-s">
-                                {this.renderDrugFeatures(drug)}
-                            </div>
-                            < /div>
-                                <div className="col-xs-12 col-sm-12 col-md-8 med_desc">
-                                    {User.isAuthenticated() && drug.personalizedInformation &&
-                                    <div className="alert alert-info alert-dismissable">
-                                        <a href="#" className="close" data-dismiss="alert"
-                                           aria-label="close">&times;</a>
-                                        <span
-                                            dangerouslySetInnerHTML={this.createMarkup(drug.personalizedInformation)}/>
-                                    </div>
-                                    }
-
-                                    {this.renderPharmaceuticalForm(drug)}
-
-                                    {this.renderDisease(drug)}
-
-                                    {this.renderActiveSubstance(drug)}
-
-
-                                    <div className="additional-information">
-                                        {showAdditionalInfo &&
-                                        <section>
-                                            {this.renderIndicationGroup(drug)}
-
-                                            {this.renderProductGroup(drug)}
-
-                                            {this.renderPZN(drug)}
-                                        </section>
+                    <div className="row featurette drug-detail-header">
+                        <div
+                            className="col-xs-12 col-sm-12 col-md-4">
+                            <img className="featurette-image img-responsive center-block"
+                                alt={drug.name}
+                                title={drug.name}
+                                src={`/image/drug/${drug.id}`
+                                }></img>
+                                <div className="drug-features margin-s">
+                                    {this.renderDrugFeatures(drug)}
+                                </div>
+                                </div>
+                                    <div className="col-xs-12 col-sm-12 col-md-8 med_desc">
+                                        {User.isAuthenticated() && drug.personalizedInformation &&
+                                        <div className="alert alert-info alert-dismissable">
+                                            <a href="#" className="close" data-dismiss="alert"
+                                               aria-label="close">&times;</a>
+                                            <span
+                                                dangerouslySetInnerHTML={this.createMarkup(drug.personalizedInformation)}/>
+                                        </div>
                                         }
 
-                                        <p>
-                                            <a onClick={this.toggleShowAdditionalInfo}>
-                                                [{!showAdditionalInfo && <span>{t('viewDetails')}</span>}
-                                                {showAdditionalInfo && <span>{t('hideDetails')}</span>}]
-                                            </a>
-                                        </p>
+                                        {this.renderPharmaceuticalForm(drug)}
+
+                                        {this.renderDisease(drug)}
+
+                                        {this.renderActiveSubstance(drug)}
+
+
+                                        <div className="additional-information">
+                                            {showAdditionalInfo &&
+                                            <section>
+                                                {this.renderIndicationGroup(drug)}
+
+                                                {this.renderProductGroup(drug)}
+
+                                                {this.renderPZN(drug)}
+                                            </section>
+                                            }
+
+                                            <p>
+                                                <a onClick={this.toggleShowAdditionalInfo}>
+                                                    [{!showAdditionalInfo && <span>{t('viewDetails')}</span>}
+                                                    {showAdditionalInfo && <span>{t('hideDetails')}</span>}]
+                                                </a>
+                                            </p>
+                                        </div>
+
                                     </div>
+                        </div>
 
-                                </div>
-                                < /div>
+                        </div>
+                </div>
 
+                            <hr/>
 
-                                    <hr/>
-
-                                    {
-                                        this.renderSectionList(drug)
-                                    }
+                            {
+                                this.renderSectionList(drug)
+                            }
 
                     </div>
+
                     );
                     }
                     }
