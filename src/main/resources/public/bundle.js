@@ -40610,14 +40610,16 @@ var DrugDetail = function (_React$Component) {
                                     { type: "button", className: "btn btn-like", onClick: function onClick() {
                                             return _this9.toggleTaking(drug);
                                         } },
-                                    _react2.default.createElement("span", { className: "glyphicon white" + (!drug.isTaken ? " glyphicon-heart" : " glyphicon-minus") })
+                                    _react2.default.createElement("span", {
+                                        className: "glyphicon white" + (!drug.isTaken ? " glyphicon-heart" : " glyphicon-minus") })
                                 ),
                                 _react2.default.createElement(
                                     "button",
                                     { type: "button", className: "btn btn-add", onClick: function onClick() {
                                             return _this9.toggleRemember(drug);
                                         } },
-                                    _react2.default.createElement("span", { className: "glyphicon white" + (!drug.isRemembered ? " glyphicon-plus" : " glyphicon-minus") })
+                                    _react2.default.createElement("span", {
+                                        className: "glyphicon white" + (!drug.isRemembered ? " glyphicon-plus" : " glyphicon-minus") })
                                 )
                             )
                         ),
@@ -40655,7 +40657,7 @@ var DrugDetail = function (_React$Component) {
                             ),
                             _react2.default.createElement(
                                 "div",
-                                { className: "col-xs-12 col-sm-12 col-md-8 med_desc" },
+                                { className: "col-xs-12 col-sm-12 col-md-5 med_desc" },
                                 _User2.default.isAuthenticated() && drug.personalizedInformation && _react2.default.createElement(
                                     "div",
                                     { className: "alert alert-info alert-dismissable" },
@@ -40685,20 +40687,22 @@ var DrugDetail = function (_React$Component) {
                                         "p",
                                         null,
                                         _react2.default.createElement(
-                                            "a",
-                                            { onClick: this.toggleShowAdditionalInfo },
-                                            "[",
-                                            !showAdditionalInfo && _react2.default.createElement(
-                                                "span",
-                                                null,
-                                                t('viewDetails')
-                                            ),
-                                            showAdditionalInfo && _react2.default.createElement(
-                                                "span",
-                                                null,
-                                                t('hideDetails')
-                                            ),
-                                            "]"
+                                            "button",
+                                            { className: "btn btn-info" },
+                                            _react2.default.createElement(
+                                                "a",
+                                                { onClick: this.toggleShowAdditionalInfo },
+                                                !showAdditionalInfo && _react2.default.createElement(
+                                                    "span",
+                                                    null,
+                                                    t('viewDetails')
+                                                ),
+                                                showAdditionalInfo && _react2.default.createElement(
+                                                    "span",
+                                                    null,
+                                                    t('hideDetails')
+                                                )
+                                            )
                                         )
                                     )
                                 )
@@ -40706,7 +40710,955 @@ var DrugDetail = function (_React$Component) {
                         )
                     )
                 ),
-                _react2.default.createElement("hr", null),
+                _react2.default.createElement(
+                    "div",
+                    { className: "container" },
+                    _react2.default.createElement(
+                        "div",
+                        { className: "row text-center" },
+                        _react2.default.createElement(
+                            "div",
+                            { className: "col-lg-4" },
+                            _react2.default.createElement("div", { className: "row" }),
+                            _react2.default.createElement(
+                                "div",
+                                { className: "row" },
+                                _react2.default.createElement(
+                                    "button",
+                                    { type: "button", className: "btn btn-primary dropdown-toggle" },
+                                    _react2.default.createElement(
+                                        "a",
+                                        {
+                                            style: { color: "white" }, href: "#about" },
+                                        "Vor der Einnahmen"
+                                    )
+                                )
+                            )
+                        ),
+                        _react2.default.createElement(
+                            "div",
+                            { className: "col-lg-4" },
+                            _react2.default.createElement("div", { className: "row" }),
+                            _react2.default.createElement(
+                                "div",
+                                { className: "row" },
+                                _react2.default.createElement(
+                                    "button",
+                                    { type: "button", className: "btn btn-primary dropdown-toggle" },
+                                    _react2.default.createElement(
+                                        "a",
+                                        {
+                                            style: { color: "white" }, href: "#anwendung" },
+                                        "Anwendung"
+                                    )
+                                )
+                            )
+                        ),
+                        _react2.default.createElement(
+                            "div",
+                            { className: "col-lg-4" },
+                            _react2.default.createElement("div", { className: "row" }),
+                            _react2.default.createElement(
+                                "div",
+                                { className: "row" },
+                                _react2.default.createElement(
+                                    "button",
+                                    { type: "button", className: "btn btn-primary dropdown-toggle" },
+                                    _react2.default.createElement(
+                                        "a",
+                                        {
+                                            style: { color: "white" },
+                                            href: "#nebenwirkungen" },
+                                        "Nebenwirkungen"
+                                    )
+                                )
+                            )
+                        )
+                    )
+                ),
+                _react2.default.createElement(
+                    "div",
+                    { id: "about", className: "container" },
+                    _react2.default.createElement(
+                        "div",
+                        { className: "row" },
+                        _react2.default.createElement(
+                            "div",
+                            { className: "col-sm-12 text-center" },
+                            _react2.default.createElement(
+                                "h2",
+                                null,
+                                "Vor der Einnahme von Prospan\xAE Hustensaft"
+                            ),
+                            _react2.default.createElement(
+                                "p",
+                                { style: { color: "black" } },
+                                "Besondere Vorsicht bei der Einnahme von Prospan\xAE Hustensaft ist erforderlich"
+                            )
+                        )
+                    ),
+                    _react2.default.createElement(
+                        "div",
+                        { className: "row" },
+                        _react2.default.createElement(
+                            "div",
+                            { className: "col-sm-4" },
+                            _react2.default.createElement(
+                                "ul",
+                                { id: "nav-tabs-wrapper", className: "nav nav-tabs nav-pills nav-stacked well" },
+                                _react2.default.createElement(
+                                    "li",
+                                    { className: "active" },
+                                    _react2.default.createElement(
+                                        "a",
+                                        { href: "#vtab1", "data-toggle": "tab" },
+                                        "Allergie"
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    "li",
+                                    null,
+                                    _react2.default.createElement(
+                                        "a",
+                                        { href: "#vtab2", "data-toggle": "tab" },
+                                        "Kinder"
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    "li",
+                                    null,
+                                    _react2.default.createElement(
+                                        "a",
+                                        { href: "#vtab3", "data-toggle": "tab" },
+                                        "Schwangerschaft und Stillzeit"
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    "li",
+                                    null,
+                                    _react2.default.createElement(
+                                        "a",
+                                        { href: "#vtab4", "data-toggle": "tab" },
+                                        " Verkehrst\xFCchtigkeit und das Bedienen von Maschinen"
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    "li",
+                                    null,
+                                    _react2.default.createElement(
+                                        "a",
+                                        { href: "#vtab5", "data-toggle": "tab" },
+                                        " Einnahme mit anderen Arzneimitteln"
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    "li",
+                                    null,
+                                    _react2.default.createElement(
+                                        "a",
+                                        { href: "#vtab5", "data-toggle": "tab" },
+                                        " Zuckerkrank"
+                                    )
+                                )
+                            )
+                        ),
+                        _react2.default.createElement(
+                            "div",
+                            { className: "col-sm-8" },
+                            _react2.default.createElement(
+                                "div",
+                                { className: "tab-content" },
+                                _react2.default.createElement(
+                                    "div",
+                                    { role: "tabpanel", className: "tab-pane fade in active", id: "vtab1" },
+                                    _react2.default.createElement(
+                                        "h3",
+                                        null,
+                                        "Allergie"
+                                    ),
+                                    _react2.default.createElement(
+                                        "p",
+                                        null,
+                                        "Prospan\xAE Hustensaft darf ",
+                                        _react2.default.createElement(
+                                            "b",
+                                            null,
+                                            "nicht"
+                                        ),
+                                        " eingenommen werden, wenn Sie \xFCberempfindlich (allergisch) gegen\xFCber dem wirksamen Bestandteil oder einem der sonstigen Bestandteile des Arzneimittels sind"
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    "div",
+                                    { role: "tabpanel", className: "tab-pane fade", id: "vtab2" },
+                                    _react2.default.createElement(
+                                        "h3",
+                                        null,
+                                        "Kinder"
+                                    ),
+                                    _react2.default.createElement(
+                                        "p",
+                                        null,
+                                        _react2.default.createElement(
+                                            "b",
+                                            null,
+                                            "Kinder unter einem Jahr"
+                                        ),
+                                        " ",
+                                        _react2.default.createElement("br", null),
+                                        "Anwendung nur nach R\xFCcksprache mit einem Arzt. Die Einnahme bei dieser Altersgruppe sollte nur unter sorgf\xE4ltiger Beobachtung erfolgen, weil bei Kindern unter einem Jahr im Vergleich zu \xE4lteren Kindern besonders auf das Auftreten von Durchfall und Erbrechen zu achten ist."
+                                    ),
+                                    _react2.default.createElement(
+                                        "div",
+                                        { className: "alert alert-info", role: "alert" },
+                                        "Bitte beachten Sie auch die Hinweise unter ",
+                                        _react2.default.createElement(
+                                            "a",
+                                            {
+                                                href: "#" },
+                                            _react2.default.createElement(
+                                                "b",
+                                                null,
+                                                "Nebenwirkungen"
+                                            )
+                                        ),
+                                        "."
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    "div",
+                                    { role: "tabpanel", className: "tab-pane fade in", id: "vtab3" },
+                                    _react2.default.createElement(
+                                        "h3",
+                                        null,
+                                        "Schwangerschaft und Stillzeit "
+                                    ),
+                                    _react2.default.createElement(
+                                        "div",
+                                        { className: "alert alert-danger", role: "alert" },
+                                        _react2.default.createElement(
+                                            "p",
+                                            null,
+                                            "Dieses Arzneimittel soll in der Schwangerschaft und Stillzeit ",
+                                            _react2.default.createElement(
+                                                "b",
+                                                null,
+                                                "nicht"
+                                            ),
+                                            "angewendet werden, da keine ausreichenden Untersuchungen vorliegen."
+                                        )
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    "div",
+                                    { role: "tabpanel", className: "tab-pane fade in", id: "vtab4" },
+                                    _react2.default.createElement(
+                                        "h3",
+                                        null,
+                                        "Verkehrst\xFCchtigkeit und das Bedienen von Maschinen"
+                                    ),
+                                    _react2.default.createElement(
+                                        "div",
+                                        { className: "alert alert-success", role: "alert" },
+                                        _react2.default.createElement(
+                                            "p",
+                                            null,
+                                            "Es sind keine besonderen Vorsichtsma\xDFnahmen erforderlich."
+                                        )
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    "div",
+                                    { role: "tabpanel", className: "tab-pane fade in", id: "vtab5" },
+                                    _react2.default.createElement(
+                                        "h3",
+                                        null,
+                                        "Einnahme mit anderen Arzneimitteln"
+                                    ),
+                                    _react2.default.createElement(
+                                        "p",
+                                        null,
+                                        "Dieses Arzneimittel enth\xE4lt Sorbitol. Bei jeder Anwendung werden bis zu 1,9 g Sorbitol zugef\xFChrt.",
+                                        _react2.default.createElement(
+                                            "div",
+                                            { className: "alert alert-warning", role: "alert" },
+                                            " Bitte nehmen Sie Prospan\xAE Hustensaft erst nach R\xFCcksprache mit Ihrem Arzt ein, wenn Ihnen bekannt ist, dass Sie unter einer Unvertr\xE4glichkeit gegen\xFCber bestimmten Zuckern leiden."
+                                        )
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    "div",
+                                    { role: "tabpanel", className: "tab-pane fade in", id: "vtab5" },
+                                    _react2.default.createElement(
+                                        "h3",
+                                        null,
+                                        "Zuckerkrank"
+                                    ),
+                                    _react2.default.createElement(
+                                        "p",
+                                        null,
+                                        "Es wurden keine Untersuchungen durchgef\xFChrt. Bisher sind keine Wechselwirkungen bekannt geworden.",
+                                        _react2.default.createElement(
+                                            "div",
+                                            { className: "alert alert-warning", role: "alert" },
+                                            " Bitte informieren Sie Ihren Arzt oder Apotheker, wenn Sie andere Arzneimittel einnehmen / anwenden bzw. vor kurzem eingenommen / angewendet haben, auch wenn es sich um nicht verschreibungspflichtige Arzneimittel handelt"
+                                        )
+                                    )
+                                )
+                            )
+                        )
+                    )
+                ),
+                _react2.default.createElement(
+                    "div",
+                    { className: "container-fluid bg-grey" },
+                    _react2.default.createElement(
+                        "div",
+                        { className: "container bg-grey", id: "anwendung", style: { marginTop: "90px" } },
+                        _react2.default.createElement(
+                            "div",
+                            { className: "row" },
+                            _react2.default.createElement(
+                                "div",
+                                { className: "col-sm-12 text-center" },
+                                _react2.default.createElement(
+                                    "h2",
+                                    null,
+                                    "Anwendung von Prospan\xAE Hustensaft "
+                                )
+                            )
+                        ),
+                        _react2.default.createElement(
+                            "div",
+                            { className: "row text-center" },
+                            _react2.default.createElement(
+                                "div",
+                                { className: "alert alert-info", role: "alert" },
+                                " Nehmen Sie Prospan\xAE Hustensaft immer genau nach der Anweisung dieser Packungsbeilage ein. ",
+                                _react2.default.createElement("br", null),
+                                " Bitte fragen Sie bei Ihrem Arzt oder Apotheker nach, wenn Sie sich nicht ganz sicher sind."
+                            ),
+                            _react2.default.createElement(
+                                "div",
+                                { className: "col-sm-12" },
+                                _react2.default.createElement(
+                                    "div",
+                                    { className: "panel with-nav-tabs panel-primary" },
+                                    _react2.default.createElement(
+                                        "div",
+                                        { className: "panel-heading" },
+                                        _react2.default.createElement(
+                                            "ul",
+                                            { className: "nav nav-tabs" },
+                                            _react2.default.createElement(
+                                                "li",
+                                                { className: "active" },
+                                                _react2.default.createElement(
+                                                    "a",
+                                                    { href: "#tab1primary", "data-toggle": "tab" },
+                                                    "Dosis"
+                                                )
+                                            ),
+                                            _react2.default.createElement(
+                                                "li",
+                                                null,
+                                                _react2.default.createElement(
+                                                    "a",
+                                                    { href: "#tab2primary", "data-toggle": "tab" },
+                                                    "Art"
+                                                )
+                                            ),
+                                            _react2.default.createElement(
+                                                "li",
+                                                null,
+                                                _react2.default.createElement(
+                                                    "a",
+                                                    { href: "#tab3primary", "data-toggle": "tab" },
+                                                    "Dauer"
+                                                )
+                                            )
+                                        )
+                                    ),
+                                    _react2.default.createElement(
+                                        "div",
+                                        { className: "panel-body" },
+                                        _react2.default.createElement(
+                                            "div",
+                                            { className: "tab-content" },
+                                            _react2.default.createElement(
+                                                "div",
+                                                { className: "tab-pane fade in active", id: "tab1primary" },
+                                                _react2.default.createElement(
+                                                    "div",
+                                                    { className: "row" },
+                                                    _react2.default.createElement("div", { className: "col-lg-3", style: { fontSize: "16px" } }),
+                                                    _react2.default.createElement(
+                                                        "div",
+                                                        { className: "col-lg-3", style: { fontSize: "60px" } },
+                                                        _react2.default.createElement("i", { className: "fas fa-baby" })
+                                                    ),
+                                                    _react2.default.createElement(
+                                                        "div",
+                                                        { className: "col-lg-3", style: { fontSize: "60px" } },
+                                                        _react2.default.createElement("i", { className: "fas fa-child" })
+                                                    ),
+                                                    _react2.default.createElement(
+                                                        "div",
+                                                        { className: "col-lg-3", style: { fontSize: "60px" } },
+                                                        _react2.default.createElement("i", { className: "fas fa-male" }),
+                                                        _react2.default.createElement("i", { className: "fas fa-blind" })
+                                                    )
+                                                ),
+                                                _react2.default.createElement(
+                                                    "div",
+                                                    { className: "row" },
+                                                    _react2.default.createElement(
+                                                        "div",
+                                                        { className: "col-lg-3", style: { fontSize: "16px" } },
+                                                        _react2.default.createElement(
+                                                            "p",
+                                                            { style: { fontWeight: "bold" } },
+                                                            "Alter"
+                                                        )
+                                                    ),
+                                                    _react2.default.createElement(
+                                                        "div",
+                                                        { className: "col-lg-3", style: { fontSize: "16px" } },
+                                                        _react2.default.createElement(
+                                                            "p",
+                                                            null,
+                                                            " Kinder unter 6 Jahren"
+                                                        )
+                                                    ),
+                                                    _react2.default.createElement(
+                                                        "div",
+                                                        { className: "col-lg-3", style: { fontSize: "16px" } },
+                                                        _react2.default.createElement(
+                                                            "p",
+                                                            null,
+                                                            " Kinder von 6 - 12 Jahren"
+                                                        )
+                                                    ),
+                                                    _react2.default.createElement(
+                                                        "div",
+                                                        { className: "col-lg-3", style: { fontSize: "16px" } },
+                                                        _react2.default.createElement(
+                                                            "p",
+                                                            null,
+                                                            " Kinder ab 6 Jahren & Erwachsene"
+                                                        )
+                                                    )
+                                                ),
+                                                _react2.default.createElement("hr", null),
+                                                _react2.default.createElement(
+                                                    "div",
+                                                    { className: "row" },
+                                                    _react2.default.createElement(
+                                                        "div",
+                                                        { className: "col-lg-3", style: { fontSize: "16px" } },
+                                                        _react2.default.createElement(
+                                                            "p",
+                                                            { style: { fontWeight: "bold" } },
+                                                            "Einzeldosis"
+                                                        )
+                                                    ),
+                                                    _react2.default.createElement(
+                                                        "div",
+                                                        { className: "col-lg-3", style: { fontSize: "16px" } },
+                                                        _react2.default.createElement(
+                                                            "p",
+                                                            null,
+                                                            "2,5 ml ",
+                                                            _react2.default.createElement("br", null),
+                                                            " \u2259 ",
+                                                            _react2.default.createElement("br", null),
+                                                            " 17,5 mg Efeubl\xE4tter-Trockenextrakt"
+                                                        )
+                                                    ),
+                                                    _react2.default.createElement(
+                                                        "div",
+                                                        { className: "col-lg-3", style: { fontSize: "16px" } },
+                                                        _react2.default.createElement(
+                                                            "p",
+                                                            null,
+                                                            "5 ml ",
+                                                            _react2.default.createElement("br", null),
+                                                            " \u2259 ",
+                                                            _react2.default.createElement("br", null),
+                                                            " 35 mg Efeubl\xE4tter-Trockenextrakt"
+                                                        )
+                                                    ),
+                                                    _react2.default.createElement(
+                                                        "div",
+                                                        { className: "col-lg-3", style: { fontSize: "16px" } },
+                                                        _react2.default.createElement(
+                                                            "p",
+                                                            null,
+                                                            "5 ml ",
+                                                            _react2.default.createElement("br", null),
+                                                            " \u2259 ",
+                                                            _react2.default.createElement("br", null),
+                                                            " 35 mg Efeubl\xE4tter-Trockenextrakt"
+                                                        )
+                                                    )
+                                                ),
+                                                _react2.default.createElement("hr", null),
+                                                _react2.default.createElement(
+                                                    "div",
+                                                    { className: "row" },
+                                                    _react2.default.createElement(
+                                                        "div",
+                                                        { className: "col-lg-3", style: { fontSize: "16px" } },
+                                                        _react2.default.createElement(
+                                                            "p",
+                                                            { style: { fontWeight: "bold" } },
+                                                            "Tagesgesamtdosis"
+                                                        )
+                                                    ),
+                                                    _react2.default.createElement(
+                                                        "div",
+                                                        { className: "col-lg-3", style: { fontSize: "16px" } },
+                                                        _react2.default.createElement(
+                                                            "p",
+                                                            null,
+                                                            "5 ml (2 x 2,5 ml) ",
+                                                            _react2.default.createElement("br", null),
+                                                            " \u2259 ",
+                                                            _react2.default.createElement("br", null),
+                                                            " 35 mg Efeubl\xE4tter-Trockenextrakt"
+                                                        )
+                                                    ),
+                                                    _react2.default.createElement(
+                                                        "div",
+                                                        { className: "col-lg-3", style: { fontSize: "16px" } },
+                                                        _react2.default.createElement(
+                                                            "p",
+                                                            null,
+                                                            "10 ml (2 x 5 ml) ",
+                                                            _react2.default.createElement("br", null),
+                                                            " \u2259 ",
+                                                            _react2.default.createElement("br", null),
+                                                            " 70 mg Efeubl\xE4tter-Trockenextrakt"
+                                                        )
+                                                    ),
+                                                    _react2.default.createElement(
+                                                        "div",
+                                                        { className: "col-lg-3", style: { fontSize: "16px" } },
+                                                        _react2.default.createElement(
+                                                            "p",
+                                                            null,
+                                                            "15 ml (3 x 5 ml) ",
+                                                            _react2.default.createElement("br", null),
+                                                            " \u2259 ",
+                                                            _react2.default.createElement("br", null),
+                                                            " 105 mg Efeubl\xE4tter-Trockenextrakt"
+                                                        )
+                                                    )
+                                                )
+                                            ),
+                                            _react2.default.createElement(
+                                                "div",
+                                                { className: "tab-pane fade", id: "tab2primary" },
+                                                _react2.default.createElement(
+                                                    "div",
+                                                    { className: "row" },
+                                                    _react2.default.createElement(
+                                                        "div",
+                                                        { className: "col-lg-4 col-lg-offset-4" },
+                                                        _react2.default.createElement(
+                                                            "table",
+                                                            { className: "table table-striped custab" },
+                                                            _react2.default.createElement(
+                                                                "tr",
+                                                                null,
+                                                                _react2.default.createElement(
+                                                                    "td",
+                                                                    null,
+                                                                    _react2.default.createElement(
+                                                                        "h4",
+                                                                        { style: { marginBottom: "0px" } },
+                                                                        " 1x"
+                                                                    )
+                                                                ),
+                                                                _react2.default.createElement(
+                                                                    "td",
+                                                                    null,
+                                                                    _react2.default.createElement(
+                                                                        "h4",
+                                                                        { style: { marginBottom: "0px" } },
+                                                                        " Morgens"
+                                                                    )
+                                                                )
+                                                            ),
+                                                            _react2.default.createElement(
+                                                                "tr",
+                                                                null,
+                                                                _react2.default.createElement(
+                                                                    "td",
+                                                                    null,
+                                                                    _react2.default.createElement(
+                                                                        "h4",
+                                                                        { style: { marginBottom: "0px" } },
+                                                                        " 1x "
+                                                                    )
+                                                                ),
+                                                                _react2.default.createElement(
+                                                                    "td",
+                                                                    null,
+                                                                    _react2.default.createElement(
+                                                                        "h4",
+                                                                        { style: { marginBottom: "0px" } },
+                                                                        " (Mittags)"
+                                                                    )
+                                                                )
+                                                            ),
+                                                            _react2.default.createElement(
+                                                                "tr",
+                                                                null,
+                                                                _react2.default.createElement(
+                                                                    "td",
+                                                                    null,
+                                                                    _react2.default.createElement(
+                                                                        "h4",
+                                                                        { style: { marginBottom: "0px" } },
+                                                                        " 1x"
+                                                                    )
+                                                                ),
+                                                                _react2.default.createElement(
+                                                                    "td",
+                                                                    null,
+                                                                    _react2.default.createElement(
+                                                                        "h4",
+                                                                        { style: { marginBottom: "0px" } },
+                                                                        " Abends"
+                                                                    )
+                                                                )
+                                                            )
+                                                        )
+                                                    )
+                                                ),
+                                                _react2.default.createElement(
+                                                    "div",
+                                                    { className: "alert alert-info", role: "alert" },
+                                                    " Die Flasche vor jedem Gebrauch gut sch\xFCtteln! ",
+                                                    _react2.default.createElement("br", null),
+                                                    "Zum Einnehmen mit dem beigef\xFCgten Messbecher ",
+                                                    _react2.default.createElement("i", {
+                                                        className: "fas fa-glass-whiskey" }),
+                                                    "."
+                                                )
+                                            ),
+                                            _react2.default.createElement(
+                                                "div",
+                                                { className: "tab-pane fade", id: "tab3primary" },
+                                                _react2.default.createElement(
+                                                    "div",
+                                                    { className: "row" },
+                                                    _react2.default.createElement(
+                                                        "div",
+                                                        { className: "col-lg-8 col-lg-offset-2" },
+                                                        "Die Behandlungsdauer richtet sich jeweils nach der Art und Schwere des Krankheitsbildes; sie sollte in der Regel ",
+                                                        _react2.default.createElement(
+                                                            "b",
+                                                            null,
+                                                            "1 Woche "
+                                                        ),
+                                                        " betragen. Wenn die Beschwerden jedoch l\xE4nger als 1 Woche anhalten, sollte medizinischer Rat eingeholt werden.",
+                                                        _react2.default.createElement(
+                                                            "div",
+                                                            { className: "alert alert-warning", role: "alert" },
+                                                            " Bitte sprechen Sie mit Ihrem Arzt oder Apotheker, wenn Sie den Eindruck haben, dass die Wirkung von Prospan\xAE Hustensaft zu stark oder zu schwach ist."
+                                                        )
+                                                    )
+                                                )
+                                            ),
+                                            _react2.default.createElement(
+                                                "div",
+                                                { className: "tab-pane fade", id: "tab4primary" },
+                                                "Primary 4"
+                                            ),
+                                            _react2.default.createElement(
+                                                "div",
+                                                { className: "tab-pane fade", id: "tab5primary" },
+                                                "Primary 5"
+                                            )
+                                        )
+                                    )
+                                )
+                            )
+                        )
+                    )
+                ),
+                _react2.default.createElement(
+                    "div",
+                    { id: "nebenwirkungen", className: "container", style: { marginTop: "90px" } },
+                    _react2.default.createElement(
+                        "div",
+                        { className: "row" },
+                        _react2.default.createElement(
+                            "div",
+                            { className: "col-sm-12 text-center" },
+                            _react2.default.createElement(
+                                "h2",
+                                null,
+                                "Nebenwirkungen"
+                            )
+                        )
+                    ),
+                    _react2.default.createElement(
+                        "div",
+                        { className: "row" },
+                        _react2.default.createElement(
+                            "div",
+                            { className: "col-lg-12 text-center", style: { color: "black" } },
+                            "Wie alle Arzneimittel kann Prospan\xAE Hustensaft Nebenwirkungen haben, die aber nicht bei jedem auftreten m\xFCssen. ",
+                            _react2.default.createElement("br", null),
+                            "Bei der Bewertung von Nebenwirkungen werden folgende H\xE4ufigkeiten zugrundegelegt:",
+                            _react2.default.createElement(
+                                "div",
+                                { className: "row" },
+                                _react2.default.createElement(
+                                    "div",
+                                    { className: "col-lg-4 col-lg-offset-4 text-left" },
+                                    _react2.default.createElement(
+                                        "table",
+                                        { className: "table table-striped custab", style: { marginTop: "30px" } },
+                                        _react2.default.createElement(
+                                            "tbody",
+                                            null,
+                                            _react2.default.createElement(
+                                                "tr",
+                                                null,
+                                                _react2.default.createElement(
+                                                    "td",
+                                                    null,
+                                                    _react2.default.createElement(
+                                                        "b",
+                                                        null,
+                                                        "Sehr h\xE4ufig"
+                                                    )
+                                                ),
+                                                _react2.default.createElement(
+                                                    "td",
+                                                    null,
+                                                    "mehr als 1 Behandelter von 10"
+                                                )
+                                            ),
+                                            _react2.default.createElement(
+                                                "tr",
+                                                null,
+                                                _react2.default.createElement(
+                                                    "td",
+                                                    null,
+                                                    _react2.default.createElement(
+                                                        "b",
+                                                        null,
+                                                        " H\xE4ufig"
+                                                    )
+                                                ),
+                                                _react2.default.createElement(
+                                                    "td",
+                                                    null,
+                                                    "1 bis 10 Behandelte von 100"
+                                                )
+                                            ),
+                                            _react2.default.createElement(
+                                                "tr",
+                                                null,
+                                                _react2.default.createElement(
+                                                    "td",
+                                                    null,
+                                                    _react2.default.createElement(
+                                                        "b",
+                                                        null,
+                                                        " Gelegentlich"
+                                                    )
+                                                ),
+                                                _react2.default.createElement(
+                                                    "td",
+                                                    null,
+                                                    "1 bis 10 Behandelte von 1.000"
+                                                )
+                                            ),
+                                            _react2.default.createElement(
+                                                "tr",
+                                                null,
+                                                _react2.default.createElement(
+                                                    "td",
+                                                    null,
+                                                    _react2.default.createElement(
+                                                        "b",
+                                                        null,
+                                                        " Selten"
+                                                    )
+                                                ),
+                                                _react2.default.createElement(
+                                                    "td",
+                                                    null,
+                                                    "1 bis 10 Behandelte von 10.000"
+                                                )
+                                            ),
+                                            _react2.default.createElement(
+                                                "tr",
+                                                null,
+                                                _react2.default.createElement(
+                                                    "td",
+                                                    null,
+                                                    _react2.default.createElement(
+                                                        "b",
+                                                        null,
+                                                        " Sehr selten"
+                                                    )
+                                                ),
+                                                _react2.default.createElement(
+                                                    "td",
+                                                    null,
+                                                    "weniger als 1 Behandelter von 10.000"
+                                                )
+                                            ),
+                                            _react2.default.createElement(
+                                                "tr",
+                                                null,
+                                                _react2.default.createElement(
+                                                    "td",
+                                                    null,
+                                                    _react2.default.createElement(
+                                                        "b",
+                                                        null,
+                                                        " Nicht bekannt"
+                                                    )
+                                                ),
+                                                _react2.default.createElement(
+                                                    "td",
+                                                    null,
+                                                    "H\xE4ufigkeit auf Grundlage der verf\xFCgbaren Daten nicht absch\xE4tzbar"
+                                                )
+                                            )
+                                        )
+                                    )
+                                )
+                            )
+                        )
+                    ),
+                    _react2.default.createElement(
+                        "div",
+                        { className: "row" },
+                        _react2.default.createElement(
+                            "div",
+                            { className: "col-sm-4" },
+                            _react2.default.createElement(
+                                "ul",
+                                { id: "nav-tabs-wrapper", className: "nav nav-tabs nav-pills nav-stacked well" },
+                                _react2.default.createElement(
+                                    "li",
+                                    { className: "active" },
+                                    _react2.default.createElement(
+                                        "a",
+                                        { href: "#vtab11", "data-toggle": "tab" },
+                                        "Allergische Reaktionen"
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    "li",
+                                    null,
+                                    _react2.default.createElement(
+                                        "a",
+                                        { href: "#vtab12", "data-toggle": "tab" },
+                                        "Magen-Darm-Beschwerden "
+                                    )
+                                )
+                            )
+                        ),
+                        _react2.default.createElement(
+                            "div",
+                            { className: "col-sm-8" },
+                            _react2.default.createElement(
+                                "div",
+                                { className: "tab-content" },
+                                _react2.default.createElement(
+                                    "div",
+                                    { role: "tabpanel", className: "tab-pane fade in active", id: "vtab11",
+                                        style: { padding: "25px" } },
+                                    _react2.default.createElement(
+                                        "span",
+                                        { className: "label label-primary" },
+                                        "Atemnot"
+                                    ),
+                                    _react2.default.createElement(
+                                        "span",
+                                        { className: "label label-primary" },
+                                        "Schwellungen"
+                                    ),
+                                    _react2.default.createElement(
+                                        "span",
+                                        { className: "label label-primary" },
+                                        "Hautr\xF6tungen"
+                                    ),
+                                    _react2.default.createElement(
+                                        "span",
+                                        { className: "label label-primary" },
+                                        "Juckreiz"
+                                    ),
+                                    _react2.default.createElement(
+                                        "span",
+                                        { className: "label label-primary" },
+                                        "Atemnot"
+                                    ),
+                                    _react2.default.createElement("br", null),
+                                    " ",
+                                    _react2.default.createElement("br", null),
+                                    _react2.default.createElement(
+                                        "p",
+                                        null,
+                                        _react2.default.createElement(
+                                            "b",
+                                            null,
+                                            "H\xE4ufigkeit:"
+                                        ),
+                                        " Nicht bekannt"
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    "div",
+                                    { role: "tabpanel", className: "tab-pane fade", id: "vtab12", style: { padding: "20px" } },
+                                    "Aufgrund des Sorbitolgehaltes: ",
+                                    _react2.default.createElement("br", null),
+                                    _react2.default.createElement(
+                                        "span",
+                                        { className: "label label-primary" },
+                                        "\xDCbelkeit"
+                                    ),
+                                    _react2.default.createElement(
+                                        "span",
+                                        { className: "label label-primary" },
+                                        "Erbrechen"
+                                    ),
+                                    _react2.default.createElement(
+                                        "span",
+                                        { className: "label label-primary" },
+                                        "Durchfall"
+                                    ),
+                                    _react2.default.createElement(
+                                        "span",
+                                        { className: "label label-primary" },
+                                        "abf\xFChrende Wirkung"
+                                    ),
+                                    _react2.default.createElement("br", null),
+                                    _react2.default.createElement(
+                                        "p",
+                                        null,
+                                        _react2.default.createElement(
+                                            "b",
+                                            null,
+                                            "H\xE4ufigkeit:"
+                                        ),
+                                        " Nicht bekannt"
+                                    )
+                                )
+                            )
+                        )
+                    )
+                ),
                 this.renderSectionList(drug)
             );
         }
@@ -41089,7 +42041,7 @@ var DrugList = function (_React$Component) {
 
 			return _react2.default.createElement(
 				"div",
-				{ className: "drug-features pull-right" },
+				{ className: "drug-features " },
 				drug.drugFeature.map(function (feature) {
 					return _react2.default.createElement("img", { key: feature.id, src: "./../../assets/icons/" + feature.id + ".svg", className: "drug-feature-icon", alt: feature.drugFeature, title: feature.drugFeature });
 				})
@@ -41178,75 +42130,91 @@ var DrugList = function (_React$Component) {
 			return drugs.map(function (drug) {
 
 				return _react2.default.createElement(
-					"li",
-					{ className: "row", key: drug.id },
+					"div",
+					{ className: "col-md-4 ", key: drug.id },
 					_react2.default.createElement(
 						"div",
-						{ className: "image-container hidden-xs col-sm-4 col-md-3 col-lg-4 no-padding" },
-						_react2.default.createElement(
-							_reactRouterDom.Link,
-							{ to: "/drug/" + drug.id },
-							_react2.default.createElement("img", { className: "featurette-image img-responsive center-block", alt: drug.name, title: drug.name, src: "/image/drug/" + drug.id })
-						)
-					),
-					_react2.default.createElement(
-						"div",
-						{ className: "image-container col-xs-12 col-sm-8 col-md-9 col-lg-8 no-padding" },
+						{ className: "panel panel-default medicine" },
 						_react2.default.createElement(
 							"div",
-							{ className: "info" },
-							_this9.renderDrugFeatures(drug),
+							{ className: "panel-body" },
 							_react2.default.createElement(
-								_reactRouterDom.Link,
-								{ to: "/drug/" + drug.id },
+								"div",
+								{ className: "row", style: { paddingBottom: "20px" } },
 								_react2.default.createElement(
-									"h4",
-									null,
-									drug.name
+									_reactRouterDom.Link,
+									{ to: "/drug/" + drug.id },
+									_react2.default.createElement("img", { style: { height: "200px" }, className: "featurette-image img-responsive center-block", alt: drug.name, title: drug.name, src: "/image/drug/" + drug.id })
 								)
 							),
-							_this9.renderPharmaceuticalForm(drug),
-							_this9.renderDisease(drug),
-							drug.personalizedInformation && _react2.default.createElement("section", { className: "minimum-summary", dangerouslySetInnerHTML: _this9.createMarkup(drug.personalizedInformation) })
-						),
-						_react2.default.createElement(
-							"div",
-							{ className: "action-pattern" },
-							_User2.default.isAuthenticated() && _react2.default.createElement(
-								"ul",
-								null,
+							_react2.default.createElement(
+								"div",
+								{ className: "row" },
 								_react2.default.createElement(
-									"li",
-									null,
+									"div",
+									{ className: "info" },
+									_this9.renderDrugFeatures(drug),
 									_react2.default.createElement(
-										"button",
-										{ type: "button", className: "btn btn-xs btn-like", onClick: function onClick() {
-												return _this9.toggleTaking(drug);
-											} },
-										_react2.default.createElement("span", { className: "glyphicon white " + (drug.isTaken ? 'glyphicon-minus' : 'glyphicon-heart') })
-									)
-								),
-								_react2.default.createElement(
-									"li",
-									null,
-									_react2.default.createElement(
-										"button",
-										{ type: "button", className: "btn btn-xs btn-add", onClick: function onClick() {
-												return _this9.toggleRemember(drug);
-											} },
-										_react2.default.createElement("span", { className: "glyphicon white " + (drug.isRemembered ? 'glyphicon-minus' : 'glyphicon-plus') })
-									)
-								),
-								_react2.default.createElement(
-									"li",
-									null,
-									_react2.default.createElement(
-										"button",
-										{ type: "button", className: "btn btn-xs btn-open" },
+										_reactRouterDom.Link,
+										{ to: "/drug/" + drug.id },
 										_react2.default.createElement(
-											_reactRouterDom.Link,
-											{ to: "/drug/" + drug.id },
-											_react2.default.createElement("span", { className: "glyphicon glyphicon-eye-open white" })
+											"h4",
+											null,
+											drug.name
+										)
+									),
+									_this9.renderPharmaceuticalForm(drug),
+									_react2.default.createElement(
+										"div",
+										{ style: { height: "35px" } },
+										_this9.renderDisease(drug)
+									),
+									drug.personalizedInformation && _react2.default.createElement("section", { className: "minimum-summary", dangerouslySetInnerHTML: _this9.createMarkup(drug.personalizedInformation) })
+								)
+							),
+							_react2.default.createElement(
+								"div",
+								{ className: "row", style: { paddingTop: "20px" } },
+								_react2.default.createElement(
+									"div",
+									{ className: "action-pattern" },
+									_User2.default.isAuthenticated() && _react2.default.createElement(
+										"div",
+										null,
+										_react2.default.createElement(
+											"div",
+											{ className: "col-md-4" },
+											_react2.default.createElement(
+												"button",
+												{ type: "button", className: "btn btn-like", onClick: function onClick() {
+														return _this9.toggleTaking(drug);
+													} },
+												_react2.default.createElement("span", { className: "glyphicon white " + (drug.isTaken ? 'glyphicon-minus' : 'glyphicon-heart') })
+											)
+										),
+										_react2.default.createElement(
+											"div",
+											{ className: "col-md-4" },
+											_react2.default.createElement(
+												"button",
+												{ type: "button", className: "btn btn-add", onClick: function onClick() {
+														return _this9.toggleRemember(drug);
+													} },
+												_react2.default.createElement("span", { className: "glyphicon white " + (drug.isRemembered ? 'glyphicon-minus' : 'glyphicon-plus') })
+											)
+										),
+										_react2.default.createElement(
+											"div",
+											{ className: "col-md-4" },
+											_react2.default.createElement(
+												"button",
+												{ type: "button", className: "btn btn-open" },
+												_react2.default.createElement(
+													_reactRouterDom.Link,
+													{ to: "/drug/" + drug.id },
+													_react2.default.createElement("span", { className: "glyphicon glyphicon-eye-open white" })
+												)
+											)
 										)
 									)
 								)
