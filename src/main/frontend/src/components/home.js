@@ -7,6 +7,7 @@ import MostVisitedItems from "./most_visited_items";
 
 import User from "./../util/User";
 
+
 // See https://facebook.github.io/react/docs/forms.html for documentation about forms.
 class Home extends React.Component {
     constructor(props) {

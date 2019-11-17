@@ -219,7 +219,7 @@ public class TailoredTextService {
 		}
     		
     		return delta;
-    }
+    }; //  Hier steht eine wichtige Information
 	
 	/**
 	 * Remove diseases that are irrelevant for current user

@@ -8,6 +8,7 @@ import {toast} from 'react-toastify';
 import EmptyList from "./empty_list";
 import Loading from "./loading";
 import User from "./../util/User";
+import Carousel1 from "./carousel_drugs";
 
 class DrugList extends React.Component {
     constructor(props) {
@@ -303,12 +304,11 @@ class DrugList extends React.Component {
         return (
             <section className="diseases">
                 {t('usedWhen') + ": "}
-                {drug.disease.map(disease => <span key={disease.id}>{disease.name}</span>)
-                    .reduce((prev, curr) => [prev, ', ', curr])}
+               <ul> {drug.disease.map(disease => <li key={disease.id}>{disease.name}</li>)
+                   .reduce((prev, curr) => [prev, curr])}</ul>
             </section>
         );
     }
-
     renderPharmaceuticalForm(drug) {
         if (!drug.pharmaceuticalForm) {
             return;
@@ -317,10 +317,10 @@ class DrugList extends React.Component {
         const {t} = this.props;
         return (
             <section className="diseases">
-                {t('pharmaceuticalForm') + ": "}
-                {drug.pharmaceuticalForm.map(pharmaceuticalForm => <span
-                    key={pharmaceuticalForm.id}>{pharmaceuticalForm.name}</span>)
-                    .reduce((prev, curr) => [prev, ', ', curr])}
+                <b>  {t('pharmaceuticalForm') + ": "} </b>
+              <ul>  {drug.pharmaceuticalForm.map(pharmaceuticalForm => <li
+                    key={pharmaceuticalForm.id}>{pharmaceuticalForm.name}</li>)
+                          .reduce((prev, curr) => [prev, curr])}</ul>
             </section>
         );
     }
@@ -346,12 +346,12 @@ class DrugList extends React.Component {
 
             return (
 
-                <div className="col-md-4 " key={drug.id}>
+                <div className="col-md-3 " key={drug.id}>
                     <div className="panel panel-default medicine">
                         <div className="panel-body">
                             <div className="row" style={{paddingBottom: "20px"}}>
                                 <Link to={`/drug/${drug.id}`}>
-                                    <img style={{height: "200px"}}
+                                    <img style={{height: "100px"}}
                                          className="featurette-image img-responsive center-block" alt={drug.name}
                                          title={drug.name} src={`/image/drug/${drug.id}`}></img>
                                 </Link>
@@ -366,7 +366,7 @@ class DrugList extends React.Component {
                                         <h4>{drug.name}</h4>
                                     </Link>
                                     {this.renderPharmaceuticalForm(drug)}
-                                    <div style={{height: "35px"}}>
+                                    <div style={{height: "65px"}}>
                                         {this.renderDisease(drug)}
                                     </div>
                                     {drug.personalizedInformation && <section className="minimum-summary"
@@ -443,6 +443,8 @@ class DrugList extends React.Component {
         }
 
         return (
+         <div>   <Carousel1/>
+
             <div className="container no-banner">
                 <div className='page-header'>
                     <h3>{title}</h3>
@@ -476,7 +478,7 @@ class DrugList extends React.Component {
                     </ul>
                     }
                 </div>
-            </div>
+            </div>  </div>
         );
     }
 }
