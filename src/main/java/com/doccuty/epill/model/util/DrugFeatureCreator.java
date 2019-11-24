@@ -33,8 +33,10 @@ public class DrugFeatureCreator implements SendableEntityCreatorNoIndex
    private final String[] properties = new String[]
    {		   
       DrugFeature.PROPERTY_ID,
-      DrugFeature.PROPERTY_DRUGFEATURE
-      //DrugFeature.PROPERTY_DRUG,
+      DrugFeature.PROPERTY_DRUGFEATURE,
+           DrugFeature.PROPERTY_DESCRIPTIONDRUG
+
+           //DrugFeature.PROPERTY_DRUG,
       //DrugFeature.PROPERTY_USER
    };
    
@@ -70,6 +72,10 @@ public class DrugFeatureCreator implements SendableEntityCreatorNoIndex
       {
          return ((DrugFeature) target).getDrugFeature();
       }
+      if (DrugFeature.PROPERTY_DESCRIPTIONDRUG.equalsIgnoreCase(attribute))
+      {
+         return ((DrugFeature) target).getDescriptionDrug();
+      }
 
       if (DrugFeature.PROPERTY_DRUG.equalsIgnoreCase(attribute))
       {
@@ -85,6 +91,12 @@ public class DrugFeatureCreator implements SendableEntityCreatorNoIndex
       if (DrugFeature.PROPERTY_DRUGFEATURE.equalsIgnoreCase(attrName))
       {
          ((DrugFeature) target).setDrugFeature((String) value);
+         return true;
+      }
+
+      if (DrugFeature.PROPERTY_DESCRIPTIONDRUG.equalsIgnoreCase(attrName))
+      {
+         ((DrugFeature) target).setDescriptionDrug((String) value);
          return true;
       }
 

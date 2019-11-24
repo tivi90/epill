@@ -92,6 +92,9 @@ class DrugList extends React.Component {
         return {__html: text};
     };
 
+    createMarkup(descriptionDrug) {
+        return {__html: descriptionDrug};
+    };
     //=============================
 
 
@@ -277,7 +280,10 @@ class DrugList extends React.Component {
         });
     }
 
-    //=============================
+    //=============================<img key={feature.id}
+    //                                                       src={"./../../assets/icons/" + feature.id + ".svg"}
+    //                                                       className="drug-feature-icon" alt={feature.drugFeature}
+    //                                                       title={feature.drugFeature}></img>
 
     renderDrugFeatures(drug) {
         if (!drug.drugFeature) {
@@ -286,10 +292,45 @@ class DrugList extends React.Component {
 
         return (
             <div className="drug-features ">
-                {drug.drugFeature.map(feature => <img key={feature.id}
-                                                      src={"./../../assets/icons/" + feature.id + ".svg"}
-                                                      className="drug-feature-icon" alt={feature.drugFeature}
-                                                      title={feature.drugFeature}></img>)}
+                {drug.drugFeature.map(feature => {return (
+
+                    <div style={{float:"left"}} key={feature.id}>
+
+                        <img key={feature.id} data-toggle="modal" data-target={"#" + feature.id} src={"./../../assets/icons/" + feature.id + ".svg"}
+                                                                             className="drug-feature-icon" alt={feature.drugFeature}
+                                                                            title={feature.drugFeature}></img>
+
+
+
+                    <div id={feature.id} className="modal fade" role="dialog">
+                        <div className="modal-dialog">
+
+                            <div className="modal-content">
+                                <div className="modal-header">
+                                    <button type="button" className="close" data-dismiss="modal">&times;</button>
+                                     <h2 className="modal-title">  <img style={{width: "55px"}} key={feature.id} data-toggle="modal" data-target={"#" + feature.id} src={"./../../assets/icons/" + feature.id + ".svg"}
+                                                                        className="drug-feature-icon" alt={feature.drugFeature}
+                                                                        title={feature.drugFeature}></img> {feature.drugFeature} </h2>
+                                </div>
+                                <div className="modal-body">
+
+                                    <div dangerouslySetInnerHTML={this.createMarkup(feature.descriptionDrug)} />
+
+                                </div>
+                                <div className="modal-footer">
+                                    <button type="button" className="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    </div>
+
+                )})
+             }
+
+
             </div>
         );
     }
@@ -303,7 +344,7 @@ class DrugList extends React.Component {
 
         return (
             <section className="diseases">
-                {t('usedWhen') + ": "}
+                <b> {t('usedWhen') + ": "}</b>
                <ul> {drug.disease.map(disease => <li key={disease.id}>{disease.name}</li>)
                    .reduce((prev, curr) => [prev, curr])}</ul>
             </section>
@@ -343,66 +384,76 @@ class DrugList extends React.Component {
     renderDrugs(drugs) {
 
         return drugs.map((drug => {
+            const {t} = this.props;
 
             return (
 
-                <div className="col-md-3 " key={drug.id}>
+                <div className="col-md-4 padd padd_xs" key={drug.id}>
                     <div className="panel panel-default medicine">
                         <div className="panel-body">
-                            <div className="row" style={{paddingBottom: "20px"}}>
+                            <div className="row" style={{paddingBottom: "10px"}}>
                                 <Link to={`/drug/${drug.id}`}>
-                                    <img style={{height: "100px"}}
+                                    <img style={{height: "125px"}}
                                          className="featurette-image img-responsive center-block" alt={drug.name}
                                          title={drug.name} src={`/image/drug/${drug.id}`}></img>
                                 </Link>
                             </div>
-                            <div className="row">
+                            <div className="row" style={{height: "220px"}}>
+                                <div className="row">
+                                    <Link to={`/drug/${drug.id}`} style={{paddingBottom: "10px"}}>
+                                        <h5 className="med_header">{drug.name}</h5>
+                                    </Link></div>
 
-                                <div className="info">
+                                <div className="info" style={{padding: "15px"}}>
 
-                                    {this.renderDrugFeatures(drug)}
+                                    <div className="row">
 
-                                    <Link to={`/drug/${drug.id}`}>
-                                        <h4>{drug.name}</h4>
-                                    </Link>
-                                    {this.renderPharmaceuticalForm(drug)}
-                                    <div style={{height: "65px"}}>
+                                        {this.renderPharmaceuticalForm(drug)}</div>
+                                    <div className="row" style={{height: "65px"}}>
                                         {this.renderDisease(drug)}
                                     </div>
-                                    {drug.personalizedInformation && <section className="minimum-summary"
-                                                                              dangerouslySetInnerHTML={this.createMarkup(drug.personalizedInformation)}/>}
-
+                                    <div className="row">
+                                        <div>
+                                            {User.isAuthenticated() && <b> {t('application') + ": "}</b>}
+                                        </div>
+                                        {drug.personalizedInformation &&
+                                        <section className="minimum-summary"
+                                                 dangerouslySetInnerHTML={this.createMarkup(drug.personalizedInformation)}/>
+                                        }
+                                    </div>
                                 </div>
                             </div>
-                            <div className="row" style={{paddingTop: "20px"}}>
-
-                                <div className="action-pattern">
-                                    {User.isAuthenticated() &&
-                                    <div>
-                                        <div className="col-md-4">
-                                            <button type="button" className="btn btn-like"
-                                                    onClick={() => this.toggleTaking(drug)}>
+                         </div>
+                        <div
+                            className="row med_drugfeature">                                    {this.renderDrugFeatures(drug)}
+                        </div>
+                        <div className="row">
+                            <div className="action-pattern">
+                                {User.isAuthenticated() &&
+                                <div>
+                                    <div className="col-xs-4 nopadd">
+                                        <button type="button" className="btn btn-like big_btn"
+                                                onClick={() => this.toggleTaking(drug)}>
                                                 <span
                                                     className={"glyphicon white " + (drug.isTaken ? 'glyphicon-minus' : 'glyphicon-heart')}></span>
-                                            </button>
-                                        </div>
-                                        <div className="col-md-4">
-                                            <button type="button" className="btn btn-add"
-                                                    onClick={() => this.toggleRemember(drug)}>
+                                        </button>
+                                    </div>
+                                    <div className="col-xs-4 nopadd">
+                                        <button type="button" className="btn btn-add big_btn"
+                                                onClick={() => this.toggleRemember(drug)}>
                                                 <span
                                                     className={"glyphicon white " + (drug.isRemembered ? 'glyphicon-minus' : 'glyphicon-plus')}></span>
-                                            </button>
-                                        </div>
-                                        <div className="col-md-4">
-                                            <button type="button" className="btn btn-open">
-                                                <Link to={`/drug/${drug.id}`}>
-                                                    <span className="glyphicon glyphicon-eye-open white"></span>
-                                                </Link>
-                                            </button>
-                                        </div>
+                                        </button>
                                     </div>
-                                    }
+                                    <div className="col-xs-4 nopadd">
+                                        <button type="button" className="btn btn-open big_btn">
+                                            <Link to={`/drug/${drug.id}`}>
+                                                <span className="glyphicon glyphicon-eye-open white"></span>
+                                            </Link>
+                                        </button>
+                                    </div>
                                 </div>
+                                }
                             </div>
 
                         </div>

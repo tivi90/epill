@@ -61,11 +61,55 @@
 }
 
 .medicine{
-    height: 447px;
-    padding: 20px;
+    height: 539px;
+    padding: 15px;
     margin-top: 30px;
     box-shadow: 0 1px 1px rgba(0,0,0,0.05);
 }
+
+.diseases{
+    padding-bottom: 15px
+}
+
+.med_drugfeature{
+    margin-top: 35px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    border-bottom: solid 2px #11a59b;
+}
+
+
+.med_header{
+    font-size: 18px;
+    text-align: center;
+    border-top: solid 1px;
+    padding: 10px;
+    border-bottom: solid 1px;
+    background-color: #0c827a;
+    color: white;
+}
+
+.padd{
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+}
+
+.nopadd {
+    padding: 0px !important;
+}
+
+.big_btn{
+    width: 100% !important;
+    border-radius: 0 !important;
+    padding: 12px 12px !important;
+
+}
+
+
+}
+
+
 
 @keyframes shadow-pulse {
     0% {
@@ -485,6 +529,10 @@ footer ul li a {
         width: 100%;
         margin-bottom: 35px;
     }
+    .padd_xs{
+        padding-top: 15px;
+    }
+
 }
 
 @media screen and (max-width: 480px) {

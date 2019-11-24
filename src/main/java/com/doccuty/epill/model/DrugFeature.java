@@ -37,9 +37,10 @@ public class DrugFeature implements SendableEntity {
 		
 	}
 	
-	public DrugFeature(long id, String drugFeature){
+	public DrugFeature(long id, String drugFeature, String descriptionDrug){
 		this.id = id;
 		this.drugFeature = drugFeature;
+		this.descriptionDrug = descriptionDrug;
 	}
 	
 	
@@ -124,6 +125,7 @@ public class DrugFeature implements SendableEntity {
 
 		result.append(" ").append(this.getId());
 		result.append(" ").append(this.getDrugFeature());
+		result.append(" ").append(this.getDescriptionDrug());
 		return result.substring(1);
 	}
 
@@ -151,7 +153,33 @@ public class DrugFeature implements SendableEntity {
 		return this;
 	}
 
-	// ==========================================================================
+
+    // ==========================================================================
+
+    public static final String PROPERTY_DESCRIPTIONDRUG = "descriptionDrug";
+	@Column(name="descriptionDrug", columnDefinition="TEXT")
+
+	private String descriptionDrug;
+
+    public String getDescriptionDrug() {
+        return this.descriptionDrug;
+    }
+
+    public void setDescriptionDrug(String value) {
+        if (!EntityUtil.stringEquals(this.descriptionDrug, value)) {
+
+            String oldValue = this.descriptionDrug;
+            this.descriptionDrug = value;
+            this.firePropertyChange(PROPERTY_DESCRIPTIONDRUG, oldValue, value);
+        }
+    }
+
+	public DrugFeature withDescriptionDrug(String value) {
+		setDescriptionDrug(value);
+		return this;
+	}
+
+    // ==========================================================================
 
 	public static final String PROPERTY_MINAGE = "minAge";
 

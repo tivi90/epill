@@ -51,15 +51,7 @@ class Carousel1 extends React.Component {
         		<div className="carousel-inner" role="listbox">
         			<div className="item active">
         				<img className="first-slide" src="/assets/images/titelbild1.jpg" alt="First slide"></img>
-        				<div className="container">
-        					{User.isAuthenticated() && 
-        						<div className="carousel-caption">
-	        						{this.generatePersonalizedAddress()}
-	        						<br/>
-									<AutoComplete {...this.props} />
-								</div>
-        					}
-        				</div>
+
         			</div>
         		</div>
         	</div>

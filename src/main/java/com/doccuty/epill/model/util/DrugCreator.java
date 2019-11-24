@@ -191,6 +191,7 @@ public class DrugCreator implements SendableEntityCreatorNoIndex
       {
          return ((Drug) target).getDrugFeature();
       }
+
       
       return null;
    }
@@ -371,7 +372,7 @@ public class DrugCreator implements SendableEntityCreatorNoIndex
          ((Drug) target).withDrugFeature((DrugFeature) value);
          return true;
       }
-      
+
       return false;
    }
    public static IdMap createIdMap(String sessionID)

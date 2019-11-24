@@ -99,8 +99,10 @@ a.wide { display : block }
 
 .drug-features .drug-feature-icon {
 	height:auto;
-	width:25px;
-	margin-right:10px;
+	width: 40px;
+	margin-right: 5px;
+	padding-bottom: 10px;
+	cursor:pointer;
 }
 
 /* drug list styling */

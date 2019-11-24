@@ -16,6 +16,6 @@ public interface DrugFeatureRepository extends JpaRepository<DrugFeature, Long> 
 	@Query("SELECT feature FROM DrugFeature feature WHERE feature.drugFeature = :value")
 	List<DrugFeature> findByName(@Param(value = "value") String value);
 
-	@Query("SELECT NEW DrugFeature(feature.id, feature.drugFeature) FROM DrugFeature feature ORDER BY feature.drugFeature")
+	@Query("SELECT NEW DrugFeature(feature.id, feature.drugFeature, feature.descriptionDrug) FROM DrugFeature feature ORDER BY feature.drugFeature")
 	List<DrugFeature> findAllSimple();
 }
