@@ -41157,8 +41157,7 @@ var DrugDetail = function (_React$Component) {
                             { className: "row featurette drug-detail-header" },
                             _react2.default.createElement(
                                 "div",
-                                {
-                                    className: "col-xs-12 col-sm-12 col-md-4" },
+                                { className: "col-xs-12 col-sm-12 col-md-4" },
                                 _react2.default.createElement("img", { className: "featurette-image img-responsive center-block",
                                     alt: drug.name,
                                     title: drug.name,
@@ -41195,7 +41194,7 @@ var DrugDetail = function (_React$Component) {
                                                             _react2.default.createElement(
                                                                 "h2",
                                                                 { className: "modal-title" },
-                                                                _react2.default.createElement("img", { style: { width: "55px" },
+                                                                _react2.default.createElement("img", { style: { width: "40px" },
                                                                     key: feature.id,
                                                                     "data-toggle": "modal",
                                                                     "data-target": "#" + feature.id,
@@ -41232,62 +41231,66 @@ var DrugDetail = function (_React$Component) {
                             ),
                             _react2.default.createElement(
                                 "div",
-                                { className: "col-xs-12 col-sm-12 col-md-4 med_desc" },
-                                _User2.default.isAuthenticated() && drug.personalizedInformation && _react2.default.createElement(
+                                { className: "col-xs-12 col-sm-12 col-md-7 infobox" },
+                                _react2.default.createElement(
                                     "div",
-                                    { className: "alert row w3-animate-right" },
-                                    _react2.default.createElement(
+                                    { className: "col-xs-12 col-sm-12 col-md-6 med_desc" },
+                                    _User2.default.isAuthenticated() && drug.personalizedInformation && _react2.default.createElement(
                                         "div",
-                                        { className: "speech-bubble" },
+                                        { className: "alert row w3-animate-right" },
+                                        _react2.default.createElement(
+                                            "div",
+                                            { className: "speech-bubble" },
+                                            _react2.default.createElement(
+                                                "a",
+                                                { href: "#", className: "close", "data-dismiss": "alert",
+                                                    "aria-label": "close" },
+                                                "\xD7"
+                                            ),
+                                            _react2.default.createElement("span", {
+                                                dangerouslySetInnerHTML: this.createMarkup(drug.personalizedInformation) })
+                                        ),
+                                        _react2.default.createElement("img", { className: "speech-bubble-person", src: "./../../assets/images/logo_chat.png" })
+                                    ),
+                                    this.renderPharmaceuticalForm(drug),
+                                    this.renderDisease(drug),
+                                    this.renderActiveSubstance(drug),
+                                    _react2.default.createElement(
+                                        "p",
+                                        null,
                                         _react2.default.createElement(
                                             "a",
-                                            { href: "#", className: "close", "data-dismiss": "alert",
-                                                "aria-label": "close" },
-                                            "\xD7"
-                                        ),
-                                        _react2.default.createElement("span", {
-                                            dangerouslySetInnerHTML: this.createMarkup(drug.personalizedInformation) })
-                                    ),
-                                    _react2.default.createElement("img", { className: "speech-bubble-person", src: "./../../assets/images/logo_chat.png" })
-                                ),
-                                this.renderPharmaceuticalForm(drug),
-                                this.renderDisease(drug),
-                                this.renderActiveSubstance(drug),
-                                _react2.default.createElement(
-                                    "p",
-                                    null,
-                                    _react2.default.createElement(
-                                        "a",
-                                        { onClick: this.toggleShowAdditionalInfo },
-                                        _react2.default.createElement(
-                                            "button",
-                                            { className: "btn btn-info" },
-                                            !showAdditionalInfo && _react2.default.createElement(
-                                                "span",
-                                                null,
-                                                t('viewDetails')
-                                            ),
-                                            showAdditionalInfo && _react2.default.createElement(
-                                                "span",
-                                                null,
-                                                t('hideDetails')
+                                            { onClick: this.toggleShowAdditionalInfo },
+                                            _react2.default.createElement(
+                                                "button",
+                                                { className: "btn btn-info" },
+                                                !showAdditionalInfo && _react2.default.createElement(
+                                                    "span",
+                                                    null,
+                                                    t('viewDetails')
+                                                ),
+                                                showAdditionalInfo && _react2.default.createElement(
+                                                    "span",
+                                                    null,
+                                                    t('hideDetails')
+                                                )
                                             )
                                         )
                                     )
-                                )
-                            ),
-                            _react2.default.createElement(
-                                "div",
-                                { className: "col-xs-12 col-sm-12 col-md-4 med_desc" },
+                                ),
                                 _react2.default.createElement(
                                     "div",
-                                    { className: "additional-information" },
-                                    showAdditionalInfo && _react2.default.createElement(
-                                        "section",
-                                        null,
-                                        this.renderIndicationGroup(drug),
-                                        this.renderProductGroup(drug),
-                                        this.renderPZN(drug)
+                                    { className: "col-xs-12 col-sm-12 col-md-6 med_desc" },
+                                    _react2.default.createElement(
+                                        "div",
+                                        { className: "additional-information" },
+                                        showAdditionalInfo && _react2.default.createElement(
+                                            "section",
+                                            null,
+                                            this.renderIndicationGroup(drug),
+                                            this.renderProductGroup(drug),
+                                            this.renderPZN(drug)
+                                        )
                                     )
                                 )
                             )

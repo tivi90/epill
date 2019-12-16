@@ -604,8 +604,7 @@ class DrugDetail extends React.Component {
                         {/*<span>v. {drug.version} | {t('publishingDate')}: {new Date(drug.year).toLocaleDateString()}</span>*/}
 
                         <div className="row featurette drug-detail-header">
-                            <div
-                                className="col-xs-12 col-sm-12 col-md-4">
+                            <div className="col-xs-12 col-sm-12 col-md-4">
                                 <img className="featurette-image img-responsive center-block"
                                      alt={drug.name}
                                      title={drug.name}
@@ -666,7 +665,8 @@ class DrugDetail extends React.Component {
                                 </div>
 
                             </div>
-                            <div className="col-xs-12 col-sm-12 col-md-4 med_desc">
+                            <div className="col-xs-12 col-sm-12 col-md-7 infobox">
+                            <div className="col-xs-12 col-sm-12 col-md-6 med_desc">
                                 {User.isAuthenticated() && drug.personalizedInformation &&
                                 <div className="alert row w3-animate-right">
                                     <div className="speech-bubble">
@@ -696,7 +696,7 @@ class DrugDetail extends React.Component {
                                     </a>
                                 </p>
                             </div>
-                            <div className="col-xs-12 col-sm-12 col-md-4 med_desc">
+                            <div className="col-xs-12 col-sm-12 col-md-6 med_desc">
 
                                 <div className="additional-information">
                                     {showAdditionalInfo &&
@@ -713,8 +713,8 @@ class DrugDetail extends React.Component {
                                 </div>
 
                             </div>
-                        </div>
-
+                            </div>
+                         </div>
                     </div>
                 </div>
 
