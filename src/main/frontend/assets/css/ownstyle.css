@@ -1,4 +1,35 @@
 
+.speech-bubble {
+    position: relative;
+    background: #88d3ce;;
+    border-radius: .4em;
+    color: #0f0f0f;
+    width: 70%;
+    float: left;
+    padding: 12px;
+}
+
+.speech-bubble:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 0;
+    height: 0;
+    border: 28px solid transparent;
+    border-left-color: #88d3ce;
+    border-right: 0;
+    border-top: 0;
+    margin-top: -14px;
+    margin-right: -28px;
+}
+
+.speech-bubble-person {
+    float: right;
+    width: 26%;
+
+}
+
 .jumbotron {
     background-image: url("./assets/images/titelbild1.jpg");
     color: #fff;
@@ -24,13 +55,13 @@
 }
 
 .med_desc p {
-    text-align: left;
+    text-align: left !important;
     color: #000;
     font-size: 16px;
 }
 
 .report-round-button {
-    right: 10%;
+    right: 7%;
     top: 100px;
     position: fixed;
     z-index: 1001;
@@ -41,17 +72,17 @@
     animation: shadow-pulse 4s infinite;
     vertical-align: middle;
     text-align: center;
-    font-size: 30px;
+    font-size: 24px;
     padding-left: 2px;
     color: white;
 }
 
 .round-button-outer .round-button-inner-main {
-    width: 70px;
-    height: 70px;
-    border-radius: 45px;
+    width: 60px;
+    height: 62px;
+    border-radius: 38px;
     background-color: #0da59b;
-    padding-top: 18px;
+    padding-top: 19px;
     position: absolute;
     z-index: 10;
     -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12) !important;
@@ -60,27 +91,38 @@
     cursor: pointer;
 }
 
-.medicine{
-    height: 539px;
+/* grid */
+
+.grid-group-item > .medicine {
+    height: 563px;
     padding: 15px;
     margin-top: 30px;
-    box-shadow: 0 1px 1px rgba(0,0,0,0.05);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
 }
 
-.diseases{
+img.group.list-group-image {
+    height: 200px;
+}
+
+hiddennot{
+    display: none;
+}
+
+.diseases {
     padding-bottom: 15px
 }
 
-.med_drugfeature{
-    margin-top: 35px;
+.med_drugfeature {
     padding-top: 5px;
     padding-bottom: 5px;
     padding-left: 10px;
+}
+
+.action-pattern{
     border-bottom: solid 2px #11a59b;
 }
 
-
-.med_header{
+.med_header {
     font-size: 18px;
     text-align: center;
     border-top: solid 1px;
@@ -90,7 +132,17 @@
     color: white;
 }
 
-.padd{
+.full_content{
+    height: 220px;
+}
+
+.info_sec{
+    height: 225px;
+    padding: 15px;
+}
+
+
+.padd {
     padding-left: 5px !important;
     padding-right: 5px !important;
 }
@@ -99,15 +151,88 @@
     padding: 0px !important;
 }
 
-.big_btn{
+.big_btn {
     width: 100% !important;
     border-radius: 0 !important;
-    padding: 12px 12px !important;
+    padding: 12px 18px !important;
+    margin-bottom: 120%;
+
+}
+
+/* List */
+
+.glyphicon { margin-right:5px; }
+.thumbnail
+{
+    margin-bottom: 20px;
+    padding: 0px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+}
+
+.di > .diseases{
+    padding: 8px;
+}
+
+.item.list-group-item
+{
+    float: none;
+    width: 100%;
+    background-color: #fff;
+    margin-bottom: 10px;
+}
+.item.list-group-item:nth-of-type(odd):hover,.item.list-group-item:hover
+{
+    background: #428bca;
+}
+
+.item.list-group-item > .medicine{
+    height:inherit!important;
+    margin-top: 0px;
+    padding: 0px;
 
 }
 
 
+.fullrow{
+    width: 100% !important;
 }
+
+.item.list-group-item .list-group-image
+{
+    height: 180px;
+}
+.item.list-group-item .thumbnail
+{
+    margin-bottom: 0px;
+    background-color: inherit;
+    border: none;
+}
+.item.list-group-item .caption
+{
+    padding: 9px 9px 0px 9px;
+}
+.item.list-group-item:nth-of-type(odd)
+{
+    background: #eeeeee;
+}
+
+.item.list-group-item:before, .item.list-group-item:after
+{
+    display: table;
+    content: " ";
+}
+
+.item.list-group-item:after
+{
+    clear: both;
+}
+.list-group-item-text
+{
+    margin: 0 0 11px;
+}
+
 
 
 
@@ -131,12 +256,12 @@
     color: #0da59b;
 }
 
-.alert_style{
+.alert_style {
     font-size: 44px;
-    color:red;
+    color: red;
 }
 
-.bg_grey{
+.bg_grey {
     background-color: #eee;
 }
 
@@ -235,17 +360,6 @@
             font-size: 200px;
         }
 
-        .thumbnail {
-            padding: 0 0 15px 0;
-            border: none;
-            border-radius: 0;
-        }
-
-        .thumbnail img {
-            width: 100%;
-            height: 100%;
-            margin-bottom: 10px;
-        }
 
         .carousel-control.right,
         .carousel-control.left {
@@ -261,13 +375,7 @@
             background-color: #0da59b;
         }
 
-        .item h4 {
-            font-size: 19px;
-            line-height: 1.375em;
-            font-weight: 400;
-            font-style: italic;
-            margin: 70px 0;
-        }
+
 
         .item span {
             font-style: normal;
@@ -361,17 +469,7 @@
         color: #0da59b;
     }
 
-    .slideanim {
-        visibility: hidden;
-    }
 
-    .slide {
-        animation-name: slide;
-        -webkit-animation-name: slide;
-        animation-duration: 1s;
-        -webkit-animation-duration: 1s;
-        visibility: visible;
-    }
 
     #main {
         padding-top: 60px;
@@ -495,29 +593,6 @@ footer ul li a {
 }
 
 
-@keyframes slide {
-    0% {
-        opacity: 0;
-        transform: translateY(70%);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateY(0%);
-    }
-}
-
-@-webkit-keyframes slide {
-    0% {
-        opacity: 0;
-        -webkit-transform: translateY(70%);
-    }
-
-    100% {
-        opacity: 1;
-        -webkit-transform: translateY(0%);
-    }
-}
 
 @media screen and (max-width: 768px) {
     .col-sm-4 {
@@ -529,7 +604,8 @@ footer ul li a {
         width: 100%;
         margin-bottom: 35px;
     }
-    .padd_xs{
+
+    .padd_xs {
         padding-top: 15px;
     }
 

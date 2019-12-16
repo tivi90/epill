@@ -18,7 +18,8 @@ class DrugList extends React.Component {
             drugs: [],
             interactions: '',
             cmd: '',
-            loading: false
+            loading: false,
+            addClass: false
         }
 
         this.checkForInteractions = this.checkForInteractions.bind(this);
@@ -95,6 +96,7 @@ class DrugList extends React.Component {
     createMarkup(descriptionDrug) {
         return {__html: descriptionDrug};
     };
+
     //=============================
 
 
@@ -173,7 +175,6 @@ class DrugList extends React.Component {
                 }
             });
     }
-
 
     toggleRemember(drug) {
         if (drug.isRemembered) {
@@ -292,43 +293,53 @@ class DrugList extends React.Component {
 
         return (
             <div className="drug-features ">
-                {drug.drugFeature.map(feature => {return (
+                {drug.drugFeature.map(feature => {
+                    return (
 
-                    <div style={{float:"left"}} key={feature.id}>
+                        <div key={feature.id}>
 
-                        <img key={feature.id} data-toggle="modal" data-target={"#" + feature.id} src={"./../../assets/icons/" + feature.id + ".svg"}
-                                                                             className="drug-feature-icon" alt={feature.drugFeature}
-                                                                            title={feature.drugFeature}></img>
+                            <img style={{float: "left"}} key={feature.id} data-toggle="modal" data-target={"#" + feature.id}
+                                 src={"./../../assets/icons/" + feature.id + ".svg"}
+                                 className="drug-feature-icon" alt={feature.drugFeature}
+                                 title={feature.drugFeature}></img>
 
 
+                            <div id={feature.id} className="modal fade" role="dialog">
+                                <div className="modal-dialog">
 
-                    <div id={feature.id} className="modal fade" role="dialog">
-                        <div className="modal-dialog">
+                                    <div className="modal-content">
+                                        <div className="modal-header">
+                                            <button type="button" className="close"
+                                                    data-dismiss="modal">&times;</button>
+                                            <h2 className="modal-title"><img style={{width: "55px"}} key={feature.id}
+                                                                             data-toggle="modal"
+                                                                             data-target={"#" + feature.id}
+                                                                             src={"./../../assets/icons/" + feature.id + ".svg"}
+                                                                             className="drug-feature-icon"
+                                                                             alt={feature.drugFeature}
+                                                                             title={feature.drugFeature}></img> {feature.drugFeature}
+                                            </h2>
+                                        </div>
+                                        <div className="modal-body">
 
-                            <div className="modal-content">
-                                <div className="modal-header">
-                                    <button type="button" className="close" data-dismiss="modal">&times;</button>
-                                     <h2 className="modal-title">  <img style={{width: "55px"}} key={feature.id} data-toggle="modal" data-target={"#" + feature.id} src={"./../../assets/icons/" + feature.id + ".svg"}
-                                                                        className="drug-feature-icon" alt={feature.drugFeature}
-                                                                        title={feature.drugFeature}></img> {feature.drugFeature} </h2>
-                                </div>
-                                <div className="modal-body">
+                                            <div dangerouslySetInnerHTML={this.createMarkup(feature.descriptionDrug)}/>
 
-                                    <div dangerouslySetInnerHTML={this.createMarkup(feature.descriptionDrug)} />
+                                        </div>
+                                        <div className="modal-footer">
+                                            <button type="button" className="btn btn-default"
+                                                    data-dismiss="modal">Close
+                                            </button>
+                                        </div>
+                                    </div>
 
-                                </div>
-                                <div className="modal-footer">
-                                    <button type="button" className="btn btn-default" data-dismiss="modal">Close</button>
                                 </div>
                             </div>
 
                         </div>
-                    </div>
 
-                    </div>
-
-                )})
-             }
+                    )
+                })
+                }
 
 
             </div>
@@ -345,11 +356,12 @@ class DrugList extends React.Component {
         return (
             <section className="diseases">
                 <b> {t('usedWhen') + ": "}</b>
-               <ul> {drug.disease.map(disease => <li key={disease.id}>{disease.name}</li>)
-                   .reduce((prev, curr) => [prev, curr])}</ul>
+                <ul> {drug.disease.map(disease => <li key={disease.id}>{disease.name}</li>)
+                    .reduce((prev, curr) => [prev, curr])}</ul>
             </section>
         );
     }
+
     renderPharmaceuticalForm(drug) {
         if (!drug.pharmaceuticalForm) {
             return;
@@ -357,11 +369,19 @@ class DrugList extends React.Component {
 
         const {t} = this.props;
         return (
-            <section className="diseases">
-                <b>  {t('pharmaceuticalForm') + ": "} </b>
-              <ul>  {drug.pharmaceuticalForm.map(pharmaceuticalForm => <li
-                    key={pharmaceuticalForm.id}>{pharmaceuticalForm.name}</li>)
-                          .reduce((prev, curr) => [prev, curr])}</ul>
+            <section className="diseases ">
+                <p><b>  {t('pharmaceuticalForm') + ": "} </b></p>
+                <ul>  {drug.pharmaceuticalForm.map(pharmaceuticalForm => <li
+                    key={pharmaceuticalForm.id}>{pharmaceuticalForm.name} <img style={{width: "35px"}}
+                                                                               key={pharmaceuticalForm.id}
+                                                                               src={"./../../assets/p_form/" + pharmaceuticalForm.id + ".svg"}
+                                                                               className="drug-feature-icon"
+                                                                               alt={pharmaceuticalForm.name}
+                                                                               title={pharmaceuticalForm.name}></img>
+                </li>)
+                    .reduce((prev, curr) => [prev, curr])}</ul>
+
+
             </section>
         );
     }
@@ -381,6 +401,123 @@ class DrugList extends React.Component {
         );
     }
 
+    toggle() {
+        this.setState({addClass: !this.state.addClass});
+    }
+
+
+    renderDrugs1(drugs) {
+        const {t} = this.props;
+
+        return drugs.map((drug => {
+            const {t} = this.props;
+            let itemClass = ["item  col-md-4 col-lg-4 grid-group-item padd padd_md"]
+            let drugname = ["group inner list-group-item-heading med_header hidden"]
+            let drugname1 = ["group inner med_header"]
+            let medfeat = ["row med_drugfeature hidden"]
+            let medfeat1 = ["row med_drugfeature"]
+            let col1Class = [""]
+            let col4Class = [""]
+            let col5Class = [""]
+            let col6Class = ["info_sec "]
+            let col8Class = [" "]
+            let col11Class = ["full_content"]
+            let coltorowClass = ["col-md-4 nopadd"]
+            if (this.state.addClass) {
+                itemClass.push('list-group-item ');
+                drugname.push('');
+                drugname1.push('');
+                medfeat.push('');
+                col1Class.push('col-md-1 ');
+                col4Class.push('col-md-4 ');
+                col5Class.push('col-md-5 ');
+                col6Class.push('col-md-6 ');
+                col8Class.push('col-md-7 ');
+                col11Class.push('col-md-11 ');
+                coltorowClass.push('fullrow');
+
+
+            }
+            return (
+                <div id="products" key={drug.id}>
+                    <div className={itemClass.join(' ')}>
+                        <div className="thumbnail medicine">
+                            <div className={col4Class.join(' ')}>
+                                <Link to={`/drug/${drug.id}`}><h4 className={drugname.join('not')}>
+                                    {drug.name}</h4></Link>
+                                <Link to={`/drug/${drug.id}`}>
+                                <img className="group list-group-image" alt={drug.name}
+                                     title={drug.name} src={`/image/drug/${drug.id}`}></img>
+                            </Link>
+                                <div className={medfeat.join('not')}>
+                                    {this.renderDrugFeatures(drug)}
+                                </div>
+                            <Link to={`/drug/${drug.id}`}><h4 className={drugname1.join(' hidden ')}>
+                                {drug.name}</h4></Link>
+                        </div>
+                        <div className={col8Class.join(' ')}>
+                            <div className={col11Class.join('di ')}>
+                                {this.renderPharmaceuticalForm(drug)}
+                                {this.renderDisease(drug)}
+                                {User.isAuthenticated() &&
+                                <section className="diseases">
+                                    <b> {t('application') + ": "}</b>
+                                    {drug.personalizedInformation &&
+                                    <div className="minimum-summary"
+                                             dangerouslySetInnerHTML={this.createMarkup(drug.personalizedInformation)}/>
+                                    }
+                                </section>}
+                            </div>
+                            <div className={col5Class.join(' hidden ')}>
+                                <div className={medfeat1.join('')}>
+                                    {this.renderDrugFeatures(drug)}
+                                </div>
+                            </div>
+                            <div className={col1Class.join(' ')}>
+
+                                {User.isAuthenticated() &&
+                                <div className="row">
+                                    <div className="action-pattern">
+
+                                        <div>
+                                            <div className={coltorowClass.join(' ')}>
+                                                <button type="button" className="btn btn-like big_btn"
+                                                        onClick={() => this.toggleTaking(drug)}>
+                                                <span
+                                                    className={"glyphicon white " + (drug.isTaken ? 'glyphicon-minus' : 'glyphicon-heart')}></span>
+                                                </button>
+                                            </div>
+                                            <div className={coltorowClass.join(' ')}>
+                                                <button type="button" className="btn btn-add big_btn"
+                                                        onClick={() => this.toggleRemember(drug)}>
+                                                <span
+                                                    className={"glyphicon white " + (drug.isRemembered ? 'glyphicon-minus' : 'glyphicon-plus')}></span>
+                                                </button>
+                                            </div>
+                                            <div className={coltorowClass.join(' ')}>
+                                                <button type="button" className="btn btn-open big_btn">
+                                                    <Link to={`/drug/${drug.id}`}>
+                                                                <span
+                                                                    className="glyphicon glyphicon-eye-open white"></span>
+                                                    </Link>
+                                                </button>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+
+            );
+        }));
+    }
+
+
     renderDrugs(drugs) {
 
         return drugs.map((drug => {
@@ -388,7 +525,8 @@ class DrugList extends React.Component {
 
             return (
 
-                <div className="col-md-4 padd padd_xs" key={drug.id}>
+
+                <div className="col-md-4 padd padd_md" key={drug.id}>
                     <div className="panel panel-default medicine">
                         <div className="panel-body">
                             <div className="row" style={{paddingBottom: "10px"}}>
@@ -412,40 +550,43 @@ class DrugList extends React.Component {
                                     <div className="row" style={{height: "65px"}}>
                                         {this.renderDisease(drug)}
                                     </div>
+                                    {User.isAuthenticated() &&
                                     <div className="row">
                                         <div>
-                                            {User.isAuthenticated() && <b> {t('application') + ": "}</b>}
+                                            <b> {t('application') + ": "}</b>
                                         </div>
                                         {drug.personalizedInformation &&
                                         <section className="minimum-summary"
                                                  dangerouslySetInnerHTML={this.createMarkup(drug.personalizedInformation)}/>
                                         }
-                                    </div>
+                                    </div>}
                                 </div>
                             </div>
-                         </div>
+                        </div>
                         <div
                             className="row med_drugfeature">                                    {this.renderDrugFeatures(drug)}
                         </div>
+
+                        {User.isAuthenticated() &&
                         <div className="row">
                             <div className="action-pattern">
-                                {User.isAuthenticated() &&
+
                                 <div>
-                                    <div className="col-xs-4 nopadd">
+                                    <div className="col-md-4 nopadd">
                                         <button type="button" className="btn btn-like big_btn"
                                                 onClick={() => this.toggleTaking(drug)}>
                                                 <span
                                                     className={"glyphicon white " + (drug.isTaken ? 'glyphicon-minus' : 'glyphicon-heart')}></span>
                                         </button>
                                     </div>
-                                    <div className="col-xs-4 nopadd">
+                                    <div className="col-md-4 nopadd">
                                         <button type="button" className="btn btn-add big_btn"
                                                 onClick={() => this.toggleRemember(drug)}>
                                                 <span
                                                     className={"glyphicon white " + (drug.isRemembered ? 'glyphicon-minus' : 'glyphicon-plus')}></span>
                                         </button>
                                     </div>
-                                    <div className="col-xs-4 nopadd">
+                                    <div className="col-md-4 nopadd">
                                         <button type="button" className="btn btn-open big_btn">
                                             <Link to={`/drug/${drug.id}`}>
                                                 <span className="glyphicon glyphicon-eye-open white"></span>
@@ -453,10 +594,10 @@ class DrugList extends React.Component {
                                         </button>
                                     </div>
                                 </div>
-                                }
+
                             </div>
 
-                        </div>
+                        </div>}
                     </div>
                 </div>
 
@@ -494,42 +635,55 @@ class DrugList extends React.Component {
         }
 
         return (
-         <div>   <Carousel1/>
+            <div><Carousel1/>
+                <div className="container">
+                    <div className="well well-sm">
+                        <strong></strong>
+                        <div className="btn-group">
+                            <div id="list" className="btn btn-default btn-sm"
+                                 onClick={this.toggle.bind(this)}> {this.state.addClass ?
+                                <div><span className="glyphicon glyphicon-th-list">
+            </span>List</div> : <div><span className="glyphicon glyphicon-th"></span>Grid</div>}</div>
+                        </div>
+                    </div>
+                    {this.renderDrugs1(drugs)}
 
-            <div className="container no-banner">
-                <div className='page-header'>
-                    <h3>{title}</h3>
                 </div>
-                {User.isAuthenticated() && User.levelOfDetail > 1 &&
-                <div className="alert alert-info">
-                    <span className="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
-                    <span className="sr-only">Info:</span>&nbsp;
-                    {description.replace("%User.firstname%", firstname).replace("%User.lastname%", lastname)}
-                </div>
-                }
 
-                {drugs.length > 1 && User.isAuthenticated() && interactions.length > 0 &&
-                <div
-                    className={"alert alert-dismissable" + (User.redGreenColorblind ? " danger-red-green-colorblind" : " alert-danger")}>
-                    <button type="button" className="close" data-dismiss="alert" aria-label="Close"><span
-                        aria-hidden="true">&times;</span></button>
-                    <span className="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-                    <span className="sr-only">Error:</span>
-                    <h5>{User.redGreenColorblind} {t("interaction")}</h5>
-                    <span dangerouslySetInnerHTML={this.createMarkup(interactions)}/>
-                </div>
-                }
-
-                <div>
-                    {this.state.loading && <Loading/>}
-                    {!this.state.loading && drugs && drugs.length == 0 && <EmptyList/>}
-                    {!this.state.loading && drugs && drugs.length > 0 &&
-                    <ul className="drug-list">
-                        {this.renderDrugs(drugs)}
-                    </ul>
+                <div className="container no-banner">
+                    <div className='page-header'>
+                        <h3>{title}</h3>
+                    </div>
+                    {User.isAuthenticated() && User.levelOfDetail > 1 &&
+                    <div className="alert alert-info">
+                        <span className="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+                        <span className="sr-only">Info:</span>&nbsp;
+                        {description.replace("%User.firstname%", firstname).replace("%User.lastname%", lastname)}
+                    </div>
                     }
+
+                    {drugs.length > 1 && User.isAuthenticated() && interactions.length > 0 &&
+                    <div
+                        className={"alert alert-dismissable" + (User.redGreenColorblind ? " danger-red-green-colorblind" : " alert-danger")}>
+                        <button type="button" className="close" data-dismiss="alert" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                        <span className="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                        <span className="sr-only">Error:</span>
+                        <h5>{User.redGreenColorblind} {t("interaction")}</h5>
+                        <span dangerouslySetInnerHTML={this.createMarkup(interactions)}/>
+                    </div>
+                    }
+
+                    <div>
+                        {this.state.loading && <Loading/>}
+                        {!this.state.loading && drugs && drugs.length == 0 && <EmptyList/>}
+                        {!this.state.loading && drugs && drugs.length > 0 &&
+                        <ul className="drug-list">
+                        </ul>
+                        }
+                    </div>
                 </div>
-            </div>  </div>
+            </div>
         );
     }
 }

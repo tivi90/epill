@@ -7,18 +7,24 @@ import {toast} from 'react-toastify';
 import Accordion from "./accordion";
 import Loading from "./loading";
 import User from "./../util/User";
+import BeforeTaking from "./before_taking";
+import Usage from "./usage";
+import SideEffect from "./sideEffect";
+
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 
 import {faHome} from "@fortawesome/free-solid-svg-icons";
 import {faInfo, faCommentMedical, faAddressCard, faThumbsUp, faUserMd} from "@fortawesome/free-solid-svg-icons";
+import {Link} from "react-router-dom";
 
 
 class DrugDetail extends React.Component {
     constructor(props) {
-        super();
+        super(props);
         this.state = {
             drug: undefined,
-            showAdditionalInfo: false
+            showAdditionalInfo: false,
+
         }
 
         this.toggleShowAdditionalInfo = this.toggleShowAdditionalInfo.bind(this);
@@ -256,9 +262,9 @@ class DrugDetail extends React.Component {
         const {t} = this.props;
         return (
             <section className="diseases">
-                {t('usedWhen') + ": "}
-                {drug.disease.map(disease => <span key={disease.id}>{disease.name}</span>)
-                    .reduce((prev, curr) => [prev, ', ', curr])}
+                <p><b> {t('usedWhen') + ": "}</b></p>
+                <ul> {drug.disease.map(disease => <li key={disease.id}>{disease.name}</li>)
+                    .reduce((prev, curr) => [prev, curr])}</ul>
             </section>
         );
     }
@@ -270,14 +276,23 @@ class DrugDetail extends React.Component {
 
         const {t} = this.props;
         return (
-            <section className="diseases">
-                {t('pharmaceuticalForm') + ": "}
-                {drug.pharmaceuticalForm.map(pharmaceuticalForm => <span
-                    key={pharmaceuticalForm.id}>{pharmaceuticalForm.name}</span>)
-                    .reduce((prev, curr) => [prev, ', ', curr])}
+            <section className="diseases row">
+                <p><b>  {t('pharmaceuticalForm') + ": "} </b></p>
+                <ul>  {drug.pharmaceuticalForm.map(pharmaceuticalForm => <li
+                    key={pharmaceuticalForm.id}>{pharmaceuticalForm.name} <img style={{width: "55px"}}
+                                                                               key={pharmaceuticalForm.id}
+                                                                               src={"./../../assets/p_form/" + pharmaceuticalForm.id + ".svg"}
+                                                                               className="drug-feature-icon"
+                                                                               alt={pharmaceuticalForm.name}
+                                                                               title={pharmaceuticalForm.name}></img>
+                </li>)
+                    .reduce((prev, curr) => [prev, curr])}</ul>
+
+
             </section>
         );
     }
+
 
     renderActiveSubstance(drug) {
         if (!drug.activeSubstance)
@@ -286,7 +301,7 @@ class DrugDetail extends React.Component {
         const {t} = this.props;
 
         return (
-            <p> {t('activeSubstance') + ": "}
+            <p><b> {t('activeSubstance') + ": "}</b>
                 {drug.activeSubstance.map(substance => <span key={substance.id}>{substance.name}</span>)
                     .reduce((prev, curr) => [prev, ', ', curr])}
             </p>
@@ -300,10 +315,10 @@ class DrugDetail extends React.Component {
         const {t} = this.props;
 
         return (
-            <section className="pzn">
-                {t('pzn') + ": "}
-                {drug.packaging.map(packaging => <span key={packaging.id}>{packaging.name} {packaging.pzn}</span>)
-                    .reduce((prev, curr) => [prev, ', ', curr])}
+            <section className="pzn row">
+                <p><b>  {t('pzn') + ": "}</b></p>
+                <ul>    {drug.packaging.map(packaging => <li key={packaging.id}>{packaging.name} {packaging.pzn}</li>)
+                    .reduce((prev, curr) => [prev, curr])}</ul>
             </section>
         );
     }
@@ -316,8 +331,11 @@ class DrugDetail extends React.Component {
         const {t} = this.props;
 
         return (
-            <section>
-                {t('indicationGroup') + ": " + drug.indicationGroup.name}
+            <section className="row">
+                <p><b>     {t('indicationGroup') + ": "}  </b></p>
+                <ul>
+                    <li>{drug.indicationGroup.name}</li>
+                </ul>
             </section>
         );
     }
@@ -330,8 +348,11 @@ class DrugDetail extends React.Component {
         const {t} = this.props;
 
         return (
-            <section>
-                {t('productGroup') + ": " + drug.productGroup.name}
+            <section className="row">
+                <p><b>      {t('productGroup') + ": "}</b></p>
+                <ul>
+                    <li>{drug.productGroup.name}</li>
+                </ul>
             </section>
         );
     }
@@ -364,6 +385,10 @@ class DrugDetail extends React.Component {
         const {t} = this.props;
         const drug = this.state.drug;
         const showAdditionalInfo = this.state.showAdditionalInfo;
+        let itemClass = ["item  col-xs-4 col-lg-4 grid-group-item"]
+        if(this.state.addClass) {
+            itemClass.push('list-group-item');
+        }
 
         if (!drug) {
             // Do not show anything while loading.
@@ -378,7 +403,8 @@ class DrugDetail extends React.Component {
         }
 
         return (
-            <div className="  no-banner">
+
+            <div className="no-banner">
 
                 {/*Button INFO*/}
                 <div className="round-button-outer report-round-button">
@@ -416,9 +442,9 @@ class DrugDetail extends React.Component {
 
                                 </ul>
                                 <div className="row alert alert-danger" role="alert">
-                                    <div className="col-lg-1 alert_style">
+                                    <div className="col-md-1 alert_style">
                                         <i className="fas fa-exclamation"></i></div>
-                                    <div className="col-lg-11">
+                                    <div className="col-md-11">
                                         <p> Wenn eine der aufgeführten Nebenwirkungen Sie erheblich beeinträchtigt oder
                                             Sie Nebenwirkungen
                                             bemerken, die nicht in dieser
@@ -456,7 +482,7 @@ class DrugDetail extends React.Component {
                             </div>
                             <div className="modal-body" style={{color: "black"}}>
                                 <div className="row">
-                                    <div className="col-lg-8">
+                                    <div className="col-md-8">
                                         <p> Engelhard Arzneimittel GmbH & Co. KG <br/>
                                             Herzbergstr. 3 <br/>
                                             61138 Niederdorfelden <br/>
@@ -469,7 +495,7 @@ class DrugDetail extends React.Component {
 
                                         </p>
                                     </div>
-                                    <div className="col-lg-4">
+                                    <div className="col-md-4">
                                         <img className="img-responsive" src="/assets/images/Engelhard_Logo_2013.png"/>
                                     </div>
                                 </div>
@@ -503,18 +529,18 @@ class DrugDetail extends React.Component {
                             </div>
                             <div className="modal-body" style={{color: "black"}}>
                                 <div className="row  alert alert-success" role="alert">
-                                    <div className="col-lg-10">
+                                    <div className="col-md-10">
                                         <p>Indem Sie Nebenwirkungen melden, können Sie dazu beitragen,
                                             dass mehr Informationen über die Sicherheit dieses Arzneimittels
                                             zur Verfügung gestellt werden.
                                         </p>
                                     </div>
-                                    <div className="col-lg-2 icon_modal">
+                                    <div className="col-md-2 icon_modal">
                                         <FontAwesomeIcon icon={faThumbsUp}/>
                                     </div>
                                 </div>
                                 <div className="row">
-                                    <div className="col-lg-10">
+                                    <div className="col-md-10">
                                         <p>Wenn Sie Nebenwirkungen bemerken, wenden Sie sich an Ihren <b>Arzt oder
                                             Apotheker</b>.
                                             Dies gilt auch für Nebenwirkungen, die nicht in dieser Packungsbeilage
@@ -522,12 +548,12 @@ class DrugDetail extends React.Component {
                                             sind.
                                         </p>
                                     </div>
-                                    <div className="col-lg-2 icon_modal">
+                                    <div className="col-md-2 icon_modal">
                                         <FontAwesomeIcon icon={faUserMd}/>
                                     </div>
                                 </div>
                                 <div className="row">
-                                    <div className="col-lg-12">
+                                    <div className="col-md-12">
                                         <p><b>Weitere Möglichkeit:</b><br/>
                                             Bundesinstitut für Arzneimittel und Medizinprodukte <br/>
                                             Abt. Pharmakovigilanz<br/>
@@ -572,8 +598,7 @@ class DrugDetail extends React.Component {
                         </div>
                         }
                         <div className="row med_head">
-                            <h1>{drug.name} {drug.productGroup && drug.productGroup.name &&
-                            <span className="text-muted">{drug.productGroup.name}</span>}</h1>
+                            <h1>{drug.name}</h1>
                         </div>
                         {/*<h3>{drug.name} {drug.productGroup && drug.productGroup.name && <span className="text-muted">{drug.productGroup.name}</span> }</h3>*/}
                         {/*<span>v. {drug.version} | {t('publishingDate')}: {new Date(drug.year).toLocaleDateString()}</span>*/}
@@ -586,17 +611,73 @@ class DrugDetail extends React.Component {
                                      title={drug.name}
                                      src={`/image/drug/${drug.id}`
                                      }></img>
-                                <div className="drug-features margin-s">
-                                    {this.renderDrugFeatures(drug)}
+                                <div className="drug-features ">
+                                    {drug.drugFeature.map(feature => {
+                                        return (
+
+                                            <span style={{float: "left"}} key={feature.id}>
+
+                                                <img key={feature.id} data-toggle="modal" data-target={"#" + feature.id}
+                                                     src={"./../../assets/icons/" + feature.id + ".svg"}
+                                                     className="drug-feature-icon" alt={feature.drugFeature}
+                                                     title={feature.drugFeature}></img>
+
+
+                                                <div id={feature.id} className="modal fade" role="dialog">
+                                                    <div className="modal-dialog">
+
+                                                        <div className="modal-content">
+                                                            <div className="modal-header">
+                                                                <button type="button" className="close"
+                                                                        data-dismiss="modal">&times;</button>
+                                                                <h2 className="modal-title"><img style={{width: "40px"}}
+                                                                                                 key={feature.id}
+                                                                                                 data-toggle="modal"
+                                                                                                 data-target={"#" + feature.id}
+                                                                                                 src={"./../../assets/icons/" + feature.id + ".svg"}
+                                                                                                 className="drug-feature-icon"
+                                                                                                 alt={feature.drugFeature}
+                                                                                                 title={feature.drugFeature}></img> {feature.drugFeature}
+                                                                </h2>
+                                                            </div>
+                                                            <div className="modal-body">
+
+                                                                <div
+                                                                    dangerouslySetInnerHTML={this.createMarkup(feature.descriptionDrug)}/>
+
+                                                            </div>
+                                                            <div className="modal-footer">
+                                                                <button type="button" className="btn btn-default"
+                                                                        data-dismiss="modal">Close
+                                                                </button>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+                                            </span>
+
+                                        )
+                                    })
+                                    }
+
+
                                 </div>
+
                             </div>
-                            <div className="col-xs-12 col-sm-12 col-md-5 med_desc">
+                            <div className="col-xs-12 col-sm-12 col-md-4 med_desc">
                                 {User.isAuthenticated() && drug.personalizedInformation &&
-                                <div className="alert alert-info alert-dismissable">
-                                    <a href="#" className="close" data-dismiss="alert"
-                                       aria-label="close">&times;</a>
-                                    <span
-                                        dangerouslySetInnerHTML={this.createMarkup(drug.personalizedInformation)}/>
+                                <div className="alert row w3-animate-right">
+                                    <div className="speech-bubble">
+                                        <a href="#" className="close" data-dismiss="alert"
+                                           aria-label="close">&times;</a>
+                                        <span
+                                            dangerouslySetInnerHTML={this.createMarkup(drug.personalizedInformation)}/>
+                                    </div>
+
+                                    <img className="speech-bubble-person" src="./../../assets/images/logo_chat.png"/>
+
                                 </div>
                                 }
 
@@ -606,6 +687,16 @@ class DrugDetail extends React.Component {
 
                                 {this.renderActiveSubstance(drug)}
 
+                                <p>
+                                    <a onClick={this.toggleShowAdditionalInfo}>
+                                        <button className="btn btn-info">
+                                            {!showAdditionalInfo && <span>{t('viewDetails')}</span>}
+                                            {showAdditionalInfo && <span>{t('hideDetails')}</span>}
+                                        </button>
+                                    </a>
+                                </p>
+                            </div>
+                            <div className="col-xs-12 col-sm-12 col-md-4 med_desc">
 
                                 <div className="additional-information">
                                     {showAdditionalInfo &&
@@ -618,12 +709,7 @@ class DrugDetail extends React.Component {
                                     </section>
                                     }
 
-                                    <p>
-                                        <button className="btn btn-info"><a onClick={this.toggleShowAdditionalInfo}>
-                                            {!showAdditionalInfo && <span>{t('viewDetails')}</span>}
-                                            {showAdditionalInfo && <span>{t('hideDetails')}</span>}
-                                        </a></button>
-                                    </p>
+
                                 </div>
 
                             </div>
@@ -633,445 +719,28 @@ class DrugDetail extends React.Component {
                 </div>
 
                 <div className="container">
-                    <div className="row text-center">
-                        <div className="col-lg-4">
-                            <div className="row"></div>
-                            <div className="row">
-                                <button type="button" className="btn btn-primary dropdown-toggle"><a
-                                    style={{color: "white"}} href="#about">Vor
-                                    der Einnahmen</a></button>
-                            </div>
-                        </div>
-                        <div className="col-lg-4">
-                            <div className="row">
-                            </div>
-                            <div className="row">
-                                <button type="button" className="btn btn-primary dropdown-toggle"><a
-                                    style={{color: "white"}} href="#anwendung">Anwendung</a>
-                                </button>
-                            </div>
-                        </div>
-                        <div className="col-lg-4">
-                            <div className="row">
-                            </div>
-                            <div className="row">
-                                <button type="button" className="btn btn-primary dropdown-toggle"><a
-                                    style={{color: "white"}}
-                                    href="#nebenwirkungen">Nebenwirkungen</a>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                { /*Container (About Section)*/}
-                <div id="about" className="container">
+
                     <div className="row">
-                        <div className="col-sm-12 text-center">
-                            <h2>Vor der Einnahme von Prospan® Hustensaft</h2>
+                        <div className="panel with-nav-tabs panel-default">
+                            <div className="panel-heading">
+                                <ul className="nav nav-tabs">
+                                    <li className="active"><a href="#tab1default" data-toggle="tab">Vor der
+                                        Einnahme </a></li>
+                                    <li><a href="#tab2default" data-toggle="tab">Anwendnung</a></li>
+                                    <li><a href="#tab3default" data-toggle="tab">Nebenwirkungen</a></li>
 
-                            <p style={{color: "black"}}>Besondere Vorsicht bei der Einnahme von Prospan® Hustensaft ist
-                                erforderlich</p>
-                        </div>
-                    </div>
-                    <div className="row">
-                        <div className="col-sm-4">
-                            <ul id="nav-tabs-wrapper" className="nav nav-tabs nav-pills nav-stacked well">
-                                <li className="active"><a href="#vtab1" data-toggle="tab">Allergie</a></li>
-                                <li><a href="#vtab2" data-toggle="tab">Kinder</a></li>
-                                <li><a href="#vtab3" data-toggle="tab">Schwangerschaft und Stillzeit
-                                </a></li>
-                                <li><a href="#vtab4" data-toggle="tab"> Verkehrstüchtigkeit und das Bedienen von
-                                    Maschinen
-
-                                </a></li>
-                                <li><a href="#vtab5" data-toggle="tab"> Einnahme mit anderen Arzneimitteln
-
-                                </a></li>
-                                <li><a href="#vtab5" data-toggle="tab"> Zuckerkrank
-
-                                </a></li>
-
-
-                            </ul>
-                        </div>
-                        <div className="col-sm-8">
-                            <div className="tab-content">
-                                <div role="tabpanel" className="tab-pane fade in active" id="vtab1">
-                                    <h3>Allergie</h3>
-                                    <p>Prospan® Hustensaft darf <b>nicht</b> eingenommen werden, wenn
-                                        Sie überempfindlich (allergisch) gegenüber dem wirksamen
-                                        Bestandteil oder einem der sonstigen Bestandteile des Arzneimittels
-                                        sind</p>
-                                </div>
-                                <div role="tabpanel" className="tab-pane fade" id="vtab2">
-                                    <h3>Kinder</h3>
-                                    <p><b>Kinder unter einem Jahr</b> <br/>
-                                        Anwendung nur nach
-                                        Rücksprache mit einem Arzt. Die Einnahme bei dieser Altersgruppe sollte nur
-                                        unter sorgfältiger Beobachtung
-                                        erfolgen, weil bei Kindern unter einem Jahr im Vergleich zu älteren
-                                        Kindern besonders auf das Auftreten von Durchfall und Erbrechen
-                                        zu achten ist.
-                                    </p>
-                                    <div className="alert alert-info" role="alert">Bitte beachten Sie auch die Hinweise
-                                        unter <a
-                                            href="#"><b>Nebenwirkungen</b></a>.
-                                    </div>
-
-                                </div>
-                                <div role="tabpanel" className="tab-pane fade in" id="vtab3">
-                                    <h3>Schwangerschaft und Stillzeit </h3>
-
-                                    <div className="alert alert-danger" role="alert">
-                                        <p>Dieses Arzneimittel soll in der Schwangerschaft und Stillzeit <b>nicht</b>
-                                            angewendet werden, da keine ausreichenden Untersuchungen
-                                            vorliegen.
-                                        </p>
-                                    </div>
-
-                                </div>
-                                <div role="tabpanel" className="tab-pane fade in" id="vtab4">
-                                    <h3>Verkehrstüchtigkeit und das Bedienen von Maschinen</h3>
-                                    <div className="alert alert-success" role="alert">
-                                        <p>Es sind keine besonderen Vorsichtsmaßnahmen erforderlich.
-                                        </p>
-                                    </div>
-
-
-                                </div>
-                                <div role="tabpanel" className="tab-pane fade in" id="vtab5">
-                                    <h3>Einnahme mit anderen Arzneimitteln</h3>
-                                    <p>Dieses Arzneimittel enthält Sorbitol. Bei jeder Anwendung werden
-                                        bis zu 1,9 g Sorbitol zugeführt.
-                                        <div className="alert alert-warning" role="alert"> Bitte nehmen Sie Prospan®
-                                            Hustensaft erst nach Rücksprache
-                                            mit Ihrem Arzt ein, wenn Ihnen bekannt
-                                            ist, dass Sie unter einer Unverträglichkeit gegenüber bestimmten Zuckern
-                                            leiden.</div>
-
-
-                                    </p>
-                                </div>
-                                <div role="tabpanel" className="tab-pane fade in" id="vtab5">
-                                    <h3>Zuckerkrank</h3>
-                                    <p>Es wurden keine Untersuchungen durchgeführt. Bisher sind keine
-                                        Wechselwirkungen bekannt geworden.
-                                        <div className="alert alert-warning" role="alert"> Bitte informieren Sie Ihren
-                                            Arzt oder Apotheker, wenn Sie andere Arzneimittel einnehmen /
-                                            anwenden bzw. vor kurzem eingenommen / angewendet haben,
-                                            auch wenn es sich um nicht verschreibungspflichtige Arzneimittel
-                                            handelt</div>
-
-                                    </p>
+                                </ul>
+                            </div>
+                            <div className="panel-body">
+                                <div className="tab-content">
+                                    <div className="tab-pane fade in active" id="tab1default"><BeforeTaking/></div>
+                                    <div className="tab-pane fade" id="tab2default"><Usage/></div>
+                                    <div className="tab-pane fade" id="tab3default"><SideEffect/></div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div className="container-fluid bg-grey">
-                    <div className="container bg-grey" id="anwendung" style={{marginTop: "90px"}}>
-                        <div className="row">
-                            <div className="col-sm-12 text-center">
-                                <h2>Anwendung von Prospan® Hustensaft </h2>
-
-                            </div>
-                        </div>
-
-                        <div className="row text-center">
-
-
-                            <div className="alert alert-info" role="alert"> Nehmen Sie Prospan® Hustensaft immer genau
-                                nach der Anweisung
-                                dieser Packungsbeilage ein. <br/> Bitte fragen Sie bei Ihrem Arzt oder
-                                Apotheker nach, wenn Sie sich nicht ganz sicher sind.
-                            </div>
-
-
-                            <div className="col-sm-12">
-                                <div className="panel with-nav-tabs panel-primary">
-                                    <div className="panel-heading">
-                                        <ul className="nav nav-tabs">
-                                            <li className="active"><a href="#tab1primary" data-toggle="tab">Dosis</a>
-                                            </li>
-                                            <li><a href="#tab2primary" data-toggle="tab">Art</a></li>
-                                            <li><a href="#tab3primary" data-toggle="tab">Dauer</a></li>
-
-                                        </ul>
-                                    </div>
-                                    <div className="panel-body">
-                                        <div className="tab-content">
-                                            <div className="tab-pane fade in active" id="tab1primary">
-                                                <div className="row">
-                                                    <div className="col-lg-3" style={{fontSize: "16px"}}>
-
-
-                                                    </div>
-                                                    <div className="col-lg-3" style={{fontSize: "60px"}}>
-
-                                                        <i className="fas fa-baby"></i>
-                                                    </div>
-                                                    <div className="col-lg-3" style={{fontSize: "60px"}}>
-
-                                                        <i className="fas fa-child"></i>
-                                                    </div>
-                                                    <div className="col-lg-3" style={{fontSize: "60px"}}>
-
-                                                        <i className="fas fa-male"></i>
-                                                        <i className="fas fa-blind"></i>
-                                                    </div>
-                                                </div>
-                                                <div className="row">
-                                                    <div className="col-lg-3" style={{fontSize: "16px"}}>
-
-                                                        <p style={{fontWeight: "bold"}}>Alter</p>
-                                                    </div>
-                                                    <div className="col-lg-3" style={{fontSize: "16px"}}>
-
-                                                        <p> Kinder unter 6 Jahren</p>
-                                                    </div>
-                                                    <div className="col-lg-3" style={{fontSize: "16px"}}>
-
-                                                        <p> Kinder von 6 - 12 Jahren</p>
-
-                                                    </div>
-                                                    <div className="col-lg-3" style={{fontSize: "16px"}}>
-
-                                                        <p> Kinder ab 6 Jahren & Erwachsene</p>
-                                                    </div>
-                                                </div>
-                                                <hr/>
-                                                <div className="row">
-                                                    <div className="col-lg-3" style={{fontSize: "16px"}}>
-
-                                                        <p style={{fontWeight: "bold"}}>Einzeldosis</p>
-                                                    </div>
-                                                    <div className="col-lg-3" style={{fontSize: "16px"}}>
-
-                                                        <p>2,5 ml <br/> &#8793; <br/> 17,5 mg
-                                                            Efeublätter-Trockenextrakt
-                                                        </p>
-                                                    </div>
-                                                    <div className="col-lg-3" style={{fontSize: "16px"}}>
-
-                                                        <p>5 ml <br/> &#8793; <br/> 35 mg Efeublätter-Trockenextrakt
-                                                        </p>
-                                                    </div>
-                                                    <div className="col-lg-3" style={{fontSize: "16px"}}>
-
-                                                        <p>5 ml <br/> &#8793; <br/> 35 mg Efeublätter-Trockenextrakt
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                                <hr/>
-
-                                                <div className="row">
-                                                    <div className="col-lg-3" style={{fontSize: "16px"}}>
-
-                                                        <p style={{fontWeight: "bold"}}>Tagesgesamtdosis</p>
-                                                    </div>
-                                                    <div className="col-lg-3" style={{fontSize: "16px"}}>
-
-                                                        <p>5 ml (2 x 2,5 ml) <br/> &#8793; <br/> 35 mg
-                                                            Efeublätter-Trockenextrakt
-                                                        </p>
-                                                    </div>
-                                                    <div className="col-lg-3" style={{fontSize: "16px"}}>
-
-                                                        <p>10 ml (2 x 5 ml) <br/> &#8793; <br/> 70 mg
-                                                            Efeublätter-Trockenextrakt
-                                                        </p>
-                                                    </div>
-                                                    <div className="col-lg-3" style={{fontSize: "16px"}}>
-
-                                                        <p>15 ml (3 x 5 ml) <br/> &#8793; <br/> 105 mg
-                                                            Efeublätter-Trockenextrakt
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="tab-pane fade" id="tab2primary">
-                                                <div className="row">
-                                                    <div className="col-lg-4 col-lg-offset-4">
-                                                        <table className="table table-striped custab">
-                                                            <tr>
-                                                                <td>
-                                                                    <h4 style={{marginBottom: "0px"}}> 1x</h4>
-                                                                </td>
-                                                                <td>
-                                                                    <h4 style={{marginBottom: "0px"}}> Morgens</h4>
-                                                                </td>
-
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    <h4 style={{marginBottom: "0px"}}> 1x </h4>
-                                                                </td>
-                                                                <td>
-                                                                    <h4 style={{marginBottom: "0px"}}> (Mittags)</h4>
-                                                                </td>
-
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    <h4 style={{marginBottom: "0px"}}> 1x</h4>
-                                                                </td>
-                                                                <td>
-                                                                    <h4 style={{marginBottom: "0px"}}> Abends</h4>
-                                                                </td>
-
-                                                            </tr>
-                                                        </table>
-                                                    </div>
-                                                </div>
-                                                <div className="alert alert-info" role="alert"> Die Flasche vor jedem
-                                                    Gebrauch gut schütteln! <br/>
-                                                    Zum Einnehmen mit dem beigefügten Messbecher <i
-                                                        className="fas fa-glass-whiskey"></i>.
-                                                </div>
-
-
-                                            </div>
-                                            <div className="tab-pane fade" id="tab3primary">
-                                                <div className="row">
-                                                    <div className="col-lg-8 col-lg-offset-2">
-                                                        Die Behandlungsdauer richtet sich jeweils nach der Art und
-                                                        Schwere
-                                                        des Krankheitsbildes; sie sollte in der Regel <b>1
-                                                        Woche </b> betragen. Wenn
-                                                        die Beschwerden jedoch länger als 1 Woche anhalten, sollte
-                                                        medizinischer Rat eingeholt werden.
-                                                        <div className="alert alert-warning" role="alert"> Bitte
-                                                            sprechen Sie mit Ihrem Arzt oder Apotheker,
-                                                            wenn Sie den
-                                                            Eindruck haben, dass die Wirkung von Prospan® Hustensaft zu
-                                                            stark
-                                                            oder zu schwach ist.</div>
-                                                    </div>
-                                                </div>
-
-
-                                            </div>
-                                            <div className="tab-pane fade" id="tab4primary">Primary 4</div>
-                                            <div className="tab-pane fade" id="tab5primary">Primary 5</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-                <div id="nebenwirkungen" className="container" style={{marginTop: "90px"}}>
-                    <div className="row">
-                        <div className="col-sm-12 text-center">
-                            <h2>Nebenwirkungen</h2>
-
-                        </div>
-                    </div>
-
-
-                    <div className="row">
-                        <div className="col-lg-12 text-center" style={{color: "black"}}>
-
-                            Wie alle Arzneimittel kann Prospan® Hustensaft Nebenwirkungen
-                            haben, die aber nicht bei jedem auftreten müssen. <br/>
-                            Bei der Bewertung von Nebenwirkungen werden folgende Häufigkeiten zugrundegelegt:
-                            <div className="row">
-                                <div className="col-lg-4 col-lg-offset-4 text-left">
-                                    <table className="table table-striped custab" style={{marginTop: "30px"}}>
-                                        <tbody>
-                                        <tr>
-                                            <td>
-                                                <b>Sehr häufig</b>
-                                            </td>
-                                            <td>
-                                                mehr als 1 Behandelter von 10
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <b> Häufig</b></td>
-                                            <td>
-                                                1 bis 10 Behandelte von 100
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <b> Gelegentlich</b></td>
-                                            <td>
-                                                1 bis 10 Behandelte von 1.000
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <b> Selten</b></td>
-                                            <td>
-                                                1 bis 10 Behandelte von 10.000
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <b> Sehr selten</b>
-                                            </td>
-                                            <td>
-                                                weniger als 1 Behandelter von 10.000
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <b> Nicht bekannt</b>
-                                            </td>
-                                            <td>
-                                                Häufigkeit auf Grundlage der verfügbaren Daten nicht abschätzbar
-                                            </td>
-                                        </tr>
-                                        </tbody>
-
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="row">
-                        <div className="col-sm-4">
-                            <ul id="nav-tabs-wrapper" className="nav nav-tabs nav-pills nav-stacked well">
-                                <li className="active"><a href="#vtab11" data-toggle="tab">Allergische Reaktionen</a></li>
-                                <li><a href="#vtab12" data-toggle="tab">Magen-Darm-Beschwerden </a></li>
-
-
-                            </ul>
-                        </div>
-                        <div className="col-sm-8">
-                            <div className="tab-content">
-                                <div role="tabpanel" className="tab-pane fade in active" id="vtab11"
-                                     style={{padding: "25px"}}>
-                                    <span className="label label-primary">Atemnot</span>
-                                    <span className="label label-primary">Schwellungen</span>
-                                    <span className="label label-primary">Hautrötungen</span>
-                                    <span className="label label-primary">Juckreiz</span>
-                                    <span className="label label-primary">Atemnot</span>
-                                    <br/> <br/>
-
-                                    <p><b>Häufigkeit:</b> Nicht bekannt</p>
-
-
-                                </div>
-                                <div role="tabpanel" className="tab-pane fade" id="vtab12" style={{padding: "20px"}}>
-                                    Aufgrund des Sorbitolgehaltes: <br/>
-                                    <span className="label label-primary">Übelkeit</span>
-                                    <span className="label label-primary">Erbrechen</span>
-                                    <span className="label label-primary">Durchfall</span>
-                                    <span className="label label-primary">abführende Wirkung</span>
-                                    <br/>
-                                    <p><b>Häufigkeit:</b> Nicht bekannt</p>
-
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
                 {
                     this.renderSectionList(drug)
                 }
@@ -1081,7 +750,12 @@ class DrugDetail extends React.Component {
 
         );
 
+
     }
 }
+
+
+
+
 
 export default translate()(DrugDetail);

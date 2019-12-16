@@ -2,6 +2,8 @@ html {
 	position: relative;
 	min-height: 100%;
 	background-color: rgb(255, 255, 255);
+	scroll-behavior: smooth;
+
 }
 
 body { margin-bottom: 330px; }

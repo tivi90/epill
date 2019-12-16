@@ -173,9 +173,9 @@ import com.doccuty.epill.model.IntakeInformation;
    {
       setName(value);
       return this;
-   } 
+   }
 
-   
+
    /********************************************************************
     * <pre>
     *              many                       many

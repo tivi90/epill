@@ -2,6 +2,8 @@ html {
 	position: relative;
 	min-height: 100%;
 	background-color: rgb(255, 255, 255);
+	scroll-behavior: smooth;
+
 }
 
 body { margin-bottom: 330px; }
@@ -99,8 +101,10 @@ a.wide { display : block }
 
 .drug-features .drug-feature-icon {
 	height:auto;
-	width:25px;
-	margin-right:10px;
+	width: 40px;
+	margin-right: 5px;
+	padding-bottom: 10px;
+	cursor:pointer;
 }
 
 /* drug list styling */

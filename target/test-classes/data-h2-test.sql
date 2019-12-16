@@ -290,8 +290,8 @@ INSERT INTO drug_disease (iddrug, iddisease) VALUES (10, 3);
 -- Dumping data for table `drug_feature`
 --
 
-INSERT INTO drug_feature (id, drug_feature, min_age, max_age) VALUES (1,'ohne Tierversuche', 0, 0);
-INSERT INTO drug_feature (id, drug_feature) VALUES (2,'halal');
+INSERT INTO drug_feature (id, drug_feature, min_age, max_age, DESCRIPTION_DRUG) VALUES (1,'ohne Tierversuche', 0, 0, '<h4>Lesen Sie die gesamte Packungsbeilage sorgfältig durch, bevor Sie mit der Einnahme dieses Arzneimittels beginnen, denn sie enthält wichtige Informationen.</h4> <p>Ihr Arzt hat Ihnen ein wirksames Arzneimittel zur Behandlung von nicht organbedingtem Bluthochdruck und Herzleistungsschwäche verschrieben. Den Nutzen von Accupro 10 schätzt Ihr Arzt für Sie höher ein als die möglichen Risiken, die mit seiner Anwendung einhergehen können.</p> <ul> <li> <p>Heben Sie die Packungsbeilage auf. Vielleicht möchten Sie diese später nochmals lesen.</p> </li> <li> <p>Wenn Sie weitere Fragen haben, wenden Sie sich an Ihren Arzt oder Apotheker.</p> </li> <li> <p>Dieses Arzneimittel wurde Ihnen persönlich verschrieben. Geben Sie es nicht an Dritte weiter. Es kann anderen Menschen schaden, auch wenn diese die gleichen Beschwerden haben wie Sie.</p> </li> <li> <p>Wenn Sie Nebenwirkungen bemerken, wenden Sie sich an Ihren Arzt oder Apotheker. Dies gilt auch für Nebenwirkungen, die nicht in dieser Packungsbeilage angegeben sind. Siehe Abschnitt 4.</p> </li> </ul> <p> <italic>Die kursiv geschriebenen Informationen sind ZusatzInformationen für Ihren Arzt.</italic> </p>');
+INSERT INTO drug_feature (id, drug_feature, DESCRIPTION_DRUG) VALUES (2,'halal','holaaaa');
 INSERT INTO drug_feature (id, drug_feature, min_age, max_age) VALUES (3,'beeinträchtigt die Fahrtüchtigkeit', 16, 0);
 INSERT INTO drug_feature (id, drug_feature) VALUES (4,'verschreibungspflichtig');
 INSERT INTO drug_feature (id, drug_feature) VALUES (5,'ohne Alkohol');

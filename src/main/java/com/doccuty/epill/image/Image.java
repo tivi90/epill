@@ -207,7 +207,8 @@ public class Image implements SendableEntity
 		setImagePath(value);
 		return this;
 	}
-	
+
+
 	// ==========================================================================
 
 	public static final String PROPERTY_UPLOADEDATE = "uploadedAt";

@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 442);
+/******/ 	return __webpack_require__(__webpack_require__.s = 445);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -1833,7 +1833,7 @@
                 module && module.exports) {
             try {
                 oldLocale = globalLocale._abbr;
-                __webpack_require__(315)("./" + name);
+                __webpack_require__(318)("./" + name);
                 // because defineLocale currently also sets the global locale, we
                 // want to undo that for lazy loaded locales
                 locale_locales__getSetGlobalLocale(oldLocale);
@@ -4265,7 +4265,7 @@
     return _moment;
 
 }));
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(441)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(444)(module)))
 
 /***/ }),
 /* 1 */
@@ -4464,7 +4464,7 @@ process.umask = function() { return 0; };
 "use strict";
 
 
-module.exports = __webpack_require__(32);
+module.exports = __webpack_require__(33);
 
 
 /***/ }),
@@ -4643,6 +4643,46 @@ module.exports = reactProdInvariant;
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Trans = exports.I18nextProvider = exports.Interpolate = exports.translate = exports.loadNamespaces = undefined;
+
+var _translate = __webpack_require__(399);
+
+var _translate2 = _interopRequireDefault(_translate);
+
+var _interpolate = __webpack_require__(396);
+
+var _interpolate2 = _interopRequireDefault(_interpolate);
+
+var _trans = __webpack_require__(398);
+
+var _trans2 = _interopRequireDefault(_trans);
+
+var _I18nextProvider = __webpack_require__(395);
+
+var _I18nextProvider2 = _interopRequireDefault(_I18nextProvider);
+
+var _loadNamespaces = __webpack_require__(397);
+
+var _loadNamespaces2 = _interopRequireDefault(_loadNamespaces);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.loadNamespaces = _loadNamespaces2.default;
+exports.translate = _translate2.default;
+exports.Interpolate = _interpolate2.default;
+exports.I18nextProvider = _I18nextProvider2.default;
+exports.Trans = _trans2.default;
+
+/***/ }),
+/* 7 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
 /*
 object-assign
 (c) Sindre Sorhus
@@ -4736,7 +4776,7 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 
 
 /***/ }),
-/* 7 */
+/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(process) {/**
@@ -4756,50 +4796,10 @@ if (process.env.NODE_ENV !== 'production') {
 } else {
   // By explicitly using `prop-types` you are opting into new production behavior.
   // http://fb.me/prop-types-in-prod
-  module.exports = __webpack_require__(317)();
+  module.exports = __webpack_require__(320)();
 }
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
-
-/***/ }),
-/* 8 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.Trans = exports.I18nextProvider = exports.Interpolate = exports.translate = exports.loadNamespaces = undefined;
-
-var _translate = __webpack_require__(396);
-
-var _translate2 = _interopRequireDefault(_translate);
-
-var _interpolate = __webpack_require__(393);
-
-var _interpolate2 = _interopRequireDefault(_interpolate);
-
-var _trans = __webpack_require__(395);
-
-var _trans2 = _interopRequireDefault(_trans);
-
-var _I18nextProvider = __webpack_require__(392);
-
-var _I18nextProvider2 = _interopRequireDefault(_I18nextProvider);
-
-var _loadNamespaces = __webpack_require__(394);
-
-var _loadNamespaces2 = _interopRequireDefault(_loadNamespaces);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-exports.loadNamespaces = _loadNamespaces2.default;
-exports.translate = _translate2.default;
-exports.Interpolate = _interpolate2.default;
-exports.I18nextProvider = _I18nextProvider2.default;
-exports.Trans = _trans2.default;
 
 /***/ }),
 /* 9 */
@@ -5004,49 +5004,10 @@ module.exports = ReactDOMComponentTree;
 /* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
-/**
- * Copyright (c) 2013-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- *
- */
-
-
-
-var canUseDOM = !!(typeof window !== 'undefined' && window.document && window.document.createElement);
-
-/**
- * Simple, lightweight module assisting with the detection and context of
- * Worker. Helps avoid circular dependencies and allows code to reason about
- * whether or not they are in a Worker, even if they never include the main
- * `ReactWorker` dependency.
- */
-var ExecutionEnvironment = {
-
-  canUseDOM: canUseDOM,
-
-  canUseWorkers: typeof Worker !== 'undefined',
-
-  canUseEventListeners: canUseDOM && !!(window.addEventListener || window.attachEvent),
-
-  canUseViewport: canUseDOM && !!window.screen,
-
-  isInWorker: !canUseDOM // For now, this is true - might change in the future.
-
-};
-
-module.exports = ExecutionEnvironment;
-
-/***/ }),
-/* 11 */
-/***/ (function(module, exports, __webpack_require__) {
-
 module.exports = __webpack_require__(236);
 
 /***/ }),
-/* 12 */
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5058,11 +5019,11 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _axios = __webpack_require__(11);
+var _axios = __webpack_require__(10);
 
 var _axios2 = _interopRequireDefault(_axios);
 
-var _universalCookie = __webpack_require__(39);
+var _universalCookie = __webpack_require__(40);
 
 var _universalCookie2 = _interopRequireDefault(_universalCookie);
 
@@ -5160,38 +5121,77 @@ var User = function () {
 exports.default = new User();
 
 /***/ }),
+/* 12 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/**
+ * Copyright (c) 2013-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ *
+ */
+
+
+
+var canUseDOM = !!(typeof window !== 'undefined' && window.document && window.document.createElement);
+
+/**
+ * Simple, lightweight module assisting with the detection and context of
+ * Worker. Helps avoid circular dependencies and allows code to reason about
+ * whether or not they are in a Worker, even if they never include the main
+ * `ReactWorker` dependency.
+ */
+var ExecutionEnvironment = {
+
+  canUseDOM: canUseDOM,
+
+  canUseWorkers: typeof Worker !== 'undefined',
+
+  canUseEventListeners: canUseDOM && !!(window.addEventListener || window.attachEvent),
+
+  canUseViewport: canUseDOM && !!window.screen,
+
+  isInWorker: !canUseDOM // For now, this is true - might change in the future.
+
+};
+
+module.exports = ExecutionEnvironment;
+
+/***/ }),
 /* 13 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__BrowserRouter__ = __webpack_require__(400);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__BrowserRouter__ = __webpack_require__(403);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "BrowserRouter", function() { return __WEBPACK_IMPORTED_MODULE_0__BrowserRouter__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__HashRouter__ = __webpack_require__(401);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__HashRouter__ = __webpack_require__(404);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "HashRouter", function() { return __WEBPACK_IMPORTED_MODULE_1__HashRouter__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Link__ = __webpack_require__(216);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Link", function() { return __WEBPACK_IMPORTED_MODULE_2__Link__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__MemoryRouter__ = __webpack_require__(402);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__MemoryRouter__ = __webpack_require__(405);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "MemoryRouter", function() { return __WEBPACK_IMPORTED_MODULE_3__MemoryRouter__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__NavLink__ = __webpack_require__(403);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__NavLink__ = __webpack_require__(406);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "NavLink", function() { return __WEBPACK_IMPORTED_MODULE_4__NavLink__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Prompt__ = __webpack_require__(404);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Prompt__ = __webpack_require__(407);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Prompt", function() { return __WEBPACK_IMPORTED_MODULE_5__Prompt__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Redirect__ = __webpack_require__(405);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Redirect__ = __webpack_require__(408);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Redirect", function() { return __WEBPACK_IMPORTED_MODULE_6__Redirect__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Route__ = __webpack_require__(217);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Route", function() { return __WEBPACK_IMPORTED_MODULE_7__Route__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__Router__ = __webpack_require__(70);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Router", function() { return __WEBPACK_IMPORTED_MODULE_8__Router__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__StaticRouter__ = __webpack_require__(406);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__StaticRouter__ = __webpack_require__(409);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "StaticRouter", function() { return __WEBPACK_IMPORTED_MODULE_9__StaticRouter__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__Switch__ = __webpack_require__(407);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__Switch__ = __webpack_require__(410);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Switch", function() { return __WEBPACK_IMPORTED_MODULE_10__Switch__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__generatePath__ = __webpack_require__(408);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__generatePath__ = __webpack_require__(411);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "generatePath", function() { return __WEBPACK_IMPORTED_MODULE_11__generatePath__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__matchPath__ = __webpack_require__(409);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__matchPath__ = __webpack_require__(412);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "matchPath", function() { return __WEBPACK_IMPORTED_MODULE_12__matchPath__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__withRouter__ = __webpack_require__(410);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__withRouter__ = __webpack_require__(413);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "withRouter", function() { return __WEBPACK_IMPORTED_MODULE_13__withRouter__["a"]; });
 
 
@@ -5570,7 +5570,7 @@ module.exports = ReactComponentTreeHook;
 
 
 var bind = __webpack_require__(80);
-var isBuffer = __webpack_require__(313);
+var isBuffer = __webpack_require__(316);
 
 /*global toString:true*/
 
@@ -5893,7 +5893,7 @@ module.exports = {
 var debugTool = null;
 
 if (process.env.NODE_ENV !== 'production') {
-  var ReactDebugTool = __webpack_require__(350);
+  var ReactDebugTool = __webpack_require__(353);
   debugTool = ReactDebugTool;
 }
 
@@ -5958,13 +5958,13 @@ module.exports = emptyFunction;
 
 
 var _prodInvariant = __webpack_require__(5),
-    _assign = __webpack_require__(6);
+    _assign = __webpack_require__(7);
 
 var CallbackQueue = __webpack_require__(194);
 var PooledClass = __webpack_require__(26);
 var ReactFeatureFlags = __webpack_require__(199);
-var ReactReconciler = __webpack_require__(31);
-var Transaction = __webpack_require__(44);
+var ReactReconciler = __webpack_require__(32);
+var Transaction = __webpack_require__(45);
 
 var invariant = __webpack_require__(3);
 
@@ -6248,7 +6248,7 @@ module.exports = ReactCurrentOwner;
 
 
 
-var _assign = __webpack_require__(6);
+var _assign = __webpack_require__(7);
 
 var PooledClass = __webpack_require__(26);
 
@@ -6833,11 +6833,11 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.toast = exports.ToastContainer = undefined;
 
-var _ToastContainer = __webpack_require__(415);
+var _ToastContainer = __webpack_require__(418);
 
 var _ToastContainer2 = _interopRequireDefault(_ToastContainer);
 
-var _toastify = __webpack_require__(416);
+var _toastify = __webpack_require__(419);
 
 var _toastify2 = _interopRequireDefault(_toastify);
 
@@ -7106,12 +7106,12 @@ module.exports = PooledClass;
 
 
 
-var _assign = __webpack_require__(6);
+var _assign = __webpack_require__(7);
 
 var ReactCurrentOwner = __webpack_require__(19);
 
 var warning = __webpack_require__(4);
-var canDefineProperty = __webpack_require__(50);
+var canDefineProperty = __webpack_require__(51);
 var hasOwnProperty = Object.prototype.hasOwnProperty;
 
 var REACT_ELEMENT_TYPE = __webpack_require__(227);
@@ -7482,14 +7482,195 @@ module.exports = reactProdInvariant;
 
 /***/ }),
 /* 29 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _axios = __webpack_require__(10);
+
+var _axios2 = _interopRequireDefault(_axios);
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactRouterDom = __webpack_require__(13);
+
+var _reactRouter = __webpack_require__(414);
+
+var _reactI18next = __webpack_require__(6);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var UserMenue = function (_React$Component) {
+	_inherits(UserMenue, _React$Component);
+
+	function UserMenue(props) {
+		_classCallCheck(this, UserMenue);
+
+		var _this = _possibleConstructorReturn(this, (UserMenue.__proto__ || Object.getPrototypeOf(UserMenue)).call(this, props));
+
+		_this.state = {
+			drugs: [],
+			exp: '',
+			selectedValue: '',
+			show: false,
+			loading: false
+		};
+
+		_this.handleSubmit = _this.handleSubmit.bind(_this);
+		_this.handleExpressionChange = _this.handleExpressionChange.bind(_this);
+		_this.handleSelectedValueChange = _this.handleSelectedValueChange.bind(_this);
+
+		_this.hide = _this.hide.bind(_this);
+		_this.show = _this.show.bind(_this);
+
+		return _this;
+	}
+
+	_createClass(UserMenue, [{
+		key: "handleSubmit",
+		value: function handleSubmit(event) {
+			event.preventDefault();
+		}
+	}, {
+		key: "handleExpressionChange",
+		value: function handleExpressionChange(event) {
+			var _this2 = this;
+
+			this.state.exp = event.target.value;
+			this.state.loading = true;
+			this.state.show = true;
+
+			this.setState(this.state);
+
+			_axios2.default.get('/drug/search', { params: { exp: this.state.exp } }).then(function (_ref) {
+				var data = _ref.data;
+
+				_this2.state.drugs = data.value;
+				_this2.state.loading = false;
+				_this2.setState(_this2.state);
+			});
+		}
+	}, {
+		key: "handleSelectedValueChange",
+		value: function handleSelectedValueChange(drug, event) {
+			this.state.selectedValue = drug.name;
+			this.state.exp = this.state.selectedValue;
+			this.setState(this.state);
+		}
+	}, {
+		key: "show",
+		value: function show(event) {
+			this.state.show = true;
+			this.setState(this.state);
+		}
+	}, {
+		key: "hide",
+		value: function hide(event) {
+			this.state.show = false;
+			this.setState(this.state);
+		}
+	}, {
+		key: "renderResults",
+		value: function renderResults(drugs) {
+			var _this3 = this;
+
+			if (!drugs) return null;
+
+			return drugs.map(function (drug) {
+				return _react2.default.createElement(
+					"li",
+					{ key: "aC" + drug.id, onMouseOver: function onMouseOver() {
+							return _this3.handleSelectedValueChange(drug);
+						}, onClick: _this3.hide },
+					_react2.default.createElement(
+						_reactRouterDom.Link,
+						{ to: "/drug/" + drug.id, className: "wide" },
+						drug.name
+					)
+				);
+			});
+		}
+	}, {
+		key: "render",
+		value: function render() {
+			var t = this.props.t;
+
+
+			var drugs = this.state.drugs;
+			var show = this.state.show;
+			var exp = this.state.exp;
+			var loading = this.state.loading;
+
+			return _react2.default.createElement(
+				"div",
+				null,
+				_react2.default.createElement(
+					"form",
+					{ className: "navbar-form ", onSubmit: this.handleSubmit },
+					_react2.default.createElement(
+						"div",
+						{ className: "col-sm-12 col-md-12 col-lg-12" },
+						_react2.default.createElement(
+							"div",
+							{ className: "row" },
+							_react2.default.createElement("input", { type: "text", value: this.state.exp, onChange: this.handleExpressionChange, name: "search", className: "form-control",
+								placeholder: t("searchDrug"), autoComplete: "off", autoCorrect: "off", autoCapitalize: "off" }),
+							_react2.default.createElement(
+								"button",
+								{ className: "btn btn-outline-success btn-search", type: "submit" },
+								_react2.default.createElement("span", { className: "glyphicon glyphicon-search" })
+							)
+						),
+						show && exp.length > 0 && !loading && _react2.default.createElement(
+							"div",
+							{ className: "row" },
+							_react2.default.createElement(
+								"ul",
+								{ className: "ui-autocomplete" },
+								this.renderResults(drugs),
+								drugs.length == 0 && _react2.default.createElement(
+									"li",
+									{ className: "no-results" },
+									"leider keine passenden Ergebnisse gefunden"
+								)
+							)
+						)
+					)
+				)
+			);
+		}
+	}]);
+
+	return UserMenue;
+}(_react2.default.Component);
+
+exports.default = (0, _reactI18next.translate)()(UserMenue);
+
+/***/ }),
+/* 30 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_extends__ = __webpack_require__(232);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_resolve_pathname__ = __webpack_require__(433);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_value_equal__ = __webpack_require__(440);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_tiny_warning__ = __webpack_require__(437);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_tiny_invariant__ = __webpack_require__(436);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_resolve_pathname__ = __webpack_require__(436);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_value_equal__ = __webpack_require__(443);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_tiny_warning__ = __webpack_require__(440);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_tiny_invariant__ = __webpack_require__(439);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return createBrowserHistory; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return createHashHistory; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return createMemoryHistory; });
@@ -8420,7 +8601,7 @@ function createMemoryHistory(props) {
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(1)))
 
 /***/ }),
-/* 30 */
+/* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8435,7 +8616,7 @@ function createMemoryHistory(props) {
 
 
 var DOMNamespaces = __webpack_require__(56);
-var setInnerHTML = __webpack_require__(46);
+var setInnerHTML = __webpack_require__(47);
 
 var createMicrosoftUnsafeLocalFunction = __webpack_require__(63);
 var setTextContent = __webpack_require__(213);
@@ -8541,7 +8722,7 @@ DOMLazyTree.queueText = queueText;
 module.exports = DOMLazyTree;
 
 /***/ }),
-/* 31 */
+/* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8555,7 +8736,7 @@ module.exports = DOMLazyTree;
 
 
 
-var ReactRef = __webpack_require__(364);
+var ReactRef = __webpack_require__(367);
 var ReactInstrumentation = __webpack_require__(16);
 
 var warning = __webpack_require__(4);
@@ -8711,7 +8892,7 @@ module.exports = ReactReconciler;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 32 */
+/* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8727,18 +8908,18 @@ module.exports = ReactReconciler;
 
 
 
-var _assign = __webpack_require__(6);
+var _assign = __webpack_require__(7);
 
-var ReactChildren = __webpack_require__(422);
+var ReactChildren = __webpack_require__(425);
 var ReactComponent = __webpack_require__(73);
-var ReactPureComponent = __webpack_require__(427);
-var ReactClass = __webpack_require__(423);
-var ReactDOMFactories = __webpack_require__(424);
+var ReactPureComponent = __webpack_require__(430);
+var ReactClass = __webpack_require__(426);
+var ReactDOMFactories = __webpack_require__(427);
 var ReactElement = __webpack_require__(27);
-var ReactPropTypes = __webpack_require__(425);
-var ReactVersion = __webpack_require__(428);
+var ReactPropTypes = __webpack_require__(428);
+var ReactVersion = __webpack_require__(431);
 
-var onlyChild = __webpack_require__(431);
+var onlyChild = __webpack_require__(434);
 var warning = __webpack_require__(4);
 
 var createElement = ReactElement.createElement;
@@ -8746,7 +8927,7 @@ var createFactory = ReactElement.createFactory;
 var cloneElement = ReactElement.cloneElement;
 
 if (process.env.NODE_ENV !== 'production') {
-  var canDefineProperty = __webpack_require__(50);
+  var canDefineProperty = __webpack_require__(51);
   var ReactElementValidator = __webpack_require__(228);
   var didWarnPropTypesDeprecated = false;
   createElement = ReactElementValidator.createElement;
@@ -8821,7 +9002,7 @@ module.exports = React;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 33 */
+/* 34 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8845,7 +9026,7 @@ module.exports = emptyObject;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 34 */
+/* 35 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8914,7 +9095,7 @@ var EventEmitter = function () {
 /* harmony default export */ __webpack_exports__["a"] = (EventEmitter);
 
 /***/ }),
-/* 35 */
+/* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8930,7 +9111,7 @@ var EventEmitter = function () {
 
 var _prodInvariant = __webpack_require__(5);
 
-var EventPluginRegistry = __webpack_require__(41);
+var EventPluginRegistry = __webpack_require__(42);
 var EventPluginUtils = __webpack_require__(57);
 var ReactErrorUtils = __webpack_require__(61);
 
@@ -9192,7 +9373,7 @@ module.exports = EventPluginHub;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 36 */
+/* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9206,7 +9387,7 @@ module.exports = EventPluginHub;
 
 
 
-var EventPluginHub = __webpack_require__(35);
+var EventPluginHub = __webpack_require__(36);
 var EventPluginUtils = __webpack_require__(57);
 
 var accumulateInto = __webpack_require__(206);
@@ -9330,7 +9511,7 @@ module.exports = EventPropagators;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 37 */
+/* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9379,7 +9560,7 @@ var ReactInstanceMap = {
 module.exports = ReactInstanceMap;
 
 /***/ }),
-/* 38 */
+/* 39 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9441,7 +9622,7 @@ SyntheticEvent.augmentClass(SyntheticUIEvent, UIEventInterface);
 module.exports = SyntheticUIEvent;
 
 /***/ }),
-/* 39 */
+/* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9451,7 +9632,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _Cookies = __webpack_require__(438);
+var _Cookies = __webpack_require__(441);
 
 var _Cookies2 = _interopRequireDefault(_Cookies);
 
@@ -9461,7 +9642,7 @@ exports.default = _Cookies2.default;
 module.exports = exports['default'];
 
 /***/ }),
-/* 40 */
+/* 41 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9581,7 +9762,7 @@ function escape(data) {
 }
 
 /***/ }),
-/* 41 */
+/* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9838,7 +10019,7 @@ module.exports = EventPluginRegistry;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 42 */
+/* 43 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9852,13 +10033,13 @@ module.exports = EventPluginRegistry;
 
 
 
-var _assign = __webpack_require__(6);
+var _assign = __webpack_require__(7);
 
-var EventPluginRegistry = __webpack_require__(41);
-var ReactEventEmitterMixin = __webpack_require__(354);
+var EventPluginRegistry = __webpack_require__(42);
+var ReactEventEmitterMixin = __webpack_require__(357);
 var ViewportMetrics = __webpack_require__(205);
 
-var getVendorPrefixedEventName = __webpack_require__(389);
+var getVendorPrefixedEventName = __webpack_require__(392);
 var isEventSupported = __webpack_require__(67);
 
 /**
@@ -10165,7 +10346,7 @@ var ReactBrowserEventEmitter = _assign({}, ReactEventEmitterMixin, {
 module.exports = ReactBrowserEventEmitter;
 
 /***/ }),
-/* 43 */
+/* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10179,7 +10360,7 @@ module.exports = ReactBrowserEventEmitter;
 
 
 
-var SyntheticUIEvent = __webpack_require__(38);
+var SyntheticUIEvent = __webpack_require__(39);
 var ViewportMetrics = __webpack_require__(205);
 
 var getEventModifierState = __webpack_require__(65);
@@ -10240,7 +10421,7 @@ SyntheticUIEvent.augmentClass(SyntheticMouseEvent, MouseEventInterface);
 module.exports = SyntheticMouseEvent;
 
 /***/ }),
-/* 44 */
+/* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10472,7 +10653,7 @@ module.exports = TransactionImpl;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 45 */
+/* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10597,7 +10778,7 @@ function escapeTextContentForBrowser(text) {
 module.exports = escapeTextContentForBrowser;
 
 /***/ }),
-/* 46 */
+/* 47 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10611,7 +10792,7 @@ module.exports = escapeTextContentForBrowser;
 
 
 
-var ExecutionEnvironment = __webpack_require__(10);
+var ExecutionEnvironment = __webpack_require__(12);
 var DOMNamespaces = __webpack_require__(56);
 
 var WHITESPACE_TEST = /^[ \r\n\t\f]/;
@@ -10698,7 +10879,7 @@ if (ExecutionEnvironment.canUseDOM) {
 module.exports = setInnerHTML;
 
 /***/ }),
-/* 47 */
+/* 48 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10708,7 +10889,7 @@ module.exports = setInnerHTML;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_invariant___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_invariant__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_prop_types__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_prop_types__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_prop_types__);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
@@ -10817,7 +10998,7 @@ Router.childContextTypes = {
 /* harmony default export */ __webpack_exports__["a"] = (Router);
 
 /***/ }),
-/* 48 */
+/* 49 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10897,7 +11078,7 @@ var matchPath = function matchPath(pathname) {
 /* harmony default export */ __webpack_exports__["a"] = (matchPath);
 
 /***/ }),
-/* 49 */
+/* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10930,7 +11111,7 @@ exports.default = {
 };
 
 /***/ }),
-/* 50 */
+/* 51 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10962,7 +11143,7 @@ module.exports = canDefineProperty;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 51 */
+/* 52 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11060,187 +11241,6 @@ utils.forEach(['post', 'put', 'patch'], function forEachMethodWithData(method) {
 module.exports = defaults;
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
-
-/***/ }),
-/* 52 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-	value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _axios = __webpack_require__(11);
-
-var _axios2 = _interopRequireDefault(_axios);
-
-var _react = __webpack_require__(2);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactRouterDom = __webpack_require__(13);
-
-var _reactRouter = __webpack_require__(411);
-
-var _reactI18next = __webpack_require__(8);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var UserMenue = function (_React$Component) {
-	_inherits(UserMenue, _React$Component);
-
-	function UserMenue(props) {
-		_classCallCheck(this, UserMenue);
-
-		var _this = _possibleConstructorReturn(this, (UserMenue.__proto__ || Object.getPrototypeOf(UserMenue)).call(this, props));
-
-		_this.state = {
-			drugs: [],
-			exp: '',
-			selectedValue: '',
-			show: false,
-			loading: false
-		};
-
-		_this.handleSubmit = _this.handleSubmit.bind(_this);
-		_this.handleExpressionChange = _this.handleExpressionChange.bind(_this);
-		_this.handleSelectedValueChange = _this.handleSelectedValueChange.bind(_this);
-
-		_this.hide = _this.hide.bind(_this);
-		_this.show = _this.show.bind(_this);
-
-		return _this;
-	}
-
-	_createClass(UserMenue, [{
-		key: "handleSubmit",
-		value: function handleSubmit(event) {
-			event.preventDefault();
-		}
-	}, {
-		key: "handleExpressionChange",
-		value: function handleExpressionChange(event) {
-			var _this2 = this;
-
-			this.state.exp = event.target.value;
-			this.state.loading = true;
-			this.state.show = true;
-
-			this.setState(this.state);
-
-			_axios2.default.get('/drug/search', { params: { exp: this.state.exp } }).then(function (_ref) {
-				var data = _ref.data;
-
-				_this2.state.drugs = data.value;
-				_this2.state.loading = false;
-				_this2.setState(_this2.state);
-			});
-		}
-	}, {
-		key: "handleSelectedValueChange",
-		value: function handleSelectedValueChange(drug, event) {
-			this.state.selectedValue = drug.name;
-			this.state.exp = this.state.selectedValue;
-			this.setState(this.state);
-		}
-	}, {
-		key: "show",
-		value: function show(event) {
-			this.state.show = true;
-			this.setState(this.state);
-		}
-	}, {
-		key: "hide",
-		value: function hide(event) {
-			this.state.show = false;
-			this.setState(this.state);
-		}
-	}, {
-		key: "renderResults",
-		value: function renderResults(drugs) {
-			var _this3 = this;
-
-			if (!drugs) return null;
-
-			return drugs.map(function (drug) {
-				return _react2.default.createElement(
-					"li",
-					{ key: "aC" + drug.id, onMouseOver: function onMouseOver() {
-							return _this3.handleSelectedValueChange(drug);
-						}, onClick: _this3.hide },
-					_react2.default.createElement(
-						_reactRouterDom.Link,
-						{ to: "/drug/" + drug.id, className: "wide" },
-						drug.name
-					)
-				);
-			});
-		}
-	}, {
-		key: "render",
-		value: function render() {
-			var t = this.props.t;
-
-
-			var drugs = this.state.drugs;
-			var show = this.state.show;
-			var exp = this.state.exp;
-			var loading = this.state.loading;
-
-			return _react2.default.createElement(
-				"div",
-				null,
-				_react2.default.createElement(
-					"form",
-					{ className: "navbar-form ", onSubmit: this.handleSubmit },
-					_react2.default.createElement(
-						"div",
-						{ className: "col-sm-12 col-md-12 col-lg-12" },
-						_react2.default.createElement(
-							"div",
-							{ className: "row" },
-							_react2.default.createElement("input", { type: "text", value: this.state.exp, onChange: this.handleExpressionChange, name: "search", className: "form-control",
-								placeholder: t("searchDrug"), autoComplete: "off", autoCorrect: "off", autoCapitalize: "off" }),
-							_react2.default.createElement(
-								"button",
-								{ className: "btn btn-outline-success btn-search", type: "submit" },
-								_react2.default.createElement("span", { className: "glyphicon glyphicon-search" })
-							)
-						),
-						show && exp.length > 0 && !loading && _react2.default.createElement(
-							"div",
-							{ className: "row" },
-							_react2.default.createElement(
-								"ul",
-								{ className: "ui-autocomplete" },
-								this.renderResults(drugs),
-								drugs.length == 0 && _react2.default.createElement(
-									"li",
-									{ className: "no-results" },
-									"leider keine passenden Ergebnisse gefunden"
-								)
-							)
-						)
-					)
-				)
-			);
-		}
-	}]);
-
-	return UserMenue;
-}(_react2.default.Component);
-
-exports.default = (0, _reactI18next.translate)()(UserMenue);
 
 /***/ }),
 /* 53 */
@@ -11347,13 +11347,13 @@ module.exports = ReactPropTypesSecret;
 
 
 
-var DOMLazyTree = __webpack_require__(30);
-var Danger = __webpack_require__(327);
+var DOMLazyTree = __webpack_require__(31);
+var Danger = __webpack_require__(330);
 var ReactDOMComponentTree = __webpack_require__(9);
 var ReactInstrumentation = __webpack_require__(16);
 
 var createMicrosoftUnsafeLocalFunction = __webpack_require__(63);
-var setInnerHTML = __webpack_require__(46);
+var setInnerHTML = __webpack_require__(47);
 var setTextContent = __webpack_require__(213);
 
 function getNodeAfter(parentNode, node) {
@@ -11897,7 +11897,7 @@ var _prodInvariant = __webpack_require__(5);
 var ReactPropTypesSecret = __webpack_require__(204);
 var propTypesFactory = __webpack_require__(190);
 
-var React = __webpack_require__(32);
+var React = __webpack_require__(33);
 var PropTypes = propTypesFactory(React.isValidElement);
 
 var invariant = __webpack_require__(3);
@@ -12167,7 +12167,7 @@ module.exports = ReactErrorUtils;
 var _prodInvariant = __webpack_require__(5);
 
 var ReactCurrentOwner = __webpack_require__(19);
-var ReactInstanceMap = __webpack_require__(37);
+var ReactInstanceMap = __webpack_require__(38);
 var ReactInstrumentation = __webpack_require__(16);
 var ReactUpdates = __webpack_require__(18);
 
@@ -12574,7 +12574,7 @@ module.exports = getEventTarget;
 
 
 
-var ExecutionEnvironment = __webpack_require__(10);
+var ExecutionEnvironment = __webpack_require__(12);
 
 var useHasFeature;
 if (ExecutionEnvironment.canUseDOM) {
@@ -12682,7 +12682,7 @@ module.exports = shouldUpdateReactComponent;
 
 
 
-var _assign = __webpack_require__(6);
+var _assign = __webpack_require__(7);
 
 var emptyFunction = __webpack_require__(17);
 var warning = __webpack_require__(4);
@@ -13047,7 +13047,7 @@ module.exports = validateDOMNesting;
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_Router__ = __webpack_require__(47);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_Router__ = __webpack_require__(48);
 // Written in this round about way for babel-transform-imports
 
 
@@ -13064,9 +13064,9 @@ module.exports = validateDOMNesting;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_invariant___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_invariant__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_prop_types__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_prop_types__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_prop_types__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__matchPath__ = __webpack_require__(48);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__matchPath__ = __webpack_require__(49);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -13273,8 +13273,8 @@ var _prodInvariant = __webpack_require__(28);
 
 var ReactNoopUpdateQueue = __webpack_require__(74);
 
-var canDefineProperty = __webpack_require__(50);
-var emptyObject = __webpack_require__(33);
+var canDefineProperty = __webpack_require__(51);
+var emptyObject = __webpack_require__(34);
 var invariant = __webpack_require__(3);
 var warning = __webpack_require__(4);
 
@@ -13787,7 +13787,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _axios = __webpack_require__(11);
+var _axios = __webpack_require__(10);
 
 var _axios2 = _interopRequireDefault(_axios);
 
@@ -13795,11 +13795,11 @@ var _react = __webpack_require__(2);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactI18next = __webpack_require__(8);
+var _reactI18next = __webpack_require__(6);
 
 var _reactToastify = __webpack_require__(23);
 
-var _User = __webpack_require__(12);
+var _User = __webpack_require__(11);
 
 var _User2 = _interopRequireDefault(_User);
 
@@ -23863,7 +23863,7 @@ function appendBackwardsAPI(i18n) {
 /* 189 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isarray = __webpack_require__(314)
+var isarray = __webpack_require__(317)
 
 /**
  * Expose `pathToRegexp`.
@@ -24332,10 +24332,10 @@ module.exports = function(isValidElement) {
 
 
 var ReactIs = __webpack_require__(215);
-var assign = __webpack_require__(6);
+var assign = __webpack_require__(7);
 
 var ReactPropTypesSecret = __webpack_require__(54);
-var checkPropTypes = __webpack_require__(316);
+var checkPropTypes = __webpack_require__(319);
 
 var has = Function.call.bind(Object.prototype.hasOwnProperty);
 var printWarning = function() {};
@@ -24927,7 +24927,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _Cookies = __webpack_require__(318);
+var _Cookies = __webpack_require__(321);
 
 Object.defineProperty(exports, 'Cookies', {
   enumerable: true,
@@ -24936,7 +24936,7 @@ Object.defineProperty(exports, 'Cookies', {
   }
 });
 
-var _CookiesProvider = __webpack_require__(319);
+var _CookiesProvider = __webpack_require__(322);
 
 Object.defineProperty(exports, 'CookiesProvider', {
   enumerable: true,
@@ -24945,7 +24945,7 @@ Object.defineProperty(exports, 'CookiesProvider', {
   }
 });
 
-var _withCookies = __webpack_require__(320);
+var _withCookies = __webpack_require__(323);
 
 Object.defineProperty(exports, 'withCookies', {
   enumerable: true,
@@ -25256,7 +25256,7 @@ var DOMProperty = __webpack_require__(22);
 var ReactDOMComponentTree = __webpack_require__(9);
 var ReactInstrumentation = __webpack_require__(16);
 
-var quoteAttributeValueForBrowser = __webpack_require__(390);
+var quoteAttributeValueForBrowser = __webpack_require__(393);
 var warning = __webpack_require__(4);
 
 var VALID_ATTRIBUTE_NAME_REGEX = new RegExp('^[' + DOMProperty.ATTRIBUTE_NAME_START_CHAR + '][' + DOMProperty.ATTRIBUTE_NAME_CHAR + ']*$');
@@ -25512,7 +25512,7 @@ module.exports = ReactDOMComponentFlags;
 
 
 
-var _assign = __webpack_require__(6);
+var _assign = __webpack_require__(7);
 
 var LinkedValueUtils = __webpack_require__(59);
 var ReactDOMComponentTree = __webpack_require__(9);
@@ -25846,9 +25846,9 @@ module.exports = ReactHostComponent;
 
 
 
-var ReactDOMSelection = __webpack_require__(345);
+var ReactDOMSelection = __webpack_require__(348);
 
-var containsNode = __webpack_require__(277);
+var containsNode = __webpack_require__(280);
 var focusNode = __webpack_require__(83);
 var getActiveElement = __webpack_require__(84);
 
@@ -25974,26 +25974,26 @@ module.exports = ReactInputSelection;
 
 var _prodInvariant = __webpack_require__(5);
 
-var DOMLazyTree = __webpack_require__(30);
+var DOMLazyTree = __webpack_require__(31);
 var DOMProperty = __webpack_require__(22);
-var React = __webpack_require__(32);
-var ReactBrowserEventEmitter = __webpack_require__(42);
+var React = __webpack_require__(33);
+var ReactBrowserEventEmitter = __webpack_require__(43);
 var ReactCurrentOwner = __webpack_require__(19);
 var ReactDOMComponentTree = __webpack_require__(9);
-var ReactDOMContainerInfo = __webpack_require__(337);
-var ReactDOMFeatureFlags = __webpack_require__(339);
+var ReactDOMContainerInfo = __webpack_require__(340);
+var ReactDOMFeatureFlags = __webpack_require__(342);
 var ReactFeatureFlags = __webpack_require__(199);
-var ReactInstanceMap = __webpack_require__(37);
+var ReactInstanceMap = __webpack_require__(38);
 var ReactInstrumentation = __webpack_require__(16);
-var ReactMarkupChecksum = __webpack_require__(359);
-var ReactReconciler = __webpack_require__(31);
+var ReactMarkupChecksum = __webpack_require__(362);
+var ReactReconciler = __webpack_require__(32);
 var ReactUpdateQueue = __webpack_require__(62);
 var ReactUpdates = __webpack_require__(18);
 
-var emptyObject = __webpack_require__(33);
+var emptyObject = __webpack_require__(34);
 var instantiateReactComponent = __webpack_require__(211);
 var invariant = __webpack_require__(3);
-var setInnerHTML = __webpack_require__(46);
+var setInnerHTML = __webpack_require__(47);
 var shouldUpdateReactComponent = __webpack_require__(68);
 var warning = __webpack_require__(4);
 
@@ -26517,7 +26517,7 @@ module.exports = ReactMount;
 
 var _prodInvariant = __webpack_require__(5);
 
-var React = __webpack_require__(32);
+var React = __webpack_require__(33);
 
 var invariant = __webpack_require__(3);
 
@@ -26735,7 +26735,7 @@ module.exports = getHostComponentFromComposite;
 
 
 
-var ExecutionEnvironment = __webpack_require__(10);
+var ExecutionEnvironment = __webpack_require__(12);
 
 var contentKey = null;
 
@@ -26898,13 +26898,13 @@ module.exports = inputValueTracking;
 
 
 var _prodInvariant = __webpack_require__(5),
-    _assign = __webpack_require__(6);
+    _assign = __webpack_require__(7);
 
-var ReactCompositeComponent = __webpack_require__(334);
+var ReactCompositeComponent = __webpack_require__(337);
 var ReactEmptyComponent = __webpack_require__(198);
 var ReactHostComponent = __webpack_require__(200);
 
-var getNextDebugID = __webpack_require__(430);
+var getNextDebugID = __webpack_require__(433);
 var invariant = __webpack_require__(3);
 var warning = __webpack_require__(4);
 
@@ -27084,9 +27084,9 @@ module.exports = isTextInputElement;
 
 
 
-var ExecutionEnvironment = __webpack_require__(10);
-var escapeTextContentForBrowser = __webpack_require__(45);
-var setInnerHTML = __webpack_require__(46);
+var ExecutionEnvironment = __webpack_require__(12);
+var escapeTextContentForBrowser = __webpack_require__(46);
+var setInnerHTML = __webpack_require__(47);
 
 /**
  * Set the textContent property of a node, ensuring that whitespace is preserved
@@ -27142,9 +27142,9 @@ module.exports = setTextContent;
 var _prodInvariant = __webpack_require__(5);
 
 var ReactCurrentOwner = __webpack_require__(19);
-var REACT_ELEMENT_TYPE = __webpack_require__(353);
+var REACT_ELEMENT_TYPE = __webpack_require__(356);
 
-var getIteratorFn = __webpack_require__(387);
+var getIteratorFn = __webpack_require__(390);
 var invariant = __webpack_require__(3);
 var KeyEscapeUtils = __webpack_require__(58);
 var warning = __webpack_require__(4);
@@ -27312,9 +27312,9 @@ module.exports = traverseAllChildren;
 /* WEBPACK VAR INJECTION */(function(process) {
 
 if (process.env.NODE_ENV === 'production') {
-  module.exports = __webpack_require__(399);
+  module.exports = __webpack_require__(402);
 } else {
-  module.exports = __webpack_require__(398);
+  module.exports = __webpack_require__(401);
 }
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
@@ -27326,11 +27326,11 @@ if (process.env.NODE_ENV === 'production') {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_invariant__ = __webpack_require__(25);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_invariant___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_invariant__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_history__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_history__ = __webpack_require__(30);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
@@ -27456,10 +27456,10 @@ Link.contextTypes = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_warning___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_warning__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_prop_types__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_history__ = __webpack_require__(29);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Router__ = __webpack_require__(47);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_history__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Router__ = __webpack_require__(48);
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
@@ -27520,7 +27520,7 @@ MemoryRouter.propTypes = {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_invariant__ = __webpack_require__(25);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_invariant___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_invariant__);
@@ -27611,13 +27611,13 @@ Prompt.contextTypes = {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_warning__ = __webpack_require__(24);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_warning___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_warning__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_invariant__ = __webpack_require__(25);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_invariant___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_invariant__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_history__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_history__ = __webpack_require__(30);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__generatePath__ = __webpack_require__(72);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
@@ -27744,10 +27744,10 @@ Redirect.contextTypes = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_invariant___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_invariant__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_prop_types__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_prop_types__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_prop_types__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_history__ = __webpack_require__(29);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Router__ = __webpack_require__(47);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_history__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Router__ = __webpack_require__(48);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
@@ -27906,13 +27906,13 @@ StaticRouter.childContextTypes = {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_warning__ = __webpack_require__(24);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_warning___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_warning__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_invariant__ = __webpack_require__(25);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_invariant___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_invariant__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__matchPath__ = __webpack_require__(48);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__matchPath__ = __webpack_require__(49);
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
@@ -27998,7 +27998,7 @@ Switch.propTypes = {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_hoist_non_react_statics__ = __webpack_require__(85);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_hoist_non_react_statics___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_hoist_non_react_statics__);
@@ -28225,9 +28225,9 @@ var ReactCurrentOwner = __webpack_require__(19);
 var ReactComponentTreeHook = __webpack_require__(14);
 var ReactElement = __webpack_require__(27);
 
-var checkReactTypeSpec = __webpack_require__(429);
+var checkReactTypeSpec = __webpack_require__(432);
 
-var canDefineProperty = __webpack_require__(50);
+var canDefineProperty = __webpack_require__(51);
 var getIteratorFn = __webpack_require__(230);
 var warning = __webpack_require__(4);
 
@@ -28548,35 +28548,35 @@ var _react = __webpack_require__(2);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(321);
+var _reactDom = __webpack_require__(324);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
 var _reactCookie = __webpack_require__(192);
 
-var _reactI18next = __webpack_require__(8);
+var _reactI18next = __webpack_require__(6);
 
 var _reactRouterDom = __webpack_require__(13);
 
 var _reactToastify = __webpack_require__(23);
 
-var _i18n = __webpack_require__(272);
+var _i18n = __webpack_require__(275);
 
 var _i18n2 = _interopRequireDefault(_i18n);
 
-var _User = __webpack_require__(12);
+var _User = __webpack_require__(11);
 
 var _User2 = _interopRequireDefault(_User);
 
-var _navigation = __webpack_require__(267);
+var _navigation = __webpack_require__(268);
 
 var _navigation2 = _interopRequireDefault(_navigation);
 
-var _footer = __webpack_require__(262);
+var _footer = __webpack_require__(263);
 
 var _footer2 = _interopRequireDefault(_footer);
 
-var _home = __webpack_require__(263);
+var _home = __webpack_require__(264);
 
 var _home2 = _interopRequireDefault(_home);
 
@@ -28584,11 +28584,11 @@ var _about = __webpack_require__(253);
 
 var _about2 = _interopRequireDefault(_about);
 
-var _imprint = __webpack_require__(264);
+var _imprint = __webpack_require__(265);
 
 var _imprint2 = _interopRequireDefault(_imprint);
 
-var _privacy = __webpack_require__(268);
+var _privacy = __webpack_require__(269);
 
 var _privacy2 = _interopRequireDefault(_privacy);
 
@@ -28596,19 +28596,19 @@ var _authentication = __webpack_require__(255);
 
 var _authentication2 = _interopRequireDefault(_authentication);
 
-var _register = __webpack_require__(269);
+var _register = __webpack_require__(270);
 
 var _register2 = _interopRequireDefault(_register);
 
-var _drug_list = __webpack_require__(259);
+var _drug_list = __webpack_require__(260);
 
 var _drug_list2 = _interopRequireDefault(_drug_list);
 
-var _drug_detail = __webpack_require__(258);
+var _drug_detail = __webpack_require__(259);
 
 var _drug_detail2 = _interopRequireDefault(_drug_detail);
 
-var _data = __webpack_require__(270);
+var _data = __webpack_require__(273);
 
 var _data2 = _interopRequireDefault(_data);
 
@@ -31161,7 +31161,7 @@ var autoReplace = function autoReplace() {
 
 
 
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(1), __webpack_require__(75), __webpack_require__(435).setImmediate))
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(1), __webpack_require__(75), __webpack_require__(438).setImmediate))
 
 /***/ }),
 /* 234 */
@@ -37912,7 +37912,7 @@ var _iconsCache = {
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__fortawesome_fontawesome_svg_core__ = __webpack_require__(233);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react__);
@@ -38284,7 +38284,7 @@ var convertCurry = convert.bind(null, __WEBPACK_IMPORTED_MODULE_2_react___defaul
 var utils = __webpack_require__(15);
 var bind = __webpack_require__(80);
 var Axios = __webpack_require__(238);
-var defaults = __webpack_require__(51);
+var defaults = __webpack_require__(52);
 
 /**
  * Create an instance of Axios
@@ -38404,7 +38404,7 @@ module.exports = CancelToken;
 "use strict";
 
 
-var defaults = __webpack_require__(51);
+var defaults = __webpack_require__(52);
 var utils = __webpack_require__(15);
 var InterceptorManager = __webpack_require__(239);
 var dispatchRequest = __webpack_require__(240);
@@ -38559,7 +38559,7 @@ module.exports = InterceptorManager;
 var utils = __webpack_require__(15);
 var transformData = __webpack_require__(243);
 var isCancel = __webpack_require__(78);
-var defaults = __webpack_require__(51);
+var defaults = __webpack_require__(52);
 
 /**
  * Throws a `Cancel` if cancellation has been requested.
@@ -39128,7 +39128,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _axios = __webpack_require__(11);
+var _axios = __webpack_require__(10);
 
 var _axios2 = _interopRequireDefault(_axios);
 
@@ -39138,7 +39138,7 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactRouterDom = __webpack_require__(13);
 
-var _reactI18next = __webpack_require__(8);
+var _reactI18next = __webpack_require__(6);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -39226,13 +39226,13 @@ var _react = __webpack_require__(2);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _User = __webpack_require__(12);
+var _User = __webpack_require__(11);
 
 var _User2 = _interopRequireDefault(_User);
 
 var _reactRouterDom = __webpack_require__(13);
 
-var _reactI18next = __webpack_require__(8);
+var _reactI18next = __webpack_require__(6);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -39361,7 +39361,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _axios = __webpack_require__(11);
+var _axios = __webpack_require__(10);
 
 var _axios2 = _interopRequireDefault(_axios);
 
@@ -39371,13 +39371,13 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactRouterDom = __webpack_require__(13);
 
-var _reactI18next = __webpack_require__(8);
+var _reactI18next = __webpack_require__(6);
 
 var _reactToastify = __webpack_require__(23);
 
 var _reactCookie = __webpack_require__(192);
 
-var _User = __webpack_require__(12);
+var _User = __webpack_require__(11);
 
 var _User2 = _interopRequireDefault(_User);
 
@@ -39610,12 +39610,12 @@ exports.default = (0, _reactCookie.withCookies)((0, _reactI18next.translate)()(A
 
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+	value: true
 });
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _axios = __webpack_require__(11);
+var _axios = __webpack_require__(10);
 
 var _axios2 = _interopRequireDefault(_axios);
 
@@ -39623,13 +39623,311 @@ var _react = __webpack_require__(2);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactI18next = __webpack_require__(8);
+var _reactI18next = __webpack_require__(6);
 
-var _User = __webpack_require__(12);
+var _User = __webpack_require__(11);
 
 var _User2 = _interopRequireDefault(_User);
 
-var _auto_complete = __webpack_require__(52);
+var _auto_complete = __webpack_require__(29);
+
+var _auto_complete2 = _interopRequireDefault(_auto_complete);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var BeforeTaking = function (_React$Component) {
+	_inherits(BeforeTaking, _React$Component);
+
+	function BeforeTaking(props) {
+		_classCallCheck(this, BeforeTaking);
+
+		var _this = _possibleConstructorReturn(this, (BeforeTaking.__proto__ || Object.getPrototypeOf(BeforeTaking)).call(this));
+
+		_this.state = {
+			drug: undefined
+		};
+
+		return _this;
+	}
+
+	_createClass(BeforeTaking, [{
+		key: "render",
+		value: function render() {
+			return _react2.default.createElement(
+				"div",
+				{ id: "about", className: "container" },
+				_react2.default.createElement(
+					"div",
+					{ className: "row" },
+					_react2.default.createElement(
+						"div",
+						{ className: "col-sm-12 text-center" },
+						_react2.default.createElement(
+							"h2",
+							null,
+							"Vor der Einnahme von Prospan\xAE Hustensaft"
+						),
+						_react2.default.createElement(
+							"p",
+							null,
+							"Besondere Vorsicht bei der Einnahme von Prospan\xAE Hustensaft ist erforderlich"
+						)
+					)
+				),
+				_react2.default.createElement(
+					"div",
+					{ className: "row" },
+					_react2.default.createElement(
+						"div",
+						{ className: "col-sm-4" },
+						_react2.default.createElement(
+							"ul",
+							{ id: "nav-tabs-wrapper", className: "nav nav-tabs nav-pills nav-stacked well" },
+							_react2.default.createElement(
+								"li",
+								{ className: "active" },
+								_react2.default.createElement(
+									"a",
+									{ href: "#vtab1", "data-toggle": "tab" },
+									"Allergie"
+								)
+							),
+							_react2.default.createElement(
+								"li",
+								null,
+								_react2.default.createElement(
+									"a",
+									{ href: "#vtab2", "data-toggle": "tab" },
+									"Kinder"
+								)
+							),
+							_react2.default.createElement(
+								"li",
+								null,
+								_react2.default.createElement(
+									"a",
+									{ href: "#vtab3", "data-toggle": "tab" },
+									"Schwangerschaft und Stillzeit"
+								)
+							),
+							_react2.default.createElement(
+								"li",
+								null,
+								_react2.default.createElement(
+									"a",
+									{ href: "#vtab4", "data-toggle": "tab" },
+									" Verkehrst\xFCchtigkeit und das Bedienen von Maschinen"
+								)
+							),
+							_react2.default.createElement(
+								"li",
+								null,
+								_react2.default.createElement(
+									"a",
+									{ href: "#vtab5", "data-toggle": "tab" },
+									" Einnahme mit anderen Arzneimitteln"
+								)
+							),
+							_react2.default.createElement(
+								"li",
+								null,
+								_react2.default.createElement(
+									"a",
+									{ href: "#vtab5", "data-toggle": "tab" },
+									" Zuckerkrank"
+								)
+							)
+						)
+					),
+					_react2.default.createElement(
+						"div",
+						{ className: "col-sm-8" },
+						_react2.default.createElement(
+							"div",
+							{ className: "tab-content" },
+							_react2.default.createElement(
+								"div",
+								{ role: "tabpanel", className: "tab-pane fade in active", id: "vtab1" },
+								_react2.default.createElement(
+									"h3",
+									null,
+									"Allergie"
+								),
+								_react2.default.createElement(
+									"p",
+									null,
+									"Prospan\xAE Hustensaft darf ",
+									_react2.default.createElement(
+										"b",
+										null,
+										"nicht"
+									),
+									" eingenommen werden, wenn Sie \xFCberempfindlich (allergisch) gegen\xFCber dem wirksamen Bestandteil oder einem der sonstigen Bestandteile des Arzneimittels sind"
+								)
+							),
+							_react2.default.createElement(
+								"div",
+								{ role: "tabpanel", className: "tab-pane fade", id: "vtab2" },
+								_react2.default.createElement(
+									"h3",
+									null,
+									"Kinder"
+								),
+								_react2.default.createElement(
+									"p",
+									null,
+									_react2.default.createElement(
+										"b",
+										null,
+										"Kinder unter einem Jahr"
+									),
+									" ",
+									_react2.default.createElement("br", null),
+									"Anwendung nur nach R\xFCcksprache mit einem Arzt. Die Einnahme bei dieser Altersgruppe sollte nur unter sorgf\xE4ltiger Beobachtung erfolgen, weil bei Kindern unter einem Jahr im Vergleich zu \xE4lteren Kindern besonders auf das Auftreten von Durchfall und Erbrechen zu achten ist."
+								),
+								_react2.default.createElement(
+									"div",
+									{ className: "alert alert-info", role: "alert" },
+									"Bitte beachten Sie auch die Hinweise unter ",
+									_react2.default.createElement(
+										"a",
+										{
+											href: "#" },
+										_react2.default.createElement(
+											"b",
+											null,
+											"Nebenwirkungen"
+										)
+									),
+									"."
+								)
+							),
+							_react2.default.createElement(
+								"div",
+								{ role: "tabpanel", className: "tab-pane fade in", id: "vtab3" },
+								_react2.default.createElement(
+									"h3",
+									null,
+									"Schwangerschaft und Stillzeit "
+								),
+								_react2.default.createElement(
+									"div",
+									{ className: "alert alert-danger", role: "alert" },
+									_react2.default.createElement(
+										"p",
+										null,
+										"Dieses Arzneimittel soll in der Schwangerschaft und Stillzeit ",
+										_react2.default.createElement(
+											"b",
+											null,
+											"nicht"
+										),
+										"angewendet werden, da keine ausreichenden Untersuchungen vorliegen."
+									)
+								)
+							),
+							_react2.default.createElement(
+								"div",
+								{ role: "tabpanel", className: "tab-pane fade in", id: "vtab4" },
+								_react2.default.createElement(
+									"h3",
+									null,
+									"Verkehrst\xFCchtigkeit und das Bedienen von Maschinen"
+								),
+								_react2.default.createElement(
+									"div",
+									{ className: "alert alert-success", role: "alert" },
+									_react2.default.createElement(
+										"p",
+										null,
+										"Es sind keine besonderen Vorsichtsma\xDFnahmen erforderlich."
+									)
+								)
+							),
+							_react2.default.createElement(
+								"div",
+								{ role: "tabpanel", className: "tab-pane fade in", id: "vtab5" },
+								_react2.default.createElement(
+									"h3",
+									null,
+									"Einnahme mit anderen Arzneimitteln"
+								),
+								_react2.default.createElement(
+									"p",
+									null,
+									"Dieses Arzneimittel enth\xE4lt Sorbitol. Bei jeder Anwendung werden bis zu 1,9 g Sorbitol zugef\xFChrt.",
+									_react2.default.createElement(
+										"div",
+										{ className: "alert alert-warning", role: "alert" },
+										" Bitte nehmen Sie Prospan\xAE Hustensaft erst nach R\xFCcksprache mit Ihrem Arzt ein, wenn Ihnen bekannt ist, dass Sie unter einer Unvertr\xE4glichkeit gegen\xFCber bestimmten Zuckern leiden."
+									)
+								)
+							),
+							_react2.default.createElement(
+								"div",
+								{ role: "tabpanel", className: "tab-pane fade in", id: "vtab5" },
+								_react2.default.createElement(
+									"h3",
+									null,
+									"Zuckerkrank"
+								),
+								_react2.default.createElement(
+									"p",
+									null,
+									"Es wurden keine Untersuchungen durchgef\xFChrt. Bisher sind keine Wechselwirkungen bekannt geworden.",
+									_react2.default.createElement(
+										"div",
+										{ className: "alert alert-warning", role: "alert" },
+										" Bitte informieren Sie Ihren Arzt oder Apotheker, wenn Sie andere Arzneimittel einnehmen / anwenden bzw. vor kurzem eingenommen / angewendet haben, auch wenn es sich um nicht verschreibungspflichtige Arzneimittel handelt"
+									)
+								)
+							)
+						)
+					)
+				)
+			);
+		}
+	}]);
+
+	return BeforeTaking;
+}(_react2.default.Component);
+
+exports.default = (0, _reactI18next.translate)()(BeforeTaking);
+
+/***/ }),
+/* 257 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _axios = __webpack_require__(10);
+
+var _axios2 = _interopRequireDefault(_axios);
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactI18next = __webpack_require__(6);
+
+var _User = __webpack_require__(11);
+
+var _User2 = _interopRequireDefault(_User);
+
+var _auto_complete = __webpack_require__(29);
 
 var _auto_complete2 = _interopRequireDefault(_auto_complete);
 
@@ -39726,7 +40024,7 @@ var Carousel = function (_React$Component) {
 exports.default = (0, _reactI18next.translate)()(Carousel);
 
 /***/ }),
-/* 257 */
+/* 258 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39738,7 +40036,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _axios = __webpack_require__(11);
+var _axios = __webpack_require__(10);
 
 var _axios2 = _interopRequireDefault(_axios);
 
@@ -39746,13 +40044,13 @@ var _react = __webpack_require__(2);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactI18next = __webpack_require__(8);
+var _reactI18next = __webpack_require__(6);
 
-var _User = __webpack_require__(12);
+var _User = __webpack_require__(11);
 
 var _User2 = _interopRequireDefault(_User);
 
-var _auto_complete = __webpack_require__(52);
+var _auto_complete = __webpack_require__(29);
 
 var _auto_complete2 = _interopRequireDefault(_auto_complete);
 
@@ -39825,18 +40123,7 @@ var Carousel1 = function (_React$Component) {
                     _react2.default.createElement(
                         "div",
                         { className: "item active" },
-                        _react2.default.createElement("img", { className: "first-slide", src: "/assets/images/titelbild1.jpg", alt: "First slide" }),
-                        _react2.default.createElement(
-                            "div",
-                            { className: "container" },
-                            _User2.default.isAuthenticated() && _react2.default.createElement(
-                                "div",
-                                { className: "carousel-caption" },
-                                this.generatePersonalizedAddress(),
-                                _react2.default.createElement("br", null),
-                                _react2.default.createElement(_auto_complete2.default, this.props)
-                            )
-                        )
+                        _react2.default.createElement("img", { className: "first-slide", src: "/assets/images/titelbild1.jpg", alt: "First slide" })
                     )
                 )
             );
@@ -39849,7 +40136,7 @@ var Carousel1 = function (_React$Component) {
 exports.default = (0, _reactI18next.translate)()(Carousel1);
 
 /***/ }),
-/* 258 */
+/* 259 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39861,7 +40148,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _axios = __webpack_require__(11);
+var _axios = __webpack_require__(10);
 
 var _axios2 = _interopRequireDefault(_axios);
 
@@ -39869,7 +40156,7 @@ var _react = __webpack_require__(2);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactI18next = __webpack_require__(8);
+var _reactI18next = __webpack_require__(6);
 
 var _reactToastify = __webpack_require__(23);
 
@@ -39881,13 +40168,27 @@ var _loading = __webpack_require__(81);
 
 var _loading2 = _interopRequireDefault(_loading);
 
-var _User = __webpack_require__(12);
+var _User = __webpack_require__(11);
 
 var _User2 = _interopRequireDefault(_User);
+
+var _before_taking = __webpack_require__(256);
+
+var _before_taking2 = _interopRequireDefault(_before_taking);
+
+var _usage = __webpack_require__(272);
+
+var _usage2 = _interopRequireDefault(_usage);
+
+var _sideEffect = __webpack_require__(271);
+
+var _sideEffect2 = _interopRequireDefault(_sideEffect);
 
 var _reactFontawesome = __webpack_require__(235);
 
 var _freeSolidSvgIcons = __webpack_require__(234);
+
+var _reactRouterDom = __webpack_require__(13);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -39903,11 +40204,12 @@ var DrugDetail = function (_React$Component) {
     function DrugDetail(props) {
         _classCallCheck(this, DrugDetail);
 
-        var _this = _possibleConstructorReturn(this, (DrugDetail.__proto__ || Object.getPrototypeOf(DrugDetail)).call(this));
+        var _this = _possibleConstructorReturn(this, (DrugDetail.__proto__ || Object.getPrototypeOf(DrugDetail)).call(this, props));
 
         _this.state = {
             drug: undefined,
             showAdditionalInfo: false
+
         };
 
         _this.toggleShowAdditionalInfo = _this.toggleShowAdditionalInfo.bind(_this);
@@ -40188,16 +40490,30 @@ var DrugDetail = function (_React$Component) {
             return _react2.default.createElement(
                 "section",
                 { className: "diseases" },
-                t('usedWhen') + ": ",
-                drug.disease.map(function (disease) {
-                    return _react2.default.createElement(
-                        "span",
-                        { key: disease.id },
-                        disease.name
-                    );
-                }).reduce(function (prev, curr) {
-                    return [prev, ', ', curr];
-                })
+                _react2.default.createElement(
+                    "p",
+                    null,
+                    _react2.default.createElement(
+                        "b",
+                        null,
+                        " ",
+                        t('usedWhen') + ": "
+                    )
+                ),
+                _react2.default.createElement(
+                    "ul",
+                    null,
+                    " ",
+                    drug.disease.map(function (disease) {
+                        return _react2.default.createElement(
+                            "li",
+                            { key: disease.id },
+                            disease.name
+                        );
+                    }).reduce(function (prev, curr) {
+                        return [prev, curr];
+                    })
+                )
             );
         }
     }, {
@@ -40211,18 +40527,40 @@ var DrugDetail = function (_React$Component) {
 
             return _react2.default.createElement(
                 "section",
-                { className: "diseases" },
-                t('pharmaceuticalForm') + ": ",
-                drug.pharmaceuticalForm.map(function (pharmaceuticalForm) {
-                    return _react2.default.createElement(
-                        "span",
-                        {
-                            key: pharmaceuticalForm.id },
-                        pharmaceuticalForm.name
-                    );
-                }).reduce(function (prev, curr) {
-                    return [prev, ', ', curr];
-                })
+                { className: "diseases row" },
+                _react2.default.createElement(
+                    "p",
+                    null,
+                    _react2.default.createElement(
+                        "b",
+                        null,
+                        "  ",
+                        t('pharmaceuticalForm') + ": ",
+                        " "
+                    )
+                ),
+                _react2.default.createElement(
+                    "ul",
+                    null,
+                    "  ",
+                    drug.pharmaceuticalForm.map(function (pharmaceuticalForm) {
+                        return _react2.default.createElement(
+                            "li",
+                            {
+                                key: pharmaceuticalForm.id },
+                            pharmaceuticalForm.name,
+                            " ",
+                            _react2.default.createElement("img", { style: { width: "55px" },
+                                key: pharmaceuticalForm.id,
+                                src: "./../../assets/p_form/" + pharmaceuticalForm.id + ".svg",
+                                className: "drug-feature-icon",
+                                alt: pharmaceuticalForm.name,
+                                title: pharmaceuticalForm.name })
+                        );
+                    }).reduce(function (prev, curr) {
+                        return [prev, curr];
+                    })
+                )
             );
         }
     }, {
@@ -40236,8 +40574,12 @@ var DrugDetail = function (_React$Component) {
             return _react2.default.createElement(
                 "p",
                 null,
-                " ",
-                t('activeSubstance') + ": ",
+                _react2.default.createElement(
+                    "b",
+                    null,
+                    " ",
+                    t('activeSubstance') + ": "
+                ),
                 drug.activeSubstance.map(function (substance) {
                     return _react2.default.createElement(
                         "span",
@@ -40259,19 +40601,33 @@ var DrugDetail = function (_React$Component) {
 
             return _react2.default.createElement(
                 "section",
-                { className: "pzn" },
-                t('pzn') + ": ",
-                drug.packaging.map(function (packaging) {
-                    return _react2.default.createElement(
-                        "span",
-                        { key: packaging.id },
-                        packaging.name,
-                        " ",
-                        packaging.pzn
-                    );
-                }).reduce(function (prev, curr) {
-                    return [prev, ', ', curr];
-                })
+                { className: "pzn row" },
+                _react2.default.createElement(
+                    "p",
+                    null,
+                    _react2.default.createElement(
+                        "b",
+                        null,
+                        "  ",
+                        t('pzn') + ": "
+                    )
+                ),
+                _react2.default.createElement(
+                    "ul",
+                    null,
+                    "    ",
+                    drug.packaging.map(function (packaging) {
+                        return _react2.default.createElement(
+                            "li",
+                            { key: packaging.id },
+                            packaging.name,
+                            " ",
+                            packaging.pzn
+                        );
+                    }).reduce(function (prev, curr) {
+                        return [prev, curr];
+                    })
+                )
             );
         }
     }, {
@@ -40284,8 +40640,27 @@ var DrugDetail = function (_React$Component) {
 
             return _react2.default.createElement(
                 "section",
-                null,
-                t('indicationGroup') + ": " + drug.indicationGroup.name
+                { className: "row" },
+                _react2.default.createElement(
+                    "p",
+                    null,
+                    _react2.default.createElement(
+                        "b",
+                        null,
+                        "     ",
+                        t('indicationGroup') + ": ",
+                        "  "
+                    )
+                ),
+                _react2.default.createElement(
+                    "ul",
+                    null,
+                    _react2.default.createElement(
+                        "li",
+                        null,
+                        drug.indicationGroup.name
+                    )
+                )
             );
         }
     }, {
@@ -40299,8 +40674,26 @@ var DrugDetail = function (_React$Component) {
 
             return _react2.default.createElement(
                 "section",
-                null,
-                t('productGroup') + ": " + drug.productGroup.name
+                { className: "row" },
+                _react2.default.createElement(
+                    "p",
+                    null,
+                    _react2.default.createElement(
+                        "b",
+                        null,
+                        "      ",
+                        t('productGroup') + ": "
+                    )
+                ),
+                _react2.default.createElement(
+                    "ul",
+                    null,
+                    _react2.default.createElement(
+                        "li",
+                        null,
+                        drug.productGroup.name
+                    )
+                )
             );
         }
     }, {
@@ -40341,6 +40734,10 @@ var DrugDetail = function (_React$Component) {
 
             var drug = this.state.drug;
             var showAdditionalInfo = this.state.showAdditionalInfo;
+            var itemClass = ["item  col-xs-4 col-lg-4 grid-group-item"];
+            if (this.state.addClass) {
+                itemClass.push('list-group-item');
+            }
 
             if (!drug) {
                 // Do not show anything while loading.
@@ -40358,7 +40755,7 @@ var DrugDetail = function (_React$Component) {
 
             return _react2.default.createElement(
                 "div",
-                { className: "  no-banner" },
+                { className: "no-banner" },
                 _react2.default.createElement(
                     "div",
                     { className: "round-button-outer report-round-button" },
@@ -40425,12 +40822,12 @@ var DrugDetail = function (_React$Component) {
                                     { className: "row alert alert-danger", role: "alert" },
                                     _react2.default.createElement(
                                         "div",
-                                        { className: "col-lg-1 alert_style" },
+                                        { className: "col-md-1 alert_style" },
                                         _react2.default.createElement("i", { className: "fas fa-exclamation" })
                                     ),
                                     _react2.default.createElement(
                                         "div",
-                                        { className: "col-lg-11" },
+                                        { className: "col-md-11" },
                                         _react2.default.createElement(
                                             "p",
                                             null,
@@ -40505,7 +40902,7 @@ var DrugDetail = function (_React$Component) {
                                     { className: "row" },
                                     _react2.default.createElement(
                                         "div",
-                                        { className: "col-lg-8" },
+                                        { className: "col-md-8" },
                                         _react2.default.createElement(
                                             "p",
                                             null,
@@ -40561,7 +40958,7 @@ var DrugDetail = function (_React$Component) {
                                     ),
                                     _react2.default.createElement(
                                         "div",
-                                        { className: "col-lg-4" },
+                                        { className: "col-md-4" },
                                         _react2.default.createElement("img", { className: "img-responsive", src: "/assets/images/Engelhard_Logo_2013.png" })
                                     )
                                 )
@@ -40624,7 +41021,7 @@ var DrugDetail = function (_React$Component) {
                                     { className: "row  alert alert-success", role: "alert" },
                                     _react2.default.createElement(
                                         "div",
-                                        { className: "col-lg-10" },
+                                        { className: "col-md-10" },
                                         _react2.default.createElement(
                                             "p",
                                             null,
@@ -40633,7 +41030,7 @@ var DrugDetail = function (_React$Component) {
                                     ),
                                     _react2.default.createElement(
                                         "div",
-                                        { className: "col-lg-2 icon_modal" },
+                                        { className: "col-md-2 icon_modal" },
                                         _react2.default.createElement(_reactFontawesome.FontAwesomeIcon, { icon: _freeSolidSvgIcons.faThumbsUp })
                                     )
                                 ),
@@ -40642,7 +41039,7 @@ var DrugDetail = function (_React$Component) {
                                     { className: "row" },
                                     _react2.default.createElement(
                                         "div",
-                                        { className: "col-lg-10" },
+                                        { className: "col-md-10" },
                                         _react2.default.createElement(
                                             "p",
                                             null,
@@ -40657,7 +41054,7 @@ var DrugDetail = function (_React$Component) {
                                     ),
                                     _react2.default.createElement(
                                         "div",
-                                        { className: "col-lg-2 icon_modal" },
+                                        { className: "col-md-2 icon_modal" },
                                         _react2.default.createElement(_reactFontawesome.FontAwesomeIcon, { icon: _freeSolidSvgIcons.faUserMd })
                                     )
                                 ),
@@ -40666,7 +41063,7 @@ var DrugDetail = function (_React$Component) {
                                     { className: "row" },
                                     _react2.default.createElement(
                                         "div",
-                                        { className: "col-lg-12" },
+                                        { className: "col-md-12" },
                                         _react2.default.createElement(
                                             "p",
                                             null,
@@ -40752,13 +41149,7 @@ var DrugDetail = function (_React$Component) {
                             _react2.default.createElement(
                                 "h1",
                                 null,
-                                drug.name,
-                                " ",
-                                drug.productGroup && drug.productGroup.name && _react2.default.createElement(
-                                    "span",
-                                    { className: "text-muted" },
-                                    drug.productGroup.name
-                                )
+                                drug.name
                             )
                         ),
                         _react2.default.createElement(
@@ -40774,28 +41165,120 @@ var DrugDetail = function (_React$Component) {
                                     src: "/image/drug/" + drug.id }),
                                 _react2.default.createElement(
                                     "div",
-                                    { className: "drug-features margin-s" },
-                                    this.renderDrugFeatures(drug)
+                                    { className: "drug-features " },
+                                    drug.drugFeature.map(function (feature) {
+                                        return _react2.default.createElement(
+                                            "span",
+                                            { style: { float: "left" }, key: feature.id },
+                                            _react2.default.createElement("img", { key: feature.id, "data-toggle": "modal", "data-target": "#" + feature.id,
+                                                src: "./../../assets/icons/" + feature.id + ".svg",
+                                                className: "drug-feature-icon", alt: feature.drugFeature,
+                                                title: feature.drugFeature }),
+                                            _react2.default.createElement(
+                                                "div",
+                                                { id: feature.id, className: "modal fade", role: "dialog" },
+                                                _react2.default.createElement(
+                                                    "div",
+                                                    { className: "modal-dialog" },
+                                                    _react2.default.createElement(
+                                                        "div",
+                                                        { className: "modal-content" },
+                                                        _react2.default.createElement(
+                                                            "div",
+                                                            { className: "modal-header" },
+                                                            _react2.default.createElement(
+                                                                "button",
+                                                                { type: "button", className: "close",
+                                                                    "data-dismiss": "modal" },
+                                                                "\xD7"
+                                                            ),
+                                                            _react2.default.createElement(
+                                                                "h2",
+                                                                { className: "modal-title" },
+                                                                _react2.default.createElement("img", { style: { width: "55px" },
+                                                                    key: feature.id,
+                                                                    "data-toggle": "modal",
+                                                                    "data-target": "#" + feature.id,
+                                                                    src: "./../../assets/icons/" + feature.id + ".svg",
+                                                                    className: "drug-feature-icon",
+                                                                    alt: feature.drugFeature,
+                                                                    title: feature.drugFeature }),
+                                                                " ",
+                                                                feature.drugFeature
+                                                            )
+                                                        ),
+                                                        _react2.default.createElement(
+                                                            "div",
+                                                            { className: "modal-body" },
+                                                            _react2.default.createElement("div", {
+                                                                dangerouslySetInnerHTML: _this9.createMarkup(feature.descriptionDrug) })
+                                                        ),
+                                                        _react2.default.createElement(
+                                                            "div",
+                                                            { className: "modal-footer" },
+                                                            _react2.default.createElement(
+                                                                "button",
+                                                                { type: "button", className: "btn btn-default",
+                                                                    "data-dismiss": "modal" },
+                                                                "Close"
+                                                            )
+                                                        )
+                                                    )
+                                                )
+                                            )
+                                        );
+                                    })
                                 )
                             ),
                             _react2.default.createElement(
                                 "div",
-                                { className: "col-xs-12 col-sm-12 col-md-5 med_desc" },
+                                { className: "col-xs-12 col-sm-12 col-md-4 med_desc" },
                                 _User2.default.isAuthenticated() && drug.personalizedInformation && _react2.default.createElement(
                                     "div",
-                                    { className: "alert alert-info alert-dismissable" },
+                                    { className: "alert row w3-animate-right" },
                                     _react2.default.createElement(
-                                        "a",
-                                        { href: "#", className: "close", "data-dismiss": "alert",
-                                            "aria-label": "close" },
-                                        "\xD7"
+                                        "div",
+                                        { className: "speech-bubble" },
+                                        _react2.default.createElement(
+                                            "a",
+                                            { href: "#", className: "close", "data-dismiss": "alert",
+                                                "aria-label": "close" },
+                                            "\xD7"
+                                        ),
+                                        _react2.default.createElement("span", {
+                                            dangerouslySetInnerHTML: this.createMarkup(drug.personalizedInformation) })
                                     ),
-                                    _react2.default.createElement("span", {
-                                        dangerouslySetInnerHTML: this.createMarkup(drug.personalizedInformation) })
+                                    _react2.default.createElement("img", { className: "speech-bubble-person", src: "./../../assets/images/logo_chat.png" })
                                 ),
                                 this.renderPharmaceuticalForm(drug),
                                 this.renderDisease(drug),
                                 this.renderActiveSubstance(drug),
+                                _react2.default.createElement(
+                                    "p",
+                                    null,
+                                    _react2.default.createElement(
+                                        "a",
+                                        { onClick: this.toggleShowAdditionalInfo },
+                                        _react2.default.createElement(
+                                            "button",
+                                            { className: "btn btn-info" },
+                                            !showAdditionalInfo && _react2.default.createElement(
+                                                "span",
+                                                null,
+                                                t('viewDetails')
+                                            ),
+                                            showAdditionalInfo && _react2.default.createElement(
+                                                "span",
+                                                null,
+                                                t('hideDetails')
+                                            )
+                                        )
+                                    )
+                                )
+                            ),
+                            _react2.default.createElement(
+                                "div",
+                                { className: "col-xs-12 col-sm-12 col-md-4 med_desc" },
                                 _react2.default.createElement(
                                     "div",
                                     { className: "additional-information" },
@@ -40805,28 +41288,6 @@ var DrugDetail = function (_React$Component) {
                                         this.renderIndicationGroup(drug),
                                         this.renderProductGroup(drug),
                                         this.renderPZN(drug)
-                                    ),
-                                    _react2.default.createElement(
-                                        "p",
-                                        null,
-                                        _react2.default.createElement(
-                                            "button",
-                                            { className: "btn btn-info" },
-                                            _react2.default.createElement(
-                                                "a",
-                                                { onClick: this.toggleShowAdditionalInfo },
-                                                !showAdditionalInfo && _react2.default.createElement(
-                                                    "span",
-                                                    null,
-                                                    t('viewDetails')
-                                                ),
-                                                showAdditionalInfo && _react2.default.createElement(
-                                                    "span",
-                                                    null,
-                                                    t('hideDetails')
-                                                )
-                                            )
-                                        )
                                     )
                                 )
                             )
@@ -40838,944 +41299,65 @@ var DrugDetail = function (_React$Component) {
                     { className: "container" },
                     _react2.default.createElement(
                         "div",
-                        { className: "row text-center" },
-                        _react2.default.createElement(
-                            "div",
-                            { className: "col-lg-4" },
-                            _react2.default.createElement("div", { className: "row" }),
-                            _react2.default.createElement(
-                                "div",
-                                { className: "row" },
-                                _react2.default.createElement(
-                                    "button",
-                                    { type: "button", className: "btn btn-primary dropdown-toggle" },
-                                    _react2.default.createElement(
-                                        "a",
-                                        {
-                                            style: { color: "white" }, href: "#about" },
-                                        "Vor der Einnahmen"
-                                    )
-                                )
-                            )
-                        ),
-                        _react2.default.createElement(
-                            "div",
-                            { className: "col-lg-4" },
-                            _react2.default.createElement("div", { className: "row" }),
-                            _react2.default.createElement(
-                                "div",
-                                { className: "row" },
-                                _react2.default.createElement(
-                                    "button",
-                                    { type: "button", className: "btn btn-primary dropdown-toggle" },
-                                    _react2.default.createElement(
-                                        "a",
-                                        {
-                                            style: { color: "white" }, href: "#anwendung" },
-                                        "Anwendung"
-                                    )
-                                )
-                            )
-                        ),
-                        _react2.default.createElement(
-                            "div",
-                            { className: "col-lg-4" },
-                            _react2.default.createElement("div", { className: "row" }),
-                            _react2.default.createElement(
-                                "div",
-                                { className: "row" },
-                                _react2.default.createElement(
-                                    "button",
-                                    { type: "button", className: "btn btn-primary dropdown-toggle" },
-                                    _react2.default.createElement(
-                                        "a",
-                                        {
-                                            style: { color: "white" },
-                                            href: "#nebenwirkungen" },
-                                        "Nebenwirkungen"
-                                    )
-                                )
-                            )
-                        )
-                    )
-                ),
-                _react2.default.createElement(
-                    "div",
-                    { id: "about", className: "container" },
-                    _react2.default.createElement(
-                        "div",
                         { className: "row" },
                         _react2.default.createElement(
                             "div",
-                            { className: "col-sm-12 text-center" },
-                            _react2.default.createElement(
-                                "h2",
-                                null,
-                                "Vor der Einnahme von Prospan\xAE Hustensaft"
-                            ),
-                            _react2.default.createElement(
-                                "p",
-                                { style: { color: "black" } },
-                                "Besondere Vorsicht bei der Einnahme von Prospan\xAE Hustensaft ist erforderlich"
-                            )
-                        )
-                    ),
-                    _react2.default.createElement(
-                        "div",
-                        { className: "row" },
-                        _react2.default.createElement(
-                            "div",
-                            { className: "col-sm-4" },
-                            _react2.default.createElement(
-                                "ul",
-                                { id: "nav-tabs-wrapper", className: "nav nav-tabs nav-pills nav-stacked well" },
-                                _react2.default.createElement(
-                                    "li",
-                                    { className: "active" },
-                                    _react2.default.createElement(
-                                        "a",
-                                        { href: "#vtab1", "data-toggle": "tab" },
-                                        "Allergie"
-                                    )
-                                ),
-                                _react2.default.createElement(
-                                    "li",
-                                    null,
-                                    _react2.default.createElement(
-                                        "a",
-                                        { href: "#vtab2", "data-toggle": "tab" },
-                                        "Kinder"
-                                    )
-                                ),
-                                _react2.default.createElement(
-                                    "li",
-                                    null,
-                                    _react2.default.createElement(
-                                        "a",
-                                        { href: "#vtab3", "data-toggle": "tab" },
-                                        "Schwangerschaft und Stillzeit"
-                                    )
-                                ),
-                                _react2.default.createElement(
-                                    "li",
-                                    null,
-                                    _react2.default.createElement(
-                                        "a",
-                                        { href: "#vtab4", "data-toggle": "tab" },
-                                        " Verkehrst\xFCchtigkeit und das Bedienen von Maschinen"
-                                    )
-                                ),
-                                _react2.default.createElement(
-                                    "li",
-                                    null,
-                                    _react2.default.createElement(
-                                        "a",
-                                        { href: "#vtab5", "data-toggle": "tab" },
-                                        " Einnahme mit anderen Arzneimitteln"
-                                    )
-                                ),
-                                _react2.default.createElement(
-                                    "li",
-                                    null,
-                                    _react2.default.createElement(
-                                        "a",
-                                        { href: "#vtab5", "data-toggle": "tab" },
-                                        " Zuckerkrank"
-                                    )
-                                )
-                            )
-                        ),
-                        _react2.default.createElement(
-                            "div",
-                            { className: "col-sm-8" },
+                            { className: "panel with-nav-tabs panel-default" },
                             _react2.default.createElement(
                                 "div",
-                                { className: "tab-content" },
+                                { className: "panel-heading" },
                                 _react2.default.createElement(
-                                    "div",
-                                    { role: "tabpanel", className: "tab-pane fade in active", id: "vtab1" },
+                                    "ul",
+                                    { className: "nav nav-tabs" },
                                     _react2.default.createElement(
-                                        "h3",
-                                        null,
-                                        "Allergie"
-                                    ),
-                                    _react2.default.createElement(
-                                        "p",
-                                        null,
-                                        "Prospan\xAE Hustensaft darf ",
-                                        _react2.default.createElement(
-                                            "b",
-                                            null,
-                                            "nicht"
-                                        ),
-                                        " eingenommen werden, wenn Sie \xFCberempfindlich (allergisch) gegen\xFCber dem wirksamen Bestandteil oder einem der sonstigen Bestandteile des Arzneimittels sind"
-                                    )
-                                ),
-                                _react2.default.createElement(
-                                    "div",
-                                    { role: "tabpanel", className: "tab-pane fade", id: "vtab2" },
-                                    _react2.default.createElement(
-                                        "h3",
-                                        null,
-                                        "Kinder"
-                                    ),
-                                    _react2.default.createElement(
-                                        "p",
-                                        null,
-                                        _react2.default.createElement(
-                                            "b",
-                                            null,
-                                            "Kinder unter einem Jahr"
-                                        ),
-                                        " ",
-                                        _react2.default.createElement("br", null),
-                                        "Anwendung nur nach R\xFCcksprache mit einem Arzt. Die Einnahme bei dieser Altersgruppe sollte nur unter sorgf\xE4ltiger Beobachtung erfolgen, weil bei Kindern unter einem Jahr im Vergleich zu \xE4lteren Kindern besonders auf das Auftreten von Durchfall und Erbrechen zu achten ist."
-                                    ),
-                                    _react2.default.createElement(
-                                        "div",
-                                        { className: "alert alert-info", role: "alert" },
-                                        "Bitte beachten Sie auch die Hinweise unter ",
+                                        "li",
+                                        { className: "active" },
                                         _react2.default.createElement(
                                             "a",
-                                            {
-                                                href: "#" },
-                                            _react2.default.createElement(
-                                                "b",
-                                                null,
-                                                "Nebenwirkungen"
-                                            )
-                                        ),
-                                        "."
-                                    )
-                                ),
-                                _react2.default.createElement(
-                                    "div",
-                                    { role: "tabpanel", className: "tab-pane fade in", id: "vtab3" },
-                                    _react2.default.createElement(
-                                        "h3",
-                                        null,
-                                        "Schwangerschaft und Stillzeit "
-                                    ),
-                                    _react2.default.createElement(
-                                        "div",
-                                        { className: "alert alert-danger", role: "alert" },
-                                        _react2.default.createElement(
-                                            "p",
-                                            null,
-                                            "Dieses Arzneimittel soll in der Schwangerschaft und Stillzeit ",
-                                            _react2.default.createElement(
-                                                "b",
-                                                null,
-                                                "nicht"
-                                            ),
-                                            "angewendet werden, da keine ausreichenden Untersuchungen vorliegen."
+                                            { href: "#tab1default", "data-toggle": "tab" },
+                                            "Vor der Einnahme "
                                         )
-                                    )
-                                ),
-                                _react2.default.createElement(
-                                    "div",
-                                    { role: "tabpanel", className: "tab-pane fade in", id: "vtab4" },
-                                    _react2.default.createElement(
-                                        "h3",
-                                        null,
-                                        "Verkehrst\xFCchtigkeit und das Bedienen von Maschinen"
                                     ),
                                     _react2.default.createElement(
-                                        "div",
-                                        { className: "alert alert-success", role: "alert" },
+                                        "li",
+                                        null,
                                         _react2.default.createElement(
-                                            "p",
-                                            null,
-                                            "Es sind keine besonderen Vorsichtsma\xDFnahmen erforderlich."
+                                            "a",
+                                            { href: "#tab2default", "data-toggle": "tab" },
+                                            "Anwendnung"
                                         )
-                                    )
-                                ),
-                                _react2.default.createElement(
-                                    "div",
-                                    { role: "tabpanel", className: "tab-pane fade in", id: "vtab5" },
-                                    _react2.default.createElement(
-                                        "h3",
-                                        null,
-                                        "Einnahme mit anderen Arzneimitteln"
                                     ),
                                     _react2.default.createElement(
-                                        "p",
+                                        "li",
                                         null,
-                                        "Dieses Arzneimittel enth\xE4lt Sorbitol. Bei jeder Anwendung werden bis zu 1,9 g Sorbitol zugef\xFChrt.",
                                         _react2.default.createElement(
-                                            "div",
-                                            { className: "alert alert-warning", role: "alert" },
-                                            " Bitte nehmen Sie Prospan\xAE Hustensaft erst nach R\xFCcksprache mit Ihrem Arzt ein, wenn Ihnen bekannt ist, dass Sie unter einer Unvertr\xE4glichkeit gegen\xFCber bestimmten Zuckern leiden."
-                                        )
-                                    )
-                                ),
-                                _react2.default.createElement(
-                                    "div",
-                                    { role: "tabpanel", className: "tab-pane fade in", id: "vtab5" },
-                                    _react2.default.createElement(
-                                        "h3",
-                                        null,
-                                        "Zuckerkrank"
-                                    ),
-                                    _react2.default.createElement(
-                                        "p",
-                                        null,
-                                        "Es wurden keine Untersuchungen durchgef\xFChrt. Bisher sind keine Wechselwirkungen bekannt geworden.",
-                                        _react2.default.createElement(
-                                            "div",
-                                            { className: "alert alert-warning", role: "alert" },
-                                            " Bitte informieren Sie Ihren Arzt oder Apotheker, wenn Sie andere Arzneimittel einnehmen / anwenden bzw. vor kurzem eingenommen / angewendet haben, auch wenn es sich um nicht verschreibungspflichtige Arzneimittel handelt"
+                                            "a",
+                                            { href: "#tab3default", "data-toggle": "tab" },
+                                            "Nebenwirkungen"
                                         )
                                     )
                                 )
-                            )
-                        )
-                    )
-                ),
-                _react2.default.createElement(
-                    "div",
-                    { className: "container-fluid bg-grey" },
-                    _react2.default.createElement(
-                        "div",
-                        { className: "container bg-grey", id: "anwendung", style: { marginTop: "90px" } },
-                        _react2.default.createElement(
-                            "div",
-                            { className: "row" },
-                            _react2.default.createElement(
-                                "div",
-                                { className: "col-sm-12 text-center" },
-                                _react2.default.createElement(
-                                    "h2",
-                                    null,
-                                    "Anwendung von Prospan\xAE Hustensaft "
-                                )
-                            )
-                        ),
-                        _react2.default.createElement(
-                            "div",
-                            { className: "row text-center" },
-                            _react2.default.createElement(
-                                "div",
-                                { className: "alert alert-info", role: "alert" },
-                                " Nehmen Sie Prospan\xAE Hustensaft immer genau nach der Anweisung dieser Packungsbeilage ein. ",
-                                _react2.default.createElement("br", null),
-                                " Bitte fragen Sie bei Ihrem Arzt oder Apotheker nach, wenn Sie sich nicht ganz sicher sind."
                             ),
                             _react2.default.createElement(
                                 "div",
-                                { className: "col-sm-12" },
+                                { className: "panel-body" },
                                 _react2.default.createElement(
                                     "div",
-                                    { className: "panel with-nav-tabs panel-primary" },
+                                    { className: "tab-content" },
                                     _react2.default.createElement(
                                         "div",
-                                        { className: "panel-heading" },
-                                        _react2.default.createElement(
-                                            "ul",
-                                            { className: "nav nav-tabs" },
-                                            _react2.default.createElement(
-                                                "li",
-                                                { className: "active" },
-                                                _react2.default.createElement(
-                                                    "a",
-                                                    { href: "#tab1primary", "data-toggle": "tab" },
-                                                    "Dosis"
-                                                )
-                                            ),
-                                            _react2.default.createElement(
-                                                "li",
-                                                null,
-                                                _react2.default.createElement(
-                                                    "a",
-                                                    { href: "#tab2primary", "data-toggle": "tab" },
-                                                    "Art"
-                                                )
-                                            ),
-                                            _react2.default.createElement(
-                                                "li",
-                                                null,
-                                                _react2.default.createElement(
-                                                    "a",
-                                                    { href: "#tab3primary", "data-toggle": "tab" },
-                                                    "Dauer"
-                                                )
-                                            )
-                                        )
+                                        { className: "tab-pane fade in active", id: "tab1default" },
+                                        _react2.default.createElement(_before_taking2.default, null)
                                     ),
                                     _react2.default.createElement(
                                         "div",
-                                        { className: "panel-body" },
-                                        _react2.default.createElement(
-                                            "div",
-                                            { className: "tab-content" },
-                                            _react2.default.createElement(
-                                                "div",
-                                                { className: "tab-pane fade in active", id: "tab1primary" },
-                                                _react2.default.createElement(
-                                                    "div",
-                                                    { className: "row" },
-                                                    _react2.default.createElement("div", { className: "col-lg-3", style: { fontSize: "16px" } }),
-                                                    _react2.default.createElement(
-                                                        "div",
-                                                        { className: "col-lg-3", style: { fontSize: "60px" } },
-                                                        _react2.default.createElement("i", { className: "fas fa-baby" })
-                                                    ),
-                                                    _react2.default.createElement(
-                                                        "div",
-                                                        { className: "col-lg-3", style: { fontSize: "60px" } },
-                                                        _react2.default.createElement("i", { className: "fas fa-child" })
-                                                    ),
-                                                    _react2.default.createElement(
-                                                        "div",
-                                                        { className: "col-lg-3", style: { fontSize: "60px" } },
-                                                        _react2.default.createElement("i", { className: "fas fa-male" }),
-                                                        _react2.default.createElement("i", { className: "fas fa-blind" })
-                                                    )
-                                                ),
-                                                _react2.default.createElement(
-                                                    "div",
-                                                    { className: "row" },
-                                                    _react2.default.createElement(
-                                                        "div",
-                                                        { className: "col-lg-3", style: { fontSize: "16px" } },
-                                                        _react2.default.createElement(
-                                                            "p",
-                                                            { style: { fontWeight: "bold" } },
-                                                            "Alter"
-                                                        )
-                                                    ),
-                                                    _react2.default.createElement(
-                                                        "div",
-                                                        { className: "col-lg-3", style: { fontSize: "16px" } },
-                                                        _react2.default.createElement(
-                                                            "p",
-                                                            null,
-                                                            " Kinder unter 6 Jahren"
-                                                        )
-                                                    ),
-                                                    _react2.default.createElement(
-                                                        "div",
-                                                        { className: "col-lg-3", style: { fontSize: "16px" } },
-                                                        _react2.default.createElement(
-                                                            "p",
-                                                            null,
-                                                            " Kinder von 6 - 12 Jahren"
-                                                        )
-                                                    ),
-                                                    _react2.default.createElement(
-                                                        "div",
-                                                        { className: "col-lg-3", style: { fontSize: "16px" } },
-                                                        _react2.default.createElement(
-                                                            "p",
-                                                            null,
-                                                            " Kinder ab 6 Jahren & Erwachsene"
-                                                        )
-                                                    )
-                                                ),
-                                                _react2.default.createElement("hr", null),
-                                                _react2.default.createElement(
-                                                    "div",
-                                                    { className: "row" },
-                                                    _react2.default.createElement(
-                                                        "div",
-                                                        { className: "col-lg-3", style: { fontSize: "16px" } },
-                                                        _react2.default.createElement(
-                                                            "p",
-                                                            { style: { fontWeight: "bold" } },
-                                                            "Einzeldosis"
-                                                        )
-                                                    ),
-                                                    _react2.default.createElement(
-                                                        "div",
-                                                        { className: "col-lg-3", style: { fontSize: "16px" } },
-                                                        _react2.default.createElement(
-                                                            "p",
-                                                            null,
-                                                            "2,5 ml ",
-                                                            _react2.default.createElement("br", null),
-                                                            " \u2259 ",
-                                                            _react2.default.createElement("br", null),
-                                                            " 17,5 mg Efeubl\xE4tter-Trockenextrakt"
-                                                        )
-                                                    ),
-                                                    _react2.default.createElement(
-                                                        "div",
-                                                        { className: "col-lg-3", style: { fontSize: "16px" } },
-                                                        _react2.default.createElement(
-                                                            "p",
-                                                            null,
-                                                            "5 ml ",
-                                                            _react2.default.createElement("br", null),
-                                                            " \u2259 ",
-                                                            _react2.default.createElement("br", null),
-                                                            " 35 mg Efeubl\xE4tter-Trockenextrakt"
-                                                        )
-                                                    ),
-                                                    _react2.default.createElement(
-                                                        "div",
-                                                        { className: "col-lg-3", style: { fontSize: "16px" } },
-                                                        _react2.default.createElement(
-                                                            "p",
-                                                            null,
-                                                            "5 ml ",
-                                                            _react2.default.createElement("br", null),
-                                                            " \u2259 ",
-                                                            _react2.default.createElement("br", null),
-                                                            " 35 mg Efeubl\xE4tter-Trockenextrakt"
-                                                        )
-                                                    )
-                                                ),
-                                                _react2.default.createElement("hr", null),
-                                                _react2.default.createElement(
-                                                    "div",
-                                                    { className: "row" },
-                                                    _react2.default.createElement(
-                                                        "div",
-                                                        { className: "col-lg-3", style: { fontSize: "16px" } },
-                                                        _react2.default.createElement(
-                                                            "p",
-                                                            { style: { fontWeight: "bold" } },
-                                                            "Tagesgesamtdosis"
-                                                        )
-                                                    ),
-                                                    _react2.default.createElement(
-                                                        "div",
-                                                        { className: "col-lg-3", style: { fontSize: "16px" } },
-                                                        _react2.default.createElement(
-                                                            "p",
-                                                            null,
-                                                            "5 ml (2 x 2,5 ml) ",
-                                                            _react2.default.createElement("br", null),
-                                                            " \u2259 ",
-                                                            _react2.default.createElement("br", null),
-                                                            " 35 mg Efeubl\xE4tter-Trockenextrakt"
-                                                        )
-                                                    ),
-                                                    _react2.default.createElement(
-                                                        "div",
-                                                        { className: "col-lg-3", style: { fontSize: "16px" } },
-                                                        _react2.default.createElement(
-                                                            "p",
-                                                            null,
-                                                            "10 ml (2 x 5 ml) ",
-                                                            _react2.default.createElement("br", null),
-                                                            " \u2259 ",
-                                                            _react2.default.createElement("br", null),
-                                                            " 70 mg Efeubl\xE4tter-Trockenextrakt"
-                                                        )
-                                                    ),
-                                                    _react2.default.createElement(
-                                                        "div",
-                                                        { className: "col-lg-3", style: { fontSize: "16px" } },
-                                                        _react2.default.createElement(
-                                                            "p",
-                                                            null,
-                                                            "15 ml (3 x 5 ml) ",
-                                                            _react2.default.createElement("br", null),
-                                                            " \u2259 ",
-                                                            _react2.default.createElement("br", null),
-                                                            " 105 mg Efeubl\xE4tter-Trockenextrakt"
-                                                        )
-                                                    )
-                                                )
-                                            ),
-                                            _react2.default.createElement(
-                                                "div",
-                                                { className: "tab-pane fade", id: "tab2primary" },
-                                                _react2.default.createElement(
-                                                    "div",
-                                                    { className: "row" },
-                                                    _react2.default.createElement(
-                                                        "div",
-                                                        { className: "col-lg-4 col-lg-offset-4" },
-                                                        _react2.default.createElement(
-                                                            "table",
-                                                            { className: "table table-striped custab" },
-                                                            _react2.default.createElement(
-                                                                "tr",
-                                                                null,
-                                                                _react2.default.createElement(
-                                                                    "td",
-                                                                    null,
-                                                                    _react2.default.createElement(
-                                                                        "h4",
-                                                                        { style: { marginBottom: "0px" } },
-                                                                        " 1x"
-                                                                    )
-                                                                ),
-                                                                _react2.default.createElement(
-                                                                    "td",
-                                                                    null,
-                                                                    _react2.default.createElement(
-                                                                        "h4",
-                                                                        { style: { marginBottom: "0px" } },
-                                                                        " Morgens"
-                                                                    )
-                                                                )
-                                                            ),
-                                                            _react2.default.createElement(
-                                                                "tr",
-                                                                null,
-                                                                _react2.default.createElement(
-                                                                    "td",
-                                                                    null,
-                                                                    _react2.default.createElement(
-                                                                        "h4",
-                                                                        { style: { marginBottom: "0px" } },
-                                                                        " 1x "
-                                                                    )
-                                                                ),
-                                                                _react2.default.createElement(
-                                                                    "td",
-                                                                    null,
-                                                                    _react2.default.createElement(
-                                                                        "h4",
-                                                                        { style: { marginBottom: "0px" } },
-                                                                        " (Mittags)"
-                                                                    )
-                                                                )
-                                                            ),
-                                                            _react2.default.createElement(
-                                                                "tr",
-                                                                null,
-                                                                _react2.default.createElement(
-                                                                    "td",
-                                                                    null,
-                                                                    _react2.default.createElement(
-                                                                        "h4",
-                                                                        { style: { marginBottom: "0px" } },
-                                                                        " 1x"
-                                                                    )
-                                                                ),
-                                                                _react2.default.createElement(
-                                                                    "td",
-                                                                    null,
-                                                                    _react2.default.createElement(
-                                                                        "h4",
-                                                                        { style: { marginBottom: "0px" } },
-                                                                        " Abends"
-                                                                    )
-                                                                )
-                                                            )
-                                                        )
-                                                    )
-                                                ),
-                                                _react2.default.createElement(
-                                                    "div",
-                                                    { className: "alert alert-info", role: "alert" },
-                                                    " Die Flasche vor jedem Gebrauch gut sch\xFCtteln! ",
-                                                    _react2.default.createElement("br", null),
-                                                    "Zum Einnehmen mit dem beigef\xFCgten Messbecher ",
-                                                    _react2.default.createElement("i", {
-                                                        className: "fas fa-glass-whiskey" }),
-                                                    "."
-                                                )
-                                            ),
-                                            _react2.default.createElement(
-                                                "div",
-                                                { className: "tab-pane fade", id: "tab3primary" },
-                                                _react2.default.createElement(
-                                                    "div",
-                                                    { className: "row" },
-                                                    _react2.default.createElement(
-                                                        "div",
-                                                        { className: "col-lg-8 col-lg-offset-2" },
-                                                        "Die Behandlungsdauer richtet sich jeweils nach der Art und Schwere des Krankheitsbildes; sie sollte in der Regel ",
-                                                        _react2.default.createElement(
-                                                            "b",
-                                                            null,
-                                                            "1 Woche "
-                                                        ),
-                                                        " betragen. Wenn die Beschwerden jedoch l\xE4nger als 1 Woche anhalten, sollte medizinischer Rat eingeholt werden.",
-                                                        _react2.default.createElement(
-                                                            "div",
-                                                            { className: "alert alert-warning", role: "alert" },
-                                                            " Bitte sprechen Sie mit Ihrem Arzt oder Apotheker, wenn Sie den Eindruck haben, dass die Wirkung von Prospan\xAE Hustensaft zu stark oder zu schwach ist."
-                                                        )
-                                                    )
-                                                )
-                                            ),
-                                            _react2.default.createElement(
-                                                "div",
-                                                { className: "tab-pane fade", id: "tab4primary" },
-                                                "Primary 4"
-                                            ),
-                                            _react2.default.createElement(
-                                                "div",
-                                                { className: "tab-pane fade", id: "tab5primary" },
-                                                "Primary 5"
-                                            )
-                                        )
-                                    )
-                                )
-                            )
-                        )
-                    )
-                ),
-                _react2.default.createElement(
-                    "div",
-                    { id: "nebenwirkungen", className: "container", style: { marginTop: "90px" } },
-                    _react2.default.createElement(
-                        "div",
-                        { className: "row" },
-                        _react2.default.createElement(
-                            "div",
-                            { className: "col-sm-12 text-center" },
-                            _react2.default.createElement(
-                                "h2",
-                                null,
-                                "Nebenwirkungen"
-                            )
-                        )
-                    ),
-                    _react2.default.createElement(
-                        "div",
-                        { className: "row" },
-                        _react2.default.createElement(
-                            "div",
-                            { className: "col-lg-12 text-center", style: { color: "black" } },
-                            "Wie alle Arzneimittel kann Prospan\xAE Hustensaft Nebenwirkungen haben, die aber nicht bei jedem auftreten m\xFCssen. ",
-                            _react2.default.createElement("br", null),
-                            "Bei der Bewertung von Nebenwirkungen werden folgende H\xE4ufigkeiten zugrundegelegt:",
-                            _react2.default.createElement(
-                                "div",
-                                { className: "row" },
-                                _react2.default.createElement(
-                                    "div",
-                                    { className: "col-lg-4 col-lg-offset-4 text-left" },
-                                    _react2.default.createElement(
-                                        "table",
-                                        { className: "table table-striped custab", style: { marginTop: "30px" } },
-                                        _react2.default.createElement(
-                                            "tbody",
-                                            null,
-                                            _react2.default.createElement(
-                                                "tr",
-                                                null,
-                                                _react2.default.createElement(
-                                                    "td",
-                                                    null,
-                                                    _react2.default.createElement(
-                                                        "b",
-                                                        null,
-                                                        "Sehr h\xE4ufig"
-                                                    )
-                                                ),
-                                                _react2.default.createElement(
-                                                    "td",
-                                                    null,
-                                                    "mehr als 1 Behandelter von 10"
-                                                )
-                                            ),
-                                            _react2.default.createElement(
-                                                "tr",
-                                                null,
-                                                _react2.default.createElement(
-                                                    "td",
-                                                    null,
-                                                    _react2.default.createElement(
-                                                        "b",
-                                                        null,
-                                                        " H\xE4ufig"
-                                                    )
-                                                ),
-                                                _react2.default.createElement(
-                                                    "td",
-                                                    null,
-                                                    "1 bis 10 Behandelte von 100"
-                                                )
-                                            ),
-                                            _react2.default.createElement(
-                                                "tr",
-                                                null,
-                                                _react2.default.createElement(
-                                                    "td",
-                                                    null,
-                                                    _react2.default.createElement(
-                                                        "b",
-                                                        null,
-                                                        " Gelegentlich"
-                                                    )
-                                                ),
-                                                _react2.default.createElement(
-                                                    "td",
-                                                    null,
-                                                    "1 bis 10 Behandelte von 1.000"
-                                                )
-                                            ),
-                                            _react2.default.createElement(
-                                                "tr",
-                                                null,
-                                                _react2.default.createElement(
-                                                    "td",
-                                                    null,
-                                                    _react2.default.createElement(
-                                                        "b",
-                                                        null,
-                                                        " Selten"
-                                                    )
-                                                ),
-                                                _react2.default.createElement(
-                                                    "td",
-                                                    null,
-                                                    "1 bis 10 Behandelte von 10.000"
-                                                )
-                                            ),
-                                            _react2.default.createElement(
-                                                "tr",
-                                                null,
-                                                _react2.default.createElement(
-                                                    "td",
-                                                    null,
-                                                    _react2.default.createElement(
-                                                        "b",
-                                                        null,
-                                                        " Sehr selten"
-                                                    )
-                                                ),
-                                                _react2.default.createElement(
-                                                    "td",
-                                                    null,
-                                                    "weniger als 1 Behandelter von 10.000"
-                                                )
-                                            ),
-                                            _react2.default.createElement(
-                                                "tr",
-                                                null,
-                                                _react2.default.createElement(
-                                                    "td",
-                                                    null,
-                                                    _react2.default.createElement(
-                                                        "b",
-                                                        null,
-                                                        " Nicht bekannt"
-                                                    )
-                                                ),
-                                                _react2.default.createElement(
-                                                    "td",
-                                                    null,
-                                                    "H\xE4ufigkeit auf Grundlage der verf\xFCgbaren Daten nicht absch\xE4tzbar"
-                                                )
-                                            )
-                                        )
-                                    )
-                                )
-                            )
-                        )
-                    ),
-                    _react2.default.createElement(
-                        "div",
-                        { className: "row" },
-                        _react2.default.createElement(
-                            "div",
-                            { className: "col-sm-4" },
-                            _react2.default.createElement(
-                                "ul",
-                                { id: "nav-tabs-wrapper", className: "nav nav-tabs nav-pills nav-stacked well" },
-                                _react2.default.createElement(
-                                    "li",
-                                    { className: "active" },
-                                    _react2.default.createElement(
-                                        "a",
-                                        { href: "#vtab11", "data-toggle": "tab" },
-                                        "Allergische Reaktionen"
-                                    )
-                                ),
-                                _react2.default.createElement(
-                                    "li",
-                                    null,
-                                    _react2.default.createElement(
-                                        "a",
-                                        { href: "#vtab12", "data-toggle": "tab" },
-                                        "Magen-Darm-Beschwerden "
-                                    )
-                                )
-                            )
-                        ),
-                        _react2.default.createElement(
-                            "div",
-                            { className: "col-sm-8" },
-                            _react2.default.createElement(
-                                "div",
-                                { className: "tab-content" },
-                                _react2.default.createElement(
-                                    "div",
-                                    { role: "tabpanel", className: "tab-pane fade in active", id: "vtab11",
-                                        style: { padding: "25px" } },
-                                    _react2.default.createElement(
-                                        "span",
-                                        { className: "label label-primary" },
-                                        "Atemnot"
+                                        { className: "tab-pane fade", id: "tab2default" },
+                                        _react2.default.createElement(_usage2.default, null)
                                     ),
                                     _react2.default.createElement(
-                                        "span",
-                                        { className: "label label-primary" },
-                                        "Schwellungen"
-                                    ),
-                                    _react2.default.createElement(
-                                        "span",
-                                        { className: "label label-primary" },
-                                        "Hautr\xF6tungen"
-                                    ),
-                                    _react2.default.createElement(
-                                        "span",
-                                        { className: "label label-primary" },
-                                        "Juckreiz"
-                                    ),
-                                    _react2.default.createElement(
-                                        "span",
-                                        { className: "label label-primary" },
-                                        "Atemnot"
-                                    ),
-                                    _react2.default.createElement("br", null),
-                                    " ",
-                                    _react2.default.createElement("br", null),
-                                    _react2.default.createElement(
-                                        "p",
-                                        null,
-                                        _react2.default.createElement(
-                                            "b",
-                                            null,
-                                            "H\xE4ufigkeit:"
-                                        ),
-                                        " Nicht bekannt"
-                                    )
-                                ),
-                                _react2.default.createElement(
-                                    "div",
-                                    { role: "tabpanel", className: "tab-pane fade", id: "vtab12", style: { padding: "20px" } },
-                                    "Aufgrund des Sorbitolgehaltes: ",
-                                    _react2.default.createElement("br", null),
-                                    _react2.default.createElement(
-                                        "span",
-                                        { className: "label label-primary" },
-                                        "\xDCbelkeit"
-                                    ),
-                                    _react2.default.createElement(
-                                        "span",
-                                        { className: "label label-primary" },
-                                        "Erbrechen"
-                                    ),
-                                    _react2.default.createElement(
-                                        "span",
-                                        { className: "label label-primary" },
-                                        "Durchfall"
-                                    ),
-                                    _react2.default.createElement(
-                                        "span",
-                                        { className: "label label-primary" },
-                                        "abf\xFChrende Wirkung"
-                                    ),
-                                    _react2.default.createElement("br", null),
-                                    _react2.default.createElement(
-                                        "p",
-                                        null,
-                                        _react2.default.createElement(
-                                            "b",
-                                            null,
-                                            "H\xE4ufigkeit:"
-                                        ),
-                                        " Nicht bekannt"
+                                        "div",
+                                        { className: "tab-pane fade", id: "tab3default" },
+                                        _react2.default.createElement(_sideEffect2.default, null)
                                     )
                                 )
                             )
@@ -41793,7 +41375,7 @@ var DrugDetail = function (_React$Component) {
 exports.default = (0, _reactI18next.translate)()(DrugDetail);
 
 /***/ }),
-/* 259 */
+/* 260 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41805,7 +41387,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _axios = __webpack_require__(11);
+var _axios = __webpack_require__(10);
 
 var _axios2 = _interopRequireDefault(_axios);
 
@@ -41815,11 +41397,11 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactRouterDom = __webpack_require__(13);
 
-var _reactI18next = __webpack_require__(8);
+var _reactI18next = __webpack_require__(6);
 
 var _reactToastify = __webpack_require__(23);
 
-var _empty_list = __webpack_require__(261);
+var _empty_list = __webpack_require__(262);
 
 var _empty_list2 = _interopRequireDefault(_empty_list);
 
@@ -41827,11 +41409,11 @@ var _loading = __webpack_require__(81);
 
 var _loading2 = _interopRequireDefault(_loading);
 
-var _User = __webpack_require__(12);
+var _User = __webpack_require__(11);
 
 var _User2 = _interopRequireDefault(_User);
 
-var _carousel_drugs = __webpack_require__(257);
+var _carousel_drugs = __webpack_require__(258);
 
 var _carousel_drugs2 = _interopRequireDefault(_carousel_drugs);
 
@@ -41855,7 +41437,8 @@ var DrugList = function (_React$Component) {
             drugs: [],
             interactions: '',
             cmd: '',
-            loading: false
+            loading: false,
+            addClass: false
         };
 
         _this.checkForInteractions = _this.checkForInteractions.bind(_this);
@@ -41939,6 +41522,11 @@ var DrugList = function (_React$Component) {
         key: "createMarkup",
         value: function createMarkup(text) {
             return { __html: text };
+        }
+    }, {
+        key: "createMarkup",
+        value: function createMarkup(descriptionDrug) {
+            return { __html: descriptionDrug };
         }
     }, {
         key: "toggleTaking",
@@ -42157,11 +41745,16 @@ var DrugList = function (_React$Component) {
             });
         }
 
-        //=============================
+        //=============================<img key={feature.id}
+        //                                                       src={"./../../assets/icons/" + feature.id + ".svg"}
+        //                                                       className="drug-feature-icon" alt={feature.drugFeature}
+        //                                                       title={feature.drugFeature}></img>
 
     }, {
         key: "renderDrugFeatures",
         value: function renderDrugFeatures(drug) {
+            var _this9 = this;
+
             if (!drug.drugFeature) {
                 return null;
             }
@@ -42170,10 +41763,64 @@ var DrugList = function (_React$Component) {
                 "div",
                 { className: "drug-features " },
                 drug.drugFeature.map(function (feature) {
-                    return _react2.default.createElement("img", { key: feature.id,
-                        src: "./../../assets/icons/" + feature.id + ".svg",
-                        className: "drug-feature-icon", alt: feature.drugFeature,
-                        title: feature.drugFeature });
+                    return _react2.default.createElement(
+                        "div",
+                        { key: feature.id },
+                        _react2.default.createElement("img", { style: { float: "left" }, key: feature.id, "data-toggle": "modal", "data-target": "#" + feature.id,
+                            src: "./../../assets/icons/" + feature.id + ".svg",
+                            className: "drug-feature-icon", alt: feature.drugFeature,
+                            title: feature.drugFeature }),
+                        _react2.default.createElement(
+                            "div",
+                            { id: feature.id, className: "modal fade", role: "dialog" },
+                            _react2.default.createElement(
+                                "div",
+                                { className: "modal-dialog" },
+                                _react2.default.createElement(
+                                    "div",
+                                    { className: "modal-content" },
+                                    _react2.default.createElement(
+                                        "div",
+                                        { className: "modal-header" },
+                                        _react2.default.createElement(
+                                            "button",
+                                            { type: "button", className: "close",
+                                                "data-dismiss": "modal" },
+                                            "\xD7"
+                                        ),
+                                        _react2.default.createElement(
+                                            "h2",
+                                            { className: "modal-title" },
+                                            _react2.default.createElement("img", { style: { width: "55px" }, key: feature.id,
+                                                "data-toggle": "modal",
+                                                "data-target": "#" + feature.id,
+                                                src: "./../../assets/icons/" + feature.id + ".svg",
+                                                className: "drug-feature-icon",
+                                                alt: feature.drugFeature,
+                                                title: feature.drugFeature }),
+                                            " ",
+                                            feature.drugFeature
+                                        )
+                                    ),
+                                    _react2.default.createElement(
+                                        "div",
+                                        { className: "modal-body" },
+                                        _react2.default.createElement("div", { dangerouslySetInnerHTML: _this9.createMarkup(feature.descriptionDrug) })
+                                    ),
+                                    _react2.default.createElement(
+                                        "div",
+                                        { className: "modal-footer" },
+                                        _react2.default.createElement(
+                                            "button",
+                                            { type: "button", className: "btn btn-default",
+                                                "data-dismiss": "modal" },
+                                            "Close"
+                                        )
+                                    )
+                                )
+                            )
+                        )
+                    );
                 })
             );
         }
@@ -42190,7 +41837,12 @@ var DrugList = function (_React$Component) {
             return _react2.default.createElement(
                 "section",
                 { className: "diseases" },
-                t('usedWhen') + ": ",
+                _react2.default.createElement(
+                    "b",
+                    null,
+                    " ",
+                    t('usedWhen') + ": "
+                ),
                 _react2.default.createElement(
                     "ul",
                     null,
@@ -42218,13 +41870,17 @@ var DrugList = function (_React$Component) {
 
             return _react2.default.createElement(
                 "section",
-                { className: "diseases" },
+                { className: "diseases " },
                 _react2.default.createElement(
-                    "b",
+                    "p",
                     null,
-                    "  ",
-                    t('pharmaceuticalForm') + ": ",
-                    " "
+                    _react2.default.createElement(
+                        "b",
+                        null,
+                        "  ",
+                        t('pharmaceuticalForm') + ": ",
+                        " "
+                    )
                 ),
                 _react2.default.createElement(
                     "ul",
@@ -42235,7 +41891,14 @@ var DrugList = function (_React$Component) {
                             "li",
                             {
                                 key: pharmaceuticalForm.id },
-                            pharmaceuticalForm.name
+                            pharmaceuticalForm.name,
+                            " ",
+                            _react2.default.createElement("img", { style: { width: "35px" },
+                                key: pharmaceuticalForm.id,
+                                src: "./../../assets/p_form/" + pharmaceuticalForm.id + ".svg",
+                                className: "drug-feature-icon",
+                                alt: pharmaceuticalForm.name,
+                                title: pharmaceuticalForm.name })
                         );
                     }).reduce(function (prev, curr) {
                         return [prev, curr];
@@ -42270,15 +41933,192 @@ var DrugList = function (_React$Component) {
             );
         }
     }, {
-        key: "renderDrugs",
-        value: function renderDrugs(drugs) {
-            var _this9 = this;
+        key: "toggle",
+        value: function toggle() {
+            this.setState({ addClass: !this.state.addClass });
+        }
+    }, {
+        key: "renderDrugs1",
+        value: function renderDrugs1(drugs) {
+            var _this10 = this;
+
+            var t = this.props.t;
+
 
             return drugs.map(function (drug) {
+                var t = _this10.props.t;
+
+                var itemClass = ["item  col-md-4 col-lg-4 grid-group-item padd padd_md"];
+                var drugname = ["group inner list-group-item-heading med_header hidden"];
+                var drugname1 = ["group inner med_header"];
+                var medfeat = ["row med_drugfeature hidden"];
+                var medfeat1 = ["row med_drugfeature"];
+                var col1Class = [""];
+                var col4Class = [""];
+                var col5Class = [""];
+                var col6Class = ["info_sec "];
+                var col8Class = [" "];
+                var col11Class = ["full_content"];
+                var coltorowClass = ["col-md-4 nopadd"];
+                if (_this10.state.addClass) {
+                    itemClass.push('list-group-item ');
+                    drugname.push('');
+                    drugname1.push('');
+                    medfeat.push('');
+                    col1Class.push('col-md-1 ');
+                    col4Class.push('col-md-4 ');
+                    col5Class.push('col-md-5 ');
+                    col6Class.push('col-md-6 ');
+                    col8Class.push('col-md-7 ');
+                    col11Class.push('col-md-11 ');
+                    coltorowClass.push('fullrow');
+                }
+                return _react2.default.createElement(
+                    "div",
+                    { id: "products", key: drug.id },
+                    _react2.default.createElement(
+                        "div",
+                        { className: itemClass.join(' ') },
+                        _react2.default.createElement(
+                            "div",
+                            { className: "thumbnail medicine" },
+                            _react2.default.createElement(
+                                "div",
+                                { className: col4Class.join(' ') },
+                                _react2.default.createElement(
+                                    _reactRouterDom.Link,
+                                    { to: "/drug/" + drug.id },
+                                    _react2.default.createElement(
+                                        "h4",
+                                        { className: drugname.join('not') },
+                                        drug.name
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    _reactRouterDom.Link,
+                                    { to: "/drug/" + drug.id },
+                                    _react2.default.createElement("img", { className: "group list-group-image", alt: drug.name,
+                                        title: drug.name, src: "/image/drug/" + drug.id })
+                                ),
+                                _react2.default.createElement(
+                                    "div",
+                                    { className: medfeat.join('not') },
+                                    _this10.renderDrugFeatures(drug)
+                                ),
+                                _react2.default.createElement(
+                                    _reactRouterDom.Link,
+                                    { to: "/drug/" + drug.id },
+                                    _react2.default.createElement(
+                                        "h4",
+                                        { className: drugname1.join(' hidden ') },
+                                        drug.name
+                                    )
+                                )
+                            ),
+                            _react2.default.createElement(
+                                "div",
+                                { className: col8Class.join(' ') },
+                                _react2.default.createElement(
+                                    "div",
+                                    { className: col11Class.join('di ') },
+                                    _this10.renderPharmaceuticalForm(drug),
+                                    _this10.renderDisease(drug),
+                                    _User2.default.isAuthenticated() && _react2.default.createElement(
+                                        "section",
+                                        { className: "diseases" },
+                                        _react2.default.createElement(
+                                            "b",
+                                            null,
+                                            " ",
+                                            t('application') + ": "
+                                        ),
+                                        drug.personalizedInformation && _react2.default.createElement("div", { className: "minimum-summary",
+                                            dangerouslySetInnerHTML: _this10.createMarkup(drug.personalizedInformation) })
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    "div",
+                                    { className: col5Class.join(' hidden ') },
+                                    _react2.default.createElement(
+                                        "div",
+                                        { className: medfeat1.join('') },
+                                        _this10.renderDrugFeatures(drug)
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    "div",
+                                    { className: col1Class.join(' ') },
+                                    _User2.default.isAuthenticated() && _react2.default.createElement(
+                                        "div",
+                                        { className: "row" },
+                                        _react2.default.createElement(
+                                            "div",
+                                            { className: "action-pattern" },
+                                            _react2.default.createElement(
+                                                "div",
+                                                null,
+                                                _react2.default.createElement(
+                                                    "div",
+                                                    { className: coltorowClass.join(' ') },
+                                                    _react2.default.createElement(
+                                                        "button",
+                                                        { type: "button", className: "btn btn-like big_btn",
+                                                            onClick: function onClick() {
+                                                                return _this10.toggleTaking(drug);
+                                                            } },
+                                                        _react2.default.createElement("span", {
+                                                            className: "glyphicon white " + (drug.isTaken ? 'glyphicon-minus' : 'glyphicon-heart') })
+                                                    )
+                                                ),
+                                                _react2.default.createElement(
+                                                    "div",
+                                                    { className: coltorowClass.join(' ') },
+                                                    _react2.default.createElement(
+                                                        "button",
+                                                        { type: "button", className: "btn btn-add big_btn",
+                                                            onClick: function onClick() {
+                                                                return _this10.toggleRemember(drug);
+                                                            } },
+                                                        _react2.default.createElement("span", {
+                                                            className: "glyphicon white " + (drug.isRemembered ? 'glyphicon-minus' : 'glyphicon-plus') })
+                                                    )
+                                                ),
+                                                _react2.default.createElement(
+                                                    "div",
+                                                    { className: coltorowClass.join(' ') },
+                                                    _react2.default.createElement(
+                                                        "button",
+                                                        { type: "button", className: "btn btn-open big_btn" },
+                                                        _react2.default.createElement(
+                                                            _reactRouterDom.Link,
+                                                            { to: "/drug/" + drug.id },
+                                                            _react2.default.createElement("span", {
+                                                                className: "glyphicon glyphicon-eye-open white" })
+                                                        )
+                                                    )
+                                                )
+                                            )
+                                        )
+                                    )
+                                )
+                            )
+                        )
+                    )
+                );
+            });
+        }
+    }, {
+        key: "renderDrugs",
+        value: function renderDrugs(drugs) {
+            var _this11 = this;
+
+            return drugs.map(function (drug) {
+                var t = _this11.props.t;
+
 
                 return _react2.default.createElement(
                     "div",
-                    { className: "col-md-3 ", key: drug.id },
+                    { className: "col-md-4 padd padd_md", key: drug.id },
                     _react2.default.createElement(
                         "div",
                         { className: "panel panel-default medicine" },
@@ -42287,87 +42127,115 @@ var DrugList = function (_React$Component) {
                             { className: "panel-body" },
                             _react2.default.createElement(
                                 "div",
-                                { className: "row", style: { paddingBottom: "20px" } },
+                                { className: "row", style: { paddingBottom: "10px" } },
                                 _react2.default.createElement(
                                     _reactRouterDom.Link,
                                     { to: "/drug/" + drug.id },
-                                    _react2.default.createElement("img", { style: { height: "100px" },
+                                    _react2.default.createElement("img", { style: { height: "125px" },
                                         className: "featurette-image img-responsive center-block", alt: drug.name,
                                         title: drug.name, src: "/image/drug/" + drug.id })
                                 )
                             ),
                             _react2.default.createElement(
                                 "div",
-                                { className: "row" },
+                                { className: "row", style: { height: "220px" } },
                                 _react2.default.createElement(
                                     "div",
-                                    { className: "info" },
-                                    _this9.renderDrugFeatures(drug),
+                                    { className: "row" },
                                     _react2.default.createElement(
                                         _reactRouterDom.Link,
-                                        { to: "/drug/" + drug.id },
+                                        { to: "/drug/" + drug.id, style: { paddingBottom: "10px" } },
                                         _react2.default.createElement(
-                                            "h4",
-                                            null,
+                                            "h5",
+                                            { className: "med_header" },
                                             drug.name
                                         )
-                                    ),
-                                    _this9.renderPharmaceuticalForm(drug),
-                                    _react2.default.createElement(
-                                        "div",
-                                        { style: { height: "65px" } },
-                                        _this9.renderDisease(drug)
-                                    ),
-                                    drug.personalizedInformation && _react2.default.createElement("section", { className: "minimum-summary",
-                                        dangerouslySetInnerHTML: _this9.createMarkup(drug.personalizedInformation) })
-                                )
-                            ),
-                            _react2.default.createElement(
-                                "div",
-                                { className: "row", style: { paddingTop: "20px" } },
+                                    )
+                                ),
                                 _react2.default.createElement(
                                     "div",
-                                    { className: "action-pattern" },
+                                    { className: "info", style: { padding: "15px" } },
+                                    _react2.default.createElement(
+                                        "div",
+                                        { className: "row" },
+                                        _this11.renderPharmaceuticalForm(drug)
+                                    ),
+                                    _react2.default.createElement(
+                                        "div",
+                                        { className: "row", style: { height: "65px" } },
+                                        _this11.renderDisease(drug)
+                                    ),
                                     _User2.default.isAuthenticated() && _react2.default.createElement(
                                         "div",
-                                        null,
+                                        { className: "row" },
                                         _react2.default.createElement(
                                             "div",
-                                            { className: "col-md-4" },
+                                            null,
                                             _react2.default.createElement(
-                                                "button",
-                                                { type: "button", className: "btn btn-like",
-                                                    onClick: function onClick() {
-                                                        return _this9.toggleTaking(drug);
-                                                    } },
-                                                _react2.default.createElement("span", {
-                                                    className: "glyphicon white " + (drug.isTaken ? 'glyphicon-minus' : 'glyphicon-heart') })
+                                                "b",
+                                                null,
+                                                " ",
+                                                t('application') + ": "
                                             )
                                         ),
+                                        drug.personalizedInformation && _react2.default.createElement("section", { className: "minimum-summary",
+                                            dangerouslySetInnerHTML: _this11.createMarkup(drug.personalizedInformation) })
+                                    )
+                                )
+                            )
+                        ),
+                        _react2.default.createElement(
+                            "div",
+                            {
+                                className: "row med_drugfeature" },
+                            "                                    ",
+                            _this11.renderDrugFeatures(drug)
+                        ),
+                        _User2.default.isAuthenticated() && _react2.default.createElement(
+                            "div",
+                            { className: "row" },
+                            _react2.default.createElement(
+                                "div",
+                                { className: "action-pattern" },
+                                _react2.default.createElement(
+                                    "div",
+                                    null,
+                                    _react2.default.createElement(
+                                        "div",
+                                        { className: "col-md-4 nopadd" },
                                         _react2.default.createElement(
-                                            "div",
-                                            { className: "col-md-4" },
-                                            _react2.default.createElement(
-                                                "button",
-                                                { type: "button", className: "btn btn-add",
-                                                    onClick: function onClick() {
-                                                        return _this9.toggleRemember(drug);
-                                                    } },
-                                                _react2.default.createElement("span", {
-                                                    className: "glyphicon white " + (drug.isRemembered ? 'glyphicon-minus' : 'glyphicon-plus') })
-                                            )
-                                        ),
+                                            "button",
+                                            { type: "button", className: "btn btn-like big_btn",
+                                                onClick: function onClick() {
+                                                    return _this11.toggleTaking(drug);
+                                                } },
+                                            _react2.default.createElement("span", {
+                                                className: "glyphicon white " + (drug.isTaken ? 'glyphicon-minus' : 'glyphicon-heart') })
+                                        )
+                                    ),
+                                    _react2.default.createElement(
+                                        "div",
+                                        { className: "col-md-4 nopadd" },
                                         _react2.default.createElement(
-                                            "div",
-                                            { className: "col-md-4" },
+                                            "button",
+                                            { type: "button", className: "btn btn-add big_btn",
+                                                onClick: function onClick() {
+                                                    return _this11.toggleRemember(drug);
+                                                } },
+                                            _react2.default.createElement("span", {
+                                                className: "glyphicon white " + (drug.isRemembered ? 'glyphicon-minus' : 'glyphicon-plus') })
+                                        )
+                                    ),
+                                    _react2.default.createElement(
+                                        "div",
+                                        { className: "col-md-4 nopadd" },
+                                        _react2.default.createElement(
+                                            "button",
+                                            { type: "button", className: "btn btn-open big_btn" },
                                             _react2.default.createElement(
-                                                "button",
-                                                { type: "button", className: "btn btn-open" },
-                                                _react2.default.createElement(
-                                                    _reactRouterDom.Link,
-                                                    { to: "/drug/" + drug.id },
-                                                    _react2.default.createElement("span", { className: "glyphicon glyphicon-eye-open white" })
-                                                )
+                                                _reactRouterDom.Link,
+                                                { to: "/drug/" + drug.id },
+                                                _react2.default.createElement("span", { className: "glyphicon glyphicon-eye-open white" })
                                             )
                                         )
                                     )
@@ -42410,8 +42278,38 @@ var DrugList = function (_React$Component) {
             return _react2.default.createElement(
                 "div",
                 null,
-                "   ",
                 _react2.default.createElement(_carousel_drugs2.default, null),
+                _react2.default.createElement(
+                    "div",
+                    { className: "container" },
+                    _react2.default.createElement(
+                        "div",
+                        { className: "well well-sm" },
+                        _react2.default.createElement("strong", null),
+                        _react2.default.createElement(
+                            "div",
+                            { className: "btn-group" },
+                            _react2.default.createElement(
+                                "div",
+                                { id: "list", className: "btn btn-default btn-sm",
+                                    onClick: this.toggle.bind(this) },
+                                " ",
+                                this.state.addClass ? _react2.default.createElement(
+                                    "div",
+                                    null,
+                                    _react2.default.createElement("span", { className: "glyphicon glyphicon-th-list" }),
+                                    "List"
+                                ) : _react2.default.createElement(
+                                    "div",
+                                    null,
+                                    _react2.default.createElement("span", { className: "glyphicon glyphicon-th" }),
+                                    "Grid"
+                                )
+                            )
+                        )
+                    ),
+                    this.renderDrugs1(drugs)
+                ),
                 _react2.default.createElement(
                     "div",
                     { className: "container no-banner" },
@@ -42470,14 +42368,9 @@ var DrugList = function (_React$Component) {
                         null,
                         this.state.loading && _react2.default.createElement(_loading2.default, null),
                         !this.state.loading && drugs && drugs.length == 0 && _react2.default.createElement(_empty_list2.default, null),
-                        !this.state.loading && drugs && drugs.length > 0 && _react2.default.createElement(
-                            "ul",
-                            { className: "drug-list" },
-                            this.renderDrugs(drugs)
-                        )
+                        !this.state.loading && drugs && drugs.length > 0 && _react2.default.createElement("ul", { className: "drug-list" })
                     )
-                ),
-                "  "
+                )
             );
         }
     }]);
@@ -42488,7 +42381,7 @@ var DrugList = function (_React$Component) {
 exports.default = (0, _reactI18next.translate)()(DrugList);
 
 /***/ }),
-/* 260 */
+/* 261 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42500,7 +42393,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _axios = __webpack_require__(11);
+var _axios = __webpack_require__(10);
 
 var _axios2 = _interopRequireDefault(_axios);
 
@@ -42510,7 +42403,7 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactRouterDom = __webpack_require__(13);
 
-var _reactI18next = __webpack_require__(8);
+var _reactI18next = __webpack_require__(6);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -42576,7 +42469,7 @@ var DrugMiniature = function (_React$Component) {
 exports.default = (0, _reactI18next.translate)()(DrugMiniature);
 
 /***/ }),
-/* 261 */
+/* 262 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42588,7 +42481,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _axios = __webpack_require__(11);
+var _axios = __webpack_require__(10);
 
 var _axios2 = _interopRequireDefault(_axios);
 
@@ -42596,11 +42489,11 @@ var _react = __webpack_require__(2);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactI18next = __webpack_require__(8);
+var _reactI18next = __webpack_require__(6);
 
 var _reactToastify = __webpack_require__(23);
 
-var _User = __webpack_require__(12);
+var _User = __webpack_require__(11);
 
 var _User2 = _interopRequireDefault(_User);
 
@@ -42654,7 +42547,7 @@ var EmptyList = function (_React$Component) {
 exports.default = (0, _reactI18next.translate)()(EmptyList);
 
 /***/ }),
-/* 262 */
+/* 263 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42672,9 +42565,9 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactRouterDom = __webpack_require__(13);
 
-var _reactI18next = __webpack_require__(8);
+var _reactI18next = __webpack_require__(6);
 
-var _User = __webpack_require__(12);
+var _User = __webpack_require__(11);
 
 var _User2 = _interopRequireDefault(_User);
 
@@ -42906,7 +42799,7 @@ var Footer = function (_React$Component) {
 exports.default = (0, _reactI18next.translate)()(Footer);
 
 /***/ }),
-/* 263 */
+/* 264 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42922,17 +42815,17 @@ var _react = __webpack_require__(2);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactI18next = __webpack_require__(8);
+var _reactI18next = __webpack_require__(6);
 
-var _carousel = __webpack_require__(256);
+var _carousel = __webpack_require__(257);
 
 var _carousel2 = _interopRequireDefault(_carousel);
 
-var _most_visited_items = __webpack_require__(266);
+var _most_visited_items = __webpack_require__(267);
 
 var _most_visited_items2 = _interopRequireDefault(_most_visited_items);
 
-var _User = __webpack_require__(12);
+var _User = __webpack_require__(11);
 
 var _User2 = _interopRequireDefault(_User);
 
@@ -42976,7 +42869,7 @@ var Home = function (_React$Component) {
                         { className: "row text_home" },
                         _react2.default.createElement(
                             "div",
-                            { className: "col-lg-4" },
+                            { className: "col-sm-4" },
                             _react2.default.createElement("img", { className: "img-circle", src: "/assets/images/logo_s.svg", alt: "Generic placeholder image", width: "140", height: "140" }),
                             _react2.default.createElement(
                                 "h2",
@@ -43001,7 +42894,7 @@ var Home = function (_React$Component) {
                         ),
                         _react2.default.createElement(
                             "div",
-                            { className: "col-lg-4" },
+                            { className: "col-sm-4" },
                             _react2.default.createElement("img", { className: "img-circle", src: "/assets/images/prof_sunyaev.jpg", alt: "Generic placeholder image", width: "140", height: "140" }),
                             _react2.default.createElement(
                                 "h2",
@@ -43026,7 +42919,7 @@ var Home = function (_React$Component) {
                         ),
                         _react2.default.createElement(
                             "div",
-                            { className: "col-lg-4" },
+                            { className: "col-sm-4" },
                             _react2.default.createElement("img", { className: "img-circle", src: "/assets/images/article.jpg", alt: "Generic placeholder image", width: "140", height: "140" }),
                             _react2.default.createElement(
                                 "h2",
@@ -43061,7 +42954,7 @@ var Home = function (_React$Component) {
 exports.default = (0, _reactI18next.translate)()(Home);
 
 /***/ }),
-/* 264 */
+/* 265 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43073,7 +42966,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _axios = __webpack_require__(11);
+var _axios = __webpack_require__(10);
 
 var _axios2 = _interopRequireDefault(_axios);
 
@@ -43083,7 +42976,7 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactRouterDom = __webpack_require__(13);
 
-var _reactI18next = __webpack_require__(8);
+var _reactI18next = __webpack_require__(6);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -43149,7 +43042,7 @@ var Imprint = function (_React$Component) {
 exports.default = (0, _reactI18next.translate)()(Imprint);
 
 /***/ }),
-/* 265 */
+/* 266 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43167,9 +43060,9 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactRouterDom = __webpack_require__(13);
 
-var _reactI18next = __webpack_require__(8);
+var _reactI18next = __webpack_require__(6);
 
-var _User = __webpack_require__(12);
+var _User = __webpack_require__(11);
 
 var _User2 = _interopRequireDefault(_User);
 
@@ -43213,7 +43106,7 @@ var MenueItem = function (_React$Component) {
 exports.default = (0, _reactI18next.translate)()(MenueItem);
 
 /***/ }),
-/* 266 */
+/* 267 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43225,7 +43118,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _axios = __webpack_require__(11);
+var _axios = __webpack_require__(10);
 
 var _axios2 = _interopRequireDefault(_axios);
 
@@ -43233,13 +43126,13 @@ var _react = __webpack_require__(2);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactI18next = __webpack_require__(8);
+var _reactI18next = __webpack_require__(6);
 
-var _drug_miniature = __webpack_require__(260);
+var _drug_miniature = __webpack_require__(261);
 
 var _drug_miniature2 = _interopRequireDefault(_drug_miniature);
 
-var _User = __webpack_require__(12);
+var _User = __webpack_require__(11);
 
 var _User2 = _interopRequireDefault(_User);
 
@@ -43323,7 +43216,7 @@ var MostVisitedItems = function (_React$Component) {
 exports.default = (0, _reactI18next.translate)()(MostVisitedItems);
 
 /***/ }),
-/* 267 */
+/* 268 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43341,21 +43234,21 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactRouterDom = __webpack_require__(13);
 
-var _reactI18next = __webpack_require__(8);
+var _reactI18next = __webpack_require__(6);
 
-var _User = __webpack_require__(12);
+var _User = __webpack_require__(11);
 
 var _User2 = _interopRequireDefault(_User);
 
-var _user_menue = __webpack_require__(271);
+var _user_menue = __webpack_require__(274);
 
 var _user_menue2 = _interopRequireDefault(_user_menue);
 
-var _auto_complete = __webpack_require__(52);
+var _auto_complete = __webpack_require__(29);
 
 var _auto_complete2 = _interopRequireDefault(_auto_complete);
 
-var _menue_item = __webpack_require__(265);
+var _menue_item = __webpack_require__(266);
 
 var _menue_item2 = _interopRequireDefault(_menue_item);
 
@@ -43446,7 +43339,7 @@ var Navigation = function (_React$Component) {
 exports.default = Navigation;
 
 /***/ }),
-/* 268 */
+/* 269 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43458,7 +43351,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _axios = __webpack_require__(11);
+var _axios = __webpack_require__(10);
 
 var _axios2 = _interopRequireDefault(_axios);
 
@@ -43468,7 +43361,7 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactRouterDom = __webpack_require__(13);
 
-var _reactI18next = __webpack_require__(8);
+var _reactI18next = __webpack_require__(6);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -43534,7 +43427,7 @@ var Privacy = function (_React$Component) {
 exports.default = (0, _reactI18next.translate)()(Privacy);
 
 /***/ }),
-/* 269 */
+/* 270 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43546,7 +43439,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _axios = __webpack_require__(11);
+var _axios = __webpack_require__(10);
 
 var _axios2 = _interopRequireDefault(_axios);
 
@@ -43556,7 +43449,7 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactRouterDom = __webpack_require__(13);
 
-var _reactI18next = __webpack_require__(8);
+var _reactI18next = __webpack_require__(6);
 
 var _reactToastify = __webpack_require__(23);
 
@@ -43891,7 +43784,783 @@ var Register = function (_React$Component) {
 exports.default = (0, _reactI18next.translate)()(Register);
 
 /***/ }),
-/* 270 */
+/* 271 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _axios = __webpack_require__(10);
+
+var _axios2 = _interopRequireDefault(_axios);
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactI18next = __webpack_require__(6);
+
+var _User = __webpack_require__(11);
+
+var _User2 = _interopRequireDefault(_User);
+
+var _auto_complete = __webpack_require__(29);
+
+var _auto_complete2 = _interopRequireDefault(_auto_complete);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var SideEffect = function (_React$Component) {
+	_inherits(SideEffect, _React$Component);
+
+	function SideEffect(props) {
+		_classCallCheck(this, SideEffect);
+
+		var _this = _possibleConstructorReturn(this, (SideEffect.__proto__ || Object.getPrototypeOf(SideEffect)).call(this));
+
+		_this.state = {
+			drug: undefined
+		};
+
+		return _this;
+	}
+
+	_createClass(SideEffect, [{
+		key: "render",
+		value: function render() {
+			return _react2.default.createElement(
+				"div",
+				{ id: "nebenwirkungen", className: "container", style: { marginTop: "90px" } },
+				_react2.default.createElement(
+					"div",
+					{ className: "row" },
+					_react2.default.createElement(
+						"div",
+						{ className: "col-sm-12 text-center" },
+						_react2.default.createElement(
+							"h2",
+							null,
+							"Nebenwirkungen"
+						)
+					)
+				),
+				_react2.default.createElement(
+					"div",
+					{ className: "row" },
+					_react2.default.createElement(
+						"div",
+						{ className: "col-lg-12 text-center", style: { color: "black" } },
+						"Wie alle Arzneimittel kann Prospan\xAE Hustensaft Nebenwirkungen haben, die aber nicht bei jedem auftreten m\xFCssen. ",
+						_react2.default.createElement("br", null),
+						"Bei der Bewertung von Nebenwirkungen werden folgende H\xE4ufigkeiten zugrundegelegt:",
+						_react2.default.createElement(
+							"div",
+							{ className: "row" },
+							_react2.default.createElement(
+								"div",
+								{ className: "col-lg-4 col-lg-offset-4 text-left" },
+								_react2.default.createElement(
+									"table",
+									{ className: "table table-striped custab", style: { marginTop: "30px" } },
+									_react2.default.createElement(
+										"tbody",
+										null,
+										_react2.default.createElement(
+											"tr",
+											null,
+											_react2.default.createElement(
+												"td",
+												null,
+												_react2.default.createElement(
+													"b",
+													null,
+													"Sehr h\xE4ufig"
+												)
+											),
+											_react2.default.createElement(
+												"td",
+												null,
+												"mehr als 1 Behandelter von 10"
+											)
+										),
+										_react2.default.createElement(
+											"tr",
+											null,
+											_react2.default.createElement(
+												"td",
+												null,
+												_react2.default.createElement(
+													"b",
+													null,
+													" H\xE4ufig"
+												)
+											),
+											_react2.default.createElement(
+												"td",
+												null,
+												"1 bis 10 Behandelte von 100"
+											)
+										),
+										_react2.default.createElement(
+											"tr",
+											null,
+											_react2.default.createElement(
+												"td",
+												null,
+												_react2.default.createElement(
+													"b",
+													null,
+													" Gelegentlich"
+												)
+											),
+											_react2.default.createElement(
+												"td",
+												null,
+												"1 bis 10 Behandelte von 1.000"
+											)
+										),
+										_react2.default.createElement(
+											"tr",
+											null,
+											_react2.default.createElement(
+												"td",
+												null,
+												_react2.default.createElement(
+													"b",
+													null,
+													" Selten"
+												)
+											),
+											_react2.default.createElement(
+												"td",
+												null,
+												"1 bis 10 Behandelte von 10.000"
+											)
+										),
+										_react2.default.createElement(
+											"tr",
+											null,
+											_react2.default.createElement(
+												"td",
+												null,
+												_react2.default.createElement(
+													"b",
+													null,
+													" Sehr selten"
+												)
+											),
+											_react2.default.createElement(
+												"td",
+												null,
+												"weniger als 1 Behandelter von 10.000"
+											)
+										),
+										_react2.default.createElement(
+											"tr",
+											null,
+											_react2.default.createElement(
+												"td",
+												null,
+												_react2.default.createElement(
+													"b",
+													null,
+													" Nicht bekannt"
+												)
+											),
+											_react2.default.createElement(
+												"td",
+												null,
+												"H\xE4ufigkeit auf Grundlage der verf\xFCgbaren Daten nicht absch\xE4tzbar"
+											)
+										)
+									)
+								)
+							)
+						)
+					)
+				),
+				_react2.default.createElement(
+					"div",
+					{ className: "row" },
+					_react2.default.createElement(
+						"div",
+						{ className: "col-sm-4" },
+						_react2.default.createElement(
+							"ul",
+							{ id: "nav-tabs-wrapper", className: "nav nav-tabs nav-pills nav-stacked well" },
+							_react2.default.createElement(
+								"li",
+								{ className: "active" },
+								_react2.default.createElement(
+									"a",
+									{ href: "#vtab11", "data-toggle": "tab" },
+									"Allergische Reaktionen"
+								)
+							),
+							_react2.default.createElement(
+								"li",
+								null,
+								_react2.default.createElement(
+									"a",
+									{ href: "#vtab12", "data-toggle": "tab" },
+									"Magen-Darm-Beschwerden "
+								)
+							)
+						)
+					),
+					_react2.default.createElement(
+						"div",
+						{ className: "col-sm-8" },
+						_react2.default.createElement(
+							"div",
+							{ className: "tab-content" },
+							_react2.default.createElement(
+								"div",
+								{ role: "tabpanel", className: "tab-pane fade in active", id: "vtab11",
+									style: { padding: "25px" } },
+								_react2.default.createElement(
+									"span",
+									{ className: "label label-primary" },
+									"Atemnot"
+								),
+								_react2.default.createElement(
+									"span",
+									{ className: "label label-primary" },
+									"Schwellungen"
+								),
+								_react2.default.createElement(
+									"span",
+									{ className: "label label-primary" },
+									"Hautr\xF6tungen"
+								),
+								_react2.default.createElement(
+									"span",
+									{ className: "label label-primary" },
+									"Juckreiz"
+								),
+								_react2.default.createElement(
+									"span",
+									{ className: "label label-primary" },
+									"Atemnot"
+								),
+								_react2.default.createElement("br", null),
+								" ",
+								_react2.default.createElement("br", null),
+								_react2.default.createElement(
+									"p",
+									null,
+									_react2.default.createElement(
+										"b",
+										null,
+										"H\xE4ufigkeit:"
+									),
+									" Nicht bekannt"
+								)
+							),
+							_react2.default.createElement(
+								"div",
+								{ role: "tabpanel", className: "tab-pane fade", id: "vtab12", style: { padding: "20px" } },
+								"Aufgrund des Sorbitolgehaltes: ",
+								_react2.default.createElement("br", null),
+								_react2.default.createElement(
+									"span",
+									{ className: "label label-primary" },
+									"\xDCbelkeit"
+								),
+								_react2.default.createElement(
+									"span",
+									{ className: "label label-primary" },
+									"Erbrechen"
+								),
+								_react2.default.createElement(
+									"span",
+									{ className: "label label-primary" },
+									"Durchfall"
+								),
+								_react2.default.createElement(
+									"span",
+									{ className: "label label-primary" },
+									"abf\xFChrende Wirkung"
+								),
+								_react2.default.createElement("br", null),
+								_react2.default.createElement(
+									"p",
+									null,
+									_react2.default.createElement(
+										"b",
+										null,
+										"H\xE4ufigkeit:"
+									),
+									" Nicht bekannt"
+								)
+							)
+						)
+					)
+				)
+			);
+		}
+	}]);
+
+	return SideEffect;
+}(_react2.default.Component);
+
+exports.default = (0, _reactI18next.translate)()(SideEffect);
+
+/***/ }),
+/* 272 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _axios = __webpack_require__(10);
+
+var _axios2 = _interopRequireDefault(_axios);
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactI18next = __webpack_require__(6);
+
+var _User = __webpack_require__(11);
+
+var _User2 = _interopRequireDefault(_User);
+
+var _auto_complete = __webpack_require__(29);
+
+var _auto_complete2 = _interopRequireDefault(_auto_complete);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Usage = function (_React$Component) {
+	_inherits(Usage, _React$Component);
+
+	function Usage(props) {
+		_classCallCheck(this, Usage);
+
+		var _this = _possibleConstructorReturn(this, (Usage.__proto__ || Object.getPrototypeOf(Usage)).call(this));
+
+		_this.state = {
+			drug: undefined
+		};
+
+		return _this;
+	}
+
+	_createClass(Usage, [{
+		key: "render",
+		value: function render() {
+			return _react2.default.createElement(
+				"div",
+				{ className: "container bg-grey", id: "anwendung", style: { marginTop: "90px" } },
+				_react2.default.createElement(
+					"div",
+					{ className: "row" },
+					_react2.default.createElement(
+						"div",
+						{ className: "col-sm-12 text-center" },
+						_react2.default.createElement(
+							"h2",
+							null,
+							"Anwendung von Prospan\xAE Hustensaft "
+						)
+					)
+				),
+				_react2.default.createElement(
+					"div",
+					{ className: "row text-center" },
+					_react2.default.createElement(
+						"div",
+						{ className: "alert alert-info", role: "alert" },
+						" Nehmen Sie Prospan\xAE Hustensaft immer genau nach der Anweisung dieser Packungsbeilage ein. ",
+						_react2.default.createElement("br", null),
+						" Bitte fragen Sie bei Ihrem Arzt oder Apotheker nach, wenn Sie sich nicht ganz sicher sind."
+					),
+					_react2.default.createElement(
+						"div",
+						{ className: "col-sm-12" },
+						_react2.default.createElement(
+							"div",
+							{ className: "panel with-nav-tabs panel-primary" },
+							_react2.default.createElement(
+								"div",
+								{ className: "panel-heading" },
+								_react2.default.createElement(
+									"ul",
+									{ className: "nav nav-tabs" },
+									_react2.default.createElement(
+										"li",
+										{ className: "active" },
+										_react2.default.createElement(
+											"a",
+											{ href: "#tab1primary", "data-toggle": "tab" },
+											"Dosis"
+										)
+									),
+									_react2.default.createElement(
+										"li",
+										null,
+										_react2.default.createElement(
+											"a",
+											{ href: "#tab2primary", "data-toggle": "tab" },
+											"Art"
+										)
+									),
+									_react2.default.createElement(
+										"li",
+										null,
+										_react2.default.createElement(
+											"a",
+											{ href: "#tab3primary", "data-toggle": "tab" },
+											"Dauer"
+										)
+									)
+								)
+							),
+							_react2.default.createElement(
+								"div",
+								{ className: "panel-body" },
+								_react2.default.createElement(
+									"div",
+									{ className: "tab-content" },
+									_react2.default.createElement(
+										"div",
+										{ className: "tab-pane fade in active", id: "tab1primary" },
+										_react2.default.createElement(
+											"div",
+											{ className: "row" },
+											_react2.default.createElement("div", { className: "col-lg-3", style: { fontSize: "16px" } }),
+											_react2.default.createElement(
+												"div",
+												{ className: "col-lg-3", style: { fontSize: "60px" } },
+												_react2.default.createElement("i", { className: "fas fa-baby" })
+											),
+											_react2.default.createElement(
+												"div",
+												{ className: "col-lg-3", style: { fontSize: "60px" } },
+												_react2.default.createElement("i", { className: "fas fa-child" })
+											),
+											_react2.default.createElement(
+												"div",
+												{ className: "col-lg-3", style: { fontSize: "60px" } },
+												_react2.default.createElement("i", { className: "fas fa-male" }),
+												_react2.default.createElement("i", { className: "fas fa-blind" })
+											)
+										),
+										_react2.default.createElement(
+											"div",
+											{ className: "row" },
+											_react2.default.createElement(
+												"div",
+												{ className: "col-lg-3", style: { fontSize: "16px" } },
+												_react2.default.createElement(
+													"p",
+													{ style: { fontWeight: "bold" } },
+													"Alter"
+												)
+											),
+											_react2.default.createElement(
+												"div",
+												{ className: "col-lg-3", style: { fontSize: "16px" } },
+												_react2.default.createElement(
+													"p",
+													null,
+													" Kinder unter 6 Jahren"
+												)
+											),
+											_react2.default.createElement(
+												"div",
+												{ className: "col-lg-3", style: { fontSize: "16px" } },
+												_react2.default.createElement(
+													"p",
+													null,
+													" Kinder von 6 - 12 Jahren"
+												)
+											),
+											_react2.default.createElement(
+												"div",
+												{ className: "col-lg-3", style: { fontSize: "16px" } },
+												_react2.default.createElement(
+													"p",
+													null,
+													" Kinder ab 6 Jahren & Erwachsene"
+												)
+											)
+										),
+										_react2.default.createElement("hr", null),
+										_react2.default.createElement(
+											"div",
+											{ className: "row" },
+											_react2.default.createElement(
+												"div",
+												{ className: "col-lg-3", style: { fontSize: "16px" } },
+												_react2.default.createElement(
+													"p",
+													{ style: { fontWeight: "bold" } },
+													"Einzeldosis"
+												)
+											),
+											_react2.default.createElement(
+												"div",
+												{ className: "col-lg-3", style: { fontSize: "16px" } },
+												_react2.default.createElement(
+													"p",
+													null,
+													"2,5 ml ",
+													_react2.default.createElement("br", null),
+													" \u2259 ",
+													_react2.default.createElement("br", null),
+													" 17,5 mg Efeubl\xE4tter-Trockenextrakt"
+												)
+											),
+											_react2.default.createElement(
+												"div",
+												{ className: "col-lg-3", style: { fontSize: "16px" } },
+												_react2.default.createElement(
+													"p",
+													null,
+													"5 ml ",
+													_react2.default.createElement("br", null),
+													" \u2259 ",
+													_react2.default.createElement("br", null),
+													" 35 mg Efeubl\xE4tter-Trockenextrakt"
+												)
+											),
+											_react2.default.createElement(
+												"div",
+												{ className: "col-lg-3", style: { fontSize: "16px" } },
+												_react2.default.createElement(
+													"p",
+													null,
+													"5 ml ",
+													_react2.default.createElement("br", null),
+													" \u2259 ",
+													_react2.default.createElement("br", null),
+													" 35 mg Efeubl\xE4tter-Trockenextrakt"
+												)
+											)
+										),
+										_react2.default.createElement("hr", null),
+										_react2.default.createElement(
+											"div",
+											{ className: "row" },
+											_react2.default.createElement(
+												"div",
+												{ className: "col-lg-3", style: { fontSize: "16px" } },
+												_react2.default.createElement(
+													"p",
+													{ style: { fontWeight: "bold" } },
+													"Tagesgesamtdosis"
+												)
+											),
+											_react2.default.createElement(
+												"div",
+												{ className: "col-lg-3", style: { fontSize: "16px" } },
+												_react2.default.createElement(
+													"p",
+													null,
+													"5 ml (2 x 2,5 ml) ",
+													_react2.default.createElement("br", null),
+													" \u2259 ",
+													_react2.default.createElement("br", null),
+													" 35 mg Efeubl\xE4tter-Trockenextrakt"
+												)
+											),
+											_react2.default.createElement(
+												"div",
+												{ className: "col-lg-3", style: { fontSize: "16px" } },
+												_react2.default.createElement(
+													"p",
+													null,
+													"10 ml (2 x 5 ml) ",
+													_react2.default.createElement("br", null),
+													" \u2259 ",
+													_react2.default.createElement("br", null),
+													" 70 mg Efeubl\xE4tter-Trockenextrakt"
+												)
+											),
+											_react2.default.createElement(
+												"div",
+												{ className: "col-lg-3", style: { fontSize: "16px" } },
+												_react2.default.createElement(
+													"p",
+													null,
+													"15 ml (3 x 5 ml) ",
+													_react2.default.createElement("br", null),
+													" \u2259 ",
+													_react2.default.createElement("br", null),
+													" 105 mg Efeubl\xE4tter-Trockenextrakt"
+												)
+											)
+										)
+									),
+									_react2.default.createElement(
+										"div",
+										{ className: "tab-pane fade", id: "tab2primary" },
+										_react2.default.createElement(
+											"div",
+											{ className: "row" },
+											_react2.default.createElement(
+												"div",
+												{ className: "col-lg-4 col-lg-offset-4" },
+												_react2.default.createElement(
+													"table",
+													{ className: "table table-striped custab" },
+													_react2.default.createElement(
+														"tr",
+														null,
+														_react2.default.createElement(
+															"td",
+															null,
+															_react2.default.createElement(
+																"h4",
+																{ style: { marginBottom: "0px" } },
+																" 1x"
+															)
+														),
+														_react2.default.createElement(
+															"td",
+															null,
+															_react2.default.createElement(
+																"h4",
+																{ style: { marginBottom: "0px" } },
+																" Morgens"
+															)
+														)
+													),
+													_react2.default.createElement(
+														"tr",
+														null,
+														_react2.default.createElement(
+															"td",
+															null,
+															_react2.default.createElement(
+																"h4",
+																{ style: { marginBottom: "0px" } },
+																" 1x "
+															)
+														),
+														_react2.default.createElement(
+															"td",
+															null,
+															_react2.default.createElement(
+																"h4",
+																{ style: { marginBottom: "0px" } },
+																" (Mittags)"
+															)
+														)
+													),
+													_react2.default.createElement(
+														"tr",
+														null,
+														_react2.default.createElement(
+															"td",
+															null,
+															_react2.default.createElement(
+																"h4",
+																{ style: { marginBottom: "0px" } },
+																" 1x"
+															)
+														),
+														_react2.default.createElement(
+															"td",
+															null,
+															_react2.default.createElement(
+																"h4",
+																{ style: { marginBottom: "0px" } },
+																" Abends"
+															)
+														)
+													)
+												)
+											)
+										),
+										_react2.default.createElement(
+											"div",
+											{ className: "alert alert-info", role: "alert" },
+											" Die Flasche vor jedem Gebrauch gut sch\xFCtteln! ",
+											_react2.default.createElement("br", null),
+											"Zum Einnehmen mit dem beigef\xFCgten Messbecher ",
+											_react2.default.createElement("i", {
+												className: "fas fa-glass-whiskey" }),
+											"."
+										)
+									),
+									_react2.default.createElement(
+										"div",
+										{ className: "tab-pane fade", id: "tab3primary" },
+										_react2.default.createElement(
+											"div",
+											{ className: "row" },
+											_react2.default.createElement(
+												"div",
+												{ className: "col-lg-8 col-lg-offset-2" },
+												"Die Behandlungsdauer richtet sich jeweils nach der Art und Schwere des Krankheitsbildes; sie sollte in der Regel ",
+												_react2.default.createElement(
+													"b",
+													null,
+													"1 Woche "
+												),
+												" betragen. Wenn die Beschwerden jedoch l\xE4nger als 1 Woche anhalten, sollte medizinischer Rat eingeholt werden.",
+												_react2.default.createElement(
+													"div",
+													{ className: "alert alert-warning", role: "alert" },
+													" Bitte sprechen Sie mit Ihrem Arzt oder Apotheker, wenn Sie den Eindruck haben, dass die Wirkung von Prospan\xAE Hustensaft zu stark oder zu schwach ist."
+												)
+											)
+										)
+									),
+									_react2.default.createElement(
+										"div",
+										{ className: "tab-pane fade", id: "tab4primary" },
+										"Primary 4"
+									),
+									_react2.default.createElement(
+										"div",
+										{ className: "tab-pane fade", id: "tab5primary" },
+										"Primary 5"
+									)
+								)
+							)
+						)
+					)
+				)
+			);
+		}
+	}]);
+
+	return Usage;
+}(_react2.default.Component);
+
+exports.default = (0, _reactI18next.translate)()(Usage);
+
+/***/ }),
+/* 273 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43903,7 +44572,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _axios = __webpack_require__(11);
+var _axios = __webpack_require__(10);
 
 var _axios2 = _interopRequireDefault(_axios);
 
@@ -43919,13 +44588,13 @@ var _reactRouterDom = __webpack_require__(13);
 
 var _reactToastify = __webpack_require__(23);
 
-var _reactI18next = __webpack_require__(8);
+var _reactI18next = __webpack_require__(6);
 
-var _universalCookie = __webpack_require__(39);
+var _universalCookie = __webpack_require__(40);
 
 var _universalCookie2 = _interopRequireDefault(_universalCookie);
 
-var _User = __webpack_require__(12);
+var _User = __webpack_require__(11);
 
 var _User2 = _interopRequireDefault(_User);
 
@@ -44432,7 +45101,7 @@ var UserData = function (_React$Component) {
 exports.default = (0, _reactI18next.translate)()(UserData);
 
 /***/ }),
-/* 271 */
+/* 274 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -44450,9 +45119,9 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactRouterDom = __webpack_require__(13);
 
-var _reactI18next = __webpack_require__(8);
+var _reactI18next = __webpack_require__(6);
 
-var _User = __webpack_require__(12);
+var _User = __webpack_require__(11);
 
 var _User2 = _interopRequireDefault(_User);
 
@@ -44602,7 +45271,7 @@ var UserMenue = function (_React$Component) {
 exports.default = (0, _reactI18next.translate)()(UserMenue);
 
 /***/ }),
-/* 272 */
+/* 275 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -44612,15 +45281,15 @@ Object.defineProperty(exports, "__esModule", {
 						value: true
 });
 
-var _i18next = __webpack_require__(312);
+var _i18next = __webpack_require__(315);
 
 var _i18next2 = _interopRequireDefault(_i18next);
 
-var _i18nextXhrBackend = __webpack_require__(302);
+var _i18nextXhrBackend = __webpack_require__(305);
 
 var _i18nextXhrBackend2 = _interopRequireDefault(_i18nextXhrBackend);
 
-var _i18nextBrowserLanguagedetector = __webpack_require__(298);
+var _i18nextBrowserLanguagedetector = __webpack_require__(301);
 
 var _i18nextBrowserLanguagedetector2 = _interopRequireDefault(_i18nextBrowserLanguagedetector);
 
@@ -44670,7 +45339,7 @@ _i18next2.default.use(_i18nextXhrBackend2.default).use(_i18nextBrowserLanguagede
 exports.default = _i18next2.default;
 
 /***/ }),
-/* 273 */
+/* 276 */
 /***/ (function(module, exports) {
 
 
@@ -44696,7 +45365,7 @@ module.exports = function chain(){
 
 
 /***/ }),
-/* 274 */
+/* 277 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -44898,7 +45567,7 @@ function tryDecode(str, decode) {
 
 
 /***/ }),
-/* 275 */
+/* 278 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -44933,7 +45602,7 @@ function camelize(string) {
 module.exports = camelize;
 
 /***/ }),
-/* 276 */
+/* 279 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -44948,7 +45617,7 @@ module.exports = camelize;
 
 
 
-var camelize = __webpack_require__(275);
+var camelize = __webpack_require__(278);
 
 var msPattern = /^-ms-/;
 
@@ -44976,7 +45645,7 @@ function camelizeStyleName(string) {
 module.exports = camelizeStyleName;
 
 /***/ }),
-/* 277 */
+/* 280 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -44991,7 +45660,7 @@ module.exports = camelizeStyleName;
  * 
  */
 
-var isTextNode = __webpack_require__(285);
+var isTextNode = __webpack_require__(288);
 
 /*eslint-disable no-bitwise */
 
@@ -45019,7 +45688,7 @@ function containsNode(outerNode, innerNode) {
 module.exports = containsNode;
 
 /***/ }),
-/* 278 */
+/* 281 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -45150,7 +45819,7 @@ module.exports = createArrayFromMixed;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 279 */
+/* 282 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -45167,10 +45836,10 @@ module.exports = createArrayFromMixed;
 
 /*eslint-disable fb-www/unsafe-html*/
 
-var ExecutionEnvironment = __webpack_require__(10);
+var ExecutionEnvironment = __webpack_require__(12);
 
-var createArrayFromMixed = __webpack_require__(278);
-var getMarkupWrap = __webpack_require__(280);
+var createArrayFromMixed = __webpack_require__(281);
+var getMarkupWrap = __webpack_require__(283);
 var invariant = __webpack_require__(3);
 
 /**
@@ -45238,7 +45907,7 @@ module.exports = createNodesFromMarkup;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 280 */
+/* 283 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -45254,7 +45923,7 @@ module.exports = createNodesFromMarkup;
 
 /*eslint-disable fb-www/unsafe-html */
 
-var ExecutionEnvironment = __webpack_require__(10);
+var ExecutionEnvironment = __webpack_require__(12);
 
 var invariant = __webpack_require__(3);
 
@@ -45337,7 +46006,7 @@ module.exports = getMarkupWrap;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 281 */
+/* 284 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -45379,7 +46048,7 @@ function getUnboundedScrollPosition(scrollable) {
 module.exports = getUnboundedScrollPosition;
 
 /***/ }),
-/* 282 */
+/* 285 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -45415,7 +46084,7 @@ function hyphenate(string) {
 module.exports = hyphenate;
 
 /***/ }),
-/* 283 */
+/* 286 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -45430,7 +46099,7 @@ module.exports = hyphenate;
 
 
 
-var hyphenate = __webpack_require__(282);
+var hyphenate = __webpack_require__(285);
 
 var msPattern = /^ms-/;
 
@@ -45457,7 +46126,7 @@ function hyphenateStyleName(string) {
 module.exports = hyphenateStyleName;
 
 /***/ }),
-/* 284 */
+/* 287 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -45485,7 +46154,7 @@ function isNode(object) {
 module.exports = isNode;
 
 /***/ }),
-/* 285 */
+/* 288 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -45500,7 +46169,7 @@ module.exports = isNode;
  * @typechecks
  */
 
-var isNode = __webpack_require__(284);
+var isNode = __webpack_require__(287);
 
 /**
  * @param {*} object The object to check.
@@ -45513,7 +46182,7 @@ function isTextNode(object) {
 module.exports = isTextNode;
 
 /***/ }),
-/* 286 */
+/* 289 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -45546,7 +46215,7 @@ function memoizeStringOnly(callback) {
 module.exports = memoizeStringOnly;
 
 /***/ }),
-/* 287 */
+/* 290 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -45561,7 +46230,7 @@ module.exports = memoizeStringOnly;
 
 
 
-var ExecutionEnvironment = __webpack_require__(10);
+var ExecutionEnvironment = __webpack_require__(12);
 
 var performance;
 
@@ -45572,7 +46241,7 @@ if (ExecutionEnvironment.canUseDOM) {
 module.exports = performance || {};
 
 /***/ }),
-/* 288 */
+/* 291 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -45587,7 +46256,7 @@ module.exports = performance || {};
  * @typechecks
  */
 
-var performance = __webpack_require__(287);
+var performance = __webpack_require__(290);
 
 var performanceNow;
 
@@ -45609,7 +46278,7 @@ if (performance.now) {
 module.exports = performanceNow;
 
 /***/ }),
-/* 289 */
+/* 292 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -45668,7 +46337,7 @@ exports.default = {
 };
 
 /***/ }),
-/* 290 */
+/* 293 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -45693,7 +46362,7 @@ exports.default = {
 };
 
 /***/ }),
-/* 291 */
+/* 294 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -45733,7 +46402,7 @@ exports.default = {
 };
 
 /***/ }),
-/* 292 */
+/* 295 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -45768,7 +46437,7 @@ exports.default = {
 };
 
 /***/ }),
-/* 293 */
+/* 296 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -45800,7 +46469,7 @@ exports.default = {
 };
 
 /***/ }),
-/* 294 */
+/* 297 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -45834,7 +46503,7 @@ exports.default = {
 };
 
 /***/ }),
-/* 295 */
+/* 298 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -45863,7 +46532,7 @@ exports.default = {
 };
 
 /***/ }),
-/* 296 */
+/* 299 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -45875,35 +46544,35 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _utils = __webpack_require__(297);
+var _utils = __webpack_require__(300);
 
 var utils = _interopRequireWildcard(_utils);
 
-var _cookie = __webpack_require__(289);
+var _cookie = __webpack_require__(292);
 
 var _cookie2 = _interopRequireDefault(_cookie);
 
-var _querystring = __webpack_require__(294);
+var _querystring = __webpack_require__(297);
 
 var _querystring2 = _interopRequireDefault(_querystring);
 
-var _localStorage = __webpack_require__(291);
+var _localStorage = __webpack_require__(294);
 
 var _localStorage2 = _interopRequireDefault(_localStorage);
 
-var _navigator = __webpack_require__(292);
+var _navigator = __webpack_require__(295);
 
 var _navigator2 = _interopRequireDefault(_navigator);
 
-var _htmlTag = __webpack_require__(290);
+var _htmlTag = __webpack_require__(293);
 
 var _htmlTag2 = _interopRequireDefault(_htmlTag);
 
-var _path = __webpack_require__(293);
+var _path = __webpack_require__(296);
 
 var _path2 = _interopRequireDefault(_path);
 
-var _subdomain = __webpack_require__(295);
+var _subdomain = __webpack_require__(298);
 
 var _subdomain2 = _interopRequireDefault(_subdomain);
 
@@ -46026,7 +46695,7 @@ Browser.type = 'languageDetector';
 exports.default = Browser;
 
 /***/ }),
-/* 297 */
+/* 300 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -46064,14 +46733,14 @@ function extend(obj) {
 }
 
 /***/ }),
-/* 298 */
+/* 301 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(296).default;
+module.exports = __webpack_require__(299).default;
 
 
 /***/ }),
-/* 299 */
+/* 302 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -46154,7 +46823,7 @@ function ajax(url, options, callback, data, cache) {
 exports.default = ajax;
 
 /***/ }),
-/* 300 */
+/* 303 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -46166,11 +46835,11 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _utils = __webpack_require__(301);
+var _utils = __webpack_require__(304);
 
 var utils = _interopRequireWildcard(_utils);
 
-var _ajax = __webpack_require__(299);
+var _ajax = __webpack_require__(302);
 
 var _ajax2 = _interopRequireDefault(_ajax);
 
@@ -46283,7 +46952,7 @@ Backend.type = 'backend';
 exports.default = Backend;
 
 /***/ }),
-/* 301 */
+/* 304 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -46321,20 +46990,20 @@ function extend(obj) {
 }
 
 /***/ }),
-/* 302 */
+/* 305 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(300).default;
+module.exports = __webpack_require__(303).default;
 
 
 /***/ }),
-/* 303 */
+/* 306 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__utils__ = __webpack_require__(40);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__utils__ = __webpack_require__(41);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__logger__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__EventEmitter__ = __webpack_require__(34);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__EventEmitter__ = __webpack_require__(35);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } }; }();
@@ -46621,12 +47290,12 @@ var Connector = function (_EventEmitter) {
 /* harmony default export */ __webpack_exports__["a"] = (Connector);
 
 /***/ }),
-/* 304 */
+/* 307 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__logger__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__EventEmitter__ = __webpack_require__(34);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__EventEmitter__ = __webpack_require__(35);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 function _defaults(obj, defaults) { var keys = Object.getOwnPropertyNames(defaults); for (var i = 0; i < keys.length; i++) { var key = keys[i]; var value = Object.getOwnPropertyDescriptor(defaults, key); if (value && value.configurable && obj[key] === undefined) { Object.defineProperty(obj, key, value); } } return obj; }
@@ -46706,11 +47375,11 @@ var Connector = function (_EventEmitter) {
 /* harmony default export */ __webpack_exports__["a"] = (Connector);
 
 /***/ }),
-/* 305 */
+/* 308 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__utils__ = __webpack_require__(40);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__utils__ = __webpack_require__(41);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__logger__ = __webpack_require__(21);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
@@ -46881,7 +47550,7 @@ var Interpolator = function () {
 /* harmony default export */ __webpack_exports__["a"] = (Interpolator);
 
 /***/ }),
-/* 306 */
+/* 309 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -47011,7 +47680,7 @@ var LanguageUtil = function () {
 /* harmony default export */ __webpack_exports__["a"] = (LanguageUtil);
 
 /***/ }),
-/* 307 */
+/* 310 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -47180,12 +47849,12 @@ var PluralResolver = function () {
 /* harmony default export */ __webpack_exports__["a"] = (PluralResolver);
 
 /***/ }),
-/* 308 */
+/* 311 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__EventEmitter__ = __webpack_require__(34);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__utils__ = __webpack_require__(40);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__EventEmitter__ = __webpack_require__(35);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__utils__ = __webpack_require__(41);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 function _defaults(obj, defaults) { var keys = Object.getOwnPropertyNames(defaults); for (var i = 0; i < keys.length; i++) { var key = keys[i]; var value = Object.getOwnPropertyDescriptor(defaults, key); if (value && value.configurable && obj[key] === undefined) { Object.defineProperty(obj, key, value); } } return obj; }
@@ -47331,15 +48000,15 @@ var ResourceStore = function (_EventEmitter) {
 /* harmony default export */ __webpack_exports__["a"] = (ResourceStore);
 
 /***/ }),
-/* 309 */
+/* 312 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__logger__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__EventEmitter__ = __webpack_require__(34);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__EventEmitter__ = __webpack_require__(35);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__postProcessor__ = __webpack_require__(87);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__compatibility_v1__ = __webpack_require__(86);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__utils__ = __webpack_require__(40);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__utils__ = __webpack_require__(41);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
@@ -47636,7 +48305,7 @@ var Translator = function (_EventEmitter) {
 /* harmony default export */ __webpack_exports__["a"] = (Translator);
 
 /***/ }),
-/* 310 */
+/* 313 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -47717,20 +48386,20 @@ function transformOptions(options) {
 }
 
 /***/ }),
-/* 311 */
+/* 314 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__logger__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__EventEmitter__ = __webpack_require__(34);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ResourceStore__ = __webpack_require__(308);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Translator__ = __webpack_require__(309);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__LanguageUtils__ = __webpack_require__(306);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__PluralResolver__ = __webpack_require__(307);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Interpolator__ = __webpack_require__(305);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__BackendConnector__ = __webpack_require__(303);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__CacheConnector__ = __webpack_require__(304);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__defaults__ = __webpack_require__(310);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__EventEmitter__ = __webpack_require__(35);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ResourceStore__ = __webpack_require__(311);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Translator__ = __webpack_require__(312);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__LanguageUtils__ = __webpack_require__(309);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__PluralResolver__ = __webpack_require__(310);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Interpolator__ = __webpack_require__(308);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__BackendConnector__ = __webpack_require__(306);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__CacheConnector__ = __webpack_require__(307);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__defaults__ = __webpack_require__(313);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__postProcessor__ = __webpack_require__(87);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__compatibility_v1__ = __webpack_require__(86);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
@@ -48140,12 +48809,12 @@ var I18n = function (_EventEmitter) {
 /* harmony default export */ __webpack_exports__["a"] = (new I18n());
 
 /***/ }),
-/* 312 */
+/* 315 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__i18next__ = __webpack_require__(311);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__i18next__ = __webpack_require__(314);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "changeLanguage", function() { return changeLanguage; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "cloneInstance", function() { return cloneInstance; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createInstance", function() { return createInstance; });
@@ -48182,7 +48851,7 @@ var t = __WEBPACK_IMPORTED_MODULE_0__i18next__["a" /* default */].t.bind(__WEBPA
 var use = __WEBPACK_IMPORTED_MODULE_0__i18next__["a" /* default */].use.bind(__WEBPACK_IMPORTED_MODULE_0__i18next__["a" /* default */]);
 
 /***/ }),
-/* 313 */
+/* 316 */
 /***/ (function(module, exports) {
 
 /*!
@@ -48209,7 +48878,7 @@ function isSlowBuffer (obj) {
 
 
 /***/ }),
-/* 314 */
+/* 317 */
 /***/ (function(module, exports) {
 
 module.exports = Array.isArray || function (arr) {
@@ -48218,7 +48887,7 @@ module.exports = Array.isArray || function (arr) {
 
 
 /***/ }),
-/* 315 */
+/* 318 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
@@ -48439,10 +49108,10 @@ webpackContext.keys = function webpackContextKeys() {
 };
 webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
-webpackContext.id = 315;
+webpackContext.id = 318;
 
 /***/ }),
-/* 316 */
+/* 319 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -48552,7 +49221,7 @@ module.exports = checkPropTypes;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 317 */
+/* 320 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -48623,7 +49292,7 @@ module.exports = function() {
 
 
 /***/ }),
-/* 318 */
+/* 321 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -48633,7 +49302,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _universalCookie = __webpack_require__(39);
+var _universalCookie = __webpack_require__(40);
 
 var _universalCookie2 = _interopRequireDefault(_universalCookie);
 
@@ -48643,7 +49312,7 @@ exports.default = _universalCookie2.default;
 module.exports = exports['default'];
 
 /***/ }),
-/* 319 */
+/* 322 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -48657,9 +49326,9 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _react = __webpack_require__(2);
 
-var _propTypes = __webpack_require__(7);
+var _propTypes = __webpack_require__(8);
 
-var _universalCookie = __webpack_require__(39);
+var _universalCookie = __webpack_require__(40);
 
 var _universalCookie2 = _interopRequireDefault(_universalCookie);
 
@@ -48715,7 +49384,7 @@ exports.default = CookiesProvider;
 module.exports = exports['default'];
 
 /***/ }),
-/* 320 */
+/* 323 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -48735,9 +49404,9 @@ var _react = __webpack_require__(2);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _propTypes = __webpack_require__(7);
+var _propTypes = __webpack_require__(8);
 
-var _universalCookie = __webpack_require__(39);
+var _universalCookie = __webpack_require__(40);
 
 var _universalCookie2 = _interopRequireDefault(_universalCookie);
 
@@ -48812,17 +49481,17 @@ function withCookies(WrapperComponent) {
 module.exports = exports['default'];
 
 /***/ }),
-/* 321 */
+/* 324 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-module.exports = __webpack_require__(335);
+module.exports = __webpack_require__(338);
 
 
 /***/ }),
-/* 322 */
+/* 325 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -48899,7 +49568,7 @@ var ARIADOMPropertyConfig = {
 module.exports = ARIADOMPropertyConfig;
 
 /***/ }),
-/* 323 */
+/* 326 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -48926,7 +49595,7 @@ var AutoFocusUtils = {
 module.exports = AutoFocusUtils;
 
 /***/ }),
-/* 324 */
+/* 327 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -48940,11 +49609,11 @@ module.exports = AutoFocusUtils;
 
 
 
-var EventPropagators = __webpack_require__(36);
-var ExecutionEnvironment = __webpack_require__(10);
-var FallbackCompositionState = __webpack_require__(330);
-var SyntheticCompositionEvent = __webpack_require__(373);
-var SyntheticInputEvent = __webpack_require__(376);
+var EventPropagators = __webpack_require__(37);
+var ExecutionEnvironment = __webpack_require__(12);
+var FallbackCompositionState = __webpack_require__(333);
+var SyntheticCompositionEvent = __webpack_require__(376);
+var SyntheticInputEvent = __webpack_require__(379);
 
 var END_KEYCODES = [9, 13, 27, 32]; // Tab, Return, Esc, Space
 var START_KEYCODE = 229;
@@ -49313,7 +49982,7 @@ var BeforeInputEventPlugin = {
 module.exports = BeforeInputEventPlugin;
 
 /***/ }),
-/* 325 */
+/* 328 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -49328,13 +49997,13 @@ module.exports = BeforeInputEventPlugin;
 
 
 var CSSProperty = __webpack_require__(193);
-var ExecutionEnvironment = __webpack_require__(10);
+var ExecutionEnvironment = __webpack_require__(12);
 var ReactInstrumentation = __webpack_require__(16);
 
-var camelizeStyleName = __webpack_require__(276);
-var dangerousStyleValue = __webpack_require__(383);
-var hyphenateStyleName = __webpack_require__(283);
-var memoizeStringOnly = __webpack_require__(286);
+var camelizeStyleName = __webpack_require__(279);
+var dangerousStyleValue = __webpack_require__(386);
+var hyphenateStyleName = __webpack_require__(286);
+var memoizeStringOnly = __webpack_require__(289);
 var warning = __webpack_require__(4);
 
 var processStyleName = memoizeStringOnly(function (styleName) {
@@ -49532,7 +50201,7 @@ module.exports = CSSPropertyOperations;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 326 */
+/* 329 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -49546,9 +50215,9 @@ module.exports = CSSPropertyOperations;
 
 
 
-var EventPluginHub = __webpack_require__(35);
-var EventPropagators = __webpack_require__(36);
-var ExecutionEnvironment = __webpack_require__(10);
+var EventPluginHub = __webpack_require__(36);
+var EventPropagators = __webpack_require__(37);
+var ExecutionEnvironment = __webpack_require__(12);
 var ReactDOMComponentTree = __webpack_require__(9);
 var ReactUpdates = __webpack_require__(18);
 var SyntheticEvent = __webpack_require__(20);
@@ -49847,7 +50516,7 @@ var ChangeEventPlugin = {
 module.exports = ChangeEventPlugin;
 
 /***/ }),
-/* 327 */
+/* 330 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -49863,10 +50532,10 @@ module.exports = ChangeEventPlugin;
 
 var _prodInvariant = __webpack_require__(5);
 
-var DOMLazyTree = __webpack_require__(30);
-var ExecutionEnvironment = __webpack_require__(10);
+var DOMLazyTree = __webpack_require__(31);
+var ExecutionEnvironment = __webpack_require__(12);
 
-var createNodesFromMarkup = __webpack_require__(279);
+var createNodesFromMarkup = __webpack_require__(282);
 var emptyFunction = __webpack_require__(17);
 var invariant = __webpack_require__(3);
 
@@ -49897,7 +50566,7 @@ module.exports = Danger;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 328 */
+/* 331 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -49926,7 +50595,7 @@ var DefaultEventPluginOrder = ['ResponderEventPlugin', 'SimpleEventPlugin', 'Tap
 module.exports = DefaultEventPluginOrder;
 
 /***/ }),
-/* 329 */
+/* 332 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -49940,9 +50609,9 @@ module.exports = DefaultEventPluginOrder;
 
 
 
-var EventPropagators = __webpack_require__(36);
+var EventPropagators = __webpack_require__(37);
 var ReactDOMComponentTree = __webpack_require__(9);
-var SyntheticMouseEvent = __webpack_require__(43);
+var SyntheticMouseEvent = __webpack_require__(44);
 
 var eventTypes = {
   mouseEnter: {
@@ -50027,7 +50696,7 @@ var EnterLeaveEventPlugin = {
 module.exports = EnterLeaveEventPlugin;
 
 /***/ }),
-/* 330 */
+/* 333 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -50041,7 +50710,7 @@ module.exports = EnterLeaveEventPlugin;
 
 
 
-var _assign = __webpack_require__(6);
+var _assign = __webpack_require__(7);
 
 var PooledClass = __webpack_require__(26);
 
@@ -50125,7 +50794,7 @@ PooledClass.addPoolingTo(FallbackCompositionState);
 module.exports = FallbackCompositionState;
 
 /***/ }),
-/* 331 */
+/* 334 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -50365,7 +51034,7 @@ var HTMLDOMPropertyConfig = {
 module.exports = HTMLDOMPropertyConfig;
 
 /***/ }),
-/* 332 */
+/* 335 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -50379,7 +51048,7 @@ module.exports = HTMLDOMPropertyConfig;
 
 
 
-var ReactReconciler = __webpack_require__(31);
+var ReactReconciler = __webpack_require__(32);
 
 var instantiateReactComponent = __webpack_require__(211);
 var KeyEscapeUtils = __webpack_require__(58);
@@ -50522,7 +51191,7 @@ module.exports = ReactChildReconciler;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 333 */
+/* 336 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -50537,7 +51206,7 @@ module.exports = ReactChildReconciler;
 
 
 var DOMChildrenOperations = __webpack_require__(55);
-var ReactDOMIDOperations = __webpack_require__(340);
+var ReactDOMIDOperations = __webpack_require__(343);
 
 /**
  * Abstracts away all functionality of the reconciler that requires knowledge of
@@ -50553,7 +51222,7 @@ var ReactComponentBrowserEnvironment = {
 module.exports = ReactComponentBrowserEnvironment;
 
 /***/ }),
-/* 334 */
+/* 337 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -50568,22 +51237,22 @@ module.exports = ReactComponentBrowserEnvironment;
 
 
 var _prodInvariant = __webpack_require__(5),
-    _assign = __webpack_require__(6);
+    _assign = __webpack_require__(7);
 
-var React = __webpack_require__(32);
+var React = __webpack_require__(33);
 var ReactComponentEnvironment = __webpack_require__(60);
 var ReactCurrentOwner = __webpack_require__(19);
 var ReactErrorUtils = __webpack_require__(61);
-var ReactInstanceMap = __webpack_require__(37);
+var ReactInstanceMap = __webpack_require__(38);
 var ReactInstrumentation = __webpack_require__(16);
 var ReactNodeTypes = __webpack_require__(203);
-var ReactReconciler = __webpack_require__(31);
+var ReactReconciler = __webpack_require__(32);
 
 if (process.env.NODE_ENV !== 'production') {
-  var checkReactTypeSpec = __webpack_require__(382);
+  var checkReactTypeSpec = __webpack_require__(385);
 }
 
-var emptyObject = __webpack_require__(33);
+var emptyObject = __webpack_require__(34);
 var invariant = __webpack_require__(3);
 var shallowEqual = __webpack_require__(53);
 var shouldUpdateReactComponent = __webpack_require__(68);
@@ -51457,7 +52126,7 @@ module.exports = ReactCompositeComponent;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 335 */
+/* 338 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -51474,15 +52143,15 @@ module.exports = ReactCompositeComponent;
 
 
 var ReactDOMComponentTree = __webpack_require__(9);
-var ReactDefaultInjection = __webpack_require__(352);
+var ReactDefaultInjection = __webpack_require__(355);
 var ReactMount = __webpack_require__(202);
-var ReactReconciler = __webpack_require__(31);
+var ReactReconciler = __webpack_require__(32);
 var ReactUpdates = __webpack_require__(18);
-var ReactVersion = __webpack_require__(367);
+var ReactVersion = __webpack_require__(370);
 
-var findDOMNode = __webpack_require__(384);
+var findDOMNode = __webpack_require__(387);
 var getHostComponentFromComposite = __webpack_require__(208);
-var renderSubtreeIntoContainer = __webpack_require__(391);
+var renderSubtreeIntoContainer = __webpack_require__(394);
 var warning = __webpack_require__(4);
 
 ReactDefaultInjection.inject();
@@ -51523,7 +52192,7 @@ if (typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ !== 'undefined' && typeof __REACT_DEVT
 }
 
 if (process.env.NODE_ENV !== 'production') {
-  var ExecutionEnvironment = __webpack_require__(10);
+  var ExecutionEnvironment = __webpack_require__(12);
   if (ExecutionEnvironment.canUseDOM && window.top === window.self) {
     // First check if devtools is not installed
     if (typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ === 'undefined') {
@@ -51559,9 +52228,9 @@ if (process.env.NODE_ENV !== 'production') {
 
 if (process.env.NODE_ENV !== 'production') {
   var ReactInstrumentation = __webpack_require__(16);
-  var ReactDOMUnknownPropertyHook = __webpack_require__(349);
-  var ReactDOMNullInputValuePropHook = __webpack_require__(343);
-  var ReactDOMInvalidARIAHook = __webpack_require__(342);
+  var ReactDOMUnknownPropertyHook = __webpack_require__(352);
+  var ReactDOMNullInputValuePropHook = __webpack_require__(346);
+  var ReactDOMInvalidARIAHook = __webpack_require__(345);
 
   ReactInstrumentation.debugTool.addHook(ReactDOMUnknownPropertyHook);
   ReactInstrumentation.debugTool.addHook(ReactDOMNullInputValuePropHook);
@@ -51572,7 +52241,7 @@ module.exports = ReactDOM;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 336 */
+/* 339 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -51589,29 +52258,29 @@ module.exports = ReactDOM;
 
 
 var _prodInvariant = __webpack_require__(5),
-    _assign = __webpack_require__(6);
+    _assign = __webpack_require__(7);
 
-var AutoFocusUtils = __webpack_require__(323);
-var CSSPropertyOperations = __webpack_require__(325);
-var DOMLazyTree = __webpack_require__(30);
+var AutoFocusUtils = __webpack_require__(326);
+var CSSPropertyOperations = __webpack_require__(328);
+var DOMLazyTree = __webpack_require__(31);
 var DOMNamespaces = __webpack_require__(56);
 var DOMProperty = __webpack_require__(22);
 var DOMPropertyOperations = __webpack_require__(195);
-var EventPluginHub = __webpack_require__(35);
-var EventPluginRegistry = __webpack_require__(41);
-var ReactBrowserEventEmitter = __webpack_require__(42);
+var EventPluginHub = __webpack_require__(36);
+var EventPluginRegistry = __webpack_require__(42);
+var ReactBrowserEventEmitter = __webpack_require__(43);
 var ReactDOMComponentFlags = __webpack_require__(196);
 var ReactDOMComponentTree = __webpack_require__(9);
-var ReactDOMInput = __webpack_require__(341);
-var ReactDOMOption = __webpack_require__(344);
+var ReactDOMInput = __webpack_require__(344);
+var ReactDOMOption = __webpack_require__(347);
 var ReactDOMSelect = __webpack_require__(197);
-var ReactDOMTextarea = __webpack_require__(347);
+var ReactDOMTextarea = __webpack_require__(350);
 var ReactInstrumentation = __webpack_require__(16);
-var ReactMultiChild = __webpack_require__(360);
-var ReactServerRenderingTransaction = __webpack_require__(365);
+var ReactMultiChild = __webpack_require__(363);
+var ReactServerRenderingTransaction = __webpack_require__(368);
 
 var emptyFunction = __webpack_require__(17);
-var escapeTextContentForBrowser = __webpack_require__(45);
+var escapeTextContentForBrowser = __webpack_require__(46);
 var invariant = __webpack_require__(3);
 var isEventSupported = __webpack_require__(67);
 var shallowEqual = __webpack_require__(53);
@@ -52590,7 +53259,7 @@ module.exports = ReactDOMComponent;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 337 */
+/* 340 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -52627,7 +53296,7 @@ module.exports = ReactDOMContainerInfo;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 338 */
+/* 341 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -52641,9 +53310,9 @@ module.exports = ReactDOMContainerInfo;
 
 
 
-var _assign = __webpack_require__(6);
+var _assign = __webpack_require__(7);
 
-var DOMLazyTree = __webpack_require__(30);
+var DOMLazyTree = __webpack_require__(31);
 var ReactDOMComponentTree = __webpack_require__(9);
 
 var ReactDOMEmptyComponent = function (instantiate) {
@@ -52690,7 +53359,7 @@ _assign(ReactDOMEmptyComponent.prototype, {
 module.exports = ReactDOMEmptyComponent;
 
 /***/ }),
-/* 339 */
+/* 342 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -52712,7 +53381,7 @@ var ReactDOMFeatureFlags = {
 module.exports = ReactDOMFeatureFlags;
 
 /***/ }),
-/* 340 */
+/* 343 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -52748,7 +53417,7 @@ var ReactDOMIDOperations = {
 module.exports = ReactDOMIDOperations;
 
 /***/ }),
-/* 341 */
+/* 344 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -52763,7 +53432,7 @@ module.exports = ReactDOMIDOperations;
 
 
 var _prodInvariant = __webpack_require__(5),
-    _assign = __webpack_require__(6);
+    _assign = __webpack_require__(7);
 
 var DOMPropertyOperations = __webpack_require__(195);
 var LinkedValueUtils = __webpack_require__(59);
@@ -53039,7 +53708,7 @@ module.exports = ReactDOMInput;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 342 */
+/* 345 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -53136,7 +53805,7 @@ module.exports = ReactDOMInvalidARIAHook;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 343 */
+/* 346 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -53183,7 +53852,7 @@ module.exports = ReactDOMNullInputValuePropHook;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 344 */
+/* 347 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -53197,9 +53866,9 @@ module.exports = ReactDOMNullInputValuePropHook;
 
 
 
-var _assign = __webpack_require__(6);
+var _assign = __webpack_require__(7);
 
-var React = __webpack_require__(32);
+var React = __webpack_require__(33);
 var ReactDOMComponentTree = __webpack_require__(9);
 var ReactDOMSelect = __webpack_require__(197);
 
@@ -53309,7 +53978,7 @@ module.exports = ReactDOMOption;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 345 */
+/* 348 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -53323,9 +53992,9 @@ module.exports = ReactDOMOption;
 
 
 
-var ExecutionEnvironment = __webpack_require__(10);
+var ExecutionEnvironment = __webpack_require__(12);
 
-var getNodeForCharacterOffset = __webpack_require__(388);
+var getNodeForCharacterOffset = __webpack_require__(391);
 var getTextContentAccessor = __webpack_require__(209);
 
 /**
@@ -53524,7 +54193,7 @@ var ReactDOMSelection = {
 module.exports = ReactDOMSelection;
 
 /***/ }),
-/* 346 */
+/* 349 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -53539,13 +54208,13 @@ module.exports = ReactDOMSelection;
 
 
 var _prodInvariant = __webpack_require__(5),
-    _assign = __webpack_require__(6);
+    _assign = __webpack_require__(7);
 
 var DOMChildrenOperations = __webpack_require__(55);
-var DOMLazyTree = __webpack_require__(30);
+var DOMLazyTree = __webpack_require__(31);
 var ReactDOMComponentTree = __webpack_require__(9);
 
-var escapeTextContentForBrowser = __webpack_require__(45);
+var escapeTextContentForBrowser = __webpack_require__(46);
 var invariant = __webpack_require__(3);
 var validateDOMNesting = __webpack_require__(69);
 
@@ -53690,7 +54359,7 @@ module.exports = ReactDOMTextComponent;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 347 */
+/* 350 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -53705,7 +54374,7 @@ module.exports = ReactDOMTextComponent;
 
 
 var _prodInvariant = __webpack_require__(5),
-    _assign = __webpack_require__(6);
+    _assign = __webpack_require__(7);
 
 var LinkedValueUtils = __webpack_require__(59);
 var ReactDOMComponentTree = __webpack_require__(9);
@@ -53854,7 +54523,7 @@ module.exports = ReactDOMTextarea;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 348 */
+/* 351 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -53994,7 +54663,7 @@ module.exports = {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 349 */
+/* 352 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -54009,7 +54678,7 @@ module.exports = {
 
 
 var DOMProperty = __webpack_require__(22);
-var EventPluginRegistry = __webpack_require__(41);
+var EventPluginRegistry = __webpack_require__(42);
 var ReactComponentTreeHook = __webpack_require__(14);
 
 var warning = __webpack_require__(4);
@@ -54110,7 +54779,7 @@ module.exports = ReactDOMUnknownPropertyHook;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 350 */
+/* 353 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -54125,12 +54794,12 @@ module.exports = ReactDOMUnknownPropertyHook;
 
 
 
-var ReactInvalidSetStateWarningHook = __webpack_require__(358);
-var ReactHostOperationHistoryHook = __webpack_require__(356);
+var ReactInvalidSetStateWarningHook = __webpack_require__(361);
+var ReactHostOperationHistoryHook = __webpack_require__(359);
 var ReactComponentTreeHook = __webpack_require__(14);
-var ExecutionEnvironment = __webpack_require__(10);
+var ExecutionEnvironment = __webpack_require__(12);
 
-var performanceNow = __webpack_require__(288);
+var performanceNow = __webpack_require__(291);
 var warning = __webpack_require__(4);
 
 var hooks = [];
@@ -54475,7 +55144,7 @@ module.exports = ReactDebugTool;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 351 */
+/* 354 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -54489,10 +55158,10 @@ module.exports = ReactDebugTool;
 
 
 
-var _assign = __webpack_require__(6);
+var _assign = __webpack_require__(7);
 
 var ReactUpdates = __webpack_require__(18);
-var Transaction = __webpack_require__(44);
+var Transaction = __webpack_require__(45);
 
 var emptyFunction = __webpack_require__(17);
 
@@ -54546,7 +55215,7 @@ var ReactDefaultBatchingStrategy = {
 module.exports = ReactDefaultBatchingStrategy;
 
 /***/ }),
-/* 352 */
+/* 355 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -54560,25 +55229,25 @@ module.exports = ReactDefaultBatchingStrategy;
 
 
 
-var ARIADOMPropertyConfig = __webpack_require__(322);
-var BeforeInputEventPlugin = __webpack_require__(324);
-var ChangeEventPlugin = __webpack_require__(326);
-var DefaultEventPluginOrder = __webpack_require__(328);
-var EnterLeaveEventPlugin = __webpack_require__(329);
-var HTMLDOMPropertyConfig = __webpack_require__(331);
-var ReactComponentBrowserEnvironment = __webpack_require__(333);
-var ReactDOMComponent = __webpack_require__(336);
+var ARIADOMPropertyConfig = __webpack_require__(325);
+var BeforeInputEventPlugin = __webpack_require__(327);
+var ChangeEventPlugin = __webpack_require__(329);
+var DefaultEventPluginOrder = __webpack_require__(331);
+var EnterLeaveEventPlugin = __webpack_require__(332);
+var HTMLDOMPropertyConfig = __webpack_require__(334);
+var ReactComponentBrowserEnvironment = __webpack_require__(336);
+var ReactDOMComponent = __webpack_require__(339);
 var ReactDOMComponentTree = __webpack_require__(9);
-var ReactDOMEmptyComponent = __webpack_require__(338);
-var ReactDOMTreeTraversal = __webpack_require__(348);
-var ReactDOMTextComponent = __webpack_require__(346);
-var ReactDefaultBatchingStrategy = __webpack_require__(351);
-var ReactEventListener = __webpack_require__(355);
-var ReactInjection = __webpack_require__(357);
-var ReactReconcileTransaction = __webpack_require__(363);
-var SVGDOMPropertyConfig = __webpack_require__(368);
-var SelectEventPlugin = __webpack_require__(369);
-var SimpleEventPlugin = __webpack_require__(370);
+var ReactDOMEmptyComponent = __webpack_require__(341);
+var ReactDOMTreeTraversal = __webpack_require__(351);
+var ReactDOMTextComponent = __webpack_require__(349);
+var ReactDefaultBatchingStrategy = __webpack_require__(354);
+var ReactEventListener = __webpack_require__(358);
+var ReactInjection = __webpack_require__(360);
+var ReactReconcileTransaction = __webpack_require__(366);
+var SVGDOMPropertyConfig = __webpack_require__(371);
+var SelectEventPlugin = __webpack_require__(372);
+var SimpleEventPlugin = __webpack_require__(373);
 
 var alreadyInjected = false;
 
@@ -54635,7 +55304,7 @@ module.exports = {
 };
 
 /***/ }),
-/* 353 */
+/* 356 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -54658,7 +55327,7 @@ var REACT_ELEMENT_TYPE = typeof Symbol === 'function' && Symbol['for'] && Symbol
 module.exports = REACT_ELEMENT_TYPE;
 
 /***/ }),
-/* 354 */
+/* 357 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -54672,7 +55341,7 @@ module.exports = REACT_ELEMENT_TYPE;
 
 
 
-var EventPluginHub = __webpack_require__(35);
+var EventPluginHub = __webpack_require__(36);
 
 function runEventQueueInBatch(events) {
   EventPluginHub.enqueueEvents(events);
@@ -54693,7 +55362,7 @@ var ReactEventEmitterMixin = {
 module.exports = ReactEventEmitterMixin;
 
 /***/ }),
-/* 355 */
+/* 358 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -54707,16 +55376,16 @@ module.exports = ReactEventEmitterMixin;
 
 
 
-var _assign = __webpack_require__(6);
+var _assign = __webpack_require__(7);
 
 var EventListener = __webpack_require__(82);
-var ExecutionEnvironment = __webpack_require__(10);
+var ExecutionEnvironment = __webpack_require__(12);
 var PooledClass = __webpack_require__(26);
 var ReactDOMComponentTree = __webpack_require__(9);
 var ReactUpdates = __webpack_require__(18);
 
 var getEventTarget = __webpack_require__(66);
-var getUnboundedScrollPosition = __webpack_require__(281);
+var getUnboundedScrollPosition = __webpack_require__(284);
 
 /**
  * Find the deepest React component completely containing the root of the
@@ -54851,7 +55520,7 @@ var ReactEventListener = {
 module.exports = ReactEventListener;
 
 /***/ }),
-/* 356 */
+/* 359 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -54888,7 +55557,7 @@ var ReactHostOperationHistoryHook = {
 module.exports = ReactHostOperationHistoryHook;
 
 /***/ }),
-/* 357 */
+/* 360 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -54903,11 +55572,11 @@ module.exports = ReactHostOperationHistoryHook;
 
 
 var DOMProperty = __webpack_require__(22);
-var EventPluginHub = __webpack_require__(35);
+var EventPluginHub = __webpack_require__(36);
 var EventPluginUtils = __webpack_require__(57);
 var ReactComponentEnvironment = __webpack_require__(60);
 var ReactEmptyComponent = __webpack_require__(198);
-var ReactBrowserEventEmitter = __webpack_require__(42);
+var ReactBrowserEventEmitter = __webpack_require__(43);
 var ReactHostComponent = __webpack_require__(200);
 var ReactUpdates = __webpack_require__(18);
 
@@ -54925,7 +55594,7 @@ var ReactInjection = {
 module.exports = ReactInjection;
 
 /***/ }),
-/* 358 */
+/* 361 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -54966,7 +55635,7 @@ module.exports = ReactInvalidSetStateWarningHook;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 359 */
+/* 362 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -54980,7 +55649,7 @@ module.exports = ReactInvalidSetStateWarningHook;
 
 
 
-var adler32 = __webpack_require__(381);
+var adler32 = __webpack_require__(384);
 
 var TAG_END = /\/?>/;
 var COMMENT_START = /^<\!\-\-/;
@@ -55019,7 +55688,7 @@ var ReactMarkupChecksum = {
 module.exports = ReactMarkupChecksum;
 
 /***/ }),
-/* 360 */
+/* 363 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -55036,15 +55705,15 @@ module.exports = ReactMarkupChecksum;
 var _prodInvariant = __webpack_require__(5);
 
 var ReactComponentEnvironment = __webpack_require__(60);
-var ReactInstanceMap = __webpack_require__(37);
+var ReactInstanceMap = __webpack_require__(38);
 var ReactInstrumentation = __webpack_require__(16);
 
 var ReactCurrentOwner = __webpack_require__(19);
-var ReactReconciler = __webpack_require__(31);
-var ReactChildReconciler = __webpack_require__(332);
+var ReactReconciler = __webpack_require__(32);
+var ReactChildReconciler = __webpack_require__(335);
 
 var emptyFunction = __webpack_require__(17);
-var flattenChildren = __webpack_require__(385);
+var flattenChildren = __webpack_require__(388);
 var invariant = __webpack_require__(3);
 
 /**
@@ -55469,7 +56138,7 @@ module.exports = ReactMultiChild;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 361 */
+/* 364 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -55566,7 +56235,7 @@ module.exports = ReactOwner;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 362 */
+/* 365 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -55595,7 +56264,7 @@ module.exports = ReactPropTypeLocationNames;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 363 */
+/* 366 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -55609,14 +56278,14 @@ module.exports = ReactPropTypeLocationNames;
 
 
 
-var _assign = __webpack_require__(6);
+var _assign = __webpack_require__(7);
 
 var CallbackQueue = __webpack_require__(194);
 var PooledClass = __webpack_require__(26);
-var ReactBrowserEventEmitter = __webpack_require__(42);
+var ReactBrowserEventEmitter = __webpack_require__(43);
 var ReactInputSelection = __webpack_require__(201);
 var ReactInstrumentation = __webpack_require__(16);
-var Transaction = __webpack_require__(44);
+var Transaction = __webpack_require__(45);
 var ReactUpdateQueue = __webpack_require__(62);
 
 /**
@@ -55777,7 +56446,7 @@ module.exports = ReactReconcileTransaction;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 364 */
+/* 367 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -55792,7 +56461,7 @@ module.exports = ReactReconcileTransaction;
 
 
 
-var ReactOwner = __webpack_require__(361);
+var ReactOwner = __webpack_require__(364);
 
 var ReactRef = {};
 
@@ -55869,7 +56538,7 @@ ReactRef.detachRefs = function (instance, element) {
 module.exports = ReactRef;
 
 /***/ }),
-/* 365 */
+/* 368 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -55883,12 +56552,12 @@ module.exports = ReactRef;
 
 
 
-var _assign = __webpack_require__(6);
+var _assign = __webpack_require__(7);
 
 var PooledClass = __webpack_require__(26);
-var Transaction = __webpack_require__(44);
+var Transaction = __webpack_require__(45);
 var ReactInstrumentation = __webpack_require__(16);
-var ReactServerUpdateQueue = __webpack_require__(366);
+var ReactServerUpdateQueue = __webpack_require__(369);
 
 /**
  * Executed within the scope of the `Transaction` instance. Consider these as
@@ -55963,7 +56632,7 @@ module.exports = ReactServerRenderingTransaction;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 366 */
+/* 369 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -56106,7 +56775,7 @@ module.exports = ReactServerUpdateQueue;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 367 */
+/* 370 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -56123,7 +56792,7 @@ module.exports = ReactServerUpdateQueue;
 module.exports = '15.6.2';
 
 /***/ }),
-/* 368 */
+/* 371 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -56428,7 +57097,7 @@ Object.keys(ATTRS).forEach(function (key) {
 module.exports = SVGDOMPropertyConfig;
 
 /***/ }),
-/* 369 */
+/* 372 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -56442,8 +57111,8 @@ module.exports = SVGDOMPropertyConfig;
 
 
 
-var EventPropagators = __webpack_require__(36);
-var ExecutionEnvironment = __webpack_require__(10);
+var EventPropagators = __webpack_require__(37);
+var ExecutionEnvironment = __webpack_require__(12);
 var ReactDOMComponentTree = __webpack_require__(9);
 var ReactInputSelection = __webpack_require__(201);
 var SyntheticEvent = __webpack_require__(20);
@@ -56619,7 +57288,7 @@ var SelectEventPlugin = {
 module.exports = SelectEventPlugin;
 
 /***/ }),
-/* 370 */
+/* 373 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -56637,19 +57306,19 @@ module.exports = SelectEventPlugin;
 var _prodInvariant = __webpack_require__(5);
 
 var EventListener = __webpack_require__(82);
-var EventPropagators = __webpack_require__(36);
+var EventPropagators = __webpack_require__(37);
 var ReactDOMComponentTree = __webpack_require__(9);
-var SyntheticAnimationEvent = __webpack_require__(371);
-var SyntheticClipboardEvent = __webpack_require__(372);
+var SyntheticAnimationEvent = __webpack_require__(374);
+var SyntheticClipboardEvent = __webpack_require__(375);
 var SyntheticEvent = __webpack_require__(20);
-var SyntheticFocusEvent = __webpack_require__(375);
-var SyntheticKeyboardEvent = __webpack_require__(377);
-var SyntheticMouseEvent = __webpack_require__(43);
-var SyntheticDragEvent = __webpack_require__(374);
-var SyntheticTouchEvent = __webpack_require__(378);
-var SyntheticTransitionEvent = __webpack_require__(379);
-var SyntheticUIEvent = __webpack_require__(38);
-var SyntheticWheelEvent = __webpack_require__(380);
+var SyntheticFocusEvent = __webpack_require__(378);
+var SyntheticKeyboardEvent = __webpack_require__(380);
+var SyntheticMouseEvent = __webpack_require__(44);
+var SyntheticDragEvent = __webpack_require__(377);
+var SyntheticTouchEvent = __webpack_require__(381);
+var SyntheticTransitionEvent = __webpack_require__(382);
+var SyntheticUIEvent = __webpack_require__(39);
+var SyntheticWheelEvent = __webpack_require__(383);
 
 var emptyFunction = __webpack_require__(17);
 var getEventCharCode = __webpack_require__(64);
@@ -56849,7 +57518,7 @@ module.exports = SimpleEventPlugin;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 371 */
+/* 374 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -56891,7 +57560,7 @@ SyntheticEvent.augmentClass(SyntheticAnimationEvent, AnimationEventInterface);
 module.exports = SyntheticAnimationEvent;
 
 /***/ }),
-/* 372 */
+/* 375 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -56932,7 +57601,7 @@ SyntheticEvent.augmentClass(SyntheticClipboardEvent, ClipboardEventInterface);
 module.exports = SyntheticClipboardEvent;
 
 /***/ }),
-/* 373 */
+/* 376 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -56971,7 +57640,7 @@ SyntheticEvent.augmentClass(SyntheticCompositionEvent, CompositionEventInterface
 module.exports = SyntheticCompositionEvent;
 
 /***/ }),
-/* 374 */
+/* 377 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -56985,7 +57654,7 @@ module.exports = SyntheticCompositionEvent;
 
 
 
-var SyntheticMouseEvent = __webpack_require__(43);
+var SyntheticMouseEvent = __webpack_require__(44);
 
 /**
  * @interface DragEvent
@@ -57010,7 +57679,7 @@ SyntheticMouseEvent.augmentClass(SyntheticDragEvent, DragEventInterface);
 module.exports = SyntheticDragEvent;
 
 /***/ }),
-/* 375 */
+/* 378 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -57024,7 +57693,7 @@ module.exports = SyntheticDragEvent;
 
 
 
-var SyntheticUIEvent = __webpack_require__(38);
+var SyntheticUIEvent = __webpack_require__(39);
 
 /**
  * @interface FocusEvent
@@ -57049,7 +57718,7 @@ SyntheticUIEvent.augmentClass(SyntheticFocusEvent, FocusEventInterface);
 module.exports = SyntheticFocusEvent;
 
 /***/ }),
-/* 376 */
+/* 379 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -57089,7 +57758,7 @@ SyntheticEvent.augmentClass(SyntheticInputEvent, InputEventInterface);
 module.exports = SyntheticInputEvent;
 
 /***/ }),
-/* 377 */
+/* 380 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -57103,10 +57772,10 @@ module.exports = SyntheticInputEvent;
 
 
 
-var SyntheticUIEvent = __webpack_require__(38);
+var SyntheticUIEvent = __webpack_require__(39);
 
 var getEventCharCode = __webpack_require__(64);
-var getEventKey = __webpack_require__(386);
+var getEventKey = __webpack_require__(389);
 var getEventModifierState = __webpack_require__(65);
 
 /**
@@ -57176,7 +57845,7 @@ SyntheticUIEvent.augmentClass(SyntheticKeyboardEvent, KeyboardEventInterface);
 module.exports = SyntheticKeyboardEvent;
 
 /***/ }),
-/* 378 */
+/* 381 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -57190,7 +57859,7 @@ module.exports = SyntheticKeyboardEvent;
 
 
 
-var SyntheticUIEvent = __webpack_require__(38);
+var SyntheticUIEvent = __webpack_require__(39);
 
 var getEventModifierState = __webpack_require__(65);
 
@@ -57224,7 +57893,7 @@ SyntheticUIEvent.augmentClass(SyntheticTouchEvent, TouchEventInterface);
 module.exports = SyntheticTouchEvent;
 
 /***/ }),
-/* 379 */
+/* 382 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -57266,7 +57935,7 @@ SyntheticEvent.augmentClass(SyntheticTransitionEvent, TransitionEventInterface);
 module.exports = SyntheticTransitionEvent;
 
 /***/ }),
-/* 380 */
+/* 383 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -57280,7 +57949,7 @@ module.exports = SyntheticTransitionEvent;
 
 
 
-var SyntheticMouseEvent = __webpack_require__(43);
+var SyntheticMouseEvent = __webpack_require__(44);
 
 /**
  * @interface WheelEvent
@@ -57320,7 +57989,7 @@ SyntheticMouseEvent.augmentClass(SyntheticWheelEvent, WheelEventInterface);
 module.exports = SyntheticWheelEvent;
 
 /***/ }),
-/* 381 */
+/* 384 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -57367,7 +58036,7 @@ function adler32(data) {
 module.exports = adler32;
 
 /***/ }),
-/* 382 */
+/* 385 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -57383,7 +58052,7 @@ module.exports = adler32;
 
 var _prodInvariant = __webpack_require__(5);
 
-var ReactPropTypeLocationNames = __webpack_require__(362);
+var ReactPropTypeLocationNames = __webpack_require__(365);
 var ReactPropTypesSecret = __webpack_require__(204);
 
 var invariant = __webpack_require__(3);
@@ -57458,7 +58127,7 @@ module.exports = checkReactTypeSpec;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 383 */
+/* 386 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -57541,7 +58210,7 @@ module.exports = dangerousStyleValue;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 384 */
+/* 387 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -57559,7 +58228,7 @@ var _prodInvariant = __webpack_require__(5);
 
 var ReactCurrentOwner = __webpack_require__(19);
 var ReactDOMComponentTree = __webpack_require__(9);
-var ReactInstanceMap = __webpack_require__(37);
+var ReactInstanceMap = __webpack_require__(38);
 
 var getHostComponentFromComposite = __webpack_require__(208);
 var invariant = __webpack_require__(3);
@@ -57605,7 +58274,7 @@ module.exports = findDOMNode;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 385 */
+/* 388 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -57685,7 +58354,7 @@ module.exports = flattenChildren;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 386 */
+/* 389 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -57800,7 +58469,7 @@ function getEventKey(nativeEvent) {
 module.exports = getEventKey;
 
 /***/ }),
-/* 387 */
+/* 390 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -57844,7 +58513,7 @@ function getIteratorFn(maybeIterable) {
 module.exports = getIteratorFn;
 
 /***/ }),
-/* 388 */
+/* 391 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -57921,7 +58590,7 @@ function getNodeForCharacterOffset(root, offset) {
 module.exports = getNodeForCharacterOffset;
 
 /***/ }),
-/* 389 */
+/* 392 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -57935,7 +58604,7 @@ module.exports = getNodeForCharacterOffset;
 
 
 
-var ExecutionEnvironment = __webpack_require__(10);
+var ExecutionEnvironment = __webpack_require__(12);
 
 /**
  * Generate a mapping of standard vendor prefixes using the defined style property and event name.
@@ -58025,7 +58694,7 @@ function getVendorPrefixedEventName(eventName) {
 module.exports = getVendorPrefixedEventName;
 
 /***/ }),
-/* 390 */
+/* 393 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -58039,7 +58708,7 @@ module.exports = getVendorPrefixedEventName;
 
 
 
-var escapeTextContentForBrowser = __webpack_require__(45);
+var escapeTextContentForBrowser = __webpack_require__(46);
 
 /**
  * Escapes attribute value to prevent scripting attacks.
@@ -58054,7 +58723,7 @@ function quoteAttributeValueForBrowser(value) {
 module.exports = quoteAttributeValueForBrowser;
 
 /***/ }),
-/* 391 */
+/* 394 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -58073,7 +58742,7 @@ var ReactMount = __webpack_require__(202);
 module.exports = ReactMount.renderSubtreeIntoContainer;
 
 /***/ }),
-/* 392 */
+/* 395 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -58087,7 +58756,7 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _react = __webpack_require__(2);
 
-var _propTypes = __webpack_require__(7);
+var _propTypes = __webpack_require__(8);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
@@ -58154,7 +58823,7 @@ I18nextProvider.childContextTypes = {
 exports.default = I18nextProvider;
 
 /***/ }),
-/* 393 */
+/* 396 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -58172,7 +58841,7 @@ var _react = __webpack_require__(2);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _propTypes = __webpack_require__(7);
+var _propTypes = __webpack_require__(8);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
@@ -58289,7 +58958,7 @@ Interpolate.contextTypes = {
 exports.default = Interpolate;
 
 /***/ }),
-/* 394 */
+/* 397 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -58368,7 +59037,7 @@ function loadNamespaces(_ref) {
 }
 
 /***/ }),
-/* 395 */
+/* 398 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -58388,7 +59057,7 @@ var _react = __webpack_require__(2);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _propTypes = __webpack_require__(7);
+var _propTypes = __webpack_require__(8);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
@@ -58555,7 +59224,7 @@ Trans.contextTypes = {
 };
 
 /***/ }),
-/* 396 */
+/* 399 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -58575,11 +59244,11 @@ var _react = __webpack_require__(2);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _propTypes = __webpack_require__(7);
+var _propTypes = __webpack_require__(8);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _hoistNonReactStatics = __webpack_require__(397);
+var _hoistNonReactStatics = __webpack_require__(400);
 
 var _hoistNonReactStatics2 = _interopRequireDefault(_hoistNonReactStatics);
 
@@ -58793,7 +59462,7 @@ function translate(namespaces) {
 }
 
 /***/ }),
-/* 397 */
+/* 400 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -58850,7 +59519,7 @@ module.exports = function hoistNonReactStatics(targetComponent, sourceComponent,
 
 
 /***/ }),
-/* 398 */
+/* 401 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -59094,7 +59763,7 @@ exports.isSuspense = isSuspense;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 399 */
+/* 402 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -59116,7 +59785,7 @@ exports.isElement=function(a){return"object"===typeof a&&null!==a&&a.$$typeof===
 
 
 /***/ }),
-/* 400 */
+/* 403 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -59124,9 +59793,9 @@ exports.isElement=function(a){return"object"===typeof a&&null!==a&&a.$$typeof===
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_warning___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_warning__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_prop_types__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_history__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_history__ = __webpack_require__(30);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Router__ = __webpack_require__(70);
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -59182,7 +59851,7 @@ BrowserRouter.propTypes = {
 /* harmony default export */ __webpack_exports__["a"] = (BrowserRouter);
 
 /***/ }),
-/* 401 */
+/* 404 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -59190,9 +59859,9 @@ BrowserRouter.propTypes = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_warning___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_warning__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_prop_types__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_history__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_history__ = __webpack_require__(30);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Router__ = __webpack_require__(70);
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -59247,7 +59916,7 @@ HashRouter.propTypes = {
 /* harmony default export */ __webpack_exports__["a"] = (HashRouter);
 
 /***/ }),
-/* 402 */
+/* 405 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -59258,13 +59927,13 @@ HashRouter.propTypes = {
 /* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_react_router_es_MemoryRouter__["a" /* default */]);
 
 /***/ }),
-/* 403 */
+/* 406 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Route__ = __webpack_require__(217);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Link__ = __webpack_require__(216);
@@ -59344,7 +60013,7 @@ NavLink.defaultProps = {
 /* harmony default export */ __webpack_exports__["a"] = (NavLink);
 
 /***/ }),
-/* 404 */
+/* 407 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -59355,7 +60024,7 @@ NavLink.defaultProps = {
 /* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_react_router_es_Prompt__["a" /* default */]);
 
 /***/ }),
-/* 405 */
+/* 408 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -59366,7 +60035,7 @@ NavLink.defaultProps = {
 /* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_react_router_es_Redirect__["a" /* default */]);
 
 /***/ }),
-/* 406 */
+/* 409 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -59377,7 +60046,7 @@ NavLink.defaultProps = {
 /* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_react_router_es_StaticRouter__["a" /* default */]);
 
 /***/ }),
-/* 407 */
+/* 410 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -59388,7 +60057,7 @@ NavLink.defaultProps = {
 /* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_react_router_es_Switch__["a" /* default */]);
 
 /***/ }),
-/* 408 */
+/* 411 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -59399,18 +60068,18 @@ NavLink.defaultProps = {
 /* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_react_router_es_generatePath__["a" /* default */]);
 
 /***/ }),
-/* 409 */
+/* 412 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_matchPath__ = __webpack_require__(48);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_matchPath__ = __webpack_require__(49);
 // Written in this round about way for babel-transform-imports
 
 
 /* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_react_router_es_matchPath__["a" /* default */]);
 
 /***/ }),
-/* 410 */
+/* 413 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -59421,7 +60090,7 @@ NavLink.defaultProps = {
 /* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_react_router_es_withRouter__["a" /* default */]);
 
 /***/ }),
-/* 411 */
+/* 414 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -59434,7 +60103,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Redirect", function() { return __WEBPACK_IMPORTED_MODULE_2__Redirect__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Route__ = __webpack_require__(71);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Route", function() { return __WEBPACK_IMPORTED_MODULE_3__Route__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Router__ = __webpack_require__(47);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Router__ = __webpack_require__(48);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Router", function() { return __WEBPACK_IMPORTED_MODULE_4__Router__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__StaticRouter__ = __webpack_require__(221);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "StaticRouter", function() { return __WEBPACK_IMPORTED_MODULE_5__StaticRouter__["a"]; });
@@ -59442,7 +60111,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Switch", function() { return __WEBPACK_IMPORTED_MODULE_6__Switch__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__generatePath__ = __webpack_require__(72);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "generatePath", function() { return __WEBPACK_IMPORTED_MODULE_7__generatePath__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__matchPath__ = __webpack_require__(48);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__matchPath__ = __webpack_require__(49);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "matchPath", function() { return __WEBPACK_IMPORTED_MODULE_8__matchPath__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__withRouter__ = __webpack_require__(223);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "withRouter", function() { return __WEBPACK_IMPORTED_MODULE_9__withRouter__["a"]; });
@@ -59468,7 +60137,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 /***/ }),
-/* 412 */
+/* 415 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -59482,7 +60151,7 @@ var _react = __webpack_require__(2);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _propTypes = __webpack_require__(7);
+var _propTypes = __webpack_require__(8);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
@@ -59510,7 +60179,7 @@ DefaultCloseButton.propTypes = {
 exports.default = DefaultCloseButton;
 
 /***/ }),
-/* 413 */
+/* 416 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -59524,11 +60193,11 @@ var _react = __webpack_require__(2);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _propTypes = __webpack_require__(7);
+var _propTypes = __webpack_require__(8);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _config = __webpack_require__(49);
+var _config = __webpack_require__(50);
 
 var _config2 = _interopRequireDefault(_config);
 
@@ -59593,7 +60262,7 @@ ProgressBar.defaultProps = {
 exports.default = ProgressBar;
 
 /***/ }),
-/* 414 */
+/* 417 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -59609,15 +60278,15 @@ var _react = __webpack_require__(2);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _propTypes = __webpack_require__(7);
+var _propTypes = __webpack_require__(8);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _ProgressBar = __webpack_require__(413);
+var _ProgressBar = __webpack_require__(416);
 
 var _ProgressBar2 = _interopRequireDefault(_ProgressBar);
 
-var _config = __webpack_require__(49);
+var _config = __webpack_require__(50);
 
 var _config2 = _interopRequireDefault(_config);
 
@@ -59768,7 +60437,7 @@ Toast.defaultProps = {
 exports.default = Toast;
 
 /***/ }),
-/* 415 */
+/* 418 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -59786,23 +60455,23 @@ var _react = __webpack_require__(2);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _propTypes = __webpack_require__(7);
+var _propTypes = __webpack_require__(8);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _TransitionGroup = __webpack_require__(417);
+var _TransitionGroup = __webpack_require__(420);
 
 var _TransitionGroup2 = _interopRequireDefault(_TransitionGroup);
 
-var _Toast = __webpack_require__(414);
+var _Toast = __webpack_require__(417);
 
 var _Toast2 = _interopRequireDefault(_Toast);
 
-var _DefaultCloseButton = __webpack_require__(412);
+var _DefaultCloseButton = __webpack_require__(415);
 
 var _DefaultCloseButton2 = _interopRequireDefault(_DefaultCloseButton);
 
-var _config = __webpack_require__(49);
+var _config = __webpack_require__(50);
 
 var _config2 = _interopRequireDefault(_config);
 
@@ -60089,7 +60758,7 @@ ToastContainer.defaultProps = {
 exports.default = ToastContainer;
 
 /***/ }),
-/* 416 */
+/* 419 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -60103,7 +60772,7 @@ var _EventManager = __webpack_require__(224);
 
 var _EventManager2 = _interopRequireDefault(_EventManager);
 
-var _config = __webpack_require__(49);
+var _config = __webpack_require__(50);
 
 var _config2 = _interopRequireDefault(_config);
 
@@ -60179,7 +60848,7 @@ exports.default = Object.assign(function (content, options) {
 });
 
 /***/ }),
-/* 417 */
+/* 420 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -60189,7 +60858,7 @@ exports.__esModule = true;
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var _chainFunction = __webpack_require__(273);
+var _chainFunction = __webpack_require__(276);
 
 var _chainFunction2 = _interopRequireDefault(_chainFunction);
 
@@ -60197,15 +60866,15 @@ var _react = __webpack_require__(2);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _propTypes = __webpack_require__(7);
+var _propTypes = __webpack_require__(8);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _warning = __webpack_require__(418);
+var _warning = __webpack_require__(421);
 
 var _warning2 = _interopRequireDefault(_warning);
 
-var _ChildMapping = __webpack_require__(419);
+var _ChildMapping = __webpack_require__(422);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -60455,7 +61124,7 @@ module.exports = exports['default'];
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 418 */
+/* 421 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -60523,7 +61192,7 @@ module.exports = warning;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 419 */
+/* 422 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -60620,7 +61289,7 @@ function mergeChildMappings(prev, next) {
 }
 
 /***/ }),
-/* 420 */
+/* 423 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -60684,7 +61353,7 @@ var KeyEscapeUtils = {
 module.exports = KeyEscapeUtils;
 
 /***/ }),
-/* 421 */
+/* 424 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -60802,7 +61471,7 @@ module.exports = PooledClass;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 422 */
+/* 425 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -60818,11 +61487,11 @@ module.exports = PooledClass;
 
 
 
-var PooledClass = __webpack_require__(421);
+var PooledClass = __webpack_require__(424);
 var ReactElement = __webpack_require__(27);
 
 var emptyFunction = __webpack_require__(17);
-var traverseAllChildren = __webpack_require__(432);
+var traverseAllChildren = __webpack_require__(435);
 
 var twoArgumentPooler = PooledClass.twoArgumentPooler;
 var fourArgumentPooler = PooledClass.fourArgumentPooler;
@@ -60998,7 +61667,7 @@ var ReactChildren = {
 module.exports = ReactChildren;
 
 /***/ }),
-/* 423 */
+/* 426 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -61015,14 +61684,14 @@ module.exports = ReactChildren;
 
 
 var _prodInvariant = __webpack_require__(28),
-    _assign = __webpack_require__(6);
+    _assign = __webpack_require__(7);
 
 var ReactComponent = __webpack_require__(73);
 var ReactElement = __webpack_require__(27);
 var ReactPropTypeLocationNames = __webpack_require__(229);
 var ReactNoopUpdateQueue = __webpack_require__(74);
 
-var emptyObject = __webpack_require__(33);
+var emptyObject = __webpack_require__(34);
 var invariant = __webpack_require__(3);
 var warning = __webpack_require__(4);
 
@@ -61727,7 +62396,7 @@ module.exports = ReactClass;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 424 */
+/* 427 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -61903,7 +62572,7 @@ module.exports = ReactDOMFactories;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 425 */
+/* 428 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -61927,7 +62596,7 @@ var factory = __webpack_require__(190);
 module.exports = factory(isValidElement);
 
 /***/ }),
-/* 426 */
+/* 429 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -61949,7 +62618,7 @@ var ReactPropTypesSecret = 'SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED';
 module.exports = ReactPropTypesSecret;
 
 /***/ }),
-/* 427 */
+/* 430 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -61965,12 +62634,12 @@ module.exports = ReactPropTypesSecret;
 
 
 
-var _assign = __webpack_require__(6);
+var _assign = __webpack_require__(7);
 
 var ReactComponent = __webpack_require__(73);
 var ReactNoopUpdateQueue = __webpack_require__(74);
 
-var emptyObject = __webpack_require__(33);
+var emptyObject = __webpack_require__(34);
 
 /**
  * Base class helpers for the updating state of a component.
@@ -61996,7 +62665,7 @@ ReactPureComponent.prototype.isPureReactComponent = true;
 module.exports = ReactPureComponent;
 
 /***/ }),
-/* 428 */
+/* 431 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -62015,7 +62684,7 @@ module.exports = ReactPureComponent;
 module.exports = '15.5.4';
 
 /***/ }),
-/* 429 */
+/* 432 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -62034,7 +62703,7 @@ module.exports = '15.5.4';
 var _prodInvariant = __webpack_require__(28);
 
 var ReactPropTypeLocationNames = __webpack_require__(229);
-var ReactPropTypesSecret = __webpack_require__(426);
+var ReactPropTypesSecret = __webpack_require__(429);
 
 var invariant = __webpack_require__(3);
 var warning = __webpack_require__(4);
@@ -62108,7 +62777,7 @@ module.exports = checkReactTypeSpec;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 430 */
+/* 433 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -62134,7 +62803,7 @@ function getNextDebugID() {
 module.exports = getNextDebugID;
 
 /***/ }),
-/* 431 */
+/* 434 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -62178,7 +62847,7 @@ module.exports = onlyChild;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 432 */
+/* 435 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -62201,7 +62870,7 @@ var REACT_ELEMENT_TYPE = __webpack_require__(227);
 
 var getIteratorFn = __webpack_require__(230);
 var invariant = __webpack_require__(3);
-var KeyEscapeUtils = __webpack_require__(420);
+var KeyEscapeUtils = __webpack_require__(423);
 var warning = __webpack_require__(4);
 
 var SEPARATOR = '.';
@@ -62360,7 +63029,7 @@ module.exports = traverseAllChildren;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 433 */
+/* 436 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -62442,7 +63111,7 @@ function resolvePathname(to, from) {
 
 
 /***/ }),
-/* 434 */
+/* 437 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global, process) {(function (global, undefined) {
@@ -62635,7 +63304,7 @@ function resolvePathname(to, from) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(75), __webpack_require__(1)))
 
 /***/ }),
-/* 435 */
+/* 438 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {var scope = (typeof global !== "undefined" && global) ||
@@ -62691,7 +63360,7 @@ exports._unrefActive = exports.active = function(item) {
 };
 
 // setimmediate attaches itself to the global object
-__webpack_require__(434);
+__webpack_require__(437);
 // On some exotic environments, it's not clear which object `setimmediate` was
 // able to install onto.  Search each possibility in the same order as the
 // `setimmediate` library.
@@ -62705,7 +63374,7 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(75)))
 
 /***/ }),
-/* 436 */
+/* 439 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -62728,7 +63397,7 @@ function invariant(condition, message) {
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(1)))
 
 /***/ }),
-/* 437 */
+/* 440 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -62756,7 +63425,7 @@ function warning(condition, message) {
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(1)))
 
 /***/ }),
-/* 438 */
+/* 441 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -62770,15 +63439,15 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _cookie = __webpack_require__(274);
+var _cookie = __webpack_require__(277);
 
 var _cookie2 = _interopRequireDefault(_cookie);
 
-var _objectAssign = __webpack_require__(6);
+var _objectAssign = __webpack_require__(7);
 
 var _objectAssign2 = _interopRequireDefault(_objectAssign);
 
-var _utils = __webpack_require__(439);
+var _utils = __webpack_require__(442);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -62928,7 +63597,7 @@ function readCookie(value) {
 module.exports = exports['default'];
 
 /***/ }),
-/* 439 */
+/* 442 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -62958,7 +63627,7 @@ function cleanCookies() {
 }
 
 /***/ }),
-/* 440 */
+/* 443 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -63001,7 +63670,7 @@ function valueEqual(a, b) {
 
 
 /***/ }),
-/* 441 */
+/* 444 */
 /***/ (function(module, exports) {
 
 module.exports = function(module) {
@@ -63029,7 +63698,7 @@ module.exports = function(module) {
 
 
 /***/ }),
-/* 442 */
+/* 445 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(231);

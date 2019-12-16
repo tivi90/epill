@@ -213,6 +213,11 @@ INSERT INTO packaging_topic (id, order_number, title) VALUES (8,8,'Zusatzinforma
 
 INSERT INTO pharmaceutical_form (id, name) VALUES (1,'Filmtabletten');
 INSERT INTO pharmaceutical_form (id, name) VALUES (2,'Retardtablette');
+INSERT INTO pharmaceutical_form (id, name) VALUES (3,'Tablette');
+INSERT INTO pharmaceutical_form (id, name) VALUES (4,'Kapsel');
+INSERT INTO pharmaceutical_form (id, name) VALUES (5,'Flüssigkeit');
+
+
 
 
 
@@ -288,19 +293,132 @@ INSERT INTO drug_disease (iddrug, iddisease) VALUES (10, 3);
 --
 -- Dumping data for table `drug_feature`
 --
+INSERT INTO drug_feature (id, drug_feature, min_age, max_age, description_drug ) VALUES (1,'Ohne Tierversuche', 0, 0, '
+<p>Tierversuche sind in §7 (2) Tierschutzgesetz definiert als „Eingriffe oder Behandlungen zu Versuchszwecken an Tieren
+    oder am Erbgut von Tieren, wenn sie mit Schmerzen, Leiden oder Schäden für die Tiere verbunden sein können oder dazu
+    führen können, dass Tiere geboren werden (…), die Schmerzen, Leiden oder Schäden erleiden.“ Tierversuche sind auch
+    Eingriffe oder Behandlungen, die nicht Versuchszwecken dienen, zur<ul>
+        <li> Herstellung, Gewinnung, Aufbewahrung oder Vermehrung von Stoffen, Produkten oder Organismen</li>
+        <li> Organ- oder Gewebeentnahme, um diese zu wissenschaftlichen Zwecken zu kultivieren, transplantieren,
+            untersuchen</li>
+        <li>Verwendung zu Aus-, Fort- oder Weiterbildungszwecken </li>
+    </ul><b>Bei diesem Medikament wurden keine Tierversuche durchgeführt.</b></p>
+');
+INSERT INTO drug_feature (id, drug_feature, description_drug ) VALUES (2,'Halal','<p>Halal" bedeutet so viel wie
+    "rein",
+    "erlaubt", und die entsprechenden Gebote umfassen Dinge und Handlungen, die aus islamischer Sicht zulässig und
+    islam-konform sind. Dazu gehören auch bestimmte Speisevorschriften und Lebensmittel, wie etwa
+    <ul>
+        <li>das Fleisch von Pflanzenfressern (Huhn, Rind, Schaf), welches nach bestimmten Vorschriften geschlachtet
+            wurde (so
+            genannte Schächtung)</li>
+        <li>Frischmilch</li>
+        <li>frisches Obst</li>
+        <li>Gemüse</li>
+        <li>Eier</li>
+        <li>pflanzliche Öle</li>
+    </ul>
+    Im Gegensatz dazu werden verbotene oder unzulässige Lebensmittel als "Haram"-Lebensmittel bezeichnet. Diese sind
+    typischerweise
+    <ul>
+        <li>Schweinefleisch oder mit dessen Bestandteilen hergestellte Produkte, etwa Zwiebelkuchen mit Speck,
+            Mettbrötchen
+        </li>
+        <li>Gelatine, die aus Schweinerohstoffen gewonnen wurde und damit hergestellte Lebensmittel wie Joghurts, Torten
+            und
+            Gummibärchen etc.</li>
+        <li>Alkohol und Lebensmittel, die diesen enthalten, zum Beispiel Eis und Pralinen (auch in Spuren oder versteckt
+            als
+            Trägerstoff etwa bei Aromen, Farbstoffen)</li>
+        <li>bluthaltige Lebensmittel wie etwa Blutwurst</li>
+    </ul>
+    <b>Bei diesem Medikament handelt es sich um ein Haram Medikament.</b>
 
-INSERT INTO drug_feature (id, drug_feature, min_age, max_age) VALUES (1,'ohne Tierversuche', 0, 0);
-INSERT INTO drug_feature (id, drug_feature) VALUES (2,'halal');
-INSERT INTO drug_feature (id, drug_feature, min_age, max_age) VALUES (3,'beeinträchtigt die Fahrtüchtigkeit', 16, 0);
-INSERT INTO drug_feature (id, drug_feature) VALUES (4,'verschreibungspflichtig');
-INSERT INTO drug_feature (id, drug_feature) VALUES (5,'ohne Alkohol');
-INSERT INTO drug_feature (id, drug_feature) VALUES (6,'homöopathisch');
-INSERT INTO drug_feature (id, drug_feature) VALUES (7,'glutenfrei');
-INSERT INTO drug_feature (id, drug_feature) VALUES (8,'Für Schwangere ungeeignet.');
+</p>');
+INSERT INTO drug_feature (id, drug_feature, min_age, max_age, description_drug)VALUES (3,'Beeinträchtigt die
+Fahrtüchtigkeit', 16, 0,'<h4> Verkehrsuntauglich durch bestimmte Medikamente</h4>
+
+<p>Eine Verkehrsuntauglichkeit wird typischerweise durch die dämpfenden Wirkungen von Medikamenten auf das zentrale
+    Nervensystem verursacht. Diese Wirkungen führen zu einer geringeren Aufmerksamkeit oder einem vermindertem
+    Reaktionsvermögen. Manche Medikamente beeinflussen das Urteilsvermögen und die Selbsteinschätzung. Das kann sich in
+    riskantem Fahrverhalten äußern. Gefährlich wird es auch bei Augentropfen – sie können das Sehvermögen
+    beeinträchtigen. Werden mehrere Arzneimittel gleichzeitig eingenommen, können sich die Wirkungen auf die
+    Verkehrstüchtigkeit sogar verstärken. Dies gilt auch für rezeptfreie Präparate, pflanzliche Heilmittel und
+    Nahrungsergänzungsmittel. Besonders gefährlich ist die Mischung von Alkohol und Medikamenten. Vorsicht: Auch
+    Hustenmittel und Magentropfen können Alkohol enthalten!</p>
+
+<h4> Warnhinweise beachten</h4>
+
+<p>Um sich über mögliche Beeinträchtigungen der Verkehrstüchtigkeit zu informieren, ist ein Blick auf die
+    Medikamentenpackung und in die Gebrauchsinformation angezeigt. Wenn ein Arzneimittel die Reaktionsfähigkeit und
+    Verkehrstüchtigkeit beeinträchtigen kann, muss laut der Gebrauchsinformationsverordnung § 14 (1) und der
+    Kennzeichnungsverordnung § 13 (1) ein entsprechender Warnhinweise im Beipacktext bzw. auf der Verpackung angeführt
+    sein. Laut Auskunft der AGES PharmMed müssen Hersteller im Zuge der Zulassung verbindliche Daten bzw. Stellungnahmen
+    vorlegen, die Aussagen zum Thema Verkehrstüchtigkeit möglich machen. Aber auch wenn kein Warnhinweis bei einem
+    Medikament zu finden ist, können Nebenwirkungen wie Schwindel, Kopfweh oder allergische Reaktionen die
+    Verkehrstüchtigkeit stark einschränken.</p>
+
+<h4> Eigenverantwortung wichtig</h4>
+
+<p>Ob man fit genug ist, ein Auto zu lenken, oder die Verkehrstüchtigkeit stark beeinträchtigt ist, kann man selbst
+gut
+beurteilen. Bei der Verschreibung der Medikamente gibt die behandelnde Ärztin/der behandelnde Arzt über die
+Wirkungen auf die Verkehrstüchtigkeit Auskunft. Wenn trotz einer Fahruntauglichkeit ein Fahrzeug gelenkt wird, kann
+die Polizei die Weiterfahrt verhindern und sogar die Fahrzeugschlüssel abnehmen. Bei einer Beeinträchtigung der
+Fahrtauglichkeit im Sinne von § 58 StVO droht eine Verwaltungsstrafe.
+</p>');
+INSERT INTO drug_feature (id, drug_feature, description_drug ) VALUES (4,'Verschreibungspflichtig','<p>
+    Verschreibungspflichtige Medikamente sind hingegen nur auf Verordnung/Verschreibung durch einen Arzt oder eine
+    Ärztin erhältlich und bedürfen einer ärztlichen Betreuung. Sie unterliegen erhöhten Sicherheitsanforderungen, da sie
+    auch bei bestimmungsgemäßem Gebrauch eine Gesundheitsgefährdung für Mensch und Tier darstellen können. </br>
+    Ob ein Medikamente der Verschreibungspflicht unterliegt oder nicht, ist abhängig von
+    <ul>
+        <li>dem Wirkstoff und der Wirkstoffmenge. So ist das Schmerz- und Fiebermittel Ibuprofen beispielsweise mit
+            einer
+            Wirkstoffmenge bis 400 mg apothekenpflichtig, ab 600 mg jedoch verschreibungspflichtig.</li>
+        <li>der Art der Verabreichung. Beispielsweise ist das Schmerz- und Fiebermittel Acetylsalicylsäure (ASS) in Form
+            von
+            Tabletten oder Brausetabletten apothekenpflichtig, als Injektionslösung zur intravenösen Anwendung durch
+            einen Arzt
+            oder eine Ärztin hingegen verschreibungspflichtig.</li>
+        <li>der „Neuheit“ des Wirkstoffes. Zwar haben die apothekenpflichtigen Medikamente durch Zulassungsstudien ihre
+            Wirksamkeit, Unbedenklichkeit und Qualität nachweisen müssen. Eine Erfahrung in der breiten Bevölkerung und
+            über
+            Jahre liegt allerdings noch nicht vor.</li>
+        <li>dem Anwendungsgebiet und dem Erkrankungsbild (chronisch oder akut). So ist beispielsweise der Schleimlöser
+            Acetylcystein (ACC) trotz gleichem Wirkstoff und gleicher Wirkstoffmenge sowohl verschreibungspflichtig als
+            auch
+            rezeptfrei.</li>
+    </ul>
+</p>');
+INSERT INTO drug_feature (id, drug_feature) VALUES (5,'Ohne Alkohol');
+INSERT INTO drug_feature (id, drug_feature ) VALUES (6,'Homöopathisch');
+INSERT INTO drug_feature (id, drug_feature, description_drug ) VALUES (7,'Glutenfrei','<p>Patienten mit Zöliakie
+    reagieren
+    auf Gluten, ein in verschiedenen Getreidesorten enthaltenes Eiweiß. Nahrungsmittel, die Gluten enthalten, können bei
+    ihnen beispielsweise Symptome wie Durchfall, Bauchschmerzen oder Blähungen hervorrufen. Insgesamt sind die Symptome
+    einer Zöliakie sehr unterschiedlich. Manchmal verläuft sie über Jahre unbemerkt. Mithilfe von Bluttests und einer
+    Dünndarmbiopsie diagnostiziert der Arzt eine Zöliakie. Die Behandlung besteht dann in einer lebenslangen
+    glutenfreien Diät.</p>');
+INSERT INTO drug_feature (id, drug_feature, description_drug) VALUES (8,'Für Schwangere ungeeignet.','<p>Wenn eine Frau
+    Medikamente in der Schwangerschaft einnimmt, ist das Ungeborene immer unfreiwilliger Empfänger der Wirkstoffe. Daher
+    ist es sinnvoll, wenn es nötig ist nur geeignete Medikamente in der Schwangerschaft einzunehmen, wie auch Fälle aus
+    der Vergangenheit zeigen.
+    Nimmt eine schwangere Frau Medikamente ein, wird das Baby also mitbehandelt.
+
+    Da das Ungeborene jedoch noch in der Reifung ist, wirken Medikamente ganz anders, als bei Erwachsenen – in manchen
+    Fällen sogar schädlich.
+
+    Besonders kritisch ist die Einnahme von Medikamenten im ersten Schwangerschaftsdrittel. Die Schwangerschaft ist hier
+    noch sehr instabil, die Ausbildung von Nerven und Organen noch ganz am Anfang. Die Entwicklung des Kindes ist in
+    dieser Zeit anfälliger. In der Spätschwangerschaft sind die meisten Medikamente weniger gefährlich.</p>
+<h4>Viele Wirkstoffe sind für Schwangere zu wenig erforscht</h4>
+<p>Die Entscheidung für oder gegen ein Medikament in der Schwangerschaft ist jedoch schwierig, denn es werden in
+    Deutschland kaum klinische Studien mit Schwangeren durchgeführt. Die Wirkung vieler Medikamente auf den schwangeren
+    Organismus ist nicht ausreichend erforscht. Außerdem sind die Auswirkungen auf das Baby individuell unterschiedlich.
+</p>');
 INSERT INTO drug_feature (id, drug_feature) VALUES (9,'vegan');
 INSERT INTO drug_feature (id, drug_feature) VALUES (10,'lactosefrei');
-
-
 --
 -- Dumping data for table `drug_feature`
 --
