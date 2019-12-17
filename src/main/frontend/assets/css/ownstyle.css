@@ -1,10 +1,10 @@
 
 .speech-bubble {
     position: relative;
-    background: #88d3ce;;
+    background: #88d3ce;
     border-radius: .4em;
     color: #0f0f0f;
-    width: 70%;
+    width: 74%;
     float: left;
     padding: 12px;
 }
@@ -26,7 +26,7 @@
 
 .speech-bubble-person {
     float: right;
-    width: 26%;
+    width: 24%;
 
 }
 
@@ -50,12 +50,12 @@
 
 .med_desc ul {
     color: #000;
-    text-align: left;
+    text-align: center;
     font-size: 16px;
 }
 
 .med_desc p {
-    text-align: left !important;
+    text-align: center !important;
     color: #000;
     font-size: 16px;
 }
@@ -104,7 +104,7 @@ img.group.list-group-image {
     height: 200px;
 }
 
-hiddennot{
+.hiddennot{
     display: none;
 }
 
@@ -234,26 +234,30 @@ hiddennot{
 }
 
 
-.infobox{
-    background-color: white;
+.med_desc{
     padding: 15px;
-    border: 1px solid;
+    height: 370px;
+    border-top: solid;
+    border-bottom: solid;
+    background-color: white;
+}
+
+.med_dec_right{
+    border-right: solid;
+}
+
+.med_dec_left{
+    border-left: solid;
+}
+
+.alert{
+    z-index: 5;
+    position: absolute;
+    left: 66%;
+    top: 42vh;
 }
 
 
-@keyframes shadow-pulse {
-    0% {
-        box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.2);
-    }
-    100% {
-        box-shadow: 0 0 0 15px rgba(0, 0, 0, 0);
-    }
-}
-
-
-.no_animation {
-    animation: none !important;
-}
 
 .icon_modal {
     text-align: center;
@@ -267,7 +271,6 @@ hiddennot{
 }
 
 .bg_grey {
-    background-color: #eee;
 }
 
 @media (min-width: 768px) {
@@ -621,3 +624,4 @@ footer ul li a {
         font-size: 150px;
     }
 }
+

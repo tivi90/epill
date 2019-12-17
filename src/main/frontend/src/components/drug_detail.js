@@ -262,9 +262,11 @@ class DrugDetail extends React.Component {
         const {t} = this.props;
         return (
             <section className="diseases">
-                <p><b> {t('usedWhen') + ": "}</b></p>
-                <ul> {drug.disease.map(disease => <li key={disease.id}>{disease.name}</li>)
-                    .reduce((prev, curr) => [prev, curr])}</ul>
+                <img src={"./../../assets/images/lab.svg"} style={{width: "38px"}}/>
+
+                <p><b> {t('usedWhen') + " "}</b></p>
+             <p>   {drug.disease.map(disease => <span key={disease.id}>{disease.name}</span>)
+                    .reduce((prev, curr) => [prev, curr])}</p>
             </section>
         );
     }
@@ -277,18 +279,18 @@ class DrugDetail extends React.Component {
         const {t} = this.props;
         return (
             <section className="diseases row">
-                <p><b>  {t('pharmaceuticalForm') + ": "} </b></p>
-                <ul>  {drug.pharmaceuticalForm.map(pharmaceuticalForm => <li
-                    key={pharmaceuticalForm.id}>{pharmaceuticalForm.name} <img style={{width: "55px"}}
-                                                                               key={pharmaceuticalForm.id}
-                                                                               src={"./../../assets/p_form/" + pharmaceuticalForm.id + ".svg"}
-                                                                               className="drug-feature-icon"
-                                                                               alt={pharmaceuticalForm.name}
-                                                                               title={pharmaceuticalForm.name}></img>
-                </li>)
-                    .reduce((prev, curr) => [prev, curr])}</ul>
+                {drug.pharmaceuticalForm.map(pharmaceuticalForm => <img style={{width: "38px"}}
+                                                                        key={pharmaceuticalForm.id}
+                                                                        src={"./../../assets/p_form/" + pharmaceuticalForm.id + ".svg"}
+                                                                        className="drug-feature-icon"
+                                                                        alt={pharmaceuticalForm.name}
+                                                                        title={pharmaceuticalForm.name}></img>
+                )
+                    .reduce((prev, curr) => [prev, curr])}
 
-
+                    <p><b>  {t('pharmaceuticalForm') + ": "} </b></p>
+           <span>{ drug.pharmaceuticalForm.map(pharmaceuticalForm => <span key={pharmaceuticalForm.id}>{pharmaceuticalForm.name}</span> )
+            .reduce((prev, curr) => [prev, ', ', curr]) }</span>
             </section>
         );
     }
@@ -301,10 +303,13 @@ class DrugDetail extends React.Component {
         const {t} = this.props;
 
         return (
-            <p><b> {t('activeSubstance') + ": "}</b>
-                {drug.activeSubstance.map(substance => <span key={substance.id}>{substance.name}</span>)
-                    .reduce((prev, curr) => [prev, ', ', curr])}
-            </p>
+            <section>                <img src={"./../../assets/images/lab.svg"} style={{width: "38px"}}/>
+
+            <p><b> {t('activeSubstance') + " "}</b> </p>
+            <p>    {drug.activeSubstance.map(substance => <span key={substance.id}>{substance.name}</span>)
+                    .reduce((prev, curr) => [prev, ', ', curr])}</p>
+
+            </section>
         );
     }
 
@@ -315,10 +320,12 @@ class DrugDetail extends React.Component {
         const {t} = this.props;
 
         return (
-            <section className="pzn row">
-                <p><b>  {t('pzn') + ": "}</b></p>
-                <ul>    {drug.packaging.map(packaging => <li key={packaging.id}>{packaging.name} {packaging.pzn}</li>)
-                    .reduce((prev, curr) => [prev, curr])}</ul>
+            <section className="pzn diseases row">
+                 <img src={"./../../assets/images/lab.svg"} style={{width: "38px"}}/>
+
+                    <p><b>  {t('pzn') + " "}</b></p>
+                <p>    {drug.packaging.map(packaging => <span key={packaging.id}>{packaging.name} {packaging.pzn}</span>)
+                    .reduce((prev, curr) => [prev, curr])}</p>
             </section>
         );
     }
@@ -331,11 +338,12 @@ class DrugDetail extends React.Component {
         const {t} = this.props;
 
         return (
-            <section className="row">
-                <p><b>     {t('indicationGroup') + ": "}  </b></p>
-                <ul>
-                    <li>{drug.indicationGroup.name}</li>
-                </ul>
+            <section className="row diseases">
+                <img src={"./../../assets/images/lab.svg"} style={{width: "38px"}}/>
+
+                <p><b>     {t('indicationGroup') + " "}  </b></p>
+                <p>{drug.indicationGroup.name}</p>
+
             </section>
         );
     }
@@ -348,11 +356,13 @@ class DrugDetail extends React.Component {
         const {t} = this.props;
 
         return (
-            <section className="row">
-                <p><b>      {t('productGroup') + ": "}</b></p>
-                <ul>
-                    <li>{drug.productGroup.name}</li>
-                </ul>
+            <section className="row diseases">
+                <img src={"./../../assets/images/lab.svg"} style={{width: "38px"}}/>
+
+                <p><b>      {t('productGroup') + " "}</b></p>
+
+                    <p>{drug.productGroup.name}</p>
+
             </section>
         );
     }
@@ -364,7 +374,7 @@ class DrugDetail extends React.Component {
 
         return drug.packagingSection.map((section => {
             return (
-                <li key={section.id}>{section.topic.title}</li>
+                <p key={section.id}>{section.topic.title}</p>
             );
         }));
     }
@@ -386,7 +396,7 @@ class DrugDetail extends React.Component {
         const drug = this.state.drug;
         const showAdditionalInfo = this.state.showAdditionalInfo;
         let itemClass = ["item  col-xs-4 col-lg-4 grid-group-item"]
-        if(this.state.addClass) {
+        if (this.state.addClass) {
             itemClass.push('list-group-item');
         }
 
@@ -602,9 +612,22 @@ class DrugDetail extends React.Component {
                         </div>
                         {/*<h3>{drug.name} {drug.productGroup && drug.productGroup.name && <span className="text-muted">{drug.productGroup.name}</span> }</h3>*/}
                         {/*<span>v. {drug.version} | {t('publishingDate')}: {new Date(drug.year).toLocaleDateString()}</span>*/}
+                        {User.isAuthenticated() && drug.personalizedInformation &&
+                        <div className="alert row w3-animate-right">
+                            <div className="speech-bubble">
+                                <a href="#" className="close" data-dismiss="alert"
+                                   aria-label="close">&times;</a>
+                                <span
+                                    dangerouslySetInnerHTML={this.createMarkup(drug.personalizedInformation)}/>
+                            </div>
 
+                            <img className="speech-bubble-person" src="./../../assets/images/logo_chat.png"/>
+
+                        </div>
+                        }
                         <div className="row featurette drug-detail-header">
-                            <div className="col-xs-12 col-sm-12 col-md-4">
+
+                            <div className="col-xs-12 col-sm-12 col-md-5">
                                 <img className="featurette-image img-responsive center-block"
                                      alt={drug.name}
                                      title={drug.name}
@@ -614,7 +637,7 @@ class DrugDetail extends React.Component {
                                     {drug.drugFeature.map(feature => {
                                         return (
 
-                                            <span style={{float: "left"}} key={feature.id}>
+                                            <span key={feature.id}>
 
                                                 <img key={feature.id} data-toggle="modal" data-target={"#" + feature.id}
                                                      src={"./../../assets/icons/" + feature.id + ".svg"}
@@ -665,56 +688,56 @@ class DrugDetail extends React.Component {
                                 </div>
 
                             </div>
-                            <div className="col-xs-12 col-sm-12 col-md-7 infobox">
-                            <div className="col-xs-12 col-sm-12 col-md-6 med_desc">
-                                {User.isAuthenticated() && drug.personalizedInformation &&
-                                <div className="alert row w3-animate-right">
-                                    <div className="speech-bubble">
-                                        <a href="#" className="close" data-dismiss="alert"
-                                           aria-label="close">&times;</a>
-                                        <span
-                                            dangerouslySetInnerHTML={this.createMarkup(drug.personalizedInformation)}/>
+                            <div className="col-xs-12 col-sm-12 col-md-7">
+                                <div className="row">
+                                    <div className="col-sm-4 text-center">
+                                        {this.renderPharmaceuticalForm(drug)}
+                                    </div>
+                                    <div className="col-sm-4 text-center">
+                                        {this.renderDisease(drug)}
+                                    </div>
+                                    <div className="col-sm-4 text-center">
+                                        {this.renderActiveSubstance(drug)}
                                     </div>
 
-                                    <img className="speech-bubble-person" src="./../../assets/images/logo_chat.png"/>
-
-                                </div>
-                                }
-
-                                {this.renderPharmaceuticalForm(drug)}
-
-                                {this.renderDisease(drug)}
-
-                                {this.renderActiveSubstance(drug)}
-
-                                <p>
-                                    <a onClick={this.toggleShowAdditionalInfo}>
-                                        <button className="btn btn-info">
-                                            {!showAdditionalInfo && <span>{t('viewDetails')}</span>}
-                                            {showAdditionalInfo && <span>{t('hideDetails')}</span>}
-                                        </button>
-                                    </a>
-                                </p>
-                            </div>
-                            <div className="col-xs-12 col-sm-12 col-md-6 med_desc">
-
-                                <div className="additional-information">
-                                    {showAdditionalInfo &&
-                                    <section>
-                                        {this.renderIndicationGroup(drug)}
-
-                                        {this.renderProductGroup(drug)}
-
-                                        {this.renderPZN(drug)}
-                                    </section>
-                                    }
-
-
                                 </div>
 
+                                {showAdditionalInfo &&
+                                <div className="row">
+
+                                    <div className="additional-information">
+
+                                        <section>
+                                            <div className="col-sm-4 text-center">
+                                                {this.renderIndicationGroup(drug)}
+                                            </div>
+                                            <div className="col-sm-4 text-center">
+                                                {this.renderProductGroup(drug)}
+                                            </div>
+                                            <div className="col-sm-4 text-center">
+                                                {this.renderPZN(drug)}
+                                            </div>
+
+                                        </section>
+
+
+                                    </div>
+
+                                </div>}
+                                <div className="row text-center">
+                                    <p>
+                                        <a onClick={this.toggleShowAdditionalInfo}>
+                                            <button className="btn btn-secondary">
+                                                {!showAdditionalInfo && <span>{t('viewDetails')}</span>}
+                                                {showAdditionalInfo && <span>{t('hideDetails')}</span>}
+                                            </button>
+                                        </a>
+                                    </p>
+                                </div>
                             </div>
-                            </div>
-                         </div>
+
+
+                        </div>
                     </div>
                 </div>
 
@@ -753,9 +776,6 @@ class DrugDetail extends React.Component {
 
     }
 }
-
-
-
 
 
 export default translate()(DrugDetail);

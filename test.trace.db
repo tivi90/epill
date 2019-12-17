@@ -13980,3 +13980,19 @@ Caused by: java.util.NoSuchElementException
 	at org.h2.engine.Session.close(Session.java:826)
 	at org.h2.jdbc.JdbcConnection.close(JdbcConnection.java:395)
 	... 20 more
+2019-12-16 17:37:59 jdbc[12]: exception
+org.h2.jdbc.JdbcSQLException: Wert zu gross / lang für Feld "TEXT VARCHAR(255)": "STRINGDECODE('Hey %firstname% %lastname%, <br /> Hier steht eine wichtige Information f\u00fcr M\u00e4nner im Alter von %age% Ja... (256)"
+Value too long for column "TEXT VARCHAR(255)": "STRINGDECODE('Hey %firstname% %lastname%, <br /> Hier steht eine wichtige Information f\u00fcr M\u00e4nner im Alter von %age% Ja... (256)"; SQL statement:
+INSERT INTO tailored_text (id, idgender, iddrug, min_age, max_age, text) VALUES (1, 1, 1, 16, 30, 'Hey %firstname% %lastname%, <br /> Hier steht eine wichtige Information für Männer im Alter von %age% Jahren, die sich für dieses Medikament interessieren.<br />2 mal täglich einnehmen<br />1 Tablette morgens gegen 9:00<br />1 Tablette am Abend gegen 20:00') [22001-194]
+2019-12-16 17:45:12 jdbc[12]: exception
+org.h2.jdbc.JdbcSQLException: Wert zu gross / lang für Feld "TEXT VARCHAR(255)": "STRINGDECODE('Hey %firstname% %lastname%, <br /> Hier steht eine wichtige Information f\u00fcr M\u00e4nner im Alter von %age% Ja... (256)"
+Value too long for column "TEXT VARCHAR(255)": "STRINGDECODE('Hey %firstname% %lastname%, <br /> Hier steht eine wichtige Information f\u00fcr M\u00e4nner im Alter von %age% Ja... (256)"; SQL statement:
+INSERT INTO tailored_text (id, idgender, iddrug, min_age, max_age, text) VALUES (1, 1, 1, 16, 30, 'Hey %firstname% %lastname%, <br /> Hier steht eine wichtige Information für Männer im Alter von %age% Jahren, die sich für dieses Medikament interessieren.<br />2 mal täglich einnehmen<br />1 Tablette morgens gegen 9:00<br />1 Tablette am Abend gegen 20:00') [22001-194]
+2019-12-16 17:47:24 jdbc[12]: exception
+org.h2.jdbc.JdbcSQLException: Wert zu gross / lang für Feld "TEXT VARCHAR(255)": "STRINGDECODE('Hey %firstname% %lastname%, <br /> Hier steht eine wichtige Information f\u00fcr M\u00e4nner im Alter von %age% Ja... (256)"
+Value too long for column "TEXT VARCHAR(255)": "STRINGDECODE('Hey %firstname% %lastname%, <br /> Hier steht eine wichtige Information f\u00fcr M\u00e4nner im Alter von %age% Ja... (256)"; SQL statement:
+INSERT INTO tailored_text (id, idgender, iddrug, min_age, max_age, text) VALUES (1, 1, 1, 16, 30, 'Hey %firstname% %lastname%, <br /> Hier steht eine wichtige Information für Männer im Alter von %age% Jahren, die sich für dieses Medikament interessieren.<br />2 mal täglich einnehmen<br />1 Tablette morgens gegen 9:00<br />1 Tablette am Abend gegen 20:00') [22001-194]
+2019-12-16 17:48:39 jdbc[12]: exception
+org.h2.jdbc.JdbcSQLException: Wert zu gross / lang für Feld "TEXT VARCHAR(255)": "STRINGDECODE('Hey %firstname% %lastname%, <br /> Hier steht eine wichtige Information f\u00fcr M\u00e4nner im Alter von %age% Ja... (256)"
+Value too long for column "TEXT VARCHAR(255)": "STRINGDECODE('Hey %firstname% %lastname%, <br /> Hier steht eine wichtige Information f\u00fcr M\u00e4nner im Alter von %age% Ja... (256)"; SQL statement:
+INSERT INTO tailored_text (id, idgender, iddrug, min_age, max_age, text) VALUES (1, 1, 1, 16, 30, 'Hey %firstname% %lastname%, <br /> Hier steht eine wichtige Information für Männer im Alter von %age% Jahren, die sich für dieses Medikament interessieren.<br />2 mal täglich einnehmen<br />1 Tablette morgens gegen 9:00<br />1 Tablette am Abend gegen 20:00') [22001-194]

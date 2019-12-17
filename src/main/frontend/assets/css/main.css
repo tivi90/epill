@@ -96,7 +96,7 @@ a.wide { display : block }
 
 /* */
 .drug-features {
-	
+	text-align: center;
 }
 
 .drug-features .drug-feature-icon {
@@ -253,7 +253,7 @@ a.wide { display : block }
 }
 
 .drug-detail-header .additional-information p {
-	text-align:right;
+	text-align:center;
 }
 
 .drug-detail-header .additional-information p a {
