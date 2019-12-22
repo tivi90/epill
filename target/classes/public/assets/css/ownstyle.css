@@ -105,7 +105,7 @@ img.group.list-group-image {
 }
 
 .hiddennot{
-    display: none;
+
 }
 
 .diseases {
@@ -254,7 +254,7 @@ img.group.list-group-image {
     z-index: 5;
     position: absolute;
     left: 66%;
-    top: 42vh;
+    top: 45vh;
 }
 
 
@@ -270,7 +270,20 @@ img.group.list-group-image {
     color: red;
 }
 
-.bg_grey {
+.info_box{
+    font-size: 16px;
+}
+
+.infopart{
+    padding: 15px;
+    height: 170px;
+    color: #616161 ;
+}
+
+
+.infopic{
+    width: 45px;
+    margin-bottom: 15px;
 }
 
 @media (min-width: 768px) {

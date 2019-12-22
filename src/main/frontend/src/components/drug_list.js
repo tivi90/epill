@@ -446,71 +446,71 @@ class DrugList extends React.Component {
                                 <Link to={`/drug/${drug.id}`}><h4 className={drugname.join('not')}>
                                     {drug.name}</h4></Link>
                                 <Link to={`/drug/${drug.id}`}>
-                                <img className="group list-group-image" alt={drug.name}
-                                     title={drug.name} src={`/image/drug/${drug.id}`}></img>
-                            </Link>
+                                    <img className="group list-group-image" alt={drug.name}
+                                         title={drug.name} src={`/image/drug/${drug.id}`}></img>
+                                </Link>
                                 <div className={medfeat.join('not')}>
                                     {this.renderDrugFeatures(drug)}
                                 </div>
-                            <Link to={`/drug/${drug.id}`}><h4 className={drugname1.join(' hidden ')}>
-                                {drug.name}</h4></Link>
-                        </div>
-                        <div className={col8Class.join(' ')}>
-                            <div className={col11Class.join('di ')}>
-                                {this.renderPharmaceuticalForm(drug)}
-                                {this.renderDisease(drug)}
-                                {User.isAuthenticated() &&
-                                <section className="diseases">
-                                    <b> {t('application') + ": "}</b>
-                                    {drug.personalizedInformation &&
-                                    <div className="minimum-summary"
+                                <Link to={`/drug/${drug.id}`}><h4 className={drugname1.join(' hidden ')}>
+                                    {drug.name}</h4></Link>
+                            </div>
+                            <div className={col8Class.join(' ')}>
+                                <div className={col11Class.join('di ')}>
+                                    {this.renderPharmaceuticalForm(drug)}
+                                    {this.renderDisease(drug)}
+                                    {User.isAuthenticated() &&
+                                    <section className="diseases">
+                                        <b> {t('application') + ": "}</b>
+                                        {drug.personalizedInformation &&
+                                        <div className="minimum-summary"
                                              dangerouslySetInnerHTML={this.createMarkup(drug.personalizedInformation)}/>
-                                    }
-                                </section>}
-                            </div>
-                            <div className={col5Class.join(' hidden ')}>
-                                <div className={medfeat1.join('')}>
-                                    {this.renderDrugFeatures(drug)}
+                                        }
+                                    </section>}
                                 </div>
-                            </div>
-                            <div className={col1Class.join(' ')}>
+                                <div className={col5Class.join(' hidden ')}>
+                                    <div className={medfeat1.join('')}>
+                                        {this.renderDrugFeatures(drug)}
+                                    </div>
+                                </div>
+                                <div className={col1Class.join(' ')}>
 
-                                {User.isAuthenticated() &&
-                                <div className="row">
-                                    <div className="action-pattern">
+                                    {User.isAuthenticated() &&
+                                    <div className="row">
+                                        <div className="action-pattern">
 
-                                        <div>
-                                            <div className={coltorowClass.join(' ')}>
-                                                <button type="button" className="btn btn-like big_btn"
-                                                        onClick={() => this.toggleTaking(drug)}>
+                                            <div>
+                                                <div className={coltorowClass.join(' ')}>
+                                                    <button type="button" className="btn btn-like big_btn"
+                                                            onClick={() => this.toggleTaking(drug)}>
                                                 <span
                                                     className={"glyphicon white " + (drug.isTaken ? 'glyphicon-minus' : 'glyphicon-heart')}></span>
-                                                </button>
-                                            </div>
-                                            <div className={coltorowClass.join(' ')}>
-                                                <button type="button" className="btn btn-add big_btn"
-                                                        onClick={() => this.toggleRemember(drug)}>
+                                                    </button>
+                                                </div>
+                                                <div className={coltorowClass.join(' ')}>
+                                                    <button type="button" className="btn btn-add big_btn"
+                                                            onClick={() => this.toggleRemember(drug)}>
                                                 <span
                                                     className={"glyphicon white " + (drug.isRemembered ? 'glyphicon-minus' : 'glyphicon-plus')}></span>
-                                                </button>
-                                            </div>
-                                            <div className={coltorowClass.join(' ')}>
-                                                <button type="button" className="btn btn-open big_btn">
-                                                    <Link to={`/drug/${drug.id}`}>
+                                                    </button>
+                                                </div>
+                                                <div className={coltorowClass.join(' ')}>
+                                                    <button type="button" className="btn btn-open big_btn">
+                                                        <Link to={`/drug/${drug.id}`}>
                                                                 <span
                                                                     className="glyphicon glyphicon-eye-open white"></span>
-                                                    </Link>
-                                                </button>
+                                                        </Link>
+                                                    </button>
+                                                </div>
                                             </div>
+
                                         </div>
 
-                                    </div>
-
-                                </div>}
+                                    </div>}
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
                 </div>
 
             );

@@ -262,10 +262,10 @@ class DrugDetail extends React.Component {
         const {t} = this.props;
         return (
             <section className="diseases">
-                <img src={"./../../assets/images/lab.svg"} style={{width: "38px"}}/>
+                <img src={"./../../assets/images/lab.svg"} className="infopic"/>
 
                 <p><b> {t('usedWhen') + " "}</b></p>
-             <p>   {drug.disease.map(disease => <span key={disease.id}>{disease.name}</span>)
+                <p>   {drug.disease.map(disease => <span key={disease.id}>{disease.name} <br /></span>)
                     .reduce((prev, curr) => [prev, curr])}</p>
             </section>
         );
@@ -279,18 +279,17 @@ class DrugDetail extends React.Component {
         const {t} = this.props;
         return (
             <section className="diseases row">
-                {drug.pharmaceuticalForm.map(pharmaceuticalForm => <img style={{width: "38px"}}
-                                                                        key={pharmaceuticalForm.id}
+                {drug.pharmaceuticalForm.map(pharmaceuticalForm => <img key={pharmaceuticalForm.id}
                                                                         src={"./../../assets/p_form/" + pharmaceuticalForm.id + ".svg"}
-                                                                        className="drug-feature-icon"
+                                                                        className="drug-feature-icon infopic"
                                                                         alt={pharmaceuticalForm.name}
                                                                         title={pharmaceuticalForm.name}></img>
                 )
                     .reduce((prev, curr) => [prev, curr])}
 
-                    <p><b>  {t('pharmaceuticalForm') + ": "} </b></p>
-           <span>{ drug.pharmaceuticalForm.map(pharmaceuticalForm => <span key={pharmaceuticalForm.id}>{pharmaceuticalForm.name}</span> )
-            .reduce((prev, curr) => [prev, ', ', curr]) }</span>
+                <p><b>  {t('pharmaceuticalForm') + ": "} </b></p>
+                <span>{ drug.pharmaceuticalForm.map(pharmaceuticalForm => <span key={pharmaceuticalForm.id}>{pharmaceuticalForm.name} <br /> </span> )
+                    .reduce((prev, curr) => [prev, ', ', curr]) }</span>
             </section>
         );
     }
@@ -303,15 +302,16 @@ class DrugDetail extends React.Component {
         const {t} = this.props;
 
         return (
-            <section>                <img src={"./../../assets/images/lab.svg"} style={{width: "38px"}}/>
+            <section>                <img src={"./../../assets/images/lab.svg"} className="infopic"/>
 
-            <p><b> {t('activeSubstance') + " "}</b> </p>
-            <p>    {drug.activeSubstance.map(substance => <span key={substance.id}>{substance.name}</span>)
+                <p><b> {t('activeSubstance') + " "}</b> </p>
+                <p>    {drug.activeSubstance.map(substance => <span key={substance.id}>{substance.name} <br /></span>)
                     .reduce((prev, curr) => [prev, ', ', curr])}</p>
 
             </section>
         );
     }
+
 
     renderPZN(drug) {
         if (!drug.packaging)
@@ -321,15 +321,14 @@ class DrugDetail extends React.Component {
 
         return (
             <section className="pzn diseases row">
-                 <img src={"./../../assets/images/lab.svg"} style={{width: "38px"}}/>
+                <img src={"./../../assets/images/lab.svg"} className="infopic"/>
 
-                    <p><b>  {t('pzn') + " "}</b></p>
-                <p>    {drug.packaging.map(packaging => <span key={packaging.id}>{packaging.name} {packaging.pzn}</span>)
-                    .reduce((prev, curr) => [prev, curr])}</p>
+                <p>      <b>  {t('pzn') + " "}</b>
+                    {drug.packaging.map(packaging => <span key={packaging.id}>{packaging.name} {packaging.pzn} <br /></span>)
+                        .reduce((prev, curr) => [prev, curr])}</p>
             </section>
         );
     }
-
 
     renderIndicationGroup(drug) {
         if (!drug.indicationGroup || !drug.indicationGroup.name)
@@ -339,7 +338,7 @@ class DrugDetail extends React.Component {
 
         return (
             <section className="row diseases">
-                <img src={"./../../assets/images/lab.svg"} style={{width: "38px"}}/>
+                <img src={"./../../assets/images/lab.svg"} className="infopic"/>
 
                 <p><b>     {t('indicationGroup') + " "}  </b></p>
                 <p>{drug.indicationGroup.name}</p>
@@ -357,11 +356,11 @@ class DrugDetail extends React.Component {
 
         return (
             <section className="row diseases">
-                <img src={"./../../assets/images/lab.svg"} style={{width: "38px"}}/>
+                <img src={"./../../assets/images/lab.svg"} className="infopic"/>
 
                 <p><b>      {t('productGroup') + " "}</b></p>
 
-                    <p>{drug.productGroup.name}</p>
+                <p>{drug.productGroup.name}</p>
 
             </section>
         );
@@ -377,6 +376,21 @@ class DrugDetail extends React.Component {
                 <p key={section.id}>{section.topic.title}</p>
             );
         }));
+    }
+
+    renderPackSec(drug) {
+        if (!drug.packagingSection) {
+            return null;
+        }
+
+        return drug.packagingSection
+            .filter(section => {
+            return section.topic.id === 1  })
+            .map((section => {
+            return (
+                <p key={section.id}><span dangerouslySetInnerHTML={this.createMarkup(section.text)}/><h1>---</h1>{section.topic.title}</p>
+            );
+        })).reduce((prev, curr) => [prev, curr]);
     }
 
     renderSectionList(drug) {
@@ -688,15 +702,16 @@ class DrugDetail extends React.Component {
                                 </div>
 
                             </div>
-                            <div className="col-xs-12 col-sm-12 col-md-7">
+                            <div className="col-xs-12 col-sm-12 col-md-7 infobox">
+
                                 <div className="row">
-                                    <div className="col-sm-4 text-center">
+                                    <div className="col-sm-4 text-center infopart">
                                         {this.renderPharmaceuticalForm(drug)}
                                     </div>
-                                    <div className="col-sm-4 text-center">
+                                    <div className="col-sm-4 text-center infopart">
                                         {this.renderDisease(drug)}
                                     </div>
-                                    <div className="col-sm-4 text-center">
+                                    <div className="col-sm-4 text-center infopart">
                                         {this.renderActiveSubstance(drug)}
                                     </div>
 
@@ -708,13 +723,13 @@ class DrugDetail extends React.Component {
                                     <div className="additional-information">
 
                                         <section>
-                                            <div className="col-sm-4 text-center">
+                                            <div className="col-sm-4 text-center infopart">
                                                 {this.renderIndicationGroup(drug)}
                                             </div>
-                                            <div className="col-sm-4 text-center">
+                                            <div className="col-sm-4 text-center infopart">
                                                 {this.renderProductGroup(drug)}
                                             </div>
-                                            <div className="col-sm-4 text-center">
+                                            <div className="col-sm-4 text-center infopart">
                                                 {this.renderPZN(drug)}
                                             </div>
 
@@ -724,6 +739,8 @@ class DrugDetail extends React.Component {
                                     </div>
 
                                 </div>}
+
+
                                 <div className="row text-center">
                                     <p>
                                         <a onClick={this.toggleShowAdditionalInfo}>
@@ -743,6 +760,7 @@ class DrugDetail extends React.Component {
 
                 <div className="container">
 
+                    {this.renderPackSec(drug)}
                     <div className="row">
                         <div className="panel with-nav-tabs panel-default">
                             <div className="panel-heading">

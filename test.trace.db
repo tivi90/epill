@@ -13996,3 +13996,162 @@ INSERT INTO tailored_text (id, idgender, iddrug, min_age, max_age, text) VALUES 
 org.h2.jdbc.JdbcSQLException: Wert zu gross / lang für Feld "TEXT VARCHAR(255)": "STRINGDECODE('Hey %firstname% %lastname%, <br /> Hier steht eine wichtige Information f\u00fcr M\u00e4nner im Alter von %age% Ja... (256)"
 Value too long for column "TEXT VARCHAR(255)": "STRINGDECODE('Hey %firstname% %lastname%, <br /> Hier steht eine wichtige Information f\u00fcr M\u00e4nner im Alter von %age% Ja... (256)"; SQL statement:
 INSERT INTO tailored_text (id, idgender, iddrug, min_age, max_age, text) VALUES (1, 1, 1, 16, 30, 'Hey %firstname% %lastname%, <br /> Hier steht eine wichtige Information für Männer im Alter von %age% Jahren, die sich für dieses Medikament interessieren.<br />2 mal täglich einnehmen<br />1 Tablette morgens gegen 9:00<br />1 Tablette am Abend gegen 20:00') [22001-194]
+2019-12-20 18:15:11 database: flush
+org.h2.message.DbException: Allgemeiner Fehler: "java.lang.IllegalStateException: The file is locked: nio:/home/tivi90/epill_t/test.mv.db [1.4.199/7]"
+General error: "java.lang.IllegalStateException: The file is locked: nio:/home/tivi90/epill_t/test.mv.db [1.4.199/7]" [50000-199]
+	at org.h2.message.DbException.get(DbException.java:194)
+	at org.h2.message.DbException.convert(DbException.java:347)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:90)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:2787)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:441)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:404)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:3343)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:162)
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:95)
+	at org.h2.engine.Database.getPageStore(Database.java:2739)
+	at org.h2.engine.Database.open(Database.java:769)
+	at org.h2.engine.Database.openDatabase(Database.java:319)
+	at org.h2.engine.Database.<init>(Database.java:313)
+	at org.h2.engine.Engine.openSession(Engine.java:69)
+	at org.h2.engine.Engine.openSession(Engine.java:201)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:178)
+	at org.h2.engine.Engine.createSession(Engine.java:161)
+	at org.h2.engine.Engine.createSession(Engine.java:31)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:336)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:169)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:148)
+	at org.h2.Driver.connect(Driver.java:69)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:299)
+	at org.h2.server.web.WebServer.getConnection(WebServer.java:782)
+	at org.h2.server.web.WebApp.login(WebApp.java:1004)
+	at org.h2.server.web.WebApp.process(WebApp.java:219)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:169)
+	at org.h2.server.web.WebThread.process(WebThread.java:139)
+	at org.h2.server.web.WebThread.run(WebThread.java:93)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Allgemeiner Fehler: "java.lang.IllegalStateException: The file is locked: nio:/home/tivi90/epill_t/test.mv.db [1.4.199/7]"
+General error: "java.lang.IllegalStateException: The file is locked: nio:/home/tivi90/epill_t/test.mv.db [1.4.199/7]" [50000-199]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	... 30 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:/home/tivi90/epill_t/test.mv.db [1.4.199/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:883)
+	at org.h2.mvstore.FileStore.open(FileStore.java:172)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:390)
+	... 24 more
+2019-12-20 18:15:13 database: flush
+org.h2.message.DbException: Allgemeiner Fehler: "java.lang.IllegalStateException: The file is locked: nio:/home/tivi90/epill_t/test.mv.db [1.4.199/7]"
+General error: "java.lang.IllegalStateException: The file is locked: nio:/home/tivi90/epill_t/test.mv.db [1.4.199/7]" [50000-199]
+	at org.h2.message.DbException.get(DbException.java:194)
+	at org.h2.message.DbException.convert(DbException.java:347)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:90)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:2787)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:441)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:404)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:3343)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:162)
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:95)
+	at org.h2.engine.Database.getPageStore(Database.java:2739)
+	at org.h2.engine.Database.open(Database.java:769)
+	at org.h2.engine.Database.openDatabase(Database.java:319)
+	at org.h2.engine.Database.<init>(Database.java:313)
+	at org.h2.engine.Engine.openSession(Engine.java:69)
+	at org.h2.engine.Engine.openSession(Engine.java:201)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:178)
+	at org.h2.engine.Engine.createSession(Engine.java:161)
+	at org.h2.engine.Engine.createSession(Engine.java:31)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:336)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:169)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:148)
+	at org.h2.Driver.connect(Driver.java:69)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:299)
+	at org.h2.server.web.WebServer.getConnection(WebServer.java:782)
+	at org.h2.server.web.WebApp.login(WebApp.java:1004)
+	at org.h2.server.web.WebApp.process(WebApp.java:219)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:169)
+	at org.h2.server.web.WebThread.process(WebThread.java:139)
+	at org.h2.server.web.WebThread.run(WebThread.java:93)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Allgemeiner Fehler: "java.lang.IllegalStateException: The file is locked: nio:/home/tivi90/epill_t/test.mv.db [1.4.199/7]"
+General error: "java.lang.IllegalStateException: The file is locked: nio:/home/tivi90/epill_t/test.mv.db [1.4.199/7]" [50000-199]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	... 30 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:/home/tivi90/epill_t/test.mv.db [1.4.199/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:883)
+	at org.h2.mvstore.FileStore.open(FileStore.java:172)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:390)
+	... 24 more
+2019-12-20 18:21:15 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "SELECT TITLE ,NAME,TEXT,   
+FROM PACKAGING_TOPIC   
+INNER JOIN PACKAGING_SECTION  
+ON PACKAGING_TOPIC  .ID   = PACKAGING_SECTION .IDPACKAGING_TOPIC[*]"; erwartet "(, ., [, ::, *, /, %, +, -, ||, ~, !~, NOT, LIKE, ILIKE, REGEXP, IS, IN, BETWEEN, AND, OR, RIGHT, LEFT, FULL, INNER, JOIN, CROSS, NATURAL, ,, SELECT"
+Syntax error in SQL statement "SELECT TITLE ,NAME,TEXT,   
+FROM PACKAGING_TOPIC   
+INNER JOIN PACKAGING_SECTION  
+ON PACKAGING_TOPIC  .ID   = PACKAGING_SECTION .IDPACKAGING_TOPIC[*]"; expected "(, ., [, ::, *, /, %, +, -, ||, ~, !~, NOT, LIKE, ILIKE, REGEXP, IS, IN, BETWEEN, AND, OR, RIGHT, LEFT, FULL, INNER, JOIN, CROSS, NATURAL, ,, SELECT"; SQL statement:
+SELECT TITLE ,NAME,TEXT,   
+FROM PACKAGING_TOPIC   
+INNER JOIN PACKAGING_SECTION  
+ON PACKAGING_TOPIC  .ID   = PACKAGING_SECTION .IDPACKAGING_TOPIC [42001-199]
+2019-12-20 18:30:22 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Feld "Anwenderhinweise" nicht gefunden
+Column "Anwenderhinweise" not found; SQL statement:
+SELECT TITLE,IDDRUG,TEXT 
+FROM PACKAGING_TOPIC   
+INNER JOIN PACKAGING_SECTION  
+ON PACKAGING_TOPIC  .ID   = PACKAGING_SECTION .IDPACKAGING_TOPIC  
+WHERE TITLE = "Anwenderhinweise" [42122-199]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:451)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.expression.ExpressionColumn.getColumnException(ExpressionColumn.java:176)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:158)
+	at org.h2.expression.condition.Comparison.optimize(Comparison.java:207)
+	at org.h2.expression.condition.ConditionAndOr.optimize(ConditionAndOr.java:133)
+	at org.h2.command.dml.Select.prepare(Select.java:1248)
+	at org.h2.command.Parser.prepareCommand(Parser.java:689)
+	at org.h2.engine.Session.prepareLocal(Session.java:627)
+	at org.h2.engine.Session.prepareCommand(Session.java:565)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1292)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:217)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1113)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1436)
+	at org.h2.server.web.WebApp.query(WebApp.java:1111)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1073)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1060)
+	at org.h2.server.web.WebThread.process(WebThread.java:173)
+	at org.h2.server.web.WebThread.run(WebThread.java:93)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+2019-12-20 18:30:37 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Feld "ANWENDERHINWEISE" nicht gefunden
+Column "ANWENDERHINWEISE" not found; SQL statement:
+SELECT TITLE,IDDRUG,TEXT 
+FROM PACKAGING_TOPIC   
+INNER JOIN PACKAGING_SECTION  
+ON PACKAGING_TOPIC  .ID   = PACKAGING_SECTION .IDPACKAGING_TOPIC  
+WHERE TITLE = Anwenderhinweise [42122-199]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:451)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.expression.ExpressionColumn.getColumnException(ExpressionColumn.java:176)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:158)
+	at org.h2.expression.condition.Comparison.optimize(Comparison.java:207)
+	at org.h2.expression.condition.ConditionAndOr.optimize(ConditionAndOr.java:133)
+	at org.h2.command.dml.Select.prepare(Select.java:1248)
+	at org.h2.command.Parser.prepareCommand(Parser.java:689)
+	at org.h2.engine.Session.prepareLocal(Session.java:627)
+	at org.h2.engine.Session.prepareCommand(Session.java:565)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1292)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:217)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1113)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1436)
+	at org.h2.server.web.WebApp.query(WebApp.java:1111)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1073)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1060)
+	at org.h2.server.web.WebThread.process(WebThread.java:173)
+	at org.h2.server.web.WebThread.run(WebThread.java:93)
+	at java.base/java.lang.Thread.run(Thread.java:844)
