@@ -11,55 +11,62 @@ import MenueItem from "./menue_item";
 
 
 class Navigation extends React.Component {
-	
+
     constructor(props) {
-        super(props); 
+        super(props);
     }
-    
+
     componentDidMount() {
-    	
+
     }
-    
-	updateNavigation() {
+
+    updateNavigation() {
         this.forceUpdate();
     }
-		
-	 render() {
-	      const {t} = this.props;
-		  
-		  return (
-	                <div>
-		                <div className="navbar-wrapper">
-		            		<div className ="container">
-		            			<nav className="navbar navbar-default navbar-fixed-top">
-		            				<div className="container">
-		            					<div className="navbar-header">
-		            						<button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
-	            							<span className="icon-bar"></span>
-	            							<span className="icon-bar"></span>
-	            							<span className="icon-bar"></span>
-	            						</button>
-		            						<Link to="/" className="navbar-brand">
-		            						 	<img src="/assets/images/logo_v.svg" className="logo"></img>
-		            						 </Link>
-		            					</div>
-		            					<div id="navbar" className="collapse navbar-collapse">
-		            						<ul className="nav navbar-nav">
-		            							<MenueItem title="about" to="/about"  />
-		            							<MenueItem title="drugs" to="/drug/list" />
-		            						</ul>
 
-		            					{/*	<AutoComplete {...this.props} */}
-		            	
-		            						<UserMenue />
-		            					</div>
-		            				</div>
-		            			</nav>
-		            		</div>
-		            	</div>
-		          </div>
-		  );
-	  }
+    render() {
+        const {t} = this.props;
+
+        return (
+          <div>
+
+            <div className="container-fluid info_navbar">
+                <div className="container">
+                    <Link to="/" className="navbar-brand">
+                        <img src="/assets/images/logo_v.svg" className="logo"></img>
+                    </Link>
+                   <div style={{float:"right"}}>
+                    <AutoComplete {...this.props}  />
+                   </div>
+                </div>
+            </div>
+
+
+                        <nav className="navbar navbar-default">
+                            <div className="container">
+                                     <div className="navbar-header">
+                                    <button type="button" className="navbar-toggle collapsed" data-toggle="collapse"
+                                            data-target="#navbar">
+                                        <span className="icon-bar"></span>
+                                        <span className="icon-bar"></span>
+                                        <span className="icon-bar"></span>
+                                    </button>
+                                 </div>
+                                <div id="navbar" className="collapse navbar-collapse">
+                                    <ul className="nav navbar-nav">
+                                        <MenueItem title="about" to="/about"/>
+                                        <MenueItem title="drugs" to="/drug/list"/>
+                                    </ul>
+
+
+                                    <UserMenue/>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+
+        );
+    }
 }
 
 export default Navigation;

@@ -14,7 +14,19 @@ import SideEffect from "./sideEffect";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 
 import {faHome} from "@fortawesome/free-solid-svg-icons";
-import {faInfo, faCommentMedical, faAddressCard, faThumbsUp, faUserMd} from "@fortawesome/free-solid-svg-icons";
+import {
+    faInfo,
+    faCommentMedical,
+    faAddressCard,
+    faThumbsUp,
+    faUserMd,
+    faBaby,
+    faChild,
+    faMale,
+    faGlassWhiskey,
+    faChevronDown,
+    faBlind
+} from "@fortawesome/free-solid-svg-icons";
 import {Link} from "react-router-dom";
 
 
@@ -265,7 +277,7 @@ class DrugDetail extends React.Component {
                 <img src={"./../../assets/images/lab.svg"} className="infopic"/>
 
                 <p><b> {t('usedWhen') + " "}</b></p>
-                <p>   {drug.disease.map(disease => <span key={disease.id}>{disease.name} <br /></span>)
+                <p>   {drug.disease.map(disease => <span key={disease.id}>{disease.name} <br/></span>)
                     .reduce((prev, curr) => [prev, curr])}</p>
             </section>
         );
@@ -288,8 +300,9 @@ class DrugDetail extends React.Component {
                     .reduce((prev, curr) => [prev, curr])}
 
                 <p><b>  {t('pharmaceuticalForm') + ": "} </b></p>
-                <span>{ drug.pharmaceuticalForm.map(pharmaceuticalForm => <span key={pharmaceuticalForm.id}>{pharmaceuticalForm.name} <br /> </span> )
-                    .reduce((prev, curr) => [prev, ', ', curr]) }</span>
+                <span>{drug.pharmaceuticalForm.map(pharmaceuticalForm => <span
+                    key={pharmaceuticalForm.id}>{pharmaceuticalForm.name} <br/> </span>)
+                    .reduce((prev, curr) => [prev, ', ', curr])}</span>
             </section>
         );
     }
@@ -302,10 +315,10 @@ class DrugDetail extends React.Component {
         const {t} = this.props;
 
         return (
-            <section>                <img src={"./../../assets/images/lab.svg"} className="infopic"/>
+            <section><img src={"./../../assets/images/lab.svg"} className="infopic"/>
 
-                <p><b> {t('activeSubstance') + " "}</b> </p>
-                <p>    {drug.activeSubstance.map(substance => <span key={substance.id}>{substance.name} <br /></span>)
+                <p><b> {t('activeSubstance') + " "}</b></p>
+                <p>    {drug.activeSubstance.map(substance => <span key={substance.id}>{substance.name} <br/></span>)
                     .reduce((prev, curr) => [prev, ', ', curr])}</p>
 
             </section>
@@ -323,8 +336,9 @@ class DrugDetail extends React.Component {
             <section className="pzn diseases row">
                 <img src={"./../../assets/images/lab.svg"} className="infopic"/>
 
-                <p>      <b>  {t('pzn') + " "}</b>
-                    {drug.packaging.map(packaging => <span key={packaging.id}>{packaging.name} {packaging.pzn} <br /></span>)
+                <p><b>  {t('pzn') + " "}</b>
+                    {drug.packaging.map(packaging => <span key={packaging.id}>{packaging.name} {packaging.pzn}
+                        <br/></span>)
                         .reduce((prev, curr) => [prev, curr])}</p>
             </section>
         );
@@ -385,12 +399,15 @@ class DrugDetail extends React.Component {
 
         return drug.packagingSection
             .filter(section => {
-            return section.topic.id === 1  })
+                return section.topic.id === 1
+            })
             .map((section => {
-            return (
-                <p key={section.id}><span dangerouslySetInnerHTML={this.createMarkup(section.text)}/><h1>---</h1>{section.topic.title}</p>
-            );
-        })).reduce((prev, curr) => [prev, curr]);
+                return (
+                    <p key={section.id}><span dangerouslySetInnerHTML={this.createMarkup(section.text)}/>
+                        <h1>---</h1>{section.topic.title}</p>
+                );
+            })).reduce((prev, curr) => [prev, curr]);
+        drug.packagingSection.getPackagingSectionByTopicAndDrug(1, 1);
     }
 
     renderSectionList(drug) {
@@ -409,7 +426,7 @@ class DrugDetail extends React.Component {
         const {t} = this.props;
         const drug = this.state.drug;
         const showAdditionalInfo = this.state.showAdditionalInfo;
-        let itemClass = ["item  col-xs-4 col-lg-4 grid-group-item"]
+        let itemClass = ["item  col-xs-4 col-sm-4 grid-group-item"]
         if (this.state.addClass) {
             itemClass.push('list-group-item');
         }
@@ -453,7 +470,7 @@ class DrugDetail extends React.Component {
 
                                     denn
                                     sie enthält wichtige Informationen für Sie.
-                                    Um einen bestmöglichen Behandlungserfolg zu erzielen, muss Prospan®
+                                    Um einen bestmöglichen Behandlungserfosm zu erzielen, muss Prospan®
                                     Hustensaft jedoch vorschriftsmäßig angewendet werden.</p>
 
                                 <ul>
@@ -621,13 +638,11 @@ class DrugDetail extends React.Component {
                             </div>
                         </div>
                         }
-                        <div className="row med_head">
-                            <h1>{drug.name}</h1>
-                        </div>
+
                         {/*<h3>{drug.name} {drug.productGroup && drug.productGroup.name && <span className="text-muted">{drug.productGroup.name}</span> }</h3>*/}
                         {/*<span>v. {drug.version} | {t('publishingDate')}: {new Date(drug.year).toLocaleDateString()}</span>*/}
                         {User.isAuthenticated() && drug.personalizedInformation &&
-                        <div className="alert row w3-animate-right">
+                        <div className="alert bubble  row w3-animate-right">
                             <div className="speech-bubble">
                                 <a href="#" className="close" data-dismiss="alert"
                                    aria-label="close">&times;</a>
@@ -641,12 +656,15 @@ class DrugDetail extends React.Component {
                         }
                         <div className="row featurette drug-detail-header">
 
-                            <div className="col-xs-12 col-sm-12 col-md-5">
+                            <div className="col-xs-12 col-sm-12 col-md-3">
                                 <img className="featurette-image img-responsive center-block"
                                      alt={drug.name}
                                      title={drug.name}
                                      src={`/image/drug/${drug.id}`
                                      }></img>
+                                <div className="row med_head">
+                                    <span>{drug.name}</span>
+                                </div>
                                 <div className="drug-features ">
                                     {drug.drugFeature.map(feature => {
                                         return (
@@ -701,99 +719,448 @@ class DrugDetail extends React.Component {
 
                                 </div>
 
-                            </div>
-                            <div className="col-xs-12 col-sm-12 col-md-7 infobox">
+                                <div className="row tab_headers">
+                                    <ul className="nav nav-pills brand-pills nav-stacked" role="tablist">
+                                        <li role="presentation" className="brand-nav active"><a href="#tab1"
+                                                                                                aria-controls="tab1"
+                                                                                                role="tab"
+                                                                                                data-toggle="tab">Algemeine
+                                            Informationen</a></li>
+                                        <div id="arrow-down">
+                                            <FontAwesomeIcon icon={faChevronDown}/>
+                                        </div>
+                                        <li role="presentation" className="brand-nav"><a href="#tab2"
+                                                                                         aria-controls="tab2"
+                                                                                         role="tab"
+                                                                                         data-toggle="tab">Vor der
+                                            Anwendung </a></li>
+                                        <div id="arrow-down">
+                                            <FontAwesomeIcon icon={faChevronDown}/>
+                                        </div>
+                                        <li role="presentation" className="brand-nav"><a href="#tab3"
+                                                                                         aria-controls="tab3"
+                                                                                         role="tab"
+                                                                                         data-toggle="tab">Anwendung</a>
+                                        </li>
+                                        <div id="arrow-down">
+                                            <FontAwesomeIcon icon={faChevronDown}/>
+                                        </div>
+                                        <li role="presentation" className="brand-nav"><a href="#tab4"
+                                                                                         aria-controls="tab4"
+                                                                                         role="tab"
+                                                                                         data-toggle="tab">Nebenwirkungen
+                                        </a></li>
+                                    </ul>
 
-                                <div className="row">
-                                    <div className="col-sm-4 text-center infopart">
-                                        {this.renderPharmaceuticalForm(drug)}
-                                    </div>
-                                    <div className="col-sm-4 text-center infopart">
-                                        {this.renderDisease(drug)}
-                                    </div>
-                                    <div className="col-sm-4 text-center infopart">
-                                        {this.renderActiveSubstance(drug)}
-                                    </div>
 
                                 </div>
 
-                                {showAdditionalInfo &&
-                                <div className="row">
 
-                                    <div className="additional-information">
-
-                                        <section>
-                                            <div className="col-sm-4 text-center infopart">
-                                                {this.renderIndicationGroup(drug)}
-                                            </div>
-                                            <div className="col-sm-4 text-center infopart">
-                                                {this.renderProductGroup(drug)}
-                                            </div>
-                                            <div className="col-sm-4 text-center infopart">
-                                                {this.renderPZN(drug)}
-                                            </div>
-
-                                        </section>
-
-
-                                    </div>
-
-                                </div>}
-
-
-                                <div className="row text-center">
-                                    <p>
-                                        <a onClick={this.toggleShowAdditionalInfo}>
-                                            <button className="btn btn-secondary">
-                                                {!showAdditionalInfo && <span>{t('viewDetails')}</span>}
-                                                {showAdditionalInfo && <span>{t('hideDetails')}</span>}
-                                            </button>
-                                        </a>
-                                    </p>
-                                </div>
                             </div>
 
 
-                        </div>
-                    </div>
-                </div>
-
-                <div className="container">
-
-                    {this.renderPackSec(drug)}
-                    <div className="row">
-                        <div className="panel with-nav-tabs panel-default">
-                            <div className="panel-heading">
-                                <ul className="nav nav-tabs">
-                                    <li className="active"><a href="#tab1default" data-toggle="tab">Vor der
-                                        Einnahme </a></li>
-                                    <li><a href="#tab2default" data-toggle="tab">Anwendnung</a></li>
-                                    <li><a href="#tab3default" data-toggle="tab">Nebenwirkungen</a></li>
-
-                                </ul>
-                            </div>
-                            <div className="panel-body">
+                            <div className="col-xs-12 col-sm-12 col-md-9 infobox">
                                 <div className="tab-content">
-                                    <div className="tab-pane fade in active" id="tab1default"><BeforeTaking/></div>
-                                    <div className="tab-pane fade" id="tab2default"><Usage/></div>
-                                    <div className="tab-pane fade" id="tab3default"><SideEffect/></div>
+                                    <div role="tabpanel" className="tab-pane active w3-animate-opacity" id="tab1">
+                                        <div className="row content_header">
+                                            <span>Algemeine Informationen</span>
+                                            <hr/>
+                                            <p>Baymycard 10 mg ist ein Arzneimittel zur Behandlung der chronisch
+                                                stabilen Angina pectoris (Belastungsangina) und des Bluthochdrucks. Bei
+                                                der chronisch stabilen Angina pectoris sind die Blutgefäße, die das Herz
+                                                kranzförmig umgeben (Herzkranzgefäße), verengt, so dass der Herzmuskel
+                                                nicht ausreichend mit Sauerstoff versorgt wird. Nisoldipin, der
+                                                Wirkstoff in Baymycard 10 mg, führt zu einer Erweiterung der
+                                                Herzkranzgefäße und anderer Blutgefäße, verbessert so die Durchblutung
+                                                und steigert die Sauerstoffzufuhr. Ein erhöhter Blutdruck wird
+                                                normalisiert.</p>
+                                        </div>
+
+                                        <div className="row">
+                                            <div className="col-sm-4 text-center infopart">
+                                                {this.renderPharmaceuticalForm(drug)}
+                                            </div>
+                                            <div className="col-sm-4 text-center infopart">
+                                                {this.renderDisease(drug)}
+                                            </div>
+                                            <div className="col-sm-4 text-center infopart">
+                                                {this.renderActiveSubstance(drug)}
+                                            </div>
+
+                                        </div>
+
+                                        {showAdditionalInfo &&
+                                        <div className="row">
+
+                                            <div className="additional-information">
+
+                                                <section>
+                                                    <div className="col-sm-4 text-center infopart">
+                                                        {this.renderIndicationGroup(drug)}
+                                                    </div>
+                                                    <div className="col-sm-4 text-center infopart">
+                                                        {this.renderProductGroup(drug)}
+                                                    </div>
+                                                    <div className="col-sm-4 text-center infopart">
+                                                        {this.renderPZN(drug)}
+                                                    </div>
+
+                                                </section>
+
+
+                                            </div>
+
+                                        </div>}
+
+
+                                        <div className="row text-center">
+                                            <p>
+                                                <a onClick={this.toggleShowAdditionalInfo}>
+                                                    <button className="btn btn-secondary">
+                                                        {!showAdditionalInfo && <span>{t('viewDetails')}</span>}
+                                                        {showAdditionalInfo && <span>{t('hideDetails')}</span>}
+                                                    </button>
+                                                </a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div role="tabpanel" className="tab-pane w3-animate-opacity" id="tab2">
+
+                                    </div>
+                                    <div role="tabpanel" className="tab-pane w3-animate-opacity" id="tab3">
+                                        <div className="alert bubble  row w3-animate-right">
+                                            <div className="speech-bubble">
+                                                <a href="#" className="close" data-dismiss="alert"
+                                                   aria-label="close">&times;</a>
+                                                <span
+                                                    dangerouslySetInnerHTML={this.createMarkup(drug.personalizedInformation)}/>
+                                            </div>
+
+                                            <img className="speech-bubble-person"
+                                                 src="./../../assets/images/logo_chat.png"/>
+
+                                        </div>
+                                        <div className="row">
+                                            <div className="content_header">
+                                                <span>Art</span>
+                                                <hr/>
+                                            </div>
+                                            <div className="col-sm-4 text-center ">
+
+
+                                                <div className="circle-badge">
+                                                    <img style={{width: "50px"}}
+                                                         src={"./../../assets/images/other/8clock.png"}></img><br/>
+                                                    <strong>Morgens</strong> <br/>
+                                                    <span>6 - 12 Uhr</span>
+
+                                                </div>
+                                                <span className="times">1x <FontAwesomeIcon
+                                                    icon={faGlassWhiskey}/></span>
+
+                                            </div>
+                                            <div className="col-sm-4 text-center ">
+
+
+                                                <div className="circle-badge">
+                                                    <img style={{width: "50px"}}
+                                                         src={"./../../assets/images/other/12clock.png"}></img><br/>
+                                                    <strong>Mittags</strong> <br/>
+                                                    <span>12 - 17 Uhr</span>
+
+
+                                                </div>
+                                                <span className="times">1x <FontAwesomeIcon
+                                                    icon={faGlassWhiskey}/></span>
+
+                                            </div>
+                                            <div className="col-sm-4 text-center  ">
+
+
+                                                <div className="circle-badge">
+                                                    <img style={{width: "50px"}}
+                                                         src={"./../../assets/images/other/17clock.png"}></img><br/>
+
+                                                    <strong>Abends</strong> <br/>
+                                                    <span>17 - 21 Uhr</span>
+
+
+                                                </div>
+                                                <span className="times">1x <FontAwesomeIcon
+                                                    icon={faGlassWhiskey}/></span>
+
+                                            </div>
+                                        </div>
+                                        <div className="alert alert-info alert_dose" role="alert">
+<div className="row">
+                                            <div className="col-sm-6 text-center alert_details"><img className="liquid" src={"./../../assets/images/other/liquid.png"}></img><br/> Die
+                                                Flasche vor jedem
+                                                Gebrauch gut schütteln!
+                                            </div>
+
+                                            <div className="col-sm-6 text-center alert_details">
+
+                                                <FontAwesomeIcon className="med_cup" icon={faGlassWhiskey}/><br/>
+                                            Zum Einnehmen mit dem beigefügten Messbecher
+                                        </div>
+                                    </div> </div>
+                                    <div className="row content_header">
+                                        <span>Dosierung</span>
+                                        <hr/>
+                                    </div>
+                                    <div className="row">
+                                        <div className="col-sm-3" style={{fontSize: "16px"}}>
+
+
+                                        </div>
+                                        <div className="col-sm-3" style={{fontSize: "60px"}}>
+                                            <FontAwesomeIcon icon={faBaby}/>
+                                        </div>
+                                        <div className="col-sm-3" style={{fontSize: "60px"}}>
+                                            <FontAwesomeIcon icon={faChild}/>
+
+                                            <i className="fas fa-child"></i>
+                                        </div>
+                                        <div className="col-sm-3" style={{fontSize: "60px"}}>
+                                            <FontAwesomeIcon icon={faMale}/>
+                                            <FontAwesomeIcon icon={faBlind}/>
+
+                                            <i className="fas fa-male"></i>
+                                            <i className="fas fa-blind"></i>
+                                        </div>
+                                    </div>
+                                    <div className="row">
+                                        <div className="col-sm-3" style={{fontSize: "16px"}}>
+
+                                            <p style={{fontWeight: "bold"}}>Alter</p>
+                                        </div>
+                                        <div className="col-sm-3" style={{fontSize: "16px"}}>
+
+                                            <p> Kinder unter 6 Jahren</p>
+                                        </div>
+                                        <div className="col-sm-3" style={{fontSize: "16px"}}>
+
+                                            <p> Kinder von 6 - 12 Jahren</p>
+
+                                        </div>
+                                        <div className="col-sm-3" style={{fontSize: "16px"}}>
+
+                                            <p> Kinder ab 6 Jahren & Erwachsene</p>
+                                        </div>
+                                    </div>
+                                    <hr/>
+                                    <div className="row">
+                                        <div className="col-sm-3" style={{fontSize: "16px"}}>
+
+                                            <p style={{fontWeight: "bold"}}>Einzeldosis</p>
+                                        </div>
+                                        <div className="col-sm-3" style={{fontSize: "16px"}}>
+
+                                            <p>2,5 ml <br/> &#8793; <br/> 17,5 mg
+                                                Efeublätter-Trockenextrakt
+                                            </p>
+                                        </div>
+                                        <div className="col-sm-3" style={{fontSize: "16px"}}>
+
+                                            <p>5 ml <br/> &#8793; <br/> 35 mg Efeublätter-Trockenextrakt
+                                            </p>
+                                        </div>
+                                        <div className="col-sm-3" style={{fontSize: "16px"}}>
+
+                                            <p>5 ml <br/> &#8793; <br/> 35 mg Efeublätter-Trockenextrakt
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <hr/>
+
+                                    <div className="row">
+                                        <div className="col-sm-3" style={{fontSize: "16px"}}>
+
+                                            <p style={{fontWeight: "bold"}}>Tagesgesamtdosis</p>
+                                        </div>
+                                        <div className="col-sm-3" style={{fontSize: "16px"}}>
+
+                                            <p>5 ml (2 x 2,5 ml) <br/> &#8793; <br/> 35 mg
+                                                Efeublätter-Trockenextrakt
+                                            </p>
+                                        </div>
+                                        <div className="col-sm-3" style={{fontSize: "16px"}}>
+
+                                            <p>10 ml (2 x 5 ml) <br/> &#8793; <br/> 70 mg
+                                                Efeublätter-Trockenextrakt
+                                            </p>
+                                        </div>
+                                        <div className="col-sm-3" style={{fontSize: "16px"}}>
+
+                                            <p>15 ml (3 x 5 ml) <br/> &#8793; <br/> 105 mg
+                                                Efeublätter-Trockenextrakt
+                                            </p>
+                                        </div>
+                                    </div>
+
+
+                                    <div className="row">
+                                        <div className=" content_header">
+                                            <span>Dosierung</span>
+                                            <hr/>
+                                        </div>
+                                        <div className="col-sm-8 col-sm-offset-2">
+                                            Die Behandlungsdauer richtet sich jeweils nach der Art und
+                                            Schwere
+                                            des Krankheitsbildes; sie sollte in der Regel <b>1
+                                            Woche </b> betragen. Wenn
+                                            die Beschwerden jedoch länger als 1 Woche anhalten, sollte
+                                            medizinischer Rat eingeholt werden.
+                                            <div className="alert alert-warning" role="alert"> Bitte
+                                                sprechen Sie mit Ihrem Arzt oder Apotheker,
+                                                wenn Sie den
+                                                Eindruck haben, dass die Wirkung von Prospan® Hustensaft zu
+                                                stark
+                                                oder zu schwach ist.</div>
+                                        </div>
+                                    </div>
+
+
                                 </div>
+                                <div role="tabpanel" className="tab-pane w3-animate-opacity" id="tab4">
+                                    <div className="row">
+                                        <div className="col-sm-12 text-center" style={{color: "black"}}>
+
+                                            Wie alle Arzneimittel kann Prospan® Hustensaft Nebenwirkungen
+                                            haben, die aber nicht bei jedem auftreten müssen. <br/>
+                                            Bei der Bewertung von Nebenwirkungen werden fosmende Häufigkeiten
+                                            zugrundegelegt:
+                                            <div className="row">
+                                                <div className="col-sm-8 col-sm-offset-2 text-left">
+                                                    <table className="table table-striped custab"
+                                                           style={{marginTop: "30px"}}>
+                                                        <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                <b>Sehr häufig</b>
+                                                            </td>
+                                                            <td>
+                                                                mehr als 1 Behandelter von 10
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <b> Häufig</b></td>
+                                                            <td>
+                                                                1 bis 10 Behandelte von 100
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <b> Gelegentlich</b></td>
+                                                            <td>
+                                                                1 bis 10 Behandelte von 1.000
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <b> Selten</b></td>
+                                                            <td>
+                                                                1 bis 10 Behandelte von 10.000
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <b> Sehr selten</b>
+                                                            </td>
+                                                            <td>
+                                                                weniger als 1 Behandelter von 10.000
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <b> Nicht bekannt</b>
+                                                            </td>
+                                                            <td>
+                                                                Häufigkeit auf Grundlage der verfügbaren Daten nicht
+                                                                abschätzbar
+                                                            </td>
+                                                        </tr>
+                                                        </tbody>
+
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="row">
+                                        <div className=" content_header">
+                                            <span>Allergische Reaktionen</span>
+                                            <hr/>
+                                        </div>
+                                        <div className="row">
+                                            <span className="label label-primary">Atemnot</span>
+                                            <span className="label label-primary">Schwellungen</span>
+                                            <span className="label label-primary">Hautrötungen</span>
+                                            <span className="label label-primary">Juckreiz</span>
+                                            <span className="label label-primary">Atemnot</span></div>
+
+                                        <div className=" content_header">
+                                            <span>Magen-Darm-Beschwerden </span>
+                                            <hr/>
+                                        </div>
+                                        <div className="row">
+                                            Aufgrund des Sorbitosmehaltes: <br/>
+                                            <span className="label label-primary">Übelkeit</span>
+                                            <span className="label label-primary">Erbrechen</span>
+                                            <span className="label label-primary">Durchfall</span>
+                                            <span className="label label-primary">abführende Wirkung</span>
+                                            <br/>
+                                            <p><b>Häufigkeit:</b> Nicht bekannt</p>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
+
                         </div>
+
+
                     </div>
                 </div>
-                {
-                    this.renderSectionList(drug)
-                }
-
             </div>
 
+            < div
+        className = "container" >
 
-        );
+            {this.renderPackSec(drug)}
+        <div className="row">
+            <div className="panel with-nav-tabs panel-default">
+                <div className="panel-heading">
+                    <ul className="nav nav-tabs">
+                        <li className="active"><a href="#tab1default" data-toggle="tab">Vor der
+                            Einnahme </a></li>
+                        <li><a href="#tab2default" data-toggle="tab">Anwendnung</a></li>
+                        <li><a href="#tab3default" data-toggle="tab">Nebenwirkungen</a></li>
+
+                    </ul>
+                </div>
+                <div className="panel-body">
+                    <div className="tab-content">
+                        <div className="tab-pane fade in active" id="tab1default"><BeforeTaking/></div>
+                        <div className="tab-pane fade" id="tab2default"><Usage/></div>
+                        <div className="tab-pane fade" id="tab3default"><SideEffect/></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        < /div>
+        {
+            this.renderSectionList(drug)
+        }
+
+    </div>
+
+    );
 
 
     }
-}
+    }
 
 
-export default translate()(DrugDetail);
+    export default translate()(DrugDetail);

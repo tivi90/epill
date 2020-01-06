@@ -123,6 +123,7 @@ INSERT INTO image (id, filename, filetype, uploaded_at, image) VALUES (7,'Clexan
 INSERT INTO image (id, filename, filetype, uploaded_at, image) VALUES (8,'Novalgin','image/jpg', NOW(), FILE_READ('src/main/frontend/assets/images/novalgin.jpg'));
 INSERT INTO image (id, filename, filetype, uploaded_at, image) VALUES (9,'Reminyl','image/jpg', NOW(), FILE_READ('src/main/frontend/assets/images/reminyl.jpg'));
 INSERT INTO image (id, filename, filetype, uploaded_at, image) VALUES (10,'Toujeo','image/jpg', NOW(), FILE_READ('src/main/frontend/assets/images/toujeo.jpg'));
+INSERT INTO image (id, filename, filetype, uploaded_at, image) VALUES (11,'Metformin','image/png', NOW(), FILE_READ('src/main/frontend/assets/images/metformin.png'));
 
 
 --
@@ -139,6 +140,7 @@ INSERT INTO drug_simple (id, name, number, status, version, year, idimage) VALUE
 INSERT INTO drug_simple (id, name, number, status, version, year, idimage) VALUES (8,'REMINYL® 4 mg/ml Lösung zum Einnehmen',0,'3915-06-01','1.36','2011-1-1', 9);
 INSERT INTO drug_simple (id, name, number, status, version, year, idimage) VALUES (9,'Topiramat-Janssen',0,'3915-06-01','1.0','2011-1-1', 1);
 INSERT INTO drug_simple (id, name, number, status, version, year, idimage) VALUES (10,'Toujeo',0,'3915-06-01','1.59','2011-1-1', 10);
+INSERT INTO drug_simple (id, name, number, status, version, year, idimage) VALUES (11,'Metformin',0,'3915-06-01','1.59','2011-1-1', 11);
 
 
 --
@@ -155,6 +157,7 @@ INSERT INTO drug (id, idindication_group, idproduct_group) VALUES (7,6,2);
 INSERT INTO drug (id, idindication_group, idproduct_group) VALUES (8,2,2);
 INSERT INTO drug (id, idindication_group, idproduct_group) VALUES (9,3,1);
 INSERT INTO drug (id, idindication_group, idproduct_group) VALUES (10,5,1);
+INSERT INTO drug (id, idindication_group, idproduct_group) VALUES (11,5,1);
 
 
 --
@@ -171,6 +174,7 @@ INSERT INTO active_substance (id, name, idsubstance_group) VALUES (7,'Enoxaparin
 INSERT INTO active_substance (id, name, idsubstance_group) VALUES (8,'Metamizol-Natrium 1 H2O',NULL);
 INSERT INTO active_substance (id, name, idsubstance_group) VALUES (9,'Galantamin',NULL);
 INSERT INTO active_substance (id, name, idsubstance_group) VALUES (10,'Quinaprilhydrochlorid',NULL);
+INSERT INTO active_substance (id, name, idsubstance_group) VALUES (11,'Metforminhydrochlorid',NULL);
 
 
 --
@@ -288,7 +292,8 @@ INSERT INTO drug_disease (iddrug, iddisease) VALUES (8, 4);
 INSERT INTO drug_disease (iddrug, iddisease) VALUES (9, 5);
 INSERT INTO drug_disease (iddrug, iddisease) VALUES (10, 1);
 INSERT INTO drug_disease (iddrug, iddisease) VALUES (10, 3);
-
+INSERT INTO drug_disease (iddrug, iddisease) VALUES (11, 1);
+INSERT INTO drug_disease (iddrug, iddisease) VALUES (11, 3);
 
 --
 -- Dumping data for table `drug_feature`
@@ -419,6 +424,7 @@ INSERT INTO drug_feature (id, drug_feature, description_drug) VALUES (8,'Für Sc
 </p>');
 INSERT INTO drug_feature (id, drug_feature) VALUES (9,'vegan');
 INSERT INTO drug_feature (id, drug_feature) VALUES (10,'lactosefrei');
+INSERT INTO drug_feature (id, drug_feature) VALUES (11,'lactosefrei');
 --
 -- Dumping data for table `drug_feature`
 --
@@ -440,6 +446,7 @@ INSERT INTO drug_active_substance (iddrug, idactive_substance) VALUES (6,7);
 INSERT INTO drug_active_substance (iddrug, idactive_substance) VALUES (7,8);
 INSERT INTO drug_active_substance (iddrug, idactive_substance) VALUES (8,9);
 INSERT INTO drug_active_substance (iddrug, idactive_substance) VALUES (10,10);
+INSERT INTO drug_active_substance (iddrug, idactive_substance) VALUES (11,10);
 
 --
 -- Dumping data for table `drug_adverse_effect`
@@ -487,6 +494,7 @@ INSERT INTO drug_drug_feature (iddrug, iddrug_feature) VALUES (7,1);
 INSERT INTO drug_drug_feature (iddrug, iddrug_feature) VALUES (8,4);
 INSERT INTO drug_drug_feature (iddrug, iddrug_feature) VALUES (9,7);
 INSERT INTO drug_drug_feature (iddrug, iddrug_feature) VALUES (10,8);
+INSERT INTO drug_drug_feature (iddrug, iddrug_feature) VALUES (11,8);
 
 --
 -- Dumping data for table `drug_pharmaceutical_form`
@@ -497,6 +505,7 @@ INSERT INTO drug_pharmaceutical_form (iddrug, idpharmaceutical_form) VALUES (2,1
 INSERT INTO drug_pharmaceutical_form (iddrug, idpharmaceutical_form) VALUES (3,2);
 INSERT INTO drug_pharmaceutical_form (iddrug, idpharmaceutical_form) VALUES (7,1);
 INSERT INTO drug_pharmaceutical_form (iddrug, idpharmaceutical_form) VALUES (10,1);
+INSERT INTO drug_pharmaceutical_form (iddrug, idpharmaceutical_form) VALUES (11,1);
 
 --
 -- Dumping data for table `interaction`

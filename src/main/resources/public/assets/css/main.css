@@ -302,7 +302,7 @@ a.wide { display : block }
 /* CUSTOMIZE THE NAVBAR
 -------------------------------------------------- */
 
-/* Special class on .container surrounding .navbar, used for positioning it into place. */
+/* Special class on .container surrounding .navbar, used for positioning it into place.
 .navbar-wrapper {
 	position: absolute;
 	top: 0;
@@ -310,7 +310,7 @@ a.wide { display : block }
 	left: 0;
 	z-index: 20;
 }
-
+*/
 .form-control {
 	display: block;
 	width: 75% !important;
@@ -424,7 +424,7 @@ a.wide { display : block }
 -------------------------------------------------- */
 @media ( min-width : 768px) {
 	/* Navbar positioning foo */
-	.navbar-wrapper {
+	/* .navbar-wrapper {
 		margin-top: 20px;
 	}
 	.navbar-wrapper .container {
@@ -434,12 +434,12 @@ a.wide { display : block }
 	.navbar-wrapper .navbar {
 		padding-right: 0;
 		padding-left: 0;
-	}
+	}*/
 
-	/* The navbar becomes detached from the top, so we round the corners */
+	/* The navbar becomes detached from the top, so we round the corners
 	.navbar-wrapper .navbar {
 		border-radius: 4px;
-	}
+	}*/
 
 	.carousel-caption {
 		padding-bottom: 150px !important;
