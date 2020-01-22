@@ -3,15 +3,15 @@ Navbar
  */
 
 
-.alert_dose{
+.alert_dose {
     margin-top: 32px;
 }
 
-.alert_details{
+.alert_details {
     padding: 23px;
 }
 
-.med_cup{
+.med_cup {
     font-size: 32px;
     color: #0da59b;
     margin-bottom: 18px;
@@ -21,6 +21,10 @@ Navbar
 .info_navbar {
     height: 50px;
     background-color: #0f0f0f;
+}
+
+.navbar {
+    margin-bottom: 0px !important;
 }
 
 .nav_contact {
@@ -142,7 +146,7 @@ Navbar
     margin-bottom: 20px;
 }
 
-.times{
+.times {
     text-align: center;
     background-color: #292929;
     padding: 8px 8px 8px 8px;
@@ -374,6 +378,13 @@ img.group.list-group-image {
 .infopic {
     width: 45px;
     margin-bottom: 15px;
+    font-size: 40px;
+}
+
+.info_words {
+    font-weight: bold;
+    color: #0da59b;
+    cursor: pointer;
 }
 
 .tab_headers {
@@ -381,10 +392,44 @@ img.group.list-group-image {
 
 }
 
-.content_header span {
+.info_notuse {
+    width: 97%;
+    background-color: #ffceceb5;
+    padding: 15px;
+    margin-bottom: 12px;
+    margin-right: 20px;
+}
+
+.sideffect_table td, th {
+    border: solid 1px;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.content_header {
+    margin-top: 40px;
+}
+
+.content_header h1 {
     font-size: 24px;
     line-height: 24px;
 
+}
+
+.content_header h3 {
+    font-size: 21px;
+    margin-bottom: 15px;
+}
+
+.allg_title b {
+    font-size: 17px;
+    color: #474750;
+}
+
+.allg_icon {
+    font-size: 25px;
+    margin-bottom: 9px;
+    font-weight: bold;
 }
 
 .brand-pills > li > a {
@@ -511,52 +556,6 @@ img.group.list-group-image {
 
         .item span {
             font-style: normal;
-        }
-
-        .panel {
-            border: 1px solid #0da59b;
-            border-radius: 0 !important;
-            transition: box-shadow 0.5s;
-        }
-
-        .panel:hover {
-            box-shadow: 5px 0px 40px rgba(0, 0, 0, .2);
-        }
-
-        .panel-footer .btn:hover {
-            border: 1px solid #0da59b;
-            background-color: #fff !important;
-            color: #0da59b;
-        }
-
-        .panel-heading {
-            color: #fff !important;
-            background-color: #0da59b !important;
-            padding: 25px;
-            border-bottom: 1px solid transparent;
-            border-top-left-radius: 0px;
-            border-top-right-radius: 0px;
-            border-bottom-left-radius: 0px;
-            border-bottom-right-radius: 0px;
-        }
-
-        .panel-footer {
-            background-color: white !important;
-        }
-
-        .panel-footer h3 {
-            font-size: 32px;
-        }
-
-        .panel-footer h4 {
-            color: #aaa;
-            font-size: 14px;
-        }
-
-        .panel-footer .btn {
-            margin: 15px 0;
-            background-color: #0da59b;
-            color: #fff;
         }
 
 
@@ -713,3 +712,156 @@ img.group.list-group-image {
     }
 
 
+    #myCarousel .carousel-item .mask {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-attachment: fixed;
+    }
+
+    #myCarousel h4 {
+        font-size: 50px;
+        margin-bottom: 15px;
+        color: #FFF;
+        line-height: 100%;
+        letter-spacing: 0.5px;
+        font-weight: 600;
+    }
+
+    #myCarousel p {
+        font-size: 18px;
+        margin-bottom: 15px;
+        color: #d5d5d5;
+    }
+
+    #myCarousel .carousel-item a {
+        background: #F47735;
+        font-size: 14px;
+        color: #FFF;
+        padding: 13px 32px;
+        display: inline-block;
+    }
+
+    #myCarousel .carousel-item a:hover {
+        background: #394fa2;
+        text-decoration: none;
+    }
+
+    #myCarousel .carousel-item h4 {
+        -webkit-animation-name: fadeInLeft;
+        animation-name: fadeInLeft;
+        margin-top: 12%;
+    }
+
+    #myCarousel .carousel-item p {
+        -webkit-animation-name: slideInRight;
+        animation-name: slideInRight;
+    }
+
+    #myCarousel .carousel-item a {
+        -webkit-animation-name: fadeInUp;
+        animation-name: fadeInUp;
+    }
+
+    #myCarousel .carousel-item .mask img {
+        margin-top: 20%;
+        -webkit-animation-name: slideInRight;
+        animation-name: slideInRight;
+        display: block;
+        height: auto;
+        max-width: 100%;
+        width: 311px;
+    }
+
+    #myCarousel h4, #myCarousel p, #myCarousel a, #myCarousel .carousel-item .mask img {
+        -webkit-animation-duration: 1s;
+        animation-duration: 1.2s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+    }
+
+    #myCarousel .container {
+        max-width: 1430px;
+    }
+
+    #myCarousel .carousel-item {
+        height: 100%;
+        min-height: 550px;
+    }
+
+    #myCarousel {
+        position: relative;
+        z-index: 1;
+        background: url(/assets/images/titelbild1.jpg) center center no-repeat;
+        background-size: cover;
+    }
+
+    .carousel-control-next, .carousel-control-prev {
+        height: 40px;
+        width: 40px;
+        padding: 12px;
+        top: 50%;
+        bottom: auto;
+        transform: translateY(-50%);
+        background-color: #f47735;
+    }
+
+
+    .carousel-item {
+        position: relative;
+        display: none;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        width: 100%;
+        transition: -webkit-transform .6s ease;
+        transition: transform .6s ease;
+        transition: transform .6s ease, -webkit-transform .6s ease;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        -webkit-perspective: 1000px;
+        perspective: 1000px;
+    }
+
+    .carousel-fade .carousel-item {
+        opacity: 0;
+        -webkit-transition-duration: .6s;
+        transition-duration: .6s;
+        -webkit-transition-property: opacity;
+        transition-property: opacity
+    }
+
+    .carousel-fade .carousel-item-next.carousel-item-left, .carousel-fade .carousel-item-prev.carousel-item-right, .carousel-fade .carousel-item.active {
+        opacity: 1
+    }
+
+    .carousel-fade .carousel-item-left.active, .carousel-fade .carousel-item-right.active {
+        opacity: 0
+    }
+
+    .carousel-fade .carousel-item-left.active, .carousel-fade .carousel-item-next, .carousel-fade .carousel-item-prev, .carousel-fade .carousel-item-prev.active, .carousel-fade .carousel-item.active {
+        -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+        transform: translateX(0)
+    }
+
+    .m40b {
+        margin-bottom: 40px;
+    }
+
+    .m40t {
+        margin-top: 40px;
+    }
+
+    .gradient {
+        /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#77ff8c+18,ffea4f+50,ff4c4c+100 */
+        background: #77ff8c; /* Old browsers */
+        background: -moz-linear-gradient(top,  #77ff8c75 18%,#ffea4fcc 25%,#ff4c4c8c 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top,  #77ff8c75 18%,#ffea4fcc 25%,#ff4c4c8c 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom,  #77ff8c75 18%,#ffea4fcc 25%,#ff4c4c8c 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#77ff8c', endColorstr='#ff4c4c',GradientType=0 ); /* IE6-9 */
+        color:#000000;
+
+    }

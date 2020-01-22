@@ -298,7 +298,8 @@ class DrugList extends React.Component {
 
                         <div key={feature.id}>
 
-                            <img style={{float: "left"}} key={feature.id} data-toggle="modal" data-target={"#" + feature.id}
+                            <img style={{float: "left"}} key={feature.id} data-toggle="modal"
+                                 data-target={"#" + feature.id}
                                  src={"./../../assets/icons/" + feature.id + ".svg"}
                                  className="drug-feature-icon" alt={feature.drugFeature}
                                  title={feature.drugFeature}></img>
@@ -646,43 +647,42 @@ class DrugList extends React.Component {
             </span>List</div> : <div><span className="glyphicon glyphicon-th"></span>Grid</div>}</div>
                         </div>
                     </div>
+                    <div className="container">
+
+                        {User.isAuthenticated() && User.levelOfDetail > 1 &&
+                        <div className="alert alert-info">
+                            <span className="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+                            <span className="sr-only">Info:</span>&nbsp;
+                            {description.replace("%User.firstname%", firstname).replace("%User.lastname%", lastname)}
+                        </div>
+                        }
+
+                        {drugs.length > 1 && User.isAuthenticated() && interactions.length > 0 &&
+                        <div
+                            className={"alert alert-dismissable" + (User.redGreenColorblind ? " danger-red-green-colorblind" : " alert-danger")}>
+                            <button type="button" className="close" data-dismiss="alert" aria-label="Close"><span
+                                aria-hidden="true">&times;</span></button>
+                            <span className="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                            <span className="sr-only">Error:</span>
+                            <h5>{User.redGreenColorblind} {t("interaction")}</h5>
+                            <span dangerouslySetInnerHTML={this.createMarkup(interactions)}/>
+                        </div>
+                        }
+
+                        <div>
+                            {this.state.loading && <Loading/>}
+                            {!this.state.loading && drugs && drugs.length == 0 && <EmptyList/>}
+                            {!this.state.loading && drugs && drugs.length > 0 &&
+                            <ul className="drug-list">
+                            </ul>
+                            }
+                        </div>
+                    </div>
                     {this.renderDrugs1(drugs)}
 
                 </div>
 
-                <div className="container no-banner">
-                    <div className='page-header'>
-                        <h3>{title}</h3>
-                    </div>
-                    {User.isAuthenticated() && User.levelOfDetail > 1 &&
-                    <div className="alert alert-info">
-                        <span className="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
-                        <span className="sr-only">Info:</span>&nbsp;
-                        {description.replace("%User.firstname%", firstname).replace("%User.lastname%", lastname)}
-                    </div>
-                    }
 
-                    {drugs.length > 1 && User.isAuthenticated() && interactions.length > 0 &&
-                    <div
-                        className={"alert alert-dismissable" + (User.redGreenColorblind ? " danger-red-green-colorblind" : " alert-danger")}>
-                        <button type="button" className="close" data-dismiss="alert" aria-label="Close"><span
-                            aria-hidden="true">&times;</span></button>
-                        <span className="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-                        <span className="sr-only">Error:</span>
-                        <h5>{User.redGreenColorblind} {t("interaction")}</h5>
-                        <span dangerouslySetInnerHTML={this.createMarkup(interactions)}/>
-                    </div>
-                    }
-
-                    <div>
-                        {this.state.loading && <Loading/>}
-                        {!this.state.loading && drugs && drugs.length == 0 && <EmptyList/>}
-                        {!this.state.loading && drugs && drugs.length > 0 &&
-                        <ul className="drug-list">
-                        </ul>
-                        }
-                    </div>
-                </div>
             </div>
         );
     }

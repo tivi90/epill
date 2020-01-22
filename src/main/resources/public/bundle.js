@@ -7624,7 +7624,7 @@ var UserMenue = function (_React$Component) {
 					{ className: "navbar-form ", onSubmit: this.handleSubmit },
 					_react2.default.createElement(
 						"div",
-						{ className: "col-sm-12 col-md-12 col-lg-12" },
+						{ className: "col-sm-12 col-md-12 col-lg-12 nopadd" },
 						_react2.default.createElement(
 							"div",
 							{ className: "row" },
@@ -39980,7 +39980,7 @@ var Carousel = function (_React$Component) {
             }
 
             return _react2.default.createElement(
-                "h1",
+                "h3",
                 null,
                 greeting.replace("%User.firstname%", _User2.default.firstname)
             );
@@ -39993,23 +39993,49 @@ var Carousel = function (_React$Component) {
         value: function render() {
             return _react2.default.createElement(
                 "div",
-                { id: "landing-page-carousel", className: "carousel slide" },
+                { id: "myCarousel", className: "carousel slide carousel-fade", "data-ride": "carousel" },
                 _react2.default.createElement(
                     "div",
-                    { className: "carousel-inner", role: "listbox" },
+                    { className: "carousel-inner" },
                     _react2.default.createElement(
                         "div",
-                        { className: "item active" },
-                        _react2.default.createElement("img", { className: "first-slide", src: "/assets/images/titelbild1.jpg", alt: "First slide" }),
+                        { className: "carousel-item active" },
                         _react2.default.createElement(
                             "div",
-                            { className: "container" },
-                            _User2.default.isAuthenticated() && _react2.default.createElement(
+                            { className: "mask flex-center" },
+                            _react2.default.createElement(
                                 "div",
-                                { className: "carousel-caption" },
-                                this.generatePersonalizedAddress(),
-                                _react2.default.createElement("br", null),
-                                _react2.default.createElement(_auto_complete2.default, this.props)
+                                { className: "container" },
+                                _react2.default.createElement(
+                                    "div",
+                                    { className: "row align-items-center" },
+                                    _react2.default.createElement(
+                                        "div",
+                                        { className: "col-md-8 col-12 order-md-1 order-2" },
+                                        _react2.default.createElement(
+                                            "h4",
+                                            null,
+                                            "Electronic Patient Information Leaflet "
+                                        ),
+                                        _react2.default.createElement(
+                                            "p",
+                                            null,
+                                            "Find all necessary Information of your medicine"
+                                        ),
+                                        _User2.default.isAuthenticated() && _react2.default.createElement(
+                                            "div",
+                                            { className: "" },
+                                            this.generatePersonalizedAddress(),
+                                            _react2.default.createElement("br", null)
+                                        )
+                                    ),
+                                    _react2.default.createElement(
+                                        "div",
+                                        { className: "col-md-4 col-12 order-md-2 order-1" },
+                                        _react2.default.createElement("img", {
+                                            src: "/assets/images/epil_circle.png", className: "img-responsive", alt: "slide" })
+                                    )
+                                )
                             )
                         )
                     )
@@ -40114,16 +40140,52 @@ var Carousel1 = function (_React$Component) {
     }, {
         key: "render",
         value: function render() {
+            var t = this.props.t;
+
+            var title = null;
+            title = t('drugs');
+
             return _react2.default.createElement(
                 "div",
-                { id: "landing-page-carousel", className: "carousel slide" },
+                { id: "myCarousel", className: "carousel slide carousel-fade", "data-ride": "carousel" },
                 _react2.default.createElement(
                     "div",
-                    { className: "carousel-inner", role: "listbox" },
+                    { className: "carousel-inner" },
                     _react2.default.createElement(
                         "div",
-                        { className: "item active" },
-                        _react2.default.createElement("img", { className: "first-slide", src: "/assets/images/titelbild1.jpg", alt: "First slide" })
+                        { className: "carousel-item active" },
+                        _react2.default.createElement(
+                            "div",
+                            { className: "mask flex-center" },
+                            _react2.default.createElement(
+                                "div",
+                                { className: "container" },
+                                _react2.default.createElement(
+                                    "div",
+                                    { className: "row align-items-center" },
+                                    _react2.default.createElement(
+                                        "div",
+                                        { className: "col-md-8 col-12 order-md-1 order-2" },
+                                        _react2.default.createElement(
+                                            "h4",
+                                            null,
+                                            title
+                                        ),
+                                        _react2.default.createElement(
+                                            "p",
+                                            null,
+                                            "Select the medicine you prefer"
+                                        )
+                                    ),
+                                    _react2.default.createElement(
+                                        "div",
+                                        { className: "col-md-4 col-12 order-md-2 order-1" },
+                                        _react2.default.createElement("img", {
+                                            src: "/assets/images/epil_circle.png", className: "img-responsive", alt: "slide" })
+                                    )
+                                )
+                            )
+                        )
                     )
                 )
             );
@@ -40490,7 +40552,7 @@ var DrugDetail = function (_React$Component) {
             return _react2.default.createElement(
                 "section",
                 { className: "diseases" },
-                _react2.default.createElement("img", { src: "./../../assets/images/lab.svg", className: "infopic" }),
+                _react2.default.createElement(_reactFontawesome.FontAwesomeIcon, { className: "infopic", icon: _freeSolidSvgIcons.faCrosshairs }),
                 _react2.default.createElement(
                     "p",
                     null,
@@ -40621,7 +40683,7 @@ var DrugDetail = function (_React$Component) {
             return _react2.default.createElement(
                 "section",
                 { className: "pzn diseases row" },
-                _react2.default.createElement("img", { src: "./../../assets/images/lab.svg", className: "infopic" }),
+                _react2.default.createElement(_reactFontawesome.FontAwesomeIcon, { className: "infopic", icon: _freeSolidSvgIcons.faHashtag }),
                 _react2.default.createElement(
                     "p",
                     null,
@@ -40635,8 +40697,10 @@ var DrugDetail = function (_React$Component) {
                         return _react2.default.createElement(
                             "span",
                             { key: packaging.id },
-                            packaging.name,
                             " ",
+                            _react2.default.createElement("br", null),
+                            packaging.name,
+                            _react2.default.createElement("br", null),
                             packaging.pzn,
                             _react2.default.createElement("br", null)
                         );
@@ -40657,7 +40721,7 @@ var DrugDetail = function (_React$Component) {
             return _react2.default.createElement(
                 "section",
                 { className: "row diseases" },
-                _react2.default.createElement("img", { src: "./../../assets/images/lab.svg", className: "infopic" }),
+                _react2.default.createElement("img", { src: "./../../assets/images/ind_group.svg", className: "infopic" }),
                 _react2.default.createElement(
                     "p",
                     null,
@@ -40688,7 +40752,7 @@ var DrugDetail = function (_React$Component) {
             return _react2.default.createElement(
                 "section",
                 { className: "row diseases" },
-                _react2.default.createElement("img", { src: "./../../assets/images/lab.svg", className: "infopic" }),
+                _react2.default.createElement("img", { src: "./../../assets/images/productgroup.png", className: "infopic" }),
                 _react2.default.createElement(
                     "p",
                     null,
@@ -40722,8 +40786,8 @@ var DrugDetail = function (_React$Component) {
             });
         }
     }, {
-        key: "renderPackSec",
-        value: function renderPackSec(drug) {
+        key: "renderPackSecdesc",
+        value: function renderPackSecdesc(drug) {
             var _this8 = this;
 
             if (!drug.packagingSection) {
@@ -40731,18 +40795,12 @@ var DrugDetail = function (_React$Component) {
             }
 
             return drug.packagingSection.filter(function (section) {
-                return section.topic.id === 1;
+                return section.topic.id === 8;
             }).map(function (section) {
                 return _react2.default.createElement(
                     "p",
                     { key: section.id },
-                    _react2.default.createElement("span", { dangerouslySetInnerHTML: _this8.createMarkup(section.text) }),
-                    _react2.default.createElement(
-                        "h1",
-                        null,
-                        "---"
-                    ),
-                    section.topic.title
+                    _react2.default.createElement("span", { dangerouslySetInnerHTML: _this8.createMarkup(section.text) })
                 );
             }).reduce(function (prev, curr) {
                 return [prev, curr];
@@ -40750,23 +40808,86 @@ var DrugDetail = function (_React$Component) {
             drug.packagingSection.getPackagingSectionByTopicAndDrug(1, 1);
         }
     }, {
-        key: "renderSectionList",
-        value: function renderSectionList(drug) {
+        key: "renderPackSecvor",
+        value: function renderPackSecvor(drug) {
             var _this9 = this;
 
             if (!drug.packagingSection) {
                 return null;
             }
 
+            return drug.packagingSection.filter(function (section) {
+                return section.topic.id === 3;
+            }).map(function (section) {
+                return _react2.default.createElement(
+                    "p",
+                    { key: section.id },
+                    _react2.default.createElement("span", { dangerouslySetInnerHTML: _this9.createMarkup(section.text) })
+                );
+            }).reduce(function (prev, curr) {
+                return [prev, curr];
+            });
+        }
+    }, {
+        key: "renderPackSecdos",
+        value: function renderPackSecdos(drug) {
+            var _this10 = this;
+
+            if (!drug.packagingSection) {
+                return null;
+            }
+
+            return drug.packagingSection.filter(function (section) {
+                return section.topic.id === 5;
+            }).map(function (section) {
+                return _react2.default.createElement(
+                    "p",
+                    { key: section.id },
+                    _react2.default.createElement("span", { dangerouslySetInnerHTML: _this10.createMarkup(section.text) })
+                );
+            }).reduce(function (prev, curr) {
+                return [prev, curr];
+            });
+        }
+    }, {
+        key: "renderPackSecneben",
+        value: function renderPackSecneben(drug) {
+            var _this11 = this;
+
+            if (!drug.packagingSection) {
+                return null;
+            }
+
+            return drug.packagingSection.filter(function (section) {
+                return section.topic.id === 6;
+            }).map(function (section) {
+                return _react2.default.createElement(
+                    "p",
+                    { key: section.id },
+                    _react2.default.createElement("span", { dangerouslySetInnerHTML: _this11.createMarkup(section.text) })
+                );
+            }).reduce(function (prev, curr) {
+                return [prev, curr];
+            });
+        }
+    }, {
+        key: "renderSectionList",
+        value: function renderSectionList(drug) {
+            var _this12 = this;
+
+            if (!drug.packagingSection) {
+                return null;
+            }
+
             return drug.packagingSection.map(function (section) {
-                return _react2.default.createElement(_accordion2.default, { section: section, toggleOriginalAndTailoredText: _this9.toggleOriginalAndTailoredText,
+                return _react2.default.createElement(_accordion2.default, { section: section, toggleOriginalAndTailoredText: _this12.toggleOriginalAndTailoredText,
                     key: section.id });
             });
         }
     }, {
         key: "render",
         value: function render() {
-            var _this10 = this;
+            var _this13 = this;
 
             var t = this.props.t;
 
@@ -40800,9 +40921,7 @@ var DrugDetail = function (_React$Component) {
                     _react2.default.createElement(
                         "div",
                         { id: "reportBtn", className: "round-button-inner-main", "data-toggle": "modal", "data-target": "#info" },
-                        _react2.default.createElement(_reactFontawesome.FontAwesomeIcon, { icon: _freeSolidSvgIcons.faInfo }),
-                        " ",
-                        _react2.default.createElement("i", { className: "fas fa-info" })
+                        _react2.default.createElement(_reactFontawesome.FontAwesomeIcon, { icon: _freeSolidSvgIcons.faInfo })
                     )
                 ),
                 _react2.default.createElement(
@@ -40899,9 +41018,7 @@ var DrugDetail = function (_React$Component) {
                         "div",
                         { id: "reportBtn", className: "round-button-inner-main no_animation", "data-toggle": "modal",
                             "data-target": "#adress" },
-                        _react2.default.createElement(_reactFontawesome.FontAwesomeIcon, { icon: _freeSolidSvgIcons.faAddressCard }),
-                        " ",
-                        _react2.default.createElement("i", { className: "fas fa-address-card" })
+                        _react2.default.createElement(_reactFontawesome.FontAwesomeIcon, { icon: _freeSolidSvgIcons.faAddressCard })
                     )
                 ),
                 _react2.default.createElement(
@@ -41015,7 +41132,7 @@ var DrugDetail = function (_React$Component) {
                 ),
                 _react2.default.createElement(
                     "div",
-                    { className: "round-button-outer report-round-button no_animation", style: { top: "280px" } },
+                    { className: "round-button-outer report-round-button no_animation", style: { top: "266px" } },
                     _react2.default.createElement(
                         "div",
                         { id: "reportBtn", className: "round-button-inner-main no_animation", "data-toggle": "modal",
@@ -41166,7 +41283,7 @@ var DrugDetail = function (_React$Component) {
                                 _react2.default.createElement(
                                     "button",
                                     { type: "button", className: "btn btn-like", onClick: function onClick() {
-                                            return _this10.toggleTaking(drug);
+                                            return _this13.toggleTaking(drug);
                                         } },
                                     _react2.default.createElement("span", {
                                         className: "glyphicon white" + (!drug.isTaken ? " glyphicon-heart" : " glyphicon-minus") })
@@ -41174,7 +41291,7 @@ var DrugDetail = function (_React$Component) {
                                 _react2.default.createElement(
                                     "button",
                                     { type: "button", className: "btn btn-add", onClick: function onClick() {
-                                            return _this10.toggleRemember(drug);
+                                            return _this13.toggleRemember(drug);
                                         } },
                                     _react2.default.createElement("span", {
                                         className: "glyphicon white" + (!drug.isRemembered ? " glyphicon-plus" : " glyphicon-minus") })
@@ -41265,7 +41382,7 @@ var DrugDetail = function (_React$Component) {
                                                             "div",
                                                             { className: "modal-body" },
                                                             _react2.default.createElement("div", {
-                                                                dangerouslySetInnerHTML: _this10.createMarkup(feature.descriptionDrug) })
+                                                                dangerouslySetInnerHTML: _this13.createMarkup(feature.descriptionDrug) })
                                                         ),
                                                         _react2.default.createElement(
                                                             "div",
@@ -41368,16 +41485,12 @@ var DrugDetail = function (_React$Component) {
                                             "div",
                                             { className: "row content_header" },
                                             _react2.default.createElement(
-                                                "span",
+                                                "h1",
                                                 null,
                                                 "Algemeine Informationen"
                                             ),
                                             _react2.default.createElement("hr", null),
-                                            _react2.default.createElement(
-                                                "p",
-                                                null,
-                                                "Baymycard 10 mg ist ein Arzneimittel zur Behandlung der chronisch stabilen Angina pectoris (Belastungsangina) und des Bluthochdrucks. Bei der chronisch stabilen Angina pectoris sind die Blutgef\xE4\xDFe, die das Herz kranzf\xF6rmig umgeben (Herzkranzgef\xE4\xDFe), verengt, so dass der Herzmuskel nicht ausreichend mit Sauerstoff versorgt wird. Nisoldipin, der Wirkstoff in Baymycard 10 mg, f\xFChrt zu einer Erweiterung der Herzkranzgef\xE4\xDFe und anderer Blutgef\xE4\xDFe, verbessert so die Durchblutung und steigert die Sauerstoffzufuhr. Ein erh\xF6hter Blutdruck wird normalisiert."
-                                            )
+                                            this.renderPackSecdesc(drug)
                                         ),
                                         _react2.default.createElement(
                                             "div",
@@ -41452,674 +41565,36 @@ var DrugDetail = function (_React$Component) {
                                             )
                                         )
                                     ),
-                                    _react2.default.createElement("div", { role: "tabpanel", className: "tab-pane w3-animate-opacity", id: "tab2" }),
+                                    _react2.default.createElement(
+                                        "div",
+                                        { role: "tabpanel", className: "tab-pane w3-animate-opacity", id: "tab2" },
+                                        this.renderPackSecvor(drug)
+                                    ),
                                     _react2.default.createElement(
                                         "div",
                                         { role: "tabpanel", className: "tab-pane w3-animate-opacity", id: "tab3" },
                                         _react2.default.createElement(
                                             "div",
-                                            { className: "alert bubble  row w3-animate-right" },
-                                            _react2.default.createElement(
-                                                "div",
-                                                { className: "speech-bubble" },
-                                                _react2.default.createElement(
-                                                    "a",
-                                                    { href: "#", className: "close", "data-dismiss": "alert",
-                                                        "aria-label": "close" },
-                                                    "\xD7"
-                                                ),
-                                                _react2.default.createElement("span", {
-                                                    dangerouslySetInnerHTML: this.createMarkup(drug.personalizedInformation) })
-                                            ),
-                                            _react2.default.createElement("img", { className: "speech-bubble-person",
-                                                src: "./../../assets/images/logo_chat.png" })
-                                        ),
-                                        _react2.default.createElement(
-                                            "div",
-                                            { className: "row" },
-                                            _react2.default.createElement(
-                                                "div",
-                                                { className: "content_header" },
-                                                _react2.default.createElement(
-                                                    "span",
-                                                    null,
-                                                    "Art"
-                                                ),
-                                                _react2.default.createElement("hr", null)
-                                            ),
-                                            _react2.default.createElement(
-                                                "div",
-                                                { className: "col-sm-4 text-center " },
-                                                _react2.default.createElement(
-                                                    "div",
-                                                    { className: "circle-badge" },
-                                                    _react2.default.createElement("img", { style: { width: "50px" },
-                                                        src: "./../../assets/images/other/8clock.png" }),
-                                                    _react2.default.createElement("br", null),
-                                                    _react2.default.createElement(
-                                                        "strong",
-                                                        null,
-                                                        "Morgens"
-                                                    ),
-                                                    " ",
-                                                    _react2.default.createElement("br", null),
-                                                    _react2.default.createElement(
-                                                        "span",
-                                                        null,
-                                                        "6 - 12 Uhr"
-                                                    )
-                                                ),
-                                                _react2.default.createElement(
-                                                    "span",
-                                                    { className: "times" },
-                                                    "1x ",
-                                                    _react2.default.createElement(_reactFontawesome.FontAwesomeIcon, {
-                                                        icon: _freeSolidSvgIcons.faGlassWhiskey })
-                                                )
-                                            ),
-                                            _react2.default.createElement(
-                                                "div",
-                                                { className: "col-sm-4 text-center " },
-                                                _react2.default.createElement(
-                                                    "div",
-                                                    { className: "circle-badge" },
-                                                    _react2.default.createElement("img", { style: { width: "50px" },
-                                                        src: "./../../assets/images/other/12clock.png" }),
-                                                    _react2.default.createElement("br", null),
-                                                    _react2.default.createElement(
-                                                        "strong",
-                                                        null,
-                                                        "Mittags"
-                                                    ),
-                                                    " ",
-                                                    _react2.default.createElement("br", null),
-                                                    _react2.default.createElement(
-                                                        "span",
-                                                        null,
-                                                        "12 - 17 Uhr"
-                                                    )
-                                                ),
-                                                _react2.default.createElement(
-                                                    "span",
-                                                    { className: "times" },
-                                                    "1x ",
-                                                    _react2.default.createElement(_reactFontawesome.FontAwesomeIcon, {
-                                                        icon: _freeSolidSvgIcons.faGlassWhiskey })
-                                                )
-                                            ),
-                                            _react2.default.createElement(
-                                                "div",
-                                                { className: "col-sm-4 text-center  " },
-                                                _react2.default.createElement(
-                                                    "div",
-                                                    { className: "circle-badge" },
-                                                    _react2.default.createElement("img", { style: { width: "50px" },
-                                                        src: "./../../assets/images/other/17clock.png" }),
-                                                    _react2.default.createElement("br", null),
-                                                    _react2.default.createElement(
-                                                        "strong",
-                                                        null,
-                                                        "Abends"
-                                                    ),
-                                                    " ",
-                                                    _react2.default.createElement("br", null),
-                                                    _react2.default.createElement(
-                                                        "span",
-                                                        null,
-                                                        "17 - 21 Uhr"
-                                                    )
-                                                ),
-                                                _react2.default.createElement(
-                                                    "span",
-                                                    { className: "times" },
-                                                    "1x ",
-                                                    _react2.default.createElement(_reactFontawesome.FontAwesomeIcon, {
-                                                        icon: _freeSolidSvgIcons.faGlassWhiskey })
-                                                )
-                                            )
-                                        ),
-                                        _react2.default.createElement(
-                                            "div",
-                                            { className: "alert alert-info alert_dose", role: "alert" },
-                                            _react2.default.createElement(
-                                                "div",
-                                                { className: "row" },
-                                                _react2.default.createElement(
-                                                    "div",
-                                                    { className: "col-sm-6 text-center alert_details" },
-                                                    _react2.default.createElement("img", { className: "liquid", src: "./../../assets/images/other/liquid.png" }),
-                                                    _react2.default.createElement("br", null),
-                                                    " Die Flasche vor jedem Gebrauch gut sch\xFCtteln!"
-                                                ),
-                                                _react2.default.createElement(
-                                                    "div",
-                                                    { className: "col-sm-6 text-center alert_details" },
-                                                    _react2.default.createElement(_reactFontawesome.FontAwesomeIcon, { className: "med_cup", icon: _freeSolidSvgIcons.faGlassWhiskey }),
-                                                    _react2.default.createElement("br", null),
-                                                    "Zum Einnehmen mit dem beigef\xFCgten Messbecher"
-                                                )
-                                            ),
-                                            " "
-                                        ),
-                                        _react2.default.createElement(
-                                            "div",
                                             { className: "row content_header" },
                                             _react2.default.createElement(
-                                                "span",
+                                                "h1",
                                                 null,
-                                                "Dosierung"
+                                                "Dosierung und Anwendung"
                                             ),
                                             _react2.default.createElement("hr", null)
                                         ),
-                                        _react2.default.createElement(
-                                            "div",
-                                            { className: "row" },
-                                            _react2.default.createElement("div", { className: "col-sm-3", style: { fontSize: "16px" } }),
-                                            _react2.default.createElement(
-                                                "div",
-                                                { className: "col-sm-3", style: { fontSize: "60px" } },
-                                                _react2.default.createElement(_reactFontawesome.FontAwesomeIcon, { icon: _freeSolidSvgIcons.faBaby })
-                                            ),
-                                            _react2.default.createElement(
-                                                "div",
-                                                { className: "col-sm-3", style: { fontSize: "60px" } },
-                                                _react2.default.createElement(_reactFontawesome.FontAwesomeIcon, { icon: _freeSolidSvgIcons.faChild }),
-                                                _react2.default.createElement("i", { className: "fas fa-child" })
-                                            ),
-                                            _react2.default.createElement(
-                                                "div",
-                                                { className: "col-sm-3", style: { fontSize: "60px" } },
-                                                _react2.default.createElement(_reactFontawesome.FontAwesomeIcon, { icon: _freeSolidSvgIcons.faMale }),
-                                                _react2.default.createElement(_reactFontawesome.FontAwesomeIcon, { icon: _freeSolidSvgIcons.faBlind }),
-                                                _react2.default.createElement("i", { className: "fas fa-male" }),
-                                                _react2.default.createElement("i", { className: "fas fa-blind" })
-                                            )
-                                        ),
-                                        _react2.default.createElement(
-                                            "div",
-                                            { className: "row" },
-                                            _react2.default.createElement(
-                                                "div",
-                                                { className: "col-sm-3", style: { fontSize: "16px" } },
-                                                _react2.default.createElement(
-                                                    "p",
-                                                    { style: { fontWeight: "bold" } },
-                                                    "Alter"
-                                                )
-                                            ),
-                                            _react2.default.createElement(
-                                                "div",
-                                                { className: "col-sm-3", style: { fontSize: "16px" } },
-                                                _react2.default.createElement(
-                                                    "p",
-                                                    null,
-                                                    " Kinder unter 6 Jahren"
-                                                )
-                                            ),
-                                            _react2.default.createElement(
-                                                "div",
-                                                { className: "col-sm-3", style: { fontSize: "16px" } },
-                                                _react2.default.createElement(
-                                                    "p",
-                                                    null,
-                                                    " Kinder von 6 - 12 Jahren"
-                                                )
-                                            ),
-                                            _react2.default.createElement(
-                                                "div",
-                                                { className: "col-sm-3", style: { fontSize: "16px" } },
-                                                _react2.default.createElement(
-                                                    "p",
-                                                    null,
-                                                    " Kinder ab 6 Jahren & Erwachsene"
-                                                )
-                                            )
-                                        ),
-                                        _react2.default.createElement("hr", null),
-                                        _react2.default.createElement(
-                                            "div",
-                                            { className: "row" },
-                                            _react2.default.createElement(
-                                                "div",
-                                                { className: "col-sm-3", style: { fontSize: "16px" } },
-                                                _react2.default.createElement(
-                                                    "p",
-                                                    { style: { fontWeight: "bold" } },
-                                                    "Einzeldosis"
-                                                )
-                                            ),
-                                            _react2.default.createElement(
-                                                "div",
-                                                { className: "col-sm-3", style: { fontSize: "16px" } },
-                                                _react2.default.createElement(
-                                                    "p",
-                                                    null,
-                                                    "2,5 ml ",
-                                                    _react2.default.createElement("br", null),
-                                                    " \u2259 ",
-                                                    _react2.default.createElement("br", null),
-                                                    " 17,5 mg Efeubl\xE4tter-Trockenextrakt"
-                                                )
-                                            ),
-                                            _react2.default.createElement(
-                                                "div",
-                                                { className: "col-sm-3", style: { fontSize: "16px" } },
-                                                _react2.default.createElement(
-                                                    "p",
-                                                    null,
-                                                    "5 ml ",
-                                                    _react2.default.createElement("br", null),
-                                                    " \u2259 ",
-                                                    _react2.default.createElement("br", null),
-                                                    " 35 mg Efeubl\xE4tter-Trockenextrakt"
-                                                )
-                                            ),
-                                            _react2.default.createElement(
-                                                "div",
-                                                { className: "col-sm-3", style: { fontSize: "16px" } },
-                                                _react2.default.createElement(
-                                                    "p",
-                                                    null,
-                                                    "5 ml ",
-                                                    _react2.default.createElement("br", null),
-                                                    " \u2259 ",
-                                                    _react2.default.createElement("br", null),
-                                                    " 35 mg Efeubl\xE4tter-Trockenextrakt"
-                                                )
-                                            )
-                                        ),
-                                        _react2.default.createElement("hr", null),
-                                        _react2.default.createElement(
-                                            "div",
-                                            { className: "row" },
-                                            _react2.default.createElement(
-                                                "div",
-                                                { className: "col-sm-3", style: { fontSize: "16px" } },
-                                                _react2.default.createElement(
-                                                    "p",
-                                                    { style: { fontWeight: "bold" } },
-                                                    "Tagesgesamtdosis"
-                                                )
-                                            ),
-                                            _react2.default.createElement(
-                                                "div",
-                                                { className: "col-sm-3", style: { fontSize: "16px" } },
-                                                _react2.default.createElement(
-                                                    "p",
-                                                    null,
-                                                    "5 ml (2 x 2,5 ml) ",
-                                                    _react2.default.createElement("br", null),
-                                                    " \u2259 ",
-                                                    _react2.default.createElement("br", null),
-                                                    " 35 mg Efeubl\xE4tter-Trockenextrakt"
-                                                )
-                                            ),
-                                            _react2.default.createElement(
-                                                "div",
-                                                { className: "col-sm-3", style: { fontSize: "16px" } },
-                                                _react2.default.createElement(
-                                                    "p",
-                                                    null,
-                                                    "10 ml (2 x 5 ml) ",
-                                                    _react2.default.createElement("br", null),
-                                                    " \u2259 ",
-                                                    _react2.default.createElement("br", null),
-                                                    " 70 mg Efeubl\xE4tter-Trockenextrakt"
-                                                )
-                                            ),
-                                            _react2.default.createElement(
-                                                "div",
-                                                { className: "col-sm-3", style: { fontSize: "16px" } },
-                                                _react2.default.createElement(
-                                                    "p",
-                                                    null,
-                                                    "15 ml (3 x 5 ml) ",
-                                                    _react2.default.createElement("br", null),
-                                                    " \u2259 ",
-                                                    _react2.default.createElement("br", null),
-                                                    " 105 mg Efeubl\xE4tter-Trockenextrakt"
-                                                )
-                                            )
-                                        ),
-                                        _react2.default.createElement(
-                                            "div",
-                                            { className: "row" },
-                                            _react2.default.createElement(
-                                                "div",
-                                                { className: " content_header" },
-                                                _react2.default.createElement(
-                                                    "span",
-                                                    null,
-                                                    "Dosierung"
-                                                ),
-                                                _react2.default.createElement("hr", null)
-                                            ),
-                                            _react2.default.createElement(
-                                                "div",
-                                                { className: "col-sm-8 col-sm-offset-2" },
-                                                "Die Behandlungsdauer richtet sich jeweils nach der Art und Schwere des Krankheitsbildes; sie sollte in der Regel ",
-                                                _react2.default.createElement(
-                                                    "b",
-                                                    null,
-                                                    "1 Woche "
-                                                ),
-                                                " betragen. Wenn die Beschwerden jedoch l\xE4nger als 1 Woche anhalten, sollte medizinischer Rat eingeholt werden.",
-                                                _react2.default.createElement(
-                                                    "div",
-                                                    { className: "alert alert-warning", role: "alert" },
-                                                    " Bitte sprechen Sie mit Ihrem Arzt oder Apotheker, wenn Sie den Eindruck haben, dass die Wirkung von Prospan\xAE Hustensaft zu stark oder zu schwach ist."
-                                                )
-                                            )
-                                        )
+                                        this.renderPackSecdos(drug)
                                     ),
                                     _react2.default.createElement(
                                         "div",
                                         { role: "tabpanel", className: "tab-pane w3-animate-opacity", id: "tab4" },
-                                        _react2.default.createElement(
-                                            "div",
-                                            { className: "row" },
-                                            _react2.default.createElement(
-                                                "div",
-                                                { className: "col-sm-12 text-center", style: { color: "black" } },
-                                                "Wie alle Arzneimittel kann Prospan\xAE Hustensaft Nebenwirkungen haben, die aber nicht bei jedem auftreten m\xFCssen. ",
-                                                _react2.default.createElement("br", null),
-                                                "Bei der Bewertung von Nebenwirkungen werden fosmende H\xE4ufigkeiten zugrundegelegt:",
-                                                _react2.default.createElement(
-                                                    "div",
-                                                    { className: "row" },
-                                                    _react2.default.createElement(
-                                                        "div",
-                                                        { className: "col-sm-8 col-sm-offset-2 text-left" },
-                                                        _react2.default.createElement(
-                                                            "table",
-                                                            { className: "table table-striped custab",
-                                                                style: { marginTop: "30px" } },
-                                                            _react2.default.createElement(
-                                                                "tbody",
-                                                                null,
-                                                                _react2.default.createElement(
-                                                                    "tr",
-                                                                    null,
-                                                                    _react2.default.createElement(
-                                                                        "td",
-                                                                        null,
-                                                                        _react2.default.createElement(
-                                                                            "b",
-                                                                            null,
-                                                                            "Sehr h\xE4ufig"
-                                                                        )
-                                                                    ),
-                                                                    _react2.default.createElement(
-                                                                        "td",
-                                                                        null,
-                                                                        "mehr als 1 Behandelter von 10"
-                                                                    )
-                                                                ),
-                                                                _react2.default.createElement(
-                                                                    "tr",
-                                                                    null,
-                                                                    _react2.default.createElement(
-                                                                        "td",
-                                                                        null,
-                                                                        _react2.default.createElement(
-                                                                            "b",
-                                                                            null,
-                                                                            " H\xE4ufig"
-                                                                        )
-                                                                    ),
-                                                                    _react2.default.createElement(
-                                                                        "td",
-                                                                        null,
-                                                                        "1 bis 10 Behandelte von 100"
-                                                                    )
-                                                                ),
-                                                                _react2.default.createElement(
-                                                                    "tr",
-                                                                    null,
-                                                                    _react2.default.createElement(
-                                                                        "td",
-                                                                        null,
-                                                                        _react2.default.createElement(
-                                                                            "b",
-                                                                            null,
-                                                                            " Gelegentlich"
-                                                                        )
-                                                                    ),
-                                                                    _react2.default.createElement(
-                                                                        "td",
-                                                                        null,
-                                                                        "1 bis 10 Behandelte von 1.000"
-                                                                    )
-                                                                ),
-                                                                _react2.default.createElement(
-                                                                    "tr",
-                                                                    null,
-                                                                    _react2.default.createElement(
-                                                                        "td",
-                                                                        null,
-                                                                        _react2.default.createElement(
-                                                                            "b",
-                                                                            null,
-                                                                            " Selten"
-                                                                        )
-                                                                    ),
-                                                                    _react2.default.createElement(
-                                                                        "td",
-                                                                        null,
-                                                                        "1 bis 10 Behandelte von 10.000"
-                                                                    )
-                                                                ),
-                                                                _react2.default.createElement(
-                                                                    "tr",
-                                                                    null,
-                                                                    _react2.default.createElement(
-                                                                        "td",
-                                                                        null,
-                                                                        _react2.default.createElement(
-                                                                            "b",
-                                                                            null,
-                                                                            " Sehr selten"
-                                                                        )
-                                                                    ),
-                                                                    _react2.default.createElement(
-                                                                        "td",
-                                                                        null,
-                                                                        "weniger als 1 Behandelter von 10.000"
-                                                                    )
-                                                                ),
-                                                                _react2.default.createElement(
-                                                                    "tr",
-                                                                    null,
-                                                                    _react2.default.createElement(
-                                                                        "td",
-                                                                        null,
-                                                                        _react2.default.createElement(
-                                                                            "b",
-                                                                            null,
-                                                                            " Nicht bekannt"
-                                                                        )
-                                                                    ),
-                                                                    _react2.default.createElement(
-                                                                        "td",
-                                                                        null,
-                                                                        "H\xE4ufigkeit auf Grundlage der verf\xFCgbaren Daten nicht absch\xE4tzbar"
-                                                                    )
-                                                                )
-                                                            )
-                                                        )
-                                                    )
-                                                )
-                                            )
-                                        ),
-                                        _react2.default.createElement(
-                                            "div",
-                                            { className: "row" },
-                                            _react2.default.createElement(
-                                                "div",
-                                                { className: " content_header" },
-                                                _react2.default.createElement(
-                                                    "span",
-                                                    null,
-                                                    "Allergische Reaktionen"
-                                                ),
-                                                _react2.default.createElement("hr", null)
-                                            ),
-                                            _react2.default.createElement(
-                                                "div",
-                                                { className: "row" },
-                                                _react2.default.createElement(
-                                                    "span",
-                                                    { className: "label label-primary" },
-                                                    "Atemnot"
-                                                ),
-                                                _react2.default.createElement(
-                                                    "span",
-                                                    { className: "label label-primary" },
-                                                    "Schwellungen"
-                                                ),
-                                                _react2.default.createElement(
-                                                    "span",
-                                                    { className: "label label-primary" },
-                                                    "Hautr\xF6tungen"
-                                                ),
-                                                _react2.default.createElement(
-                                                    "span",
-                                                    { className: "label label-primary" },
-                                                    "Juckreiz"
-                                                ),
-                                                _react2.default.createElement(
-                                                    "span",
-                                                    { className: "label label-primary" },
-                                                    "Atemnot"
-                                                )
-                                            ),
-                                            _react2.default.createElement(
-                                                "div",
-                                                { className: " content_header" },
-                                                _react2.default.createElement(
-                                                    "span",
-                                                    null,
-                                                    "Magen-Darm-Beschwerden "
-                                                ),
-                                                _react2.default.createElement("hr", null)
-                                            ),
-                                            _react2.default.createElement(
-                                                "div",
-                                                { className: "row" },
-                                                "Aufgrund des Sorbitosmehaltes: ",
-                                                _react2.default.createElement("br", null),
-                                                _react2.default.createElement(
-                                                    "span",
-                                                    { className: "label label-primary" },
-                                                    "\xDCbelkeit"
-                                                ),
-                                                _react2.default.createElement(
-                                                    "span",
-                                                    { className: "label label-primary" },
-                                                    "Erbrechen"
-                                                ),
-                                                _react2.default.createElement(
-                                                    "span",
-                                                    { className: "label label-primary" },
-                                                    "Durchfall"
-                                                ),
-                                                _react2.default.createElement(
-                                                    "span",
-                                                    { className: "label label-primary" },
-                                                    "abf\xFChrende Wirkung"
-                                                ),
-                                                _react2.default.createElement("br", null),
-                                                _react2.default.createElement(
-                                                    "p",
-                                                    null,
-                                                    _react2.default.createElement(
-                                                        "b",
-                                                        null,
-                                                        "H\xE4ufigkeit:"
-                                                    ),
-                                                    " Nicht bekannt"
-                                                )
-                                            )
-                                        )
+                                        this.renderPackSecneben(drug)
                                     )
                                 )
                             )
                         )
                     )
-                ),
-                _react2.default.createElement(
-                    "div",
-                    {
-                        className: "container" },
-                    this.renderPackSec(drug),
-                    _react2.default.createElement(
-                        "div",
-                        { className: "row" },
-                        _react2.default.createElement(
-                            "div",
-                            { className: "panel with-nav-tabs panel-default" },
-                            _react2.default.createElement(
-                                "div",
-                                { className: "panel-heading" },
-                                _react2.default.createElement(
-                                    "ul",
-                                    { className: "nav nav-tabs" },
-                                    _react2.default.createElement(
-                                        "li",
-                                        { className: "active" },
-                                        _react2.default.createElement(
-                                            "a",
-                                            { href: "#tab1default", "data-toggle": "tab" },
-                                            "Vor der Einnahme "
-                                        )
-                                    ),
-                                    _react2.default.createElement(
-                                        "li",
-                                        null,
-                                        _react2.default.createElement(
-                                            "a",
-                                            { href: "#tab2default", "data-toggle": "tab" },
-                                            "Anwendnung"
-                                        )
-                                    ),
-                                    _react2.default.createElement(
-                                        "li",
-                                        null,
-                                        _react2.default.createElement(
-                                            "a",
-                                            { href: "#tab3default", "data-toggle": "tab" },
-                                            "Nebenwirkungen"
-                                        )
-                                    )
-                                )
-                            ),
-                            _react2.default.createElement(
-                                "div",
-                                { className: "panel-body" },
-                                _react2.default.createElement(
-                                    "div",
-                                    { className: "tab-content" },
-                                    _react2.default.createElement(
-                                        "div",
-                                        { className: "tab-pane fade in active", id: "tab1default" },
-                                        _react2.default.createElement(_before_taking2.default, null)
-                                    ),
-                                    _react2.default.createElement(
-                                        "div",
-                                        { className: "tab-pane fade", id: "tab2default" },
-                                        _react2.default.createElement(_usage2.default, null)
-                                    ),
-                                    _react2.default.createElement(
-                                        "div",
-                                        { className: "tab-pane fade", id: "tab3default" },
-                                        _react2.default.createElement(_sideEffect2.default, null)
-                                    )
-                                )
-                            )
-                        )
-                    )
-                ),
-                this.renderSectionList(drug)
+                )
             );
         }
     }]);
@@ -42521,7 +41996,8 @@ var DrugList = function (_React$Component) {
                     return _react2.default.createElement(
                         "div",
                         { key: feature.id },
-                        _react2.default.createElement("img", { style: { float: "left" }, key: feature.id, "data-toggle": "modal", "data-target": "#" + feature.id,
+                        _react2.default.createElement("img", { style: { float: "left" }, key: feature.id, "data-toggle": "modal",
+                            "data-target": "#" + feature.id,
                             src: "./../../assets/icons/" + feature.id + ".svg",
                             className: "drug-feature-icon", alt: feature.drugFeature,
                             title: feature.drugFeature }),
@@ -43063,68 +42539,59 @@ var DrugList = function (_React$Component) {
                             )
                         )
                     ),
-                    this.renderDrugs1(drugs)
-                ),
-                _react2.default.createElement(
-                    "div",
-                    { className: "container no-banner" },
                     _react2.default.createElement(
                         "div",
-                        { className: "page-header" },
-                        _react2.default.createElement(
-                            "h3",
-                            null,
-                            title
-                        )
-                    ),
-                    _User2.default.isAuthenticated() && _User2.default.levelOfDetail > 1 && _react2.default.createElement(
-                        "div",
-                        { className: "alert alert-info" },
-                        _react2.default.createElement("span", { className: "glyphicon glyphicon-info-sign", "aria-hidden": "true" }),
-                        _react2.default.createElement(
-                            "span",
-                            { className: "sr-only" },
-                            "Info:"
-                        ),
-                        "\xA0",
-                        description.replace("%User.firstname%", firstname).replace("%User.lastname%", lastname)
-                    ),
-                    drugs.length > 1 && _User2.default.isAuthenticated() && interactions.length > 0 && _react2.default.createElement(
-                        "div",
-                        {
-                            className: "alert alert-dismissable" + (_User2.default.redGreenColorblind ? " danger-red-green-colorblind" : " alert-danger") },
-                        _react2.default.createElement(
-                            "button",
-                            { type: "button", className: "close", "data-dismiss": "alert", "aria-label": "Close" },
+                        { className: "container" },
+                        _User2.default.isAuthenticated() && _User2.default.levelOfDetail > 1 && _react2.default.createElement(
+                            "div",
+                            { className: "alert alert-info" },
+                            _react2.default.createElement("span", { className: "glyphicon glyphicon-info-sign", "aria-hidden": "true" }),
                             _react2.default.createElement(
                                 "span",
-                                {
-                                    "aria-hidden": "true" },
-                                "\xD7"
-                            )
+                                { className: "sr-only" },
+                                "Info:"
+                            ),
+                            "\xA0",
+                            description.replace("%User.firstname%", firstname).replace("%User.lastname%", lastname)
                         ),
-                        _react2.default.createElement("span", { className: "glyphicon glyphicon-exclamation-sign", "aria-hidden": "true" }),
-                        _react2.default.createElement(
-                            "span",
-                            { className: "sr-only" },
-                            "Error:"
+                        drugs.length > 1 && _User2.default.isAuthenticated() && interactions.length > 0 && _react2.default.createElement(
+                            "div",
+                            {
+                                className: "alert alert-dismissable" + (_User2.default.redGreenColorblind ? " danger-red-green-colorblind" : " alert-danger") },
+                            _react2.default.createElement(
+                                "button",
+                                { type: "button", className: "close", "data-dismiss": "alert", "aria-label": "Close" },
+                                _react2.default.createElement(
+                                    "span",
+                                    {
+                                        "aria-hidden": "true" },
+                                    "\xD7"
+                                )
+                            ),
+                            _react2.default.createElement("span", { className: "glyphicon glyphicon-exclamation-sign", "aria-hidden": "true" }),
+                            _react2.default.createElement(
+                                "span",
+                                { className: "sr-only" },
+                                "Error:"
+                            ),
+                            _react2.default.createElement(
+                                "h5",
+                                null,
+                                _User2.default.redGreenColorblind,
+                                " ",
+                                t("interaction")
+                            ),
+                            _react2.default.createElement("span", { dangerouslySetInnerHTML: this.createMarkup(interactions) })
                         ),
                         _react2.default.createElement(
-                            "h5",
+                            "div",
                             null,
-                            _User2.default.redGreenColorblind,
-                            " ",
-                            t("interaction")
-                        ),
-                        _react2.default.createElement("span", { dangerouslySetInnerHTML: this.createMarkup(interactions) })
+                            this.state.loading && _react2.default.createElement(_loading2.default, null),
+                            !this.state.loading && drugs && drugs.length == 0 && _react2.default.createElement(_empty_list2.default, null),
+                            !this.state.loading && drugs && drugs.length > 0 && _react2.default.createElement("ul", { className: "drug-list" })
+                        )
                     ),
-                    _react2.default.createElement(
-                        "div",
-                        null,
-                        this.state.loading && _react2.default.createElement(_loading2.default, null),
-                        !this.state.loading && drugs && drugs.length == 0 && _react2.default.createElement(_empty_list2.default, null),
-                        !this.state.loading && drugs && drugs.length > 0 && _react2.default.createElement("ul", { className: "drug-list" })
-                    )
+                    this.renderDrugs1(drugs)
                 )
             );
         }
@@ -43624,7 +43091,7 @@ var Home = function (_React$Component) {
                         { className: "row text_home" },
                         _react2.default.createElement(
                             "div",
-                            { className: "col-sm-4" },
+                            { className: "col-sm-4 text-center" },
                             _react2.default.createElement("img", { className: "img-circle", src: "/assets/images/logo_s.svg", alt: "Generic placeholder image", width: "140", height: "140" }),
                             _react2.default.createElement(
                                 "h2",
@@ -43641,7 +43108,7 @@ var Home = function (_React$Component) {
                                 { className: "text-center" },
                                 _react2.default.createElement(
                                     "a",
-                                    { className: "btn btn-default", href: "#/about", role: "button" },
+                                    { className: "btn btn-default m40t", href: "#/about", role: "button" },
                                     t('viewDetails'),
                                     " \xBB"
                                 )
@@ -43649,7 +43116,7 @@ var Home = function (_React$Component) {
                         ),
                         _react2.default.createElement(
                             "div",
-                            { className: "col-sm-4" },
+                            { className: "col-sm-4 text-center" },
                             _react2.default.createElement("img", { className: "img-circle", src: "/assets/images/prof_sunyaev.jpg", alt: "Generic placeholder image", width: "140", height: "140" }),
                             _react2.default.createElement(
                                 "h2",
@@ -43666,7 +43133,7 @@ var Home = function (_React$Component) {
                                 { className: "text-center" },
                                 _react2.default.createElement(
                                     "a",
-                                    { className: "btn btn-default", href: "http://www.aifb.kit.edu/web/Critical_Information_Infrastructures/en", role: "button", target: "blank" },
+                                    { className: "btn btn-default m40t", href: "http://www.aifb.kit.edu/web/Critical_Information_Infrastructures/en", role: "button", target: "blank" },
                                     t('viewDetails'),
                                     " \xBB"
                                 )
@@ -43674,7 +43141,7 @@ var Home = function (_React$Component) {
                         ),
                         _react2.default.createElement(
                             "div",
-                            { className: "col-sm-4" },
+                            { className: "col-sm-4 text-center" },
                             _react2.default.createElement("img", { className: "img-circle", src: "/assets/images/article.jpg", alt: "Generic placeholder image", width: "140", height: "140" }),
                             _react2.default.createElement(
                                 "h2",
@@ -43691,7 +43158,7 @@ var Home = function (_React$Component) {
                                 { className: "text-center" },
                                 _react2.default.createElement(
                                     "a",
-                                    { className: "btn btn-default", href: "http://www.aifb.kit.edu/web/Critical_Information_Infrastructures/en", role: "button", target: "blank" },
+                                    { className: "btn btn-default m40t", href: "http://www.aifb.kit.edu/web/Critical_Information_Infrastructures/en", role: "button", target: "blank" },
                                     t('viewDetails'),
                                     " \xBB"
                                 )

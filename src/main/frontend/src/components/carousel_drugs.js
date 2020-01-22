@@ -18,43 +18,61 @@ class Carousel1 extends React.Component {
     generatePersonalizedAddress() {
 
         const {t} = this.props;
-        var time = new Date().getHours(); 
-    		var greeting = null;
+        var time = new Date().getHours();
+        var greeting = null;
 
-    		switch(true) {
-			case (time > 4 && time < 9):
-				greeting = t("greetingMorning");
-				break;
-			case (time > 9 && time < 13):
-				greeting = t("greetingNoon");
-				break;
-			case (time > 13 && time < 17):
-				greeting = t("greetingHighNoon");
-				break;
-			case (time > 17 && time < 22):
-				greeting = t("greetingEvening");
-				break;
-    			default:
-    				greeting = t("greetingNight");
-    		}
-    	
-    		return(<h1>{greeting.replace("%User.firstname%", User.firstname)}</h1>);
+        switch (true) {
+            case (time > 4 && time < 9):
+                greeting = t("greetingMorning");
+                break;
+            case (time > 9 && time < 13):
+                greeting = t("greetingNoon");
+                break;
+            case (time > 13 && time < 17):
+                greeting = t("greetingHighNoon");
+                break;
+            case (time > 17 && time < 22):
+                greeting = t("greetingEvening");
+                break;
+            default:
+                greeting = t("greetingNight");
+        }
+
+        return (<h1>{greeting.replace("%User.firstname%", User.firstname)}</h1>);
     }
-    
+
     componentWillMount() {
 
     }
 
     render() {
-        return (
-        	<div id="landing-page-carousel" className="carousel slide">
-        		<div className="carousel-inner" role="listbox">
-        			<div className="item active">
-        				<img className="first-slide" src="/assets/images/titelbild1.jpg" alt="First slide"></img>
+        const {t} = this.props;
+        var title = null;
+        title = t('drugs');
 
-        			</div>
-        		</div>
-        	</div>
+        return (
+            <div id="myCarousel" className="carousel slide carousel-fade" data-ride="carousel">
+                <div className="carousel-inner">
+                    <div className="carousel-item active">
+                        <div className="mask flex-center">
+                            <div className="container">
+                                <div className="row align-items-center">
+                                    <div className="col-md-8 col-12 order-md-1 order-2">
+
+                                        <h4>{title}</h4>
+                                        <p>Select the medicine you prefer</p>
+                                    </div>
+                                    <div className="col-md-4 col-12 order-md-2 order-1"><img
+                                        src="/assets/images/epil_circle.png" className="img-responsive" alt="slide"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
         );
     }
 }
