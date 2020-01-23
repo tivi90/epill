@@ -18,7 +18,7 @@
    DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, 
    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. 
  */
-   
+
 package com.doccuty.epill.model.util;
 
 import de.uniks.networkparser.interfaces.SendableEntityCreatorNoIndex;
@@ -28,98 +28,92 @@ import com.doccuty.epill.user.User;
 
 import de.uniks.networkparser.IdMap;
 
-public class PackagingTopicCreator implements SendableEntityCreatorNoIndex
-{
-   private final String[] properties = new String[]
-   {
-      PackagingTopic.PROPERTY_ID,
-      PackagingTopic.PROPERTY_TITLE
-      //PackagingTopic.PROPERTY_USER,
-   };
-   
-   @Override
-   public String[] getProperties()
-   {
-      return properties;
-   }
-   
-   @Override
-   public Object getSendableInstance(boolean reference)
-   {
-      return new PackagingTopic();
-   }
-   
-   @Override
-   public Object getValue(Object target, String attrName)
-   {
-      int pos = attrName.indexOf('.');
-      String attribute = attrName;
-      
-      if (pos > 0)
-      {
-         attribute = attrName.substring(0, pos);
-      }
+public class PackagingTopicCreator implements SendableEntityCreatorNoIndex {
+    private final String[] properties = new String[]
+            {
+                    PackagingTopic.PROPERTY_ID,
+                    PackagingTopic.PROPERTY_TITLE,
+                    PackagingTopic.PROPERTY_TEXT
 
-      if (PackagingTopic.PROPERTY_ID.equalsIgnoreCase(attribute))
-      {
-         return ((PackagingTopic) target).getId();
-      }
+                    //PackagingTopic.PROPERTY_USER,
+            };
 
-      if (PackagingTopic.PROPERTY_TITLE.equalsIgnoreCase(attribute))
-      {
-         return ((PackagingTopic) target).getTitle();
-      }
+    @Override
+    public String[] getProperties() {
+        return properties;
+    }
 
-      if (PackagingTopic.PROPERTY_USER.equalsIgnoreCase(attribute))
-      {
-         return ((PackagingTopic) target).getUser();
-      }
-      
-      return null;
-   }
-   
-   @Override
-   public boolean setValue(Object target, String attrName, Object value, String type)
-   {
-      if (PackagingTopic.PROPERTY_TITLE.equalsIgnoreCase(attrName))
-      {
-         ((PackagingTopic) target).setTitle((String) value);
-         return true;
-      }
+    @Override
+    public Object getSendableInstance(boolean reference) {
+        return new PackagingTopic();
+    }
 
-      if (PackagingTopic.PROPERTY_ID.equalsIgnoreCase(attrName))
-      {
-         ((PackagingTopic) target).setId(Integer.parseInt(value.toString()));
-         return true;
-      }
+    @Override
+    public Object getValue(Object target, String attrName) {
+        int pos = attrName.indexOf('.');
+        String attribute = attrName;
 
-      if (SendableEntityCreatorNoIndex.REMOVE.equals(type) && value != null)
-      {
-         attrName = attrName + type;
-      }
+        if (pos > 0) {
+            attribute = attrName.substring(0, pos);
+        }
 
-      if (PackagingTopic.PROPERTY_USER.equalsIgnoreCase(attrName))
-      {
-         ((PackagingTopic) target).withUser((User) value);
-         return true;
-      }
-      
-      if ((PackagingTopic.PROPERTY_USER + SendableEntityCreatorNoIndex.REMOVE).equalsIgnoreCase(attrName))
-      {
-         ((PackagingTopic) target).withoutUser((User) value);
-         return true;
-      }
-      
-      return false;
-   }
-   public static IdMap createIdMap(String sessionID)
-   {
-      return com.doccuty.epill.model.util.CreatorCreator.createIdMap(sessionID);
-   }
-   
-   //==========================================================================
-      public void removeObject(Object entity)
-   {
-      ((PackagingTopic) entity).removeYou();
-   }
+        if (PackagingTopic.PROPERTY_ID.equalsIgnoreCase(attribute)) {
+            return ((PackagingTopic) target).getId();
+        }
+
+        if (PackagingTopic.PROPERTY_TITLE.equalsIgnoreCase(attribute)) {
+            return ((PackagingTopic) target).getTitle();
+        }
+
+       if (PackagingTopic.PROPERTY_TEXT.equalsIgnoreCase(attribute)) {
+          return ((PackagingTopic) target).getText();
+       }
+
+        if (PackagingTopic.PROPERTY_USER.equalsIgnoreCase(attribute)) {
+            return ((PackagingTopic) target).getUser();
+        }
+
+        return null;
+    }
+
+    @Override
+    public boolean setValue(Object target, String attrName, Object value, String type) {
+        if (PackagingTopic.PROPERTY_TITLE.equalsIgnoreCase(attrName)) {
+            ((PackagingTopic) target).setTitle((String) value);
+            return true;
+        }
+       if (PackagingTopic.PROPERTY_TEXT.equalsIgnoreCase(attrName)) {
+          ((PackagingTopic) target).setText((String) value);
+          return true;
+       }
+        if (PackagingTopic.PROPERTY_ID.equalsIgnoreCase(attrName)) {
+            ((PackagingTopic) target).setId(Integer.parseInt(value.toString()));
+            return true;
+        }
+
+        if (SendableEntityCreatorNoIndex.REMOVE.equals(type) && value != null) {
+            attrName = attrName + type;
+        }
+
+        if (PackagingTopic.PROPERTY_USER.equalsIgnoreCase(attrName)) {
+            ((PackagingTopic) target).withUser((User) value);
+            return true;
+        }
+
+        if ((PackagingTopic.PROPERTY_USER + SendableEntityCreatorNoIndex.REMOVE).equalsIgnoreCase(attrName)) {
+            ((PackagingTopic) target).withoutUser((User) value);
+            return true;
+        }
+
+        return false;
+    }
+
+    public static IdMap createIdMap(String sessionID) {
+        return com.doccuty.epill.model.util.CreatorCreator.createIdMap(sessionID);
+    }
+
+    //==========================================================================
+    public void removeObject(Object entity) {
+        ((PackagingTopic) entity).removeYou();
+    }
 }

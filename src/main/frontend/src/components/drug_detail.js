@@ -395,6 +395,40 @@ class DrugDetail extends React.Component {
         }));
     }
 
+    renderpackInfo(drug) {
+        if (!drug.packagingSection) {
+            return null;
+        }
+
+        return drug.packagingSection
+            .filter(section => {
+                return section.topic.id === 1
+            })
+            .map((section => {
+                return (
+                    <p key={section.id}><span dangerouslySetInnerHTML={this.createMarkup(section.topic.text)}/>
+                    </p>
+                );
+            }));
+    }
+    renderPackcompany(drug) {
+        if (!drug.packagingSection) {
+            return null;
+        }
+
+        return drug.packagingSection
+            .filter(section => {
+                return section.topic.id === 4
+            })
+            .map((section => {
+                return (
+                    <p key={section.id}><span dangerouslySetInnerHTML={this.createMarkup(section.address)}/>
+                    </p>
+                );
+            })).reduce((prev, curr) => [prev, curr]);
+        drug.packagingSection.getPackagingSectionByTopicAndDrug(1, 1);
+    }
+
     renderPackSecdesc(drug) {
         if (!drug.packagingSection) {
             return null;
@@ -520,34 +554,10 @@ class DrugDetail extends React.Component {
                                 </button>
                             </div>
                             <div className="modal-body" style={{color: "black"}}>
-                                <p style={{fontWeight: "bold"}}> Lesen Sie die gesamte e-Packungsbeilage sorgfältig
-                                    durch,
 
-                                    denn
-                                    sie enthält wichtige Informationen für Sie.
-                                    Um einen bestmöglichen Behandlungserfosm zu erzielen, muss Prospan®
-                                    Hustensaft jedoch vorschriftsmäßig angewendet werden.</p>
 
-                                <ul>
-                                    <li>Fragen Sie Ihren Apotheker, wenn Sie weitere Informationen oder
-                                        einen Rat benötigen.
-                                    </li>
-                                    <li>Wenn sich Ihre Symptome verschlimmern oder nach 7 Tagen keine
-                                        Besserung eintritt, müssen Sie auf jeden Fall einen Arzt aufsuchen.
-                                    </li>
+                                    {this.renderpackInfo(drug)}
 
-                                </ul>
-                                <div className="row alert alert-danger" role="alert">
-                                    <div className="col-md-1 alert_style">
-                                        <i className="fas fa-exclamation"></i></div>
-                                    <div className="col-md-11">
-                                        <p> Wenn eine der aufgeführten Nebenwirkungen Sie erheblich beeinträchtigt oder
-                                            Sie Nebenwirkungen
-                                            bemerken, die nicht in dieser
-                                            Gebrauchsinformation angegeben sind, informieren Sie bitte Ihren
-                                            <b>Arzt oder Apotheker</b>.</p>
-                                    </div>
-                                </div>
                             </div>
                             <div className="modal-footer">
                                 <button type="button" className="btn btn-secondary" data-dismiss="modal">Schließen
@@ -577,24 +587,8 @@ class DrugDetail extends React.Component {
                                 </button>
                             </div>
                             <div className="modal-body" style={{color: "black"}}>
-                                <div className="row">
-                                    <div className="col-md-8">
-                                        <p> Engelhard Arzneimittel GmbH & Co. KG <br/>
-                                            Herzbergstr. 3 <br/>
-                                            61138 Niederdorfelden <br/>
-                                            <b>Tel.:</b> 06101 / 539 – 300 <br/>
-                                            <b>Fax:</b> 06101 / 539 – 315 <br/>
-                                            <b> Internet:</b> <a
-                                                href="http://www.engelhard-am.de">http://www.engelhard-am.de</a> <br/>
-                                            <b> E-Mail:</b> <a
-                                                href="mailto:info@engelhard-am.de">info@engelhard-am.de</a> <br/>
+                                {this.renderPackcompany(drug)}
 
-                                        </p>
-                                    </div>
-                                    <div className="col-md-4">
-                                        <img className="img-responsive" src="/assets/images/Engelhard_Logo_2013.png"/>
-                                    </div>
-                                </div>
                             </div>
                             <div className="modal-footer">
                                 <button type="button" className="btn btn-secondary" data-dismiss="modal">Schließen

@@ -221,6 +221,7 @@ public class PackagingSection implements SendableEntity {
       return this;
    }
 
+
 	// ==========================================================================
 
 	public static final String PROPERTY_TEXT = "text";
@@ -245,9 +246,37 @@ public class PackagingSection implements SendableEntity {
 
 	public PackagingSection withText(String value)
    {
-      setText(value);
+	   setText(value);
       return this;
    }
+
+	// ==========================================================================
+
+	public static final String PROPERTY_ADDRESS = "address";
+
+	@Column(name="address", columnDefinition="TEXT")
+	private String address;
+
+	public String getAddress()
+	{
+		return this.address;
+	}
+
+	public void setAddress(String value)
+	{
+		if ( ! EntityUtil.stringEquals(this.text, value)) {
+
+			String oldValue = this.text;
+			this.address = value;
+			this.firePropertyChange(PROPERTY_ADDRESS, oldValue, value);
+		}
+	}
+
+	public PackagingSection withAddress(String value)
+	{
+		setAddress(value);
+		return this;
+	}
 
 	/********************************************************************
     * <pre>

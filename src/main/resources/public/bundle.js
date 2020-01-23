@@ -40786,9 +40786,50 @@ var DrugDetail = function (_React$Component) {
             });
         }
     }, {
+        key: "renderpackInfo",
+        value: function renderpackInfo(drug) {
+            var _this8 = this;
+
+            if (!drug.packagingSection) {
+                return null;
+            }
+
+            return drug.packagingSection.filter(function (section) {
+                return section.topic.id === 1;
+            }).map(function (section) {
+                return _react2.default.createElement(
+                    "p",
+                    { key: section.id },
+                    _react2.default.createElement("span", { dangerouslySetInnerHTML: _this8.createMarkup(section.topic.text) })
+                );
+            });
+        }
+    }, {
+        key: "renderPackcompany",
+        value: function renderPackcompany(drug) {
+            var _this9 = this;
+
+            if (!drug.packagingSection) {
+                return null;
+            }
+
+            return drug.packagingSection.filter(function (section) {
+                return section.topic.id === 4;
+            }).map(function (section) {
+                return _react2.default.createElement(
+                    "p",
+                    { key: section.id },
+                    _react2.default.createElement("span", { dangerouslySetInnerHTML: _this9.createMarkup(section.address) })
+                );
+            }).reduce(function (prev, curr) {
+                return [prev, curr];
+            });
+            drug.packagingSection.getPackagingSectionByTopicAndDrug(1, 1);
+        }
+    }, {
         key: "renderPackSecdesc",
         value: function renderPackSecdesc(drug) {
-            var _this8 = this;
+            var _this10 = this;
 
             if (!drug.packagingSection) {
                 return null;
@@ -40800,7 +40841,7 @@ var DrugDetail = function (_React$Component) {
                 return _react2.default.createElement(
                     "p",
                     { key: section.id },
-                    _react2.default.createElement("span", { dangerouslySetInnerHTML: _this8.createMarkup(section.text) })
+                    _react2.default.createElement("span", { dangerouslySetInnerHTML: _this10.createMarkup(section.text) })
                 );
             }).reduce(function (prev, curr) {
                 return [prev, curr];
@@ -40810,7 +40851,7 @@ var DrugDetail = function (_React$Component) {
     }, {
         key: "renderPackSecvor",
         value: function renderPackSecvor(drug) {
-            var _this9 = this;
+            var _this11 = this;
 
             if (!drug.packagingSection) {
                 return null;
@@ -40822,7 +40863,7 @@ var DrugDetail = function (_React$Component) {
                 return _react2.default.createElement(
                     "p",
                     { key: section.id },
-                    _react2.default.createElement("span", { dangerouslySetInnerHTML: _this9.createMarkup(section.text) })
+                    _react2.default.createElement("span", { dangerouslySetInnerHTML: _this11.createMarkup(section.text) })
                 );
             }).reduce(function (prev, curr) {
                 return [prev, curr];
@@ -40831,7 +40872,7 @@ var DrugDetail = function (_React$Component) {
     }, {
         key: "renderPackSecdos",
         value: function renderPackSecdos(drug) {
-            var _this10 = this;
+            var _this12 = this;
 
             if (!drug.packagingSection) {
                 return null;
@@ -40843,7 +40884,7 @@ var DrugDetail = function (_React$Component) {
                 return _react2.default.createElement(
                     "p",
                     { key: section.id },
-                    _react2.default.createElement("span", { dangerouslySetInnerHTML: _this10.createMarkup(section.text) })
+                    _react2.default.createElement("span", { dangerouslySetInnerHTML: _this12.createMarkup(section.text) })
                 );
             }).reduce(function (prev, curr) {
                 return [prev, curr];
@@ -40852,7 +40893,7 @@ var DrugDetail = function (_React$Component) {
     }, {
         key: "renderPackSecneben",
         value: function renderPackSecneben(drug) {
-            var _this11 = this;
+            var _this13 = this;
 
             if (!drug.packagingSection) {
                 return null;
@@ -40864,7 +40905,7 @@ var DrugDetail = function (_React$Component) {
                 return _react2.default.createElement(
                     "p",
                     { key: section.id },
-                    _react2.default.createElement("span", { dangerouslySetInnerHTML: _this11.createMarkup(section.text) })
+                    _react2.default.createElement("span", { dangerouslySetInnerHTML: _this13.createMarkup(section.text) })
                 );
             }).reduce(function (prev, curr) {
                 return [prev, curr];
@@ -40873,21 +40914,21 @@ var DrugDetail = function (_React$Component) {
     }, {
         key: "renderSectionList",
         value: function renderSectionList(drug) {
-            var _this12 = this;
+            var _this14 = this;
 
             if (!drug.packagingSection) {
                 return null;
             }
 
             return drug.packagingSection.map(function (section) {
-                return _react2.default.createElement(_accordion2.default, { section: section, toggleOriginalAndTailoredText: _this12.toggleOriginalAndTailoredText,
+                return _react2.default.createElement(_accordion2.default, { section: section, toggleOriginalAndTailoredText: _this14.toggleOriginalAndTailoredText,
                     key: section.id });
             });
         }
     }, {
         key: "render",
         value: function render() {
-            var _this13 = this;
+            var _this15 = this;
 
             var t = this.props.t;
 
@@ -40955,49 +40996,7 @@ var DrugDetail = function (_React$Component) {
                             _react2.default.createElement(
                                 "div",
                                 { className: "modal-body", style: { color: "black" } },
-                                _react2.default.createElement(
-                                    "p",
-                                    { style: { fontWeight: "bold" } },
-                                    " Lesen Sie die gesamte e-Packungsbeilage sorgf\xE4ltig durch, denn sie enth\xE4lt wichtige Informationen f\xFCr Sie. Um einen bestm\xF6glichen Behandlungserfosm zu erzielen, muss Prospan\xAE Hustensaft jedoch vorschriftsm\xE4\xDFig angewendet werden."
-                                ),
-                                _react2.default.createElement(
-                                    "ul",
-                                    null,
-                                    _react2.default.createElement(
-                                        "li",
-                                        null,
-                                        "Fragen Sie Ihren Apotheker, wenn Sie weitere Informationen oder einen Rat ben\xF6tigen."
-                                    ),
-                                    _react2.default.createElement(
-                                        "li",
-                                        null,
-                                        "Wenn sich Ihre Symptome verschlimmern oder nach 7 Tagen keine Besserung eintritt, m\xFCssen Sie auf jeden Fall einen Arzt aufsuchen."
-                                    )
-                                ),
-                                _react2.default.createElement(
-                                    "div",
-                                    { className: "row alert alert-danger", role: "alert" },
-                                    _react2.default.createElement(
-                                        "div",
-                                        { className: "col-md-1 alert_style" },
-                                        _react2.default.createElement("i", { className: "fas fa-exclamation" })
-                                    ),
-                                    _react2.default.createElement(
-                                        "div",
-                                        { className: "col-md-11" },
-                                        _react2.default.createElement(
-                                            "p",
-                                            null,
-                                            " Wenn eine der aufgef\xFChrten Nebenwirkungen Sie erheblich beeintr\xE4chtigt oder Sie Nebenwirkungen bemerken, die nicht in dieser Gebrauchsinformation angegeben sind, informieren Sie bitte Ihren",
-                                            _react2.default.createElement(
-                                                "b",
-                                                null,
-                                                "Arzt oder Apotheker"
-                                            ),
-                                            "."
-                                        )
-                                    )
-                                )
+                                this.renderpackInfo(drug)
                             ),
                             _react2.default.createElement(
                                 "div",
@@ -41052,71 +41051,7 @@ var DrugDetail = function (_React$Component) {
                             _react2.default.createElement(
                                 "div",
                                 { className: "modal-body", style: { color: "black" } },
-                                _react2.default.createElement(
-                                    "div",
-                                    { className: "row" },
-                                    _react2.default.createElement(
-                                        "div",
-                                        { className: "col-md-8" },
-                                        _react2.default.createElement(
-                                            "p",
-                                            null,
-                                            " Engelhard Arzneimittel GmbH & Co. KG ",
-                                            _react2.default.createElement("br", null),
-                                            "Herzbergstr. 3 ",
-                                            _react2.default.createElement("br", null),
-                                            "61138 Niederdorfelden ",
-                                            _react2.default.createElement("br", null),
-                                            _react2.default.createElement(
-                                                "b",
-                                                null,
-                                                "Tel.:"
-                                            ),
-                                            " 06101 / 539 \u2013 300 ",
-                                            _react2.default.createElement("br", null),
-                                            _react2.default.createElement(
-                                                "b",
-                                                null,
-                                                "Fax:"
-                                            ),
-                                            " 06101 / 539 \u2013 315 ",
-                                            _react2.default.createElement("br", null),
-                                            _react2.default.createElement(
-                                                "b",
-                                                null,
-                                                " Internet:"
-                                            ),
-                                            " ",
-                                            _react2.default.createElement(
-                                                "a",
-                                                {
-                                                    href: "http://www.engelhard-am.de" },
-                                                "http://www.engelhard-am.de"
-                                            ),
-                                            " ",
-                                            _react2.default.createElement("br", null),
-                                            _react2.default.createElement(
-                                                "b",
-                                                null,
-                                                " E-Mail:"
-                                            ),
-                                            " ",
-                                            _react2.default.createElement(
-                                                "a",
-                                                {
-                                                    href: "mailto:info@engelhard-am.de" },
-                                                "info@engelhard-am.de"
-                                            ),
-                                            " ",
-                                            _react2.default.createElement("br", null)
-                                        )
-                                    ),
-                                    _react2.default.createElement(
-                                        "div",
-                                        { className: "col-md-4" },
-                                        _react2.default.createElement("img", { className: "img-responsive", src: "/assets/images/Engelhard_Logo_2013.png" })
-                                    )
-                                )
+                                this.renderPackcompany(drug)
                             ),
                             _react2.default.createElement(
                                 "div",
@@ -41283,7 +41218,7 @@ var DrugDetail = function (_React$Component) {
                                 _react2.default.createElement(
                                     "button",
                                     { type: "button", className: "btn btn-like", onClick: function onClick() {
-                                            return _this13.toggleTaking(drug);
+                                            return _this15.toggleTaking(drug);
                                         } },
                                     _react2.default.createElement("span", {
                                         className: "glyphicon white" + (!drug.isTaken ? " glyphicon-heart" : " glyphicon-minus") })
@@ -41291,7 +41226,7 @@ var DrugDetail = function (_React$Component) {
                                 _react2.default.createElement(
                                     "button",
                                     { type: "button", className: "btn btn-add", onClick: function onClick() {
-                                            return _this13.toggleRemember(drug);
+                                            return _this15.toggleRemember(drug);
                                         } },
                                     _react2.default.createElement("span", {
                                         className: "glyphicon white" + (!drug.isRemembered ? " glyphicon-plus" : " glyphicon-minus") })
@@ -41382,7 +41317,7 @@ var DrugDetail = function (_React$Component) {
                                                             "div",
                                                             { className: "modal-body" },
                                                             _react2.default.createElement("div", {
-                                                                dangerouslySetInnerHTML: _this13.createMarkup(feature.descriptionDrug) })
+                                                                dangerouslySetInnerHTML: _this15.createMarkup(feature.descriptionDrug) })
                                                         ),
                                                         _react2.default.createElement(
                                                             "div",

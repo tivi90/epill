@@ -206,7 +206,7 @@ INSERT INTO active_substance (id, name, idsubstance_group) VALUES (12,'Amlodipin
 -- Dumping data for table `packaging_topic`
 --
 
-INSERT INTO packaging_topic (id, order_number, title) VALUES (1,1,'Anwenderhinweise');
+INSERT INTO packaging_topic (id, order_number, title, text) VALUES (1,1,'Anwenderhinweise','<p style="font-weight: bold;"> Lesen Sie die gesamte e-Packungsbeilage sorgfältig durch, denn sie enthält wichtige Informationen für Sie. Um einen bestmöglichen Behandlungserfosm zu erzielen, muss Prospan® Hustensaft jedoch vorschriftsmäßig angewendet werden.</p><ul> <li>Fragen Sie Ihren Apotheker, wenn Sie weitere Informationen oder einen Rat benötigen. </li><li>Wenn sich Ihre Symptome verschlimmern oder nach 7 Tagen keine Besserung eintritt, müssen Sie auf jeden Fall einen Arzt aufsuchen. </li></ul><div class="row alert alert-danger" role="alert"> <div class="col-md-1 alert_style"> <i class="fas fa-exclamation"></i></div><div class="col-md-11"> <p> Wenn eine der aufgeführten Nebenwirkungen Sie erheblich beeinträchtigt oder Sie Nebenwirkungen bemerken, die nicht in dieser Gebrauchsinformation angegeben sind, informieren Sie bitte Ihren <b>Arzt oder Apotheker</b>.</p></div></div>');
 INSERT INTO packaging_topic (id, order_number, title) VALUES (2,2,'Allgemeine Hinweise');
 INSERT INTO packaging_topic (id, order_number, title) VALUES (3,3,'Vorsichtsmaßnahmen und Warnhinweise');
 INSERT INTO packaging_topic (id, order_number, title) VALUES (4,4,'Indikationen');
@@ -687,7 +687,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
 
 
 
-<div className="row content_header">
+<div class="row content_header">
     <h3>Warnhinweise und Vorsichtsmaßnahmen
     </h3>
 </div>
@@ -1062,7 +1062,55 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
     </div>
 </div>
 ',11,3);
-INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (82,0,'Beispieltext4',11,4);
+INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic, ADDRESS) VALUES (82,0,'Beispieltext4',11,4,'
+<div class="row">
+    <div class="col-md-9">
+        <h3>Pharmazeutischer Unternehmer </h3>
+
+        <p> Winthrop Arzneimittel GmbH <br />
+            65927 Frankfurt am Main<br />
+        </p>
+    </div>
+    <div class="col-md-3">
+        <img class="img-responsive" src="/assets/images/company/winthrop.png" />
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-9">
+        <h3>Mitvertrieb </h3>
+
+        <p> Zentiva Pharma GmbH <br />
+            65927 Frankfurt am Main<br />
+            <b>Tel.:</b> (01 80) 2 02 00 10* <br />
+            <b>Fax:</b> (01 80) 2 02 00 11* <br />
+        </p>
+    </div>
+    <div class="col-md-3">
+        <img class="img-responsive" src="/assets/images/company/zentiva.png" />
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-9">
+        <h3>Hersteller</h3>
+        <p> Chinoin Pharmaceutical and Chemical Works Private Co. Ltd. <br />
+            Tó Utca 1-5 <br />
+            H-1045 Budapest IV<br />
+            Ungarn
+        </p>
+        <p> Chinoin Pharmaceutical and Chemical Works Private Co. Ltd. <br />
+            5 Lévai utca<br />
+            H-2112 Veresegyhàz<br />
+            Ungarn
+        </p>
+        <p> S.C. Zentiva S.A.<br />
+            B-dul Theodor Pallady nr. 50, sector 3, <br />
+            032266 Bukarest<br />
+            Rumänien
+        </p>
+    </div>
+    <div class="col-md-3">
+    </div>
+</div>');
 INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (83,0,'<div class="row">
     <div class="col-sm-9">
         Nehmen Sie Metformin Lich immer genau nach Absprache mit Ihrem Arzt ein. Fragen Sie bei Ihrem
@@ -1083,7 +1131,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
         <i style="font-size:80px;color: #575858;" class="fas fa-user-md"></i>
     </div>
 </div>
-<div className="row content_header">
+<div class="row content_header">
     <h1>Dosierung</h1>
     <hr />
 
@@ -1139,7 +1187,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
         </tbody>
     </table>
 </div>
-<div className="row content_header">
+<div class="row content_header">
     <h1>Einnahme von Metformin Lich</h1>
     <hr />
     <div class="row text-center">
@@ -1222,7 +1270,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
     </div>
 </div>
 
-<div className="row content_header" style="margin-top: 30px;">
+<div class="row content_header" style="margin-top: 30px;">
     <h1>Weitere Informationen</h1>
     <hr />
     <div class="col-md-12">
@@ -1354,7 +1402,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
             <th>Nebenwirkung</th>
         </tr>
     </thead>
-    <tbody>
+    <tbody class="gradient">
         <tr>
             <td>Sehr häufig</td>
             <td>Mehr als 1 von 10 Behandelten</td>
@@ -1655,14 +1703,10 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
 
 INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (95,0,'',12,1);
 INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (88,0,'Beispieltext2',12,2);
-INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (89,0,'
-<!--Vor der Einnahme-->
-
-
-
-<div className="row content_header">
-    <h3>Warnhinweise und Vorsichtsmaßnahmen
-    </h3>
+INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (89,0,'<div class="row content_header">
+    <h1>Warnhinweise und Vorsichtsmaßnahmen
+    </h1>
+    <hr>
 </div>
 <div>
     Bitte sprechen Sie mit Ihrem Arzt oder Apotheker, bevor Sie Amlodipin (besilat) Dexcel 5
@@ -1676,10 +1720,13 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
         <li> wenn Sie an einer Erkrankung der Leber leiden</li>
         <li> wenn Sie älter sind und Ihre Dosis erhöht werden muss</li>
     </ul>
+
+    <h4>Kinder</h4>
     Bei Kindern unter 6 Jahren wurde Amlodipin nicht untersucht. <br>
-    <i class="far fa-arrow-alt-circle-right"></i> Amlodipin (besilat) Dexcel 5 mg kann nur bei Kindern und
-    Jugendlichen mit Bluthochdruck im Alter von 6 bis
-    17 Jahren angewendet werden <br>
+    <div class="col-2-sm"> <i class="far fa-arrow-alt-circle-right"></i> </div>
+    <div class="col-10-sm"> Amlodipin (besilat) Dexcel 5 mg kann nur bei Kindern und
+        Jugendlichen mit Bluthochdruck im Alter von 6 bis
+        17 Jahren angewendet werden</div>
     Wegen weiteren Informationen sprechen Sie bitte mit Ihrem Arzt.
 </div>
 
@@ -1690,12 +1737,11 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
         <div class="panel-heading">
             <h4 class="panel-title">
                 <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
-                    <img width="40" src="./../../assets/icons/10.svg" /> Einnahme von Amlodipin (besilat) Dexcel 5 mg
-                    <br> zusammen mit
+                    <img width="40" src="./../../assets/icons/10.svg" /> Einnahme von Amlodipin zusammen mit
                     anderen Medikamente</a>
             </h4>
         </div>
-        <div id="collapse3" class="panel-collapse collapse">
+        <div id="collapse3" class="panel-collapse collapse in">
             <div class="panel-body">
                 Informieren Sie Ihren Arzt oder Apotheker, wenn Sie andere Arzneimittel
                 einnehmen/anwenden, kürzlich andere Arzneimittel eingenommen/angewendet haben oder
@@ -1722,9 +1768,8 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
         <div class="panel-heading">
             <h4 class="panel-title">
                 <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">
-                    <img width="40" src="./../../assets/icons/11.svg" /> Einnahme von Amlodipin (besilat) Dexcel 5 mg
-                    <br>
-                    zusammen mit Nahrungsmitteln und
+                    <img width="40" src="./../../assets/icons/11.svg" /> Einnahme von Amlodipin zusammen mit
+                    Nahrungsmitteln und
                     Getränken</a>
             </h4>
         </div>
@@ -1748,12 +1793,12 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
             <div class="panel-body">
                 Wenn Sie schwanger sind oder stillen, oder wenn Sie vermuten, schwanger zu sein oder
                 beabsichtigen, schwanger zu werden, fragen Sie vor der Anwendung dieses Arzneimittels
-                Ihren Arzt oder Apotheker um Rat. <br>
-                <b>Schwangerschaft</b> <br>
+                Ihren Arzt oder Apotheker um Rat.
+                <h4>Schwangerschaft</h4>
                 Die Sicherheit von Amlodipin während einer Schwangerschaft konnte nicht nachgewiesen
                 werden. Wenn Sie glauben, schwanger zu sein, oder eine Schwangerschaft planen,
-                müssen Sie dies Ihrem Arzt vor der Einnahme von Amlodipin (besilat) Dexcel 5 mg sagen.
-                <b>Stillzeit</b> </br>
+                müssen Sie dies Ihrem Arzt vor der Einnahme von Amlodipin (besilat) Dexcel 5 mg sagen.</br>
+                <h4>Stillzeit</h4>
                 Es ist nicht bekannt, ob Amlodipin in die Muttermilch übergeht. Wenn Sie stillen oder mit
                 dem Stillen beginnen möchten, müssen Sie dies Ihrem Arzt vor der Einnahme von
                 Amlodipin (besilat) Dexcel 5 mg sagen.
@@ -1765,12 +1810,12 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
     <div class="panel panel-default">
         <div class="panel-heading">
             <h4 class="panel-title">
-                <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse6">
                     <img width="40" src="./../../assets/icons/3.svg" />
                     Verkehrstüchtigkeit und Fähigkeit zum Bedienen von Maschinen</a>
             </h4>
         </div>
-        <div id="collapse4" class="panel-collapse collapse">
+        <div id="collapse6" class="panel-collapse collapse">
             <div class="panel-body">Die Fähigkeit zur aktiven Teilnahme am Straßenverkehr oder zum Bedienen von
                 Maschinen
                 kann durch Amlodipin (besilat) Dexcel 5 mg beeinträchtigt werden. Falls die Tabletten bei
@@ -1783,8 +1828,11 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
 </div>
 
 
+<div class="row content_header">
 
-<h3><i style="color: red;" class="fas fa-bolt"></i> Amlodipin (besilat) Dexcel 5 mg nicht einnehmen bei </h3>
+    <h3><i style="color: red;" class="fas fa-bolt"></i> Amlodipin (besilat) Dexcel 5 mg nicht einnehmen bei </h3>
+    <hr>
+</div>
 <div class="row">
     <div class="col-sm-6">
         <div class="row">
@@ -1805,8 +1853,9 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
     </div>
     <div class="col-sm-6">
         <div class="row">
-            <div class="col-sm-12 info_notuse"><b>Leiden an schwerer Verengung des Ausflusstraktes der linken Herzkammer
-                    (Aortenstenose) oder an einem kardiogenen Schock (dann kann Ihr Herz den Körper
+            <div class="col-sm-12 info_notuse"><b>Leiden an schwerer Verengung des Ausflusstraktes der linken
+                    Herzkammer</b>
+                    (Aortenstenose) oder an einem <b>kardiogenen Schock</b> (dann kann Ihr Herz den Körper
                     nicht mehr mit genügend Blut versorgen)</div>
         </div>
         <div class="row">
@@ -1816,9 +1865,35 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
     </div>
 </div>
 
-
 ',12,3);
-INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (90,0,'Beispieltext',12,4);
+INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic, address) VALUES (90,0,'Beispieltext',12,4, ' <div class="row">
+    <div class="col-md-9">
+        <h3>Pharmazeutischer Unternehmer </h3>
+        <p> Dexcel Pharma GmbH <br />
+            Carl-Zeiss-Str. 2<br />
+            63755 Alzenau<br />
+            <b>Tel.:</b> 0 60 23 - 94 80 - 0 <br />
+            <b>Fax:</b> 0 60 23 - 94 80 - 50 <br />
+        </p>
+    </div>
+    <div class="col-md-3">
+        <img class="img-responsive" src="/assets/images/company/dexcel.jpeg" />
+    </div>
+</div>
+<div class="row">
+
+    <div class="col-md-9">
+        <h3>Hersteller </h3>
+        <p> Dexcel Pharma GmbH <br />
+            Steinbruch 2, Halle 15<br />
+            Lager im Industriepark Giesbert G.b.R. </br>
+            63755 Alzenau<br />
+
+        </p>
+    </div>
+    <div class="col-md-3">
+    </div>
+</div>');
 INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (91,0,'<div class="row">
     <div class="col-sm-9">
         Nehmen Sie dieses Arzneimittel immer genau nach Absprache mit Ihrem Arztoder
@@ -1830,7 +1905,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
         <i style="font-size:80px;color: #575858;" class="fas fa-user-md"></i>
     </div>
 </div>
-<div className="row content_header">
+<div class="row content_header">
     <h3 class="modal-title">Dosierung</h3>
     <hr />
 
@@ -1876,7 +1951,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
         </tbody>
     </table>
 </div>
-<div className="row content_header" style="margin-top: 30px;">
+<div class="row content_header" style="margin-top: 30px;">
     <h3 class="modal-title">Art und Dauer der Anwendung</h3>
     <hr />
     <div class="row text-center">
@@ -1901,7 +1976,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
 
 </div>
 
-<div className="row content_header" style="margin-top: 30px;">
+<div class="row content_header" style="margin-top: 30px;">
     <h3 class="modal-title">Weitere Informationen</h3>
     <hr />
     <div class="col-md-12">
@@ -1972,13 +2047,15 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
 </div>
 ',12,5);
 INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (92,0,'
+<div class="row content_header">
 
-<h3> Nebenwirkungen <i class="fas fa-male"></i> <i class="fas fa-blind"></i> </h3>
+    <h3> Nebenwirkungen </h3>
+    <hr>
 
-Wie alle Arzneimittel kann auch dieses Arzneimittel Nebenwirkungen haben, die aber nicht
-bei jedem auftreten müssen.
-
-<div class="alert alert-info">
+    Wie alle Arzneimittel kann auch dieses Arzneimittel Nebenwirkungen haben, die aber nicht
+    bei jedem auftreten müssen.
+</div>
+<div class="alert alert-info" style="margin-top: 15px;">
     Suchen Sie sofort Ihren Arzt auf, wenn bei Ihnen nach der Einnahme dieses Arzneimittels
     die folgenden Nebenwirkungen auftreten:
     <ul>
@@ -1995,98 +2072,109 @@ bei jedem auftreten müssen.
             ausgeprägtem Unwohlsein führen kann </li>
     </ul>
 </div>
+<div class="row">
 
-Die nachfolgende sehr häufige Nebenwirkung wurde berichtet. Wenn Ihnen diese
-Probleme bereitet oder länger als 1 Woche andauert, sollten Sie Ihren Arzt aufsuchen.
-<table class="sideffect_table">
-    <thead>
-        <tr>
-            <th>Häufigkeit</th>
-            <th style="width: 25%;">Anzahl der betreffenden Behandelten</th>
-            <th>Nebenwirkung</th>
-        </tr>
-    </thead>
-    <tbody class="gradient">
-        <tr>
-            <td>Sehr häufig</td>
-            <td>Mehr als 1 von 10 Behandelten</td>
-            <td>Knöchelschwellungen (Ödeme)
-            </td>
-        </tr>
-        <tr>
-            <td>Häufig</td>
-            <td>Mehr als 1 von 10 Behandelten </td>
-            <td>
-                <ul>
-                    <li>Kopfschmerzen, Schwindel, Schläfrigkeit (insbesondere zu Beginn der Behandlung)</li>
-                    <li>Herzklopfen (Palpitationen), Hautrötung mit Wärmegefühl</li>
-                    <li>Bauchschmerzen, Übelkeit</li>
-                    <li>veränderte Darmentleerungsgewohnheiten, Durchfälle, Verstopfung,
-                        Verdauungsstörungen</li>
-                    <li>Müdigkeit, Schwächegefühl</li>
-                    <li>Sehstörungen, Doppeltsehen</li>
-                    <li>Muskelkrämpfe</li>
-                </ul>
-            </td>
-        </tr>
-        <tr>
-            <td>Gelegentlich</td>
-            <td>Bis zu 1 von 100 Behandelten</td>
-            <td>
-                <ul>
-                    <li>Stimmungsschwankungen, Angst, Depression, Schlaflosigkeit</li>
-                    <li>Zittern, Geschmacksstörungen, kurze Bewusstlosigkeit</li>
-                    <li>verminderte Empfindlichkeit für Berührungsreize oder Kribbeln in den Extremitäten,
-                        Verlust des Schmerzgefühls</li>
-                    <li>Ohrgeräusche</li>
-                    <li>niedriger Blutdruck</li>
-                    <li>Niesen/laufende Nase durch eine Entzündung der Nasenschleimhaut (Rhinitis)</li>
-                    <li>Husten</li>
-                    <li>Mundtrockenheit, Erbrechen</li>
-                    <li>Haarausfall, vermehrtes Schwitzen, Hautjucken, rote Flecken auf der Haut,
-                        Hautverfärbung</li>
-                    <li>Störungen beim Wasserlassen, vermehrter nächtlicher Harndrang, häufigeres
-                        Wasserlassen</li>
-                    <li>Erektionsstörungen, Vergrößerung der Brustdrüsen beim Mann</li>
-                    <li>Schmerzen, Unwohlsein</li>
-                    <li>Gelenk- oder Muskelschmerzen, Rückenschmerzen</li>
-                    <li>Gewichtszunahme oder Gewichtsabnahme</li>
-                </ul>
-            </td>
-        </tr>
-        <tr>
-            <td>Selten</td>
-            <td> Bis zu 1 von 1.000 Behandelten </td>
-            <td>
-                Verwirrung
-            </td>
-        </tr>
-        <tr>
-            <td>Sehr selten</td>
-            <td> Bis zu 1 von 10.000 Behandelten </td>
-            <td>
-                <ul>
-                    <li>Verminderung der weißen Blutkörperchen, Verminderung der Blutplättchen, was zu
-                        ungewöhnlichen blauen Flecken oder leichtem Bluten führen kann (Schädigung der
-                        roten Blutzellen)</li>
-                    <li>erhöhter Blutzuckerspiegel (Hyperglykämie)</li>
-                    <li>eine Nervenstörung, die zu Schwächegefühl, verminderter Empfindlichkeit für
-                        Berührungsreize oder Kribbeln führen kann</li>
-                    <li>Schwellung des Zahnfleischs</li>
-                    <li>aufgeblähter Bauch (Gastritis)</li>
-                    <li>gestörte Leberfunktion, Entzündung der Leber (Hepatitis), Gelbfärbung der Haut
-                        (Gelbsucht), Anstieg der Leberenzyme, wodurch bestimmte medizinische Tests
-                        beeinflusst werden können</li>
-                    <li>erhöhte Muskelanspannung</li>
-                    <li>entzündliche Reaktionen der Blutgefäße, häufig mit Hautausschlag</li>
-                    <li>Lichtempfindlichkeit</li>
-                    <li>Störungen, die sich aus Steifheit, Zittern und/oder Bewegungsstörungen
-                        zusammensetzen</li>
-                </ul>
-            </td>
-        </tr>
-    </tbody>
-</table>
+
+    <table class="sideffect_table">
+        <thead >
+            <tr>
+                <th>Häufigkeit</th>
+                <th style="width: 25%;">Anzahl der betreffenden Behandelten</th>
+                <th>Nebenwirkung</th>
+            </tr>
+        </thead>
+        <tbody class="gradient">
+            <tr>
+                <td>Sehr häufig</td>
+                <td>Mehr als 1 von 10 Behandelten</td>
+                <td>Knöchelschwellungen (Ödeme)
+                </td>
+            </tr>
+            <tr>
+                <td>Häufig</td>
+                <td>Mehr als 1 von 10 Behandelten </td>
+                <td>
+                    <ul>
+                        <li>Kopfschmerzen, Schwindel, Schläfrigkeit (insbesondere zu Beginn der Behandlung)</li>
+                        <li>Herzklopfen (Palpitationen), Hautrötung mit Wärmegefühl</li>
+                        <li>Bauchschmerzen, Übelkeit</li>
+                        <li>veränderte Darmentleerungsgewohnheiten, Durchfälle, Verstopfung,
+                            Verdauungsstörungen</li>
+                        <li>Müdigkeit, Schwächegefühl</li>
+                        <li>Sehstörungen, Doppeltsehen</li>
+                        <li>Muskelkrämpfe</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>Gelegentlich</td>
+                <td>Bis zu 1 von 100 Behandelten</td>
+                <td>
+                    <ul>
+                        <li>Stimmungsschwankungen, Angst, Depression, Schlaflosigkeit</li>
+                        <li>Zittern, Geschmacksstörungen, kurze Bewusstlosigkeit</li>
+                        <li>verminderte Empfindlichkeit für Berührungsreize oder Kribbeln in den Extremitäten,
+                            Verlust des Schmerzgefühls</li>
+                        <li>Ohrgeräusche</li>
+                        <li>niedriger Blutdruck</li>
+                        <li>Niesen/laufende Nase durch eine Entzündung der Nasenschleimhaut (Rhinitis)</li>
+                        <li>Husten</li>
+                        <li>Mundtrockenheit, Erbrechen</li>
+                        <li>Haarausfall, vermehrtes Schwitzen, Hautjucken, rote Flecken auf der Haut,
+                            Hautverfärbung</li>
+                        <li>Störungen beim Wasserlassen, vermehrter nächtlicher Harndrang, häufigeres
+                            Wasserlassen</li>
+                        <li>Erektionsstörungen, Vergrößerung der Brustdrüsen beim Mann</li>
+                        <li>Schmerzen, Unwohlsein</li>
+                        <li>Gelenk- oder Muskelschmerzen, Rückenschmerzen</li>
+                        <li>Gewichtszunahme oder Gewichtsabnahme</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>Selten</td>
+                <td> Bis zu 1 von 1.000 Behandelten </td>
+                <td>
+                    Verwirrung
+                </td>
+            </tr>
+            <tr>
+                <td>Sehr selten</td>
+                <td> Bis zu 1 von 10.000 Behandelten </td>
+                <td>
+                    <ul>
+                        <li>Verminderung der weißen Blutkörperchen, Verminderung der Blutplättchen, was zu
+                            ungewöhnlichen blauen Flecken oder leichtem Bluten führen kann (Schädigung der
+                            roten Blutzellen)</li>
+                        <li>erhöhter Blutzuckerspiegel (Hyperglykämie)</li>
+                        <li>eine Nervenstörung, die zu Schwächegefühl, verminderter Empfindlichkeit für
+                            Berührungsreize oder Kribbeln führen kann</li>
+                        <li>Schwellung des Zahnfleischs</li>
+                        <li>aufgeblähter Bauch (Gastritis)</li>
+                        <li>gestörte Leberfunktion, Entzündung der Leber (Hepatitis), Gelbfärbung der Haut
+                            (Gelbsucht), Anstieg der Leberenzyme, wodurch bestimmte medizinische Tests
+                            beeinflusst werden können</li>
+                        <li>erhöhte Muskelanspannung</li>
+                        <li>entzündliche Reaktionen der Blutgefäße, häufig mit Hautausschlag</li>
+                        <li>Lichtempfindlichkeit</li>
+                        <li>Störungen, die sich aus Steifheit, Zittern und/oder Bewegungsstörungen
+                            zusammensetzen</li>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="alert alert-info">
+        Wenn Ihnen die sehr seltenen Nebenwirkungen
+        Probleme bereitet oder länger als 1 Woche andauert, sollten Sie Ihren Arzt aufsuchen.
+    </div>
+
+</div>
+
+
+
+
 
 ',12,6);
 INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (93,0,'Beispieltext',12,7);

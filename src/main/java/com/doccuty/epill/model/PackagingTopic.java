@@ -130,6 +130,8 @@ public class PackagingTopic implements SendableEntity {
 
 		result.append(" ").append(this.getId());
 		result.append(" ").append(this.getTitle());
+		result.append(" ").append(this.getText());
+
 		return result.substring(1);
 	}
 
@@ -157,7 +159,30 @@ public class PackagingTopic implements SendableEntity {
 		setTitle(value);
 		return this;
 	}
+	// ==========================================================================
 
+	public static final String PROPERTY_TEXT = "text";
+
+	@Column(name="text", columnDefinition="TEXT")
+	private String text;
+
+	public String getText() {
+		return this.text;
+	}
+
+	public void setText(String value) {
+		if (!EntityUtil.stringEquals(this.text, value)) {
+
+			String oldValue = this.text;
+			this.text = value;
+			this.firePropertyChange(PROPERTY_TEXT, oldValue, value);
+		}
+	}
+
+	public PackagingTopic withText(String value) {
+		setText(value);
+		return this;
+	}
 	// ==========================================================================
 
 	public static final String PROPERTY_ORDERNUMBER = "orderNumber";
@@ -181,6 +206,11 @@ public class PackagingTopic implements SendableEntity {
 		setOrderNumber(value);
 		return this;
 	}
+
+
+
+	// ==========================================================================
+
 
 	/********************************************************************
 	 * <pre>
