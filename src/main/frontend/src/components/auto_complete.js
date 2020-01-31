@@ -82,7 +82,7 @@ class UserMenue extends React.Component {
 	    return (
 	    		<div>
 		    		<form className="navbar-form " onSubmit={this.handleSubmit} >
-		    			<div className="col-sm-12 col-md-12 col-lg-12 nopadd" >
+		    			<div className="col-xs-offset-4 col-xs-8 col-sm-12 col-md-12 col-lg-12 nopadd" >
 		    				<div className="row">
 		    					<input type="text" value={this.state.exp} onChange={this.handleExpressionChange} name="search" className="form-control"
 		    						placeholder={ t("searchDrug") } autoComplete="off" autoCorrect="off" autoCapitalize="off" />

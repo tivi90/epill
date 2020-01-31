@@ -7,9 +7,7 @@ import {toast} from 'react-toastify';
 import Accordion from "./accordion";
 import Loading from "./loading";
 import User from "./../util/User";
-import BeforeTaking from "./before_taking";
-import Usage from "./usage";
-import SideEffect from "./sideEffect";
+
 
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 
@@ -31,8 +29,8 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import {Link} from "react-router-dom";
 
-
 class DrugDetail extends React.Component {
+
     constructor(props) {
         super(props);
         this.state = {
@@ -45,6 +43,8 @@ class DrugDetail extends React.Component {
         this.toggleOriginalAndTailoredText = this.toggleOriginalAndTailoredText.bind(this);
     }
 
+
+    //=============================
     init() {
         axios.get(`/drug/${this.props.match.params.id}/de`)
             .then(({data, status}) => {
@@ -248,11 +248,6 @@ class DrugDetail extends React.Component {
                 }
             });
     }
-
-
-    //=============================
-
-
     renderDrugFeatures(drug) {
 
         if (!drug.drugFeature)
@@ -292,7 +287,7 @@ class DrugDetail extends React.Component {
 
         const {t} = this.props;
         return (
-            <section className="diseases row">
+            <section className="diseases row" style={{cursor: "pointer"}}>
                 {drug.pharmaceuticalForm.map(pharmaceuticalForm => <img key={pharmaceuticalForm.id}
                                                                         src={"./../../assets/p_form/" + pharmaceuticalForm.id + ".svg"}
                                                                         className="drug-feature-icon infopic"
@@ -309,6 +304,43 @@ class DrugDetail extends React.Component {
         );
     }
 
+    renderFormdesc(drug) {
+        if (!drug.packagingSection) {
+            return null;
+        }
+
+        return drug.packagingSection
+            .filter(section => {
+                return section.topic.id === 9
+            })
+            .map((section => {
+                return (
+                    <p key={section.id}><span dangerouslySetInnerHTML={this.createMarkup(section.text)}/>
+                    </p>
+                );
+            })).reduce((prev, curr) => [prev, curr]);
+    }
+
+    renderFormImg(drug) {
+        if (!drug.pharmaceuticalForm) {
+            return;
+        }
+
+        const {t} = this.props;
+        return (
+            <span>
+            {drug.pharmaceuticalForm.map(pharmaceuticalForm => <img key={pharmaceuticalForm.id}
+                                                                    src={"./../../assets/p_form/" + pharmaceuticalForm.id + ".svg"}
+                                                                    className="img-drugform"
+                                                                    alt={pharmaceuticalForm.name}
+                                                                    title={pharmaceuticalForm.name}></img>
+            )
+                .reduce((prev, curr) => [prev, curr])
+            }
+            </span>
+
+        );
+    }
 
     renderActiveSubstance(drug) {
         if (!drug.activeSubstance)
@@ -320,7 +352,8 @@ class DrugDetail extends React.Component {
             <section><img src={"./../../assets/images/lab.svg"} className="infopic"/>
 
                 <p><b> {t('activeSubstance') + " "}</b></p>
-                <p>    {drug.activeSubstance.map(substance => <span key={substance.id}>{substance.name} <br/></span>)
+                <p>    {drug.activeSubstance.map(substance => <span key={substance.id}>{substance.name}
+                    <br/></span>)
                     .reduce((prev, curr) => [prev, ', ', curr])}</p>
 
             </section>
@@ -411,6 +444,7 @@ class DrugDetail extends React.Component {
                 );
             }));
     }
+
     renderPackcompany(drug) {
         if (!drug.packagingSection) {
             return null;
@@ -511,6 +545,7 @@ class DrugDetail extends React.Component {
     }
 
 
+
     render() {
         const {t} = this.props;
         const drug = this.state.drug;
@@ -533,6 +568,7 @@ class DrugDetail extends React.Component {
         }
 
         return (
+         <div>
 
             <div className="no-banner">
 
@@ -556,7 +592,7 @@ class DrugDetail extends React.Component {
                             <div className="modal-body" style={{color: "black"}}>
 
 
-                                    {this.renderpackInfo(drug)}
+                                {this.renderpackInfo(drug)}
 
                             </div>
                             <div className="modal-footer">
@@ -768,7 +804,7 @@ class DrugDetail extends React.Component {
 
                                 </div>
 
-                                <div className="row tab_headers">
+                                <div className="row tab_headers nomargin">
                                     <ul className="nav nav-pills brand-pills nav-stacked" role="tablist">
                                         <li role="presentation" className="brand-nav active"><a href="#tab1"
                                                                                                 aria-controls="tab1"
@@ -818,32 +854,69 @@ class DrugDetail extends React.Component {
 
                                         </div>
 
-                                        <div className="row">
-                                            <div className="col-sm-4 text-center infopart">
-                                                {this.renderPharmaceuticalForm(drug)}
+                                        <div className="">
+                                            <div className="col-sm-4 col-xs-6 text-center infopart">
+                                                <div data-toggle="modal"
+                                                     data-target="#drugform">
+                                                    {this.renderPharmaceuticalForm(drug)}
+                                                </div>
+
                                             </div>
-                                            <div className="col-sm-4 text-center infopart">
+                                            <div className="modal fade" id="drugform" tabIndex="-1" role="dialog"
+                                                 aria-labelledby="adressLabel"
+                                                 aria-hidden="true">
+                                                <div className="modal-dialog" role="document">
+                                                    <div className="modal-content">
+                                                        <div className="modal-header">
+                                                            <h2>Inhalt und Darstellung des
+                                                                Medikaments</h2>
+
+                                                            <button type="button" className="close"
+                                                                    data-dismiss="modal" aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div className="modal-body" style={{color: "black"}}>
+                                                            <div className="row">
+                                                                <div
+                                                                    className="col-sm-2">{this.renderFormImg(drug)}</div>
+                                                                <div className="col-sm-10">
+                                                                    {this.renderFormdesc(drug)}
+                                                                </div>
+                                                            </div>
+
+
+                                                        </div>
+                                                        <div className="modal-footer">
+                                                            <button type="button" className="btn btn-secondary"
+                                                                    data-dismiss="modal">Schließen
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="col-sm-4 col-xs-6 text-center infopart">
                                                 {this.renderDisease(drug)}
                                             </div>
-                                            <div className="col-sm-4 text-center infopart">
+                                            <div className="col-sm-4 col-xs-6 text-center infopart">
                                                 {this.renderActiveSubstance(drug)}
                                             </div>
 
                                         </div>
 
                                         {showAdditionalInfo &&
-                                        <div className="row">
+                                        <div className="">
 
                                             <div className="additional-information">
 
                                                 <section>
-                                                    <div className="col-sm-4 text-center infopart">
+                                                    <div className="col-sm-4 col-xs-6 text-center infopart">
                                                         {this.renderIndicationGroup(drug)}
                                                     </div>
-                                                    <div className="col-sm-4 text-center infopart">
+                                                    <div className="col-sm-4 col-xs-6 text-center infopart">
                                                         {this.renderProductGroup(drug)}
                                                     </div>
-                                                    <div className="col-sm-4 text-center infopart">
+                                                    <div className="col-sm-4 col-xs-6 text-center infopart">
                                                         {this.renderPZN(drug)}
                                                     </div>
 
@@ -896,7 +969,7 @@ class DrugDetail extends React.Component {
                     </div>
                 </div>
             </div>
-
+         </div>
         );
 
 

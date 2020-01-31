@@ -63,7 +63,7 @@ class Carousel extends React.Component {
                                             <br/>
                                         </div>
                                         }</div>
-                                    <div className="col-md-4 col-12 order-md-2 order-1"><img
+                                    <div className="col-xs-8 col-md-4 col-12 order-md-2 order-1"><img
                                         src="/assets/images/epil_circle.png" className="img-responsive" alt="slide"/>
                                     </div>
                                 </div>

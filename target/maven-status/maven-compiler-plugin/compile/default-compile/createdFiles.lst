@@ -11,6 +11,7 @@ com/doccuty/epill/model/util/SubstanceGroupCreator.class
 com/doccuty/epill/model/util/UserCreator.class
 com/doccuty/epill/drug/DrugRepository.class
 com/doccuty/epill/model/PharmaceuticalForm.class
+com/doccuty/epill/model/PackagingAddress.class
 com/doccuty/epill/authentication/AuthenticationController.class
 com/doccuty/epill/language/Language.class
 com/doccuty/epill/country/CountryRepository.class
@@ -28,6 +29,7 @@ com/doccuty/epill/model/DrugFeature.class
 com/doccuty/epill/model/util/PharmaceuticalFormSet.class
 com/doccuty/epill/model/util/DiseaseSet.class
 com/doccuty/epill/model/util/PharmaceuticalFormCreator.class
+com/doccuty/epill/model/util/PackagingAddressCreator.class
 com/doccuty/epill/model/util/PackagingSectionCreator.class
 com/doccuty/epill/user/UserRepository.class
 com/doccuty/epill/model/LoginAttempt.class
@@ -87,6 +89,7 @@ com/doccuty/epill/model/IndicationGroup.class
 com/doccuty/epill/model/util/DiseaseCreator.class
 com/doccuty/epill/model/util/AdverseEffectCreator.class
 com/doccuty/epill/country/CountryService.class
+com/doccuty/epill/model/util/PackagingAddressSet.class
 com/doccuty/epill/gender/Gender.class
 com/doccuty/epill/model/Country.class
 com/doccuty/epill/model/Packaging.class

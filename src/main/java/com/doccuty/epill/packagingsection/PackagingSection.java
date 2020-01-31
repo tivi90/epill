@@ -222,6 +222,7 @@ public class PackagingSection implements SendableEntity {
    }
 
 
+
 	// ==========================================================================
 
 	public static final String PROPERTY_TEXT = "text";

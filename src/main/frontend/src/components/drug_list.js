@@ -638,7 +638,7 @@ class DrugList extends React.Component {
         return (
             <div><Carousel1/>
                 <div className="container">
-                    <div className="well well-sm">
+                    <div className="well well-sm hidden-xs">
                         <strong></strong>
                         <div className="btn-group">
                             <div id="list" className="btn btn-default btn-sm"
