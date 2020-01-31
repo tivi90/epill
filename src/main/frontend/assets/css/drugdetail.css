@@ -1,0 +1,321 @@
+
+.row {
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+}
+
+.med_header {
+    font-size: 18px;
+    text-align: center;
+    border-top: solid 1px;
+    padding: 10px;
+    border-bottom: solid 1px;
+    background-color: #0c827a;
+    color: white;
+}
+
+.med_head {
+    text-align: center;
+    padding: 15px;
+}
+
+.med_head span {
+    color: #000;
+    font-size: 24px;
+}
+
+.med_desc ul {
+    color: #000;
+    text-align: center;
+    font-size: 16px;
+}
+
+.med_desc p {
+    text-align: center !important;
+    color: #000;
+    font-size: 16px;
+}
+
+
+.med_desc {
+    padding: 15px;
+    height: 370px;
+    border-top: solid;
+    border-bottom: solid;
+    background-color: white;
+}
+
+.med_dec_right {
+    border-right: solid;
+}
+
+.med_dec_left {
+    border-left: solid;
+}
+
+.infopic {
+    width: 45px;
+    margin-bottom: 15px;
+    font-size: 40px;
+}
+
+.img-drugform {
+    width: 90%;
+    margin-top: 21px;
+}
+
+.info_words {
+    font-weight: bold;
+    color: #0da59b;
+    cursor: pointer;
+}
+
+.tab_headers {
+    margin-top: 30px
+
+}
+
+.info_notuse {
+    width: 97%;
+    background-color: #ffceceb5;
+    padding: 15px;
+    margin-bottom: 12px;
+    margin-right: 20px;
+}
+
+.sideffect_table td, th {
+    border: solid 1px;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.content_header {
+    margin-top: 40px;
+}
+
+.content_header h1 {
+    font-size: 24px;
+    line-height: 24px;
+
+}
+
+.content_header h3 {
+    font-size: 21px;
+    margin-bottom: 15px;
+}
+
+.allg_title b {
+    font-size: 17px;
+    color: #474750;
+}
+
+.allg_icon {
+    font-size: 25px;
+    margin-bottom: 9px;
+    font-weight: bold;
+}
+
+
+.circle-badge {
+    height: 120px;
+    width: 120px;
+    text-align: center;
+    border-radius: 80px;
+    background: #9496962b;
+    color: #131313;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10px;
+    border: 1px solid #777;
+    margin-bottom: 20px;
+}
+
+.times {
+    text-align: center;
+    background-color: #292929;
+    padding: 8px 8px 8px 8px;
+    border: 2px solid #0da59b;
+    color: white;
+}
+
+.report-round-button {
+    right: 7%;
+    top: 115px;
+    position: fixed;
+    z-index: 1001;
+    cursor: pointer;
+}
+
+.report-round-button .round-button-inner-main {
+    animation: shadow-pulse 4s infinite;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 24px;
+    padding-left: 2px;
+    color: white;
+}
+
+.round-button-outer .round-button-inner-main {
+    width: 60px;
+    height: 62px;
+    border-radius: 38px;
+    background-color: #0da59b;
+    padding-top: 19px;
+    position: absolute;
+    z-index: 10;
+    -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12) !important;
+    -moz-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12) !important;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12) !important;
+    cursor: pointer;
+}
+
+.med_drugfeature {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+}
+
+
+/* List */
+
+.glyphicon {
+    margin-right: 5px;
+}
+
+.thumbnail {
+    margin-bottom: 20px;
+    padding: 0px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+}
+
+.di > .diseases {
+    padding: 8px;
+}
+
+.item.list-group-item {
+    float: none;
+    width: 100%;
+    background-color: #fff;
+    margin-bottom: 10px;
+}
+
+.item.list-group-item:nth-of-type(odd):hover, .item.list-group-item:hover {
+    background: #428bca;
+}
+
+.item.list-group-item > .medicine {
+    height: inherit !important;
+    margin-top: 0px;
+    padding: 0px;
+
+}
+
+
+.fullrow {
+    width: 100% !important;
+}
+
+.item.list-group-item .list-group-image {
+    height: 180px;
+}
+
+.item.list-group-item .thumbnail {
+    margin-bottom: 0px;
+    background-color: inherit;
+    border: none;
+}
+
+.item.list-group-item .caption {
+    padding: 9px 9px 0px 9px;
+}
+
+.item.list-group-item:nth-of-type(odd) {
+    background: #eeeeee;
+}
+
+.item.list-group-item:before, .item.list-group-item:after {
+    display: table;
+    content: " ";
+}
+
+.item.list-group-item:after {
+    clear: both;
+}
+
+.list-group-item-text {
+    margin: 0 0 11px;
+}
+
+
+.gradient {
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#77ff8c+18,ffea4f+50,ff4c4c+100 */
+    background: #77ff8c; /* Old browsers */
+    background: -moz-linear-gradient(top, #77ff8c75 18%, #ffea4fcc 25%, #ff4c4c8c 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #77ff8c75 18%, #ffea4fcc 25%, #ff4c4c8c 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #77ff8c75 18%, #ffea4fcc 25%, #ff4c4c8c 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#77ff8c', endColorstr='#ff4c4c', GradientType=0); /* IE6-9 */
+    color: #000000;
+
+}
+
+.panel-title {
+    position: relative;
+}
+
+.panel-title::after {
+    content: "\f107";
+    color: #333;
+    top: 0px;
+    right: 0px;
+    position: absolute;
+    font-family: "FontAwesome";
+    font-size: 21px;
+}
+
+.panel-title[aria-expanded="true"]::after {
+    content: "\f106";
+}
+
+@media screen and (max-width: 480px) {
+
+    .report-round-button {
+        right: 20%;
+    }
+
+    .featurette-image {
+        max-height: 190px;
+    }
+
+    .round-button-outer .round-button-inner-main {
+        width: 48px;
+        height: 50px;
+        padding-top: 13px;
+    }
+
+    .sideffect_table td, th {
+        padding: 5px;
+        font-size: 12px;
+    }
+
+    .infobox {
+        padding-left: 15px;
+    }
+
+    .panel-title::after {
+        top: 22px;
+        font-size: 26px;
+    }
+
+    .panel-group .panel + .panel {
+        margin-top: 15px;
+    }
+
+    .panel-default > .panel-heading {
+        height: 130px;
+    }
+    .content_header h1 {
+        text-align: center;
+    }
+}
