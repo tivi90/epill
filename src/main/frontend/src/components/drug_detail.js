@@ -248,6 +248,7 @@ class DrugDetail extends React.Component {
                 }
             });
     }
+
     renderDrugFeatures(drug) {
 
         if (!drug.drugFeature)
@@ -545,7 +546,6 @@ class DrugDetail extends React.Component {
     }
 
 
-
     render() {
         const {t} = this.props;
         const drug = this.state.drug;
@@ -568,203 +568,194 @@ class DrugDetail extends React.Component {
         }
 
         return (
-         <div>
+            <div>
 
-            <div className="no-banner">
+                <div className="no-banner">
 
-                {/*Button INFO*/}
-                <div className="round-button-outer report-round-button">
-                    <div id="reportBtn" className="round-button-inner-main" data-toggle="modal" data-target="#info">
-                        <FontAwesomeIcon icon={faInfo}/>
-                    </div>
-                </div>
-                <div className="modal fade" id="info" tabIndex="-1" role="dialog" aria-labelledby="adressLabel"
-                     aria-hidden="true">
-                    <div className="modal-dialog" role="document">
-                        <div className="modal-content">
-                            <div className="modal-header">
-                                <h2>Informationen
-                                </h2>
-                                <button type="button" className="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div className="modal-body" style={{color: "black"}}>
-
-
-                                {this.renderpackInfo(drug)}
-
-                            </div>
-                            <div className="modal-footer">
-                                <button type="button" className="btn btn-secondary" data-dismiss="modal">Schließen
-                                </button>
-
-                            </div>
+                    {/*Button INFO*/}
+                    <div className="round-button-outer report-round-button">
+                        <div id="reportBtn" className="round-button-inner-main" data-toggle="modal" data-target="#info">
+                            <FontAwesomeIcon icon={faInfo}/>
                         </div>
                     </div>
-                </div>
-                {/*Button INFO ENDE*/}
-
-                {/*Button Address*/}
-                <div className="round-button-outer report-round-button no_animation" style={{top: "190px"}}>
-                    <div id="reportBtn" className="round-button-inner-main no_animation" data-toggle="modal"
-                         data-target="#adress">
-                        <FontAwesomeIcon icon={faAddressCard}/></div>
-                </div>
-                <div className="modal fade" id="adress" tabIndex="-1" role="dialog" aria-labelledby="adressLabel"
-                     aria-hidden="true">
-                    <div className="modal-dialog" role="document">
-                        <div className="modal-content">
-                            <div className="modal-header">
-                                <h2>Pharmazeutischer Unternehmer und Hersteller</h2>
-
-                                <button type="button" className="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div className="modal-body" style={{color: "black"}}>
-                                {this.renderPackcompany(drug)}
-
-                            </div>
-                            <div className="modal-footer">
-                                <button type="button" className="btn btn-secondary" data-dismiss="modal">Schließen
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                {/*Button  Address ENDE*/}
-
-                {/*Button REPORT*/}
-                <div className="round-button-outer report-round-button no_animation" style={{top: "266px"}}>
-                    <div id="reportBtn" className="round-button-inner-main no_animation" data-toggle="modal"
-                         data-target="#melden">
-                        <FontAwesomeIcon icon={faCommentMedical}/>
-                    </div>
-                </div>
-                <div className="modal fade" id="melden" tabIndex="-1" role="dialog" aria-labelledby="adressLabel"
-                     aria-hidden="true">
-                    <div className="modal-dialog" role="document">
-                        <div className="modal-content">
-                            <div className="modal-header">
-                                <h2>Meldung von Nebenwirkungen </h2>
-                                <button type="button" className="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div className="modal-body" style={{color: "black"}}>
-                                <div className="row  alert alert-success" role="alert">
-                                    <div className="col-md-10">
-                                        <p>Indem Sie Nebenwirkungen melden, können Sie dazu beitragen,
-                                            dass mehr Informationen über die Sicherheit dieses Arzneimittels
-                                            zur Verfügung gestellt werden.
-                                        </p>
-                                    </div>
-                                    <div className="col-md-2 icon_modal">
-                                        <FontAwesomeIcon icon={faThumbsUp}/>
-                                    </div>
+                    <div className="modal fade" id="info" tabIndex="-1" role="dialog" aria-labelledby="adressLabel"
+                         aria-hidden="true">
+                        <div className="modal-dialog" role="document">
+                            <div className="modal-content">
+                                <div className="modal-header">
+                                    <h2>Informationen
+                                    </h2>
+                                    <button type="button" className="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
                                 </div>
-                                <div className="row">
-                                    <div className="col-md-10">
-                                        <p>Wenn Sie Nebenwirkungen bemerken, wenden Sie sich an Ihren <b>Arzt oder
-                                            Apotheker</b>.
-                                            Dies gilt auch für Nebenwirkungen, die nicht in dieser Packungsbeilage
-                                            angegeben
-                                            sind.
-                                        </p>
-                                    </div>
-                                    <div className="col-md-2 icon_modal">
-                                        <FontAwesomeIcon icon={faUserMd}/>
-                                    </div>
+                                <div className="modal-body" style={{color: "black"}}>
+
+
+                                    {this.renderpackInfo(drug)}
+
                                 </div>
-                                <div className="row">
-                                    <div className="col-md-12">
-                                        <p><b>Weitere Möglichkeit:</b><br/>
-                                            Bundesinstitut für Arzneimittel und Medizinprodukte <br/>
-                                            Abt. Pharmakovigilanz<br/>
-                                            Kurt-Georg-Kiesinger Allee 3,<br/> D-53175 Bonn<br/>
-                                            <b>Website:</b> <a href="www.bfarm.de">www.bfarm.de
-                                            </a></p>
-                                    </div>
+                                <div className="modal-footer">
+                                    <button type="button" className="btn btn-secondary" data-dismiss="modal">Schließen
+                                    </button>
+
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                    {/*Button INFO ENDE*/}
 
-                            <div className="modal-footer">
-                                <button type="button" className="btn btn-secondary" data-dismiss="modal">Schließen
-                                </button>
+                    {/*Button Address*/}
+                    <div className="round-button-outer report-round-button no_animation" style={{top: "190px"}}>
+                        <div id="reportBtn" className="round-button-inner-main no_animation" data-toggle="modal"
+                             data-target="#adress">
+                            <FontAwesomeIcon icon={faAddressCard}/></div>
+                    </div>
+                    <div className="modal fade" id="adress" tabIndex="-1" role="dialog" aria-labelledby="adressLabel"
+                         aria-hidden="true">
+                        <div className="modal-dialog" role="document">
+                            <div className="modal-content">
+                                <div className="modal-header">
+                                    <h2>Pharmazeutischer Unternehmer und Hersteller</h2>
+
+                                    <button type="button" className="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div className="modal-body" style={{color: "black"}}>
+                                    {this.renderPackcompany(drug)}
+
+                                </div>
+                                <div className="modal-footer">
+                                    <button type="button" className="btn btn-secondary" data-dismiss="modal">Schließen
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                    {/*Button  Address ENDE*/}
 
-                {/*Button REPORT ENDE*/
-                }
-
-                <div className='page-header bg_grey'>
-                    <div className="container  no-banner">
-
-                        <div className='btn-toolbar pull-right'>
-                            <div className='btn-group'></div>
+                    {/*Button REPORT*/}
+                    <div className="round-button-outer report-round-button no_animation" style={{top: "266px"}}>
+                        <div id="reportBtn" className="round-button-inner-main no_animation" data-toggle="modal"
+                             data-target="#melden">
+                            <FontAwesomeIcon icon={faCommentMedical}/>
                         </div>
-                        {User.isAuthenticated()
-                        &&
-                        <div className='btn-toolbar pull-right'>
-                            <div className='btn-group'>
-                                <button type="button" className="btn btn-like" onClick={() => this.toggleTaking(drug)}>
+                    </div>
+                    <div className="modal fade" id="melden" tabIndex="-1" role="dialog" aria-labelledby="adressLabel"
+                         aria-hidden="true">
+                        <div className="modal-dialog" role="document">
+                            <div className="modal-content">
+                                <div className="modal-header">
+                                    <h2>Meldung von Nebenwirkungen </h2>
+                                    <button type="button" className="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div className="modal-body" style={{color: "black"}}>
+                                    <div className="row  alert alert-success" role="alert">
+                                        <div className="col-md-10">
+                                            <p>Indem Sie Nebenwirkungen melden, können Sie dazu beitragen,
+                                                dass mehr Informationen über die Sicherheit dieses Arzneimittels
+                                                zur Verfügung gestellt werden.
+                                            </p>
+                                        </div>
+                                        <div className="col-md-2 icon_modal">
+                                            <FontAwesomeIcon icon={faThumbsUp}/>
+                                        </div>
+                                    </div>
+                                    <div className="row">
+                                        <div className="col-md-10">
+                                            <p>Wenn Sie Nebenwirkungen bemerken, wenden Sie sich an Ihren <b>Arzt oder
+                                                Apotheker</b>.
+                                                Dies gilt auch für Nebenwirkungen, die nicht in dieser Packungsbeilage
+                                                angegeben
+                                                sind.
+                                            </p>
+                                        </div>
+                                        <div className="col-md-2 icon_modal">
+                                            <FontAwesomeIcon icon={faUserMd}/>
+                                        </div>
+                                    </div>
+                                    <div className="row">
+                                        <div className="col-md-12">
+                                            <p><b>Weitere Möglichkeit:</b><br/>
+                                                Bundesinstitut für Arzneimittel und Medizinprodukte <br/>
+                                                Abt. Pharmakovigilanz<br/>
+                                                Kurt-Georg-Kiesinger Allee 3,<br/> D-53175 Bonn<br/>
+                                                <b>Website:</b> <a href="www.bfarm.de">www.bfarm.de
+                                                </a></p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className="modal-footer">
+                                    <button type="button" className="btn btn-secondary" data-dismiss="modal">Schließen
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/*Button REPORT ENDE*/
+                    }
+                    <div className='page-header bg_grey'>
+                        <div className="container  no-banner">
+                            <div className='btn-toolbar pull-right'>
+                                <div className='btn-group'></div>
+                            </div>
+                            {User.isAuthenticated()
+                            &&
+                            <div className='btn-toolbar pull-right'>
+                                <div className='btn-group'>
+                                    <button type="button" className="btn btn-like"
+                                            onClick={() => this.toggleTaking(drug)}>
                                     <span
                                         className={"glyphicon white" + ((!drug.isTaken) ? " glyphicon-heart" : " glyphicon-minus")}></span>
-                                </button>
+                                    </button>
 
-                                <button type="button" className="btn btn-add" onClick={() => this.toggleRemember(drug)}>
+                                    <button type="button" className="btn btn-add"
+                                            onClick={() => this.toggleRemember(drug)}>
                                     <span
                                         className={"glyphicon white" + ((!drug.isRemembered) ? " glyphicon-plus" : " glyphicon-minus")}></span>
-                                </button>
-                            </div>
-                        </div>
-                        }
-
-                        {/*<h3>{drug.name} {drug.productGroup && drug.productGroup.name && <span className="text-muted">{drug.productGroup.name}</span> }</h3>*/}
-                        {/*<span>v. {drug.version} | {t('publishingDate')}: {new Date(drug.year).toLocaleDateString()}</span>*/}
-                        {User.isAuthenticated() && drug.personalizedInformation &&
-                        <div className="alert bubble  row w3-animate-right">
-                            <div className="speech-bubble">
-                                <a href="#" className="close" data-dismiss="alert"
-                                   aria-label="close">&times;</a>
-                                <span
-                                    dangerouslySetInnerHTML={this.createMarkup(drug.personalizedInformation)}/>
-                            </div>
-
-                            <img className="speech-bubble-person" src="./../../assets/images/logo_chat.png"/>
-
-                        </div>
-                        }
-                        <div className="row featurette drug-detail-header">
-
-                            <div className="col-xs-12 col-sm-12 col-md-3">
-                                <img className="featurette-image img-responsive center-block"
-                                     alt={drug.name}
-                                     title={drug.name}
-                                     src={`/image/drug/${drug.id}`
-                                     }></img>
-                                <div className="row med_head">
-                                    <span>{drug.name}</span>
+                                    </button>
                                 </div>
-                                <div className="drug-features ">
-                                    {drug.drugFeature.map(feature => {
-                                        return (
-
-                                            <span key={feature.id}>
-
+                            </div>
+                            }
+                            {/*<h3>{drug.name} {drug.productGroup && drug.productGroup.name && <span className="text-muted">{drug.productGroup.name}</span> }</h3>*/}
+                            {/*<span>v. {drug.version} | {t('publishingDate')}: {new Date(drug.year).toLocaleDateString()}</span>*/}
+                            {User.isAuthenticated() && drug.personalizedInformation &&
+                            <div className="alert bubble  row w3-animate-right">
+                                <div className="speech-bubble">
+                                    <a href="#" className="close" data-dismiss="alert"
+                                       aria-label="close">&times;</a>
+                                    <span
+                                        dangerouslySetInnerHTML={this.createMarkup(drug.personalizedInformation)}/>
+                                </div>
+                                <img className="speech-bubble-person" src="./../../assets/images/logo_chat.png"/>
+                            </div>
+                            }
+                            <div className="row featurette drug-detail-header">
+                                <div className="col-xs-12 col-sm-12 col-md-3">
+                                    <img className="featurette-image img-responsive center-block"
+                                         alt={drug.name}
+                                         title={drug.name}
+                                         src={`/image/drug/${drug.id}`
+                                         }>
+                                    </img>
+                                    <div className="row med_head">
+                                        <span>{drug.name}</span>
+                                    </div>
+                                    <div className="drug-features ">
+                                        {drug.drugFeature.map(feature => {
+                                            return (
+                                                <span key={feature.id}>
                                                 <img key={feature.id} data-toggle="modal" data-target={"#" + feature.id}
                                                      src={"./../../assets/icons/" + feature.id + ".svg"}
                                                      className="drug-feature-icon" alt={feature.drugFeature}
                                                      title={feature.drugFeature}></img>
-
-
                                                 <div id={feature.id} className="modal fade" role="dialog">
                                                     <div className="modal-dialog">
-
                                                         <div className="modal-content">
                                                             <div className="modal-header">
                                                                 <button type="button" className="close"
@@ -780,10 +771,8 @@ class DrugDetail extends React.Component {
                                                                 </h2>
                                                             </div>
                                                             <div className="modal-body">
-
                                                                 <div
                                                                     dangerouslySetInnerHTML={this.createMarkup(feature.descriptionDrug)}/>
-
                                                             </div>
                                                             <div className="modal-footer">
                                                                 <button type="button" className="btn btn-default"
@@ -791,70 +780,55 @@ class DrugDetail extends React.Component {
                                                                 </button>
                                                             </div>
                                                         </div>
-
                                                     </div>
                                                 </div>
-
                                             </span>
-
-                                        )
-                                    })
-                                    }
-
-
+                                            )
+                                        })
+                                        }
+                                    </div>
+                                    <div className="row tab_headers nomargin">
+                                        <ul className="nav nav-pills brand-pills nav-stacked" role="tablist">
+                                            <li role="presentation" className="brand-nav active"><a href="#tab1"
+                                                                                                    aria-controls="tab1"
+                                                                                                    role="tab"
+                                                                                                    data-toggle="tab">Algemeine
+                                                Informationen</a></li>
+                                            <div id="arrow-down">
+                                                <FontAwesomeIcon icon={faChevronDown}/>
+                                            </div>
+                                            <li role="presentation" className="brand-nav"><a href="#tab2"
+                                                                                             aria-controls="tab2"
+                                                                                             role="tab"
+                                                                                             data-toggle="tab">Vor der
+                                                Anwendung </a></li>
+                                            <div id="arrow-down">
+                                                <FontAwesomeIcon icon={faChevronDown}/>
+                                            </div>
+                                            <li role="presentation" className="brand-nav"><a href="#tab3"
+                                                                                             aria-controls="tab3"
+                                                                                             role="tab"
+                                                                                             data-toggle="tab">Anwendung</a>
+                                            </li>
+                                            <div id="arrow-down">
+                                                <FontAwesomeIcon icon={faChevronDown}/>
+                                            </div>
+                                            <li role="presentation" className="brand-nav"><a href="#tab4"
+                                                                                             aria-controls="tab4"
+                                                                                             role="tab"
+                                                                                             data-toggle="tab">Nebenwirkungen
+                                            </a></li>
+                                        </ul>
+                                    </div>
                                 </div>
-
-                                <div className="row tab_headers nomargin">
-                                    <ul className="nav nav-pills brand-pills nav-stacked" role="tablist">
-                                        <li role="presentation" className="brand-nav active"><a href="#tab1"
-                                                                                                aria-controls="tab1"
-                                                                                                role="tab"
-                                                                                                data-toggle="tab">Algemeine
-                                            Informationen</a></li>
-                                        <div id="arrow-down">
-                                            <FontAwesomeIcon icon={faChevronDown}/>
-                                        </div>
-                                        <li role="presentation" className="brand-nav"><a href="#tab2"
-                                                                                         aria-controls="tab2"
-                                                                                         role="tab"
-                                                                                         data-toggle="tab">Vor der
-                                            Anwendung </a></li>
-                                        <div id="arrow-down">
-                                            <FontAwesomeIcon icon={faChevronDown}/>
-                                        </div>
-                                        <li role="presentation" className="brand-nav"><a href="#tab3"
-                                                                                         aria-controls="tab3"
-                                                                                         role="tab"
-                                                                                         data-toggle="tab">Anwendung</a>
-                                        </li>
-                                        <div id="arrow-down">
-                                            <FontAwesomeIcon icon={faChevronDown}/>
-                                        </div>
-                                        <li role="presentation" className="brand-nav"><a href="#tab4"
-                                                                                         aria-controls="tab4"
-                                                                                         role="tab"
-                                                                                         data-toggle="tab">Nebenwirkungen
-                                        </a></li>
-                                    </ul>
-
-
-                                </div>
-
-
-                            </div>
-
-
-                            <div className="col-xs-12 col-sm-12 col-md-9 infobox">
-                                <div className="tab-content">
-                                    <div role="tabpanel" className="tab-pane active w3-animate-opacity" id="tab1">
-                                        <div className="row content_header">
-                                            <h1>Algemeine Informationen</h1>
-                                            <hr/>
-                                            {this.renderPackSecdesc(drug)}
-
-                                        </div>
-
-                                        <div className="">
+                                <div className="col-xs-12 col-sm-12 col-md-9 infobox">
+                                    <div className="tab-content">
+                                        <div role="tabpanel" className="tab-pane active w3-animate-opacity" id="tab1">
+                                            <div className="row content_header">
+                                                <h1>Algemeine Informationen</h1>
+                                                <hr/>
+                                                {this.renderPackSecdesc(drug)}
+                                            </div>
                                             <div className="col-sm-4 col-xs-6 text-center infopart">
                                                 <div data-toggle="modal"
                                                      data-target="#drugform">
@@ -901,80 +875,58 @@ class DrugDetail extends React.Component {
                                             <div className="col-sm-4 col-xs-6 text-center infopart">
                                                 {this.renderActiveSubstance(drug)}
                                             </div>
-
-                                        </div>
-
-                                        {showAdditionalInfo &&
-                                        <div className="">
-
-                                            <div className="additional-information">
-
-                                                <section>
-                                                    <div className="col-sm-4 col-xs-6 text-center infopart">
-                                                        {this.renderIndicationGroup(drug)}
-                                                    </div>
-                                                    <div className="col-sm-4 col-xs-6 text-center infopart">
-                                                        {this.renderProductGroup(drug)}
-                                                    </div>
-                                                    <div className="col-sm-4 col-xs-6 text-center infopart">
-                                                        {this.renderPZN(drug)}
-                                                    </div>
-
-                                                </section>
-
-
+                                            {showAdditionalInfo &&
+                                            <div className="">
+                                                <div className="additional-information">
+                                                    <section>
+                                                        <div className="col-sm-4 col-xs-6 text-center infopart">
+                                                            {this.renderIndicationGroup(drug)}
+                                                        </div>
+                                                        <div className="col-sm-4 col-xs-6 text-center infopart">
+                                                            {this.renderProductGroup(drug)}
+                                                        </div>
+                                                        <div className="col-sm-4 col-xs-6 text-center infopart">
+                                                            {this.renderPZN(drug)}
+                                                        </div>
+                                                    </section>
+                                                </div>
+                                            </div>}
+                                            <div className="row text-center">
+                                                <p>
+                                                    <a onClick={this.toggleShowAdditionalInfo}>
+                                                        <button className="btn btn-secondary">
+                                                            {!showAdditionalInfo && <span>{t('viewDetails')}</span>}
+                                                            {showAdditionalInfo && <span>{t('hideDetails')}</span>}
+                                                        </button>
+                                                    </a>
+                                                </p>
                                             </div>
-
-                                        </div>}
-
-
-                                        <div className="row text-center">
-                                            <p>
-                                                <a onClick={this.toggleShowAdditionalInfo}>
-                                                    <button className="btn btn-secondary">
-                                                        {!showAdditionalInfo && <span>{t('viewDetails')}</span>}
-                                                        {showAdditionalInfo && <span>{t('hideDetails')}</span>}
-                                                    </button>
-                                                </a>
-                                            </p>
+                                        </div>
+                                        <div role="tabpanel" className="tab-pane w3-animate-opacity" id="tab2">
+                                            {this.renderPackSecvor(drug)}
+                                        </div>
+                                        <div role="tabpanel" className="tab-pane w3-animate-opacity" id="tab3">
+                                            <div className="row content_header">
+                                                <h1>Dosierung und Anwendung</h1>
+                                                <hr/>
+                                            </div>
+                                            {this.renderPackSecdos(drug)}
+                                        </div>
+                                        <div role="tabpanel" className="tab-pane w3-animate-opacity" id="tab4">
+                                            {this.renderPackSecneben(drug)}
                                         </div>
                                     </div>
-                                    <div role="tabpanel" className="tab-pane w3-animate-opacity" id="tab2">
-
-                                        {this.renderPackSecvor(drug)}
-
-                                    </div>
-                                    <div role="tabpanel" className="tab-pane w3-animate-opacity" id="tab3">
-                                        <div className="row content_header">
-                                            <h1>Dosierung und Anwendung</h1>
-                                            <hr/>
-                                        </div>
-
-                                        {this.renderPackSecdos(drug)}
-
-
-                                    </div>
-                                    <div role="tabpanel" className="tab-pane w3-animate-opacity" id="tab4">
-
-                                        {this.renderPackSecneben(drug)}
-
-                                    </div>
-
                                 </div>
-
                             </div>
-
-
                         </div>
                     </div>
                 </div>
             </div>
-         </div>
-        );
+                );
 
 
-    }
-}
+                }
+                }
 
 
-export default translate()(DrugDetail);
+                export default translate()(DrugDetail);

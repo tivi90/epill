@@ -686,268 +686,791 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
 INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (80,0,'Beispieltext2',11,2);
 INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (81,0,'
 <!--Vor der Einnahme-->
-
-
-
-<div class="row content_header">
-    <h3>Warnhinweise und Vorsichtsmaßnahmen
-    </h3>
-</div>
-<div>
-    Bitte sprechen Sie mit Ihrem Arzt, bevor Sie Metformin Lich einnehmen,
-    <ul>
-        <li>wenn Sie <b>Probleme mit Ihrer Schilddrüse</b> haben (Hypothyreose).<br> Ihr Arzt wird möglicherweise
-            Ihren Blutspiegel des Schilddrüse-stimulierenden Hormons (TSH) regelmäßig überwachen,</li>
-        <li>wenn Sie sich einer Röntgen- oder anderen bildgebenden Untersuchung unterziehen müssen, bei
-            der Ihnen ein <b>jodhaltiges Kontrastmittel</b> gespritzt wird,</li>
-        <li>wenn Sie sich einem <a class="info_words" type="button" data-toggle="modal" data-target="#op">größeren
-                operativen Eingriff</a> unterziehen müssen.</li>
-    </ul>
-    <div class="row" style="margin-top: 15px;">
-        <div class="col-sm-2"><b>Unterzuckerung</b></div>
-        <div class="col-sm-10">
-            Metformin Lich allein verursacht keine Unterzuckerung (Hypoglykämie). Wenn Sie jedoch
-            Metformin Lich zusammen mit anderen Arzneimitteln gegen Ihre Zuckerkrankheit einnehmen, die
-            Unterzuckerung hervorrufen können (wie Sulfonylharnstoffe, Insulin, Glinide), besteht ein Risiko
-            eines zu niedrigen Blutzuckerspiegels. Wenn Anzeichen einer Unterzuckerung auftreten, wie
-            Schwächegefühl, Benommenheit, vermehrtes Schwitzen, beschleunigter Herzschlag, Sehstörungen
-            und Konzentrationsschwierigkeiten, hilft es normalerweise, wenn Sie etwas essen oder trinken, das
-            Zucker enthält.
-        </div>
+    <div class="row content_header">
+        <h3>Warnhinweise und Vorsichtsmaßnahmen
+        </h3>
     </div>
-    <div class="row" style="margin-top: 15px;">
-        <div class="col-sm-2"><b>Vitamin-B12-Blutspiegel</b></div>
-        <div class="col-sm-10">
-            Eine Langzeitbehandlung mit Metformin kann zu einer Abnahme des Vitamin-B12-Blutspiegels und
-            infolgedessen zu einer Erkrankung der Nerven führen (siehe Abschnitt 4. „Welche <a href="#tab4"
-                aria-controls="tab4" role="tab" data-toggle="tab">Nebenwirkungen
-            </a>
-            sind möglich?“). Ihr Arzt wird möglicherweise Ihren Vitamin-B12-Spiegel regelmäßig überwachen.
-        </div>
-    </div>
-</div>
-<!-- Modal -->
-<div id="op" class="modal fade" role="dialog">
-    <div class="modal-dialog">
-
-        <!-- Modal content-->
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h3 class="modal-title">Bei einer größen Operation</h3>
-            </div>
-            <div class="modal-body">
-                <p>
-                    Falls bei Ihnen eine größere Operation geplant ist, müssen Sie die Einnahme von Metformin Lich
-                    während des Eingriffs und für einige Zeit danach unterbrechen.
-                    Ihr Arzt wird entscheiden, wann Sie Ihre Behandlung mit Metformin Lich beenden müssen und wann die
-                    Behandlung wieder begonnen werden kann. <br>
-                    Ihr Arzt entscheidet, ob Sie während dieser Zeit eine andere Behandlung benötigen.<br>
-                    Während der Behandlung mit Metformin Lich wird Ihr Arzt mindestens einmal jährlich oder – falls
-                    Sie älter sind und/oder sich Ihre Nierenfunktion verschlechtert – auch häufiger Ihre Nierenfunktion
-                    kontrollieren.
-                </p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+    <div>
+        Bitte sprechen Sie mit Ihrem Arzt, bevor Sie Metformin Lich einnehmen,
+        <ul>
+            <li>wenn Sie <b>Probleme mit Ihrer Schilddrüse</b> haben (Hypothyreose).<br> Ihr Arzt wird möglicherweise
+                Ihren Blutspiegel des Schilddrüse-stimulierenden Hormons (TSH) regelmäßig überwachen,</li>
+            <li>wenn Sie sich einer Röntgen- oder anderen bildgebenden Untersuchung unterziehen müssen, bei
+                der Ihnen ein <b>jodhaltiges Kontrastmittel</b> gespritzt wird,</li>
+            <li>wenn Sie sich einem <a class="info_words" type="button" data-toggle="modal" data-target="#op">größeren
+                    operativen Eingriff</a> unterziehen müssen.</li>
+        </ul>
+        <div class="row" style="margin-top: 15px;">
+            <div class="col-sm-2"><b>Unterzuckerung</b></div>
+            <div class="col-sm-10">
+                Metformin Lich allein verursacht keine Unterzuckerung (Hypoglykämie). Wenn Sie jedoch
+                Metformin Lich zusammen mit anderen Arzneimitteln gegen Ihre Zuckerkrankheit einnehmen, die
+                Unterzuckerung hervorrufen können (wie Sulfonylharnstoffe, Insulin, Glinide), besteht ein Risiko
+                eines zu niedrigen Blutzuckerspiegels. Wenn Anzeichen einer Unterzuckerung auftreten, wie
+                Schwächegefühl, Benommenheit, vermehrtes Schwitzen, beschleunigter Herzschlag, Sehstörungen
+                und Konzentrationsschwierigkeiten, hilft es normalerweise, wenn Sie etwas essen oder trinken, das
+                Zucker enthält.
             </div>
         </div>
-
-    </div>
-</div>
-<!-- Modal -->
-
-<div class="panel-group" id="accordion" style="margin: 30 0 30 0;">
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <h4 class="panel-title text-center-xs" data-toggle="collapse" data-target="#collapseOne">
-                <img width="40" src="./../../assets/icons/10.svg" /> <span
-                    class="hidden-lg hidden-sm hidden-md"><br><br></span> Einnahme von Metformin Lich zusammen mit
-                anderen Medikamente
-            </h4>
-        </div>
-        <div id="collapseOne" class="panel-collapse collapse in">
-            <div class="panel-body">
-                Falls Ihnen ein jodhaltiges Kontrastmittel in Ihr Blut gespritzt werden muss, zum Beispiel in
-                Zusammenhang mit einer Röntgenaufnahme oder einer Computertomografie, müssen Sie die
-                Einnahme von Metformin Lich vor bzw. zum Zeitpunkt der Injektion unterbrechen. Ihr Arzt wird
-                entscheiden, wann Sie Ihre Behandlung mit Metformin Lich beenden müssen und wann die
-                Behandlung wieder begonnen werden kann.
-
-                Informieren Sie Ihren Arzt, wenn Sie andere Arzneimittel einnehmen/anwenden, kürzlich andere
-                Arzneimittel eingenommen/angewendet haben oder beabsichtigen, andere Arzneimittel
-                einzunehmen/anzuwenden. Möglicherweise müssen Ihr Blutzucker und Ihre Nierenfunktion
-                häufiger kontrolliert werden oder Ihr Arzt muss eventuell die Dosierung von Metformin Lich
-                anpassen.
-                <br>
-                Es ist besonders wichtig, folgende Arzneimittel zu erwähnen:
-                <ul>
-                    <li> Arzneimittel, die die Harnbildung steigern (Diuretika)</li>
-                    <li>Arzneimittel zur Behandlung von Schmerzen und Entzündungen (NSARs und COX-2-Hemmer
-                        wie beispielsweise Ibuprofen und Celecoxib)</li>
-                    <li>bestimmte Arzneimittel zur Behandlung von Bluthochdruck (ACE-Hemmer und
-                        AngiotensinII-Rezeptorantagonisten)</li>
-                    <li>Beta-2-Agonisten wie Salbutamol oder Terbutalin (zur Behandlung von Asthma)</li>
-                    <li>Kortikosteroide (zur Behandlung einer Vielzahl von Erkrankungen wie schweren
-                        Entzündungen der Haut oder bei Asthma)</li>
-                    <li>Arzneimittel, die möglicherweise die Menge an Metformin Lich in Ihrem Blut verändern,
-                        insbesondere, wenn bei Ihnen eine eingeschränkte Nierenfunktion vorliegt (wie Verapamil,
-                        Rifampicin, Cimetidin, Dolutegravir, Ranolazin, Trimethoprim, Vandetanib, Isavuconazol,
-                        Crizotinib, Olaparib)</li>
-                    <li>andere Medikamente zur Behandlung Ihrer Zuckerkrankheit</li>
-                    <li>Levothyroxin (zur Schilddrüsenhormon-Ersatztherapie)</li>
-                </ul>
-                Die gleichzeitige Einnahme von Metformin Lich mit Phenprocoumon (zur Vorbeugung von
-                Blutgerinnseln) kann einen Einfluss auf die Blutgerinnung haben. Deshalb wird Ihr Arzt
-                möglicherweise Ihre Blutgerinnung häufiger überwachen.
+        <div class="row" style="margin-top: 15px;">
+            <div class="col-sm-2"><b>Vitamin-B12-Blutspiegel</b></div>
+            <div class="col-sm-10">
+                Eine Langzeitbehandlung mit Metformin kann zu einer Abnahme des Vitamin-B12-Blutspiegels und
+                infolgedessen zu einer Erkrankung der Nerven führen (siehe Abschnitt 4. „Welche <a href="#tab4"
+                    aria-controls="tab4" role="tab" data-toggle="tab">Nebenwirkungen
+                </a>
+                sind möglich?“). Ihr Arzt wird möglicherweise Ihren Vitamin-B12-Spiegel regelmäßig überwachen.
             </div>
-        </div>
-    </div>
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <h4 class="panel-title text-center-xs" data-toggle="collapse" data-target="#collapseTwo">
-
-                <img width="40" src="./../../assets/icons/5.svg" /> <span
-                    class="hidden-lg hidden-sm hidden-md"><br><br></span> Einnahme von Metformin Lich zusammen mit
-                Alkohol
-
-            </h4>
-        </div>
-        <div id="collapseTwo" class="panel-collapse collapse">
-            <div class="panel-body">Meiden Sie während der Einnahme von Metformin Lich übermäßigen Alkoholkonsum, da
-                dieser
-                das Risiko einer <a class="info_words" type="button" data-toggle="modal"
-                    data-target="#laktazidose">Laktatazidose</a> erhöhen kann. Im Allgemeinen sollten Sie den Konsum von
-                Alkohol und
-                die
-                Anwendung alkoholhaltiger Arzneimittel meiden.</div>
-        </div>
-    </div>
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <h4 class="panel-title text-center-xs" data-toggle="collapse" data-target="#collapseThree">
-                <img width="40" src="./../../assets/icons/8.svg" /> <span
-                    class="hidden-lg hidden-sm hidden-md"><br><br></span> Schwangerschaft und Stillzeit
-            </h4>
-        </div>
-        <div id="collapseThree" class="panel-collapse collapse">
-            <div class="panel-body">Wenn Sie schwanger sind oder stillen oder wenn Sie vermuten, schwanger zu sein, oder
-                beabsichtigen,
-                schwanger zu werden, fragen Sie vor der Einnahme dieses Arzneimittels Ihren Arzt oder Apotheker
-                um Rat.<br>
-                Während einer Schwangerschaft muss Ihre Zuckerkrankheit mit Insulin behandelt werden.<br>
-                Informieren Sie Ihren Arzt, wenn Sie schwanger sind, wenn Sie denken, dass Sie schwanger sein
-                könnten, oder eine Schwangerschaft planen, damit Ihre Behandlung umgestellt werden kann.<br>
-                Dieses Arzneimittel ist nicht zu empfehlen, wenn Sie stillen oder vorhaben, dies zu tun.</div>
-        </div>
-    </div>
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <h4 class="panel-title text-center-xs" data-toggle="collapse" data-target="#collapseFour">
-
-                <img width="40" src="./../../assets/icons/3.svg" /> <span
-                    class="hidden-lg hidden-sm hidden-md"><br><br></span>
-                Verkehrstüchtigkeit und Fähigkeit zum Bedienen von Maschinen
-            </h4>
-        </div>
-        <div id="collapseFour" class="panel-collapse collapse">
-            <div class="panel-body">Metformin Lich selbst führt nicht zu einer Unterzuckerung (Hypoglykämie). Das heißt,
-                dass Ihre
-                Verkehrstüchtigkeit oder Fähigkeit zum Bedienen von Maschinen durch die Einnahme von Metformin
-                Lich nicht beeinträchtigt wird. <br>
-                <div class="alert">
-                    Besondere Vorsicht ist hingegen geboten, wenn Sie Metformin Lich zusammen mit anderen
-                    blutzuckersenkenden Arzneimitteln einnehmen, die Unterzuckerung hervorrufen können (wie zum
-                    Beispiel Sulfonylharnstoffe, Insulin, Glinide).<br> Zu den Anzeichen einer Unterzuckerung gehören
-                    <ul>
-                        <li>Schwächegefühl</li>
-                        <li>Benommenheit</li>
-                        <li>vermehrtes Schwitzen</li>
-                        <li>beschleunigter Herzschlag</li>
-                        <li>Sehstörungen</li>
-                        <li>Konzentrationsschwierigkeiten
-                    </ul>. Setzen Sie sich nicht ans Steuer eines Fahrzeugs und bedienen Sie
-                    keine Maschinen, wenn Sie erste Anzeichen derartiger Beschwerden bemerken. </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-
-<h3 style="
-    text-align: center;
-    margin: 60px 0 35px 0;
-"><i style="color: red;" class="fas fa-bolt" aria-hidden="true"></i> <br>Metformin Lich nicht einnehmen bei </h3>
-<div class="row">
-    <div class="col-sm-6">
-        <div class="row">
-            <div class="col-sm-12 info_notuse"><b>Allergisch </b> gegen
-                <ul>
-                    <li>Metforminhydrochlorid</li>
-                    <li>Hypromellose</li>
-                    <li>Povidon K25</li>
-                    <li>Magnesiumstearat (Ph. Eur.)</li>
-                    <li>Macrogol 6000</li>
-                    <li>Titandioxid (E 171)</li>
-                </ul>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-12 info_notuse"> <b>Leberprobleme </b> </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-12 info_notuse"><b>Schwere Einschränkung der Nierenfunktion </b> (glomeruläre
-                Filtrationsrate
-                unter 30 ml/min).</div>
-        </div>
-        <div class="row">
-            <div class="col-sm-12 info_notuse"><b>Unkontrollierten Diabetes</b>
-                Beispiel mit
-                <ul>
-                    <li>schwerer Hyperglykämie (sehr hohem Blutzucker), </li>
-                    <li>Übelkeit, </li>
-                    <li>Erbrechen, </li>
-                    <li>Durchfall, </li>
-                    <li>schneller Gewichtsabnahme,</li>
-                    <li><a class="info_words" type="button" data-toggle="modal"
-                            data-target="#laktazidose">Laktatazidose</a>
-                    </li>
-                    <li><a class="info_words" type="button" data-toggle="modal"
-                            data-target="#ketoazidose">Ketoazidose</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-12 info_notuse">Trinken von viel Alkohol oder Leiden unter einer Alkoholvergiftung
-                leiden.</div>
         </div>
     </div>
     <!-- Modal -->
-    <div id="ketoazidose" class="modal fade" role="dialog">
+    <div id="op" class="modal fade" role="dialog">
         <div class="modal-dialog">
 
             <!-- Modal content-->
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h3 class="modal-title">Was ist Insulin?</h3>
+                    <h3 class="modal-title">Bei einer größen Operation</h3>
                 </div>
                 <div class="modal-body">
                     <p>
-                        Die
-                        Ketoazidose ist ein Zustand, bei dem sich als „Ketonkörper“ bezeichnete
-                        Substanzen im Blut
-                        anhäufen, die zu einem diabetischen Präkoma führen können. Zu den Symptomen
-                        gehören
-                        Magenschmerzen, schnelle und tiefe Atmung, Schläfrigkeit oder die Entwicklung
-                        eines
-                        ungewöhnlichen fruchtigen Geruchs des Atems.
+                        Falls bei Ihnen eine größere Operation geplant ist, müssen Sie die Einnahme von Metformin Lich
+                        während des Eingriffs und für einige Zeit danach unterbrechen.
+                        Ihr Arzt wird entscheiden, wann Sie Ihre Behandlung mit Metformin Lich beenden müssen und wann
+                        die
+                        Behandlung wieder begonnen werden kann. <br>
+                        Ihr Arzt entscheidet, ob Sie während dieser Zeit eine andere Behandlung benötigen.<br>
+                        Während der Behandlung mit Metformin Lich wird Ihr Arzt mindestens einmal jährlich oder – falls
+                        Sie älter sind und/oder sich Ihre Nierenfunktion verschlechtert – auch häufiger Ihre
+                        Nierenfunktion
+                        kontrollieren.
                     </p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- Modal -->
+
+    <div class="panel-group" id="accordion" style="margin: 30 0 30 0;">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title text-center-xs" data-toggle="collapse" data-target="#collapseOne">
+                    <img width="40" src="./../../assets/icons/10.svg" /> <span
+                        class="hidden-lg hidden-sm hidden-md"><br><br></span> Einnahme von Metformin Lich zusammen mit
+                    anderen Medikamente
+                </h4>
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse in">
+                <div class="panel-body">
+                    Falls Ihnen ein jodhaltiges Kontrastmittel in Ihr Blut gespritzt werden muss, zum Beispiel in
+                    Zusammenhang mit einer Röntgenaufnahme oder einer Computertomografie, müssen Sie die
+                    Einnahme von Metformin Lich vor bzw. zum Zeitpunkt der Injektion unterbrechen. Ihr Arzt wird
+                    entscheiden, wann Sie Ihre Behandlung mit Metformin Lich beenden müssen und wann die
+                    Behandlung wieder begonnen werden kann.
+
+                    Informieren Sie Ihren Arzt, wenn Sie andere Arzneimittel einnehmen/anwenden, kürzlich andere
+                    Arzneimittel eingenommen/angewendet haben oder beabsichtigen, andere Arzneimittel
+                    einzunehmen/anzuwenden. Möglicherweise müssen Ihr Blutzucker und Ihre Nierenfunktion
+                    häufiger kontrolliert werden oder Ihr Arzt muss eventuell die Dosierung von Metformin Lich
+                    anpassen.
+                    <br>
+                    Es ist besonders wichtig, folgende Arzneimittel zu erwähnen:
+                    <ul>
+                        <li> Arzneimittel, die die Harnbildung steigern (Diuretika)</li>
+                        <li>Arzneimittel zur Behandlung von Schmerzen und Entzündungen (NSARs und COX-2-Hemmer
+                            wie beispielsweise Ibuprofen und Celecoxib)</li>
+                        <li>bestimmte Arzneimittel zur Behandlung von Bluthochdruck (ACE-Hemmer und
+                            AngiotensinII-Rezeptorantagonisten)</li>
+                        <li>Beta-2-Agonisten wie Salbutamol oder Terbutalin (zur Behandlung von Asthma)</li>
+                        <li>Kortikosteroide (zur Behandlung einer Vielzahl von Erkrankungen wie schweren
+                            Entzündungen der Haut oder bei Asthma)</li>
+                        <li>Arzneimittel, die möglicherweise die Menge an Metformin Lich in Ihrem Blut verändern,
+                            insbesondere, wenn bei Ihnen eine eingeschränkte Nierenfunktion vorliegt (wie Verapamil,
+                            Rifampicin, Cimetidin, Dolutegravir, Ranolazin, Trimethoprim, Vandetanib, Isavuconazol,
+                            Crizotinib, Olaparib)</li>
+                        <li>andere Medikamente zur Behandlung Ihrer Zuckerkrankheit</li>
+                        <li>Levothyroxin (zur Schilddrüsenhormon-Ersatztherapie)</li>
+                    </ul>
+                    Die gleichzeitige Einnahme von Metformin Lich mit Phenprocoumon (zur Vorbeugung von
+                    Blutgerinnseln) kann einen Einfluss auf die Blutgerinnung haben. Deshalb wird Ihr Arzt
+                    möglicherweise Ihre Blutgerinnung häufiger überwachen.
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title text-center-xs" data-toggle="collapse" data-target="#collapseTwo">
+
+                    <img width="40" src="./../../assets/icons/5.svg" /> <span
+                        class="hidden-lg hidden-sm hidden-md"><br><br></span> Einnahme von Metformin Lich zusammen mit
+                    Alkohol
+
+                </h4>
+            </div>
+            <div id="collapseTwo" class="panel-collapse collapse">
+                <div class="panel-body">Meiden Sie während der Einnahme von Metformin Lich übermäßigen Alkoholkonsum, da
+                    dieser
+                    das Risiko einer <a class="info_words" type="button" data-toggle="modal"
+                        data-target="#laktazidose">Laktatazidose</a> erhöhen kann. Im Allgemeinen sollten Sie den Konsum
+                    von
+                    Alkohol und
+                    die
+                    Anwendung alkoholhaltiger Arzneimittel meiden.</div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title text-center-xs" data-toggle="collapse" data-target="#collapseThree">
+                    <img width="40" src="./../../assets/icons/8.svg" /> <span
+                        class="hidden-lg hidden-sm hidden-md"><br><br></span> Schwangerschaft und Stillzeit
+                </h4>
+            </div>
+            <div id="collapseThree" class="panel-collapse collapse">
+                <div class="panel-body">Wenn Sie schwanger sind oder stillen oder wenn Sie vermuten, schwanger zu sein,
+                    oder
+                    beabsichtigen,
+                    schwanger zu werden, fragen Sie vor der Einnahme dieses Arzneimittels Ihren Arzt oder Apotheker
+                    um Rat.<br>
+                    Während einer Schwangerschaft muss Ihre Zuckerkrankheit mit Insulin behandelt werden.<br>
+                    Informieren Sie Ihren Arzt, wenn Sie schwanger sind, wenn Sie denken, dass Sie schwanger sein
+                    könnten, oder eine Schwangerschaft planen, damit Ihre Behandlung umgestellt werden kann.<br>
+                    Dieses Arzneimittel ist nicht zu empfehlen, wenn Sie stillen oder vorhaben, dies zu tun.</div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title text-center-xs" data-toggle="collapse" data-target="#collapseFour">
+
+                    <img width="40" src="./../../assets/icons/3.svg" /> <span
+                        class="hidden-lg hidden-sm hidden-md"><br><br></span>
+                    Verkehrstüchtigkeit und Fähigkeit zum Bedienen von Maschinen
+                </h4>
+            </div>
+            <div id="collapseFour" class="panel-collapse collapse">
+                <div class="panel-body">Metformin Lich selbst führt nicht zu einer Unterzuckerung (Hypoglykämie). Das
+                    heißt,
+                    dass Ihre
+                    Verkehrstüchtigkeit oder Fähigkeit zum Bedienen von Maschinen durch die Einnahme von Metformin
+                    Lich nicht beeinträchtigt wird. <br>
+                    <div class="alert">
+                        Besondere Vorsicht ist hingegen geboten, wenn Sie Metformin Lich zusammen mit anderen
+                        blutzuckersenkenden Arzneimitteln einnehmen, die Unterzuckerung hervorrufen können (wie zum
+                        Beispiel Sulfonylharnstoffe, Insulin, Glinide).<br> Zu den Anzeichen einer Unterzuckerung
+                        gehören
+                        <ul>
+                            <li>Schwächegefühl</li>
+                            <li>Benommenheit</li>
+                            <li>vermehrtes Schwitzen</li>
+                            <li>beschleunigter Herzschlag</li>
+                            <li>Sehstörungen</li>
+                            <li>Konzentrationsschwierigkeiten
+                        </ul>. Setzen Sie sich nicht ans Steuer eines Fahrzeugs und bedienen Sie
+                        keine Maschinen, wenn Sie erste Anzeichen derartiger Beschwerden bemerken. </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h3 style="
+    text-align: center;
+    margin: 60px 0 35px 0;
+"><i style="color: red;" class="fas fa-bolt" aria-hidden="true"></i> <br>Metformin Lich nicht einnehmen bei </h3>
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="row">
+                <div class="col-sm-12 info_notuse"><b>Allergisch </b> gegen
+                    <ul>
+                        <li>Metforminhydrochlorid</li>
+                        <li>Hypromellose</li>
+                        <li>Povidon K25</li>
+                        <li>Magnesiumstearat (Ph. Eur.)</li>
+                        <li>Macrogol 6000</li>
+                        <li>Titandioxid (E 171)</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 info_notuse"> <b>Leberprobleme </b> </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 info_notuse"><b>Schwere Einschränkung der Nierenfunktion </b> (glomeruläre
+                    Filtrationsrate
+                    unter 30 ml/min).</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 info_notuse"><b>Unkontrollierten Diabetes</b>
+                    Beispiel mit
+                    <ul>
+                        <li>schwerer Hyperglykämie (sehr hohem Blutzucker), </li>
+                        <li>Übelkeit, </li>
+                        <li>Erbrechen, </li>
+                        <li>Durchfall, </li>
+                        <li>schneller Gewichtsabnahme,</li>
+                        <li><a class="info_words" type="button" data-toggle="modal"
+                                data-target="#laktazidose">Laktatazidose</a>
+                        </li>
+                        <li><a class="info_words" type="button" data-toggle="modal"
+                                data-target="#ketoazidose">Ketoazidose</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 info_notuse">Trinken von viel Alkohol oder Leiden unter einer Alkoholvergiftung
+                    leiden.</div>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div id="ketoazidose" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h3 class="modal-title">Was ist Insulin?</h3>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            Die
+                            Ketoazidose ist ein Zustand, bei dem sich als „Ketonkörper“ bezeichnete
+                            Substanzen im Blut
+                            anhäufen, die zu einem diabetischen Präkoma führen können. Zu den Symptomen
+                            gehören
+                            Magenschmerzen, schnelle und tiefe Atmung, Schläfrigkeit oder die Entwicklung
+                            eines
+                            ungewöhnlichen fruchtigen Geruchs des Atems.
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div id="laktazidose" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h3 class="modal-title">Risiko einer Laktatazidose</h3>
+                    </div>
+                    <div class="modal-body">
+                        Metformin Lich kann vor allem dann, wenn Ihre Nieren nicht richtig funktionieren,
+                        eine sehr seltene,
+                        aber sehr schwerwiegende Nebenwirkung verursachen, die als Laktatazidose bezeichnet
+                        wird. Das
+                        Risiko, eine Laktatazidose zu entwickeln, wird auch durch schlecht eingestellten
+                        Diabetes, schwere
+                        Infektionen, längeres Fasten oder Alkoholkonsum, Dehydrierung (weitere Informationen
+                        siehe unten),
+                        Leberprobleme und Erkrankungen erhöht, bei denen ein Teil des Körpers nicht mit
+                        genügend
+                        Sauerstoff versorgt wird (zum Beispiel bei akuten schweren Herzerkrankungen).
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-10">
+                                Falls einer der genannten Punkte auf Sie zutrifft, sprechen Sie mit Ihrem
+                                Arzt hinsichtlich
+                                weiterer
+                                Anweisungen.
+                            </div>
+                            <div class="col-md-2">
+                                <i style="font-size:40px;color: #575858;" class="fas fa-user-md"></i>
+                            </div>
+                        </div>
+                        <hr>
+                        Unterbrechen Sie die Einnahme von Metformin Lich für eine kurze Zeit, wenn Sie einen
+                        Zustand haben, der mit einer Dehydrierung (erheblicher Verlust an Körperflüssigkeit)
+                        verbunden
+                        sein kann, wie beispielsweise schweres Erbrechen, Durchfall, Fieber, Hitzebelastung
+                        oder geringere
+                        Flüssigkeitsaufnahme als normalerweise. Sprechen Sie hinsichtlich weiterer
+                        Anweisungen mit Ihrem
+                        Arzt.<br>
+                        Beenden Sie die Einnahme von Metformin Lich und wenden Sie sich unverzüglich an
+                        einen Arzt
+                        oder an das nächstgelegene Krankenhaus, wenn Sie Symptome einer Laktatazidose
+                        bemerken,
+                        da dieser Zustand zum Koma führen kann.
+                        Symptome einer Laktatazidose sind:
+                        <ul>
+                            <li>Erbrechen</li>
+                            <li>Bauchschmerzen</li>
+                            <li>Muskelkrämpfe</li>
+                            <li>allgemeines Unwohlsein mit starker Müdigkeit</li>
+                            <li>Schwierigkeiten beim Atmen</li>
+                            <li>verringerte Körpertemperatur und Herzklopfen</li>
+                        </ul>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-10">
+                                Eine Laktatazidose ist ein medizinischer Notfall und muss in einem
+                                Krankenhaus behandelt
+                                werden.
+                                Es ist wichtig, dass Sie regelmäßig Ihre Medikation einnehmen, die
+                                Diätanweisungen beachten
+                                und
+                                Ihr
+                                Sportprogramm absolvieren, da dies das Risiko einer Laktatazidose vermindern
+                                kann.
+                            </div>
+                            <div class="col-md-2">
+                                <i style="font-size:40px;color: #f94343;" class="fas fa-hospital"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="row">
+                <div class="col-sm-12 info_notuse"><b>Verlust von zu viel Körperwasser (Dehydratation) </b>
+                    Beispiel durch
+                    <ul>
+                        <li>lang andauernden oder starken Durchfall</li>
+                        <li>wenn Sie sich mehrmals hintereinander erbrochen
+                            haben.</li>
+                    </ul>
+                    Dieser Flüssigkeitsverlust könnte zu Nierenproblemen führen, wodurch Sie gefährdet
+                    sind, eine Übersäuerung mit Milchsäure (<a class="info_words" type="button" data-toggle="modal"
+                        data-target="#laktazidose">Laktatazidose</a>) zu entwickeln .
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 info_notuse"><b>Leiden an schweren Infektion </b>
+                    Beispiel einer Infektion der Lunge, der Bronchien oder der Niere. </br>
+                    Schwere Infektionen könnten zu Nierenproblemen führen, wodurch Sie gefährdet sind, eine
+                    Übersäuerung mit
+                    Milchsäure (<a class="info_words" type="button" data-toggle="modal"
+                        data-target="#laktazidose">Laktatazidose</a>) zu
+                    entwickeln.
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 info_notuse"> Behandlung wegen dekompensierter Herzschwäche oder Erleiden eines
+                    Herzinfarkt vor
+                    Kurzem, schwere Kreislaufprobleme (wie zum Beispiel einen Schock) oder
+                    Schwierigkeiten mit der Atmung haben. <br> Dies könnte zu einem Sauerstoffmangel im Gewebe
+                    führen, wodurch Sie gefährdet sind, eine Übersäuerung mit Milchsäure (<a class="info_words"
+                        type="button" data-toggle="modal" data-target="#laktazidose">Laktatazidose</a>) zu
+                    entwickeln.</div>
+            </div>
+        </div>
+    </div>
+',11,3);
+INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic, ADDRESS) VALUES (82,0,'Beispieltext4',11,4,'
+    <div class="row">
+        <div class="col-md-9">
+            <h3>Pharmazeutischer Unternehmer </h3>
+
+            <p> Winthrop Arzneimittel GmbH <br />
+                65927 Frankfurt am Main<br />
+            </p>
+        </div>
+        <div class="col-md-3">
+            <img class="img-responsive" src="/assets/images/company/winthrop.png" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-9">
+            <h3>Mitvertrieb </h3>
+
+            <p> Zentiva Pharma GmbH <br />
+                65927 Frankfurt am Main<br />
+                <b>Tel.:</b> (01 80) 2 02 00 10* <br />
+                <b>Fax:</b> (01 80) 2 02 00 11* <br />
+            </p>
+        </div>
+        <div class="col-md-3">
+            <img class="img-responsive" src="/assets/images/company/zentiva.png" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-9">
+            <h3>Hersteller</h3>
+            <p> Chinoin Pharmaceutical and Chemical Works Private Co. Ltd. <br />
+                Tó Utca 1-5 <br />
+                H-1045 Budapest IV<br />
+                Ungarn
+            </p>
+            <p> Chinoin Pharmaceutical and Chemical Works Private Co. Ltd. <br />
+                5 Lévai utca<br />
+                H-2112 Veresegyhàz<br />
+                Ungarn
+            </p>
+            <p> S.C. Zentiva S.A.<br />
+                B-dul Theodor Pallady nr. 50, sector 3, <br />
+                032266 Bukarest<br />
+                Rumänien
+            </p>
+        </div>
+        <div class="col-md-3">
+        </div>
+    </div>
+');
+INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (83,0,'
+    <div class="row">
+        <div class="col-sm-9">
+            Nehmen Sie Metformin Lich immer genau nach Absprache mit Ihrem Arzt ein. Fragen Sie bei Ihrem
+            Arzt oder Apotheker nach, wenn Sie sich nicht sicher sind.<br>
+            Metformin Lich kann die Vorzüge einer gesunden Lebensweise nicht ersetzen. Folgen Sie
+            weiterhin allen Ernährungsratschlägen Ihres Arztes und sorgen Sie für regelmäßige körperliche
+            Bewegung.
+
+            Ihr Arzt führt regelmäßige Blutzuckerkontrollen bei Ihnen durch und passt Ihre
+            MetforminLich-Dosis Ihrem
+            Blutzuckerspiegel an. Sprechen Sie unbedingt regelmäßig mit Ihrem Arzt.
+            Dies ist besonders wichtig für Kinder und Jugendliche oder wenn Sie schon älter sind.
+            – Ihr Arzt überprüft außerdem mindestens einmal jährlich Ihre Nierenfunktion. Wenn Sie älter
+            sind oder eine eingeschränkte Nierenfunktion haben, können auch häufigere Untersuchungen
+            notwendig sein.
+
+        </div>
+        <div class="col-sm-3">
+            <i style="font-size:80px;color: #575858;" class="fas fa-user-md"></i>
+        </div>
+    </div>
+    <div class="row content_header">
+        <h1>Dosierung</h1>
+        <hr />
+
+        <table class="sideffect_table hidden-xs">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th style="width: 24%;">Kinder ab 10 Jahre</th>
+                    <th>Kinder zwischen 10 und 12 Jahre</th>
+                    <th style="width: 24%;">Erwachsene</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td> <b>Dosis</b></td>
+                    <td>
+                        500 oder 850 mg
+                    </td>
+                    <td></td>
+                    <td>500 - 850 mg</td>
+                </tr>
+                <tr>
+                    <td> <b>Wie oft?</b></td>
+                    <td>1x täglich</td>
+                    <td></td>
+                    <td>
+                        2-3x täglich
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <b>Höchstdosis pro Tag</b>
+                    </td>
+                    <td>
+                        2000mg pro tag <br> (Aufteilung: 2-3 Einnahmen) </td>
+                    <td></td>
+                    <td>3000mg pro tag <br> (Aufteilung: 3 Einnahmen)</td>
+                </tr>
+                <tr>
+                    <td>
+                        <b>Hinweis</b> </td>
+                    <td>
+                    </td>
+                    <td>Wird nur empfohlen auf ausdrücklichen Rat
+                        des Arztes hin, da die Erfahrung in dieser Altersgruppe
+                        begrenzt ist.</td>
+                    <td>Falls Sie eine eingeschränkte Nierenfunktion haben, wird Ihr Arzt Ihnen
+                        möglicherweise eine
+                        niedrigere Dosis verordnen.<br>
+
+                        Wenn Sie außerdem Insulin anwenden, erfahren Sie von Ihrem Arzt, wie Sie mit der
+                        Einnahme von
+                        Metformin Lich beginnen sollen</td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="sideffect_table hidden-sm hidden-lg hidden-md">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th style="width: 24%;">Kinder ab 10 Jahre</th>
+                    <th>Kinder zwischen 10 und 12 Jahre</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td> <b>Dosis</b></td>
+                    <td>
+                        500 oder 850 mg
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td> <b>Wie oft?</b></td>
+                    <td>1x täglich</td>
+                    <td></td>
+
+                </tr>
+                <tr>
+                    <td>
+                        <b>Höchstdosis pro Tag</b>
+                    </td>
+                    <td>
+                        2000mg pro tag <br> (Aufteilung: 2-3 Einnahmen) </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <b>Hinweis</b> </td>
+                    <td>
+                    </td>
+                    <td>Wird nur empfohlen auf ausdrücklichen Rat
+                        des Arztes hin, da die Erfahrung in dieser Altersgruppe
+                        begrenzt ist.</td>
+
+                </tr>
+            </tbody>
+        </table>
+        <table class="sideffect_table hidden-sm hidden-lg hidden-md" style="margin-top: 40px;">
+            <thead>
+                <tr>
+                    <th style="width: 1%;"></th>
+                    <th style="width: 24%;">Erwachsene</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td> <b>Dosis</b></td>
+                    <td>500 - 850 mg</td>
+                </tr>
+                <tr>
+                    <td> <b>Wie oft?</b></td>
+                    <td>
+                        2-3x täglich
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <b>Höchstdosis pro Tag</b>
+                    </td>
+                    <td>3000mg pro tag <br> (Aufteilung: 3 Einnahmen)</td>
+                </tr>
+                <tr>
+                    <td>
+                        <b>Hinweis</b> </td>
+                    <td>Falls Sie eine eingeschränkte Nierenfunktion haben, wird Ihr Arzt Ihnen
+                        möglicherweise eine
+                        niedrigere Dosis verordnen.<br>
+
+                        Wenn Sie außerdem Insulin anwenden, erfahren Sie von Ihrem Arzt, wie Sie mit der
+                        Einnahme von
+                        Metformin Lich beginnen sollen</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="row content_header">
+        <h1>Einnahme von Metformin Lich</h1>
+        <hr />
+        <div class="row text-center">
+            <div class="col-sm-4">
+                <i style="font-size:40px;    color: #575858;" class="fas fa-utensils"></i><br> <br>
+                Nehmen Sie Metformin Lich mit oder nach einer Mahlzeit ein. So vermeiden Sie Nebenwirkungen,
+                die Ihre Verdauung beeinträchtigen.</div>
+            <div class="col-sm-4">
+                <i style="font-size:40px;    color: #575858;" class="fas fa-glass-whiskey"></i><br> <br>
+                Die Tabletten dürfen nicht zerstoßen oder zerkaut werden. Schlucken Sie jede Tablette mit
+                einem
+                Glas Wasser.</div>
+            <div class="col-sm-4">
+                <i style="font-size:40px;    color: #575858;" class="fas fa-user-md"></i> <br>
+                <br> Wenn Sie nach einiger Zeit den Eindruck haben, dass
+                die Wirkung von
+                Metformin
+                Lich zu stark oder
+                zu schwach ist, sprechen Sie mit Ihrem Arzt oder Apotheker.</div>
+        </div>
+        <div class="row hidden-xs" style="margin-top: 30px;">
+            <div class="col-sm-12">
+                <h4>Gleiche Aufteilung der Dosen</h4>
+                <table class="sideffect_table">
+                    <thead class="text-center">
+                        <tr>
+                            <th>Anzahl der Einnahmen pro Tag </th>
+                            <th>Morgens <br> zum Frühstück</th>
+                            <th>Mittags <br> zum Mittagessen</th>
+                            <th>Abends <br> zum Abendessen</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-center">
+                        <tr>
+                            <td>
+                                1x
+                            </td>
+                            <td>
+                                X
+                            </td>
+                            <td>
+
+                            </td>
+                            <td>
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                2x
+                            </td>
+                            <td>
+                                X
+                            </td>
+                            <td>
+                                X
+                            </td>
+                            <td>
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                3x
+                            </td>
+                            <td>
+                                X
+                            </td>
+                            <td>
+                                X
+                            </td>
+                            <td>
+                                X
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row hidden-sm hidden-lg hidden-md" style="margin-top: 30px;">
+            <div class="col-sm-12">
+                <h4>Gleiche Aufteilung der Dosen</h4>
+                <table class="sideffect_table">
+                    <thead class="text-center">
+                        <tr>
+                            <th>Anzahl der Einnahmen pro Tag </th>
+                            <th>1x</th>
+                            <th>2x</th>
+                            <th>3x</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-center">
+                        <tr>
+                            <td>
+                                Morgens <br> zum Frühstück
+                            </td>
+                            <td>
+                                X
+                            </td>
+                            <td>
+                                X
+                            </td>
+                            <td>
+                                X
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Mittags <br> zum Mittagessen </td>
+                            <td>
+
+                            </td>
+                            <td>
+                                X
+                            </td>
+                            <td>
+                                X
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Mittags <br> zum Mittagessen </td>
+                            <td>
+
+                            </td>
+                            <td>
+
+                            </td>
+                            <td>
+                                X
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="row content_header" style="margin-top: 30px;">
+        <h1>Weitere Informationen</h1>
+        <hr />
+        <div class="col-md-12">
+            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingOne">
+                        <h4 class="panel-title" data-toggle="collapse" data-target="#collapseOnee">
+
+                            Wenn Sie eine größere Menge von Metformin Lich eingenommen haben, als Sie
+                            sollten
+
+                        </h4>
+                    </div>
+                    <div id="collapseOnee" class="panel-collapse collapse in" role="tabpanel"
+                        aria-labelledby="headingOne">
+                        <div class="panel-body">
+                            <p>Wenn Sie eine größere Menge von Metformin Lich eingenommen haben, als Sie
+                                sollten, kann
+                                es zu
+                                einer Übersäuerung des Blutes mit Milchsäure kommen (<a class=" info_words"
+                                    type="button" data-toggle="modal" data-target="#laktazidose">Laktatazidose</a>).
+                                <br>Wenn Sie eine größere Menge von Metformin Lich eingenommen haben, als
+                                Sie sollten,
+                                kann
+                                eine
+                                Entzündung der Bauchspeicheldrüse auftreten, die starke Bauch- und
+                                Rückenschmerzen
+                                verursacht.
+                                <br>
+                                Beenden Sie sofort die Einnahme von Metformin Lich und setzen Sie sich
+                                unverzüglich mit einem Arzt oder mit dem nächstgelegenen Krankenhaus in
+                                Verbindung.
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingTwo">
+                        <h4 class="panel-title" data-toggle="collapse" data-target="#collapseTwoe">
+
+                            Wenn Sie die Einnahme von Metformin Lich vergessen haben
+                        </h4>
+                    </div>
+                    <div id="collapseTwoe" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                        <div class="panel-body">
+                            <p>Nehmen Sie nicht die doppelte Menge ein, wenn Sie die vorherige Einnahme
+                                vergessen haben.
+                                Nehmen Sie die nächste Dosis zur vorgesehenen Zeit ein.
+                                Wenn Sie weitere Fragen zur Anwendung des Arzneimittels haben, fragen Sie
+                                Ihren Arzt
+                                oder
+                                Apotheker.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -965,22 +1488,21 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                 </div>
                 <div class="modal-body">
 
-                    Metformin Lich kann vor allem dann, wenn Ihre Nieren nicht richtig funktionieren,
-                    eine sehr seltene,
-                    aber sehr schwerwiegende Nebenwirkung verursachen, die als Laktatazidose bezeichnet
-                    wird. Das
-                    Risiko, eine Laktatazidose zu entwickeln, wird auch durch schlecht eingestellten
-                    Diabetes, schwere
-                    Infektionen, längeres Fasten oder Alkoholkonsum, Dehydrierung (weitere Informationen
-                    siehe unten),
-                    Leberprobleme und Erkrankungen erhöht, bei denen ein Teil des Körpers nicht mit
-                    genügend
+                    Metformin Lich kann vor allem dann, wenn Ihre Nieren nicht richtig funktionieren, eine sehr
+                    seltene,
+                    aber sehr schwerwiegende Nebenwirkung verursachen, die als Laktatazidose bezeichnet wird.
+                    Das
+                    Risiko, eine Laktatazidose zu entwickeln, wird auch durch schlecht eingestellten Diabetes,
+                    schwere
+                    Infektionen, längeres Fasten oder Alkoholkonsum, Dehydrierung (weitere Informationen siehe
+                    unten),
+                    Leberprobleme und Erkrankungen erhöht, bei denen ein Teil des Körpers nicht mit genügend
                     Sauerstoff versorgt wird (zum Beispiel bei akuten schweren Herzerkrankungen).
                     <hr>
                     <div class="row">
                         <div class="col-md-10">
-                            Falls einer der genannten Punkte auf Sie zutrifft, sprechen Sie mit Ihrem
-                            Arzt hinsichtlich
+                            Falls einer der genannten Punkte auf Sie zutrifft, sprechen Sie mit Ihrem Arzt
+                            hinsichtlich
                             weiterer
                             Anweisungen.</div>
                         <div class="col-md-2">
@@ -991,15 +1513,13 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                     Unterbrechen Sie die Einnahme von Metformin Lich für eine kurze Zeit, wenn Sie einen
                     Zustand haben, der mit einer Dehydrierung (erheblicher Verlust an Körperflüssigkeit)
                     verbunden
-                    sein kann, wie beispielsweise schweres Erbrechen, Durchfall, Fieber, Hitzebelastung
-                    oder geringere
-                    Flüssigkeitsaufnahme als normalerweise. Sprechen Sie hinsichtlich weiterer
-                    Anweisungen mit Ihrem
+                    sein kann, wie beispielsweise schweres Erbrechen, Durchfall, Fieber, Hitzebelastung oder
+                    geringere
+                    Flüssigkeitsaufnahme als normalerweise. Sprechen Sie hinsichtlich weiterer Anweisungen mit
+                    Ihrem
                     Arzt.<br>
-                    Beenden Sie die Einnahme von Metformin Lich und wenden Sie sich unverzüglich an
-                    einen Arzt
-                    oder an das nächstgelegene Krankenhaus, wenn Sie Symptome einer Laktatazidose
-                    bemerken,
+                    Beenden Sie die Einnahme von Metformin Lich und wenden Sie sich unverzüglich an einen Arzt
+                    oder an das nächstgelegene Krankenhaus, wenn Sie Symptome einer Laktatazidose bemerken,
                     da dieser Zustand zum Koma führen kann.
                     Symptome einer Laktatazidose sind:
                     <ul>
@@ -1013,12 +1533,184 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                     <hr>
                     <div class="row">
                         <div class="col-md-10">
-                            Eine Laktatazidose ist ein medizinischer Notfall und muss in einem
-                            Krankenhaus behandelt
-                            werden.
+                            Eine Laktatazidose ist ein medizinischer Notfall und muss in einem Krankenhaus
+                            behandelt werden.
+                            Es ist wichtig, dass Sie regelmäßig Ihre Medikation einnehmen, die Diätanweisungen
+                            beachten und
+                            Ihr
+                            Sportprogramm absolvieren, da dies das Risiko einer Laktatazidose vermindern kann.
+                        </div>
+                        <div class="col-md-2">
+                            <i style="font-size:40px;color: #f94343;" class="fas fa-hospital"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+',11,5);
+INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (84,0,'
+    <h3> Nebenwirkungen für Erwachsene <i class="fas fa-male"></i> <i class="fas fa-blind"></i> </h3>
+    <table class="sideffect_table">
+        <thead>
+            <tr>
+                <th>Häufigkeit</th>
+                <th style="width: 25%;">Anzahl der betreffenden Behandelten</th>
+                <th>Nebenwirkung</th>
+            </tr>
+        </thead>
+        <tbody class="gradient">
+            <tr>
+                <td>Sehr häufig</td>
+                <td>Mehr als 1 von 10 Behandelten</td>
+                <td><b>Verdauungsprobleme wie</b>
+                    <ul>
+                        <li>Übelkeit</li>
+                        <li>Erbrechen</li>
+                        <li>Durchfall</li>
+                        <li>Bauchschmerzen</li>
+                        <li>Appetitverlust</li>
+                    </ul>
+                    Diese Nebenwirkungen treten meistens zu Beginn der Behandlung mit
+                    Metformin Lich auf. </br> </br>
+                    <b>Vorbeugung:</b> </br>Eine Aufteilung der Tagesdosis auf mehrere über den Tag
+                    verteilte
+                    Einnahmen und die Einnahme von Metformin Lich mit oder direkt nach einer Mahlzeit.
+                    </br>
+                    <span style=" color: red;">Wenn die Beschwerden andauern, nehmen Sie Metformin Lich
+                        nicht weiter ein
+                        und sprechen Sie mit Ihrem
+                        Arzt.</span>
+                </td>
+            </tr>
+            <tr>
+                <td>Häufig</td>
+                <td>Mehr als 1 von 10 Behandelten </td>
+                <td><b>Geschmacksveränderungen</b></td>
+            </tr>
+            <tr>
+                <td>Sehr selten</td>
+                <td>Bis zu 1 von 10.000 Behandelten</td>
+                <td>
+                    <b>Übersäuerung des Blutes mit Milchsäure (<a class=" info_words" type="button" data-toggle="modal"
+                            data-target="#laktazidose1">Laktatazidose</a>)</b> </br>Dies
+                    ist eine
+                    sehr seltene, aber schwerwiegende Komplikation, insbesondere bei Patienten mit
+                    eingeschränkter
+                    Nierenfunktion. Die Symptome einer <a class="info_words" type="button" data-toggle="modal"
+                        data-target="#laktazidose1">Laktatazidose</a> sind unspezifisch.
+                    </br> </br>
+                    <b>Auffällige Leberfunktionswerte oder <a class="info_words" type="button" data-toggle="modal"
+                            data-target="#hepatitis">Hepatitis</a></b> </br> Wenn Sie
+                    derartige Beschwerden bekommen, nehmen
+                    Sie
+                    Metformin Lich nicht weiter ein und sprechen Sie sofort mit Ihrem Arzt.</br></br>
+                    <b>Hautreaktionen wie</b>
+                    <ul>
+                        <li> Rötung (Erythem)</li>
+                        <li>Juckreiz oder juckender Ausschlag (Quaddeln)
+                    </ul>
+                    </br>
+                    <b>Niedrige Konzentration von Vitamin B12 im Blut.</b>
+
+                </td>
+            </tr>
+            <tr>
+                <td>Nicht Bekannt</td>
+                <td>Häufigkeit auf Grundlage der verfügbaren Daten nicht abschätzbar</td>
+                <td>
+                    <ul>
+                        <li>Verringerte Anzahl der roten Blutkörperchen, die eine blassgelbe Haut,
+                            Schwächegefühl
+                            oder Atemlosigkeit verursachen kann (hämolytische Anämie).</li>
+                        <li>Abnahme des Schilddrüse-stimulierenden Hormon-(TSH-)Blutspiegels bei Patienten
+                            mit
+                            einer Schilddrüsenunterfunktion (Hypothyreose).</li>
+                        Niedriger Magnesiumspiegel im Blut (Hypomagnesiämie) im Rahmen einer
+                        Durchfallerkrankung.</li>
+                        <li>Eine Erkrankung, bei der die Funktionalität des Gehirns betroffen ist
+                            (Enzephalopathie).
+                        <li>Überempfindlichkeit der Haut gegenüber Licht (Photosensitivität).</li>
+
+                        <li>Erkrankung der Nerven bei Patienten mit Vitamin-B12-Mangel, die Schwächegefühl,
+                            Kribbeln oder Taubheitsgefühl verursachen kann (periphere Neuropathie).
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div>
+        <h3>Nebenwirkungen für Kinder und Jugendliche <i class="fas fa-child"></i> </h3>
+        <hr>
+        Begrenzte Daten für Kinder und Jugendliche zeigten, dass die Nebenwirkungen in Art und
+        Schwere jenen glichen, wie sie für Erwachsene gemeldet wurden.
+    </div>
+    <div id="laktazidose1" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h3 class="modal-title">Risiko einer Laktatazidose</h3>
+                </div>
+                <div class="modal-body">
+
+                    Metformin Lich kann vor allem dann, wenn Ihre Nieren nicht richtig funktionieren, eine
+                    sehr seltene,
+                    aber sehr schwerwiegende Nebenwirkung verursachen, die als Laktatazidose bezeichnet
+                    wird. Das
+                    Risiko, eine Laktatazidose zu entwickeln, wird auch durch schlecht eingestellten
+                    Diabetes, schwere
+                    Infektionen, längeres Fasten oder Alkoholkonsum, Dehydrierung (weitere Informationen
+                    siehe unten),
+                    Leberprobleme und Erkrankungen erhöht, bei denen ein Teil des Körpers nicht mit genügend
+                    Sauerstoff versorgt wird (zum Beispiel bei akuten schweren Herzerkrankungen).
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-10">
+                            Falls einer der genannten Punkte auf Sie zutrifft, sprechen Sie mit Ihrem Arzt
+                            hinsichtlich
+                            weiterer
+                            Anweisungen.</div>
+                        <div class="col-md-2">
+                            <i style="font-size:40px;color: #575858;" class="fas fa-user-md"></i>
+                        </div>
+                    </div>
+                    <hr>
+                    Unterbrechen Sie die Einnahme von Metformin Lich für eine kurze Zeit, wenn Sie einen
+                    Zustand haben, der mit einer Dehydrierung (erheblicher Verlust an Körperflüssigkeit)
+                    verbunden
+                    sein kann, wie beispielsweise schweres Erbrechen, Durchfall, Fieber, Hitzebelastung oder
+                    geringere
+                    Flüssigkeitsaufnahme als normalerweise. Sprechen Sie hinsichtlich weiterer Anweisungen
+                    mit Ihrem
+                    Arzt.<br>
+                    Beenden Sie die Einnahme von Metformin Lich und wenden Sie sich unverzüglich an einen
+                    Arzt
+                    oder an das nächstgelegene Krankenhaus, wenn Sie Symptome einer Laktatazidose bemerken,
+                    da dieser Zustand zum Koma führen kann.
+                    Symptome einer Laktatazidose sind:
+                    <ul>
+                        <li>Erbrechen</li>
+                        <li>Bauchschmerzen</li>
+                        <li>Muskelkrämpfe</li>
+                        <li>allgemeines Unwohlsein mit starker Müdigkeit</li>
+                        <li>Schwierigkeiten beim Atmen</li>
+                        <li>verringerte Körpertemperatur und Herzklopfen</li>
+                    </ul>
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-10">
+                            Eine Laktatazidose ist ein medizinischer Notfall und muss in einem Krankenhaus
+                            behandelt werden.
                             Es ist wichtig, dass Sie regelmäßig Ihre Medikation einnehmen, die
-                            Diätanweisungen beachten
-                            und
+                            Diätanweisungen beachten und
                             Ihr
                             Sportprogramm absolvieren, da dies das Risiko einer Laktatazidose vermindern
                             kann.</div>
@@ -1034,877 +1726,178 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
 
         </div>
     </div>
+    <div id="hepatitis" class="modal fade" role="dialog">
+        <div class="modal-dialog">
 
-    <div class="col-sm-6">
-        <div class="row">
-            <div class="col-sm-12 info_notuse"><b>Verlust von zu viel Körperwasser (Dehydratation) </b>
-                Beispiel durch
-                <ul>
-                    <li>lang andauernden oder starken Durchfall</li>
-                    <li>wenn Sie sich mehrmals hintereinander erbrochen
-                        haben.</li>
-                </ul>
-                Dieser Flüssigkeitsverlust könnte zu Nierenproblemen führen, wodurch Sie gefährdet
-                sind, eine Übersäuerung mit Milchsäure (<a class="info_words" type="button" data-toggle="modal"
-                    data-target="#laktazidose">Laktatazidose</a>) zu entwickeln .
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-12 info_notuse"><b>Leiden an schweren Infektion </b>
-                Beispiel einer Infektion der Lunge, der Bronchien oder der Niere. </br>
-                Schwere Infektionen könnten zu Nierenproblemen führen, wodurch Sie gefährdet sind, eine
-                Übersäuerung mit
-                Milchsäure (<a class="info_words" type="button" data-toggle="modal"
-                    data-target="#laktazidose">Laktatazidose</a>) zu
-                entwickeln.</div>
-        </div>
-        <div class="row">
-            <div class="col-sm-12 info_notuse"> Behandlung wegen dekompensierter Herzschwäche oder Erleiden eines
-                Herzinfarkt vor
-                Kurzem, schwere Kreislaufprobleme (wie zum Beispiel einen Schock) oder
-                Schwierigkeiten mit der Atmung haben. <br> Dies könnte zu einem Sauerstoffmangel im Gewebe
-                führen, wodurch Sie gefährdet sind, eine Übersäuerung mit Milchsäure (<a class="info_words"
-                    type="button" data-toggle="modal" data-target="#laktazidose">Laktatazidose</a>) zu
-                entwickeln.</div>
-        </div>
-    </div>
-</div>
-
-
-',11,3);
-INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic, ADDRESS) VALUES (82,0,'Beispieltext4',11,4,'
-<div class="row">
-    <div class="col-md-9">
-        <h3>Pharmazeutischer Unternehmer </h3>
-
-        <p> Winthrop Arzneimittel GmbH <br />
-            65927 Frankfurt am Main<br />
-        </p>
-    </div>
-    <div class="col-md-3">
-        <img class="img-responsive" src="/assets/images/company/winthrop.png" />
-    </div>
-</div>
-<div class="row">
-    <div class="col-md-9">
-        <h3>Mitvertrieb </h3>
-
-        <p> Zentiva Pharma GmbH <br />
-            65927 Frankfurt am Main<br />
-            <b>Tel.:</b> (01 80) 2 02 00 10* <br />
-            <b>Fax:</b> (01 80) 2 02 00 11* <br />
-        </p>
-    </div>
-    <div class="col-md-3">
-        <img class="img-responsive" src="/assets/images/company/zentiva.png" />
-    </div>
-</div>
-<div class="row">
-    <div class="col-md-9">
-        <h3>Hersteller</h3>
-        <p> Chinoin Pharmaceutical and Chemical Works Private Co. Ltd. <br />
-            Tó Utca 1-5 <br />
-            H-1045 Budapest IV<br />
-            Ungarn
-        </p>
-        <p> Chinoin Pharmaceutical and Chemical Works Private Co. Ltd. <br />
-            5 Lévai utca<br />
-            H-2112 Veresegyhàz<br />
-            Ungarn
-        </p>
-        <p> S.C. Zentiva S.A.<br />
-            B-dul Theodor Pallady nr. 50, sector 3, <br />
-            032266 Bukarest<br />
-            Rumänien
-        </p>
-    </div>
-    <div class="col-md-3">
-    </div>
-</div>');
-INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (83,0,'<div class="row">
-    <div class="col-sm-9">
-        Nehmen Sie Metformin Lich immer genau nach Absprache mit Ihrem Arzt ein. Fragen Sie bei Ihrem
-        Arzt oder Apotheker nach, wenn Sie sich nicht sicher sind.<br>
-        Metformin Lich kann die Vorzüge einer gesunden Lebensweise nicht ersetzen. Folgen Sie
-        weiterhin allen Ernährungsratschlägen Ihres Arztes und sorgen Sie für regelmäßige körperliche
-        Bewegung.
-
-        Ihr Arzt führt regelmäßige Blutzuckerkontrollen bei Ihnen durch und passt Ihre
-        MetforminLich-Dosis Ihrem
-        Blutzuckerspiegel an. Sprechen Sie unbedingt regelmäßig mit Ihrem Arzt.
-        Dies ist besonders wichtig für Kinder und Jugendliche oder wenn Sie schon älter sind.
-        – Ihr Arzt überprüft außerdem mindestens einmal jährlich Ihre Nierenfunktion. Wenn Sie älter
-        sind oder eine eingeschränkte Nierenfunktion haben, können auch häufigere Untersuchungen
-        notwendig sein.
-
-    </div>
-    <div class="col-sm-3">
-        <i style="font-size:80px;color: #575858;" class="fas fa-user-md"></i>
-    </div>
-</div>
-<div class="row content_header">
-    <h1>Dosierung</h1>
-    <hr />
-
-    <table class="sideffect_table hidden-xs">
-        <thead>
-            <tr>
-                <th></th>
-                <th style="width: 24%;">Kinder ab 10 Jahre</th>
-                <th>Kinder zwischen 10 und 12 Jahre</th>
-                <th style="width: 24%;">Erwachsene</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td> <b>Dosis</b></td>
-                <td>
-                    500 oder 850 mg
-                </td>
-                <td></td>
-                <td>500 - 850 mg</td>
-            </tr>
-            <tr>
-                <td> <b>Wie oft?</b></td>
-                <td>1x täglich</td>
-                <td></td>
-                <td>
-                    2-3x täglich
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <b>Höchstdosis pro Tag</b>
-                </td>
-                <td>
-                    2000mg pro tag <br> (Aufteilung: 2-3 Einnahmen) </td>
-                <td></td>
-                <td>3000mg pro tag <br> (Aufteilung: 3 Einnahmen)</td>
-            </tr>
-            <tr>
-                <td>
-                    <b>Hinweis</b> </td>
-                <td>
-                </td>
-                <td>Wird nur empfohlen auf ausdrücklichen Rat
-                    des Arztes hin, da die Erfahrung in dieser Altersgruppe
-                    begrenzt ist.</td>
-                <td>Falls Sie eine eingeschränkte Nierenfunktion haben, wird Ihr Arzt Ihnen
-                    möglicherweise eine
-                    niedrigere Dosis verordnen.<br>
-
-                    Wenn Sie außerdem Insulin anwenden, erfahren Sie von Ihrem Arzt, wie Sie mit der
-                    Einnahme von
-                    Metformin Lich beginnen sollen</td>
-            </tr>
-        </tbody>
-    </table>
-    <table class="sideffect_table hidden-sm hidden-lg hidden-md">
-        <thead>
-            <tr>
-                <th></th>
-                <th style="width: 24%;">Kinder ab 10 Jahre</th>
-                <th>Kinder zwischen 10 und 12 Jahre</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td> <b>Dosis</b></td>
-                <td>
-                    500 oder 850 mg
-                </td>
-                <td></td>
-            </tr>
-            <tr>
-                <td> <b>Wie oft?</b></td>
-                <td>1x täglich</td>
-                <td></td>
-
-            </tr>
-            <tr>
-                <td>
-                    <b>Höchstdosis pro Tag</b>
-                </td>
-                <td>
-                    2000mg pro tag <br> (Aufteilung: 2-3 Einnahmen) </td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>
-                    <b>Hinweis</b> </td>
-                <td>
-                </td>
-                <td>Wird nur empfohlen auf ausdrücklichen Rat
-                    des Arztes hin, da die Erfahrung in dieser Altersgruppe
-                    begrenzt ist.</td>
-
-            </tr>
-        </tbody>
-    </table>
-    <table class="sideffect_table hidden-sm hidden-lg hidden-md" style="margin-top: 40px;">
-        <thead>
-            <tr>
-                <th style="width: 1%;"></th>
-                <th style="width: 24%;">Erwachsene</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td> <b>Dosis</b></td>
-                <td>500 - 850 mg</td>
-            </tr>
-            <tr>
-                <td> <b>Wie oft?</b></td>
-                <td>
-                    2-3x täglich
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <b>Höchstdosis pro Tag</b>
-                </td>
-                <td>3000mg pro tag <br> (Aufteilung: 3 Einnahmen)</td>
-            </tr>
-            <tr>
-                <td>
-                    <b>Hinweis</b> </td>
-                <td>Falls Sie eine eingeschränkte Nierenfunktion haben, wird Ihr Arzt Ihnen
-                    möglicherweise eine
-                    niedrigere Dosis verordnen.<br>
-
-                    Wenn Sie außerdem Insulin anwenden, erfahren Sie von Ihrem Arzt, wie Sie mit der
-                    Einnahme von
-                    Metformin Lich beginnen sollen</td>
-            </tr>
-        </tbody>
-    </table>
-</div>
-<div class="row content_header">
-    <h1>Einnahme von Metformin Lich</h1>
-    <hr />
-    <div class="row text-center">
-        <div class="col-sm-4">
-            <i style="font-size:40px;    color: #575858;" class="fas fa-utensils"></i><br> <br>
-            Nehmen Sie Metformin Lich mit oder nach einer Mahlzeit ein. So vermeiden Sie Nebenwirkungen,
-            die Ihre Verdauung beeinträchtigen.</div>
-        <div class="col-sm-4">
-            <i style="font-size:40px;    color: #575858;" class="fas fa-glass-whiskey"></i><br> <br>
-            Die Tabletten dürfen nicht zerstoßen oder zerkaut werden. Schlucken Sie jede Tablette mit
-            einem
-            Glas Wasser.</div>
-        <div class="col-sm-4">
-            <i style="font-size:40px;    color: #575858;" class="fas fa-user-md"></i> <br>
-            <br> Wenn Sie nach einiger Zeit den Eindruck haben, dass
-            die Wirkung von
-            Metformin
-            Lich zu stark oder
-            zu schwach ist, sprechen Sie mit Ihrem Arzt oder Apotheker.</div>
-    </div>
-    <div class="row hidden-xs" style="margin-top: 30px;">
-        <div class="col-sm-12">
-            <h4>Gleiche Aufteilung der Dosen</h4>
-            <table class="sideffect_table">
-                <thead class="text-center">
-                    <tr>
-                        <th>Anzahl der Einnahmen pro Tag </th>
-                        <th>Morgens <br> zum Frühstück</th>
-                        <th>Mittags <br> zum Mittagessen</th>
-                        <th>Abends <br> zum Abendessen</th>
-                    </tr>
-                </thead>
-                <tbody class="text-center">
-                    <tr>
-                        <td>
-                            1x
-                        </td>
-                        <td>
-                            X
-                        </td>
-                        <td>
-
-                        </td>
-                        <td>
-
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            2x
-                        </td>
-                        <td>
-                            X
-                        </td>
-                        <td>
-                            X
-                        </td>
-                        <td>
-
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            3x
-                        </td>
-                        <td>
-                            X
-                        </td>
-                        <td>
-                            X
-                        </td>
-                        <td>
-                            X
-                        </td>
-                    </tr>
-
-                </tbody>
-            </table>
-        </div>
-    </div>
-    <div class="row hidden-sm hidden-lg hidden-md" style="margin-top: 30px;">
-        <div class="col-sm-12">
-            <h4>Gleiche Aufteilung der Dosen</h4>
-            <table class="sideffect_table">
-                <thead class="text-center">
-                    <tr>
-                        <th>Anzahl der Einnahmen pro Tag </th>
-                        <th>1x</th>
-                        <th>2x</th>
-                        <th>3x</th>
-                    </tr>
-                </thead>
-                <tbody class="text-center">
-                    <tr>
-                        <td>
-                            Morgens <br> zum Frühstück
-                        </td>
-                        <td>
-                            X
-                        </td>
-                        <td>
-                            X
-                        </td>
-                        <td>
-                            X
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Mittags <br> zum Mittagessen </td>
-                        <td>
-
-                        </td>
-                        <td>
-                            X
-                        </td>
-                        <td>
-                            X
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Mittags <br> zum Mittagessen </td>
-                        <td>
-
-                        </td>
-                        <td>
-
-                        </td>
-                        <td>
-                            X
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-</div>
-
-<div class="row content_header" style="margin-top: 30px;">
-    <h1>Weitere Informationen</h1>
-    <hr />
-    <div class="col-md-12">
-        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-            <div class="panel panel-default">
-                <div class="panel-heading" role="tab" id="headingOne">
-                    <h4 class="panel-title" data-toggle="collapse" data-target="#collapseOnee">
-
-                        Wenn Sie eine größere Menge von Metformin Lich eingenommen haben, als Sie
-                        sollten
-
-                    </h4>
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h3 class="modal-title">Was ist Hepatitis?</h3>
                 </div>
-                <div id="collapseOnee" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-                    <div class="panel-body">
-                        <p>Wenn Sie eine größere Menge von Metformin Lich eingenommen haben, als Sie
-                            sollten, kann
-                            es zu
-                            einer Übersäuerung des Blutes mit Milchsäure kommen (<a class=" info_words" type="button"
-                                data-toggle="modal" data-target="#laktazidose">Laktatazidose</a>).
-                            <br>Wenn Sie eine größere Menge von Metformin Lich eingenommen haben, als
-                            Sie sollten,
-                            kann
-                            eine
-                            Entzündung der Bauchspeicheldrüse auftreten, die starke Bauch- und
-                            Rückenschmerzen
-                            verursacht.
-                            <br>
-                            Beenden Sie sofort die Einnahme von Metformin Lich und setzen Sie sich
-                            unverzüglich mit einem Arzt oder mit dem nächstgelegenen Krankenhaus in
-                            Verbindung.
-
-                        </p>
-                    </div>
+                <div class="modal-body">
+                    <p> Hepatitis ist eine Leberentzündung. Diese kann
+                        Müdigkeit,
+                        Appetitverlust und Gewichtsabnahme mit oder ohne Gelbfärbung der Haut und des
+                        Augenweißes verursachen.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                 </div>
             </div>
-            <div class="panel panel-default">
-                <div class="panel-heading" role="tab" id="headingTwo">
-                    <h4 class="panel-title" data-toggle="collapse" data-target="#collapseTwoe">
 
-                        Wenn Sie die Einnahme von Metformin Lich vergessen haben
-                    </h4>
-                </div>
-                <div id="collapseTwoe" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-                    <div class="panel-body">
-                        <p>Nehmen Sie nicht die doppelte Menge ein, wenn Sie die vorherige Einnahme
-                            vergessen haben.
-                            Nehmen Sie die nächste Dosis zur vorgesehenen Zeit ein.
-                            Wenn Sie weitere Fragen zur Anwendung des Arzneimittels haben, fragen Sie
-                            Ihren Arzt
-                            oder
-                            Apotheker.</p>
-                    </div>
-                </div>
-            </div>
         </div>
-
     </div>
-</div>
-
-</div>
-<!-- Modal -->
-<div id="laktazidose" class="modal fade" role="dialog">
-    <div class="modal-dialog">
-
-        <!-- Modal content-->
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h3 class="modal-title">Risiko einer Laktatazidose</h3>
-            </div>
-            <div class="modal-body">
-
-                Metformin Lich kann vor allem dann, wenn Ihre Nieren nicht richtig funktionieren, eine sehr
-                seltene,
-                aber sehr schwerwiegende Nebenwirkung verursachen, die als Laktatazidose bezeichnet wird.
-                Das
-                Risiko, eine Laktatazidose zu entwickeln, wird auch durch schlecht eingestellten Diabetes,
-                schwere
-                Infektionen, längeres Fasten oder Alkoholkonsum, Dehydrierung (weitere Informationen siehe
-                unten),
-                Leberprobleme und Erkrankungen erhöht, bei denen ein Teil des Körpers nicht mit genügend
-                Sauerstoff versorgt wird (zum Beispiel bei akuten schweren Herzerkrankungen).
-                <hr>
-                <div class="row">
-                    <div class="col-md-10">
-                        Falls einer der genannten Punkte auf Sie zutrifft, sprechen Sie mit Ihrem Arzt
-                        hinsichtlich
-                        weiterer
-                        Anweisungen.</div>
-                    <div class="col-md-2">
-                        <i style="font-size:40px;color: #575858;" class="fas fa-user-md"></i>
-                    </div>
-                </div>
-                <hr>
-                Unterbrechen Sie die Einnahme von Metformin Lich für eine kurze Zeit, wenn Sie einen
-                Zustand haben, der mit einer Dehydrierung (erheblicher Verlust an Körperflüssigkeit)
-                verbunden
-                sein kann, wie beispielsweise schweres Erbrechen, Durchfall, Fieber, Hitzebelastung oder
-                geringere
-                Flüssigkeitsaufnahme als normalerweise. Sprechen Sie hinsichtlich weiterer Anweisungen mit
-                Ihrem
-                Arzt.<br>
-                Beenden Sie die Einnahme von Metformin Lich und wenden Sie sich unverzüglich an einen Arzt
-                oder an das nächstgelegene Krankenhaus, wenn Sie Symptome einer Laktatazidose bemerken,
-                da dieser Zustand zum Koma führen kann.
-                Symptome einer Laktatazidose sind:
-                <ul>
-                    <li>Erbrechen</li>
-                    <li>Bauchschmerzen</li>
-                    <li>Muskelkrämpfe</li>
-                    <li>allgemeines Unwohlsein mit starker Müdigkeit</li>
-                    <li>Schwierigkeiten beim Atmen</li>
-                    <li>verringerte Körpertemperatur und Herzklopfen</li>
-                </ul>
-                <hr>
-                <div class="row">
-                    <div class="col-md-10">
-                        Eine Laktatazidose ist ein medizinischer Notfall und muss in einem Krankenhaus
-                        behandelt werden.
-                        Es ist wichtig, dass Sie regelmäßig Ihre Medikation einnehmen, die Diätanweisungen
-                        beachten und
-                        Ihr
-                        Sportprogramm absolvieren, da dies das Risiko einer Laktatazidose vermindern kann.
-                    </div>
-                    <div class="col-md-2">
-                        <i style="font-size:40px;color: #f94343;" class="fas fa-hospital"></i>
-                    </div>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            </div>
-        </div>
-
-    </div>
-</div>
-</div>',11,5);
-INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (84,0,'
--------------------Nebenwirkungen---------------------------
-
-
-<h3> Nebenwirkungen für Erwachsene <i class="fas fa-male"></i> <i class="fas fa-blind"></i> </h3>
-<table class="sideffect_table">
-    <thead>
-        <tr>
-            <th>Häufigkeit</th>
-            <th style="width: 25%;">Anzahl der betreffenden Behandelten</th>
-            <th>Nebenwirkung</th>
-        </tr>
-    </thead>
-    <tbody class="gradient">
-        <tr>
-            <td>Sehr häufig</td>
-            <td>Mehr als 1 von 10 Behandelten</td>
-            <td><b>Verdauungsprobleme wie</b>
-                <ul>
-                    <li>Übelkeit</li>
-                    <li>Erbrechen</li>
-                    <li>Durchfall</li>
-                    <li>Bauchschmerzen</li>
-                    <li>Appetitverlust</li>
-                </ul>
-                Diese Nebenwirkungen treten meistens zu Beginn der Behandlung mit
-                Metformin Lich auf. </br> </br>
-                <b>Vorbeugung:</b> </br>Eine Aufteilung der Tagesdosis auf mehrere über den Tag
-                verteilte
-                Einnahmen und die Einnahme von Metformin Lich mit oder direkt nach einer Mahlzeit.
-                </br>
-                <span style=" color: red;">Wenn die Beschwerden andauern, nehmen Sie Metformin Lich
-                    nicht weiter ein
-                    und sprechen Sie mit Ihrem
-                    Arzt.</span>
-            </td>
-        </tr>
-        <tr>
-            <td>Häufig</td>
-            <td>Mehr als 1 von 10 Behandelten </td>
-            <td><b>Geschmacksveränderungen</b></td>
-        </tr>
-        <tr>
-            <td>Sehr selten</td>
-            <td>Bis zu 1 von 10.000 Behandelten</td>
-            <td>
-                <b>Übersäuerung des Blutes mit Milchsäure (<a class=" info_words" type="button" data-toggle="modal"
-                        data-target="#laktazidose1">Laktatazidose</a>)</b> </br>Dies
-                ist eine
-                sehr seltene, aber schwerwiegende Komplikation, insbesondere bei Patienten mit
-                eingeschränkter
-                Nierenfunktion. Die Symptome einer <a class="info_words" type="button" data-toggle="modal"
-                    data-target="#laktazidose1">Laktatazidose</a> sind unspezifisch.
-                </br> </br>
-                <b>Auffällige Leberfunktionswerte oder <a class="info_words" type="button" data-toggle="modal"
-                        data-target="#hepatitis">Hepatitis</a></b> </br> Wenn Sie
-                derartige Beschwerden bekommen, nehmen
-                Sie
-                Metformin Lich nicht weiter ein und sprechen Sie sofort mit Ihrem Arzt.</br></br>
-                <b>Hautreaktionen wie</b>
-                <ul>
-                    <li> Rötung (Erythem)</li>
-                    <li>Juckreiz oder juckender Ausschlag (Quaddeln)
-                </ul>
-                </br>
-                <b>Niedrige Konzentration von Vitamin B12 im Blut.</b>
-
-            </td>
-        </tr>
-        <tr>
-            <td>Nicht Bekannt</td>
-            <td>Häufigkeit auf Grundlage der verfügbaren Daten nicht abschätzbar</td>
-            <td>
-                <ul>
-                    <li>Verringerte Anzahl der roten Blutkörperchen, die eine blassgelbe Haut,
-                        Schwächegefühl
-                        oder Atemlosigkeit verursachen kann (hämolytische Anämie).</li>
-                    <li>Abnahme des Schilddrüse-stimulierenden Hormon-(TSH-)Blutspiegels bei Patienten
-                        mit
-                        einer Schilddrüsenunterfunktion (Hypothyreose).</li>
-                    Niedriger Magnesiumspiegel im Blut (Hypomagnesiämie) im Rahmen einer
-                    Durchfallerkrankung.</li>
-                    <li>Eine Erkrankung, bei der die Funktionalität des Gehirns betroffen ist
-                        (Enzephalopathie).
-                    <li>Überempfindlichkeit der Haut gegenüber Licht (Photosensitivität).</li>
-
-                    <li>Erkrankung der Nerven bei Patienten mit Vitamin-B12-Mangel, die Schwächegefühl,
-                        Kribbeln oder Taubheitsgefühl verursachen kann (periphere Neuropathie).
-                    </li>
-                </ul>
-            </td>
-        </tr>
-    </tbody>
-</table>
-
-<div>
-    <h3>Nebenwirkungen für Kinder und Jugendliche <i class="fas fa-child"></i> </h3>
-    <hr>
-    Begrenzte Daten für Kinder und Jugendliche zeigten, dass die Nebenwirkungen in Art und
-    Schwere jenen glichen, wie sie für Erwachsene gemeldet wurden.
-</div>
-
-
-
-<div id="laktazidose1" class="modal fade" role="dialog">
-    <div class="modal-dialog">
-
-        <!-- Modal content-->
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h3 class="modal-title">Risiko einer Laktatazidose</h3>
-            </div>
-            <div class="modal-body">
-
-                Metformin Lich kann vor allem dann, wenn Ihre Nieren nicht richtig funktionieren, eine
-                sehr seltene,
-                aber sehr schwerwiegende Nebenwirkung verursachen, die als Laktatazidose bezeichnet
-                wird. Das
-                Risiko, eine Laktatazidose zu entwickeln, wird auch durch schlecht eingestellten
-                Diabetes, schwere
-                Infektionen, längeres Fasten oder Alkoholkonsum, Dehydrierung (weitere Informationen
-                siehe unten),
-                Leberprobleme und Erkrankungen erhöht, bei denen ein Teil des Körpers nicht mit genügend
-                Sauerstoff versorgt wird (zum Beispiel bei akuten schweren Herzerkrankungen).
-                <hr>
-                <div class="row">
-                    <div class="col-md-10">
-                        Falls einer der genannten Punkte auf Sie zutrifft, sprechen Sie mit Ihrem Arzt
-                        hinsichtlich
-                        weiterer
-                        Anweisungen.</div>
-                    <div class="col-md-2">
-                        <i style="font-size:40px;color: #575858;" class="fas fa-user-md"></i>
-                    </div>
-                </div>
-                <hr>
-                Unterbrechen Sie die Einnahme von Metformin Lich für eine kurze Zeit, wenn Sie einen
-                Zustand haben, der mit einer Dehydrierung (erheblicher Verlust an Körperflüssigkeit)
-                verbunden
-                sein kann, wie beispielsweise schweres Erbrechen, Durchfall, Fieber, Hitzebelastung oder
-                geringere
-                Flüssigkeitsaufnahme als normalerweise. Sprechen Sie hinsichtlich weiterer Anweisungen
-                mit Ihrem
-                Arzt.<br>
-                Beenden Sie die Einnahme von Metformin Lich und wenden Sie sich unverzüglich an einen
-                Arzt
-                oder an das nächstgelegene Krankenhaus, wenn Sie Symptome einer Laktatazidose bemerken,
-                da dieser Zustand zum Koma führen kann.
-                Symptome einer Laktatazidose sind:
-                <ul>
-                    <li>Erbrechen</li>
-                    <li>Bauchschmerzen</li>
-                    <li>Muskelkrämpfe</li>
-                    <li>allgemeines Unwohlsein mit starker Müdigkeit</li>
-                    <li>Schwierigkeiten beim Atmen</li>
-                    <li>verringerte Körpertemperatur und Herzklopfen</li>
-                </ul>
-                <hr>
-                <div class="row">
-                    <div class="col-md-10">
-                        Eine Laktatazidose ist ein medizinischer Notfall und muss in einem Krankenhaus
-                        behandelt werden.
-                        Es ist wichtig, dass Sie regelmäßig Ihre Medikation einnehmen, die
-                        Diätanweisungen beachten und
-                        Ihr
-                        Sportprogramm absolvieren, da dies das Risiko einer Laktatazidose vermindern
-                        kann.</div>
-                    <div class="col-md-2">
-                        <i style="font-size:40px;color: #f94343;" class="fas fa-hospital"></i>
-                    </div>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            </div>
-        </div>
-
-    </div>
-</div>
-
-<div id="hepatitis" class="modal fade" role="dialog">
-    <div class="modal-dialog">
-
-        <!-- Modal content-->
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h3 class="modal-title">Was ist Hepatitis?</h3>
-            </div>
-            <div class="modal-body">
-                <p> Hepatitis ist eine Leberentzündung. Diese kann
-                    Müdigkeit,
-                    Appetitverlust und Gewichtsabnahme mit oder ohne Gelbfärbung der Haut und des
-                    Augenweißes verursachen.
-                </p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            </div>
-        </div>
-
-    </div>
-</div>
 ',11,6);
 INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (85,0,'Beispieltext7',11,7);
-INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (86,0,'<div class="row">
-    Metformin Lich enthält Metformin, einen Arzneistoff aus der Gruppe der sogenannten Biguanide, der zur Behandlung der
-    Zuckerkrankheit (Diabetes) eingesetzt wird. </div>
-<div class="row">
-    Wenn Sie an Diabetes leiden, produziert Ihre Bauchspeicheldrüse entweder nicht genug <a class="info_words"
-        type="button" data-toggle="modal" data-target="#insulin">Insulin</a>
-    oder die Körpergewebe sprechen nicht richtig auf das gebildete <a class="info_words" type="button"
-        data-toggle="modal" data-target="#insulin">Insulin</a>
-    an. Hohe Blutzuckerspiegel sind die Folge. Metformin Lich hilft, Ihren Blutzucker auf möglichst normale Werte zu
-    senken.
-</div>
-<div class="row">
-    Das Arzneimittel wird insbesondere bei übergewichtigen Patienten eingesetzt.
-    Bei übergewichtigen Erwachsenen trägt die langfristige Einnahme von Metformin Lich außerdem dazu bei, das Risiko von
-    diabetesbedingten Komplikationen zu senken.
-    Unter Metformin Lich wird ein stabiles Körpergewicht oder eine mäßige Gewichtsabnahme beobachtet.
-</div>
-<div class="row">
-    Metformin Lich wird zur Behandlung von Patienten mit Zuckerkrankheit (<a class="info_words" type="button"
-        data-toggle="modal" data-target="#diabetes_typ2">Typ-2-Diabetes</a>) eingesetzt, wenn der Blutzuckerspiegel
-    durch Diät und
-    Bewegung allein nicht ausreichend kontrolliert werden konnte.
-</div>
-<div class="row" style="padding:30px 0 30px 0px;">
-
-    <table class="sideffect_table">
-        <tr>
-            <td style="width: 32%;">
-                <div class="col-sm-1 text-center-xs"> <i class="fas fa-male allg_icon"></i></div>
-                <div class="col-sm-10" style="padding-top:5px"> <b>Erwachsene</b> </div>
-            </td>
-            <td> Können Metformin Lich allein
-                oder zusammen mit anderen blutzuckersenkenden
-                Arzneimitteln (Arzneimittel, die über den Mund einzunehmen sind, oder Insulin) anwenden.</td>
-        </tr>
-        <tr>
-            <td>
-                <div class="col-sm-1 text-center-xs"> <i class="fas fa-child allg_icon"></i></div>
-                <div class="col-sm-10">
-                    <b>Kinder ab 10 Jahren &
-                        Jugendliche</b></div>
-            </td>
-            <td> Können Metformin Lich allein oder zusammen mit <a class="info_words" type="button" data-toggle="modal"
-                    data-target="#insulin">Insulin</a>
-                anwenden.</td>
-        </tr>
-    </table>
-</div>
-
-<!-- Modal -->
-<div id="insulin" class="modal fade" role="dialog">
-    <div class="modal-dialog">
-
-        <!-- Modal content-->
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h3 class="modal-title">Was ist Insulin?</h3>
-            </div>
-            <div class="modal-body">
-                <p>Insulin ist ein von der Bauchspeicheldrüse gebildetes Hormon, das für die Aufnahme
-                    von Glukose
-                    (Zucker) aus dem Blut in die Körperzellen sorgt.
-                    Dort wird die Glukose in Energie umgewandelt oder als Vorrat zur späteren Verwendung
-                    gespeichert.
-                </p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            </div>
-        </div>
-
+INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (86,0,'
+    <div class="row">
+        Metformin Lich enthält Metformin, einen Arzneistoff aus der Gruppe der sogenannten Biguanide, der zur Behandlung
+        der
+        Zuckerkrankheit (Diabetes) eingesetzt wird. </div>
+    <div class="row">
+        Wenn Sie an Diabetes leiden, produziert Ihre Bauchspeicheldrüse entweder nicht genug <a class="info_words"
+            type="button" data-toggle="modal" data-target="#insulin">Insulin</a>
+        oder die Körpergewebe sprechen nicht richtig auf das gebildete <a class="info_words" type="button"
+            data-toggle="modal" data-target="#insulin">Insulin</a>
+        an. Hohe Blutzuckerspiegel sind die Folge. Metformin Lich hilft, Ihren Blutzucker auf möglichst normale Werte zu
+        senken.
     </div>
-</div>
-
-<!-- Modal -->
-<div id="diabetes_typ2" class="modal fade" role="dialog">
-    <div class="modal-dialog">
-
-        <!-- Modal content-->
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h3 class="modal-title">Was ist Diabetes Typ 2?
-                </h3>
-            </div>
-            <div class="modal-body">
-                <p>Diabetes Typ 2, auch nicht insulinabhängiger Diabetes“ genannt, tritt meist nach dem 40. Lebensjahr
-                    auf. Hierbei besteht ein „relativer
-                    Insulinmangel“. Die Bauchspeicheldrüse produziert zwar Insulin, aber die Körperzellen verlieren ihre
-                    Empfindlichkeit für das Hormon und/oder die Ausschüttung des Insulins aus den Zellen der
-                    Bauchspeicheldrüse ist gestört. Die Bauchspeicheldrüse versucht dies auszugleichen, indem sie immer
-                    mehr Insulin ausschüttet. Doch trotz erhöhtem Insulinspiegel gelangt immer weniger Zucker in die
-                    Körperzellen. Sehr häufig können Menschen mit Diabetes Typ 2 zunächst mit einer Ernährungsumstellung
-                    allein oder aber in einer Kombination mit Tabletten behandelt werden. Im Krankheitsverlauf
-                    vermindert sich aber die Insulinproduktion der Bauchspeicheldrüse, wodurch auch bei Menschen mit
-                    Typ-2-Diabetes der Insulinmangel weiter fortschreitet. Der dadurch veränderte Stoffwechsel muss dann
-                    ebenfalls mit Insulin-Injektionen behandelt werden.
-                    <br>
-                    Ursachen eines Typ-2-Diabetes sind:
-                    <ul>
-                        <li>eine entsprechende genetische Disposition,
-                        <li> häufig verbunden mit starkem Übergewicht (Adipositas)
-                        <li>und zu wenig körperliche Bewegung.
-                        <li>Auch erhöhte Blutfettwerte sowie Bluthochdruck gehen oft mit einem Prädiabetes oder Diabetes
-                            einher
-                            (Metabolisches Syndrom).
-                    </ul>
-                    <br>
-                    Sehr häufig können Menschen mit Diabetes Typ 2 mit einer Ernährungsumstellung allein oder
-                    aber in einer Kombination mit Tabletten behandelt werden. Bei zunehmender Krankheitsdauer müssen
-                    allerdings auch Typ-2-Diabetiker mit einem Fortschreiten des Insulinmangels rechnen. Der dadurch
-                    veränderte Stoffwechsel muss dann ebenfalls mit Insulin-Injektionen behandelt werden.
-                    <a
-                        href="https://www.diabetesde.org/ueber_diabetes/was_ist_diabetes_/was_ist_diabetes_typ_2">Quelle</a>
-                </p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            </div>
-        </div>
-
+    <div class="row">
+        Das Arzneimittel wird insbesondere bei übergewichtigen Patienten eingesetzt.
+        Bei übergewichtigen Erwachsenen trägt die langfristige Einnahme von Metformin Lich außerdem dazu bei, das Risiko
+        von
+        diabetesbedingten Komplikationen zu senken.
+        Unter Metformin Lich wird ein stabiles Körpergewicht oder eine mäßige Gewichtsabnahme beobachtet.
     </div>
-</div>
+    <div class="row">
+        Metformin Lich wird zur Behandlung von Patienten mit Zuckerkrankheit (<a class="info_words" type="button"
+            data-toggle="modal" data-target="#diabetes_typ2">Typ-2-Diabetes</a>) eingesetzt, wenn der Blutzuckerspiegel
+        durch Diät und
+        Bewegung allein nicht ausreichend kontrolliert werden konnte.
+    </div>
+    <div class="row" style="padding:30px 0 30px 0px;">
 
+        <table class="sideffect_table">
+            <tr>
+                <td style="width: 32%;">
+                    <div class="col-sm-1 text-center-xs"> <i class="fas fa-male allg_icon"></i></div>
+                    <div class="col-sm-10" style="padding-top:5px"> <b>Erwachsene</b> </div>
+                </td>
+                <td> Können Metformin Lich allein
+                    oder zusammen mit anderen blutzuckersenkenden
+                    Arzneimitteln (Arzneimittel, die über den Mund einzunehmen sind, oder Insulin) anwenden.</td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="col-sm-1 text-center-xs"> <i class="fas fa-child allg_icon"></i></div>
+                    <div class="col-sm-10">
+                        <b>Kinder ab 10 Jahren &
+                            Jugendliche</b></div>
+                </td>
+                <td> Können Metformin Lich allein oder zusammen mit <a class="info_words" type="button"
+                        data-toggle="modal" data-target="#insulin">Insulin</a>
+                    anwenden.</td>
+            </tr>
+        </table>
+    </div>
+    <!-- Modal -->
+    <div id="insulin" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h3 class="modal-title">Was ist Insulin?</h3>
+                </div>
+                <div class="modal-body">
+                    <p>Insulin ist ein von der Bauchspeicheldrüse gebildetes Hormon, das für die Aufnahme
+                        von Glukose
+                        (Zucker) aus dem Blut in die Körperzellen sorgt.
+                        Dort wird die Glukose in Energie umgewandelt oder als Vorrat zur späteren Verwendung
+                        gespeichert.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- Modal -->
+    <div id="diabetes_typ2" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h3 class="modal-title">Was ist Diabetes Typ 2?
+                    </h3>
+                </div>
+                <div class="modal-body">
+                    <p>Diabetes Typ 2, auch nicht insulinabhängiger Diabetes“ genannt, tritt meist nach dem 40.
+                        Lebensjahr
+                        auf. Hierbei besteht ein „relativer
+                        Insulinmangel“. Die Bauchspeicheldrüse produziert zwar Insulin, aber die Körperzellen verlieren
+                        ihre
+                        Empfindlichkeit für das Hormon und/oder die Ausschüttung des Insulins aus den Zellen der
+                        Bauchspeicheldrüse ist gestört. Die Bauchspeicheldrüse versucht dies auszugleichen, indem sie
+                        immer
+                        mehr Insulin ausschüttet. Doch trotz erhöhtem Insulinspiegel gelangt immer weniger Zucker in die
+                        Körperzellen. Sehr häufig können Menschen mit Diabetes Typ 2 zunächst mit einer
+                        Ernährungsumstellung
+                        allein oder aber in einer Kombination mit Tabletten behandelt werden. Im Krankheitsverlauf
+                        vermindert sich aber die Insulinproduktion der Bauchspeicheldrüse, wodurch auch bei Menschen mit
+                        Typ-2-Diabetes der Insulinmangel weiter fortschreitet. Der dadurch veränderte Stoffwechsel muss
+                        dann
+                        ebenfalls mit Insulin-Injektionen behandelt werden.
+                        <br>
+                        Ursachen eines Typ-2-Diabetes sind:
+                        <ul>
+                            <li>eine entsprechende genetische Disposition,
+                            <li> häufig verbunden mit starkem Übergewicht (Adipositas)
+                            <li>und zu wenig körperliche Bewegung.
+                            <li>Auch erhöhte Blutfettwerte sowie Bluthochdruck gehen oft mit einem Prädiabetes oder
+                                Diabetes
+                                einher
+                                (Metabolisches Syndrom).
+                        </ul>
+                        <br>
+                        Sehr häufig können Menschen mit Diabetes Typ 2 mit einer Ernährungsumstellung allein oder
+                        aber in einer Kombination mit Tabletten behandelt werden. Bei zunehmender Krankheitsdauer müssen
+                        allerdings auch Typ-2-Diabetiker mit einem Fortschreiten des Insulinmangels rechnen. Der dadurch
+                        veränderte Stoffwechsel muss dann ebenfalls mit Insulin-Injektionen behandelt werden.
+                        <a
+                            href="https://www.diabetesde.org/ueber_diabetes/was_ist_diabetes_/was_ist_diabetes_typ_2">Quelle</a>
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
 ',11,8);
-INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (87,0,'<div class="row">Metformin Lich
-    sind weiße, längliche, in der Mitte verjüngte Filmtabletten mit abgeschrägten
-    Kanten und einer Bruchkerbe auf beiden Seiten. Die Tablette kann in gleiche Dosen geteilt werden.</div>
+INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (87,0,'
+    <div class="row">Metformin Lich sind weiße, längliche, in der Mitte verjüngte Filmtabletten mit abgeschrägten
+        Kanten und einer Bruchkerbe auf beiden Seiten. Die Tablette kann in gleiche Dosen geteilt werden.
+    </div>
 
-<div class="row">Metformin Lich ist in Packungen mit 15, 30, 120, 180 und 600 Filmtabletten erhältlich.<br>
-    Es werden möglicherweise nicht alle Packungsgrößen in den Verkehr gebracht.</div>',11,9);
+    <div class="row">Metformin Lich ist in Packungen mit 15, 30, 120, 180 und 600 Filmtabletten erhältlich.<br>
+        Es werden möglicherweise nicht alle Packungsgrößen in den Verkehr gebracht.
+    </div>
+',11,9);
 
-INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (88,0,'',12,1);
+
+
+INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (88,0,'Beispieltext1',12,1);
 INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (89,0,'Beispieltext2',12,2);
 INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (90,0,'
-
-<!--Vor der Einnahme-->
-
-
-
 <div class="row content_header">
     <h1>Warnhinweise und Vorsichtsmaßnahmen
     </h1>
@@ -1922,19 +1915,108 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
         <li> wenn Sie an einer Erkrankung der Leber leiden</li>
         <li> wenn Sie älter sind und Ihre Dosis erhöht werden muss</li>
     </ul>
-
-    <h4 style="margin-top: 15px;"><i class="fas fa-child allg_icon" aria-hidden="true"></i> Kinder</h4>
+    <h4>Kinder</h4>
     Bei Kindern unter 6 Jahren wurde Amlodipin nicht untersucht. <br>
-    <div class="col-sm-1"> <i class="far fa-arrow-alt-circle-right" style="font-size: 30px;
-        margin-top: 5px;"></i> </div>
-    <div class="col-sm-11"> Amlodipin (besilat) Dexcel 5 mg kann nur bei Kindern und
+    <div class="col-2-sm"> <i class="far fa-arrow-alt-circle-right"></i> </div>
+    <div class="col-10-sm"> Amlodipin (besilat) Dexcel 5 mg kann nur bei Kindern und
         Jugendlichen mit Bluthochdruck im Alter von 6 bis
         17 Jahren angewendet werden</div>
     Wegen weiteren Informationen sprechen Sie bitte mit Ihrem Arzt.
 </div>
-
+<div class="panel-group" id="accordion" style="margin: 30 0 30 0;">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+                    <img width="40" src="./../../assets/icons/10.svg" /> Einnahme von Amlodipin zusammen mit
+                    anderen Medikamente</a>
+            </h4>
+        </div>
+        <div id="collapse3" class="panel-collapse collapse in">
+            <div class="panel-body">
+                Informieren Sie Ihren Arzt oder Apotheker, wenn Sie andere Arzneimittel
+                einnehmen/anwenden, kürzlich andere Arzneimittel eingenommen/angewendet haben oder
+                beabsichtigen andere Arzneimittel einzunehmen/anzuwenden. <br>
+                Amlodipin (besilat) Dexcel 5 mg kann andere Arzneimittel beeinflussen oder von anderen
+                Arzneimitteln beeinflusst werden, wie z.B.:
+                <ul>
+                    <li>Ketoconazol, Itraconazol (gegen Pilzerkrankungen)</li>
+                    <li>Ritonavir, Indinavir, Nelfinavir (so genannte Proteasehemmer gegen HIV-Infektionen)</li>
+                    <li>Rifampicin, Erythromycin, Clarithromycin (Antibiotika)</li>
+                    <li>Hypericum perforatum (Johanniskraut)</li>
+                    <li>Verapamil, Diltiazem (Herzmittel)</li>
+                    <li>Dantrolen (eine Infusion bei schwerer Störung der Körpertemperatur)</li>
+                    <li>Tacrolimus (ein Arzneimittel zur Beeinflussung des Immunsystems)</li>
+                    <li>Simvastatin (zur Senkung der Cholesterinwerte)</li>
+                    <li>Ciclosporin (ein Mittel zur Unterdrückung des Immunsystems)</li>
+                </ul>
+                Amlodipin (besilat) Dexcel 5 mg kann Ihren Blutdruck noch weiter senken, wenn Sie bereits
+                andere blutdrucksenkende Arzneimittel anwenden.
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">
+                    <img width="40" src="./../../assets/icons/11.svg" /> Einnahme von Amlodipin zusammen mit
+                    Nahrungsmitteln und
+                    Getränken</a>
+            </h4>
+        </div>
+        <div id="collapse4" class="panel-collapse collapse">
+            <div class="panel-body">
+                Personen, die Amlodipin (besilat) Dexcel 5 mg einnehmen, sollten keine Grapefruit essen
+                und keinen Grapefruitsaft trinken, weil hierdurch der Blutspiegel des Wirkstoffs Amlodipin
+                erhöht werden kann, was möglicherweise zu einem unkontrollierten Anstieg der
+                blutdrucksenkenden Wirkung von Amlodipin (besilat) Dexcel 5 mg führt.
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse5">
+                    <img width="40" src="./../../assets/icons/8.svg" /> Schwangerschaft und Stillzeit</a>
+            </h4>
+        </div>
+        <div id="collapse5" class="panel-collapse collapse">
+            <div class="panel-body">
+                Wenn Sie schwanger sind oder stillen, oder wenn Sie vermuten, schwanger zu sein oder
+                beabsichtigen, schwanger zu werden, fragen Sie vor der Anwendung dieses Arzneimittels
+                Ihren Arzt oder Apotheker um Rat.
+                <h4>Schwangerschaft</h4>
+                Die Sicherheit von Amlodipin während einer Schwangerschaft konnte nicht nachgewiesen
+                werden. Wenn Sie glauben, schwanger zu sein, oder eine Schwangerschaft planen,
+                müssen Sie dies Ihrem Arzt vor der Einnahme von Amlodipin (besilat) Dexcel 5 mg sagen.</br>
+                <h4>Stillzeit</h4>
+                Es ist nicht bekannt, ob Amlodipin in die Muttermilch übergeht. Wenn Sie stillen oder mit
+                dem Stillen beginnen möchten, müssen Sie dies Ihrem Arzt vor der Einnahme von
+                Amlodipin (besilat) Dexcel 5 mg sagen.
+                Fragen Sie vor der Einnahme von allen Arzneimitteln Ihren Arzt oder Apotheker um Rat.
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse6">
+                    <img width="40" src="./../../assets/icons/3.svg" />
+                    Verkehrstüchtigkeit und Fähigkeit zum Bedienen von Maschinen</a>
+            </h4>
+        </div>
+        <div id="collapse6" class="panel-collapse collapse">
+            <div class="panel-body">Die Fähigkeit zur aktiven Teilnahme am Straßenverkehr oder zum Bedienen von
+                Maschinen
+                kann durch Amlodipin (besilat) Dexcel 5 mg beeinträchtigt werden. Falls die Tabletten bei
+                Ihnen ein Krankheitsgefühl, Schwindel oder Müdigkeit hervorrufen oder Kopfschmerzen
+                auftreten, fahren Sie kein Auto oder bedienen Sie keine Maschinen und suchen Sie
+                umgehend Ihren Arzt auf. </div>
+        </div>
+    </div>
+</div>
+</div>
 <div class="row content_header">
-
     <h3><i style="color: red;" class="fas fa-bolt"></i> Amlodipin (besilat) Dexcel 5 mg nicht einnehmen bei </h3>
     <hr>
 </div>
@@ -1969,109 +2051,9 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
         </div>
     </div>
 </div>
-
-
-
-
-<div class="panel-group" id="accordion" style="margin: 30 0 30 0;">
-
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <h4 class="panel-title" data-toggle="collapse" data-target="#collapseOnea"> <img width="40"
-                    src="./../../assets/icons/10.svg" /> Einnahme von Amlodipin zusammen mit
-                anderen Medikamenten
-            </h4>
-        </div>
-        <div id="collapseOnea" class="panel-collapse collapse in">
-            <div class="panel-body">
-                Informieren Sie Ihren Arzt oder Apotheker, wenn Sie andere Arzneimittel
-                einnehmen/anwenden, kürzlich andere Arzneimittel eingenommen/angewendet haben oder
-                beabsichtigen andere Arzneimittel einzunehmen/anzuwenden. <br>
-                Amlodipin (besilat) Dexcel 5 mg kann andere Arzneimittel beeinflussen oder von anderen
-                Arzneimitteln beeinflusst werden, wie z.B.:
-                <ul>
-                    <li>Ketoconazol, Itraconazol (gegen Pilzerkrankungen)</li>
-                    <li>Ritonavir, Indinavir, Nelfinavir (so genannte Proteasehemmer gegen HIV-Infektionen)</li>
-                    <li>Rifampicin, Erythromycin, Clarithromycin (Antibiotika)</li>
-                    <li>Hypericum perforatum (Johanniskraut)</li>
-                    <li>Verapamil, Diltiazem (Herzmittel)</li>
-                    <li>Dantrolen (eine Infusion bei schwerer Störung der Körpertemperatur)</li>
-                    <li>Tacrolimus (ein Arzneimittel zur Beeinflussung des Immunsystems)</li>
-                    <li>Simvastatin (zur Senkung der Cholesterinwerte)</li>
-                    <li>Ciclosporin (ein Mittel zur Unterdrückung des Immunsystems)</li>
-                </ul>
-                Amlodipin (besilat) Dexcel 5 mg kann Ihren Blutdruck noch weiter senken, wenn Sie bereits
-                andere blutdrucksenkende Arzneimittel anwenden.
-            </div>
-        </div>
-    </div>
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <h4 class="panel-title" data-toggle="collapse" data-target="#collapseTwoa">
-
-                <img width="40" src="./../../assets/icons/11.svg" /> Einnahme von Amlodipin zusammen mit
-                Nahrungsmitteln und
-                Getränken
-
-            </h4>
-        </div>
-        <div id="collapseTwoa" class="panel-collapse collapse">
-            <div class="panel-body">
-                Personen, die Amlodipin (besilat) Dexcel 5 mg einnehmen, sollten keine Grapefruit essen
-                und keinen Grapefruitsaft trinken, weil hierdurch der Blutspiegel des Wirkstoffs Amlodipin
-                erhöht werden kann, was möglicherweise zu einem unkontrollierten Anstieg der
-                blutdrucksenkenden Wirkung von Amlodipin (besilat) Dexcel 5 mg führt.
-            </div>
-        </div>
-    </div>
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <h4 class="panel-title" data-toggle="collapse" data-target="#collapseThreea">
-                <img width="40" src="./../../assets/icons/8.svg" /> Schwangerschaft und Stillzeit
-
-            </h4>
-        </div>
-        <div id="collapseThreea" class="panel-collapse collapse">
-            <div class="panel-body">
-                Wenn Sie schwanger sind oder stillen, oder wenn Sie vermuten, schwanger zu sein oder
-                beabsichtigen, schwanger zu werden, fragen Sie vor der Anwendung dieses Arzneimittels
-                Ihren Arzt oder Apotheker um Rat.
-                <h4>Schwangerschaft</h4>
-                Die Sicherheit von Amlodipin während einer Schwangerschaft konnte nicht nachgewiesen
-                werden. Wenn Sie glauben, schwanger zu sein, oder eine Schwangerschaft planen,
-                müssen Sie dies Ihrem Arzt vor der Einnahme von Amlodipin (besilat) Dexcel 5 mg sagen.</br>
-                <h4>Stillzeit</h4>
-                Es ist nicht bekannt, ob Amlodipin in die Muttermilch übergeht. Wenn Sie stillen oder mit
-                dem Stillen beginnen möchten, müssen Sie dies Ihrem Arzt vor der Einnahme von
-                Amlodipin (besilat) Dexcel 5 mg sagen.
-                Fragen Sie vor der Einnahme von allen Arzneimitteln Ihren Arzt oder Apotheker um Rat.
-
-            </div>
-        </div>
-    </div>
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <h4 class="panel-title" data-toggle="collapse" data-target="#collapsefoura">
-                <img width="40" src="./../../assets/icons/3.svg" />
-                Verkehrstüchtigkeit und Fähigkeit zum Bedienen von Maschinen
-
-            </h4>
-        </div>
-        <div id="collapsefoura" class="panel-collapse collapse">
-            <div class="panel-body">Die Fähigkeit zur aktiven Teilnahme am Straßenverkehr oder zum Bedienen von
-                Maschinen
-                kann durch Amlodipin (besilat) Dexcel 5 mg beeinträchtigt werden. Falls die Tabletten bei
-                Ihnen ein Krankheitsgefühl, Schwindel oder Müdigkeit hervorrufen oder Kopfschmerzen
-                auftreten, fahren Sie kein Auto oder bedienen Sie keine Maschinen und suchen Sie
-                umgehend Ihren Arzt auf. </div>
-        </div>
-    </div>
-</div>
-</div>
-
-
 ',12,3);
-INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic, address) VALUES (91,0,'Beispieltext',12,4, ' <div class="row">
+INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic, address) VALUES (91,0,'Beispieltext',12,4, '
+<div class="row">
     <div class="col-md-9">
         <h3>Pharmazeutischer Unternehmer </h3>
         <p> Dexcel Pharma GmbH <br />
@@ -2086,25 +2068,23 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic, addre
     </div>
 </div>
 <div class="row">
-
     <div class="col-md-9">
         <h3>Hersteller </h3>
         <p> Dexcel Pharma GmbH <br />
             Steinbruch 2, Halle 15<br />
             Lager im Industriepark Giesbert G.b.R. </br>
             63755 Alzenau<br />
-
         </p>
     </div>
     <div class="col-md-3">
     </div>
 </div>');
-INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (92,0,'<<div class="row">
+INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (92,0,'
+<div class="row">
     <div class="col-sm-9">
         Nehmen Sie dieses Arzneimittel immer genau nach Absprache mit Ihrem Arztoder
         Apotheker ein. Fragen Sie bei Ihrem Arzt oder Apotheker nach, wenn Sie sich nicht sicher
         sind.
-
     </div>
     <div class="col-sm-3">
         <i style="font-size:80px;color: #575858;" class="fas fa-user-md"></i>
@@ -2113,20 +2093,17 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
 <div class="row content_header">
     <h3 class="modal-title">Dosierung</h3>
     <hr />
-
     <table class="sideffect_table">
         <thead>
             <tr>
                 <th></th>
-                <th> <i class="fas fa-child allg_icon" aria-hidden="true"></i> Kindern und Jugendlichen im Alter von 6
-                    bis 17 Jahren</th>
-                <th style="width: 24%;"><i class="fas fa-male allg_icon" aria-hidden="true"></i> Erwachsene</th>
+                <th> Kindern und Jugendlichen im Alter von 6 bis 17 Jahren</th>
+                <th style="width: 24%;">Erwachsene</th>
             </tr>
         </thead>
         <tbody>
             <tr>
                 <td> <b>Dosis</b></td>
-
                 <td>2,5mg</td>
                 <td>5mg</td>
             </tr>
@@ -2148,7 +2125,6 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
             <tr>
                 <td>
                     <b>Hinweis</b> </td>
-
                 <td colspan="2">Tabletten mit 2,5 mg Amlodipin sind derzeit nicht erhältlich und die 2,5 mg Dosierung
                     kann
                     mit Amlodipin (besilat) Dexcel 5 mg nicht erhalten werden, da diese nicht so hergestellt
@@ -2162,7 +2138,6 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
     <hr />
     <div class="row text-center">
         <div class="col-sm-12">
-
             <table>
                 <tr>
                     <td style="padding:15px; text-align: center;"><i style="font-size: 33px;"
@@ -2179,11 +2154,8 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                 </tr>
             </table>
         </div>
-
     </div>
-
 </div>
-
 <div class="row content_header" style="margin-top: 30px;">
     <h3 class="modal-title">Weitere Informationen</h3>
     <hr />
@@ -2191,12 +2163,15 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
         <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
             <div class="panel panel-default">
                 <div class="panel-heading" role="tab" id="headingOne">
-                    <h4 class="panel-title" data-toggle="collapse" data-target="#collapseOnei">
-                        Wenn Sie eine größere Menge von Amlodipin (besilat) Dexcel 5 mg eingenommen haben, als Sie
-                        sollten
+                    <h4 class="panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne"
+                            aria-expanded="true" aria-controls="collapseOne" style="color: #000;">
+                            Wenn Sie eine größere Menge von Amlodipin (besilat) Dexcel 5 mg eingenommen haben, als Sie
+                            sollten
+                        </a>
                     </h4>
                 </div>
-                <div id="collapseOnei" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
                     <div class="panel-body">
                         <p>Wenn Sie zu viele Tabletten eingenommen haben, kann Ihr Blutdruck abfallen oder auch
                             gefährlich niedrig werden.
@@ -2206,19 +2181,19 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                             <br>Ihre Haut kann sich dann kalt und feucht anfühlen und Sie könnten das
                             Bewusstsein verlieren. Begeben Sie sich sofort in medizinische Überwachung, wenn Sie zu
                             viele Amlodipin (besilat) Dexcel Tabletten eingenommen haben.
-
                         </p>
                     </div>
                 </div>
             </div>
             <div class="panel panel-default">
                 <div class="panel-heading" role="tab" id="headingTwo">
-                    <h4 class="panel-title" data-toggle="collapse" data-target="#collapseTwoi">
-
-                        Wenn Sie die Einnahme von Amlodipin (besilat) Dexcel 5 mg vergessen haben
+                    <h4 class="panel-title">
+                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                            href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style="color: #000;">
+                            Wenn Sie die Einnahme von Amlodipin (besilat) Dexcel 5 mg vergessen haben </a>
                     </h4>
                 </div>
-                <div id="collapseTwoi" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
                     <div class="panel-body">
                         <p>Dies ist nicht schlimm. Nehmen Sie nicht die doppelte Menge ein, wenn Sie die vorherige
                             Einnahme vergessen haben. <br> Nehmen Sie die nächste Dosis dann wieder zur gewohnten
@@ -2229,34 +2204,30 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
             <div class="panel panel-default">
                 <div class="panel-heading" role="tab" id="headingThree">
                     <h4 class="panel-title">
-                        <h4 class="panel-title" data-toggle="collapse" data-target="#collapseThreei">
-                            Wenn Sie die Einnahme von Amlodipin (besilat) Dexcel 5 mg abbrechen </h4>
+                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                            href="#collapseThree" aria-expanded="false" aria-controls="collapseThree"
+                            style="color: #000;">
+                            Wenn Sie die Einnahme von Amlodipin (besilat) Dexcel 5 mg abbrechen </a>
+                    </h4>
                 </div>
-                <div id="collapseThreei" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
                     <div class="panel-body">
-                        <p>Ihr Arzt wird Ihnen sagen, wie lange Sie dieses Arzneimittel einnehmen müssen.
-                            Wenn Sie
-                            die Anwendung dieses Arzneimittels beenden, bevor er Sie dazu aufgefordert hat,
-                            können
+                        <p>Ihr Arzt wird Ihnen sagen, wie lange Sie dieses Arzneimittel einnehmen müssen. Wenn Sie
+                            die Anwendung dieses Arzneimittels beenden, bevor er Sie dazu aufgefordert hat, können
                             Ihre Beschwerden zurückkehren.<br>
-                            Wenn Sie weitere Fragen zur Einnahme dieses Arzneimittels haben, wenden Sie sich
-                            an
+                            Wenn Sie weitere Fragen zur Einnahme dieses Arzneimittels haben, wenden Sie sich an
                             Ihren Arzt oder Apotheker </p>
                     </div>
                 </div>
             </div>
         </div>
-
     </div>
 </div>
-
 ',12,5);
 INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (93,0,'
 <div class="row content_header">
-
     <h3> Nebenwirkungen </h3>
     <hr>
-
     Wie alle Arzneimittel kann auch dieses Arzneimittel Nebenwirkungen haben, die aber nicht
     bei jedem auftreten müssen.
 </div>
@@ -2278,10 +2249,8 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
     </ul>
 </div>
 <div class="row">
-
-
     <table class="sideffect_table">
-        <thead >
+        <thead>
             <tr>
                 <th>Häufigkeit</th>
                 <th style="width: 25%;">Anzahl der betreffenden Behandelten</th>
@@ -2369,40 +2338,31 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
             </tr>
         </tbody>
     </table>
-
     <div class="alert alert-info">
         Wenn Ihnen die sehr seltenen Nebenwirkungen
         Probleme bereitet oder länger als 1 Woche andauert, sollten Sie Ihren Arzt aufsuchen.
     </div>
-
 </div>
-
-
-
-
-
 ',12,6);
 INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (94,0,'Beispieltext',12,7);
-INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (95,0,'<!-- Allgemein -->
+INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (95,0,'
+<!-- Allgemein -->
 <div class="row" style="padding-left: 15px;">
-    Amlodipin (besilat) Dexcel 5 mg
-    <ul>
-        <li>enthält den Wirkstoff Amlodipin, der zur Arzneimittelgruppe
-            der so genannten Calciumantagonisten gehört. </li>
-        <li> wird zur Behandlung von hohem Blutdruck (Hypertonie)
-            angewendet oder zur Behandlung einer bestimmten Form von Schmerzen im Brustbereich,
-            was als <a class="info_words" type="button" data-toggle="modal" data-target="#angina">Angina pectoris</a>
-            oder, in
-            einer
-            seltenen Form, als <i>vasospastische (Prinzmetal-)
-                Angina </i> bezeichnet wird.</li>
-        <li> enthält den Wirkstoff Amlodipin, der zur Arzneimittelgruppe
-            der so genannten Calciumantagonisten gehört.</li>
-    </ul>
+    Amlodipin (besilat) Dexcel 5 mg enthält den Wirkstoff Amlodipin, der zur Arzneimittelgruppe
+    der so genannten Calciumantagonisten gehört. </div>
+<div class="row" style="padding-left: 15px;">
+    Amlodipin (besilat) Dexcel 5 mg wird zur Behandlung von hohem Blutdruck (Hypertonie)
+    angewendet oder zur Behandlung einer bestimmten Form von Schmerzen im Brustbereich,
+    was als <a class="info_words" type="button" data-toggle="modal" data-target="#angina">Angina pectoris</a> oder, in
+    einer
+    seltenen Form, als <i>vasospastische (Prinzmetal-)
+        Angina </i> bezeichnet wird.
 </div>
-
+<div class="row" style="padding:0 0 0 15px;">
+    Amlodipin (besilat) Dexcel 5 mg enthält den Wirkstoff Amlodipin, der zur Arzneimittelgruppe
+    der so genannten Calciumantagonisten gehört.
+</div>
 <div class="row" style="padding:30px 0 30px 15px;">
-
     <table class="sideffect_table">
         <tr>
             <td style="width: 32%;">
@@ -2423,43 +2383,42 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
         </tr>
     </table>
 </div>
-
 <!-- Modal -->
 <div id="angina" class="modal fade" role="dialog">
     <div class="modal-dialog">
-
         <!-- Modal content-->
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h3 class="modal-title"><i class="fas fa-briefcase-medical"></i> Was bedeutet Angina pectoris?</h3>
+                <h3 class="modal-title">Was bedeutet Angina pectoris?</h3>
             </div>
             <div class="modal-body">
-                <p>>Angina pectoris (mediz. Stenokardie) bedeutet Brustenge. Sie äußert sich in einem plötzlich
-                    auftretenden Schmerz in der Herzgegend sowie einem Druckgefühl in der Brust. <br>Ausgelöst wird die
+                <p>Angina pectoris (mediz. Stenokardie) bedeutet Brustenge. Sie äußert sich in einem plötzlich
+                    auftretenden Schmerz in der Herzgegend sowie einem Druckgefühl in der Brust. Ausgelöst wird die
                     Angina pectoris durch einen Sauerstoffmangel des Herzens. Es besteht Lebensgefahr, deshalb sollte
                     man sofort den Notarzt rufen! Angina pectoris lässt sich normalerweise mit Medikamenten gut
-                    behandeln. <br> Akute Angina-pectoris Schmerzen im Brustbereich werden durch dieses Arzneimittel
-                    nicht
+                    behandeln. Akute Angina-pectoris Schmerzen im Brustbereich werden durch dieses Arzneimittel nicht
                     sofort gelindert.
-                </p>
-                <p>
+                    <br>
                     Quelle: <a
                         href="https://www.netdoktor.de/krankheiten/angina-pectoris/">https://www.netdoktor.de/krankheiten/angina-pectoris/</a>
-
                 </p>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
             </div>
         </div>
-
     </div>
 </div>
-
 ',12,8);
-
---
+INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (96,0,'
+<div class="row">Metformin Lich sind weiße, längliche, in der Mitte verjüngte Filmtabletten mit abgeschrägten
+    Kanten und einer Bruchkerbe auf beiden Seiten. Die Tablette kann in gleiche Dosen geteilt werden.
+</div>
+<div class="row">Metformin Lich ist in Packungen mit 15, 30, 120, 180 und 600 Filmtabletten erhältlich.<br>
+    Es werden möglicherweise nicht alle Packungsgrößen in den Verkehr gebracht.
+</div>
+',12,9);
 -- Dump tailored_text
 --
 
