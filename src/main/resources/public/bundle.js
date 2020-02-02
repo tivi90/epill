@@ -39695,7 +39695,7 @@ var Carousel = function (_React$Component) {
         value: function render() {
             return _react2.default.createElement(
                 "div",
-                { id: "myCarousel", className: "carousel slide carousel-fade", "data-ride": "carousel" },
+                { id: "myCarousel", className: "carousel carousel-fade", "data-ride": "carousel" },
                 _react2.default.createElement(
                     "div",
                     { className: "carousel-inner" },
@@ -39849,7 +39849,7 @@ var Carousel1 = function (_React$Component) {
 
             return _react2.default.createElement(
                 "div",
-                { id: "myCarousel", className: "carousel slide carousel-fade", "data-ride": "carousel" },
+                { id: "myCarousel", className: "carousel carousel-fade", "data-ride": "carousel" },
                 _react2.default.createElement(
                     "div",
                     { className: "carousel-inner" },
@@ -42581,7 +42581,7 @@ var Footer = function (_React$Component) {
 							_react2.default.createElement(
 								_reactRouterDom.Link,
 								{ to: "/" },
-								_react2.default.createElement("img", { src: "/assets/images/logo_v.svg", className: "logo", title: "fratcher", alt: "fratcher" })
+								_react2.default.createElement("img", { src: "/assets/images/Logo_v.svg", className: "logo", title: "fratcher", alt: "fratcher" })
 							)
 						),
 						_react2.default.createElement(
@@ -43253,7 +43253,7 @@ var Navigation = function (_React$Component) {
                         _react2.default.createElement(
                             _reactRouterDom.Link,
                             { to: "/", className: "navbar-brand" },
-                            _react2.default.createElement("img", { src: "/assets/images/logo_v.svg", className: "logo" })
+                            _react2.default.createElement("img", { src: "/assets/images/Logo_v.svg", className: "logo" })
                         ),
                         _react2.default.createElement(
                             "div",

@@ -33,7 +33,7 @@ class Navigation extends React.Component {
             <div className="container-fluid info_navbar">
                 <div className="container">
                     <Link to="/" className="navbar-brand">
-                        <img src="/assets/images/logo_v.svg" className="logo"></img>
+                        <img src="/assets/images/Logo_v.svg" className="logo"></img>
                     </Link>
                    <div style={{float:"right"}}>
                     <AutoComplete {...this.props}  />

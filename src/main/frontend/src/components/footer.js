@@ -32,7 +32,7 @@ class Footer extends React.Component {
 						<div className="row bottom-rule">
 							<div className="col-sm-4 footer-section">
 								<Link to="/">
-								 	<img src="/assets/images/logo_v.svg" className="logo" title="fratcher" alt="fratcher"></img>
+								 	<img src="/assets/images/Logo_v.svg" className="logo" title="fratcher" alt="fratcher"></img>
 								</Link>
 							</div>
 							<div className="col-sm-5 footer-section">

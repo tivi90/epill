@@ -51,7 +51,7 @@ class Carousel1 extends React.Component {
         title = t('drugs');
 
         return (
-            <div id="myCarousel" className="carousel slide carousel-fade" data-ride="carousel">
+            <div id="myCarousel" className="carousel carousel-fade" data-ride="carousel">
                 <div className="carousel-inner">
                     <div className="carousel-item active">
                         <div className="mask flex-center">

@@ -191,10 +191,6 @@ Navbar
     color: #000 !important;
 }
 
-.dropdown-menu > li > a {
-    color: #fff !important;
-
-}
 
 .navbar-nav li a:hover,
 .navbar-nav li.active a {
