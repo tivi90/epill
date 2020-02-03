@@ -2360,7 +2360,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
 <!-- Allgemein -->
 <div class="row" style="padding-left: 15px;">
     Amlodipin (besilat) Dexcel 5 mg enthält den Wirkstoff Amlodipin, der zur Arzneimittelgruppe
-    der so genannten Calciumantagonisten gehört. </div>
+    der so genannten Calciumantagonisten geh&ouml;rt. </div>
 <div class="row" style="padding-left: 15px;">
     Amlodipin (besilat) Dexcel 5 mg wird zur Behandlung von hohem Blutdruck (Hypertonie)
     angewendet oder zur Behandlung einer bestimmten Form von Schmerzen im Brustbereich,
