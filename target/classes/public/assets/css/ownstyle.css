@@ -9,6 +9,7 @@ Navbar
     margin-top: 40px;
 }
 
+
 #myCarousel .carousel-item .mask {
     position: absolute;
     top: 0;
@@ -647,6 +648,13 @@ footer .glyphicon {
     }
     modal-dialog {
         width: auto;
+    }
+    .m20t {
+        margin-top: 20px;
+    }
+
+    .xs-center{
+        text-align: center;
     }
 }
 
