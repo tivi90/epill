@@ -40693,7 +40693,7 @@ var DrugDetail = function (_React$Component) {
                     { className: "no-banner" },
                     _react2.default.createElement(
                         "div",
-                        { className: "round-button-outer report-round-button" },
+                        { className: "round-button-outer report-round-button round_info" },
                         _react2.default.createElement(
                             "div",
                             { id: "reportBtn", className: "round-button-inner-main", "data-toggle": "modal", "data-target": "#info" },
@@ -40747,7 +40747,7 @@ var DrugDetail = function (_React$Component) {
                     ),
                     _react2.default.createElement(
                         "div",
-                        { className: "round-button-outer report-round-button no_animation", style: { top: "190px" } },
+                        { className: "round-button-outer report-round-button no_animation round_address" },
                         _react2.default.createElement(
                             "div",
                             { id: "reportBtn", className: "round-button-inner-main no_animation", "data-toggle": "modal",
@@ -40802,7 +40802,7 @@ var DrugDetail = function (_React$Component) {
                     ),
                     _react2.default.createElement(
                         "div",
-                        { className: "round-button-outer report-round-button no_animation", style: { top: "266px" } },
+                        { className: "round-button-outer report-round-button no_animation round_nebenwirkung" },
                         _react2.default.createElement(
                             "div",
                             { id: "reportBtn", className: "round-button-inner-main no_animation", "data-toggle": "modal",
@@ -40972,10 +40972,10 @@ var DrugDetail = function (_React$Component) {
                             ),
                             _User2.default.isAuthenticated() && drug.personalizedInformation && _react2.default.createElement(
                                 "div",
-                                { className: "alert bubble  row w3-animate-right" },
+                                { className: "alert bubble_right  row w3-animate-right" },
                                 _react2.default.createElement(
                                     "div",
-                                    { className: "speech-bubble" },
+                                    { className: "speech-bubble_right" },
                                     _react2.default.createElement(
                                         "a",
                                         { href: "#", className: "close", "data-dismiss": "alert",
@@ -40985,7 +40985,7 @@ var DrugDetail = function (_React$Component) {
                                     _react2.default.createElement("span", {
                                         dangerouslySetInnerHTML: this.createMarkup(drug.personalizedInformation) })
                                 ),
-                                _react2.default.createElement("img", { className: "speech-bubble-person", src: "./../../assets/images/logo_chat.png" })
+                                _react2.default.createElement("img", { className: "speech-bubble-person_right", src: "./../../assets/images/logo_chat.png" })
                             ),
                             _react2.default.createElement(
                                 "div",
@@ -41805,24 +41805,32 @@ var DrugList = function (_React$Component) {
                 "section",
                 { className: "diseases" },
                 _react2.default.createElement(
-                    "b",
-                    null,
-                    " ",
-                    t('usedWhen') + ": "
-                ),
-                _react2.default.createElement(
-                    "ul",
-                    null,
-                    " ",
-                    drug.disease.map(function (disease) {
-                        return _react2.default.createElement(
-                            "li",
-                            { key: disease.id },
-                            disease.name
-                        );
-                    }).reduce(function (prev, curr) {
-                        return [prev, curr];
-                    })
+                    "div",
+                    { className: "col-sm-12" },
+                    _react2.default.createElement(
+                        "p",
+                        null,
+                        _react2.default.createElement(
+                            "b",
+                            null,
+                            " ",
+                            t('usedWhen') + ": "
+                        )
+                    ),
+                    _react2.default.createElement(
+                        "ul",
+                        null,
+                        " ",
+                        drug.disease.map(function (disease) {
+                            return _react2.default.createElement(
+                                "li",
+                                { key: disease.id },
+                                disease.name
+                            );
+                        }).reduce(function (prev, curr) {
+                            return [prev, curr];
+                        })
+                    )
                 )
             );
         }
@@ -41839,33 +41847,48 @@ var DrugList = function (_React$Component) {
                 "section",
                 { className: "diseases " },
                 _react2.default.createElement(
-                    "p",
-                    null,
+                    "div",
+                    { className: "col-sm-9" },
                     _react2.default.createElement(
-                        "b",
+                        "p",
+                        null,
+                        _react2.default.createElement(
+                            "b",
+                            null,
+                            "  ",
+                            t('pharmaceuticalForm') + ": ",
+                            " "
+                        )
+                    ),
+                    _react2.default.createElement(
+                        "ul",
                         null,
                         "  ",
-                        t('pharmaceuticalForm') + ": ",
-                        " "
+                        drug.pharmaceuticalForm.map(function (pharmaceuticalForm) {
+                            return _react2.default.createElement(
+                                "li",
+                                { key: pharmaceuticalForm.id },
+                                pharmaceuticalForm.name
+                            );
+                        }).reduce(function (prev, curr) {
+                            return [prev, curr];
+                        })
                     )
                 ),
                 _react2.default.createElement(
-                    "ul",
-                    null,
-                    "  ",
+                    "div",
+                    { className: "col-sm-2" },
                     drug.pharmaceuticalForm.map(function (pharmaceuticalForm) {
                         return _react2.default.createElement(
-                            "li",
-                            {
-                                key: pharmaceuticalForm.id },
-                            pharmaceuticalForm.name,
-                            " ",
-                            _react2.default.createElement("img", { style: { width: "35px" },
+                            "span",
+                            { key: pharmaceuticalForm.id },
+                            _react2.default.createElement("img", { style: { width: "40px" },
                                 key: pharmaceuticalForm.id,
                                 src: "./../../assets/p_form/" + pharmaceuticalForm.id + ".svg",
                                 className: "drug-feature-icon",
                                 alt: pharmaceuticalForm.name,
-                                title: pharmaceuticalForm.name })
+                                title: pharmaceuticalForm.name }),
+                            " "
                         );
                     }).reduce(function (prev, curr) {
                         return [prev, curr];
@@ -41884,19 +41907,23 @@ var DrugList = function (_React$Component) {
 
 
             return _react2.default.createElement(
-                "p",
-                null,
-                " ",
-                t('activeSubstance') + ": ",
-                drug.activeSubstance.map(function (substance) {
-                    return _react2.default.createElement(
-                        "span",
-                        { key: substance.id },
-                        substance.name
-                    );
-                }).reduce(function (prev, curr) {
-                    return [prev, ', ', curr];
-                })
+                "div",
+                { className: "col-sm-12" },
+                _react2.default.createElement(
+                    "p",
+                    null,
+                    " ",
+                    t('activeSubstance') + ": ",
+                    drug.activeSubstance.map(function (substance) {
+                        return _react2.default.createElement(
+                            "span",
+                            { key: substance.id },
+                            substance.name
+                        );
+                    }).reduce(function (prev, curr) {
+                        return [prev, ', ', curr];
+                    })
+                )
             );
         }
     }, {
@@ -41915,28 +41942,34 @@ var DrugList = function (_React$Component) {
             return drugs.map(function (drug) {
                 var t = _this10.props.t;
 
-                var itemClass = ["item  col-md-4 col-lg-4 grid-group-item padd padd_md"];
+                var itemClass = ["item  col-md-4 col-lg-4 grid-group-item  padd_md"];
                 var drugname = ["group inner list-group-item-heading med_header hidden"];
                 var drugname1 = ["group inner med_header"];
                 var medfeat = ["row med_drugfeature hidden"];
                 var medfeat1 = ["row med_drugfeature"];
                 var col1Class = [""];
+                var col2Class = [""];
                 var col4Class = [""];
                 var col5Class = [""];
                 var col6Class = ["info_sec "];
                 var col8Class = [" "];
                 var col11Class = ["full_content"];
+                var col9Class = ["full_content"];
+                var col7Class = ["full_content"];
                 var coltorowClass = ["col-md-4 nopadd"];
                 if (_this10.state.addClass) {
-                    itemClass.push('list-group-item ');
+                    itemClass.push('list-group-item nopadd');
                     drugname.push('');
                     drugname1.push('');
                     medfeat.push('');
                     col1Class.push('col-md-1 ');
+                    col2Class.push('col-md-2 ');
                     col4Class.push('col-md-4 ');
                     col5Class.push('col-md-5 ');
                     col6Class.push('col-md-6 ');
-                    col8Class.push('col-md-7 ');
+                    col7Class.push('col-md-7 ');
+                    col8Class.push('col-md-8 ');
+                    col9Class.push('col-md-9 ');
                     col11Class.push('col-md-11 ');
                     coltorowClass.push('fullrow');
                 }
@@ -41951,7 +41984,7 @@ var DrugList = function (_React$Component) {
                             { className: "thumbnail medicine" },
                             _react2.default.createElement(
                                 "div",
-                                { className: col4Class.join(' ') },
+                                { className: col4Class.join('list_pic ') },
                                 _react2.default.createElement(
                                     _reactRouterDom.Link,
                                     { to: "/drug/" + drug.id },
@@ -41987,20 +42020,28 @@ var DrugList = function (_React$Component) {
                                 { className: col8Class.join(' ') },
                                 _react2.default.createElement(
                                     "div",
-                                    { className: col11Class.join('di ') },
+                                    { className: col7Class.join('di ') },
                                     _this10.renderPharmaceuticalForm(drug),
                                     _this10.renderDisease(drug),
                                     _User2.default.isAuthenticated() && _react2.default.createElement(
                                         "section",
                                         { className: "diseases" },
                                         _react2.default.createElement(
-                                            "b",
-                                            null,
-                                            " ",
-                                            t('application') + ": "
-                                        ),
-                                        drug.personalizedInformation && _react2.default.createElement("div", { className: "minimum-summary",
-                                            dangerouslySetInnerHTML: _this10.createMarkup(drug.personalizedInformation) })
+                                            "div",
+                                            { className: "col-sm-12" },
+                                            _react2.default.createElement(
+                                                "p",
+                                                null,
+                                                _react2.default.createElement(
+                                                    "b",
+                                                    null,
+                                                    " ",
+                                                    t('application') + ": "
+                                                )
+                                            ),
+                                            drug.personalizedInformation && _react2.default.createElement("div", { className: "minimum-summary",
+                                                dangerouslySetInnerHTML: _this10.createMarkup(drug.personalizedInformation) })
+                                        )
                                     )
                                 ),
                                 _react2.default.createElement(
@@ -42014,7 +42055,7 @@ var DrugList = function (_React$Component) {
                                 ),
                                 _react2.default.createElement(
                                     "div",
-                                    { className: col1Class.join(' ') },
+                                    { className: col2Class.join('col-md-offset-3 ') },
                                     _User2.default.isAuthenticated() && _react2.default.createElement(
                                         "div",
                                         { className: "row" },
@@ -42264,13 +42305,13 @@ var DrugList = function (_React$Component) {
                                 this.state.addClass ? _react2.default.createElement(
                                     "div",
                                     null,
-                                    _react2.default.createElement("span", { className: "glyphicon glyphicon-th-list" }),
-                                    "List"
+                                    _react2.default.createElement("span", { className: "glyphicon glyphicon-th" }),
+                                    "Grid"
                                 ) : _react2.default.createElement(
                                     "div",
                                     null,
-                                    _react2.default.createElement("span", { className: "glyphicon glyphicon-th" }),
-                                    "Grid"
+                                    _react2.default.createElement("span", { className: "glyphicon glyphicon-th-list" }),
+                                    "List"
                                 )
                             )
                         )
@@ -42280,15 +42321,23 @@ var DrugList = function (_React$Component) {
                         { className: "container" },
                         _User2.default.isAuthenticated() && _User2.default.levelOfDetail > 1 && _react2.default.createElement(
                             "div",
-                            { className: "alert alert-info" },
-                            _react2.default.createElement("span", { className: "glyphicon glyphicon-info-sign", "aria-hidden": "true" }),
+                            { className: "alert bubble_left  row w3-animate-right" },
                             _react2.default.createElement(
-                                "span",
-                                { className: "sr-only" },
-                                "Info:"
+                                "div",
+                                { className: "speech-bubble_left" },
+                                _react2.default.createElement(
+                                    "a",
+                                    { href: "#", className: "close", "data-dismiss": "alert",
+                                        "aria-label": "close" },
+                                    "\xD7"
+                                ),
+                                "Hi ",
+                                firstname,
+                                " , ",
+                                _react2.default.createElement("br", null),
+                                description.replace("%User.firstname%", firstname).replace("%User.lastname%", lastname)
                             ),
-                            "\xA0",
-                            description.replace("%User.firstname%", firstname).replace("%User.lastname%", lastname)
+                            _react2.default.createElement("img", { className: "speech-bubble_left-person", src: "./../../assets/images/logo_chat.png" })
                         ),
                         drugs.length > 1 && _User2.default.isAuthenticated() && interactions.length > 0 && _react2.default.createElement(
                             "div",
@@ -42512,7 +42561,7 @@ exports.default = (0, _reactI18next.translate)()(EmptyList);
 
 
 Object.defineProperty(exports, "__esModule", {
-	value: true
+    value: true
 });
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -42538,220 +42587,224 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 var Footer = function (_React$Component) {
-	_inherits(Footer, _React$Component);
+    _inherits(Footer, _React$Component);
 
-	function Footer(props) {
-		_classCallCheck(this, Footer);
+    function Footer(props) {
+        _classCallCheck(this, Footer);
 
-		var _this = _possibleConstructorReturn(this, (Footer.__proto__ || Object.getPrototypeOf(Footer)).call(this, props));
+        var _this = _possibleConstructorReturn(this, (Footer.__proto__ || Object.getPrototypeOf(Footer)).call(this, props));
 
-		_this.status = {
-			show: false
-		};
+        _this.status = {
+            show: false
+        };
 
-		_this.toggleShow = _this.toggleShow.bind(_this);
-		return _this;
-	}
+        _this.toggleShow = _this.toggleShow.bind(_this);
+        return _this;
+    }
 
-	_createClass(Footer, [{
-		key: "toggleShow",
-		value: function toggleShow(event) {
-			this.status.show = !this.status.show;
-			this.setState(this.status);
-		}
-	}, {
-		key: "render",
-		value: function render() {
-			var t = this.props.t;
+    _createClass(Footer, [{
+        key: "toggleShow",
+        value: function toggleShow(event) {
+            this.status.show = !this.status.show;
+            this.setState(this.status);
+        }
+    }, {
+        key: "render",
+        value: function render() {
+            var t = this.props.t;
 
-			var show = this.status.show;
+            var show = this.status.show;
 
-			return _react2.default.createElement(
-				"footer",
-				{ className: "footer" },
-				_react2.default.createElement(
-					"div",
-					{ className: "container" },
-					_react2.default.createElement(
-						"div",
-						{ className: "row bottom-rule" },
-						_react2.default.createElement(
-							"div",
-							{ className: "col-sm-4 footer-section" },
-							_react2.default.createElement(
-								_reactRouterDom.Link,
-								{ to: "/" },
-								_react2.default.createElement("img", { src: "/assets/images/logo_v.svg", className: "logo", title: "fratcher", alt: "fratcher" })
-							)
-						),
-						_react2.default.createElement(
-							"div",
-							{ className: "col-sm-5 footer-section" },
-							_react2.default.createElement(
-								"ul",
-								{ className: "list-inline" },
-								_react2.default.createElement(
-									"li",
-									{ className: "text-uppercase" },
-									"ePill:"
-								),
-								_react2.default.createElement(
-									"li",
-									null,
-									_react2.default.createElement(
-										"a",
-										{ href: "http://www.aifb.kit.edu/web/Critical_Information_Infrastructures/en", target: "blank" },
-										t("team")
-									)
-								),
-								_react2.default.createElement(
-									"li",
-									null,
-									_react2.default.createElement(
-										"a",
-										{ href: "http://www.aifb.kit.edu/web/Anton_Grube/en", target: "blank" },
-										t("articles")
-									)
-								),
-								_react2.default.createElement(
-									"li",
-									null,
-									_react2.default.createElement(
-										"a",
-										{ href: "#/about" },
-										t('whyRegister')
-									)
-								)
-							),
-							_react2.default.createElement(
-								"ul",
-								{ className: "list-inline" },
-								_react2.default.createElement(
-									"li",
-									{ className: "text-uppercase" },
-									t("help"),
-									":"
-								),
-								_react2.default.createElement(
-									"li",
-									null,
-									_react2.default.createElement(
-										"a",
-										{ href: "#/sitemap" },
-										t("functions")
-									)
-								),
-								_react2.default.createElement(
-									"li",
-									null,
-									_react2.default.createElement(
-										"a",
-										{ href: "#/privacy" },
-										t("privacy")
-									)
-								)
-							)
-						),
-						_react2.default.createElement(
-							"div",
-							{ className: "col-sm-3" },
-							_react2.default.createElement(
-								"address",
-								null,
-								_react2.default.createElement(
-									"strong",
-									null,
-									"Karlsruher Institut f\xFCr Technologie"
-								),
-								_react2.default.createElement("br", null),
-								" KIT-Campus S\xFCd - Kollegiengeb\xE4ude am Kronenplatz (Geb. 05.20)",
-								_react2.default.createElement("br", null),
-								" Kaiserstrasse 89",
-								_react2.default.createElement("br", null),
-								" D-76133 Karlsruhe",
-								_react2.default.createElement("br", null),
-								" (+49) 7621 608-43679",
-								_react2.default.createElement("br", null),
-								_react2.default.createElement(
-									"a",
-									{ href: "mailto:anton.grube@kit.edu" },
-									t("contactUs")
-								)
-							)
-						)
-					),
-					_react2.default.createElement(
-						"div",
-						{ className: "row bottom-rule" },
-						_react2.default.createElement(
-							"div",
-							{ className: "col-sm-12" },
-							_react2.default.createElement(
-								"nav",
-								{ className: "navbar navbar-default navbar-footer" },
-								_react2.default.createElement(
-									"ul",
-									{ className: "nav navbar-nav" },
-									_react2.default.createElement(
-										"li",
-										null,
-										_react2.default.createElement(
-											"a",
-											{ href: "#" },
-											t("customerCare")
-										)
-									),
-									_react2.default.createElement(
-										"li",
-										null,
-										_react2.default.createElement(
-											"a",
-											{ href: "#" },
-											t("news")
-										)
-									),
-									_react2.default.createElement(
-										"li",
-										null,
-										_react2.default.createElement(
-											"a",
-											{ href: "#/imprint" },
-											t("imprint")
-										)
-									)
-								)
-							)
-						)
-					),
-					_react2.default.createElement(
-						"div",
-						{ className: "row leg-room" },
-						_react2.default.createElement(
-							"div",
-							{ className: "col-md-12 text-center" },
-							_react2.default.createElement(
-								"h3",
-								{ className: "text-uppercase" },
-								"ePill"
-							),
-							_react2.default.createElement(
-								"p",
-								{ className: "monospaced" },
-								"\xA92019 ePill ",
-								_react2.default.createElement(
-									"span",
-									{ className: "text-uppercase" },
-									"All Rights Reserved"
-								)
-							)
-						)
-					)
-				)
-			);
-		}
-	}]);
+            return _react2.default.createElement(
+                "footer",
+                { className: "footer" },
+                _react2.default.createElement(
+                    "div",
+                    { className: "container" },
+                    _react2.default.createElement(
+                        "div",
+                        { className: "row bottom-rule" },
+                        _react2.default.createElement(
+                            "div",
+                            { className: "col-sm-4 footer-section" },
+                            _react2.default.createElement(
+                                _reactRouterDom.Link,
+                                { to: "/" },
+                                _react2.default.createElement("img", { src: "/assets/images/logo_v.svg", className: "logo", title: "fratcher",
+                                    alt: "fratcher" })
+                            )
+                        ),
+                        _react2.default.createElement(
+                            "div",
+                            { className: "col-sm-5 footer-section" },
+                            _react2.default.createElement(
+                                "ul",
+                                { className: "list-inline" },
+                                _react2.default.createElement(
+                                    "li",
+                                    { className: "text-uppercase" },
+                                    "ePill:"
+                                ),
+                                _react2.default.createElement(
+                                    "li",
+                                    null,
+                                    _react2.default.createElement(
+                                        "a",
+                                        { href: "http://www.aifb.kit.edu/web/Critical_Information_Infrastructures/en",
+                                            target: "blank" },
+                                        t("team")
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    "li",
+                                    null,
+                                    _react2.default.createElement(
+                                        "a",
+                                        { href: "http://www.aifb.kit.edu/web/Anton_Grube/en",
+                                            target: "blank" },
+                                        t("articles")
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    "li",
+                                    null,
+                                    _react2.default.createElement(
+                                        "a",
+                                        { href: "#/about" },
+                                        t('whyRegister')
+                                    )
+                                )
+                            ),
+                            _react2.default.createElement(
+                                "ul",
+                                { className: "list-inline" },
+                                _react2.default.createElement(
+                                    "li",
+                                    { className: "text-uppercase" },
+                                    t("help"),
+                                    ":"
+                                ),
+                                _react2.default.createElement(
+                                    "li",
+                                    null,
+                                    _react2.default.createElement(
+                                        "a",
+                                        { href: "#/sitemap" },
+                                        t("functions")
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    "li",
+                                    null,
+                                    _react2.default.createElement(
+                                        "a",
+                                        { href: "#/privacy" },
+                                        t("privacy")
+                                    )
+                                )
+                            )
+                        ),
+                        _react2.default.createElement(
+                            "div",
+                            { className: "col-sm-3" },
+                            _react2.default.createElement(
+                                "address",
+                                null,
+                                _react2.default.createElement(
+                                    "strong",
+                                    null,
+                                    "Karlsruher Institut f\xFCr Technologie"
+                                ),
+                                _react2.default.createElement("br", null),
+                                " KIT-Campus S\xFCd - Kollegiengeb\xE4ude am Kronenplatz (Geb. 05.20)",
+                                _react2.default.createElement("br", null),
+                                " Kaiserstrasse 89",
+                                _react2.default.createElement("br", null),
+                                " D-76133 Karlsruhe",
+                                _react2.default.createElement("br", null),
+                                " (+49) 7621 608-43679",
+                                _react2.default.createElement("br", null),
+                                _react2.default.createElement(
+                                    "a",
+                                    { href: "mailto:anton.grube@kit.edu" },
+                                    t("contactUs")
+                                )
+                            )
+                        )
+                    ),
+                    _react2.default.createElement(
+                        "div",
+                        { className: "row bottom-rule" },
+                        _react2.default.createElement(
+                            "div",
+                            { className: "col-sm-12" },
+                            _react2.default.createElement(
+                                "nav",
+                                { className: "navbar navbar-default navbar-footer" },
+                                _react2.default.createElement(
+                                    "ul",
+                                    { className: "nav navbar-nav xs-center" },
+                                    _react2.default.createElement(
+                                        "li",
+                                        null,
+                                        _react2.default.createElement(
+                                            "a",
+                                            { href: "#" },
+                                            t("customerCare")
+                                        )
+                                    ),
+                                    _react2.default.createElement(
+                                        "li",
+                                        null,
+                                        _react2.default.createElement(
+                                            "a",
+                                            { href: "#" },
+                                            t("news")
+                                        )
+                                    ),
+                                    _react2.default.createElement(
+                                        "li",
+                                        null,
+                                        _react2.default.createElement(
+                                            "a",
+                                            { href: "#/imprint" },
+                                            t("imprint")
+                                        )
+                                    )
+                                )
+                            )
+                        )
+                    ),
+                    "S",
+                    _react2.default.createElement(
+                        "div",
+                        { className: "row leg-room" },
+                        _react2.default.createElement(
+                            "div",
+                            { className: "col-md-12 text-center" },
+                            _react2.default.createElement(
+                                "h3",
+                                { className: "text-uppercase" },
+                                "ePill"
+                            ),
+                            _react2.default.createElement(
+                                "p",
+                                { className: "monospaced" },
+                                "\xA92019 ePill ",
+                                _react2.default.createElement(
+                                    "span",
+                                    { className: "text-uppercase" },
+                                    "All Rights Reserved"
+                                )
+                            )
+                        )
+                    )
+                )
+            );
+        }
+    }]);
 
-	return Footer;
+    return Footer;
 }(_react2.default.Component);
 
 exports.default = (0, _reactI18next.translate)()(Footer);

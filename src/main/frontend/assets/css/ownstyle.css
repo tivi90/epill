@@ -179,7 +179,7 @@ Navbar
 }
 
 .navbar {
-    background-color: #f7f4eb;
+    background-color: #d8d8d8;
     border: 0;
     line-height: 1.42857143 !important;
     letter-spacing: 1px;
@@ -208,7 +208,22 @@ Navbar
     color: #000 !important;
 }
 
-.speech-bubble {
+
+.bubble_right {
+    z-index: 5;
+    position: absolute;
+    left: 66%;
+    top: 68vh;
+}
+
+.bubble_left {
+    z-index: 5;
+    position: absolute;
+    right: 64%;
+    top: 36vh;
+}
+
+.speech-bubble_right {
     position: relative;
     background: #88d3ce;
     border-radius: .4em;
@@ -218,7 +233,7 @@ Navbar
     padding: 12px;
 }
 
-.speech-bubble:after {
+.speech-bubble_right:after {
     content: '';
     position: absolute;
     right: 0;
@@ -233,10 +248,39 @@ Navbar
     margin-right: -28px;
 }
 
-.speech-bubble-person {
+.speech-bubble_left:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 0;
+    height: 0;
+    border: 28px solid transparent;
+    border-left-color: #ffffffe8;
+    border-right: 0;
+    border-top: 0;
+    margin-top: -14px;
+    margin-right: -28px;
+}
+
+.speech-bubble_right-person {
     float: right;
     width: 24%;
+}
 
+.speech-bubble_left {
+    position: relative;
+    background: #ffffffe8;
+    border-radius: .4em;
+    color: #0f0f0f;
+    width: 75%;
+    float: left;
+    padding: 12px;
+}
+
+.speech-bubble_left-person {
+    float: left;
+    width: 24%;
 }
 
 .jumbotron {
@@ -252,14 +296,14 @@ Navbar
 /* grid */
 
 .grid-group-item > .medicine {
-    height: 563px;
-    padding: 15px;
+    height: 558px;
     margin-top: 30px;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
 }
 
 img.group.list-group-image {
-    height: 200px;
+    height: 170px;
+    padding: 10px;
 }
 
 .hiddennot {
@@ -302,15 +346,7 @@ img.group.list-group-image {
     width: 100% !important;
     border-radius: 0 !important;
     padding: 12px 18px !important;
-    margin-bottom: 120%;
 
-}
-
-.bubble {
-    z-index: 5;
-    position: absolute;
-    left: 66%;
-    top: 68vh;
 }
 
 
@@ -643,19 +679,40 @@ footer .glyphicon {
         margin: 0 !important;
     }
 
-    .text-center-xs{
+    .text-center-xs {
         text-align: center;
     }
+
     modal-dialog {
         width: auto;
     }
+
     .m20t {
         margin-top: 20px;
     }
 
-    .xs-center{
+    .xs-center {
         text-align: center;
     }
+
+    .grid-group-item > .medicine {
+        margin-top: 110px;
+    }
+
+    .bubble_left {
+        z-index: 5;
+        position: absolute;
+        right: -12%;
+        top: 50vh;
+    }
+
+    .speech-bubble_left {
+        background: #f1ebeb;
+    }
+    .speech-bubble_left-person {
+
+        margin-top: 27px;}
+
 }
 
 

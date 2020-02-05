@@ -8,11 +8,27 @@
     font-size: 18px;
     text-align: center;
     border-top: solid 1px;
-    padding: 10px;
+    padding: 7px;
     border-bottom: solid 1px;
     background-color: #0c827a;
     color: white;
+    margin-top: 15px;
 }
+
+.drug-feature-icon{
+    width: 40px;
+    margin-top: 12px;
+}
+
+.list_pic{
+    background-color: white;
+    border: 1px solid #c7c7c7;
+}
+
+.full_contentdi{
+    margin-top: 17px;
+}
+
 
 .med_head {
     text-align: center;
@@ -144,9 +160,21 @@
     color: white;
 }
 
+.round_info{
+    top:21%;
+}
+
+.round_address{
+    top:29%;
+}
+
+.round_nebenwirkung{
+    top:37%;
+}
+
+
 .report-round-button {
     right: 7%;
-    top: 115px;
     position: fixed;
     z-index: 1001;
     cursor: pointer;
@@ -214,7 +242,9 @@
 }
 
 .item.list-group-item:nth-of-type(odd):hover, .item.list-group-item:hover {
-    background: #428bca;
+    background: #dedede;
+    border: 1px solid #dcdcdc;
+    cursor: pointer;
 }
 
 .item.list-group-item > .medicine {
@@ -347,5 +377,23 @@
     }
     .content_header h1 {
         text-align: center;
+    }
+
+    .round_info{
+        top: 14%;
+        right: inherit;
+        left: 2%;
+    }
+
+    .round_address{
+        top: 21%;
+        right: inherit;
+        left: 2%;
+    }
+
+    .round_nebenwirkung{
+        top: 28%;
+        right: inherit;
+        left: 2%
     }
 }

@@ -11,6 +11,7 @@ import User from "./../util/User";
 
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 
+
 import {faHome} from "@fortawesome/free-solid-svg-icons";
 import {
     faInfo,
@@ -573,7 +574,7 @@ class DrugDetail extends React.Component {
                 <div className="no-banner">
 
                     {/*Button INFO*/}
-                    <div className="round-button-outer report-round-button">
+                    <div className="round-button-outer report-round-button round_info">
                         <div id="reportBtn" className="round-button-inner-main" data-toggle="modal" data-target="#info">
                             <FontAwesomeIcon icon={faInfo}/>
                         </div>
@@ -606,7 +607,7 @@ class DrugDetail extends React.Component {
                     {/*Button INFO ENDE*/}
 
                     {/*Button Address*/}
-                    <div className="round-button-outer report-round-button no_animation" style={{top: "190px"}}>
+                    <div className="round-button-outer report-round-button no_animation round_address">
                         <div id="reportBtn" className="round-button-inner-main no_animation" data-toggle="modal"
                              data-target="#adress">
                             <FontAwesomeIcon icon={faAddressCard}/></div>
@@ -636,7 +637,7 @@ class DrugDetail extends React.Component {
                     {/*Button  Address ENDE*/}
 
                     {/*Button REPORT*/}
-                    <div className="round-button-outer report-round-button no_animation" style={{top: "266px"}}>
+                    <div className="round-button-outer report-round-button no_animation round_nebenwirkung" >
                         <div id="reportBtn" className="round-button-inner-main no_animation" data-toggle="modal"
                              data-target="#melden">
                             <FontAwesomeIcon icon={faCommentMedical}/>
@@ -725,14 +726,14 @@ class DrugDetail extends React.Component {
                             {/*<h3>{drug.name} {drug.productGroup && drug.productGroup.name && <span className="text-muted">{drug.productGroup.name}</span> }</h3>*/}
                             {/*<span>v. {drug.version} | {t('publishingDate')}: {new Date(drug.year).toLocaleDateString()}</span>*/}
                             {User.isAuthenticated() && drug.personalizedInformation &&
-                            <div className="alert bubble  row w3-animate-right">
-                                <div className="speech-bubble">
+                            <div className="alert bubble_right  row w3-animate-right">
+                                <div className="speech-bubble_right">
                                     <a href="#" className="close" data-dismiss="alert"
                                        aria-label="close">&times;</a>
                                     <span
                                         dangerouslySetInnerHTML={this.createMarkup(drug.personalizedInformation)}/>
                                 </div>
-                                <img className="speech-bubble-person" src="./../../assets/images/logo_chat.png"/>
+                                <img className="speech-bubble-person_right" src="./../../assets/images/logo_chat.png"/>
                             </div>
                             }
                             <div className="row featurette drug-detail-header">

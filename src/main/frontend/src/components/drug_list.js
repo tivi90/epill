@@ -356,9 +356,11 @@ class DrugList extends React.Component {
 
         return (
             <section className="diseases">
-                <b> {t('usedWhen') + ": "}</b>
-                <ul> {drug.disease.map(disease => <li key={disease.id}>{disease.name}</li>)
-                    .reduce((prev, curr) => [prev, curr])}</ul>
+                <div className="col-sm-12">
+                    <p><b> {t('usedWhen') + ": "}</b></p>
+                    <ul> {drug.disease.map(disease => <li key={disease.id}>{disease.name}</li>)
+                        .reduce((prev, curr) => [prev, curr])}</ul>
+                </div>
             </section>
         );
     }
@@ -371,18 +373,24 @@ class DrugList extends React.Component {
         const {t} = this.props;
         return (
             <section className="diseases ">
-                <p><b>  {t('pharmaceuticalForm') + ": "} </b></p>
-                <ul>  {drug.pharmaceuticalForm.map(pharmaceuticalForm => <li
-                    key={pharmaceuticalForm.id}>{pharmaceuticalForm.name} <img style={{width: "35px"}}
-                                                                               key={pharmaceuticalForm.id}
-                                                                               src={"./../../assets/p_form/" + pharmaceuticalForm.id + ".svg"}
-                                                                               className="drug-feature-icon"
-                                                                               alt={pharmaceuticalForm.name}
-                                                                               title={pharmaceuticalForm.name}></img>
-                </li>)
-                    .reduce((prev, curr) => [prev, curr])}</ul>
-
-
+                <div className="col-sm-9">
+                    <p><b>  {t('pharmaceuticalForm') + ": "} </b></p>
+                    <ul>  {drug.pharmaceuticalForm.map(pharmaceuticalForm =>
+                        <li key={pharmaceuticalForm.id}>
+                            {pharmaceuticalForm.name}
+                        </li>)
+                        .reduce((prev, curr) => [prev, curr])}</ul>
+                </div>
+                <div className="col-sm-2">
+                    {drug.pharmaceuticalForm.map(pharmaceuticalForm => <span key={pharmaceuticalForm.id}>
+                        <img style={{width: "40px"}}
+                             key={pharmaceuticalForm.id}
+                             src={"./../../assets/p_form/" + pharmaceuticalForm.id + ".svg"}
+                             className="drug-feature-icon"
+                             alt={pharmaceuticalForm.name}
+                             title={pharmaceuticalForm.name}></img> </span>)
+                        .reduce((prev, curr) => [prev, curr])}
+                </div>
             </section>
         );
     }
@@ -395,10 +403,12 @@ class DrugList extends React.Component {
         const {t} = this.props;
 
         return (
-            <p> {t('activeSubstance') + ": "}
-                {drug.activeSubstance.map(substance => <span key={substance.id}>{substance.name}</span>)
-                    .reduce((prev, curr) => [prev, ', ', curr])}
-            </p>
+            <div className="col-sm-12">
+                <p> {t('activeSubstance') + ": "}
+                    {drug.activeSubstance.map(substance => <span key={substance.id}>{substance.name}</span>)
+                        .reduce((prev, curr) => [prev, ', ', curr])}
+                </p>
+            </div>
         );
     }
 
@@ -412,28 +422,34 @@ class DrugList extends React.Component {
 
         return drugs.map((drug => {
             const {t} = this.props;
-            let itemClass = ["item  col-md-4 col-lg-4 grid-group-item padd padd_md"]
+            let itemClass = ["item  col-md-4 col-lg-4 grid-group-item  padd_md"]
             let drugname = ["group inner list-group-item-heading med_header hidden"]
             let drugname1 = ["group inner med_header"]
             let medfeat = ["row med_drugfeature hidden"]
             let medfeat1 = ["row med_drugfeature"]
             let col1Class = [""]
+            let col2Class = [""]
             let col4Class = [""]
             let col5Class = [""]
             let col6Class = ["info_sec "]
             let col8Class = [" "]
             let col11Class = ["full_content"]
+            let col9Class = ["full_content"]
+            let col7Class = ["full_content"]
             let coltorowClass = ["col-md-4 nopadd"]
             if (this.state.addClass) {
-                itemClass.push('list-group-item ');
+                itemClass.push('list-group-item nopadd');
                 drugname.push('');
                 drugname1.push('');
                 medfeat.push('');
                 col1Class.push('col-md-1 ');
+                col2Class.push('col-md-2 ');
                 col4Class.push('col-md-4 ');
                 col5Class.push('col-md-5 ');
                 col6Class.push('col-md-6 ');
-                col8Class.push('col-md-7 ');
+                col7Class.push('col-md-7 ');
+                col8Class.push('col-md-8 ');
+                col9Class.push('col-md-9 ');
                 col11Class.push('col-md-11 ');
                 coltorowClass.push('fullrow');
 
@@ -443,7 +459,7 @@ class DrugList extends React.Component {
                 <div id="products" key={drug.id}>
                     <div className={itemClass.join(' ')}>
                         <div className="thumbnail medicine">
-                            <div className={col4Class.join(' ')}>
+                            <div className={col4Class.join('list_pic ')}>
                                 <Link to={`/drug/${drug.id}`}><h4 className={drugname.join('not')}>
                                     {drug.name}</h4></Link>
                                 <Link to={`/drug/${drug.id}`}>
@@ -457,16 +473,18 @@ class DrugList extends React.Component {
                                     {drug.name}</h4></Link>
                             </div>
                             <div className={col8Class.join(' ')}>
-                                <div className={col11Class.join('di ')}>
+                                <div className={col7Class.join('di ')}>
                                     {this.renderPharmaceuticalForm(drug)}
                                     {this.renderDisease(drug)}
                                     {User.isAuthenticated() &&
                                     <section className="diseases">
-                                        <b> {t('application') + ": "}</b>
-                                        {drug.personalizedInformation &&
-                                        <div className="minimum-summary"
-                                             dangerouslySetInnerHTML={this.createMarkup(drug.personalizedInformation)}/>
-                                        }
+                                        <div className="col-sm-12">
+                                            <p><b> {t('application') + ": "}</b></p>
+                                            {drug.personalizedInformation &&
+                                            <div className="minimum-summary"
+                                                 dangerouslySetInnerHTML={this.createMarkup(drug.personalizedInformation)}/>
+                                            }
+                                        </div>
                                     </section>}
                                 </div>
                                 <div className={col5Class.join(' hidden ')}>
@@ -474,7 +492,7 @@ class DrugList extends React.Component {
                                         {this.renderDrugFeatures(drug)}
                                     </div>
                                 </div>
-                                <div className={col1Class.join(' ')}>
+                                <div className={col2Class.join('col-md-offset-3 ')}>
 
                                     {User.isAuthenticated() &&
                                     <div className="row">
@@ -643,21 +661,24 @@ class DrugList extends React.Component {
                         <div className="btn-group">
                             <div id="list" className="btn btn-default btn-sm"
                                  onClick={this.toggle.bind(this)}> {this.state.addClass ?
-                                <div><span className="glyphicon glyphicon-th-list">
-            </span>List</div> : <div><span className="glyphicon glyphicon-th"></span>Grid</div>}</div>
+                                <div><span className="glyphicon glyphicon-th"></span>Grid</div> :
+                                <div><span className="glyphicon glyphicon-th-list"></span>List</div>
+                            }</div>
                         </div>
                     </div>
                     <div className="container">
-
                         {User.isAuthenticated() && User.levelOfDetail > 1 &&
-                        <div className="alert alert-info">
-                            <span className="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
-                            <span className="sr-only">Info:</span>&nbsp;
-                            {description.replace("%User.firstname%", firstname).replace("%User.lastname%", lastname)}
+                        <div className="alert bubble_left  row w3-animate-right">
+                            <div className="speech-bubble_left">
+                                <a href="#" className="close" data-dismiss="alert"
+                                   aria-label="close">&times;</a>
+                                Hi {firstname} , <br />
+                                {description.replace("%User.firstname%", firstname).replace("%User.lastname%", lastname)}
+                            </div>
+                            <img className="speech-bubble_left-person" src="./../../assets/images/logo_chat.png"/>
                         </div>
                         }
-
-                        {drugs.length > 1 && User.isAuthenticated() && interactions.length > 0 &&
+                         {drugs.length > 1 && User.isAuthenticated() && interactions.length > 0 &&
                         <div
                             className={"alert alert-dismissable" + (User.redGreenColorblind ? " danger-red-green-colorblind" : " alert-danger")}>
                             <button type="button" className="close" data-dismiss="alert" aria-label="Close"><span
