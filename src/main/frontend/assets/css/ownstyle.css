@@ -296,7 +296,6 @@ Navbar
 /* grid */
 
 .grid-group-item > .medicine {
-    height: 558px;
     margin-top: 30px;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
 }
@@ -695,24 +694,39 @@ footer .glyphicon {
         text-align: center;
     }
 
-    .grid-group-item > .medicine {
-        margin-top: 110px;
-    }
 
     .bubble_left {
         z-index: 5;
         position: absolute;
         right: -12%;
-        top: 50vh;
+        top: 63vh;
     }
 
     .speech-bubble_left {
         background: #f1ebeb;
     }
+
     .speech-bubble_left-person {
 
-        margin-top: 27px;}
+        margin-top: 27px;
+    }
 
+    .diseases {
+        padding-bottom: 0px
+    }
+
+    .speech-bubble_right-person {
+        width: 26%;
+    }
+
+    .speech-bubble_right {
+        width: 74%;
+    }
+
+    .bubble_right {
+        left: -2%;
+        top: 71vh;
+    }
 }
 
 

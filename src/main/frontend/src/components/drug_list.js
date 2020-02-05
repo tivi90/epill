@@ -373,7 +373,7 @@ class DrugList extends React.Component {
         const {t} = this.props;
         return (
             <section className="diseases ">
-                <div className="col-sm-9">
+                <div className="col-xs-9">
                     <p><b>  {t('pharmaceuticalForm') + ": "} </b></p>
                     <ul>  {drug.pharmaceuticalForm.map(pharmaceuticalForm =>
                         <li key={pharmaceuticalForm.id}>
@@ -381,7 +381,7 @@ class DrugList extends React.Component {
                         </li>)
                         .reduce((prev, curr) => [prev, curr])}</ul>
                 </div>
-                <div className="col-sm-2">
+                <div className="col-xs-2">
                     {drug.pharmaceuticalForm.map(pharmaceuticalForm => <span key={pharmaceuticalForm.id}>
                         <img style={{width: "40px"}}
                              key={pharmaceuticalForm.id}
@@ -436,7 +436,7 @@ class DrugList extends React.Component {
             let col11Class = ["full_content"]
             let col9Class = ["full_content"]
             let col7Class = ["full_content"]
-            let coltorowClass = ["col-md-4 nopadd"]
+            let coltorowClass = ["col-xs-4 nopadd"]
             if (this.state.addClass) {
                 itemClass.push('list-group-item nopadd');
                 drugname.push('');
@@ -668,7 +668,7 @@ class DrugList extends React.Component {
                     </div>
                     <div className="container">
                         {User.isAuthenticated() && User.levelOfDetail > 1 &&
-                        <div className="alert bubble_left  row w3-animate-right">
+                        <div className="alert bubble_left  row ">
                             <div className="speech-bubble_left">
                                 <a href="#" className="close" data-dismiss="alert"
                                    aria-label="close">&times;</a>

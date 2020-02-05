@@ -733,7 +733,7 @@ class DrugDetail extends React.Component {
                                     <span
                                         dangerouslySetInnerHTML={this.createMarkup(drug.personalizedInformation)}/>
                                 </div>
-                                <img className="speech-bubble-person_right" src="./../../assets/images/logo_chat.png"/>
+                                <img className="speech-bubble_right-person" src="./../../assets/images/logo_chat.png"/>
                             </div>
                             }
                             <div className="row featurette drug-detail-header">

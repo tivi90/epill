@@ -40985,7 +40985,7 @@ var DrugDetail = function (_React$Component) {
                                     _react2.default.createElement("span", {
                                         dangerouslySetInnerHTML: this.createMarkup(drug.personalizedInformation) })
                                 ),
-                                _react2.default.createElement("img", { className: "speech-bubble-person_right", src: "./../../assets/images/logo_chat.png" })
+                                _react2.default.createElement("img", { className: "speech-bubble_right-person", src: "./../../assets/images/logo_chat.png" })
                             ),
                             _react2.default.createElement(
                                 "div",
@@ -41848,7 +41848,7 @@ var DrugList = function (_React$Component) {
                 { className: "diseases " },
                 _react2.default.createElement(
                     "div",
-                    { className: "col-sm-9" },
+                    { className: "col-xs-9" },
                     _react2.default.createElement(
                         "p",
                         null,
@@ -41877,7 +41877,7 @@ var DrugList = function (_React$Component) {
                 ),
                 _react2.default.createElement(
                     "div",
-                    { className: "col-sm-2" },
+                    { className: "col-xs-2" },
                     drug.pharmaceuticalForm.map(function (pharmaceuticalForm) {
                         return _react2.default.createElement(
                             "span",
@@ -41956,7 +41956,7 @@ var DrugList = function (_React$Component) {
                 var col11Class = ["full_content"];
                 var col9Class = ["full_content"];
                 var col7Class = ["full_content"];
-                var coltorowClass = ["col-md-4 nopadd"];
+                var coltorowClass = ["col-xs-4 nopadd"];
                 if (_this10.state.addClass) {
                     itemClass.push('list-group-item nopadd');
                     drugname.push('');
@@ -42321,7 +42321,7 @@ var DrugList = function (_React$Component) {
                         { className: "container" },
                         _User2.default.isAuthenticated() && _User2.default.levelOfDetail > 1 && _react2.default.createElement(
                             "div",
-                            { className: "alert bubble_left  row w3-animate-right" },
+                            { className: "alert bubble_left  row " },
                             _react2.default.createElement(
                                 "div",
                                 { className: "speech-bubble_left" },
@@ -42775,7 +42775,6 @@ var Footer = function (_React$Component) {
                             )
                         )
                     ),
-                    "S",
                     _react2.default.createElement(
                         "div",
                         { className: "row leg-room" },

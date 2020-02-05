@@ -72,7 +72,7 @@ class Footer extends React.Component {
                             </nav>
                         </div>
                     </div>
-                    S
+
                     <div className="row leg-room">
                         <div className="col-md-12 text-center">
                             <h3 className="text-uppercase">ePill</h3>
