@@ -704,7 +704,7 @@ footer .glyphicon {
     }
 
     .xs-center {
-        text-align: center;
+        text-align: center !important;
     }
 
 

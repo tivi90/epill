@@ -637,7 +637,7 @@ class DrugDetail extends React.Component {
                     {/*Button  Address ENDE*/}
 
                     {/*Button REPORT*/}
-                    <div className="round-button-outer report-round-button no_animation round_nebenwirkung" >
+                    <div className="round-button-outer report-round-button no_animation round_nebenwirkung">
                         <div id="reportBtn" className="round-button-inner-main no_animation" data-toggle="modal"
                              data-target="#melden">
                             <FontAwesomeIcon icon={faCommentMedical}/>
@@ -727,15 +727,16 @@ class DrugDetail extends React.Component {
                             {/*<span>v. {drug.version} | {t('publishingDate')}: {new Date(drug.year).toLocaleDateString()}</span>*/}
                             {User.isAuthenticated() && drug.personalizedInformation &&
                             <div className="alert modal1 " data-dismiss="alert">
-                            <div className="alert bubble_right  row w3-animate-right">
-                                <div className="speech-bubble_right">
-                                    <a href="#" className="close" data-dismiss="alert"
-                                       aria-label="close">&times;</a>
-                                    <span
-                                        dangerouslySetInnerHTML={this.createMarkup(drug.personalizedInformation)}/>
+                                <div className="alert bubble_right  row w3-animate-right">
+                                    <div className="speech-bubble_right">
+                                        <a href="#" className="close" data-dismiss="alert"
+                                           aria-label="close">&times;</a>
+                                        <span
+                                            dangerouslySetInnerHTML={this.createMarkup(drug.personalizedInformation)}/>
+                                    </div>
+                                    <img className="speech-bubble_right-person"
+                                         src="./../../assets/images/logo_chat.png"/>
                                 </div>
-                                <img className="speech-bubble_right-person" src="./../../assets/images/logo_chat.png"/>
-                            </div>
                             </div>
                             }
                             <div className="row featurette drug-detail-header">
@@ -923,13 +924,17 @@ class DrugDetail extends React.Component {
                             </div>
                         </div>
                     </div>
+                    <div className="row xs-center backtomed">
+                        <a href="#/drug/list"> <i className="far fa-arrow-alt-circle-left"></i> zurück zu den
+                            Medkamenten</a>
+                    </div>
                 </div>
             </div>
-                );
+        );
 
 
-                }
-                }
+    }
+}
 
 
-                export default translate()(DrugDetail);
+export default translate()(DrugDetail);

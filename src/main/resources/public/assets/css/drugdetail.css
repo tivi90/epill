@@ -330,6 +330,10 @@
     font-size: 21px;
 }
 
+.backtomed{
+    text-align: right ;
+}
+
 .panel-title[aria-expanded="true"]::after {
     content: "\f106";
 }

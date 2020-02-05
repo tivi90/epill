@@ -507,10 +507,10 @@ INSERT INTO drug_drug_feature (iddrug, iddrug_feature) VALUES (7,1);
 INSERT INTO drug_drug_feature (iddrug, iddrug_feature) VALUES (8,4);
 INSERT INTO drug_drug_feature (iddrug, iddrug_feature) VALUES (9,7);
 INSERT INTO drug_drug_feature (iddrug, iddrug_feature) VALUES (10,8);
+INSERT INTO drug_drug_feature (iddrug, iddrug_feature) VALUES (11,3);
 INSERT INTO drug_drug_feature (iddrug, iddrug_feature) VALUES (11,8);
 INSERT INTO drug_drug_feature (iddrug, iddrug_feature) VALUES (12,8);
 INSERT INTO drug_drug_feature (iddrug, iddrug_feature) VALUES (12,3);
-INSERT INTO drug_drug_feature (iddrug, iddrug_feature) VALUES (12,11);
 
 --
 -- Dumping data for table `drug_pharmaceutical_form`
@@ -691,7 +691,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
 INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (86,0,'Beispieltext',10,8);
 INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (87,0,'Beispieltext',10,1);
 INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (88,0,'Beispieltext',10,9);
-
+--
 --Metformin--
 INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (89,0,'Beispieltext1',11,1);
 INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (90,0,'Beispieltext2',11,2);
@@ -2613,7 +2613,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h3 class="modal-title"><i class="fas fa-question"></i> <i class="fas fa-question"></i>  Was bedeutet Angina pectoris?</h3>
+                <h3 class="modal-title"><i class="fas fa-question"></i> Was bedeutet Angina pectoris?</h3>
             </div>
             <div class="modal-body">
                 <p>Angina pectoris (mediz. Stenokardie) bedeutet Brustenge. Sie äußert sich in einem plötzlich
@@ -2643,7 +2643,6 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
 </div>
 ',12,9);
 -- Dump tailored_text
---
 
 INSERT INTO tailored_text (id, idgender, iddrug, min_age, max_age, text) VALUES (1, 1, 1, 16, 30, 'Hey %firstname% %lastname%, Hier steht eine wichtige Information für Männer im Alter von %age% Jahren, die sich für dieses Medikament interessieren.<br />2 mal täglich einnehmen<br />1 Tablette morgens gegen 9:00<br />1 Tablette am Abend gegen 20:00');
 INSERT INTO tailored_text (id, idgender, iddrug, idpackaging_topic, min_age, max_age, text) VALUES (2, 1, 1, 4, 0, 0, 'XYZ... Hier steht eine andere Information für Männer ohne Altersbezug, die sich für diese Medikament interessieren.');
@@ -2683,6 +2682,8 @@ INSERT INTO tailored_text (id, idgender, iddrug, min_age, max_age, text) VALUES 
 INSERT INTO tailored_text (id, idgender, iddrug, min_age, max_age, text) VALUES (36, 1, 3, 0, 0, 'Eine Zusammenfassung für Männer ohne Altersbezug. 2 mal täglich einnehmen<br />1 Tablette morgens gegen 9:00<br />1 Tablette am Abend gegen 20:00');
 INSERT INTO tailored_text (id, idgender, iddrug, min_age, max_age, text) VALUES (37, 2, 3, 0, 0, 'Eine Zusammenfassung für Frauen ohne Altersbezug, %firstname%.');
 INSERT INTO tailored_text (id, idgender, iddrug, min_age, max_age, text) VALUES (38, 2, 4, 0, 0, 'Eine Zusammenfassung für dieses Medikament Frauen ohne Altersbezug, %firstname%.');
+INSERT INTO tailored_text (id, idgender, iddrug, min_age, max_age, text) VALUES (61, 1, 11, 0, 0, 'Bitte nehme pro 5mg Amlodipin zu dir.  %firstname%.');
+INSERT INTO tailored_text (id, idgender, iddrug, min_age, max_age, text) VALUES (62, 1, 12, 0, 0, 'Bitte nehme pro 5mg Amlodipin zu dir.  %firstname%.');
 
 
 -- minimum summaries for listing

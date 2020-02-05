@@ -11069,7 +11069,7 @@ module.exports = defaults;
 
 
 Object.defineProperty(exports, "__esModule", {
-	value: true
+    value: true
 });
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -11097,147 +11097,151 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 var UserMenue = function (_React$Component) {
-	_inherits(UserMenue, _React$Component);
+    _inherits(UserMenue, _React$Component);
 
-	function UserMenue(props) {
-		_classCallCheck(this, UserMenue);
+    function UserMenue(props) {
+        _classCallCheck(this, UserMenue);
 
-		var _this = _possibleConstructorReturn(this, (UserMenue.__proto__ || Object.getPrototypeOf(UserMenue)).call(this, props));
+        var _this = _possibleConstructorReturn(this, (UserMenue.__proto__ || Object.getPrototypeOf(UserMenue)).call(this, props));
 
-		_this.state = {
-			drugs: [],
-			exp: '',
-			selectedValue: '',
-			show: false,
-			loading: false
-		};
+        _this.state = {
+            drugs: [],
+            exp: '',
+            selectedValue: '',
+            show: false,
+            loading: false
+        };
 
-		_this.handleSubmit = _this.handleSubmit.bind(_this);
-		_this.handleExpressionChange = _this.handleExpressionChange.bind(_this);
-		_this.handleSelectedValueChange = _this.handleSelectedValueChange.bind(_this);
+        _this.handleSubmit = _this.handleSubmit.bind(_this);
+        _this.handleExpressionChange = _this.handleExpressionChange.bind(_this);
+        _this.handleSelectedValueChange = _this.handleSelectedValueChange.bind(_this);
 
-		_this.hide = _this.hide.bind(_this);
-		_this.show = _this.show.bind(_this);
+        _this.hide = _this.hide.bind(_this);
+        _this.show = _this.show.bind(_this);
 
-		return _this;
-	}
+        return _this;
+    }
 
-	_createClass(UserMenue, [{
-		key: "handleSubmit",
-		value: function handleSubmit(event) {
-			event.preventDefault();
-		}
-	}, {
-		key: "handleExpressionChange",
-		value: function handleExpressionChange(event) {
-			var _this2 = this;
+    _createClass(UserMenue, [{
+        key: "handleSubmit",
+        value: function handleSubmit(event) {
+            event.preventDefault();
+        }
+    }, {
+        key: "handleExpressionChange",
+        value: function handleExpressionChange(event) {
+            var _this2 = this;
 
-			this.state.exp = event.target.value;
-			this.state.loading = true;
-			this.state.show = true;
+            this.state.exp = event.target.value;
+            this.state.loading = true;
+            this.state.show = true;
 
-			this.setState(this.state);
+            this.setState(this.state);
 
-			_axios2.default.get('/drug/search', { params: { exp: this.state.exp } }).then(function (_ref) {
-				var data = _ref.data;
+            _axios2.default.get('/drug/search', { params: { exp: this.state.exp } }).then(function (_ref) {
+                var data = _ref.data;
 
-				_this2.state.drugs = data.value;
-				_this2.state.loading = false;
-				_this2.setState(_this2.state);
-			});
-		}
-	}, {
-		key: "handleSelectedValueChange",
-		value: function handleSelectedValueChange(drug, event) {
-			this.state.selectedValue = drug.name;
-			this.state.exp = this.state.selectedValue;
-			this.setState(this.state);
-		}
-	}, {
-		key: "show",
-		value: function show(event) {
-			this.state.show = true;
-			this.setState(this.state);
-		}
-	}, {
-		key: "hide",
-		value: function hide(event) {
-			this.state.show = false;
-			this.setState(this.state);
-		}
-	}, {
-		key: "renderResults",
-		value: function renderResults(drugs) {
-			var _this3 = this;
+                _this2.state.drugs = data.value;
+                _this2.state.loading = false;
+                _this2.setState(_this2.state);
+            });
+        }
+    }, {
+        key: "handleSelectedValueChange",
+        value: function handleSelectedValueChange(drug, event) {
+            this.state.selectedValue = drug.name;
+            this.state.exp = this.state.selectedValue;
+            this.setState(this.state);
+        }
+    }, {
+        key: "show",
+        value: function show(event) {
+            this.state.show = true;
+            this.setState(this.state);
+        }
+    }, {
+        key: "hide",
+        value: function hide(event) {
+            this.state.show = false;
+            this.setState(this.state);
+        }
+    }, {
+        key: "renderResults",
+        value: function renderResults(drugs) {
+            var _this3 = this;
 
-			if (!drugs) return null;
+            if (!drugs) return null;
 
-			return drugs.map(function (drug) {
-				return _react2.default.createElement(
-					"li",
-					{ key: "aC" + drug.id, onMouseOver: function onMouseOver() {
-							return _this3.handleSelectedValueChange(drug);
-						}, onClick: _this3.hide },
-					_react2.default.createElement(
-						_reactRouterDom.Link,
-						{ to: "/drug/" + drug.id, className: "wide" },
-						drug.name
-					)
-				);
-			});
-		}
-	}, {
-		key: "render",
-		value: function render() {
-			var t = this.props.t;
+            return drugs.map(function (drug) {
+                return _react2.default.createElement(
+                    "li",
+                    { key: "aC" + drug.id, onMouseOver: function onMouseOver() {
+                            return _this3.handleSelectedValueChange(drug);
+                        },
+                        onClick: _this3.hide },
+                    _react2.default.createElement(
+                        _reactRouterDom.Link,
+                        { to: "/drug/" + drug.id,
+                            className: "wide" },
+                        drug.name
+                    )
+                );
+            });
+        }
+    }, {
+        key: "render",
+        value: function render() {
+            var t = this.props.t;
 
 
-			var drugs = this.state.drugs;
-			var show = this.state.show;
-			var exp = this.state.exp;
-			var loading = this.state.loading;
+            var drugs = this.state.drugs;
+            var show = this.state.show;
+            var exp = this.state.exp;
+            var loading = this.state.loading;
 
-			return _react2.default.createElement(
-				"div",
-				null,
-				_react2.default.createElement(
-					"form",
-					{ className: "navbar-form ", onSubmit: this.handleSubmit },
-					_react2.default.createElement(
-						"div",
-						{ className: "col-xs-offset-4 col-xs-8 col-sm-12 col-md-12 col-lg-12 nopadd" },
-						_react2.default.createElement(
-							"div",
-							{ className: "row" },
-							_react2.default.createElement("input", { type: "text", value: this.state.exp, onChange: this.handleExpressionChange, name: "search", className: "form-control",
-								placeholder: t("searchDrug"), autoComplete: "off", autoCorrect: "off", autoCapitalize: "off" }),
-							_react2.default.createElement(
-								"button",
-								{ className: "btn btn-outline-success btn-search", type: "submit" },
-								_react2.default.createElement("span", { className: "glyphicon glyphicon-search" })
-							)
-						),
-						show && exp.length > 0 && !loading && _react2.default.createElement(
-							"div",
-							{ className: "row" },
-							_react2.default.createElement(
-								"ul",
-								{ className: "ui-autocomplete" },
-								this.renderResults(drugs),
-								drugs.length == 0 && _react2.default.createElement(
-									"li",
-									{ className: "no-results" },
-									"leider keine passenden Ergebnisse gefunden"
-								)
-							)
-						)
-					)
-				)
-			);
-		}
-	}]);
+            return _react2.default.createElement(
+                "div",
+                null,
+                _react2.default.createElement(
+                    "div",
+                    { className: "col-xs-offset-4 col-xs-8 col-sm-12 col-md-12 col-lg-12 nopadd" },
+                    _react2.default.createElement(
+                        "form",
+                        { className: "navbar-form ", onSubmit: this.handleSubmit },
+                        _react2.default.createElement(
+                            "div",
+                            { className: "row" },
+                            _react2.default.createElement("input", { type: "text", value: this.state.exp, onChange: this.handleExpressionChange,
+                                name: "search", className: "form-control",
+                                placeholder: t("searchDrug"), autoComplete: "off", autoCorrect: "off",
+                                autoCapitalize: "off" }),
+                            _react2.default.createElement(
+                                "button",
+                                { className: "btn btn-outline-success btn-search", type: "submit" },
+                                _react2.default.createElement("span", { className: "glyphicon glyphicon-search" })
+                            )
+                        ),
+                        show && exp.length > 0 && !loading && _react2.default.createElement(
+                            "div",
+                            { className: "row" },
+                            _react2.default.createElement(
+                                "ul",
+                                { className: "ui-autocomplete" },
+                                this.renderResults(drugs),
+                                drugs.length == 0 && _react2.default.createElement(
+                                    "li",
+                                    { className: "no-results" },
+                                    "leider keine passenden Ergebnisse gefunden"
+                                )
+                            )
+                        )
+                    )
+                )
+            );
+        }
+    }]);
 
-	return UserMenue;
+    return UserMenue;
 }(_react2.default.Component);
 
 exports.default = (0, _reactI18next.translate)()(UserMenue);
@@ -40988,7 +40992,8 @@ var DrugDetail = function (_React$Component) {
                                         _react2.default.createElement("span", {
                                             dangerouslySetInnerHTML: this.createMarkup(drug.personalizedInformation) })
                                     ),
-                                    _react2.default.createElement("img", { className: "speech-bubble_right-person", src: "./../../assets/images/logo_chat.png" })
+                                    _react2.default.createElement("img", { className: "speech-bubble_right-person",
+                                        src: "./../../assets/images/logo_chat.png" })
                                 )
                             ),
                             _react2.default.createElement(
@@ -41332,6 +41337,17 @@ var DrugDetail = function (_React$Component) {
                                     )
                                 )
                             )
+                        )
+                    ),
+                    _react2.default.createElement(
+                        "div",
+                        { className: "row xs-center backtomed" },
+                        _react2.default.createElement(
+                            "a",
+                            { href: "#/drug/list" },
+                            " ",
+                            _react2.default.createElement("i", { className: "far fa-arrow-alt-circle-left" }),
+                            " zur\xFCck zu den Medkamenten"
                         )
                     )
                 )
@@ -43334,7 +43350,7 @@ var Navigation = function (_React$Component) {
                             _react2.default.createElement(
                                 "button",
                                 { type: "button", className: "navbar-toggle collapsed", "data-toggle": "collapse",
-                                    "data-target": "#navbar" },
+                                    "data-target": "#navbar", "aria-expanded": "false" },
                                 _react2.default.createElement("span", { className: "icon-bar" }),
                                 _react2.default.createElement("span", { className: "icon-bar" }),
                                 _react2.default.createElement("span", { className: "icon-bar" })
