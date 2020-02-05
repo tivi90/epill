@@ -40978,8 +40978,8 @@ var DrugDetail = function (_React$Component) {
                                     { className: "speech-bubble_right" },
                                     _react2.default.createElement(
                                         "a",
-                                        { href: "#", className: "close", "data-dismiss": "alert",
-                                            "aria-label": "close" },
+                                        { href: "#", className: "close1", "data-dismiss": "alert",
+                                            "aria-label": "close1" },
                                         "\xD7"
                                     ),
                                     _react2.default.createElement("span", {
@@ -42321,23 +42321,27 @@ var DrugList = function (_React$Component) {
                         { className: "container" },
                         _User2.default.isAuthenticated() && _User2.default.levelOfDetail > 1 && _react2.default.createElement(
                             "div",
-                            { className: "alert bubble_left  row " },
+                            { className: "alert modal1 ", "data-dismiss": "alert" },
                             _react2.default.createElement(
                                 "div",
-                                { className: "speech-bubble_left" },
+                                { className: "alert bubble_left  row " },
                                 _react2.default.createElement(
-                                    "a",
-                                    { href: "#", className: "close", "data-dismiss": "alert",
-                                        "aria-label": "close" },
-                                    "\xD7"
+                                    "div",
+                                    { className: "speech-bubble_left" },
+                                    _react2.default.createElement(
+                                        "a",
+                                        { href: "#", className: "close1", "data-dismiss": "alert",
+                                            "aria-label": "close1" },
+                                        "\xD7"
+                                    ),
+                                    "Hi ",
+                                    firstname,
+                                    " , ",
+                                    _react2.default.createElement("br", null),
+                                    description.replace("%User.firstname%", firstname).replace("%User.lastname%", lastname)
                                 ),
-                                "Hi ",
-                                firstname,
-                                " , ",
-                                _react2.default.createElement("br", null),
-                                description.replace("%User.firstname%", firstname).replace("%User.lastname%", lastname)
-                            ),
-                            _react2.default.createElement("img", { className: "speech-bubble_left-person", src: "./../../assets/images/logo_chat.png" })
+                                _react2.default.createElement("img", { className: "speech-bubble_left-person", src: "./../../assets/images/logo_chat.png" })
+                            )
                         ),
                         drugs.length > 1 && _User2.default.isAuthenticated() && interactions.length > 0 && _react2.default.createElement(
                             "div",

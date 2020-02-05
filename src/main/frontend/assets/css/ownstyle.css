@@ -219,7 +219,7 @@ Navbar
 .bubble_left {
     z-index: 5;
     position: absolute;
-    right: 64%;
+    right: 20%;
     top: 36vh;
 }
 
@@ -263,6 +263,25 @@ Navbar
     margin-right: -28px;
 }
 
+.modal1 {
+    display: block;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.visible {
+    display: block;
+}
+
+
 .speech-bubble_right-person {
     float: right;
     width: 24%;
@@ -273,14 +292,14 @@ Navbar
     background: #ffffffe8;
     border-radius: .4em;
     color: #0f0f0f;
-    width: 75%;
+    width: 23%;
     float: left;
     padding: 12px;
 }
 
 .speech-bubble_left-person {
     float: left;
-    width: 24%;
+    width: 7%;
 }
 
 .jumbotron {
@@ -698,17 +717,20 @@ footer .glyphicon {
     .bubble_left {
         z-index: 5;
         position: absolute;
-        right: -12%;
-        top: 63vh;
+        left: -2%;
+        top: 47vh;
+        right: inherit;
     }
 
     .speech-bubble_left {
         background: #f1ebeb;
+        width: 72%;
     }
 
     .speech-bubble_left-person {
 
         margin-top: 27px;
+        width: 28%;
     }
 
     .diseases {

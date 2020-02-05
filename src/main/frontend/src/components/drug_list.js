@@ -668,15 +668,18 @@ class DrugList extends React.Component {
                     </div>
                     <div className="container">
                         {User.isAuthenticated() && User.levelOfDetail > 1 &&
+                        <div className="alert modal1 " data-dismiss="alert">
                         <div className="alert bubble_left  row ">
                             <div className="speech-bubble_left">
                                 <a href="#" className="close" data-dismiss="alert"
-                                   aria-label="close">&times;</a>
+                                   aria-label="close1">&times;</a>
                                 Hi {firstname} , <br />
                                 {description.replace("%User.firstname%", firstname).replace("%User.lastname%", lastname)}
                             </div>
                             <img className="speech-bubble_left-person" src="./../../assets/images/logo_chat.png"/>
                         </div>
+                        </div>
+
                         }
                          {drugs.length > 1 && User.isAuthenticated() && interactions.length > 0 &&
                         <div

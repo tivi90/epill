@@ -726,14 +726,16 @@ class DrugDetail extends React.Component {
                             {/*<h3>{drug.name} {drug.productGroup && drug.productGroup.name && <span className="text-muted">{drug.productGroup.name}</span> }</h3>*/}
                             {/*<span>v. {drug.version} | {t('publishingDate')}: {new Date(drug.year).toLocaleDateString()}</span>*/}
                             {User.isAuthenticated() && drug.personalizedInformation &&
+                            <div className="alert modal1 " data-dismiss="alert">
                             <div className="alert bubble_right  row w3-animate-right">
                                 <div className="speech-bubble_right">
-                                    <a href="#" className="close" data-dismiss="alert"
-                                       aria-label="close">&times;</a>
+                                    <a href="#" className="close1" data-dismiss="alert"
+                                       aria-label="close1">&times;</a>
                                     <span
                                         dangerouslySetInnerHTML={this.createMarkup(drug.personalizedInformation)}/>
                                 </div>
                                 <img className="speech-bubble_right-person" src="./../../assets/images/logo_chat.png"/>
+                            </div>
                             </div>
                             }
                             <div className="row featurette drug-detail-header">
