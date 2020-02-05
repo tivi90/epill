@@ -940,7 +940,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h3 class="modal-title">Was ist Insulin?</h3>
+                    <h3 class="modal-title"><i class="fas fa-question"></i> Was ist Insulin?</h3>
                 </div>
                 <div class="modal-body">
                     <p>
@@ -1128,7 +1128,10 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic, ADDRE
 ');
 INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic)VALUES (93,0,'
 <div class="row">
-    <div class="col-sm-9">
+    <div class="col-sm-3 col-xs-12 xs-center">
+        <i class="fas fa-user-md doc_icon"></i>
+    </div>
+    <div class="col-sm-9 col-xs-12">
         Nehmen Sie Metformin Lich immer genau nach Absprache mit Ihrem Arzt ein. Fragen Sie bei Ihrem
         Arzt oder Apotheker nach, wenn Sie sich nicht sicher sind.<br>
         Metformin Lich kann die Vorzüge einer gesunden Lebensweise nicht ersetzen. Folgen Sie
@@ -1144,9 +1147,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic)VALUES
         notwendig sein.
 
     </div>
-    <div class="col-sm-3">
-        <i style="font-size:80px;color: #575858;" class="fas fa-user-md"></i>
-    </div>
+
 </div>
 <div class="row content_header">
     <h1 xs-center>Dosierung</h1>
@@ -1430,7 +1431,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic)VALUES
     <div class="col-md-12">
         <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
             <div class="panel panel-default">
-                <div class="panel-heading" role="tab" id="headingOne">
+                <div class="panel-heading head_panel" role="tab" id="headingOne">
                     <h4 class="panel-title" data-toggle="collapse" data-target="#collapseOnee">
 
                         Wenn Sie eine größere Menge von Metformin Lich eingenommen haben, als Sie
@@ -1462,7 +1463,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic)VALUES
                 </div>
             </div>
             <div class="panel panel-default">
-                <div class="panel-heading" role="tab" id="headingTwo">
+                <div class="panel-heading head_panel" role="tab" id="headingTwo">
                     <h4 class="panel-title" data-toggle="collapse" data-target="#collapseTwoe">
 
                         Wenn Sie die Einnahme von Metformin Lich vergessen haben
@@ -1848,7 +1849,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h3 class="modal-title">Was ist Hepatitis?</h3>
+                <h3 class="modal-title"><i class="fas fa-question"></i> Was ist Hepatitis?</h3>
             </div>
             <div class="modal-body">
                 <p> Hepatitis ist eine Leberentzündung. Diese kann
@@ -1925,7 +1926,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h3 class="modal-title">Was ist Insulin?</h3>
+                <h3 class="modal-title"><i class="fas fa-question"></i> Was ist Insulin?</h3>
             </div>
             <div class="modal-body">
                 <p>Insulin ist ein von der Bauchspeicheldrüse gebildetes Hormon, das für die Aufnahme
@@ -1950,7 +1951,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h3 class="modal-title">Was ist Diabetes Typ 2?
+                <h3 class="modal-title"><i class="fas fa-question"></i> Was ist Diabetes Typ 2?
                 </h3>
             </div>
             <div class="modal-body">
@@ -2258,7 +2259,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
 <div class="row content_header" style="margin-top: 30px;">
     <h3 class="modal-title xs-center">Art und Dauer der Anwendung</h3>
     <hr />
-    <div class="row text-center">
+    <div class="row xs-center">
         <div class="col-sm-3 col-xs-12">
             <i style="font-size: 33px;" class="fas fa-glass-whiskey"></i>
         </div>
@@ -2270,11 +2271,11 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
             einnehmen.
         </div>
     </div>
-    <div class=" row text-center m20t">
+    <div class=" row xs-center m20t">
         <div class="col-sm-3 col-xs-12">
             <img width=" 40" src="./../../assets/icons/11.svg" />
         </div>
-        <div class="col-sm-3 col-xs-12 m20t">
+        <div class="col-sm-6 col-xs-12 m20t">
             Amlodipin (besilat) Dexcel 5 mg darf nicht mit Grapefruitsaft eingenommen
             werden.
         </div>
@@ -2286,7 +2287,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
     <div class="col-md-12">
         <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
             <div class="panel panel-default">
-                <div class="panel-heading" role="tab" id="headingOne">
+                <div class="panel-heading head_panel" role="tab" id="headingOne">
                     <h4 class="panel-title text-center-xs" data-toggle="collapse" data-target="#collapseOne1">
                         Wenn Sie eine größere Menge von Amlodipin (besilat) Dexcel 5 mg eingenommen haben, als Sie
                         sollten
@@ -2307,8 +2308,8 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                 </div>
             </div>
             <div class="panel panel-default">
-                <div class="panel-heading" role="tab" id="headingTwo">
-                    <h4 class="panel-title text-center-xs" data-toggle="collapse" data-target="#collapseTwo2">
+                <div class="panel-heading head_panel" role="tab" id="headingTwo">
+                    <h4 class="panel-title title_pan text-center-xs" data-toggle="collapse" data-target="#collapseTwo2">
                         Wenn Sie die Einnahme von Amlodipin (besilat) Dexcel 5 mg vergessen haben
                     </h4>
                 </div>
@@ -2321,7 +2322,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                 </div>
             </div>
             <div class="panel panel-default">
-                <div class="panel-heading" role="tab" id="headingThree">
+                <div class="panel-heading head_panel" role="tab" id="headingThree">
                     <h4 class="panel-title text-center-xs" data-toggle="collapse" data-target="#collapseThree3">
 
                         Wenn Sie die Einnahme von Amlodipin (besilat) Dexcel 5 mg abbrechen
@@ -2374,7 +2375,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                 <th>Nebenwirkung</th>
             </tr>
         </thead>
-        <tbody class="gradient">
+        <tbody class="gradient" style="padding: 15px;">
             <tr>
                 <td>Sehr häufig</td>
                 <td>Mehr als 1 von 10 Behandelten</td>
@@ -2460,7 +2461,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
             <h3> Häufigkeit der Nebenwirkungen </h3>
             <hr>
         </div>
-        <div class="gradient">
+        <div class="gradient" style="padding: 15px;">
             <div class="row">
                 <h4> Sehr häufig</h4>
                 <div class="row">
@@ -2612,7 +2613,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h3 class="modal-title">Was bedeutet Angina pectoris?</h3>
+                <h3 class="modal-title"><i class="fas fa-question"></i> <i class="fas fa-question"></i>  Was bedeutet Angina pectoris?</h3>
             </div>
             <div class="modal-body">
                 <p>Angina pectoris (mediz. Stenokardie) bedeutet Brustenge. Sie äußert sich in einem plötzlich

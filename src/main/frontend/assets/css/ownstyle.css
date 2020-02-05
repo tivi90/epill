@@ -273,8 +273,8 @@ Navbar
     width: 100%; /* Full width */
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
 }
 
 .visible {
@@ -504,12 +504,6 @@ footer ul li a {
 
 .bg-dark {
     background-color: #000;
-}
-
-
-.modal-dialog {
-    width: 600px;
-    margin: 70px auto;
 }
 
 /* footer social icons */
@@ -748,6 +742,13 @@ footer .glyphicon {
     .bubble_right {
         left: -2%;
         top: 71vh;
+    }
+
+    .drug-feature-icon {
+        margin-top: 0px;
+    }
+    .head_panel{
+        height: 90px !important;
     }
 }
 

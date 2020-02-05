@@ -40972,20 +40972,24 @@ var DrugDetail = function (_React$Component) {
                             ),
                             _User2.default.isAuthenticated() && drug.personalizedInformation && _react2.default.createElement(
                                 "div",
-                                { className: "alert bubble_right  row w3-animate-right" },
+                                { className: "alert modal1 ", "data-dismiss": "alert" },
                                 _react2.default.createElement(
                                     "div",
-                                    { className: "speech-bubble_right" },
+                                    { className: "alert bubble_right  row w3-animate-right" },
                                     _react2.default.createElement(
-                                        "a",
-                                        { href: "#", className: "close1", "data-dismiss": "alert",
-                                            "aria-label": "close1" },
-                                        "\xD7"
+                                        "div",
+                                        { className: "speech-bubble_right" },
+                                        _react2.default.createElement(
+                                            "a",
+                                            { href: "#", className: "close", "data-dismiss": "alert",
+                                                "aria-label": "close" },
+                                            "\xD7"
+                                        ),
+                                        _react2.default.createElement("span", {
+                                            dangerouslySetInnerHTML: this.createMarkup(drug.personalizedInformation) })
                                     ),
-                                    _react2.default.createElement("span", {
-                                        dangerouslySetInnerHTML: this.createMarkup(drug.personalizedInformation) })
-                                ),
-                                _react2.default.createElement("img", { className: "speech-bubble_right-person", src: "./../../assets/images/logo_chat.png" })
+                                    _react2.default.createElement("img", { className: "speech-bubble_right-person", src: "./../../assets/images/logo_chat.png" })
+                                )
                             ),
                             _react2.default.createElement(
                                 "div",
@@ -42330,7 +42334,7 @@ var DrugList = function (_React$Component) {
                                     { className: "speech-bubble_left" },
                                     _react2.default.createElement(
                                         "a",
-                                        { href: "#", className: "close1", "data-dismiss": "alert",
+                                        { href: "#", className: "close", "data-dismiss": "alert",
                                             "aria-label": "close1" },
                                         "\xD7"
                                     ),

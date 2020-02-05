@@ -15,17 +15,17 @@
     margin-top: 15px;
 }
 
-.drug-feature-icon{
+.drug-feature-icon {
     width: 40px;
     margin-top: 12px;
 }
 
-.list_pic{
+.list_pic {
     background-color: white;
     border: 1px solid #c7c7c7;
 }
 
-.full_contentdi{
+.full_contentdi {
     margin-top: 17px;
 }
 
@@ -76,7 +76,7 @@
     height: 45px;
 }
 
-.not_take{
+.not_take {
     text-align: center;
     margin: 60px 0 35px 0;
 }
@@ -160,16 +160,16 @@
     color: white;
 }
 
-.round_info{
-    top:21%;
+.round_info {
+    top: 21%;
 }
 
-.round_address{
-    top:29%;
+.round_address {
+    top: 29%;
 }
 
-.round_nebenwirkung{
-    top:37%;
+.round_nebenwirkung {
+    top: 37%;
 }
 
 
@@ -211,7 +211,7 @@
 }
 
 
-.arrcircle{
+.arrcircle {
     font-size: 38px;
     color: #6b6767;
 }
@@ -303,7 +303,7 @@
 
 }
 
-.bolt_red{
+.bolt_red {
     color: red;
     font-size: 40px;
     padding: 15px;
@@ -314,6 +314,10 @@
     position: relative;
     cursor: pointer;
 
+}
+
+.title_pan::after {
+    right: -5px !important;
 }
 
 .panel-title::after {
@@ -338,6 +342,7 @@
 
     .featurette-image {
         max-height: 190px;
+        margin-top: 30px;
     }
 
     .round-button-outer .round-button-inner-main {
@@ -346,7 +351,7 @@
         padding-top: 13px;
     }
 
-    .not_take{
+    .not_take {
         margin: 25px 0 45px 0;
     }
 
@@ -359,7 +364,7 @@
         padding-left: 15px;
     }
 
-    .infopart{
+    .infopart {
         padding: 0;
         height: 115px;
     }
@@ -376,25 +381,40 @@
     .panel-default > .panel-heading {
         height: 130px;
     }
+
     .content_header h1 {
         text-align: center;
     }
 
-    .round_info{
+    .round_info {
         top: 14%;
         right: inherit;
         left: 2%;
     }
 
-    .round_address{
+    .round_address {
         top: 23%;
         right: inherit;
         left: 2%;
     }
 
-    .round_nebenwirkung{
-        top: 30%;
+    .round_nebenwirkung {
+        top: 32%;
         right: inherit;
         left: 2%
+    }
+
+    .gradient {
+        padding: 15px;
+    }
+
+    .title_pan::after {
+        right: -5px !important;
+    }
+
+    .doc_icon {
+        font-size: 80px;
+        color: #575858;
+        margin-bottom: 25px;
     }
 }
