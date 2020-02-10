@@ -41079,7 +41079,88 @@ var DrugDetail = function (_React$Component) {
                                                     )
                                                 )
                                             );
-                                        })
+                                        }),
+                                        _react2.default.createElement(
+                                            "div",
+                                            null,
+                                            _react2.default.createElement(
+                                                "div",
+                                                { "data-toggle": "modal", "data-target": "#infoicons" },
+                                                _react2.default.createElement("i", {
+                                                    className: "fas fa-info-circle" })
+                                            ),
+                                            _react2.default.createElement(
+                                                "div",
+                                                { className: "modal fade", id: "infoicons", tabIndex: "-1", role: "dialog",
+                                                    "aria-labelledby": "adressLabel",
+                                                    "aria-hidden": "true" },
+                                                _react2.default.createElement(
+                                                    "div",
+                                                    { className: "modal-dialog", role: "document" },
+                                                    _react2.default.createElement(
+                                                        "div",
+                                                        { className: "modal-content" },
+                                                        _react2.default.createElement(
+                                                            "div",
+                                                            { className: "modal-header" },
+                                                            _react2.default.createElement(
+                                                                "h2",
+                                                                null,
+                                                                " Was bedeuten die Symbole?"
+                                                            ),
+                                                            _react2.default.createElement(
+                                                                "button",
+                                                                { type: "button", className: "close", "data-dismiss": "modal",
+                                                                    "aria-label": "Close" },
+                                                                _react2.default.createElement(
+                                                                    "span",
+                                                                    { "aria-hidden": "true" },
+                                                                    "\xD7"
+                                                                )
+                                                            )
+                                                        ),
+                                                        _react2.default.createElement(
+                                                            "div",
+                                                            { className: "modal-body", style: { color: "black" } },
+                                                            drug.drugFeature.map(function (feature) {
+                                                                return _react2.default.createElement(
+                                                                    "div",
+                                                                    { className: "row" },
+                                                                    _react2.default.createElement(
+                                                                        "div",
+                                                                        { className: "col-sm-1 col-xs-12" },
+                                                                        _react2.default.createElement("img", { key: feature.id,
+                                                                            src: "./../../assets/icons/" + feature.id + ".svg",
+                                                                            alt: feature.drugFeature,
+                                                                            title: feature.drugFeature,
+                                                                            className: "drug-feature-icon icon_page" })
+                                                                    ),
+                                                                    _react2.default.createElement(
+                                                                        "div",
+                                                                        { className: "col-sm-11 col-xs-12 drug-feature-title" },
+                                                                        _react2.default.createElement(
+                                                                            "span",
+                                                                            { className: "drug-feature-title", key: feature.id },
+                                                                            feature.drugFeature
+                                                                        )
+                                                                    )
+                                                                );
+                                                            })
+                                                        ),
+                                                        _react2.default.createElement(
+                                                            "div",
+                                                            { className: "modal-footer" },
+                                                            _react2.default.createElement(
+                                                                "button",
+                                                                { type: "button", className: "btn btn-secondary",
+                                                                    "data-dismiss": "modal" },
+                                                                "Schlie\xDFen"
+                                                            )
+                                                        )
+                                                    )
+                                                )
+                                            )
+                                        )
                                     ),
                                     _react2.default.createElement(
                                         "div",

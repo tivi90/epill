@@ -20,6 +20,15 @@
     margin-top: 12px;
 }
 
+.icon_page {
+    width: 50px !important;
+}
+
+.drug-feature-title {
+    padding: 25px;
+    font-size: 18px;
+}
+
 .list_pic {
     background-color: white;
     border: 1px solid #c7c7c7;
@@ -330,8 +339,8 @@
     font-size: 21px;
 }
 
-.backtomed{
-    text-align: right ;
+.backtomed {
+    text-align: right;
 }
 
 .panel-title[aria-expanded="true"]::after {

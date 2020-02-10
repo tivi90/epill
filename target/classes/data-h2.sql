@@ -437,6 +437,11 @@ INSERT INTO drug_feature (id, drug_feature) VALUES (9,'vegan');
 INSERT INTO drug_feature (id, drug_feature) VALUES (10,'othermed');
 INSERT INTO drug_feature (id, drug_feature) VALUES (11,'nograpefruit');
 INSERT INTO drug_feature (id, drug_feature) VALUES (12,'lactosefrei');
+INSERT INTO drug_feature (id, drug_feature, min_age, max_age)VALUES (13,'Könnte die
+Fahrtüchtigkeit beeinträchtigen', 16, 0);
+INSERT INTO drug_feature (id, drug_feature, min_age, max_age)VALUES (14,'Beinträchtigt die
+Fahrtüchtigkeit nicht', 16, 0);
+
 
 -- Dumping data for table `drug_feature`
 --
@@ -507,10 +512,13 @@ INSERT INTO drug_drug_feature (iddrug, iddrug_feature) VALUES (7,1);
 INSERT INTO drug_drug_feature (iddrug, iddrug_feature) VALUES (8,4);
 INSERT INTO drug_drug_feature (iddrug, iddrug_feature) VALUES (9,7);
 INSERT INTO drug_drug_feature (iddrug, iddrug_feature) VALUES (10,8);
-INSERT INTO drug_drug_feature (iddrug, iddrug_feature) VALUES (11,3);
+INSERT INTO drug_drug_feature (iddrug, iddrug_feature) VALUES (11,13);
+INSERT INTO drug_drug_feature (iddrug, iddrug_feature) VALUES (11,5);
 INSERT INTO drug_drug_feature (iddrug, iddrug_feature) VALUES (11,8);
+INSERT INTO drug_drug_feature (iddrug, iddrug_feature) VALUES (11,4);
 INSERT INTO drug_drug_feature (iddrug, iddrug_feature) VALUES (12,8);
 INSERT INTO drug_drug_feature (iddrug, iddrug_feature) VALUES (12,3);
+INSERT INTO drug_drug_feature (iddrug, iddrug_feature) VALUES (12,4);
 
 --
 -- Dumping data for table `drug_pharmaceutical_form`

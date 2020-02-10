@@ -265,6 +265,7 @@ class DrugDetail extends React.Component {
         );
     }
 
+
     renderDisease(drug) {
         if (!drug.disease) {
             return;
@@ -790,6 +791,50 @@ class DrugDetail extends React.Component {
                                             )
                                         })
                                         }
+                                        <div>
+                                            <div style={{cursor:"pointer"}} data-toggle="modal" data-target="#infoicons"><i
+                                                className="fas fa-info-circle"></i></div>
+                                            <div className="modal fade" id="infoicons" tabIndex="-1" role="dialog"
+                                                 aria-labelledby="adressLabel"
+                                                 aria-hidden="true">
+                                                <div className="modal-dialog" role="document">
+                                                    <div className="modal-content">
+                                                        <div className="modal-header">
+                                                            <h2> Was bedeuten die Symbole?
+                                                            </h2>
+                                                            <button type="button" className="close" data-dismiss="modal"
+                                                                    aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div className="modal-body" style={{color: "black"}}>
+
+                                                            {drug.drugFeature.map(feature =>
+                                                                <div className="row">
+                                                                    <div className="col-sm-1 col-xs-12">
+                                                                        <img key={feature.id}
+                                                                             src={"./../../assets/icons/" + feature.id + ".svg"}
+                                                                             alt={feature.drugFeature}
+                                                                             title={feature.drugFeature}
+                                                                             className="drug-feature-icon icon_page"></img>
+                                                                    </div>
+                                                                    <div className="col-sm-11 col-xs-12 drug-feature-title">
+                                                                        <span className="drug-feature-title" key={feature.id}>{feature.drugFeature}</span>
+                                                                    </div>
+                                                                </div>
+                                                            )}
+
+                                                        </div>
+                                                        <div className="modal-footer">
+                                                            <button type="button" className="btn btn-secondary"
+                                                                    data-dismiss="modal">Schließen
+                                                            </button>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div className="row tab_headers nomargin">
                                         <ul className="nav nav-pills brand-pills nav-stacked" role="tablist">

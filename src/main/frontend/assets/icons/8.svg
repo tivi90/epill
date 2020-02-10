@@ -18,11 +18,11 @@
    viewBox="0 0 80 80"
    enable-background="new 0 0 80 80"
    xml:space="preserve"
-   sodipodi:docname="notpreg.svg"
+   sodipodi:docname="8.svg"
    inkscape:version="0.92.4 (5da689c313, 2019-01-14)"><metadata
    id="metadata15"><rdf:RDF><cc:Work
        rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
-         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title /></cc:Work></rdf:RDF></metadata><defs
    id="defs13" /><sodipodi:namedview
    pagecolor="#ffffff"
    bordercolor="#666666"
@@ -37,9 +37,9 @@
    id="namedview11"
    showgrid="false"
    inkscape:zoom="4.17193"
-   inkscape:cx="62.083765"
-   inkscape:cy="95.990372"
-   inkscape:window-x="1912"
+   inkscape:cx="9.7099236"
+   inkscape:cy="57.638818"
+   inkscape:window-x="-8"
    inkscape:window-y="-8"
    inkscape:window-maximized="1"
    inkscape:current-layer="Ebene_1" />
@@ -50,7 +50,7 @@
    stroke-miterlimit="10"
    d="M66.696,13.303  C59.864,6.47,50.425,2.244,39.998,2.244C19.147,2.244,2.244,19.148,2.244,40c0,10.426,4.226,19.863,11.058,26.695  c6.833,6.834,16.271,11.061,26.696,11.061c20.853,0,37.757-16.904,37.757-37.756C77.755,29.574,73.528,20.135,66.696,13.303z"
    id="path2"
-   style="fill:#00aa88;fill-opacity:0.95686275" />
+   style="fill:#ff0000;fill-opacity:0.94178081" />
 <path
    fill="#FFFFFF"
    stroke="#6F6F6E"
@@ -68,7 +68,7 @@
 <path
    d="m 67.272842,16.788508 c -1.841,-1.84 -1.174533,-1.923063 -3.361533,-3.352063 l -50.33719,50.645301 c 1.385,2.074 3.391695,3.612423 5.360559,4.839762 0.188,0.187 -0.19,-0.184 0,0 L 68.80329,18.693502 c -0.101,-0.104 -1.427448,-1.800994 -1.530448,-1.904994 z"
    id="path8"
-   style="fill:#ff0707;fill-opacity:1"
+   style="fill:#000000;fill-opacity:0.93835616"
    inkscape:connector-curvature="0"
    sodipodi:nodetypes="ccccccc" />
 </svg>
