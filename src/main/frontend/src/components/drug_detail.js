@@ -265,6 +265,9 @@ class DrugDetail extends React.Component {
         );
     }
 
+    renderDrugFeaturesDesc(drug) {
+
+    }
 
     renderDisease(drug) {
         if (!drug.disease) {
@@ -792,7 +795,8 @@ class DrugDetail extends React.Component {
                                         })
                                         }
                                         <div>
-                                            <div style={{cursor:"pointer"}} data-toggle="modal" data-target="#infoicons"><i
+                                            <div style={{cursor: "pointer"}} data-toggle="modal"
+                                                 data-target="#infoicons"><i
                                                 className="fas fa-info-circle"></i></div>
                                             <div className="modal fade" id="infoicons" tabIndex="-1" role="dialog"
                                                  aria-labelledby="adressLabel"
@@ -818,18 +822,23 @@ class DrugDetail extends React.Component {
                                                                              title={feature.drugFeature}
                                                                              className="drug-feature-icon icon_page"></img>
                                                                     </div>
-                                                                    <div className="col-sm-11 col-xs-12 drug-feature-title">
-                                                                        <span className="drug-feature-title" key={feature.id}>{feature.drugFeature}</span>
+                                                                    <div
+                                                                        className="col-sm-11 col-xs-12 drug-feature-title">
+                                                                        <span className="drug-feature-title"
+                                                                              key={feature.id}>{feature.drugFeature}</span>
                                                                     </div>
                                                                 </div>
                                                             )}
-
+                                                            <div className="row">
+                                                                Weitere Informationen finden Sie unter der Rubrik <a
+                                                                href="#tab2" aria-controls="tab2" role="tab"
+                                                                data-toggle="tab" aria-expanded="true" data-dismiss="modal">Warnhinweise und Vorsichtsmaßnahmen
+                                                            </a></div>
                                                         </div>
                                                         <div className="modal-footer">
                                                             <button type="button" className="btn btn-secondary"
                                                                     data-dismiss="modal">Schließen
                                                             </button>
-
                                                         </div>
                                                     </div>
                                                 </div>
@@ -963,6 +972,82 @@ class DrugDetail extends React.Component {
                                         </div>
                                         <div role="tabpanel" className="tab-pane w3-animate-opacity" id="tab4">
                                             {this.renderPackSecneben(drug)}
+                                            {/*Button REPORT*/}
+                                            <div className="text-right">
+                                                <button type="button" className="btn btn-success neben_button"
+                                                        data-toggle="modal"
+                                                        data-target="#melden">Meldung von Nebenwirkungen
+                                                    <i className="fas fa-comment-medical"
+                                                       style={{marginLeft: "15px"}}></i>
+                                                </button>
+                                            </div>
+
+                                            <div className="modal fade" id="melden" tabIndex="-1" role="dialog"
+                                                 aria-labelledby="adressLabel"
+                                                 aria-hidden="true">
+                                                <div className="modal-dialog" role="document">
+                                                    <div className="modal-content">
+                                                        <div className="modal-header">
+                                                            <h2>Meldung von Nebenwirkungen </h2>
+                                                            <button type="button" className="close" data-dismiss="modal"
+                                                                    aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div className="modal-body" style={{color: "black"}}>
+                                                            <div className="row  alert alert-success" role="alert">
+                                                                <div className="col-md-10">
+                                                                    <p>Indem Sie Nebenwirkungen melden, können Sie dazu
+                                                                        beitragen,
+                                                                        dass mehr Informationen über die Sicherheit
+                                                                        dieses Arzneimittels
+                                                                        zur Verfügung gestellt werden.
+                                                                    </p>
+                                                                </div>
+                                                                <div className="col-md-2 icon_modal">
+                                                                    <FontAwesomeIcon icon={faThumbsUp}/>
+                                                                </div>
+                                                            </div>
+                                                            <div className="row">
+                                                                <div className="col-md-10">
+                                                                    <p>Wenn Sie Nebenwirkungen bemerken, wenden Sie sich
+                                                                        an Ihren <b>Arzt oder
+                                                                            Apotheker</b>.
+                                                                        Dies gilt auch für Nebenwirkungen, die nicht in
+                                                                        dieser Packungsbeilage
+                                                                        angegeben
+                                                                        sind.
+                                                                    </p>
+                                                                </div>
+                                                                <div className="col-md-2 icon_modal">
+                                                                    <FontAwesomeIcon icon={faUserMd}/>
+                                                                </div>
+                                                            </div>
+                                                            <div className="row">
+                                                                <div className="col-md-12">
+                                                                    <p><b>Weitere Möglichkeit:</b><br/>
+                                                                        Bundesinstitut für Arzneimittel und
+                                                                        Medizinprodukte <br/>
+                                                                        Abt. Pharmakovigilanz<br/>
+                                                                        Kurt-Georg-Kiesinger Allee 3,<br/> D-53175
+                                                                        Bonn<br/>
+                                                                        <b>Website:</b> <a href="www.bfarm.de">www.bfarm.de
+                                                                        </a></p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div className="modal-footer">
+                                                            <button type="button" className="btn btn-secondary"
+                                                                    data-dismiss="modal">Schließen
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            {/*Button REPORT ENDE*/
+                                            }
                                         </div>
                                     </div>
                                 </div>

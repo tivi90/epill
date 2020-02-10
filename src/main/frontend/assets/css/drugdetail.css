@@ -87,7 +87,34 @@
 
 .not_take {
     text-align: center;
-    margin: 60px 0 35px 0;
+    margin: 35px 0 35px 0;
+}
+
+.doc_icon {
+    font-size: 100px;
+    padding-top: 35px;
+    color: #575858;
+}
+
+.neben_button {
+    font-size: 16px;
+    background-color: #0da59b;
+    border-color: #0da59b;
+}
+
+.neben_button:hover {
+    background-color: #0da59b;
+    border-color: #0da59b;
+}
+
+.neben_button:active {
+    background-color: #0da59b;
+    border-color: #0da59b;
+}
+
+.neben_button:focus {
+    background-color: #0da59b;
+    border-color: #0da59b;
 }
 
 .img-drugform {
@@ -333,7 +360,7 @@
     content: "\f107";
     color: #333;
     top: 0px;
-    right: 0px;
+    right: -6px;
     position: absolute;
     font-family: "FontAwesome";
     font-size: 21px;

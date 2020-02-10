@@ -706,8 +706,9 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
 INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (91,0,'
 <!--Vor der Einnahme-->
 <div class="row content_header xs-center">
-    <h3>Warnhinweise und Vorsichtsmaßnahmen
-    </h3>
+    <h1>Warnhinweise und Vorsichtsmaßnahmen
+    </h1>
+    <hr>
 </div>
 <div>
     Bitte sprechen Sie mit Ihrem Arzt, bevor Sie Metformin Lich einnehmen,
@@ -735,10 +736,9 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
         <div class="col-sm-2"><b>Vitamin-B12-Blutspiegel</b></div>
         <div class="col-sm-10">
             Eine Langzeitbehandlung mit Metformin kann zu einer Abnahme des Vitamin-B12-Blutspiegels und
-            infolgedessen zu einer Erkrankung der Nerven führen (siehe Abschnitt 4. „Welche <a href="#tab4"
+            infolgedessen zu einer Erkrankung der Nerven führen (siehe <a href="#tab4"
                 aria-controls="tab4" role="tab" data-toggle="tab">Nebenwirkungen
-            </a>
-            sind möglich?“). Ihr Arzt wird möglicherweise Ihren Vitamin-B12-Spiegel regelmäßig überwachen.
+            </a>). Ihr Arzt wird möglicherweise Ihren Vitamin-B12-Spiegel regelmäßig überwachen.
         </div>
     </div>
 </div>
@@ -1136,20 +1136,20 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic, ADDRE
 ');
 INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic)VALUES (93,0,'
 <div class="row">
-    <div class="col-sm-3 col-xs-12 xs-center">
+    <div class="col-sm-2 col-xs-12 xs-center">
         <i class="fas fa-user-md doc_icon"></i>
     </div>
-    <div class="col-sm-9 col-xs-12">
+    <div class="col-sm-10 col-xs-12">
         Nehmen Sie Metformin Lich immer genau nach Absprache mit Ihrem Arzt ein. Fragen Sie bei Ihrem
         Arzt oder Apotheker nach, wenn Sie sich nicht sicher sind.<br>
         Metformin Lich kann die Vorzüge einer gesunden Lebensweise nicht ersetzen. Folgen Sie
         weiterhin allen Ernährungsratschlägen Ihres Arztes und sorgen Sie für regelmäßige körperliche
         Bewegung.
-
+<br>
         Ihr Arzt führt regelmäßige Blutzuckerkontrollen bei Ihnen durch und passt Ihre
         MetforminLich-Dosis Ihrem
         Blutzuckerspiegel an. Sprechen Sie unbedingt regelmäßig mit Ihrem Arzt.
-        Dies ist besonders wichtig für Kinder und Jugendliche oder wenn Sie schon älter sind.
+        Dies ist besonders wichtig für Kinder und Jugendliche oder wenn Sie schon älter sind.<br>
         – Ihr Arzt überprüft außerdem mindestens einmal jährlich Ihre Nierenfunktion. Wenn Sie älter
         sind oder eine eingeschränkte Nierenfunktion haben, können auch häufigere Untersuchungen
         notwendig sein.
@@ -1571,7 +1571,10 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic)VALUES
 </div>
 ',11,5);
 INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (94,0,'
+<div className="row content_header">
 <h3> Nebenwirkungen für Erwachsene <i class="fas fa-male"></i> <i class="fas fa-blind"></i> </h3>
+<hr>
+</div>
 <table class="sideffect_table hidden-xs">
     <thead>
         <tr>
@@ -2042,10 +2045,10 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
     <h4>Kinder</h4>
     Bei Kindern unter 6 Jahren wurde Amlodipin nicht untersucht. <br>
     <div class="row">
-        <div class="col-sm-2 col-xs-12 xs-center nopadd"> <i
+        <div class="col-sm-1 col-xs-12 xs-center nopadd"> <i
                 class="far fa-arrow-alt-circle-right arrcircle hidden-sm hidden-xs"></i><i
                 class="fas fa-arrow-circle-down arrcircle hidden-md hidden-lg"></i> </div>
-        <div class="col-sm-10 col-xs-12 nopadd"> Amlodipin (besilat) Dexcel 5 mg kann nur bei Kindern und
+        <div class="col-sm-11 col-xs-12 nopadd"> Amlodipin (besilat) Dexcel 5 mg kann nur bei Kindern und
             Jugendlichen mit Bluthochdruck im Alter von 6 bis
             17 Jahren angewendet werden</div>
     </div>
@@ -2145,11 +2148,9 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
     </div>
 </div>
 </div>
-<div class="row content_header">
     <h3 class="not_take"><i class="fas fa-bolt bolt_red" aria-hidden="true"></i> <br> Amlodipin (besilat) Dexcel 5 mg
         nicht
         einnehmen bei </h3>
-</div>
 <div class="row">
     <div class="col-sm-6 nopadd">
         <div class="row">
@@ -2211,10 +2212,10 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic, addre
 </div>');
 INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (102,0,'
 <div class="row">
-    <div class="col-sm-3 col-xs-12 text-center>
-        <i style=" font-size:70px;color: #575858;" class="fas fa-user-md"></i>
+    <div class="col-sm-2 col-xs-12 text-center">
+        <i class="fas fa-user-md doc_icon nopadd"></i>
     </div>
-    <div class="col-sm-9 col-xs-12">
+    <div class="col-sm-10 col-xs-12">
         Nehmen Sie dieses Arzneimittel immer genau nach Absprache mit Ihrem Arztoder
         Apotheker ein. Fragen Sie bei Ihrem Arzt oder Apotheker nach, wenn Sie sich nicht sicher
         sind.
@@ -2268,10 +2269,10 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
     <h3 class="modal-title xs-center">Art und Dauer der Anwendung</h3>
     <hr />
     <div class="row xs-center">
-        <div class="col-sm-3 col-xs-12">
+        <div class="col-sm-2 col-xs-12">
             <i style="font-size: 33px;" class="fas fa-glass-whiskey"></i>
         </div>
-        <div class="col-sm-6 col-xs-12 m20t">
+        <div class="col-sm-10 col-xs-12 m20t">
             Dieses Arzneimittel
             kann unabhängig von Mahlzeiten oder Getränken
             eingenommen
@@ -2280,10 +2281,10 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
         </div>
     </div>
     <div class=" row xs-center m20t">
-        <div class="col-sm-3 col-xs-12">
+        <div class="col-sm-2 col-xs-12">
             <img width=" 40" src="./../../assets/icons/11.svg" />
         </div>
-        <div class="col-sm-6 col-xs-12 m20t">
+        <div class="col-sm-10 col-xs-12 m20t">
             Amlodipin (besilat) Dexcel 5 mg darf nicht mit Grapefruitsaft eingenommen
             werden.
         </div>
@@ -2352,7 +2353,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
 ',12,5);
 INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (103,0,'
 <div class="row content_header">
-    <h3> Nebenwirkungen </h3>
+    <h1> Nebenwirkungen </h1>
     <hr>
     Wie alle Arzneimittel kann auch dieses Arzneimittel Nebenwirkungen haben, die aber nicht
     bei jedem auftreten müssen.
