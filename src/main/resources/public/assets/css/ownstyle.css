@@ -1,6 +1,13 @@
 /*
 Navbar
  */
+
+.load_css{
+    text-align: center;
+    padding: 60px 0 60px 0;
+
+}
+
 .m40b {
     margin-bottom: 40px;
 }

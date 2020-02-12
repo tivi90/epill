@@ -13836,12 +13836,8 @@ var Loading = function (_React$Component) {
 
 			return _react2.default.createElement(
 				"div",
-				{ className: "col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-4 col-lg-4 col-lg-offset-4" },
-				_react2.default.createElement(
-					"p",
-					null,
-					t('loading')
-				)
+				{ className: "col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-4 col-lg-4 col-lg-offset-4 text-center load_css" },
+				_react2.default.createElement("img", { src: "./../../assets/gif/loading.svg" })
 			);
 		}
 	}]);
