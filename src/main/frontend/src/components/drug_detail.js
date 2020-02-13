@@ -8,23 +8,12 @@ import Accordion from "./accordion";
 import Loading from "./loading";
 import User from "./../util/User";
 
-
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-
-
-import {faHome} from "@fortawesome/free-solid-svg-icons";
 import {
     faInfo,
     faCommentMedical,
     faAddressCard,
-    faThumbsUp,
-    faUserMd,
-    faBaby,
-    faChild,
-    faMale,
-    faGlassWhiskey,
     faChevronDown,
-    faBlind,
     faHashtag,
     faCrosshairs
 } from "@fortawesome/free-solid-svg-icons";
@@ -43,7 +32,6 @@ class DrugDetail extends React.Component {
         this.toggleShowAdditionalInfo = this.toggleShowAdditionalInfo.bind(this);
         this.toggleOriginalAndTailoredText = this.toggleOriginalAndTailoredText.bind(this);
     }
-
 
     //=============================
     init() {
@@ -73,7 +61,6 @@ class DrugDetail extends React.Component {
     toggleShowAdditionalInfo() {
         this.setState({showAdditionalInfo: !this.state.showAdditionalInfo});
     }
-
 
     toggleOriginalAndTailoredText(section) {
 
@@ -106,7 +93,6 @@ class DrugDetail extends React.Component {
         });
 
     }
-
 
     //=============================
 
@@ -174,7 +160,6 @@ class DrugDetail extends React.Component {
                 }
             });
     }
-
 
     /**
      * toggle add/remove to/from remember/taking list
@@ -266,7 +251,49 @@ class DrugDetail extends React.Component {
     }
 
     renderDrugFeaturesDesc(drug) {
+        const {t} = this.props;
+        if (!drug.drugFeature)
+            return;
+        return (
 
+            <span>
+        {drug.drugFeature.map(feature => {
+            return (
+                <span key={feature.id}>
+                     <img key={feature.id} data-toggle="modal" data-target={"#" + feature.id}
+                          src={"./../../assets/icons/" + feature.id + ".svg"} className="drug-feature-icon"
+                          alt={feature.drugFeature} title={feature.drugFeature}/>
+                                                <div id={feature.id} className="modal fade" role="dialog">
+                                                    <div className="modal-dialog">
+                                                        <div className="modal-content">
+                                                            <div className="modal-header">
+                                                                <button type="button" className="close"
+                                                                        data-dismiss="modal">&times;</button>
+                                                                <h2 className="modal-title">
+                                                                    <img style={{width: "40px"}}
+                                                                         key={feature.id}
+                                                                         data-toggle="modal"
+                                                                         data-target={"#" + feature.id}
+                                                                         src={"./../../assets/icons/" + feature.id + ".svg"}
+                                                                         className="drug-feature-icon"
+                                                                         alt={feature.drugFeature}
+                                                                         title={feature.drugFeature}></img> {feature.drugFeature}
+                                                                </h2>
+                                                            </div>
+                                                            <div className="modal-body text-left">
+                                                                <div
+                                                                    dangerouslySetInnerHTML={this.createMarkup(feature.descriptionDrug)}/>
+                                                            </div>
+                                                             <span
+                                                                 dangerouslySetInnerHTML={this.createMarkup(t("modal_close"))}></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </span>
+
+            )
+        })
+        }</span>)
     }
 
     renderDisease(drug) {
@@ -339,7 +366,7 @@ class DrugDetail extends React.Component {
                                                                     src={"./../../assets/p_form/" + pharmaceuticalForm.id + ".svg"}
                                                                     className="img-drugform"
                                                                     alt={pharmaceuticalForm.name}
-                                                                    title={pharmaceuticalForm.name}></img>
+                                                                    title={pharmaceuticalForm.name}/>
             )
                 .reduce((prev, curr) => [prev, curr])
             }
@@ -355,7 +382,7 @@ class DrugDetail extends React.Component {
         const {t} = this.props;
 
         return (
-            <section><img src={"./../../assets/images/lab.svg"} className="infopic"/>
+            <section><img src={"./../../assets/images/lab.svg"} className="infopic" alt={"lab"}/>
 
                 <p><b> {t('activeSubstance') + " "}</b></p>
                 <p>    {drug.activeSubstance.map(substance => <span key={substance.id}>{substance.name}
@@ -365,7 +392,6 @@ class DrugDetail extends React.Component {
             </section>
         );
     }
-
 
     renderPZN(drug) {
         if (!drug.packaging)
@@ -394,7 +420,7 @@ class DrugDetail extends React.Component {
 
         return (
             <section className="row diseases">
-                <img src={"./../../assets/images/ind_group.svg"} className="infopic"/>
+                <img src={"./../../assets/images/ind_group.svg"} alt={"ind_group"} className="infopic"/>
 
                 <p><b>     {t('indicationGroup') + " "}  </b></p>
                 <p>{drug.indicationGroup.name}</p>
@@ -412,7 +438,7 @@ class DrugDetail extends React.Component {
 
         return (
             <section className="row diseases">
-                <img src={"./../../assets/images/productgroup.png"} className="infopic"/>
+                <img src={"./../../assets/images/productgroup.png"} alt={"productgroup"} className="infopic"/>
 
                 <p><b>      {t('productGroup') + " "}</b></p>
 
@@ -434,23 +460,6 @@ class DrugDetail extends React.Component {
         }));
     }
 
-    renderpackInfo(drug) {
-        if (!drug.packagingSection) {
-            return null;
-        }
-
-        return drug.packagingSection
-            .filter(section => {
-                return section.topic.id === 1
-            })
-            .map((section => {
-                return (
-                    <p key={section.id}><span dangerouslySetInnerHTML={this.createMarkup(section.topic.text)}/>
-                    </p>
-                );
-            }));
-    }
-
     renderPackcompany(drug) {
         if (!drug.packagingSection) {
             return null;
@@ -466,7 +475,6 @@ class DrugDetail extends React.Component {
                     </p>
                 );
             })).reduce((prev, curr) => [prev, curr]);
-        drug.packagingSection.getPackagingSectionByTopicAndDrug(1, 1);
     }
 
     renderPackSecdesc(drug) {
@@ -484,7 +492,6 @@ class DrugDetail extends React.Component {
                     </p>
                 );
             })).reduce((prev, curr) => [prev, curr]);
-        drug.packagingSection.getPackagingSectionByTopicAndDrug(1, 1);
     }
 
     renderPackSecvor(drug) {
@@ -521,7 +528,6 @@ class DrugDetail extends React.Component {
             })).reduce((prev, curr) => [prev, curr]);
     }
 
-
     renderPackSecneben(drug) {
         if (!drug.packagingSection) {
             return null;
@@ -550,40 +556,34 @@ class DrugDetail extends React.Component {
         }));
     }
 
-
     render() {
         const {t} = this.props;
         const drug = this.state.drug;
         const showAdditionalInfo = this.state.showAdditionalInfo;
-        let itemClass = ["item  col-xs-4 col-sm-4 grid-group-item"]
+        let itemClass = ["item  col-xs-4 col-sm-4 grid-group-item"];
         if (this.state.addClass) {
             itemClass.push('list-group-item');
         }
-
         if (!drug) {
             // Do not show anything while loading.
             return (
                 <div className="container marketing no-banner">
                     <div className='page-header'>
-                        <h3></h3>
                     </div>
                     <Loading/>
                 </div>
             );
         }
-
         return (
             <div>
-
                 <div className="no-banner">
-
                     {/*Button INFO*/}
                     <div className="round-button-outer report-round-button round_info">
                         <div id="reportBtn" className="round-button-inner-main" data-toggle="modal" data-target="#info">
                             <FontAwesomeIcon icon={faInfo}/>
                         </div>
                     </div>
-                    <div className="modal fade" id="info" tabIndex="-1" role="dialog" aria-labelledby="adressLabel"
+                    <div className="modal fade" id="info" tabIndex="-1" role="dialog" aria-labelledby="addressLabel"
                          aria-hidden="true">
                         <div className="modal-dialog" role="document">
                             <div className="modal-content">
@@ -595,16 +595,10 @@ class DrugDetail extends React.Component {
                                     </button>
                                 </div>
                                 <div className="modal-body" style={{color: "black"}}>
-
-
-                                    {this.renderpackInfo(drug)}
-
+                                    <span
+                                        dangerouslySetInnerHTML={this.createMarkup(t("textinfo").replace("%XXX%", drug.name))}/>
                                 </div>
-                                <div className="modal-footer">
-                                    <button type="button" className="btn btn-secondary" data-dismiss="modal">Schließen
-                                    </button>
-
-                                </div>
+                                <span dangerouslySetInnerHTML={this.createMarkup(t("modal_close"))}/>
                             </div>
                         </div>
                     </div>
@@ -613,28 +607,23 @@ class DrugDetail extends React.Component {
                     {/*Button Address*/}
                     <div className="round-button-outer report-round-button no_animation round_address">
                         <div id="reportBtn" className="round-button-inner-main no_animation" data-toggle="modal"
-                             data-target="#adress">
+                             data-target="#address">
                             <FontAwesomeIcon icon={faAddressCard}/></div>
                     </div>
-                    <div className="modal fade" id="adress" tabIndex="-1" role="dialog" aria-labelledby="adressLabel"
+                    <div className="modal fade" id="address" tabIndex="-1" role="dialog" aria-labelledby="addressLabel"
                          aria-hidden="true">
                         <div className="modal-dialog" role="document">
                             <div className="modal-content">
                                 <div className="modal-header">
                                     <h2>Pharmazeutischer Unternehmer und Hersteller</h2>
-
                                     <button type="button" className="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
                                 </div>
                                 <div className="modal-body" style={{color: "black"}}>
                                     {this.renderPackcompany(drug)}
-
                                 </div>
-                                <div className="modal-footer">
-                                    <button type="button" className="btn btn-secondary" data-dismiss="modal">Schließen
-                                    </button>
-                                </div>
+                                <span dangerouslySetInnerHTML={this.createMarkup(t("modal_close"))}/>
                             </div>
                         </div>
                     </div>
@@ -647,7 +636,7 @@ class DrugDetail extends React.Component {
                             <FontAwesomeIcon icon={faCommentMedical}/>
                         </div>
                     </div>
-                    <div className="modal fade" id="melden" tabIndex="-1" role="dialog" aria-labelledby="adressLabel"
+                    <div className="modal fade" id="melden" tabIndex="-1" role="dialog" aria-labelledby="addressLabel"
                          aria-hidden="true">
                         <div className="modal-dialog" role="document">
                             <div className="modal-content">
@@ -658,77 +647,39 @@ class DrugDetail extends React.Component {
                                     </button>
                                 </div>
                                 <div className="modal-body" style={{color: "black"}}>
-                                    <div className="row  alert alert-success" role="alert">
-                                        <div className="col-md-10">
-                                            <p>Indem Sie Nebenwirkungen melden, können Sie dazu beitragen,
-                                                dass mehr Informationen über die Sicherheit dieses Arzneimittels
-                                                zur Verfügung gestellt werden.
-                                            </p>
-                                        </div>
-                                        <div className="col-md-2 icon_modal">
-                                            <FontAwesomeIcon icon={faThumbsUp}/>
-                                        </div>
-                                    </div>
-                                    <div className="row">
-                                        <div className="col-md-10">
-                                            <p>Wenn Sie Nebenwirkungen bemerken, wenden Sie sich an Ihren <b>Arzt oder
-                                                Apotheker</b>.
-                                                Dies gilt auch für Nebenwirkungen, die nicht in dieser Packungsbeilage
-                                                angegeben
-                                                sind.
-                                            </p>
-                                        </div>
-                                        <div className="col-md-2 icon_modal">
-                                            <FontAwesomeIcon icon={faUserMd}/>
-                                        </div>
-                                    </div>
-                                    <div className="row">
-                                        <div className="col-md-12">
-                                            <p><b>Weitere Möglichkeit:</b><br/>
-                                                Bundesinstitut für Arzneimittel und Medizinprodukte <br/>
-                                                Abt. Pharmakovigilanz<br/>
-                                                Kurt-Georg-Kiesinger Allee 3,<br/> D-53175 Bonn<br/>
-                                                <b>Website:</b> <a href="www.bfarm.de">www.bfarm.de
-                                                </a></p>
-                                        </div>
-                                    </div>
+                                    <span dangerouslySetInnerHTML={this.createMarkup(t("inform"))}/>
                                 </div>
-
-                                <div className="modal-footer">
-                                    <button type="button" className="btn btn-secondary" data-dismiss="modal">Schließen
-                                    </button>
-                                </div>
+                                <span dangerouslySetInnerHTML={this.createMarkup(t("modal_close"))}/>
                             </div>
                         </div>
                     </div>
+                    {/*Button REPORT ENDE*/}
 
-                    {/*Button REPORT ENDE*/
-                    }
                     <div className='page-header bg_grey'>
                         <div className="container  no-banner">
-                            <div className='btn-toolbar pull-right'>
-                                <div className='btn-group'></div>
+                            <div className=' pull-right'>
+                                <span>v. {drug.version} | {t('publishingDate')}: {new Date(drug.year).toLocaleDateString()}</span>
                             </div>
+                            <br/>
                             {User.isAuthenticated()
                             &&
                             <div className='btn-toolbar pull-right'>
                                 <div className='btn-group'>
                                     <button type="button" className="btn btn-like"
                                             onClick={() => this.toggleTaking(drug)}>
-                                    <span
-                                        className={"glyphicon white" + ((!drug.isTaken) ? " glyphicon-heart" : " glyphicon-minus")}></span>
+                                        <span
+                                            className={"glyphicon white" + ((!drug.isTaken) ? " glyphicon-heart" : " glyphicon-minus")}/>
                                     </button>
-
                                     <button type="button" className="btn btn-add"
                                             onClick={() => this.toggleRemember(drug)}>
-                                    <span
-                                        className={"glyphicon white" + ((!drug.isRemembered) ? " glyphicon-plus" : " glyphicon-minus")}></span>
+                                        <span
+                                            className={"glyphicon white" + ((!drug.isRemembered) ? " glyphicon-plus" : " glyphicon-minus")}/>
                                     </button>
                                 </div>
                             </div>
                             }
                             {/*<h3>{drug.name} {drug.productGroup && drug.productGroup.name && <span className="text-muted">{drug.productGroup.name}</span> }</h3>*/}
-                            {/*<span>v. {drug.version} | {t('publishingDate')}: {new Date(drug.year).toLocaleDateString()}</span>*/}
+
                             {User.isAuthenticated() && drug.personalizedInformation &&
                             <div className="alert modal1 " data-dismiss="alert">
                                 <div className="alert bubble_right  row w3-animate-right">
@@ -739,7 +690,7 @@ class DrugDetail extends React.Component {
                                             dangerouslySetInnerHTML={this.createMarkup(drug.personalizedInformation)}/>
                                     </div>
                                     <img className="speech-bubble_right-person"
-                                         src="./../../assets/images/logo_chat.png"/>
+                                         src="./../../assets/images/logo_chat.png" alt={speechbubble}/>
                                 </div>
                             </div>
                             }
@@ -755,51 +706,13 @@ class DrugDetail extends React.Component {
                                         <span>{drug.name}</span>
                                     </div>
                                     <div className="drug-features ">
-                                        {drug.drugFeature.map(feature => {
-                                            return (
-                                                <span key={feature.id}>
-                                                <img key={feature.id} data-toggle="modal" data-target={"#" + feature.id}
-                                                     src={"./../../assets/icons/" + feature.id + ".svg"}
-                                                     className="drug-feature-icon" alt={feature.drugFeature}
-                                                     title={feature.drugFeature}></img>
-                                                <div id={feature.id} className="modal fade" role="dialog">
-                                                    <div className="modal-dialog">
-                                                        <div className="modal-content">
-                                                            <div className="modal-header">
-                                                                <button type="button" className="close"
-                                                                        data-dismiss="modal">&times;</button>
-                                                                <h2 className="modal-title"><img style={{width: "40px"}}
-                                                                                                 key={feature.id}
-                                                                                                 data-toggle="modal"
-                                                                                                 data-target={"#" + feature.id}
-                                                                                                 src={"./../../assets/icons/" + feature.id + ".svg"}
-                                                                                                 className="drug-feature-icon"
-                                                                                                 alt={feature.drugFeature}
-                                                                                                 title={feature.drugFeature}></img> {feature.drugFeature}
-                                                                </h2>
-                                                            </div>
-                                                            <div className="modal-body">
-                                                                <div
-                                                                    dangerouslySetInnerHTML={this.createMarkup(feature.descriptionDrug)}/>
-                                                            </div>
-                                                            <div className="modal-footer">
-                                                                <button type="button" className="btn btn-default"
-                                                                        data-dismiss="modal">Close
-                                                                </button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </span>
-                                            )
-                                        })
-                                        }
+                                        {this.renderDrugFeaturesDesc(drug)}
                                         <div>
                                             <div style={{cursor: "pointer"}} data-toggle="modal"
                                                  data-target="#infoicons"><i
-                                                className="fas fa-info-circle"></i></div>
+                                                className="fas fa-info-circle"/></div>
                                             <div className="modal fade" id="infoicons" tabIndex="-1" role="dialog"
-                                                 aria-labelledby="adressLabel"
+                                                 aria-labelledby="addressLabel"
                                                  aria-hidden="true">
                                                 <div className="modal-dialog" role="document">
                                                     <div className="modal-content">
@@ -812,7 +725,6 @@ class DrugDetail extends React.Component {
                                                             </button>
                                                         </div>
                                                         <div className="modal-body" style={{color: "black"}}>
-
                                                             {drug.drugFeature.map(feature =>
                                                                 <div className="row">
                                                                     <div className="col-sm-1 col-xs-12">
@@ -820,7 +732,7 @@ class DrugDetail extends React.Component {
                                                                              src={"./../../assets/icons/" + feature.id + ".svg"}
                                                                              alt={feature.drugFeature}
                                                                              title={feature.drugFeature}
-                                                                             className="drug-feature-icon icon_page"></img>
+                                                                             className="drug-feature-icon icon_page"/>
                                                                     </div>
                                                                     <div
                                                                         className="col-sm-11 col-xs-12 drug-feature-title">
@@ -832,14 +744,12 @@ class DrugDetail extends React.Component {
                                                             <div className="row">
                                                                 Weitere Informationen finden Sie unter der Rubrik <a
                                                                 href="#tab2" aria-controls="tab2" role="tab"
-                                                                data-toggle="tab" aria-expanded="true" data-dismiss="modal">Warnhinweise und Vorsichtsmaßnahmen
+                                                                data-toggle="tab" aria-expanded="true"
+                                                                data-dismiss="modal">Warnhinweise und Vorsichtsmaßnahmen
                                                             </a></div>
                                                         </div>
-                                                        <div className="modal-footer">
-                                                            <button type="button" className="btn btn-secondary"
-                                                                    data-dismiss="modal">Schließen
-                                                            </button>
-                                                        </div>
+                                                        <span
+                                                            dangerouslySetInnerHTML={this.createMarkup(t("modal_close"))}/>
                                                     </div>
                                                 </div>
                                             </div>
@@ -847,35 +757,39 @@ class DrugDetail extends React.Component {
                                     </div>
                                     <div className="row tab_headers nomargin">
                                         <ul className="nav nav-pills brand-pills nav-stacked" role="tablist">
-                                            <li role="presentation" className="brand-nav active"><a href="#tab1"
-                                                                                                    aria-controls="tab1"
-                                                                                                    role="tab"
-                                                                                                    data-toggle="tab">Algemeine
-                                                Informationen</a></li>
+                                            <li role="presentation" className="brand-nav active">
+                                                <a href="#tab1"
+                                                   aria-controls="tab1"
+                                                   role="tab"
+                                                   data-toggle="tab">Algemeine
+                                                    Informationen</a></li>
                                             <div id="arrow-down">
                                                 <FontAwesomeIcon icon={faChevronDown}/>
                                             </div>
-                                            <li role="presentation" className="brand-nav"><a href="#tab2"
-                                                                                             aria-controls="tab2"
-                                                                                             role="tab"
-                                                                                             data-toggle="tab">Vor der
-                                                Anwendung </a></li>
+                                            <li role="presentation" className="brand-nav">
+                                                <a href="#tab2"
+                                                   aria-controls="tab2"
+                                                   role="tab"
+                                                   data-toggle="tab">Vor der
+                                                    Anwendung </a></li>
                                             <div id="arrow-down">
                                                 <FontAwesomeIcon icon={faChevronDown}/>
                                             </div>
-                                            <li role="presentation" className="brand-nav"><a href="#tab3"
-                                                                                             aria-controls="tab3"
-                                                                                             role="tab"
-                                                                                             data-toggle="tab">Anwendung</a>
+                                            <li role="presentation" className="brand-nav">
+                                                <a href="#tab3"
+                                                   aria-controls="tab3"
+                                                   role="tab"
+                                                   data-toggle="tab">Anwendung</a>
                                             </li>
                                             <div id="arrow-down">
                                                 <FontAwesomeIcon icon={faChevronDown}/>
                                             </div>
-                                            <li role="presentation" className="brand-nav"><a href="#tab4"
-                                                                                             aria-controls="tab4"
-                                                                                             role="tab"
-                                                                                             data-toggle="tab">Nebenwirkungen
-                                            </a></li>
+                                            <li role="presentation" className="brand-nav">
+                                                <a href="#tab4"
+                                                   aria-controls="tab4"
+                                                   role="tab"
+                                                   data-toggle="tab">Nebenwirkungen
+                                                </a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -892,17 +806,15 @@ class DrugDetail extends React.Component {
                                                      data-target="#drugform">
                                                     {this.renderPharmaceuticalForm(drug)}
                                                 </div>
-
                                             </div>
                                             <div className="modal fade" id="drugform" tabIndex="-1" role="dialog"
-                                                 aria-labelledby="adressLabel"
+                                                 aria-labelledby="addressLabel"
                                                  aria-hidden="true">
                                                 <div className="modal-dialog" role="document">
                                                     <div className="modal-content">
                                                         <div className="modal-header">
                                                             <h2>Inhalt und Darstellung des
                                                                 Medikaments</h2>
-
                                                             <button type="button" className="close"
                                                                     data-dismiss="modal" aria-label="Close">
                                                                 <span aria-hidden="true">&times;</span>
@@ -916,14 +828,9 @@ class DrugDetail extends React.Component {
                                                                     {this.renderFormdesc(drug)}
                                                                 </div>
                                                             </div>
-
-
                                                         </div>
-                                                        <div className="modal-footer">
-                                                            <button type="button" className="btn btn-secondary"
-                                                                    data-dismiss="modal">Schließen
-                                                            </button>
-                                                        </div>
+                                                        <span
+                                                            dangerouslySetInnerHTML={this.createMarkup(t("modal_close"))}/>
                                                     </div>
                                                 </div>
                                             </div>
@@ -977,75 +884,9 @@ class DrugDetail extends React.Component {
                                                 <button type="button" className="btn btn-success neben_button"
                                                         data-toggle="modal"
                                                         data-target="#melden">Meldung von Nebenwirkungen
-                                                    <i className="fas fa-comment-medical"
-                                                       style={{marginLeft: "15px"}}></i>
+                                                    <i className="fas fa-comment-medical" style={{marginLeft: "15px"}}/>
                                                 </button>
                                             </div>
-
-                                            <div className="modal fade" id="melden" tabIndex="-1" role="dialog"
-                                                 aria-labelledby="adressLabel"
-                                                 aria-hidden="true">
-                                                <div className="modal-dialog" role="document">
-                                                    <div className="modal-content">
-                                                        <div className="modal-header">
-                                                            <h2>Meldung von Nebenwirkungen </h2>
-                                                            <button type="button" className="close" data-dismiss="modal"
-                                                                    aria-label="Close">
-                                                                <span aria-hidden="true">&times;</span>
-                                                            </button>
-                                                        </div>
-                                                        <div className="modal-body" style={{color: "black"}}>
-                                                            <div className="row  alert alert-success" role="alert">
-                                                                <div className="col-md-10">
-                                                                    <p>Indem Sie Nebenwirkungen melden, können Sie dazu
-                                                                        beitragen,
-                                                                        dass mehr Informationen über die Sicherheit
-                                                                        dieses Arzneimittels
-                                                                        zur Verfügung gestellt werden.
-                                                                    </p>
-                                                                </div>
-                                                                <div className="col-md-2 icon_modal">
-                                                                    <FontAwesomeIcon icon={faThumbsUp}/>
-                                                                </div>
-                                                            </div>
-                                                            <div className="row">
-                                                                <div className="col-md-10">
-                                                                    <p>Wenn Sie Nebenwirkungen bemerken, wenden Sie sich
-                                                                        an Ihren <b>Arzt oder
-                                                                            Apotheker</b>.
-                                                                        Dies gilt auch für Nebenwirkungen, die nicht in
-                                                                        dieser Packungsbeilage
-                                                                        angegeben
-                                                                        sind.
-                                                                    </p>
-                                                                </div>
-                                                                <div className="col-md-2 icon_modal">
-                                                                    <FontAwesomeIcon icon={faUserMd}/>
-                                                                </div>
-                                                            </div>
-                                                            <div className="row">
-                                                                <div className="col-md-12">
-                                                                    <p><b>Weitere Möglichkeit:</b><br/>
-                                                                        Bundesinstitut für Arzneimittel und
-                                                                        Medizinprodukte <br/>
-                                                                        Abt. Pharmakovigilanz<br/>
-                                                                        Kurt-Georg-Kiesinger Allee 3,<br/> D-53175
-                                                                        Bonn<br/>
-                                                                        <b>Website:</b> <a href="www.bfarm.de">www.bfarm.de
-                                                                        </a></p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
-                                                        <div className="modal-footer">
-                                                            <button type="button" className="btn btn-secondary"
-                                                                    data-dismiss="modal">Schließen
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
                                             {/*Button REPORT ENDE*/
                                             }
                                         </div>
@@ -1055,13 +896,12 @@ class DrugDetail extends React.Component {
                         </div>
                     </div>
                     <div className="row xs-center backtomed">
-                        <a href="#/drug/list"> <i className="far fa-arrow-alt-circle-left"></i> zurück zu den
+                        <a href="#/drug/list"> <i className="far fa-arrow-alt-circle-left"/> zurück zu den
                             Medkamenten</a>
                     </div>
                 </div>
             </div>
         );
-
 
     }
 }

@@ -224,8 +224,8 @@ INSERT INTO packaging_topic (id, order_number, title) VALUES (9,9,'Inhalt der Pa
 INSERT INTO pharmaceutical_form (id, name) VALUES (1,'Filmtabletten');
 INSERT INTO pharmaceutical_form (id, name) VALUES (2,'Retardtablette');
 INSERT INTO pharmaceutical_form (id, name) VALUES (3,'Tablette');
-INSERT INTO pharmaceutical_form (id, name) VALUES (4,'Kapsel');
-INSERT INTO pharmaceutical_form (id, name) VALUES (5,'Flüssigkeit');
+INSERT INTO pharmaceutical_form (id, name) VALUES (4,'Flüssigkeit');
+INSERT INTO pharmaceutical_form (id, name) VALUES (5,'Kapsel');
 
 
 

@@ -295,19 +295,14 @@ class DrugList extends React.Component {
             <div className="drug-features ">
                 {drug.drugFeature.map(feature => {
                     return (
-
                         <div key={feature.id}>
-
                             <img style={{float: "left"}} key={feature.id} data-toggle="modal"
                                  data-target={"#" + feature.id}
                                  src={"./../../assets/icons/" + feature.id + ".svg"}
                                  className="drug-feature-icon" alt={feature.drugFeature}
-                                 title={feature.drugFeature}></img>
-
-
+                                 title={feature.drugFeature}/>
                             <div id={feature.id} className="modal fade" role="dialog">
                                 <div className="modal-dialog">
-
                                     <div className="modal-content">
                                         <div className="modal-header">
                                             <button type="button" className="close"
@@ -322,9 +317,7 @@ class DrugList extends React.Component {
                                             </h2>
                                         </div>
                                         <div className="modal-body">
-
                                             <div dangerouslySetInnerHTML={this.createMarkup(feature.descriptionDrug)}/>
-
                                         </div>
                                         <div className="modal-footer">
                                             <button type="button" className="btn btn-default"
@@ -669,19 +662,19 @@ class DrugList extends React.Component {
                     <div className="container">
                         {User.isAuthenticated() && User.levelOfDetail > 1 &&
                         <div className="alert modal1 " data-dismiss="alert">
-                        <div className="alert bubble_left  row ">
-                            <div className="speech-bubble_left">
-                                <a href="#" className="close" data-dismiss="alert"
-                                   aria-label="close1">&times;</a>
-                                Hi {firstname} , <br />
-                                {description.replace("%User.firstname%", firstname).replace("%User.lastname%", lastname)}
+                            <div className="alert bubble_left  row ">
+                                <div className="speech-bubble_left">
+                                    <a href="#" className="close" data-dismiss="alert"
+                                       aria-label="close1">&times;</a>
+                                    Hi {firstname} , <br/>
+                                    {description.replace("%User.firstname%", firstname).replace("%User.lastname%", lastname)}
+                                </div>
+                                <img className="speech-bubble_left-person" src="./../../assets/images/logo_chat.png"/>
                             </div>
-                            <img className="speech-bubble_left-person" src="./../../assets/images/logo_chat.png"/>
-                        </div>
                         </div>
 
                         }
-                         {drugs.length > 1 && User.isAuthenticated() && interactions.length > 0 &&
+                        {drugs.length > 1 && User.isAuthenticated() && interactions.length > 0 &&
                         <div
                             className={"alert alert-dismissable" + (User.redGreenColorblind ? " danger-red-green-colorblind" : " alert-danger")}>
                             <button type="button" className="close" data-dismiss="alert" aria-label="Close"><span
