@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebContextManager">
+    <option name="state">
+      <map>
+        <entry key="file://$PROJECT_DIR$/src/main/frontend/src/components" value="file://$PROJECT_DIR$/h2/src/tools" />
+      </map>
+    </option>
+  </component>
+</project>

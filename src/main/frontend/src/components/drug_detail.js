@@ -690,7 +690,7 @@ class DrugDetail extends React.Component {
                                             dangerouslySetInnerHTML={this.createMarkup(drug.personalizedInformation)}/>
                                     </div>
                                     <img className="speech-bubble_right-person"
-                                         src="./../../assets/images/logo_chat.png" alt={speechbubble}/>
+                                         src="./../../assets/images/logo_chat.png" alt={"speechbubble"}/>
                                 </div>
                             </div>
                             }

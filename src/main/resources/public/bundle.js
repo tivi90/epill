@@ -40937,7 +40937,7 @@ var DrugDetail = function (_React$Component) {
                                             dangerouslySetInnerHTML: this.createMarkup(drug.personalizedInformation) })
                                     ),
                                     _react2.default.createElement("img", { className: "speech-bubble_right-person",
-                                        src: "./../../assets/images/logo_chat.png", alt: speechbubble })
+                                        src: "./../../assets/images/logo_chat.png", alt: "speechbubble" })
                                 )
                             ),
                             _react2.default.createElement(
@@ -41467,7 +41467,7 @@ var DrugList = function (_React$Component) {
             }
         }
 
-        // This function is called before render() to initialize its state.
+        // This function is called before render() to initialize its state.s
 
     }, {
         key: "componentWillMount",
@@ -41521,7 +41521,6 @@ var DrugList = function (_React$Component) {
                 var options = {
                     position: _reactToastify.toast.POSITION.BOTTOM_CENTER
                 };
-
                 switch (status) {
                     case 200:
                         _reactToastify.toast.success(t('addToTakingListSuccess'), options);
@@ -41569,7 +41568,6 @@ var DrugList = function (_React$Component) {
                         } else {
                             _this4.state.drugs.splice(idx, 1);
                         }
-
                         _this4.setState(_this4.state);
                         _this4.checkForInteractions();
                         break;
@@ -41608,7 +41606,6 @@ var DrugList = function (_React$Component) {
                 var options = {
                     position: _reactToastify.toast.POSITION.BOTTOM_CENTER
                 };
-
                 switch (status) {
                     case 200:
                         _reactToastify.toast.success(t('addToRememberListSuccess'), options);
@@ -41646,7 +41643,6 @@ var DrugList = function (_React$Component) {
                 var options = {
                     position: _reactToastify.toast.POSITION.BOTTOM_CENTER
                 };
-
                 switch (status) {
                     case 200:
                         _reactToastify.toast.success(t('removeFromRememberListSuccess'), options);
@@ -41660,7 +41656,6 @@ var DrugList = function (_React$Component) {
                             _this6.state.drugs.splice(idx, 1);
                             _this6.checkForInteractions();
                         }
-
                         break;
                     case 400:
                         _reactToastify.toast.error(t('removeFromRememberListFailed'), options);
@@ -41706,21 +41701,16 @@ var DrugList = function (_React$Component) {
                 _this8.setState(_this8.state);
             });
         }
-
-        //=============================<img key={feature.id}
-        //                                                       src={"./../../assets/icons/" + feature.id + ".svg"}
-        //                                                       className="drug-feature-icon" alt={feature.drugFeature}
-        //                                                       title={feature.drugFeature}></img>
-
     }, {
         key: "renderDrugFeatures",
         value: function renderDrugFeatures(drug) {
             var _this9 = this;
 
+            var t = this.props.t;
+
             if (!drug.drugFeature) {
                 return null;
             }
-
             return _react2.default.createElement(
                 "div",
                 { className: "drug-features " },
@@ -41767,19 +41757,10 @@ var DrugList = function (_React$Component) {
                                     ),
                                     _react2.default.createElement(
                                         "div",
-                                        { className: "modal-body" },
+                                        { className: "modal-body text-left" },
                                         _react2.default.createElement("div", { dangerouslySetInnerHTML: _this9.createMarkup(feature.descriptionDrug) })
                                     ),
-                                    _react2.default.createElement(
-                                        "div",
-                                        { className: "modal-footer" },
-                                        _react2.default.createElement(
-                                            "button",
-                                            { type: "button", className: "btn btn-default",
-                                                "data-dismiss": "modal" },
-                                            "Close"
-                                        )
-                                    )
+                                    _react2.default.createElement("span", { dangerouslySetInnerHTML: _this9.createMarkup(t("modal_close")) })
                                 )
                             )
                         )
@@ -41836,7 +41817,6 @@ var DrugList = function (_React$Component) {
             if (!drug.pharmaceuticalForm) {
                 return;
             }
-
             var t = this.props.t;
 
             return _react2.default.createElement(
@@ -41928,12 +41908,9 @@ var DrugList = function (_React$Component) {
             this.setState({ addClass: !this.state.addClass });
         }
     }, {
-        key: "renderDrugs1",
-        value: function renderDrugs1(drugs) {
+        key: "renderDrugs",
+        value: function renderDrugs(drugs) {
             var _this10 = this;
-
-            var t = this.props.t;
-
 
             return drugs.map(function (drug) {
                 var t = _this10.props.t;
@@ -41943,14 +41920,10 @@ var DrugList = function (_React$Component) {
                 var drugname1 = ["group inner med_header"];
                 var medfeat = ["row med_drugfeature hidden"];
                 var medfeat1 = ["row med_drugfeature"];
-                var col1Class = [""];
                 var col2Class = [""];
                 var col4Class = [""];
                 var col5Class = [""];
-                var col6Class = ["info_sec "];
                 var col8Class = [" "];
-                var col11Class = ["full_content"];
-                var col9Class = ["full_content"];
                 var col7Class = ["full_content"];
                 var coltorowClass = ["col-xs-4 nopadd"];
                 if (_this10.state.addClass) {
@@ -41958,15 +41931,11 @@ var DrugList = function (_React$Component) {
                     drugname.push('');
                     drugname1.push('');
                     medfeat.push('');
-                    col1Class.push('col-md-1 ');
                     col2Class.push('col-md-2 ');
                     col4Class.push('col-md-4 ');
                     col5Class.push('col-md-5 ');
-                    col6Class.push('col-md-6 ');
                     col7Class.push('col-md-7 ');
                     col8Class.push('col-md-8 ');
-                    col9Class.push('col-md-9 ');
-                    col11Class.push('col-md-11 ');
                     coltorowClass.push('fullrow');
                 }
                 return _react2.default.createElement(
@@ -42112,152 +42081,12 @@ var DrugList = function (_React$Component) {
             });
         }
     }, {
-        key: "renderDrugs",
-        value: function renderDrugs(drugs) {
-            var _this11 = this;
-
-            return drugs.map(function (drug) {
-                var t = _this11.props.t;
-
-
-                return _react2.default.createElement(
-                    "div",
-                    { className: "col-md-4 padd padd_md", key: drug.id },
-                    _react2.default.createElement(
-                        "div",
-                        { className: "panel panel-default medicine" },
-                        _react2.default.createElement(
-                            "div",
-                            { className: "panel-body" },
-                            _react2.default.createElement(
-                                "div",
-                                { className: "row", style: { paddingBottom: "10px" } },
-                                _react2.default.createElement(
-                                    _reactRouterDom.Link,
-                                    { to: "/drug/" + drug.id },
-                                    _react2.default.createElement("img", { style: { height: "125px" },
-                                        className: "featurette-image img-responsive center-block", alt: drug.name,
-                                        title: drug.name, src: "/image/drug/" + drug.id })
-                                )
-                            ),
-                            _react2.default.createElement(
-                                "div",
-                                { className: "row", style: { height: "220px" } },
-                                _react2.default.createElement(
-                                    "div",
-                                    { className: "row" },
-                                    _react2.default.createElement(
-                                        _reactRouterDom.Link,
-                                        { to: "/drug/" + drug.id, style: { paddingBottom: "10px" } },
-                                        _react2.default.createElement(
-                                            "h5",
-                                            { className: "med_header" },
-                                            drug.name
-                                        )
-                                    )
-                                ),
-                                _react2.default.createElement(
-                                    "div",
-                                    { className: "info", style: { padding: "15px" } },
-                                    _react2.default.createElement(
-                                        "div",
-                                        { className: "row" },
-                                        _this11.renderPharmaceuticalForm(drug)
-                                    ),
-                                    _react2.default.createElement(
-                                        "div",
-                                        { className: "row", style: { height: "65px" } },
-                                        _this11.renderDisease(drug)
-                                    ),
-                                    _User2.default.isAuthenticated() && _react2.default.createElement(
-                                        "div",
-                                        { className: "row" },
-                                        _react2.default.createElement(
-                                            "div",
-                                            null,
-                                            _react2.default.createElement(
-                                                "b",
-                                                null,
-                                                " ",
-                                                t('application') + ": "
-                                            )
-                                        ),
-                                        drug.personalizedInformation && _react2.default.createElement("section", { className: "minimum-summary",
-                                            dangerouslySetInnerHTML: _this11.createMarkup(drug.personalizedInformation) })
-                                    )
-                                )
-                            )
-                        ),
-                        _react2.default.createElement(
-                            "div",
-                            {
-                                className: "row med_drugfeature" },
-                            "                                    ",
-                            _this11.renderDrugFeatures(drug)
-                        ),
-                        _User2.default.isAuthenticated() && _react2.default.createElement(
-                            "div",
-                            { className: "row" },
-                            _react2.default.createElement(
-                                "div",
-                                { className: "action-pattern" },
-                                _react2.default.createElement(
-                                    "div",
-                                    null,
-                                    _react2.default.createElement(
-                                        "div",
-                                        { className: "col-md-4 nopadd" },
-                                        _react2.default.createElement(
-                                            "button",
-                                            { type: "button", className: "btn btn-like big_btn",
-                                                onClick: function onClick() {
-                                                    return _this11.toggleTaking(drug);
-                                                } },
-                                            _react2.default.createElement("span", {
-                                                className: "glyphicon white " + (drug.isTaken ? 'glyphicon-minus' : 'glyphicon-heart') })
-                                        )
-                                    ),
-                                    _react2.default.createElement(
-                                        "div",
-                                        { className: "col-md-4 nopadd" },
-                                        _react2.default.createElement(
-                                            "button",
-                                            { type: "button", className: "btn btn-add big_btn",
-                                                onClick: function onClick() {
-                                                    return _this11.toggleRemember(drug);
-                                                } },
-                                            _react2.default.createElement("span", {
-                                                className: "glyphicon white " + (drug.isRemembered ? 'glyphicon-minus' : 'glyphicon-plus') })
-                                        )
-                                    ),
-                                    _react2.default.createElement(
-                                        "div",
-                                        { className: "col-md-4 nopadd" },
-                                        _react2.default.createElement(
-                                            "button",
-                                            { type: "button", className: "btn btn-open big_btn" },
-                                            _react2.default.createElement(
-                                                _reactRouterDom.Link,
-                                                { to: "/drug/" + drug.id },
-                                                _react2.default.createElement("span", { className: "glyphicon glyphicon-eye-open white" })
-                                            )
-                                        )
-                                    )
-                                )
-                            )
-                        )
-                    )
-                );
-            });
-        }
-    }, {
         key: "render",
         value: function render() {
             var t = this.props.t;
 
             var firstname = _User2.default.firstname;
             var lastname = _User2.default.lastname;
-
             var drugs = this.state.drugs;
             var interactions = this.state.interactions;
 
@@ -42289,7 +42118,6 @@ var DrugList = function (_React$Component) {
                     _react2.default.createElement(
                         "div",
                         { className: "well well-sm hidden-xs" },
-                        _react2.default.createElement("strong", null),
                         _react2.default.createElement(
                             "div",
                             { className: "btn-group" },
@@ -42336,7 +42164,8 @@ var DrugList = function (_React$Component) {
                                     _react2.default.createElement("br", null),
                                     description.replace("%User.firstname%", firstname).replace("%User.lastname%", lastname)
                                 ),
-                                _react2.default.createElement("img", { className: "speech-bubble_left-person", src: "./../../assets/images/logo_chat.png" })
+                                _react2.default.createElement("img", { className: "speech-bubble_left-person", src: "./../../assets/images/logo_chat.png",
+                                    alt: "speechbuuble" })
                             )
                         ),
                         drugs.length > 1 && _User2.default.isAuthenticated() && interactions.length > 0 && _react2.default.createElement(
@@ -42372,11 +42201,10 @@ var DrugList = function (_React$Component) {
                             "div",
                             null,
                             this.state.loading && _react2.default.createElement(_loading2.default, null),
-                            !this.state.loading && drugs && drugs.length == 0 && _react2.default.createElement(_empty_list2.default, null),
-                            !this.state.loading && drugs && drugs.length > 0 && _react2.default.createElement("ul", { className: "drug-list" })
+                            !this.state.loading && drugs && drugs.length === 0 && _react2.default.createElement(_empty_list2.default, null),
+                            !this.state.loading && drugs && drugs.length > 0 && this.renderDrugs(drugs)
                         )
-                    ),
-                    this.renderDrugs1(drugs)
+                    )
                 )
             );
         }
