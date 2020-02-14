@@ -231,17 +231,6 @@ INSERT INTO pharmaceutical_form (id, name) VALUES (5,'Kapsel');
 
 
 
---
--- Dumping data for table `pharmaceutical_form`
---
-
-INSERT INTO word_Explaination (id, name, description) VALUES (1,'hallo', 'asdsada' );
-INSERT INTO word_Explaination (id, name, description) VALUES (2,'huhu', 'asdsada');
-INSERT INTO word_Explaination (id, name, description) VALUES (3,'hihi', 'asdsada');
-INSERT INTO word_Explaination (id, name, description) VALUES (4,'haha', 'asdsada');
-INSERT INTO word_Explaination (id, name, description) VALUES (5,'hehe', 'asdsada');
-
-
 
 
 --
@@ -546,16 +535,159 @@ INSERT INTO drug_pharmaceutical_form (iddrug, idpharmaceutical_form) VALUES (11,
 INSERT INTO drug_pharmaceutical_form (iddrug, idpharmaceutical_form) VALUES (12,3);
 
 
+--
+-- Dumping data for table `wordExplanation`
+--
+
+INSERT INTO word_Explaination (id, name, description) VALUES (1,'Insulin', '<p>Insulin ist ein von der Bauchspeicheldrüse gebildetes Hormon, das für die Aufnahme
+                    von Glukose
+                    (Zucker) aus dem Blut in die Körperzellen sorgt.
+                    Dort wird die Glukose in Energie umgewandelt oder als Vorrat zur späteren Verwendung
+                    gespeichert.
+                </p>' );
+INSERT INTO word_Explaination (id, name, description) VALUES (2,'Ketoazidose', '  <p>
+                        Die Ketoazidose ist ein Zustand, bei dem sich als „Ketonkörper“ bezeichnete
+                        Substanzen im Blut anhäufen, die zu einem diabetischen Präkoma führen können. Zu den Symptomen
+                        gehören Magenschmerzen, schnelle und tiefe Atmung, Schläfrigkeit oder die Entwicklung
+                        eines ungewöhnlichen fruchtigen Geruchs des Atems.
+                    </p>');
+INSERT INTO word_Explaination (id, name, description) VALUES (3,'Laktatazidose', 'Metformin Lich kann vor allem dann, wenn Ihre Nieren nicht richtig funktionieren,
+                    eine sehr seltene,
+                    aber sehr schwerwiegende Nebenwirkung verursachen, die als Laktatazidose bezeichnet
+                    wird. Das
+                    Risiko, eine Laktatazidose zu entwickeln, wird auch durch schlecht eingestellten
+                    Diabetes, schwere
+                    Infektionen, längeres Fasten oder Alkoholkonsum, Dehydrierung (weitere Informationen
+                    siehe unten),
+                    Leberprobleme und Erkrankungen erhöht, bei denen ein Teil des Körpers nicht mit
+                    genügend
+                    Sauerstoff versorgt wird (zum Beispiel bei akuten schweren Herzerkrankungen).
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-10">
+                            Falls einer der genannten Punkte auf Sie zutrifft, sprechen Sie mit Ihrem
+                            Arzt hinsichtlich
+                            weiterer
+                            Anweisungen.
+                        </div>
+                        <div class="col-md-2">
+                            <i style="font-size:40px;color: #575858;" class="fas fa-user-md"></i>
+                        </div>
+                    </div>
+                    <hr>
+                    Unterbrechen Sie die Einnahme von Metformin Lich für eine kurze Zeit, wenn Sie einen
+                    Zustand haben, der mit einer Dehydrierung (erheblicher Verlust an Körperflüssigkeit)
+                    verbunden
+                    sein kann, wie beispielsweise schweres Erbrechen, Durchfall, Fieber, Hitzebelastung
+                    oder geringere
+                    Flüssigkeitsaufnahme als normalerweise. Sprechen Sie hinsichtlich weiterer
+                    Anweisungen mit Ihrem
+                    Arzt.<br>
+                    Beenden Sie die Einnahme von Metformin Lich und wenden Sie sich unverzüglich an
+                    einen Arzt
+                    oder an das nächstgelegene Krankenhaus, wenn Sie Symptome einer Laktatazidose
+                    bemerken,
+                    da dieser Zustand zum Koma führen kann.
+                    Symptome einer Laktatazidose sind:
+                    <ul>
+                        <li>Erbrechen</li>
+                        <li>Bauchschmerzen</li>
+                        <li>Muskelkrämpfe</li>
+                        <li>allgemeines Unwohlsein mit starker Müdigkeit</li>
+                        <li>Schwierigkeiten beim Atmen</li>
+                        <li>verringerte Körpertemperatur und Herzklopfen</li>
+                    </ul>
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-10">
+                            Eine Laktatazidose ist ein medizinischer Notfall und muss in einem
+                            Krankenhaus behandelt
+                            werden.
+                            Es ist wichtig, dass Sie regelmäßig Ihre Medikation einnehmen, die
+                            Diätanweisungen beachten
+                            und
+                            Ihr
+                            Sportprogramm absolvieren, da dies das Risiko einer Laktatazidose vermindern
+                            kann.
+                        </div>
+                        <div class="col-md-2">
+                            <i style="font-size:40px;color: #f94343;" class="fas fa-hospital"></i>
+                        </div>
+                    </div>');
+INSERT INTO word_Explaination (id, name, description) VALUES (4,'Hepatitis', '<p> Hepatitis ist eine Leberentzündung. Diese kann
+                    Müdigkeit,
+                    Appetitverlust und Gewichtsabnahme mit oder ohne Gelbfärbung der Haut und des
+                    Augenweißes verursachen.
+                </p>');
+INSERT INTO word_Explaination (id, name, description) VALUES (5,'Diabetes Typ 2', '<p>Diabetes Typ 2, auch nicht insulinabhängiger Diabetes“ genannt, tritt meist nach dem 40.
+                    Lebensjahr
+                    auf. Hierbei besteht ein „relativer
+                    Insulinmangel“. Die Bauchspeicheldrüse produziert zwar Insulin, aber die Körperzellen verlieren
+                    ihre
+                    Empfindlichkeit für das Hormon und/oder die Ausschüttung des Insulins aus den Zellen der
+                    Bauchspeicheldrüse ist gestört. Die Bauchspeicheldrüse versucht dies auszugleichen, indem sie
+                    immer
+                    mehr Insulin ausschüttet. Doch trotz erhöhtem Insulinspiegel gelangt immer weniger Zucker in die
+                    Körperzellen. Sehr häufig können Menschen mit Diabetes Typ 2 zunächst mit einer
+                    Ernährungsumstellung
+                    allein oder aber in einer Kombination mit Tabletten behandelt werden. Im Krankheitsverlauf
+                    vermindert sich aber die Insulinproduktion der Bauchspeicheldrüse, wodurch auch bei Menschen mit
+                    Typ-2-Diabetes der Insulinmangel weiter fortschreitet. Der dadurch veränderte Stoffwechsel muss
+                    dann
+                    ebenfalls mit Insulin-Injektionen behandelt werden.
+                    <br>
+                    Ursachen eines Typ-2-Diabetes sind:
+                    <ul>
+                        <li>eine entsprechende genetische Disposition,
+                        <li> häufig verbunden mit starkem Übergewicht (Adipositas)
+                        <li>und zu wenig körperliche Bewegung.
+                        <li>Auch erhöhte Blutfettwerte sowie Bluthochdruck gehen oft mit einem Prädiabetes oder
+                            Diabetes
+                            einher
+                            (Metabolisches Syndrom).
+                    </ul>
+                    <br>
+                    Sehr häufig können Menschen mit Diabetes Typ 2 mit einer Ernährungsumstellung allein oder
+                    aber in einer Kombination mit Tabletten behandelt werden. Bei zunehmender Krankheitsdauer müssen
+                    allerdings auch Typ-2-Diabetiker mit einem Fortschreiten des Insulinmangels rechnen. Der dadurch
+                    veränderte Stoffwechsel muss dann ebenfalls mit Insulin-Injektionen behandelt werden.
+                    <a
+                        href="https://www.diabetesde.org/ueber_diabetes/was_ist_diabetes_/was_ist_diabetes_typ_2">Quelle</a>
+                </p>');
+INSERT INTO word_Explaination (id, name, description) VALUES (6,'Bei einer größeren Operation', '<p>
+                    Falls bei Ihnen eine größere Operation geplant ist, müssen Sie die Einnahme von Metformin Lich
+                    während des Eingriffs und für einige Zeit danach unterbrechen.
+                    Ihr Arzt wird entscheiden, wann Sie Ihre Behandlung mit Metformin Lich beenden müssen und wann
+                    die
+                    Behandlung wieder begonnen werden kann. <br>
+                    Ihr Arzt entscheidet, ob Sie während dieser Zeit eine andere Behandlung benötigen.<br>
+                    Während der Behandlung mit Metformin Lich wird Ihr Arzt mindestens einmal jährlich oder – falls
+                    Sie älter sind und/oder sich Ihre Nierenfunktion verschlechtert – auch häufiger Ihre
+                    Nierenfunktion
+                    kontrollieren.
+                </p>');
+INSERT INTO word_Explaination (id, name, description) VALUES (7,'Angina pectoris', '  <p>Angina pectoris (mediz. Stenokardie) bedeutet Brustenge. Sie äußert sich in einem plötzlich
+                    auftretenden Schmerz in der Herzgegend sowie einem Druckgefühl in der Brust. Ausgelöst wird die
+                    Angina pectoris durch einen Sauerstoffmangel des Herzens. Es besteht Lebensgefahr, deshalb sollte
+                    man sofort den Notarzt rufen! Angina pectoris lässt sich normalerweise mit Medikamenten gut
+                    behandeln. Akute Angina-pectoris Schmerzen im Brustbereich werden durch dieses Arzneimittel nicht
+                    sofort gelindert.
+                    <br>
+                    Quelle: <a
+                        href="https://www.netdoktor.de/krankheiten/angina-pectoris/">https://www.netdoktor.de/krankheiten/angina-pectoris/</a>
+                </p>');
+
+
 -- Dumping data for table `drug_wordExplaination`
 --
 
-INSERT INTO drug_word_explaination (iddrug, idword_Explaination) VALUES (1,1);
-INSERT INTO drug_word_explaination (iddrug, idword_Explaination) VALUES (2,1);
-INSERT INTO drug_word_explaination (iddrug, idword_Explaination) VALUES (3,2);
-INSERT INTO drug_word_explaination (iddrug, idword_Explaination) VALUES (7,1);
-INSERT INTO drug_word_explaination (iddrug, idword_Explaination) VALUES (10,1);
 INSERT INTO drug_word_explaination (iddrug, idword_Explaination) VALUES (11,1);
-INSERT INTO drug_word_explaination (iddrug, idword_Explaination) VALUES (12,3);
+INSERT INTO drug_word_explaination (iddrug, idword_Explaination) VALUES (11,2);
+INSERT INTO drug_word_explaination (iddrug, idword_Explaination) VALUES (11,3);
+INSERT INTO drug_word_explaination (iddrug, idword_Explaination) VALUES (11,4);
+INSERT INTO drug_word_explaination (iddrug, idword_Explaination) VALUES (11,5);
+INSERT INTO drug_word_explaination (iddrug, idword_Explaination) VALUES (11,6);
+INSERT INTO drug_word_explaination (iddrug, idword_Explaination) VALUES (12,7);
 
 
 
@@ -744,7 +876,8 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
             Ihren Blutspiegel des Schilddrüse-stimulierenden Hormons (TSH) regelmäßig überwachen,</li>
         <li>wenn Sie sich einer Röntgen- oder anderen bildgebenden Untersuchung unterziehen müssen, bei
             der Ihnen ein <b>jodhaltiges Kontrastmittel</b> gespritzt wird,</li>
-        <li>wenn Sie sich einem <a class="info_words" type="button" data-toggle="modal" data-target="#op">größeren
+        <li>wenn Sie sich einem <a class="info_words" type="button" data-toggle="modal"
+                data-target="#bei_einer_größeren_operation">größeren
                 operativen Eingriff</a> unterziehen müssen.</li>
     </ul>
     <div class="row" style="margin-top: 15px;">
@@ -763,44 +896,13 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
         <div class="col-sm-2"><b>Vitamin-B12-Blutspiegel</b></div>
         <div class="col-sm-10">
             Eine Langzeitbehandlung mit Metformin kann zu einer Abnahme des Vitamin-B12-Blutspiegels und
-            infolgedessen zu einer Erkrankung der Nerven führen (siehe <a href="#tab4"
-                aria-controls="tab4" role="tab" data-toggle="tab">Nebenwirkungen
+            infolgedessen zu einer Erkrankung der Nerven führen (siehe <a href="#tab4" aria-controls="tab4" role="tab"
+                data-toggle="tab">Nebenwirkungen
             </a>). Ihr Arzt wird möglicherweise Ihren Vitamin-B12-Spiegel regelmäßig überwachen.
         </div>
     </div>
 </div>
-<!-- Modal -->
-<div id="op" class="modal fade" role="dialog">
-    <div class="modal-dialog">
 
-        <!-- Modal content-->
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h3 class="modal-title">Bei einer größen Operation</h3>
-            </div>
-            <div class="modal-body">
-                <p>
-                    Falls bei Ihnen eine größere Operation geplant ist, müssen Sie die Einnahme von Metformin Lich
-                    während des Eingriffs und für einige Zeit danach unterbrechen.
-                    Ihr Arzt wird entscheiden, wann Sie Ihre Behandlung mit Metformin Lich beenden müssen und wann
-                    die
-                    Behandlung wieder begonnen werden kann. <br>
-                    Ihr Arzt entscheidet, ob Sie während dieser Zeit eine andere Behandlung benötigen.<br>
-                    Während der Behandlung mit Metformin Lich wird Ihr Arzt mindestens einmal jährlich oder – falls
-                    Sie älter sind und/oder sich Ihre Nierenfunktion verschlechtert – auch häufiger Ihre
-                    Nierenfunktion
-                    kontrollieren.
-                </p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            </div>
-        </div>
-
-    </div>
-</div>
-<!-- Modal -->
 
 <div class="panel-group" id="accordion" style="margin: 30 0 30 0;">
     <div class="panel panel-default">
@@ -862,7 +964,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
             <div class="panel-body">Meiden Sie während der Einnahme von Metformin Lich übermäßigen Alkoholkonsum, da
                 dieser
                 das Risiko einer <a class="info_words" type="button" data-toggle="modal"
-                    data-target="#laktazidose">Laktatazidose</a> erhöhen kann. Im Allgemeinen sollten Sie den Konsum
+                    data-target="#laktatazidose">Laktatazidose</a> erhöhen kann. Im Allgemeinen sollten Sie den Konsum
                 von
                 Alkohol und
                 die
@@ -955,7 +1057,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                     <li>Durchfall, </li>
                     <li>schneller Gewichtsabnahme,</li>
                     <li><a class="info_words" type="button" data-toggle="modal"
-                            data-target="#laktazidose">Laktatazidose</a>
+                            data-target="#laktatazidose">Laktatazidose</a>
                     </li>
                     <li><a class="info_words" type="button" data-toggle="modal"
                             data-target="#ketoazidose">Ketoazidose</a>
@@ -966,113 +1068,6 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
         <div class="row">
             <div class="col-sm-12 info_notuse">Trinken von viel Alkohol oder Leiden unter einer Alkoholvergiftung
                 leiden.</div>
-        </div>
-    </div>
-    <!-- Modal -->
-    <div id="ketoazidose" class="modal fade" role="dialog">
-        <div class="modal-dialog">
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h3 class="modal-title"><i class="fas fa-question"></i> Was ist Insulin?</h3>
-                </div>
-                <div class="modal-body">
-                    <p>
-                        Die
-                        Ketoazidose ist ein Zustand, bei dem sich als „Ketonkörper“ bezeichnete
-                        Substanzen im Blut
-                        anhäufen, die zu einem diabetischen Präkoma führen können. Zu den Symptomen
-                        gehören
-                        Magenschmerzen, schnelle und tiefe Atmung, Schläfrigkeit oder die Entwicklung
-                        eines
-                        ungewöhnlichen fruchtigen Geruchs des Atems.
-                    </p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Modal -->
-    <div id="laktazidose" class="modal fade" role="dialog">
-        <div class="modal-dialog">
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h3 class="modal-title">Risiko einer Laktatazidose</h3>
-                </div>
-                <div class="modal-body">
-                    Metformin Lich kann vor allem dann, wenn Ihre Nieren nicht richtig funktionieren,
-                    eine sehr seltene,
-                    aber sehr schwerwiegende Nebenwirkung verursachen, die als Laktatazidose bezeichnet
-                    wird. Das
-                    Risiko, eine Laktatazidose zu entwickeln, wird auch durch schlecht eingestellten
-                    Diabetes, schwere
-                    Infektionen, längeres Fasten oder Alkoholkonsum, Dehydrierung (weitere Informationen
-                    siehe unten),
-                    Leberprobleme und Erkrankungen erhöht, bei denen ein Teil des Körpers nicht mit
-                    genügend
-                    Sauerstoff versorgt wird (zum Beispiel bei akuten schweren Herzerkrankungen).
-                    <hr>
-                    <div class="row">
-                        <div class="col-md-10">
-                            Falls einer der genannten Punkte auf Sie zutrifft, sprechen Sie mit Ihrem
-                            Arzt hinsichtlich
-                            weiterer
-                            Anweisungen.
-                        </div>
-                        <div class="col-md-2">
-                            <i style="font-size:40px;color: #575858;" class="fas fa-user-md"></i>
-                        </div>
-                    </div>
-                    <hr>
-                    Unterbrechen Sie die Einnahme von Metformin Lich für eine kurze Zeit, wenn Sie einen
-                    Zustand haben, der mit einer Dehydrierung (erheblicher Verlust an Körperflüssigkeit)
-                    verbunden
-                    sein kann, wie beispielsweise schweres Erbrechen, Durchfall, Fieber, Hitzebelastung
-                    oder geringere
-                    Flüssigkeitsaufnahme als normalerweise. Sprechen Sie hinsichtlich weiterer
-                    Anweisungen mit Ihrem
-                    Arzt.<br>
-                    Beenden Sie die Einnahme von Metformin Lich und wenden Sie sich unverzüglich an
-                    einen Arzt
-                    oder an das nächstgelegene Krankenhaus, wenn Sie Symptome einer Laktatazidose
-                    bemerken,
-                    da dieser Zustand zum Koma führen kann.
-                    Symptome einer Laktatazidose sind:
-                    <ul>
-                        <li>Erbrechen</li>
-                        <li>Bauchschmerzen</li>
-                        <li>Muskelkrämpfe</li>
-                        <li>allgemeines Unwohlsein mit starker Müdigkeit</li>
-                        <li>Schwierigkeiten beim Atmen</li>
-                        <li>verringerte Körpertemperatur und Herzklopfen</li>
-                    </ul>
-                    <hr>
-                    <div class="row">
-                        <div class="col-md-10">
-                            Eine Laktatazidose ist ein medizinischer Notfall und muss in einem
-                            Krankenhaus behandelt
-                            werden.
-                            Es ist wichtig, dass Sie regelmäßig Ihre Medikation einnehmen, die
-                            Diätanweisungen beachten
-                            und
-                            Ihr
-                            Sportprogramm absolvieren, da dies das Risiko einer Laktatazidose vermindern
-                            kann.
-                        </div>
-                        <div class="col-md-2">
-                            <i style="font-size:40px;color: #f94343;" class="fas fa-hospital"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                </div>
-            </div>
         </div>
     </div>
     <div class="col-sm-6 nopadd">
@@ -1086,7 +1081,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                 </ul>
                 Dieser Flüssigkeitsverlust könnte zu Nierenproblemen führen, wodurch Sie gefährdet
                 sind, eine Übersäuerung mit Milchsäure (<a class="info_words" type="button" data-toggle="modal"
-                    data-target="#laktazidose">Laktatazidose</a>) zu entwickeln .
+                    data-target="#laktatazidose">Laktatazidose</a>) zu entwickeln .
             </div>
         </div>
         <div class="row">
@@ -1095,7 +1090,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                 Schwere Infektionen könnten zu Nierenproblemen führen, wodurch Sie gefährdet sind, eine
                 Übersäuerung mit
                 Milchsäure (<a class="info_words" type="button" data-toggle="modal"
-                    data-target="#laktazidose">Laktatazidose</a>) zu
+                    data-target="#laktatazidose">Laktatazidose</a>) zu
                 entwickeln.
             </div>
         </div>
@@ -1105,7 +1100,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                 Kurzem, schwere Kreislaufprobleme (wie zum Beispiel einen Schock) oder
                 Schwierigkeiten mit der Atmung haben. <br> Dies könnte zu einem Sauerstoffmangel im Gewebe
                 führen, wodurch Sie gefährdet sind, eine Übersäuerung mit Milchsäure (<a class="info_words"
-                    type="button" data-toggle="modal" data-target="#laktazidose">Laktatazidose</a>) zu
+                    type="button" data-toggle="modal" data-target="#laktatazidose">Laktatazidose</a>) zu
                 entwickeln.</div>
         </div>
     </div>
@@ -1172,7 +1167,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic)VALUES
         Metformin Lich kann die Vorzüge einer gesunden Lebensweise nicht ersetzen. Folgen Sie
         weiterhin allen Ernährungsratschlägen Ihres Arztes und sorgen Sie für regelmäßige körperliche
         Bewegung.
-<br>
+        <br>
         Ihr Arzt führt regelmäßige Blutzuckerkontrollen bei Ihnen durch und passt Ihre
         MetforminLich-Dosis Ihrem
         Blutzuckerspiegel an. Sprechen Sie unbedingt regelmäßig mit Ihrem Arzt.
@@ -1480,7 +1475,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic)VALUES
                             sollten, kann
                             es zu
                             einer Übersäuerung des Blutes mit Milchsäure kommen (<a class=" info_words" type="button"
-                                data-toggle="modal" data-target="#laktazidose">Laktatazidose</a>).
+                                data-toggle="modal" data-target="#laktatazidose">Laktatazidose</a>).
                             <br>Wenn Sie eine größere Menge von Metformin Lich eingenommen haben, als
                             Sie sollten,
                             kann
@@ -1520,87 +1515,11 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic)VALUES
 
     </div>
 </div>
-<!-- Modal -->
-<div id="laktazidose" class="modal fade" role="dialog">
-    <div class="modal-dialog">
-
-        <!-- Modal content-->
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h3 class="modal-title">Risiko einer Laktatazidose</h3>
-            </div>
-            <div class="modal-body">
-
-                Metformin Lich kann vor allem dann, wenn Ihre Nieren nicht richtig funktionieren, eine sehr
-                seltene,
-                aber sehr schwerwiegende Nebenwirkung verursachen, die als Laktatazidose bezeichnet wird.
-                Das
-                Risiko, eine Laktatazidose zu entwickeln, wird auch durch schlecht eingestellten Diabetes,
-                schwere
-                Infektionen, längeres Fasten oder Alkoholkonsum, Dehydrierung (weitere Informationen siehe
-                unten),
-                Leberprobleme und Erkrankungen erhöht, bei denen ein Teil des Körpers nicht mit genügend
-                Sauerstoff versorgt wird (zum Beispiel bei akuten schweren Herzerkrankungen).
-                <hr>
-                <div class="row">
-                    <div class="col-md-10">
-                        Falls einer der genannten Punkte auf Sie zutrifft, sprechen Sie mit Ihrem Arzt
-                        hinsichtlich
-                        weiterer
-                        Anweisungen.</div>
-                    <div class="col-md-2">
-                        <i style="font-size:40px;color: #575858;" class="fas fa-user-md"></i>
-                    </div>
-                </div>
-                <hr>
-                Unterbrechen Sie die Einnahme von Metformin Lich für eine kurze Zeit, wenn Sie einen
-                Zustand haben, der mit einer Dehydrierung (erheblicher Verlust an Körperflüssigkeit)
-                verbunden
-                sein kann, wie beispielsweise schweres Erbrechen, Durchfall, Fieber, Hitzebelastung oder
-                geringere
-                Flüssigkeitsaufnahme als normalerweise. Sprechen Sie hinsichtlich weiterer Anweisungen mit
-                Ihrem
-                Arzt.<br>
-                Beenden Sie die Einnahme von Metformin Lich und wenden Sie sich unverzüglich an einen Arzt
-                oder an das nächstgelegene Krankenhaus, wenn Sie Symptome einer Laktatazidose bemerken,
-                da dieser Zustand zum Koma führen kann.
-                Symptome einer Laktatazidose sind:
-                <ul>
-                    <li>Erbrechen</li>
-                    <li>Bauchschmerzen</li>
-                    <li>Muskelkrämpfe</li>
-                    <li>allgemeines Unwohlsein mit starker Müdigkeit</li>
-                    <li>Schwierigkeiten beim Atmen</li>
-                    <li>verringerte Körpertemperatur und Herzklopfen</li>
-                </ul>
-                <hr>
-                <div class="row">
-                    <div class="col-md-10">
-                        Eine Laktatazidose ist ein medizinischer Notfall und muss in einem Krankenhaus
-                        behandelt werden.
-                        Es ist wichtig, dass Sie regelmäßig Ihre Medikation einnehmen, die Diätanweisungen
-                        beachten und
-                        Ihr
-                        Sportprogramm absolvieren, da dies das Risiko einer Laktatazidose vermindern kann.
-                    </div>
-                    <div class="col-md-2">
-                        <i style="font-size:40px;color: #f94343;" class="fas fa-hospital"></i>
-                    </div>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            </div>
-        </div>
-
-    </div>
-</div>
 ',11,5);
 INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (94,0,'
 <div className="row content_header">
-<h3> Nebenwirkungen für Erwachsene <i class="fas fa-male"></i> <i class="fas fa-blind"></i> </h3>
-<hr>
+    <h3> Nebenwirkungen für Erwachsene <i class="fas fa-male"></i> <i class="fas fa-blind"></i> </h3>
+    <hr>
 </div>
 <table class="sideffect_table hidden-xs">
     <thead>
@@ -1644,12 +1563,12 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
             <td>Bis zu 1 von 10.000 Behandelten</td>
             <td>
                 <b>Übersäuerung des Blutes mit Milchsäure (<a class=" info_words" type="button" data-toggle="modal"
-                        data-target="#laktazidose1">Laktatazidose</a>)</b> </br>Dies
+                        data-target="#laktatazidose">Laktatazidose</a>)</b> </br>Dies
                 ist eine
                 sehr seltene, aber schwerwiegende Komplikation, insbesondere bei Patienten mit
                 eingeschränkter
                 Nierenfunktion. Die Symptome einer <a class="info_words" type="button" data-toggle="modal"
-                    data-target="#laktazidose1">Laktatazidose</a> sind unspezifisch.
+                    data-target="#laktatazidose">Laktatazidose</a> sind unspezifisch.
                 </br> </br>
                 <b>Auffällige Leberfunktionswerte oder <a class="info_words" type="button" data-toggle="modal"
                         data-target="#hepatitis">Hepatitis</a></b> </br> Wenn Sie
@@ -1745,12 +1664,12 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
             <div class="row">
                 <b>Nebenwirkung:</b> <br>
                 <b>Übersäuerung des Blutes mit Milchsäure (<a class=" info_words" type="button" data-toggle="modal"
-                        data-target="#laktazidose1">Laktatazidose</a>)</b> </br>Dies
+                        data-target="#laktatazidose">Laktatazidose</a>)</b> </br>Dies
                 ist eine
                 sehr seltene, aber schwerwiegende Komplikation, insbesondere bei Patienten mit
                 eingeschränkter
                 Nierenfunktion. Die Symptome einer <a class="info_words" type="button" data-toggle="modal"
-                    data-target="#laktazidose1">Laktatazidose</a> sind unspezifisch.
+                    data-target="#laktatazidose">Laktatazidose</a> sind unspezifisch.
                 </br> </br>
                 <b>Auffällige Leberfunktionswerte oder <a class="info_words" type="button" data-toggle="modal"
                         data-target="#hepatitis">Hepatitis</a></b> </br> Wenn Sie
@@ -1795,113 +1714,11 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
         </div>
     </div>
 </div>
-
-
-
 <div>
     <h3>Nebenwirkungen für Kinder und Jugendliche <i class="fas fa-child"></i> </h3>
     <hr>
     Begrenzte Daten für Kinder und Jugendliche zeigten, dass die Nebenwirkungen in Art und
     Schwere jenen glichen, wie sie für Erwachsene gemeldet wurden.
-</div>
-<div id="laktazidose1" class="modal fade" role="dialog">
-    <div class="modal-dialog">
-
-        <!-- Modal content-->
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h3 class="modal-title">Risiko einer Laktatazidose</h3>
-            </div>
-            <div class="modal-body">
-
-                Metformin Lich kann vor allem dann, wenn Ihre Nieren nicht richtig funktionieren, eine
-                sehr seltene,
-                aber sehr schwerwiegende Nebenwirkung verursachen, die als Laktatazidose bezeichnet
-                wird. Das
-                Risiko, eine Laktatazidose zu entwickeln, wird auch durch schlecht eingestellten
-                Diabetes, schwere
-                Infektionen, längeres Fasten oder Alkoholkonsum, Dehydrierung (weitere Informationen
-                siehe unten),
-                Leberprobleme und Erkrankungen erhöht, bei denen ein Teil des Körpers nicht mit genügend
-                Sauerstoff versorgt wird (zum Beispiel bei akuten schweren Herzerkrankungen).
-                <hr>
-                <div class="row">
-                    <div class="col-md-10">
-                        Falls einer der genannten Punkte auf Sie zutrifft, sprechen Sie mit Ihrem Arzt
-                        hinsichtlich
-                        weiterer
-                        Anweisungen.</div>
-                    <div class="col-md-2">
-                        <i style="font-size:40px;color: #575858;" class="fas fa-user-md"></i>
-                    </div>
-                </div>
-                <hr>
-                Unterbrechen Sie die Einnahme von Metformin Lich für eine kurze Zeit, wenn Sie einen
-                Zustand haben, der mit einer Dehydrierung (erheblicher Verlust an Körperflüssigkeit)
-                verbunden
-                sein kann, wie beispielsweise schweres Erbrechen, Durchfall, Fieber, Hitzebelastung oder
-                geringere
-                Flüssigkeitsaufnahme als normalerweise. Sprechen Sie hinsichtlich weiterer Anweisungen
-                mit Ihrem
-                Arzt.<br>
-                Beenden Sie die Einnahme von Metformin Lich und wenden Sie sich unverzüglich an einen
-                Arzt
-                oder an das nächstgelegene Krankenhaus, wenn Sie Symptome einer Laktatazidose bemerken,
-                da dieser Zustand zum Koma führen kann.
-                Symptome einer Laktatazidose sind:
-                <ul>
-                    <li>Erbrechen</li>
-                    <li>Bauchschmerzen</li>
-                    <li>Muskelkrämpfe</li>
-                    <li>allgemeines Unwohlsein mit starker Müdigkeit</li>
-                    <li>Schwierigkeiten beim Atmen</li>
-                    <li>verringerte Körpertemperatur und Herzklopfen</li>
-                </ul>
-                <hr>
-                <div class="row">
-                    <div class="col-md-10">
-                        Eine Laktatazidose ist ein medizinischer Notfall und muss in einem Krankenhaus
-                        behandelt werden.
-                        Es ist wichtig, dass Sie regelmäßig Ihre Medikation einnehmen, die
-                        Diätanweisungen beachten und
-                        Ihr
-                        Sportprogramm absolvieren, da dies das Risiko einer Laktatazidose vermindern
-                        kann.</div>
-                    <div class="col-md-2">
-                        <i style="font-size:40px;color: #f94343;" class="fas fa-hospital"></i>
-                    </div>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            </div>
-        </div>
-
-    </div>
-</div>
-<div id="hepatitis" class="modal fade" role="dialog">
-    <div class="modal-dialog">
-
-        <!-- Modal content-->
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h3 class="modal-title"><i class="fas fa-question"></i> Was ist Hepatitis?</h3>
-            </div>
-            <div class="modal-body">
-                <p> Hepatitis ist eine Leberentzündung. Diese kann
-                    Müdigkeit,
-                    Appetitverlust und Gewichtsabnahme mit oder ohne Gelbfärbung der Haut und des
-                    Augenweißes verursachen.
-                </p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            </div>
-        </div>
-
-    </div>
 </div>
 ',11,6);
 INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (95,0,'Beispieltext7',11,7);
@@ -1927,7 +1744,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
 </div>
 <div class="row">
     Metformin Lich wird zur Behandlung von Patienten mit Zuckerkrankheit (<a class="info_words" type="button"
-        data-toggle="modal" data-target="#diabetes_typ2">Typ-2-Diabetes</a>) eingesetzt, wenn der Blutzuckerspiegel
+        data-toggle="modal" data-target="#diabetes_typ_2">Typ-2-Diabetes</a>) eingesetzt, wenn der Blutzuckerspiegel
     durch Diät und
     Bewegung allein nicht ausreichend kontrolliert werden konnte.
 </div>
@@ -1956,86 +1773,6 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
         </tr>
     </table>
 </div>
-<!-- Modal -->
-<div id="insulin" class="modal fade" role="dialog">
-    <div class="modal-dialog">
-
-        <!-- Modal content-->
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h3 class="modal-title"><i class="fas fa-question"></i> Was ist Insulin?</h3>
-            </div>
-            <div class="modal-body">
-                <p>Insulin ist ein von der Bauchspeicheldrüse gebildetes Hormon, das für die Aufnahme
-                    von Glukose
-                    (Zucker) aus dem Blut in die Körperzellen sorgt.
-                    Dort wird die Glukose in Energie umgewandelt oder als Vorrat zur späteren Verwendung
-                    gespeichert.
-                </p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            </div>
-        </div>
-
-    </div>
-</div>
-<!-- Modal -->
-<div id="diabetes_typ2" class="modal fade" role="dialog">
-    <div class="modal-dialog">
-
-        <!-- Modal content-->
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h3 class="modal-title"><i class="fas fa-question"></i> Was ist Diabetes Typ 2?
-                </h3>
-            </div>
-            <div class="modal-body">
-                <p>Diabetes Typ 2, auch nicht insulinabhängiger Diabetes“ genannt, tritt meist nach dem 40.
-                    Lebensjahr
-                    auf. Hierbei besteht ein „relativer
-                    Insulinmangel“. Die Bauchspeicheldrüse produziert zwar Insulin, aber die Körperzellen verlieren
-                    ihre
-                    Empfindlichkeit für das Hormon und/oder die Ausschüttung des Insulins aus den Zellen der
-                    Bauchspeicheldrüse ist gestört. Die Bauchspeicheldrüse versucht dies auszugleichen, indem sie
-                    immer
-                    mehr Insulin ausschüttet. Doch trotz erhöhtem Insulinspiegel gelangt immer weniger Zucker in die
-                    Körperzellen. Sehr häufig können Menschen mit Diabetes Typ 2 zunächst mit einer
-                    Ernährungsumstellung
-                    allein oder aber in einer Kombination mit Tabletten behandelt werden. Im Krankheitsverlauf
-                    vermindert sich aber die Insulinproduktion der Bauchspeicheldrüse, wodurch auch bei Menschen mit
-                    Typ-2-Diabetes der Insulinmangel weiter fortschreitet. Der dadurch veränderte Stoffwechsel muss
-                    dann
-                    ebenfalls mit Insulin-Injektionen behandelt werden.
-                    <br>
-                    Ursachen eines Typ-2-Diabetes sind:
-                    <ul>
-                        <li>eine entsprechende genetische Disposition,
-                        <li> häufig verbunden mit starkem Übergewicht (Adipositas)
-                        <li>und zu wenig körperliche Bewegung.
-                        <li>Auch erhöhte Blutfettwerte sowie Bluthochdruck gehen oft mit einem Prädiabetes oder
-                            Diabetes
-                            einher
-                            (Metabolisches Syndrom).
-                    </ul>
-                    <br>
-                    Sehr häufig können Menschen mit Diabetes Typ 2 mit einer Ernährungsumstellung allein oder
-                    aber in einer Kombination mit Tabletten behandelt werden. Bei zunehmender Krankheitsdauer müssen
-                    allerdings auch Typ-2-Diabetiker mit einem Fortschreiten des Insulinmangels rechnen. Der dadurch
-                    veränderte Stoffwechsel muss dann ebenfalls mit Insulin-Injektionen behandelt werden.
-                    <a
-                        href="https://www.diabetesde.org/ueber_diabetes/was_ist_diabetes_/was_ist_diabetes_typ_2">Quelle</a>
-                </p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            </div>
-        </div>
-
-    </div>
-</div>
 ',11,8);
 INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (97,0,'
 <div class="row">Metformin Lich sind weiße, längliche, in der Mitte verjüngte Filmtabletten mit abgeschrägten
@@ -2047,6 +1784,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
 </div>
 ',11,9);
 
+--Amlodipin--
 
 INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (98,0,'Beispieltext1',12,1);
 INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (99,0,'Beispieltext2',12,2);
@@ -2642,33 +2380,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
         </tr>
     </table>
 </div>
-<!-- Modal -->
-<div id="angina" class="modal fade" role="dialog">
-    <div class="modal-dialog">
-        <!-- Modal content-->
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h3 class="modal-title"><i class="fas fa-question"></i> Was bedeutet Angina pectoris?</h3>
-            </div>
-            <div class="modal-body">
-                <p>Angina pectoris (mediz. Stenokardie) bedeutet Brustenge. Sie äußert sich in einem plötzlich
-                    auftretenden Schmerz in der Herzgegend sowie einem Druckgefühl in der Brust. Ausgelöst wird die
-                    Angina pectoris durch einen Sauerstoffmangel des Herzens. Es besteht Lebensgefahr, deshalb sollte
-                    man sofort den Notarzt rufen! Angina pectoris lässt sich normalerweise mit Medikamenten gut
-                    behandeln. Akute Angina-pectoris Schmerzen im Brustbereich werden durch dieses Arzneimittel nicht
-                    sofort gelindert.
-                    <br>
-                    Quelle: <a
-                        href="https://www.netdoktor.de/krankheiten/angina-pectoris/">https://www.netdoktor.de/krankheiten/angina-pectoris/</a>
-                </p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            </div>
-        </div>
-    </div>
-</div>
+
 ',12,8);
 INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (106,0,'
 <div class="row">Metformin Lich sind weiße, längliche, in der Mitte verjüngte Filmtabletten mit abgeschrägten

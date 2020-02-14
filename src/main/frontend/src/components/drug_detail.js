@@ -342,11 +342,31 @@ class DrugDetail extends React.Component {
         if (!drug.wordExplaination) {
             return null;
         }
-
+        const {t} = this.props;
         return drug.wordExplaination
             .map((section => {
                 return (
-                    <p key={section.id}> {section.name} <br/>{section.description}  </p>
+                    <div key={section.id} className="modal fade" id={section.name.toLowerCase().split(' ').join('_')} tabIndex="-1" role="dialog"
+                         aria-hidden="true">
+                        <div className="modal-dialog" role="document">
+                            <div className="modal-content">
+                                <div className="modal-header">
+                                    <i class="fas fa-question"></i>
+                                    <h3>{section.name}
+                                    </h3>
+                                    <button type="button" className="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div className="modal-body" style={{color: "black"}}>
+
+                                    <p key={section.id}><span
+                                        dangerouslySetInnerHTML={this.createMarkup(section.description)}/>
+                                    </p></div>
+                                <span dangerouslySetInnerHTML={this.createMarkup(t("modal_close"))}/>
+                            </div>
+                        </div>
+                    </div>
                 );
             })).reduce((prev, curr) => [prev, curr]);
 
@@ -711,8 +731,6 @@ class DrugDetail extends React.Component {
                             }
 
                             <div className="row featurette drug-detail-header">
-                                {this.renderWordExplaination(drug)}
-
                                 <div className="col-xs-12 col-sm-12 col-md-3">
                                     <img className="featurette-image img-responsive center-block"
                                          alt={drug.name}
@@ -919,6 +937,8 @@ class DrugDetail extends React.Component {
                         <a href="#/drug/list"> <i className="far fa-arrow-alt-circle-left"/> zurück zu den
                             Medkamenten</a>
                     </div>
+                    {this.renderWordExplaination(drug)}
+
                 </div>
             </div>
         );

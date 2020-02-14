@@ -40390,21 +40390,56 @@ var DrugDetail = function (_React$Component) {
     }, {
         key: "renderWordExplaination",
         value: function renderWordExplaination(drug) {
+            var _this9 = this;
 
             if (!drug.wordExplaination) {
                 return null;
             }
+            var t = this.props.t;
 
             return drug.wordExplaination.map(function (section) {
                 return _react2.default.createElement(
-                    "p",
-                    { key: section.id },
-                    " ",
-                    section.name,
-                    " ",
-                    _react2.default.createElement("br", null),
-                    section.description,
-                    "  "
+                    "div",
+                    { key: section.id, className: "modal fade", id: section.name.toLowerCase().split(' ').join('_'), tabIndex: "-1", role: "dialog",
+                        "aria-hidden": "true" },
+                    _react2.default.createElement(
+                        "div",
+                        { className: "modal-dialog", role: "document" },
+                        _react2.default.createElement(
+                            "div",
+                            { className: "modal-content" },
+                            _react2.default.createElement(
+                                "div",
+                                { className: "modal-header" },
+                                _react2.default.createElement("i", { "class": "fas fa-question" }),
+                                _react2.default.createElement(
+                                    "h3",
+                                    null,
+                                    section.name
+                                ),
+                                _react2.default.createElement(
+                                    "button",
+                                    { type: "button", className: "close", "data-dismiss": "modal", "aria-label": "Close" },
+                                    _react2.default.createElement(
+                                        "span",
+                                        { "aria-hidden": "true" },
+                                        "\xD7"
+                                    )
+                                )
+                            ),
+                            _react2.default.createElement(
+                                "div",
+                                { className: "modal-body", style: { color: "black" } },
+                                _react2.default.createElement(
+                                    "p",
+                                    { key: section.id },
+                                    _react2.default.createElement("span", {
+                                        dangerouslySetInnerHTML: _this9.createMarkup(section.description) })
+                                )
+                            ),
+                            _react2.default.createElement("span", { dangerouslySetInnerHTML: _this9.createMarkup(t("modal_close")) })
+                        )
+                    )
                 );
             }).reduce(function (prev, curr) {
                 return [prev, curr];
@@ -40413,7 +40448,7 @@ var DrugDetail = function (_React$Component) {
     }, {
         key: "renderFormdesc",
         value: function renderFormdesc(drug) {
-            var _this9 = this;
+            var _this10 = this;
 
             if (!drug.packagingSection) {
                 return null;
@@ -40425,7 +40460,7 @@ var DrugDetail = function (_React$Component) {
                 return _react2.default.createElement(
                     "p",
                     { key: section.id },
-                    _react2.default.createElement("span", { dangerouslySetInnerHTML: _this9.createMarkup(section.text) })
+                    _react2.default.createElement("span", { dangerouslySetInnerHTML: _this10.createMarkup(section.text) })
                 );
             }).reduce(function (prev, curr) {
                 return [prev, curr];
@@ -40609,7 +40644,7 @@ var DrugDetail = function (_React$Component) {
     }, {
         key: "renderPackcompany",
         value: function renderPackcompany(drug) {
-            var _this10 = this;
+            var _this11 = this;
 
             if (!drug.packagingSection) {
                 return null;
@@ -40621,7 +40656,7 @@ var DrugDetail = function (_React$Component) {
                 return _react2.default.createElement(
                     "p",
                     { key: section.id },
-                    _react2.default.createElement("span", { dangerouslySetInnerHTML: _this10.createMarkup(section.address) })
+                    _react2.default.createElement("span", { dangerouslySetInnerHTML: _this11.createMarkup(section.address) })
                 );
             }).reduce(function (prev, curr) {
                 return [prev, curr];
@@ -40630,7 +40665,7 @@ var DrugDetail = function (_React$Component) {
     }, {
         key: "renderPackSecdesc",
         value: function renderPackSecdesc(drug) {
-            var _this11 = this;
+            var _this12 = this;
 
             if (!drug.packagingSection) {
                 return null;
@@ -40642,7 +40677,7 @@ var DrugDetail = function (_React$Component) {
                 return _react2.default.createElement(
                     "p",
                     { key: section.id },
-                    _react2.default.createElement("span", { dangerouslySetInnerHTML: _this11.createMarkup(section.text) })
+                    _react2.default.createElement("span", { dangerouslySetInnerHTML: _this12.createMarkup(section.text) })
                 );
             }).reduce(function (prev, curr) {
                 return [prev, curr];
@@ -40651,7 +40686,7 @@ var DrugDetail = function (_React$Component) {
     }, {
         key: "renderPackSecvor",
         value: function renderPackSecvor(drug) {
-            var _this12 = this;
+            var _this13 = this;
 
             if (!drug.packagingSection) {
                 return null;
@@ -40663,7 +40698,7 @@ var DrugDetail = function (_React$Component) {
                 return _react2.default.createElement(
                     "p",
                     { key: section.id },
-                    _react2.default.createElement("span", { dangerouslySetInnerHTML: _this12.createMarkup(section.text) })
+                    _react2.default.createElement("span", { dangerouslySetInnerHTML: _this13.createMarkup(section.text) })
                 );
             }).reduce(function (prev, curr) {
                 return [prev, curr];
@@ -40672,7 +40707,7 @@ var DrugDetail = function (_React$Component) {
     }, {
         key: "renderPackSecdos",
         value: function renderPackSecdos(drug) {
-            var _this13 = this;
+            var _this14 = this;
 
             if (!drug.packagingSection) {
                 return null;
@@ -40684,7 +40719,7 @@ var DrugDetail = function (_React$Component) {
                 return _react2.default.createElement(
                     "p",
                     { key: section.id },
-                    _react2.default.createElement("span", { dangerouslySetInnerHTML: _this13.createMarkup(section.text) })
+                    _react2.default.createElement("span", { dangerouslySetInnerHTML: _this14.createMarkup(section.text) })
                 );
             }).reduce(function (prev, curr) {
                 return [prev, curr];
@@ -40693,7 +40728,7 @@ var DrugDetail = function (_React$Component) {
     }, {
         key: "renderPackSecneben",
         value: function renderPackSecneben(drug) {
-            var _this14 = this;
+            var _this15 = this;
 
             if (!drug.packagingSection) {
                 return null;
@@ -40705,7 +40740,7 @@ var DrugDetail = function (_React$Component) {
                 return _react2.default.createElement(
                     "p",
                     { key: section.id },
-                    _react2.default.createElement("span", { dangerouslySetInnerHTML: _this14.createMarkup(section.text) })
+                    _react2.default.createElement("span", { dangerouslySetInnerHTML: _this15.createMarkup(section.text) })
                 );
             }).reduce(function (prev, curr) {
                 return [prev, curr];
@@ -40714,21 +40749,21 @@ var DrugDetail = function (_React$Component) {
     }, {
         key: "renderSectionList",
         value: function renderSectionList(drug) {
-            var _this15 = this;
+            var _this16 = this;
 
             if (!drug.packagingSection) {
                 return null;
             }
 
             return drug.packagingSection.map(function (section) {
-                return _react2.default.createElement(_accordion2.default, { section: section, toggleOriginalAndTailoredText: _this15.toggleOriginalAndTailoredText,
+                return _react2.default.createElement(_accordion2.default, { section: section, toggleOriginalAndTailoredText: _this16.toggleOriginalAndTailoredText,
                     key: section.id });
             });
         }
     }, {
         key: "render",
         value: function render() {
-            var _this16 = this;
+            var _this17 = this;
 
             var t = this.props.t;
 
@@ -40925,7 +40960,7 @@ var DrugDetail = function (_React$Component) {
                                         "button",
                                         { type: "button", className: "btn btn-like",
                                             onClick: function onClick() {
-                                                return _this16.toggleTaking(drug);
+                                                return _this17.toggleTaking(drug);
                                             } },
                                         _react2.default.createElement("span", {
                                             className: "glyphicon white" + (!drug.isTaken ? " glyphicon-heart" : " glyphicon-minus") })
@@ -40934,7 +40969,7 @@ var DrugDetail = function (_React$Component) {
                                         "button",
                                         { type: "button", className: "btn btn-add",
                                             onClick: function onClick() {
-                                                return _this16.toggleRemember(drug);
+                                                return _this17.toggleRemember(drug);
                                             } },
                                         _react2.default.createElement("span", {
                                             className: "glyphicon white" + (!drug.isRemembered ? " glyphicon-plus" : " glyphicon-minus") })
@@ -40966,7 +41001,6 @@ var DrugDetail = function (_React$Component) {
                             _react2.default.createElement(
                                 "div",
                                 { className: "row featurette drug-detail-header" },
-                                this.renderWordExplaination(drug),
                                 _react2.default.createElement(
                                     "div",
                                     { className: "col-xs-12 col-sm-12 col-md-3" },
@@ -41349,7 +41383,8 @@ var DrugDetail = function (_React$Component) {
                             _react2.default.createElement("i", { className: "far fa-arrow-alt-circle-left" }),
                             " zur\xFCck zu den Medkamenten"
                         )
-                    )
+                    ),
+                    this.renderWordExplaination(drug)
                 )
             );
         }
