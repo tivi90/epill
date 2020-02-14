@@ -40388,6 +40388,29 @@ var DrugDetail = function (_React$Component) {
             );
         }
     }, {
+        key: "renderWordExplaination",
+        value: function renderWordExplaination(drug) {
+
+            if (!drug.wordExplaination) {
+                return null;
+            }
+
+            return drug.wordExplaination.map(function (section) {
+                return _react2.default.createElement(
+                    "p",
+                    { key: section.id },
+                    " ",
+                    section.name,
+                    " ",
+                    _react2.default.createElement("br", null),
+                    section.description,
+                    "  "
+                );
+            }).reduce(function (prev, curr) {
+                return [prev, curr];
+            });
+        }
+    }, {
         key: "renderFormdesc",
         value: function renderFormdesc(drug) {
             var _this9 = this;
@@ -40943,6 +40966,7 @@ var DrugDetail = function (_React$Component) {
                             _react2.default.createElement(
                                 "div",
                                 { className: "row featurette drug-detail-header" },
+                                this.renderWordExplaination(drug),
                                 _react2.default.createElement(
                                     "div",
                                     { className: "col-xs-12 col-sm-12 col-md-3" },

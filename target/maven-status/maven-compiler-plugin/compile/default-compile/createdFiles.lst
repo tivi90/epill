@@ -15,7 +15,9 @@ com/doccuty/epill/model/PackagingAddress.class
 com/doccuty/epill/authentication/AuthenticationController.class
 com/doccuty/epill/language/Language.class
 com/doccuty/epill/country/CountryRepository.class
+com/doccuty/epill/drug/WordExplainationRepository.class
 com/doccuty/epill/authentication/AuthenticationService.class
+com/doccuty/epill/model/util/WordExplainationCreator.class
 com/doccuty/epill/model/util/DrugFeatureSet.class
 com/doccuty/epill/disease/DiseaseService.class
 com/doccuty/epill/model/Interaction.class
@@ -38,6 +40,7 @@ com/doccuty/epill/model/util/LanguageSet.class
 com/doccuty/epill/drug/SimpleDrug.class
 com/doccuty/epill/model/ActiveSubstance.class
 com/doccuty/epill/drug/PharmaceuticalFormRepository.class
+com/doccuty/epill/model/WordExplaination.class
 com/doccuty/epill/disease/Disease.class
 com/doccuty/epill/drug/Drug.class
 com/doccuty/epill/drug/DrugFeatureRepository.class
@@ -61,6 +64,7 @@ com/doccuty/epill/gender/GenderController.class
 com/doccuty/epill/model/AdverseEffect.class
 com/doccuty/epill/drug/DrugService$1.class
 de/uniks/networkparser/EPILLIdMap.class
+com/doccuty/epill/model/util/WordExplainationSet.class
 com/doccuty/epill/model/util/ProductGroupSet.class
 de/uniks/networkparser/EPILLMapEntity.class
 com/doccuty/epill/language/LanguageController.class

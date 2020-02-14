@@ -29,11 +29,14 @@
 /home/tivi90/epill_t/src/main/java/com/doccuty/epill/model/util/DrugCreator.java
 /home/tivi90/epill_t/src/main/java/com/doccuty/epill/language/LanguageService.java
 /home/tivi90/epill_t/src/main/java/com/doccuty/epill/model/util/ImageCreator.java
+/home/tivi90/epill_t/src/main/java/com/doccuty/epill/model/util/WordExplainationCreator.java
 /home/tivi90/epill_t/src/main/java/com/doccuty/epill/model/util/GenderSet.java
 /home/tivi90/epill_t/src/main/java/com/doccuty/epill/packagingsection/PackagingSectionRepository.java
+/home/tivi90/epill_t/src/main/java/com/doccuty/epill/model/util/WordExplainationSet.java
 /home/tivi90/epill_t/src/main/java/com/doccuty/epill/model/util/PackagingSet.java
 /home/tivi90/epill_t/src/main/java/com/doccuty/epill/model/util/IntakeInformationSet.java
 /home/tivi90/epill_t/src/main/java/com/doccuty/epill/language/LanguageController.java
+/home/tivi90/epill_t/src/main/java/com/doccuty/epill/model/WordExplaination.java
 /home/tivi90/epill_t/src/main/java/com/doccuty/epill/model/util/PackagingSectionCreator.java
 /home/tivi90/epill_t/src/main/java/com/doccuty/epill/model/DrugFeature.java
 /home/tivi90/epill_t/src/main/java/com/doccuty/epill/gender/GenderController.java
@@ -94,6 +97,7 @@
 /home/tivi90/epill_t/src/main/java/com/doccuty/epill/model/util/UserQuerySet.java
 /home/tivi90/epill_t/src/main/java/com/doccuty/epill/util/AddressService.java
 /home/tivi90/epill_t/src/main/java/com/doccuty/epill/model/util/SubstanceGroupCreator.java
+/home/tivi90/epill_t/src/main/java/com/doccuty/epill/drug/WordExplainationRepository.java
 /home/tivi90/epill_t/src/main/java/com/doccuty/epill/disease/DiseaseRepository.java
 /home/tivi90/epill_t/src/main/java/com/doccuty/epill/model/util/PackagingAddressSet.java
 /home/tivi90/epill_t/src/main/java/com/doccuty/epill/disease/DiseaseService.java

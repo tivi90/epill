@@ -38,7 +38,9 @@ import com.doccuty.epill.model.ProductGroup;
 import com.doccuty.epill.model.util.IndicationGroupSet;
 import com.doccuty.epill.model.IndicationGroup;
 import com.doccuty.epill.model.util.PharmaceuticalFormSet;
+import com.doccuty.epill.model.util.WordExplainationSet;
 import com.doccuty.epill.model.PharmaceuticalForm;
+import com.doccuty.epill.model.WordExplaination;
 import com.doccuty.epill.model.util.AdverseEffectSet;
 import com.doccuty.epill.model.AdverseEffect;
 import com.doccuty.epill.model.util.InteractionSet;
@@ -576,6 +578,8 @@ public class DrugSet extends HashSet<Drug>
       
       return result;
    }
+
+
 
    /**
     * Loop through the current set of Drug objects and collect all contained objects with reference pharmaceuticalForm pointing to the object passed as parameter. 

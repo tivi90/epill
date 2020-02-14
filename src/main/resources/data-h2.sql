@@ -11,6 +11,7 @@ DELETE FROM gender_disease;
 DELETE FROM tailored_text;
 DELETE FROM drug_active_substance;
 DELETE FROM drug_pharmaceutical_form;
+DELETE FROM drug_word_explaination;
 DELETE FROM drug_drug_feature;
 DELETE FROM drug_disease;
 DELETE FROM drug_adverse_effect;
@@ -28,6 +29,7 @@ DELETE FROM packaging_section;
 DELETE FROM packaging_topic;
 DELETE FROM drug_feature;
 DELETE FROM pharmaceutical_form;
+DELETE FROM word_Explaination;
 DELETE FROM disease;
 DELETE FROM item_invocation;
 DELETE FROM user_drug_taking;
@@ -227,6 +229,17 @@ INSERT INTO pharmaceutical_form (id, name) VALUES (3,'Tablette');
 INSERT INTO pharmaceutical_form (id, name) VALUES (4,'Flüssigkeit');
 INSERT INTO pharmaceutical_form (id, name) VALUES (5,'Kapsel');
 
+
+
+--
+-- Dumping data for table `pharmaceutical_form`
+--
+
+INSERT INTO word_Explaination (id, name, description) VALUES (1,'hallo', 'asdsada' );
+INSERT INTO word_Explaination (id, name, description) VALUES (2,'huhu', 'asdsada');
+INSERT INTO word_Explaination (id, name, description) VALUES (3,'hihi', 'asdsada');
+INSERT INTO word_Explaination (id, name, description) VALUES (4,'haha', 'asdsada');
+INSERT INTO word_Explaination (id, name, description) VALUES (5,'hehe', 'asdsada');
 
 
 
@@ -531,6 +544,20 @@ INSERT INTO drug_pharmaceutical_form (iddrug, idpharmaceutical_form) VALUES (7,1
 INSERT INTO drug_pharmaceutical_form (iddrug, idpharmaceutical_form) VALUES (10,1);
 INSERT INTO drug_pharmaceutical_form (iddrug, idpharmaceutical_form) VALUES (11,1);
 INSERT INTO drug_pharmaceutical_form (iddrug, idpharmaceutical_form) VALUES (12,3);
+
+
+-- Dumping data for table `drug_wordExplaination`
+--
+
+INSERT INTO drug_word_explaination (iddrug, idword_Explaination) VALUES (1,1);
+INSERT INTO drug_word_explaination (iddrug, idword_Explaination) VALUES (2,1);
+INSERT INTO drug_word_explaination (iddrug, idword_Explaination) VALUES (3,2);
+INSERT INTO drug_word_explaination (iddrug, idword_Explaination) VALUES (7,1);
+INSERT INTO drug_word_explaination (iddrug, idword_Explaination) VALUES (10,1);
+INSERT INTO drug_word_explaination (iddrug, idword_Explaination) VALUES (11,1);
+INSERT INTO drug_word_explaination (iddrug, idword_Explaination) VALUES (12,3);
+
+
 
 --
 -- Dumping data for table `interaction`

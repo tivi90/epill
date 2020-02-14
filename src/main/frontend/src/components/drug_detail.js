@@ -337,6 +337,21 @@ class DrugDetail extends React.Component {
         );
     }
 
+    renderWordExplaination(drug) {
+
+        if (!drug.wordExplaination) {
+            return null;
+        }
+
+        return drug.wordExplaination
+            .map((section => {
+                return (
+                    <p key={section.id}> {section.name} <br/>{section.description}  </p>
+                );
+            })).reduce((prev, curr) => [prev, curr]);
+
+    }
+
     renderFormdesc(drug) {
         if (!drug.packagingSection) {
             return null;
@@ -694,7 +709,10 @@ class DrugDetail extends React.Component {
                                 </div>
                             </div>
                             }
+
                             <div className="row featurette drug-detail-header">
+                                {this.renderWordExplaination(drug)}
+
                                 <div className="col-xs-12 col-sm-12 col-md-3">
                                     <img className="featurette-image img-responsive center-block"
                                          alt={drug.name}
@@ -755,6 +773,7 @@ class DrugDetail extends React.Component {
                                             </div>
                                         </div>
                                     </div>
+
                                     <div className="row tab_headers nomargin">
                                         <ul className="nav nav-pills brand-pills nav-stacked" role="tablist">
                                             <li role="presentation" className="brand-nav active">
@@ -800,6 +819,7 @@ class DrugDetail extends React.Component {
                                                 <h1>Algemeine Informationen</h1>
                                                 <hr/>
                                                 {this.renderPackSecdesc(drug)}
+
                                             </div>
                                             <div className="col-sm-4 col-xs-6 text-center infopart">
                                                 <div data-toggle="modal"

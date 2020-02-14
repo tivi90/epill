@@ -42,6 +42,7 @@ import com.doccuty.epill.model.ActiveSubstance;
 import com.doccuty.epill.model.ProductGroup;
 import com.doccuty.epill.model.IndicationGroup;
 import com.doccuty.epill.model.PharmaceuticalForm;
+import com.doccuty.epill.model.WordExplaination;
 import com.doccuty.epill.model.AdverseEffect;
 import com.doccuty.epill.model.Interaction;
 import com.doccuty.epill.model.util.ItemInvocationSet;
@@ -62,6 +63,7 @@ public class Drug extends SimpleDrug {
 		withoutPackagingSection(this.getPackagingSection().toArray(new PackagingSection[this.getPackagingSection().size()]));
 		withoutActiveSubstance(this.getActiveSubstance().toArray(new ActiveSubstance[this.getActiveSubstance().size()]));
 		withoutPharmaceuticalForm(this.getPharmaceuticalForm().toArray(new PharmaceuticalForm[this.getPharmaceuticalForm().size()]));
+		withoutWordExplaination(this.getWordExplaination().toArray(new WordExplaination[this.getWordExplaination().size()]));
 		withoutAdverseEffects(this.getAdverseEffects().toArray(new AdverseEffect[this.getAdverseEffects().size()]));
 		withoutInteraction(this.getInteraction().toArray(new Interaction[this.getInteraction().size()]));
 		withoutClicks(this.getClicks().toArray(new ItemInvocation[this.getClicks().size()]));
@@ -484,6 +486,68 @@ public class Drug extends SimpleDrug {
 		withPharmaceuticalForm(value);
 		return value;
 	}
+
+	/********************************************************************
+	 * <pre>
+	 *              many                       many
+	 * Drug ----------------------------------- WordExplaination
+	 *              drug                   WordExplaination
+	 * </pre>
+	 */
+
+	public static final String PROPERTY_WORDEXPLAINATION = "wordExplaination";
+
+	@ManyToMany(cascade = CascadeType.MERGE)
+	@JoinTable(name = "drug_word_explaination", joinColumns = @JoinColumn(name = "iddrug"), inverseJoinColumns = @JoinColumn(name = "idword_Explaination"))
+	private List<WordExplaination> wordExplaination = null;
+
+	public List<WordExplaination> getWordExplaination() {
+		if (this.wordExplaination == null) {
+			return new ArrayList<WordExplaination>();
+		}
+
+		return this.wordExplaination;
+	}
+
+	public Drug withWordExplaination(WordExplaination... value) {
+		if (value == null) {
+			return this;
+		}
+		for (WordExplaination item : value) {
+			if (item != null) {
+				if (this.wordExplaination == null) {
+					this.wordExplaination = new ArrayList<WordExplaination>();
+				}
+
+				boolean changed = this.wordExplaination.add(item);
+
+				if (changed) {
+					item.withDrug(this);
+					firePropertyChange(PROPERTY_WORDEXPLAINATION, null, item);
+				}
+			}
+		}
+		return this;
+	}
+
+	public Drug withoutWordExplaination(WordExplaination... value) {
+		for (WordExplaination item : value) {
+			if ((this.wordExplaination != null) && (item != null)) {
+				if (this.wordExplaination.remove(item)) {
+					item.withoutDrug(this);
+					firePropertyChange(PROPERTY_WORDEXPLAINATION, item, null);
+				}
+			}
+		}
+		return this;
+	}
+
+	public WordExplaination createWordExplaination() {
+		WordExplaination value = new WordExplaination();
+		withWordExplaination(value);
+		return value;
+	}
+
 
 	/********************************************************************
 	 * <pre>
