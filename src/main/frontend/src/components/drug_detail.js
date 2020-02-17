@@ -798,7 +798,7 @@ class DrugDetail extends React.Component {
                                                 <a href="#tab1"
                                                    aria-controls="tab1"
                                                    role="tab"
-                                                   data-toggle="tab">Algemeine
+                                                   data-toggle="tab">Allgemeine
                                                     Informationen</a></li>
                                             <div id="arrow-down">
                                                 <FontAwesomeIcon icon={faChevronDown}/>
@@ -834,7 +834,7 @@ class DrugDetail extends React.Component {
                                     <div className="tab-content">
                                         <div role="tabpanel" className="tab-pane active w3-animate-opacity" id="tab1">
                                             <div className="row content_header">
-                                                <h1>Algemeine Informationen</h1>
+                                                <h1>Allgemeine Informationen</h1>
                                                 <hr/>
                                                 {this.renderPackSecdesc(drug)}
 

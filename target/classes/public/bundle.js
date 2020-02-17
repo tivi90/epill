@@ -41126,7 +41126,7 @@ var DrugDetail = function (_React$Component) {
                                                         "aria-controls": "tab1",
                                                         role: "tab",
                                                         "data-toggle": "tab" },
-                                                    "Algemeine Informationen"
+                                                    "Allgemeine Informationen"
                                                 )
                                             ),
                                             _react2.default.createElement(
@@ -41198,7 +41198,7 @@ var DrugDetail = function (_React$Component) {
                                                 _react2.default.createElement(
                                                     "h1",
                                                     null,
-                                                    "Algemeine Informationen"
+                                                    "Allgemeine Informationen"
                                                 ),
                                                 _react2.default.createElement("hr", null),
                                                 this.renderPackSecdesc(drug)

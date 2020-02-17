@@ -127,6 +127,7 @@ INSERT INTO image (id, filename, filetype, uploaded_at, image) VALUES (9,'Reminy
 INSERT INTO image (id, filename, filetype, uploaded_at, image) VALUES (10,'Toujeo','image/jpg', NOW(), FILE_READ('src/main/frontend/assets/images/toujeo.jpg'));
 INSERT INTO image (id, filename, filetype, uploaded_at, image) VALUES (11,'Metformin','image/png', NOW(), FILE_READ('src/main/frontend/assets/images/metformin.png'));
 INSERT INTO image (id, filename, filetype, uploaded_at, image) VALUES (12,'Amlodipin','image/png', NOW(), FILE_READ('src/main/frontend/assets/images/amlodipin.png'));
+INSERT INTO image (id, filename, filetype, uploaded_at, image) VALUES (13,'Enalapril','image/png', NOW(), FILE_READ('src/main/frontend/assets/images/enalapril.png'));
 
 
 --
@@ -145,6 +146,7 @@ INSERT INTO drug_simple (id, name, number, status, version, year, idimage) VALUE
 INSERT INTO drug_simple (id, name, number, status, version, year, idimage) VALUES (10,'Toujeo',0,'3915-06-01','1.59','2011-1-1', 10);
 INSERT INTO drug_simple (id, name, number, status, version, year, idimage) VALUES (11,'Metformin',0,'3915-06-01','1.59','2017-4-1', 11);
 INSERT INTO drug_simple (id, name, number, status, version, year, idimage) VALUES (12,'Amlodipin',0,'3915-06-01','1.59','2018-1-1', 12);
+INSERT INTO drug_simple (id, name, number, status, version, year, idimage) VALUES (13,'Enalapril',0,'3915-06-01','1.59','2017-8-1', 13);
 
 
 --
@@ -163,6 +165,7 @@ INSERT INTO drug (id, idindication_group, idproduct_group) VALUES (9,3,1);
 INSERT INTO drug (id, idindication_group, idproduct_group) VALUES (10,5,1);
 INSERT INTO drug (id, idindication_group, idproduct_group) VALUES (11,5,1);
 INSERT INTO drug (id, idindication_group, idproduct_group) VALUES (12,5,1);
+INSERT INTO drug (id, idindication_group, idproduct_group) VALUES (13,5,1);
 
 
 --
@@ -181,6 +184,7 @@ INSERT INTO active_substance (id, name, idsubstance_group) VALUES (9,'Galantamin
 INSERT INTO active_substance (id, name, idsubstance_group) VALUES (10,'Quinaprilhydrochlorid',NULL);
 INSERT INTO active_substance (id, name, idsubstance_group) VALUES (11,'Metforminhydrochlorid',NULL);
 INSERT INTO active_substance (id, name, idsubstance_group) VALUES (12,'Amlodipin',NULL);
+INSERT INTO active_substance (id, name, idsubstance_group) VALUES (13,'Enalaprilmaleat',NULL);
 
 
 --
@@ -257,6 +261,7 @@ INSERT INTO packaging (id, name, pzn, iddrug) VALUES (17,'N3','03738798',10);
 INSERT INTO packaging (id, name, pzn, iddrug) VALUES (18,'N1','03738775',10);
 INSERT INTO packaging (id, name, pzn, iddrug) VALUES (19,'N1','08839133',11);
 INSERT INTO packaging (id, name, pzn, iddrug) VALUES (20,'N1','08454491',12);
+INSERT INTO packaging (id, name, pzn, iddrug) VALUES (21,'N1','01097668',13);
 
 
 
@@ -307,6 +312,7 @@ INSERT INTO drug_disease (iddrug, iddisease) VALUES (10, 1);
 INSERT INTO drug_disease (iddrug, iddisease) VALUES (10, 3);
 INSERT INTO drug_disease (iddrug, iddisease) VALUES (11, 6);
 INSERT INTO drug_disease (iddrug, iddisease) VALUES (12, 7);
+INSERT INTO drug_disease (iddrug, iddisease) VALUES (13, 7);
 
 --
 -- Dumping data for table `drug_feature`
@@ -443,6 +449,8 @@ INSERT INTO drug_feature (id, drug_feature, min_age, max_age)VALUES (13,'Könnte
 Fahrtüchtigkeit beeinträchtigen', 16, 0);
 INSERT INTO drug_feature (id, drug_feature, min_age, max_age)VALUES (14,'Beinträchtigt die
 Fahrtüchtigkeit nicht', 16, 0);
+INSERT INTO drug_feature (id, drug_feature)VALUES (15,'Enthält Lactose');
+INSERT INTO drug_feature (id, drug_feature)VALUES (16,'Keine Beinträchtigung durch Nahrung');
 
 
 -- Dumping data for table `drug_feature`
@@ -467,6 +475,7 @@ INSERT INTO drug_active_substance (iddrug, idactive_substance) VALUES (8,9);
 INSERT INTO drug_active_substance (iddrug, idactive_substance) VALUES (10,10);
 INSERT INTO drug_active_substance (iddrug, idactive_substance) VALUES (11,11);
 INSERT INTO drug_active_substance (iddrug, idactive_substance) VALUES (12,12);
+INSERT INTO drug_active_substance (iddrug, idactive_substance) VALUES (13,13);
 
 --
 -- Dumping data for table `drug_adverse_effect`
@@ -521,6 +530,8 @@ INSERT INTO drug_drug_feature (iddrug, iddrug_feature) VALUES (11,4);
 INSERT INTO drug_drug_feature (iddrug, iddrug_feature) VALUES (12,8);
 INSERT INTO drug_drug_feature (iddrug, iddrug_feature) VALUES (12,3);
 INSERT INTO drug_drug_feature (iddrug, iddrug_feature) VALUES (12,4);
+INSERT INTO drug_drug_feature (iddrug, iddrug_feature) VALUES (13,8);
+INSERT INTO drug_drug_feature (iddrug, iddrug_feature) VALUES (13,4);
 
 --
 -- Dumping data for table `drug_pharmaceutical_form`
@@ -533,6 +544,7 @@ INSERT INTO drug_pharmaceutical_form (iddrug, idpharmaceutical_form) VALUES (7,1
 INSERT INTO drug_pharmaceutical_form (iddrug, idpharmaceutical_form) VALUES (10,1);
 INSERT INTO drug_pharmaceutical_form (iddrug, idpharmaceutical_form) VALUES (11,1);
 INSERT INTO drug_pharmaceutical_form (iddrug, idpharmaceutical_form) VALUES (12,3);
+INSERT INTO drug_pharmaceutical_form (iddrug, idpharmaceutical_form) VALUES (13,3);
 
 
 --
@@ -1456,6 +1468,24 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic)VALUES
     </div>
 </div>
 <div class="row content_header" style="margin-top: 30px;">
+    <h3 class="modal-title xs-center">Teilung der Tablette</h3>
+    <hr />
+    <div class="col-sm-6 col-xs-12 text-center">
+        <h4> Schritt 1</h4>
+        <img src="./../../assets/p_form/usage/notcrack_long.svg" class="usage_tab" alt="Tablette" title="Tablette">
+        <br><br>
+        <p>Legen Sie bitte die Tablette mit der Bruchkerbe nach oben auf eine feste Unterlage.</p>
+
+    </div>
+    <div class="col-sm-6 col-xs-12 text-center">
+        <h4>Schritt 2</h4>
+        <img src="./../../assets/p_form/usage/crack_long.svg" class="usage_tab1" alt="Tablette" title="Tablette">
+        <br><br>
+        <p>Drücken Sie mit den Zeigefingern auf die linke und rechte Hälfte der Tablette.</p>
+
+    </div>
+</div>
+<div class="row content_header" style="margin-top: 30px;">
     <h1 xs-center>Weitere Informationen</h1>
     <hr />
     <div class="col-md-12">
@@ -1529,8 +1559,8 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
             <th>Nebenwirkung</th>
         </tr>
     </thead>
-    <tbody class="gradient">
-        <tr>
+    <tbody class="">
+        <tr id="sehrhaeufig">
             <td>Sehr häufig</td>
             <td>Mehr als 1 von 10 Behandelten</td>
             <td><b>Verdauungsprobleme wie</b>
@@ -1553,12 +1583,12 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                     Arzt.</span>
             </td>
         </tr>
-        <tr>
+        <tr id="haeufig">
             <td>Häufig</td>
             <td>Mehr als 1 von 10 Behandelten </td>
             <td><b>Geschmacksveränderungen</b></td>
         </tr>
-        <tr>
+        <tr id="sehrselten">
             <td>Sehr selten</td>
             <td>Bis zu 1 von 10.000 Behandelten</td>
             <td>
@@ -1585,7 +1615,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
 
             </td>
         </tr>
-        <tr>
+        <tr id="nichtbekannt">
             <td>Nicht Bekannt</td>
             <td>Häufigkeit auf Grundlage der verfügbaren Daten nicht abschätzbar</td>
             <td>
@@ -1616,8 +1646,8 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
         <h3> Häufigkeit der Nebenwirkungen </h3>
         <hr>
     </div>
-    <div class="gradient" style="padding: 15px;">
-        <div class="row">
+    <div>
+        <div class="row p15" id="sehrhaeufig-xs">
             <h4> Sehr häufig</h4>
             <div class="row">
                 <b>Anzahl der betreffenden Behandelten:</b> <br> Mehr als 1 von 10 Behandelten
@@ -1642,9 +1672,9 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                     und sprechen Sie mit Ihrem
                     Arzt.</span>
             </div>
+            <hr>
         </div>
-        <hr>
-        <div class="row">
+        <div class="row p15" id="haeufig-xs">
             <h4> Häufig</h4>
             <div class="row">
                 <b>Anzahl der betreffenden Behandelten:</b> <br> Mehr als 1 von 10 Behandelten
@@ -1653,10 +1683,10 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                 <b>Nebenwirkung:</b> <br>
                 Geschmacksveränderungen
             </div>
+            <hr>
         </div>
-        <hr>
 
-        <div class="row">
+        <div class="row p15" id="sehrselten-xs">
             <h4> Sehr selten</h4>
             <div class="row">
                 <b>Anzahl der betreffenden Behandelten:</b> <br> Mehr als 1 von 10000 Behandelten
@@ -1684,9 +1714,9 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                 </br>
                 <b>Niedrige Konzentration von Vitamin B12 im Blut.</b>
             </div>
+            <hr>
         </div>
-        <hr>
-        <div class="row">
+        <div class="row p15" id="nichtbekannt">
             <h4> Nicht bekannt</h4>
             <div class="row">
                 <b>Anzahl der betreffenden Behandelten:</b> <br> Mehr als 1 von 100 Behandelten
@@ -1913,9 +1943,9 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
     </div>
 </div>
 </div>
-    <h3 class="not_take"><i class="fas fa-bolt bolt_red" aria-hidden="true"></i> <br> Amlodipin (besilat) Dexcel 5 mg
-        nicht
-        einnehmen bei </h3>
+<h3 class="not_take"><i class="fas fa-bolt bolt_red" aria-hidden="true"></i> <br> Amlodipin (besilat) Dexcel 5 mg
+    nicht
+    einnehmen bei </h3>
 <div class="row">
     <div class="col-sm-6 nopadd">
         <div class="row">
@@ -2056,6 +2086,24 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
     </div>
 </div>
 <div class="row content_header" style="margin-top: 30px;">
+    <h3 class="modal-title xs-center">Teilung der Tablette</h3>
+    <hr />
+    <div class="col-sm-6 col-xs-12 text-center">
+        <h4> Schritt 1</h4>
+        <img src="./../../assets/p_form/usage/notcrack_small.svg" class="usage_tab" alt="Tablette" title="Tablette">
+        <br><br>
+        <p>Legen Sie bitte die Tablette mit der Bruchkerbe nach oben auf eine feste Unterlage.</p>
+
+    </div>
+    <div class="col-sm-6 col-xs-12 text-center">
+        <h4>Schritt 2</h4>
+        <img src="./../../assets/p_form/usage/crack_small.svg" class="usage_tab1" alt="Tablette" title="Tablette">
+        <br><br>
+        <p>Drücken Sie mit den Zeigefingern auf die linke und rechte Hälfte der Tablette.</p>
+
+    </div>
+</div>
+<div class="row content_header" style="margin-top: 30px;">
     <h3 class="modal-title xs-center">Weitere Informationen</h3>
     <hr />
     <div class="col-md-12">
@@ -2149,14 +2197,14 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                 <th>Nebenwirkung</th>
             </tr>
         </thead>
-        <tbody class="gradient" style="padding: 15px;">
-            <tr>
+        <tbody class="" style="padding: 15px;">
+            <tr id="sehrhaeufig">
                 <td>Sehr häufig</td>
                 <td>Mehr als 1 von 10 Behandelten</td>
                 <td>Knöchelschwellungen (Ödeme)
                 </td>
             </tr>
-            <tr>
+            <tr id="haeufig">
                 <td>Häufig</td>
                 <td>Mehr als 1 von 10 Behandelten </td>
                 <td>
@@ -2172,7 +2220,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                     </ul>
                 </td>
             </tr>
-            <tr>
+            <tr id="gelegentlich">
                 <td>Gelegentlich</td>
                 <td>Bis zu 1 von 100 Behandelten</td>
                 <td>
@@ -2197,14 +2245,14 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                     </ul>
                 </td>
             </tr>
-            <tr>
+            <tr id="selten">
                 <td>Selten</td>
                 <td> Bis zu 1 von 1.000 Behandelten </td>
                 <td>
                     Verwirrung
                 </td>
             </tr>
-            <tr>
+            <tr id="sehrselten">
                 <td>Sehr selten</td>
                 <td> Bis zu 1 von 10.000 Behandelten </td>
                 <td>
@@ -2235,8 +2283,8 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
             <h3> Häufigkeit der Nebenwirkungen </h3>
             <hr>
         </div>
-        <div class="gradient" style="padding: 15px;">
-            <div class="row">
+        <div>
+            <div class="row p15" id="sehrhaeufig-xs">
                 <h4> Sehr häufig</h4>
                 <div class="row">
                     <b>Anzahl der betreffenden Behandelten:</b> <br> Mehr als 1 von 10 Behandelten
@@ -2244,9 +2292,10 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                 <div class="row">
                     <b>Nebenwirkung:</b> <br>Knöchelschwellungen (Ödeme)
                 </div>
+                <hr>
             </div>
-            <hr>
-            <div class="row">
+
+            <div class="row p15" id="haeufig-xs">
                 <h4> Häufig</h4>
                 <div class="row">
                     <b>Anzahl der betreffenden Behandelten:</b> <br> Mehr als 1 von 10 Behandelten
@@ -2264,9 +2313,9 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                         <li>Muskelkrämpfe</li>
                     </ul>
                 </div>
+                <hr>
             </div>
-            <hr>
-            <div class="row">
+            <div class="row p15" id="gelegentlich-xs">
                 <h4> Gelegentlich</h4>
                 <div class="row">
                     <b>Anzahl der betreffenden Behandelten:</b> <br> Mehr als 1 von 100 Behandelten
@@ -2293,9 +2342,9 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                         <li>Gewichtszunahme oder Gewichtsabnahme</li>
                     </ul>
                 </div>
+                <hr>
             </div>
-            <hr>
-            <div class="row">
+            <div class="row p15" id="selten-xs">
                 <h4> Selten</h4>
                 <div class="row">
                     <b>Anzahl der betreffenden Behandelten:</b> <br> Mehr als 1 von 1000 Behandelten
@@ -2304,9 +2353,9 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                     <b>Nebenwirkung:</b> <br>
                     Verwirrung
                 </div>
+                <hr>
             </div>
-            <hr>
-            <div class="row">
+            <div class="row p15" id="sehrselten-xs">
                 <h4> Sehr selten</h4>
                 <div class="row">
                     <b>Anzahl der betreffenden Behandelten:</b> <br> Mehr als 1 von 10000 Behandelten
@@ -2390,6 +2439,1888 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
     Es werden möglicherweise nicht alle Packungsgrößen in den Verkehr gebracht.
 </div>
 ',12,9);
+-- Dump tailored_text
+
+--Enapril--
+
+INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (107,0,'Beispieltext1',13,1);
+INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (108,0,'Beispieltext2',13,2);
+INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (109,0,'
+<div class="row content_header">
+    <h1>Warnhinweise und Vorsichtsmaßnahmen
+    </h1>
+    <hr>
+</div>
+<div>
+
+
+
+    <h3 class="not_take"><i class="fas fa-user-injured bolt_grey"></i><i style="    font-size: 47px;
+        " class="fas fa-comments bolt_grey"></i><i class="fas fa-user-md bolt_grey" aria-hidden="true"></i> </h3>
+    Bitte sprechen Sie mit Ihrem Arzt oder Apotheker, bevor Sie enalapril-corax 5 mg einnehmen, wenn Sie an folgenden
+    Erkrankungen leiden bzw. folgende Umstände bei Ihnen vorliegen:
+    <br><br>
+    <div class="row">
+        <div class="col-sm-6 nopadd">
+            <div class="row">
+                <div class="col-sm-12 info_notuse bg_orange">
+                    <b> Leiden an Herzerkrankung</b>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 info_notuse bg_orange">
+                    <b> Leiden an Erkrankung der Blutgefäße im Gehirn</b>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 info_notuse bg_orange">
+                    <b> Leiden an Veränderungen in der Blutbildung </b><br>
+                    z.B. einer verminderten Anzahl von oder einem
+                    Mangel an
+                    weißen Blutkörperchen (Neutropenie/Agranulozytose), einer niedrigen Anzahl an Blutplättchen
+                    (Thrombozytopenie)
+                    oder einer verminderten Anzahl roter Blutkörperchen (Anämie) </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 info_notuse bg_orange">
+                    <b> Leiden an Lebererkrankung</b>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 info_notuse bg_orange">
+                    <b> Leiden an Nierenerkrankung</b> <br>(einschließlich einer Nierenverpflanzung). Dies kann zu
+                    erhöhten
+                    Kaliumspiegeln im Blut führen, was schwerwiegend sein kann. Ihr Arzt muss möglicherweise die Dosis
+                    von
+                    ENALAPRIL
+                    AL anpassen oder Ihren Kaliumspiegel im Blut überwachen.
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 info_notuse bg_orange"><b> Erhalten von Blutwäsche (Dialyse) </b></div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 info_notuse bg_orange"><b> Kürzlich sehr krank mit übermäßigem Erbrechen oder
+                        leiden an starkem
+                        Durchfall </b></div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 info_notuse bg_orange"><b> Einhalten einer salzarme Diät</b> <br> Einnahme von
+                    Kaliumergänzungsmittel <br>Einnahmen von kaliumsparende Arzneimittel oder
+                    Präparate, die Kaliumsalze enthalten</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 info_notuse bg_orange"><b> Älter als 70 Jahre</b></div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 info_notuse bg_orange"><b> Leiden an Zuckerkrankheit (Diabetes mellitus)</b> <br>
+                    Sie sollten Ihr
+                    Blut auf niedrige
+                    Blutzuckerspiegel
+                    überprüfen lassen, besonders im ersten Monat der Behandlung. Der Kaliumspiegel im Blut kann in
+                    diesem Fall
+                    erhöht sein.</div>
+            </div>
+        </div>
+        <div class="col-sm-6 nopadd">
+
+
+            <div class="row">
+                <div class="col-sm-12 info_notuse bg_orange"><b> Auftreten einer allergischen Reaktion</b><br>
+                    Schwellung an Gesicht,
+                    Lippen, Zunge
+                    oder
+                    Rachen und mit Schluck- oder Atembeschwerden. <br> Bitte beachten Sie, dass Patienten mit schwarzer
+                    Hautfarbe ein
+                    erhöhtes Risiko haben, so auf ACE-Hemmer zu reagieren.</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 info_notuse bg_orange"><b> Niedrigen Blutdruck</b><br> (Sie können das eventuell
+                    als Schwäche- oder
+                    Schwindelgefühl, besonders
+                    im
+                    Stehen, bemerken)</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 info_notuse bg_orange"><b> Leiden einer Kollagen-Erkrankung mit
+                        Gefäßbeteiligung</b><br> (z.B. Lupus
+                    erythematodes, rheumatoide
+                    Arthritis oder Sklerodermie), wenn Sie mit Arzneimitteln, die das Immunsystem unterdrücken,
+                    behandelt werden
+                    oder wenn Sie Allopurinol (Arzneimittel gegen Gicht) oder Procainamid (Arzneimittel gegen
+                    Herzrhythmusstörungen)
+                    erhalten, bzw. wenn Sie gleichzeitig mehrere der o. g. Risikofaktoren aufweisen</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 info_notuse bg_orange"><b> Stillen Ihres Kindes oder möchten </b><br> (siehe unter
+                    Abschnitt
+                    Schwangerschaft und Stillzeit)</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 info_notuse bg_orange"><b> Anwendung folgender Arzneimittel</b> <br>
+                    <ul>
+                        <li> Sirolimus, Everolimus und andere Arzneimittel, die zur Klasse der mTOR-Inhibitoren gehören
+                            (werden
+                            zur
+                            Verhinderung einer Abstoßung des Organtransplantats verwendet),</li>
+                        Erhöht sich das Risiko eines Angioödems (rasche
+                        Schwellung
+                        unter der Haut in Bereichen wie dem Rachen)
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 info_notuse bg_orange"><b> Einnahme folgenden Arzneimittel zur Behandlung von
+                        hohem Blutdruck </b>
+                    <ul>
+                        <li> einen Angiotensin-II-Rezeptor-AnTagonisten (diese werden auch als Sartane bezeichnet – z.B.
+                            Valsartan,
+                            Telmisartan, Irbesartan), insbesondere wenn Sie Nierenprobleme aufgrund von Diabetes
+                            mellitus haben,
+                        </li>
+
+                        <li>Aliskiren.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="row">
+        Ihr Arzt wird gegebenenfalls Ihre Nierenfunktion, Ihren Blutdruck und die Elektrolytwerte (z.B. Kalium) in Ihrem
+        Blut in regelmäßigen Abständen überprüfen.<br><br>
+
+        Bitte beachten Sie, dass bei Patienten mit schwarzer Hautfarbe die Blutdrucksenkung durch ACE-Hemmer im
+        Vergleich zu Patienten mit nicht schwarzer Hautfarbe weniger stark ist.<br><br>
+
+        Teilen Sie Ihrem Arzt mit, wenn Sie vermuten, schwanger zu sein (oder schwanger werden könnten). Die Einnahme
+        von Enalapril AL in der frühen Phase der Schwangerschaft wird nicht empfohlen, und Enalapril AL darf nicht mehr
+        nach dem dritten Schwangerschaftsmonat eingenommen werden, da die Einnahme von Enalapril AL in diesem Stadium zu
+        schweren Schädigungen Ihres ungeborenen Kindes führen kann (siehe unter Abschnitt 2.: Schwangerschaft und
+        Stillzeit).<br><br>
+
+        Wenn Sie sich nicht sicher sind, ob einer oder mehrere der oben genannten Punkte auf Sie zutreffen, wenden Sie
+        sich bitte an Ihren Arzt oder Apotheker, bevor Sie Enalapril AL einnehmen.<br><br>
+    </div>
+    <div class="row">
+        WENN SIE EINE BESONDERE BEHANDLUNG ERHALTEN SOLLEN:
+        <ul>
+            <li>Wenn eine der folgenden Behandlungen für Sie geplant ist, informieren Sie bitte Ihren Arzt, dass Sie
+                ENALAPRIL
+                AL einnehmen:
+                <ul>
+                    <li>alle Operationen oder jeder Einsatz von Betäubungs- oder Narkosemitteln (auch beim Zahnarzt),
+                    </li>
+                    <li> eine Behandlung zur Entfernung von Cholesterin aus dem Blut, die als LDL-Apherese bezeichnet
+                        wird,
+                    </li>
+                    <li> eine Desensibilisierungsbehandlung, um das Ausmaß einer allergischen Reaktion auf Bienen- oder
+                        Wespenstiche zu
+                        vermindern.</li>
+                </ul>
+            </li>
+            <li> Wenn eine der o. g. Behandlungen oder Eingriffe für Sie geplant ist, sprechen Sie vorher mit Ihrem
+                Arzt oder
+                Zahnarzt.</li>
+        </ul>
+    </div>
+</div>
+<div class="panel-group" id="accordion" style="margin: 30 0 30 0;">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title text-center-xs" data-toggle="collapse" data-target="#collapse3">
+                <img width="40" src="./../../assets/icons/10.svg" /> <span
+                    class="hidden-lg hidden-sm hidden-md"><br><br></span> Einnahme von Enalapril ALzusammen mit
+                anderen Medikamente
+            </h4>
+        </div>
+        <div id="collapse3" class="panel-collapse collapse in">
+            <div class="panel-body">
+                Informieren Sie Ihren Arzt oder Apotheker, wenn Sie andere Arzneimittel anwenden, kürzlich andere
+                Arzneimittel angewendet haben oder beabsichtigen, andere Arzneimittel anzuwenden.
+                <br><br>
+                Einige Arzneimittel können in ihrer Wirkung durch Enalapril AL beeinflusst werden, sowie auch andere
+                Arzneimittel die Wirkung von Enalapril AL beeinflussen können. Daher ist es wichtig, Ihren Arzt oder
+                Apotheker zu informieren, insbesondere wenn Sie eines oder mehrere der folgenden Arzneimittel einnehmen
+                oder anwenden:
+                <ul>
+                    <li> andere blutdrucksenkende Arzneimittel, wie z.B. Betablocker oder harntreibende Arzneimittel
+                        (Diuretika),</li>
+                    <li> Kalium-Ergänzungsmittel oder kaliumhaltige Salzersatzstoffe, Diuretika (Wassertabletten,
+                        insbesondere jene, die als kaliumsparend bezeichnet werden), andere Arzneimittel, die den
+                        Kaliumspiegel in Ihrem Körper erhöhen können (wie Heparin und Co-Trimoxazol, auch bekannt als
+                        Trimethoprim/ Sulfamethoxazol),</li>
+                    <li> Arzneimittel zur Behandlung der Zuckerkrankheit (einschließlich blutzuckersenkender
+                        Arzneimittel zur
+                        Einnahme und Insulin),</li>
+                    <li> Lithium (Arzneimittel gegen bestimmte Depressionen),</li>
+                    <li> Arzneimittel gegen Depressionen, die als trizyklische Antidepressiva bezeichnet werden,</li>
+                    <li> Arzneimittel zur Behandlung seelischer Probleme, die als Antipsychotika bezeichnet werden,</li>
+                    <li> bestimmte Arzneimittel zur Behandlung von Husten und Erkältungen oder Arzneimittel zur
+                        Gewichtsabnahme, die einen als „Sympathomimetikum“ bezeichneten Stoff enthalten,</li>
+                    <li> bestimmte Arzneimittel zur Behandlung von Schmerzen oder Gelenkerkrankungen, darunter auch
+                        Goldpräparate,</li>
+                    <li> Acetylsalicylsäure (z.B. Aspirin),</li>
+                    <li>Arzneimittel zur Auflösung von Blutgerinnseln (Thrombolytika),</li>
+                    <li> Alkohol,</li>
+                    <li> Arzneimittel, die sehr oft zur Verhinderung einer Abstoßung des Organtransplantats verwendet
+                        werden
+                        (Sirolimus, Everolimus und andere Arzneimittel, die zur Klasse der mTORInhibitoren gehören).
+                        Siehe
+                        unter Abschnitt 2.: Warnhinweise und Vorsichtsmaßnahmen.</li>
+                </ul>
+                Ihr Arzt muss unter Umständen Ihre Dosierung anpassen und/ oder sonstige Vorsichtsmaßnahmen treffen:
+                <ul>
+                    <li>
+                        wenn Sie einen Angiotensin-II-Rezeptor-AnTagonisten oder Aliskiren einnehmen (siehe unter
+                        Abschnitt 2.:
+                        „Enalapril AL darf NICHT eingenommen werden“ und „Warnhinweise und Vorsichtsmaßnahmen“).</li>
+                </ul>
+                Wenn Sie sich nicht sicher sind, ob einer oder mehrere der oben genannten Punkte auf Sie zutreffen,
+                wenden Sie sich bitte an Ihren Arzt oder Apotheker, bevor Sie Enalapril AL einnehmen.
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title text-center-xs" data-toggle="collapse" data-target="#collapse4">
+                <img width="40" src="./../../assets/icons/16.svg" /> <span
+                    class="hidden-lg hidden-sm hidden-md"><br><br></span> Einnahme von Enalapril ALzusammen mit
+                Nahrungsmitteln und
+                Getränken
+            </h4>
+        </div>
+        <div id="collapse4" class="panel-collapse collapse">
+            <div class="panel-body">
+                Enalapril AL kann mit oder ohne Nahrung eingenommen werden. Die meisten Patienten nehmen Enalapril AL
+                mit etwas Wasser ein.
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title text-center-xs" data-toggle="collapse" data-target="#collapse5">
+                <img width="40" src="./../../assets/icons/8.svg" /> <span
+                    class="hidden-lg hidden-sm hidden-md"><br><br></span> Schwangerschaft und Stillzeit
+            </h4>
+        </div>
+        <div id="collapse5" class="panel-collapse collapse">
+            <div class="panel-body">
+                Wenn Sie schwanger sind oder stillen, oder wenn Sie vermuten, schwanger zu sein oder beabsichtigen,
+                schwanger zu werden, fragen Sie vor der Anwendung dieses Arzneimittels Ihren Arzt oder Apotheker um Rat.
+                <h4>Schwangerschaft</h4>
+                Teilen Sie Ihrem Arzt mit, wenn Sie vermuten, schwanger zu sein (oder schwanger werden könnten). In der
+                Regel wird Ihr Arzt Ihnen empfehlen, Enalapril AL vor einer Schwangerschaft bzw. sobald Sie wissen, dass
+                Sie schwanger sind, abzusetzen, und er wird Ihnen ein anderes Arzneimittel empfehlen. Die Anwendung von
+                Enalapril AL in der frühen Schwangerschaft wird nicht empfohlen und Enalapril AL darf nicht mehr nach
+                dem dritten Schwangerschaftsmonat eingenommen werden, da die Einnahme von Enalapril AL in diesem Stadium
+                zu schweren Schädigungen Ihres ungeborenen Kindes führen kann.</br>
+                <h4>Stillzeit</h4>
+                Teilen sie Ihrem Arzt mit, wenn Sie stillen oder mit dem Stillen beginnen wollen. Das Stillen von
+                Neugeborenen (in den ersten Wochen nach der Geburt) und besonders von Frühgeburten wird nicht empfohlen,
+                wenn Sie Enalapril AL einnehmen.
+                <br>
+                Bei älteren Säuglingen sollte der Arzt Sie über Nutzen und mögliche Schäden der Anwendung von ENALAPRIL
+                AL in der Stillzeit im Vergleich zu Behandlungsalternativen aufklären.
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title text-center-xs" data-toggle="collapse" data-target="#collapse6">
+                <img width="40" src="./../../assets/icons/3.svg" /><span
+                    class="hidden-lg hidden-sm hidden-md"><br><br></span>
+                Verkehrstüchtigkeit und Fähigkeit zum Bedienen von Maschinen
+            </h4>
+        </div>
+        <div id="collapse6" class="panel-collapse collapse">
+            <div class="panel-body">Sie können unter der Behandlung Schwindel oder Müdigkeit spüren. Wenn dies der Fall
+                ist, sollten Sie kein Fahrzeug steuern oder Werkzeuge bzw. Maschinen bedienen. </div>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title text-center-xs" data-toggle="collapse" data-target="#collapse7">
+                <img width="40" src="./../../assets/icons/15.svg" /><span
+                    class="hidden-lg hidden-sm hidden-md"><br><br></span>
+                Enalapril AL enthält Lactose
+            </h4>
+        </div>
+        <div id="collapse7" class="panel-collapse collapse">
+            <div class="panel-body">Bitte nehmen Sie Enalapril AL daher erst nach Rücksprache mit Ihrem Arzt ein, wenn
+                Ihnen bekannt ist, dass Sie unter einer Unverträglichkeit gegenüber bestimmten Zuckern leiden.
+
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<h3 class="not_take"><i class="fas fa-bolt bolt_red" aria-hidden="true"></i> <br> Enalapril AL(besilat) Dexcel 5 mg
+    nicht
+    einnehmen </h3>
+<div class="row">
+    <div class="col-sm-6 nopadd">
+        <div class="row">
+            <div class="col-sm-12 info_notuse">
+                Allergie gegen Enalaprilmaleat, einen anderen ACE-Hemmer oder einen der sonstigen
+                Bestandteile, wie Croscarmellose-Natrium, Lactose-Monohydrat, Magnesiumstearat (Ph. Eur.),
+                vorverkleisterte Maisstärke, Natriumhydrogencarbonat dieses Arzneimittels sind
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 info_notuse"> Wenn bei Ihnen während einer früheren Behandlung mit einem ACE-Hemmer
+                Gewebeschwellungen (angioneurotische Ödeme) auftraten wenn Sie eine vererbte Neigung zu
+                Gewebeschwellungen oder Gewebeschwellungen aus unbekannter Ursache haben (hereditäres oder
+                idiopathisches Angioödem)</div>
+        </div>
+    </div>
+    <div class="col-sm-6 nopadd">
+        <div class="row">
+            <div class="col-sm-12 info_notuse">Wenn Sie mehr als drei Monate schwanger sind. (Es wird empfohlen,
+                Enalapril AL 5mg auch in der frühen Phase der Schwangerschaft nicht anzuwenden, siehe Abschnitt
+                Schwangerschaft, Stillzeit und Zeugungs-/Gebärfähigkeit).</div>
+        </div>
+
+    </div>
+</div>
+',13,3);
+INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic, address) VALUES (110,0,'Beispieltext',13,4, '
+<div class="row">
+    <div class="col-md-9">
+        <h3>Pharmazeutischer Unternehmer </h3>
+        <p> ALIUD PHARMA® GmbH
+
+            <br />
+            Gottlieb-Daimler-Straße 19
+            <br />
+            89150 Laichingen
+            <br />
+            <b>Tel.:</b> +49 7333 9651-0<br />
+            <b>Fax:</b> +49 7333 9651-4000<br />
+            <b>E-mail:</b> info@aliud.de<br />
+            <b>Web:</b> https://www.aliud.de/<br />
+
+        </p>
+    </div>
+    <div class="col-md-3">
+        <img class="img-responsive" src="/assets/images/company/aliud_pharma.png" />
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-9">
+        <h3>Hersteller </h3>
+        <p> STADA Arzneimittel AG
+            <br />
+            Stadastraße 2-18
+            <br />
+            61118 Bad Vilbel
+            <br />
+        </p>
+    </div>
+    <div class="col-md-3">
+        <img class="img-responsive" src="/assets/images/company/stada.png" />
+    </div>
+</div>');
+INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (111,0,'
+<div class="row">
+    <div class="col-sm-2 col-xs-12 text-center">
+        <i class="fas fa-user-md doc_icon nopadd"></i>
+    </div>
+    <div class="col-sm-10 col-xs-12">
+        Nehmen Sie dieses Arzneimittel immer genau nach Absprache mit Ihrem Arzt oder Apotheker ein. Fragen Sie bei
+        Ihrem Arzt oder Apotheker nach, wenn Sie sich nicht sicher sind. Es ist sehr wichtig, dass Sie Enalapril AL 5
+        mg einnehmen, solange es Ihnen Ihr Arzt verordnet.
+    </div>
+</div>
+<div class="row content_header">
+    <h3 class="modal-title xs-center">Dosierung</h3>
+    <hr />
+    <div class="panel with-nav-tabs panel-default">
+        <div class="panel-heading" style="height: inherit;">
+            <ul class="nav nav-tabs">
+                <li class="active"><a href="#tab1default" data-toggle="tab">Bluthochdruck</a></li>
+                <li><a href="#tab2default" data-toggle="tab"> Herzleistungsschwäche / Funktionsstörung der linken
+                        Herzkammer
+                    </a>
+                </li>
+                <li><a href="#tab3default" data-toggle="tab">Bei eingeschränkter Nierenfunktion</a></li>
+                <li><a href="#tab4default" data-toggle="tab">Bei älteren Patienten</a></li>
+
+            </ul>
+        </div>
+        <div class="panel-body">
+            <div class="tab-content">
+                <div class="tab-pane fade in active" id="tab1default">
+                    <div class="row content_header">
+                        <h4>Anfangsdosis</h4>
+                        <hr>
+                        <table class="sideffect_table ">
+
+                            <tbody>
+                                <tr>
+                                    <td> <b>Dosis</b></td>
+                                    <td>5mg</td>
+                                </tr>
+                                <tr>
+                                    <td> <b>Wie oft?</b></td>
+                                    <td>1x täglich</td>
+
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>Höchstdosis pro Tag</b>
+                                    </td>
+                                    <td>
+                                        20mg pro Tag </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>Hinweis</b> </td>
+                                    <td>je nach Schweregrad der Erkrankung und Ihrem Zustand</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="row content_header">
+                        <h4> Leichter Bluthochdruck </h4>
+                        <hr>
+                        <table class="sideffect_table ">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Anfangsdosis</th>
+                                    <th>Patienten mit stark aktiviertem blutdruckregulierendem System
+                                        <span class="tooltip">(z.B)
+                                            <span class="tooltiptext">bei Bluthochdruck aufgrund einer
+                                                Nierenerkrankung, Salz- und/oder Flüssigkeitsmangel, nicht
+                                                ausgeglichener
+                                                Herzleistungsschwäche oder
+                                                schwerem Bluthochdruck</span>
+                                        </span>
+
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td> <b>Dosis</b></td>
+                                    <td>5mg (1 Tablette) - 10mg (2 Tabletten) </td>
+                                    <td>5mg oder einer geringeren Dosis</td>
+                                </tr>
+                                <tr>
+                                    <td> <b>Wie oft?</b></td>
+                                    <td>1x täglich</td>
+                                    <td>1x täglich</td>
+
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>Höchstdosis pro Tag</b>
+                                    </td>
+                                    <td>
+                                        10mg pro Tag </td>
+                                    <td>5mg pro Tag</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>Hinweis</b> </td>
+                                    <td></td>
+                                    <td>Bei Therapiebeginn kann
+                                        es zu einem übermäßigen Blutdruckabfall kommen; eine engmaschige ärztliche
+                                        Überwachung ist
+                                        erforderlich.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="row content_header">
+                        <h4> Patienten mit vorausgegangener Therapie mit hoch dosierten harntreibenden Arzneimitteln
+                            (Diuretika)</h4>
+                        <hr>
+                        <table class="sideffect_table ">
+
+                            <tbody>
+                                <tr>
+                                    <td> <b>Dosis</b></td>
+                                    <td>5mg oder einer geringeren Dosis</td>
+                                </tr>
+                                <tr>
+                                    <td> <b>Wie oft?</b></td>
+                                    <td>1x täglich</td>
+
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>Höchstdosis pro Tag</b>
+                                    </td>
+
+                                    <td>5mg pro Tag</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>Hinweis</b> </td>
+                                    <td>Eine vorausgegangene Therapie mit hoch
+                                        dosierten harntreibenden Arzneimitteln kann zu einem Flüssigkeitsmangel führen,
+                                        so
+                                        dass die Gefahr
+                                        eines Blutdruckabfalls bei Therapiebeginn besteht. Wenn möglich sollten diese
+                                        Arzneimittel 2-3 Tage
+                                        lang abgesetzt werden, bevor die Therapie mit Enalapril AL 5mg eingeleitet wird.
+                                        Die
+                                        Nierenfunktion und die Kaliumwerte im Blut sollten überwacht werden.
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="row content_header">
+                        <h4> Erhaltungsdosis</h4>
+                        <hr>
+                        <table class="sideffect_table ">
+
+                            <tbody>
+                                <tr>
+                                    <td> <b>Dosis</b></td>
+                                    <td>20mg </td>
+                                </tr>
+                                <tr>
+                                    <td> <b>Wie oft?</b></td>
+                                    <td>1x täglich</td>
+
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>Höchstdosis pro Tag</b>
+                                    </td>
+                                    <td>40mg pro Tag</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>Hinweis</b> </td>
+                                    <td>Für die höheren
+                                        Dosierungen stehen Tabletten mit geeigneter Wirkstoffstärke zur Verfügung.
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="tab2default">
+                    <div class="row content_header">
+                        <h4>Anfangsdosis</h4>
+                        <hr>
+                        <table class="sideffect_table ">
+                            <tbody>
+                                <tr>
+                                    <td> <b>Dosis</b></td>
+                                    <td>2,5mg</td>
+                                </tr>
+                                <tr>
+                                    <td> <b>Wie oft?</b></td>
+                                    <td>1x täglich</td>
+
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>Höchstdosis pro Tag</b>
+                                    </td>
+                                    <td>
+                                        20mg pro Tag </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>Hinweis</b> </td>
+                                    <td>Enalapril AL 5 mg wird bei der Behandlung der Herzleistungsschwäche
+                                        üblicherweise
+                                        zusätzlich zu harntreibenden Arzneimitteln und Digitalis oder Betablockern
+                                        angewendet. <br>
+                                        Die
+                                        Therapie ist unter engmaschiger ärztlicher Überwachung einzuleiten, um die
+                                        anfängliche Wirkung auf
+                                        den Blutdruck zu ermitteln.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="row content_header">
+                        <h4> Erhaltungsdosis</h4>
+                        <hr>
+                        Zu Beginn der Therapie mit Enalapril AL 5mg kann es bei Patienten mit
+                        Herzleistungsschwäche zu einem Blutdruckabfall kommen.<br>Wenn dieser behoben ist, sollte die
+                        Dosis
+                        schrittweise über einen Zeitraum von 2-4 Wochen auf die Erhaltungsdosis von 20 mg
+                        Enalaprilmaleat
+                        täglich gesteigert werden.
+                        <table class="sideffect_table ">
+                            <tbody>
+                                <tr>
+                                    <td> <b>Dosis</b></td>
+                                    <td>20mg </td>
+                                </tr>
+                                <tr>
+                                    <td> <b>Wie oft?</b></td>
+                                    <td>1x täglich</td>
+
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>Höchstdosis pro Tag</b>
+                                    </td>
+
+                                    <td>40mg pro Tag</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>Hinweis</b> </td>
+                                    <td>Diese Dosis kann als Einzeldosis eingenommen oder auf zwei Gaben verteilt
+                                        werden, je nach Verträglichkeit.
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <br> Für die höheren Dosierungen stehen Tabletten mit
+                        geeigneter Wirkstoffstärke zur Verfügung. Sie sollten besonders vorsichtig sein, wenn Sie Ihre
+                        erste
+                        Dosis einnehmen oder wenn Ihre Dosis erhöht wird. Teilen Sie Ihrem Arzt unverzüglich mit, wenn
+                        Sie
+                        sich benommen oder schwindlig fühlen. Vor und nach Beginn der Einnahme von Enalapril AL 5mg
+                        sollten Blutdruck und Nierenfunktion engmaschig überwacht werden, da über Blutdruckabfall und
+                        (seltener) nachfolgendem Nierenversagen berichtet wurde. <br>Wenn Sie mit harntreibenden
+                        Arzneimitteln
+                        behandelt werden, sollte – falls möglich – deren Dosis vor Beginn der Einnahme von Enalapril AL
+                        5
+                        mg verringert werden. <br> Ein Blutdruckabfall bei Therapiebeginn mit Enalapril AL 5mg bedeutet
+                        nicht, dass auch während der Dauerbehandlung mit Enalapril AL 5mg solche Reaktionen auftreten
+                        werden und schließt die Weiterbehandlung mit dem Arzneimittel nicht aus. Die Kaliumwerte im Blut
+                        und
+                        die Nierenfunktion sollten ebenfalls überwacht werden.
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="tab3default">Grundsätzlich sollten die Abstände zwischen den
+                    Anwendungen
+                    von Enalapril AL 5mg verlängert werden und/oder die Dosis reduziert werden. Ihr Arzt wird Ihre
+                    Behandlung individuell festlegen. <br>
+                    <ul>
+                        <li><b>Bei mäßiger Einschränkung der Nierenfunktion</b> </br>
+                            <table class="sideffect_table ">
+                                <tbody>
+                                    <tr>
+                                        <td> <b>Dosis</b></td>
+                                        <td>5-10 mg </td>
+                                    </tr>
+                                    <tr>
+                                        <td> <b>Wie oft?</b></td>
+                                        <td>1x täglich</td>
+
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </li>
+                        <li><b> Bei schwerer Nierenfunktionseinschränkung</b> </br>
+                            <table class="sideffect_table ">
+
+                                <tbody>
+                                    <tr>
+                                        <td> <b>Dosis</b></td>
+                                        <td>2,5 mg </td>
+                                    </tr>
+                                    <tr>
+                                        <td> <b>Wie oft?</b></td>
+                                        <td>1x täglich</td>
+
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </li>
+                        <li><b>Für Dialysepatienten</b> </br>
+                            <table class="sideffect_table ">
+
+                                <tbody>
+                                    <tr>
+                                        <td> <b>Dosis</b></td>
+                                        <td>2,5 mg </td>
+                                    </tr>
+                                    <tr>
+                                        <td> <b>Wie oft?</b></td>
+                                        <td>1x täglich (an Dialyse-Tagen)</td>
+
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <b>Hinweis</b> </td>
+                                        <td>An dialysefreien Tagen richtet
+                                            sich
+                                            die Dosis nach der Blutdrucksenkung.
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tab-pane fade" id="tab4default">Die Dosis sollte sich nach der Nierenfunktion des
+                    Patienten
+                    richten.<br>
+
+                    Ihr Arzt wird Ihre anfängliche Dosis individuell nach Ihrem Gesundheitszustand und dem
+                    Schweregrad
+                    Ihrer Erkrankung wählen und entsprechend der Wirkung des Arzneimittels auf Ihren Blutdruck die
+                    Dosis
+                    schrittweise anpassen.<br>
+
+                    Die Tabletten können in gleiche Hälften geteilt werden.</div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+<div class="row content_header" style="margin-top: 30px;">
+    <h3 class="modal-title xs-center">Art und Dauer der Anwendung</h3>
+    <hr />
+    <div class="row xs-center">
+        <div class="col-sm-2 col-xs-12">
+            <i style="font-size: 33px;" class="fas fa-glass-whiskey"></i>
+        </div>
+        <div class="col-sm-10 col-xs-12 m20t">
+            Nehmen Sie die Tabletten unzerkaut mit ausreichend Flüssigkeit (z. B. einem Glas Wasser) ein. Die
+            Einnahme
+            kann unabhängig von den Mahlzeiten erfolgen.<br>Die angegebene Tagesmenge wird in der Regel morgens auf
+            einmal
+            eingenommen, kann aber gegebenenfalls auch auf 2 Einnahmen morgens und abends verteilt werden.
+        </div>
+    </div>
+    <div class=" row xs-center m20t">
+        <div class="col-sm-2 col-xs-12">
+            <i style="font-size: 33px;" class="fas fa-user-md" aria-hidden="true"></i>
+        </div>
+        <div class="col-sm-10 col-xs-12 m20t">
+            Die Dauer der Behandlung bestimmt Ihr Arzt. Die Behandlung mit Enalapril AL 5mg ist in der Regel eine
+            Langzeittherapie. <br>
+
+            Bitte sprechen Sie mit Ihrem Arzt, wenn Sie den Eindruck haben, dass die Wirkung von Enalapril AL 5mg zu
+            stark oder zu schwach ist.
+        </div>
+    </div>
+</div>
+
+<div class="row content_header" style="margin-top: 30px;">
+    <h3 class="modal-title xs-center">Teilung der Tablette</h3>
+    <hr />
+    <div class="col-sm-6 col-xs-12 text-center">
+        <h4> Schritt 1</h4>
+        <img src="./../../assets/p_form/usage/notcrack_small.svg" class="usage_tab" alt="Tablette" title="Tablette">
+        <br><br>
+        <p>Legen Sie bitte die Tablette mit der Bruchkerbe nach oben auf eine feste Unterlage.</p>
+
+    </div>
+    <div class="col-sm-6 col-xs-12 text-center">
+        <h4>Schritt 2</h4>
+        <img src="./../../assets/p_form/usage/crack_small.svg" class="usage_tab1" alt="Tablette" title="Tablette">
+        <br><br>
+        <p>Drücken Sie mit den Zeigefingern auf die linke und rechte Hälfte der Tablette.</p>
+
+    </div>
+</div>
+
+<div class="row content_header" style="margin-top: 30px;">
+    <h3 class="modal-title xs-center">Weitere Informationen</h3>
+    <hr />
+    <div class="col-md-12">
+        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+            <div class="panel panel-default">
+                <div class="panel-heading head_panel" role="tab" id="headingOne">
+                    <h4 class="panel-title text-center-xs" data-toggle="collapse" data-target="#collapseOne1">
+                        Wenn Sie eine größere Menge Enalapril AL 5mg eingenommen haben, als Sie sollten
+
+                    </h4>
+                </div>
+                <div id="collapseOne1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                    <div class="panel-body">
+                        <p>Wenn Sie durch ein Versehen zu viele Tabletten eingenommen haben oder ein Kind einige
+                            Tabletten geschluckt hat, wenden Sie sich sofort an einen Arzt/Notarzt. Dieser kann
+                            entsprechend der Schwere der Vergiftung über die erforderlichen Maßnahmen entscheiden.
+                            In
+                            Abhängigkeit vom Ausmaß der Überdosierung sind folgende Symptome möglich: Starker
+                            Blutdruckabfall, Kreislaufversagen, beschleunigter oder verlangsamter Herzschlag,
+                            Herzklopfen, Nierenversagen, Atembeschleunigung, Schwindel, Angstgefühl und Husten. Bei
+                            Verdacht auf eine Überdosierung benötigen Sie ärztliche Hilfe!
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading head_panel" role="tab" id="headingTwo">
+                    <h4 class="panel-title title_pan text-center-xs" data-toggle="collapse" data-target="#collapseTwo2">
+                        Wenn Sie die Einnahme von Enalapril AL 5mg vergessen haben
+                    </h4>
+                </div>
+                <div id="collapseTwo2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                    <div class="panel-body">
+                        <p>Nehmen Sie beim nächsten Mal nicht zusätzlich mehr Tabletten ein, sondern setzen Sie die
+                            Einnahme von Enalapril AL 5mg wie verordnet fort.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading head_panel" role="tab" id="headingThree">
+                    <h4 class="panel-title text-center-xs" data-toggle="collapse" data-target="#collapseThree3">
+
+                        Wenn Sie die Einnahme von Enalapril AL 5mg abbrechen
+                    </h4>
+                </div>
+                <div id="collapseThree3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                    <div class="panel-body">
+                        <p>Unterbrechen oder beenden Sie die Behandlung mit Enalapril AL 5mg nicht ohne Rücksprache
+                            mit Ihrem behandelnden Arzt! Bei Patienten mit Bluthochdruck kann der Blutdruck erneut
+                            ansteigen und bei Patienten mit Herzleistungsschwäche können die Symptome wieder
+                            auftreten.
+
+                            Wenn Sie weitere Fragen zur Anwendung dieses Arzneimittels haben, wenden Sie sich an
+                            Ihren
+                            Arzt oder Apotheker.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+',13,5);
+INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (112,0,'
+<div class="row content_header">
+    <h1> Nebenwirkungen </h1>
+    <hr>
+</div>
+<div class="row">
+    Wie alle Arzneimittel kann auch dieses Arzneimittel Nebenwirkungen haben, die aber nicht
+    bei jedem auftreten müssen.
+</div>
+<div class="row" style="margin-top: 30px;">
+    <div class="col-md-12">
+        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+            <div class="panel panel-default">
+                <div class="panel-heading head_panel" role="tab" id="nebenhead1">
+                    <h4 class="panel-title text-center-xs" data-toggle="collapse" data-target="#neben1">
+                        Erkrankungen des Blutes-und Lymphsystems
+                    </h4>
+                </div>
+                <div id="neben1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="nebenhead1">
+                    <div class="panel-body">
+                        <table class="sideffect_table hidden-xs">
+                            <thead>
+                                <tr>
+                                    <th>Häufigkeit</th>
+                                    <th style="width: 25%;">Anzahl der betreffenden Behandelten</th>
+                                    <th>Nebenwirkung</th>
+                                </tr>
+                            </thead>
+                            <tbody class="" style="padding: 15px;">
+                                <tr id="gelegentlich">
+                                    <td>Gelegentlich</td>
+                                    <td>Bis zu 1 von 100 Behandelten</td>
+                                    <td>
+                                        Blutarmut durch vermehrten Zerfall roter Blutkörperchen (hämolytische
+                                        Anämie),
+                                        Blutarmut durch Blutbildungsstörung im Knochenmark (aplastische Anämie)
+                                    </td>
+                                </tr>
+                                <tr id="selten">
+                                    <td>Selten</td>
+                                    <td> Bis zu 1 von 1.000 Behandelten </td>
+                                    <td>
+                                        Verminderung der Anzahl bestimmter Blutzellen (Neutropenie,
+                                        Thrombozytopenie,
+                                        Panzytopenie) bis zu einer hochgradigen Verminderung bestimmter weißer
+                                        Blutkörperchen mit Infektneigung und schweren Allgemeinsymptomen
+                                        (Agranulozytose), Abnahme bestimmter Laborwerte (Hämoglobin und Hämatokrit),
+                                        herabgesetzte Funktion des Knochenmarks (Knochenmarksdepression),
+                                        Lymphknotenschwellung, Autoimmunkrankheiten. </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                        <div class="hidden-sm hidden-md hidden-lg">
+                            <div class="row content_header">
+                                <h3> Häufigkeit der Nebenwirkungen </h3>
+                                <hr>
+                            </div>
+                            <div>
+                                <div class="row p15" id="gelegentlich-xs">
+                                    <h4> Gelegentlich</h4>
+                                    <div class="row">
+                                        <b>Anzahl der betreffenden Behandelten:</b> <br> Mehr als 1 von 100
+                                        Behandelten
+                                    </div>
+                                    <div class="row">
+                                        <b>Nebenwirkung:</b> <br>
+                                        Blutarmut durch vermehrten Zerfall roter Blutkörperchen (hämolytische
+                                        Anämie),
+                                        Blutarmut durch Blutbildungsstörung im Knochenmark (aplastische Anämie)
+
+                                    </div>
+                                    <hr>
+                                </div>
+                                <div class="row p15" id="selten-xs">
+                                    <h4> Selten</h4>
+                                    <div class="row">
+                                        <b>Anzahl der betreffenden Behandelten:</b> <br> Mehr als 1 von 1000
+                                        Behandelten
+                                    </div>
+                                    <div class="row">
+                                        <b>Nebenwirkung:</b> <br>
+                                        Verminderung der Anzahl bestimmter Blutzellen (Neutropenie,
+                                        Thrombozytopenie,
+                                        Panzytopenie) bis zu einer hochgradigen Verminderung bestimmter weißer
+                                        Blutkörperchen mit Infektneigung und schweren Allgemeinsymptomen
+                                        (Agranulozytose), Abnahme bestimmter Laborwerte (Hämoglobin und Hämatokrit),
+                                        herabgesetzte Funktion des Knochenmarks (Knochenmarksdepression),
+                                        Lymphknotenschwellung, Autoimmunkrankheiten. </div>
+                                    <hr>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading head_panel" role="tab" id="nebenhead2">
+                    <h4 class="panel-title title_pan text-center-xs" data-toggle="collapse" data-target="#neben2">
+                        Stoffwechsel- und Ernährungsstörungen
+                    </h4>
+                </div>
+                <div id="neben2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="nebenhead2">
+                    <div class="panel-body">
+                        <table class="sideffect_table hidden-xs">
+                            <thead>
+                                <tr>
+                                    <th>Häufigkeit</th>
+                                    <th style="width: 25%;">Anzahl der betreffenden Behandelten</th>
+                                    <th>Nebenwirkung</th>
+                                </tr>
+                            </thead>
+                            <tbody class="" style="padding: 15px;">
+                                <tr id="gelegentlich">
+                                    <td>Gelegentlich</td>
+                                    <td>Bis zu 1 von 100 Behandelten</td>
+                                    <td>
+                                        Zu niedrige Blutzuckerwerte (Hypoglykämie).
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="hidden-sm hidden-md hidden-lg">
+                            <div class="row content_header">
+                                <h3> Häufigkeit der Nebenwirkungen </h3>
+                                <hr>
+                            </div>
+                            <div>
+                                <div class="row p15" id="gelegentlich-xs">
+                                    <h4> Gelegentlich</h4>
+                                    <div class="row">
+                                        <b>Anzahl der betreffenden Behandelten:</b> <br> Mehr als 1 von 100
+                                        Behandelten
+                                    </div>
+                                    <div class="row">
+                                        <b>Nebenwirkung:</b> <br>
+                                        Zu niedrige Blutzuckerwerte (Hypoglykämie).
+
+                                    </div>
+                                    <hr>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading head_panel" role="tab" id="nebenhead3">
+                    <h4 class="panel-title text-center-xs" data-toggle="collapse" data-target="#neben3">
+                        Augenerkrankungen
+                    </h4>
+                </div>
+                <div id="neben3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="nebenhead3">
+                    <div class="panel-body">
+                        <table class="sideffect_table hidden-xs">
+                            <thead>
+                                <tr>
+                                    <th>Häufigkeit</th>
+                                    <th style="width: 25%;">Anzahl der betreffenden Behandelten</th>
+                                    <th>Nebenwirkung</th>
+                                </tr>
+                            </thead>
+                            <tbody class="" style="padding: 15px;">
+                                <tr id="sehrhaeufig">
+                                    <td>Sehr häufig</td>
+                                    <td>Mehr als 1 von 10 Behandelten</td>
+                                    <td>Verschwommensehen
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="hidden-sm hidden-md hidden-lg">
+                            <div class="row content_header">
+                                <h3> Häufigkeit der Nebenwirkungen </h3>
+                                <hr>
+                            </div>
+                            <div>
+                                <div class="row p15" id="sehrhaeufig-xs">
+                                    <h4> Sehr häufig</h4>
+                                    <div class="row">
+                                        <b>Anzahl der betreffenden Behandelten:</b> <br> Mehr als 1 von 10
+                                        Behandelten
+                                    </div>
+                                    <div class="row">
+                                        <b>Nebenwirkung:</b> <br>Verschwommensehen
+                                    </div>
+                                    <hr>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading head_panel" role="tab" id="nebenhead4">
+                    <h4 class="panel-title text-center-xs" data-toggle="collapse" data-target="#neben4">
+                        Herz-Kreislauf-System
+                    </h4>
+                </div>
+                <div id="neben4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="nebenhead4">
+                    <div class="panel-body">
+                        <table class="sideffect_table hidden-xs">
+                            <thead>
+                                <tr>
+                                    <th>Häufigkeit</th>
+                                    <th style="width: 25%;">Anzahl der betreffenden Behandelten</th>
+                                    <th>Nebenwirkung</th>
+                                </tr>
+                            </thead>
+                            <tbody class="" style="padding: 15px;">
+                                <tr id="sehrhaeufig">
+                                    <td>Sehr häufig</td>
+                                    <td>Mehr als 1 von 10 Behandelten</td>
+                                    <td>Schwindel
+                                    </td>
+                                </tr>
+                                <tr id="haeufig">
+                                    <td>Häufig</td>
+                                    <td>Mehr als 1 von 10 Behandelten </td>
+                                    <td>
+                                        Übermäßige Blutdrucksenkung einschließlich übermäßiger Blutdruckabfall bei
+                                        Lagewechsel vom Liegen zum Stehen (orthostatische Hypotonie), kurzzeitiger
+                                        Bewusstseinsverlust (Synkope), Herzinfarkt oder Schlaganfall, vermutlich
+                                        infolge
+                                        übermäßigen Blutdruckabfalls bei gefährdeten Patienten (Patienten mit
+                                        Durchblutungsstörungen im Bereich des Herzens und/oder des Gehirns),
+                                        Schmerzenim
+                                        Brustkorb, Herzrhythmusstörungen, Herzengegefühl (Angina pectoris),
+                                        beschleunigter Herzschlag (Tachykardie).
+                                    </td>
+                                </tr>
+                                <tr id="gelegentlich">
+                                    <td>Gelegentlich</td>
+                                    <td>Bis zu 1 von 100 Behandelten</td>
+                                    <td>
+                                        Übermäßiger Blutdruckabfall bei Lagewechsel vom Liegen zum Stehen
+                                        (orthostatische Hypotonie), Herzklopfen.
+                                    </td>
+                                </tr>
+                                <tr id="selten">
+                                    <td>Selten</td>
+                                    <td> Bis zu 1 von 1.000 Behandelten </td>
+                                    <td>
+                                        Durch Gefäßkrämpfe bedingte Durchblutungsstörungen an Händen und Füßen
+                                        (Raynaud-Phänomen). </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="hidden-sm hidden-md hidden-lg">
+                            <div class="row content_header">
+                                <h3> Häufigkeit der Nebenwirkungen </h3>
+                                <hr>
+                            </div>
+                            <div>
+                                <div class="row p15" id="sehrhaeufig-xs">
+                                    <h4> Sehr häufig</h4>
+                                    <div class="row">
+                                        <b>Anzahl der betreffenden Behandelten:</b> <br> Mehr als 1 von 10
+                                        Behandelten
+                                    </div>
+                                    <div class="row">
+                                        <b>Nebenwirkung:</b> <br>Schwindel
+                                    </div>
+                                    <hr>
+                                </div>
+                                <div class="row p15" id="haeufig-xs">
+                                    <h4> Häufig</h4>
+                                    <div class="row">
+                                        <b>Anzahl der betreffenden Behandelten:</b> <br> Mehr als 1 von 10
+                                        Behandelten
+                                    </div>
+                                    <div class="row">
+                                        <b>Nebenwirkung:</b> <br>
+                                        Übermäßige Blutdrucksenkung einschließlich übermäßiger Blutdruckabfall bei
+                                        Lagewechsel vom Liegen zum Stehen (orthostatische Hypotonie), kurzzeitiger
+                                        Bewusstseinsverlust (Synkope), Herzinfarkt oder Schlaganfall, vermutlich
+                                        infolge
+                                        übermäßigen Blutdruckabfalls bei gefährdeten Patienten (Patienten mit
+                                        Durchblutungsstörungen im Bereich des Herzens und/oder des Gehirns),
+                                        Schmerzenim
+                                        Brustkorb, Herzrhythmusstörungen, Herzengegefühl (Angina pectoris),
+                                        beschleunigter Herzschlag (Tachykardie).
+                                    </div>
+                                    <hr>
+                                </div>
+                                <div class="row p15" id="gelegentlich-xs">
+                                    <h4> Gelegentlich</h4>
+                                    <div class="row">
+                                        <b>Anzahl der betreffenden Behandelten:</b> <br> Mehr als 1 von 100
+                                        Behandelten
+                                    </div>
+                                    <div class="row">
+                                        <b>Nebenwirkung:</b> <br>
+                                        Übermäßiger Blutdruckabfall bei Lagewechsel vom Liegen zum Stehen
+                                        (orthostatische Hypotonie), Herzklopfen.
+                                    </div>
+                                    <hr>
+                                </div>
+                                <div class="row p15" id="selten-xs">
+                                    <h4> Selten</h4>
+                                    <div class="row">
+                                        <b>Anzahl der betreffenden Behandelten:</b> <br> Mehr als 1 von 1000
+                                        Behandelten
+                                    </div>
+                                    <div class="row">
+                                        <b>Nebenwirkung:</b> <br>
+                                        Durch Gefäßkrämpfe bedingte Durchblutungsstörungen an Händen und Füßen
+                                        (Raynaud-Phänomen).
+                                    </div>
+                                    <hr>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading head_panel" role="tab" id="nebenhead5">
+                    <h4 class="panel-title text-center-xs" data-toggle="collapse" data-target="#neben5">
+                        Erkrankungen der Atemwege, des Brustraums und Mediastinums
+                    </h4>
+                </div>
+                <div id="neben5" class="panel-collapse collapse" role="tabpanel" aria-labelledby="nebenhead5">
+                    <div class="panel-body">
+                        <table class="sideffect_table hidden-xs">
+                            <thead>
+                                <tr>
+                                    <th>Häufigkeit</th>
+                                    <th style="width: 25%;">Anzahl der betreffenden Behandelten</th>
+                                    <th>Nebenwirkung</th>
+                                </tr>
+                            </thead>
+                            <tbody class="" style="padding: 15px;">
+                                <tr id="sehrhaeufig">
+                                    <td>Sehr häufig</td>
+                                    <td>Mehr als 1 von 10 Behandelten</td>
+                                    <td>Übelkeit
+                                    </td>
+                                </tr>
+                                <tr id="haeufig">
+                                    <td>Häufig</td>
+                                    <td>Mehr als 1 von 10 Behandelten </td>
+                                    <td>
+                                        Durchfall, Bauchschmerzen, Geschmacksveränderungen.
+                                    </td>
+                                </tr>
+                                <tr id="gelegentlich">
+                                    <td>Gelegentlich</td>
+                                    <td>Bis zu 1 von 100 Behandelten</td>
+                                    <td>
+                                        Darmverschluss (Ileus), Entzündung der Bauchspeicheldrüse,
+                                        Erbrechen,
+                                        Verdauungsstörungen, Verstopfung, Appetitlosigkeit,
+                                        Magenreizung,
+                                        Mundtrockenheit, Magengeschwür (peptisches Ulkus).
+                                    </td>
+                                </tr>
+                                <tr id="selten">
+                                    <td>Selten</td>
+                                    <td> Bis zu 1 von 1.000 Behandelten </td>
+                                    <td>
+                                        Entzündungen der Mundschleimhaut mit Geschwürbildung
+                                        (Stomatitis/aphthöse
+                                        Ulzerationen), Entzündungen der Zungenschleimhaut
+                                        (Glossitis). </td>
+                                </tr>
+                                <tr id="sehrselten">
+                                    <td>Sehr selten</td>
+                                    <td> Bis zu 1 von 10.000 Behandelten </td>
+                                    <td>
+                                        Gewebeschwellung des Darms (intestinales angioneurotisches
+                                        Ödem).
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="hidden-sm hidden-md hidden-lg">
+                            <div class="row content_header">
+                                <h3> Häufigkeit der Nebenwirkungen </h3>
+                                <hr>
+                            </div>
+                            <div>
+                                <div class="row p15" id="sehrhaeufig-xs">
+                                    <h4> Sehr häufig</h4>
+                                    <div class="row">
+                                        <b>Anzahl der betreffenden Behandelten:</b> <br> Mehr als 1
+                                        von 10 Behandelten
+                                    </div>
+                                    <div class="row">
+                                        <b>Nebenwirkung:</b> <br>Übelkeit
+                                    </div>
+                                    <hr>
+                                </div>
+                                <div class="row p15" id="haeufig-xs">
+                                    <h4> Häufig</h4>
+                                    <div class="row">
+                                        <b>Anzahl der betreffenden Behandelten:</b> <br> Mehr als 1
+                                        von 10 Behandelten
+                                    </div>
+                                    <div class="row">
+                                        <b>Nebenwirkung:</b> <br>
+                                        Durchfall, Bauchschmerzen, Geschmacksveränderungen.
+
+                                    </div>
+                                    <hr>
+                                </div>
+                                <div class="row p15" id="gelegentlich-xs">
+                                    <h4> Gelegentlich</h4>
+                                    <div class="row">
+                                        <b>Anzahl der betreffenden Behandelten:</b> <br> Mehr als 1
+                                        von 100 Behandelten
+                                    </div>
+                                    <div class="row">
+                                        <b>Nebenwirkung:</b> <br>
+                                        Darmverschluss (Ileus), Entzündung der Bauchspeicheldrüse,
+                                        Erbrechen, Verdauungsstörungen, Verstopfung,
+                                        Appetitlosigkeit, Magenreizung, Mundtrockenheit,
+                                        Magengeschwür (peptisches Ulkus).
+                                    </div>
+                                    <hr>
+                                </div>
+                                <div class="row p15" id="selten-xs">
+                                    <h4> Selten</h4>
+                                    <div class="row">
+                                        <b>Anzahl der betreffenden Behandelten:</b> <br> Mehr als 1
+                                        von 1000 Behandelten
+                                    </div>
+                                    <div class="row">
+                                        <b>Nebenwirkung:</b> <br>
+                                        Entzündungen der Mundschleimhaut mit Geschwürbildung
+                                        (Stomatitis/aphthöse Ulzerationen), Entzündungen der
+                                        Zungenschleimhaut (Glossitis).
+                                    </div>
+                                    <hr>
+                                </div>
+                                <div class="row p15" id="sehrselten-xs">
+                                    <h4> Sehr selten</h4>
+                                    <div class="row">
+                                        <b>Anzahl der betreffenden Behandelten:</b> <br> Mehr als 1
+                                        von 10000 Behandelten
+                                    </div>
+                                    <div class="row">
+                                        <b>Nebenwirkung:</b> <br>
+                                        Gewebeschwellung des Darms (intestinales angioneurotisches Ödem).
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading head_panel" role="tab" id="nebenhead6">
+                    <h4 class="panel-title text-center-xs" data-toggle="collapse" data-target="#neben6">
+                        Leber- und Gallenerkrankungen
+                    </h4>
+                </div>
+                <div id="neben6" class="panel-collapse collapse" role="tabpanel" aria-labelledby="nebenhead6">
+                    <div class="panel-body">
+                        <table class="sideffect_table hidden-xs">
+                            <thead>
+                                <tr>
+                                    <th>Häufigkeit</th>
+                                    <th style="width: 25%;">Anzahl der betreffenden Behandelten</th>
+                                    <th>Nebenwirkung</th>
+                                </tr>
+                            </thead>
+                            <tbody class="" style="padding: 15px;">
+
+                                <tr id="selten">
+                                    <td>Selten</td>
+                                    <td> Bis zu 1 von 1.000 Behandelten </td>
+                                    <td>
+                                        Leberversagen, Leberentzündung (Hepatitis - hepatozellulär oder
+                                        cholestatisch,
+                                        einschließlich hepatische Nekrose), Gelbsucht. </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                        <div class="hidden-sm hidden-md hidden-lg">
+                            <div class="row content_header">
+                                <h3> Häufigkeit der Nebenwirkungen </h3>
+                                <hr>
+                            </div>
+                            <div>
+                                <div class="row p15" id="selten-xs">
+                                    <h4> Selten</h4>
+                                    <div class="row">
+                                        <b>Anzahl der betreffenden Behandelten:</b> <br> Mehr als 1
+                                        von 1000 Behandelten
+                                    </div>
+                                    <div class="row">
+                                        <b>Nebenwirkung:</b> <br>
+                                        Leberversagen, Leberentzündung (Hepatitis - hepatozellulär oder
+                                        cholestatisch,
+                                        einschließlich hepatische Nekrose), Gelbsucht.
+                                    </div>
+                                    <hr>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading head_panel" role="tab" id="nebenhead7">
+                    <h4 class="panel-title text-center-xs" data-toggle="collapse" data-target="#neben7">
+                        Erkrankungen der Haut und des Unterhautzellgewebes
+                    </h4>
+                </div>
+                <div id="neben7" class="panel-collapse collapse" role="tabpanel" aria-labelledby="nebenhead7">
+                    <div class="panel-body">
+                        <table class="sideffect_table hidden-xs">
+                            <thead>
+                                <tr>
+                                    <th>Häufigkeit</th>
+                                    <th style="width: 25%;">Anzahl der betreffenden Behandelten</th>
+                                    <th>Nebenwirkung</th>
+                                </tr>
+                            </thead>
+                            <tbody class="" style="padding: 15px;">
+
+                                <tr id="haeufig">
+                                    <td>Häufig</td>
+                                    <td>Mehr als 1 von 10 Behandelten </td>
+                                    <td>
+                                        Ausschlag, Überempfindlichkeit/Gewebeschwellung (angioneurotisches Ödem):
+                                        angioneurotische Ödeme mit Beteiligung von Gesicht, Gliedmaßen, Lippen,
+                                        Zunge,
+                                        Stimmapparat des Kehlkopfes (Glottis) und/oder Kehlkopf wurden beobachtet.
+                                    </td>
+                                </tr>
+                                <tr id="gelegentlich">
+                                    <td>Gelegentlich</td>
+                                    <td>Bis zu 1 von 100 Behandelten</td>
+                                    <td>
+                                        Vermehrtes Schwitzen, Juckreiz, Nesselsucht, Haarausfall. Selten:
+                                        Schwerwiegende
+                                        Hautreaktionen (Erythema multiforme, Stevens-Johnson-Syndrom, exfoliative
+                                        Dermatitis, toxische epidermale Nekrolyse, Pemphigus, Erythroderma).
+                                    </td>
+                                </tr>
+                                <tr id="nichtbekannt">
+                                    <td>Nicht Bekannt</td>
+                                    <td>Häufigkeit auf Grundlage der verfügbaren Daten nicht abschätzbar</td>
+                                    <td>
+                                        Ein Symptomenkomplex wurde beschrieben, der mit einigen oder allen der
+                                        folgenden
+                                        Nebenwirkungen einhergehen kann: Fieber, Entzündung seröser Häute
+                                        (Serositis),
+                                        Gefäßentzündung (Vaskulitis), Muskel- und Gelenkschmerzen/Muskel- und
+                                        Gelenkentzündungen (Myalgien/Myositis, Arthralgien/Arthritis) und bestimmten
+                                        Laborwertveränderungen (positive ANA-Titer, erhöhte
+                                        Blutkörperchensenkungsgeschwindigkeit, Eosinophilie und Leukozytose).
+                                        Hautausschlag, Lichtempfindlichkeit oder andere Reaktionen der Haut können
+                                        auftreten.
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                        <div class="hidden-sm hidden-md hidden-lg">
+                            <div class="row content_header">
+                                <h3> Häufigkeit der Nebenwirkungen </h3>
+                                <hr>
+                            </div>
+                            <div>
+
+                                <div class="row p15" id="haeufig-xs">
+                                    <h4> Häufig</h4>
+                                    <div class="row">
+                                        <b>Anzahl der betreffenden Behandelten:</b> <br> Mehr als 1
+                                        von 10 Behandelten
+                                    </div>
+                                    <div class="row">
+                                        <b>Nebenwirkung:</b> <br>
+                                        Ausschlag, Überempfindlichkeit/Gewebeschwellung (angioneurotisches Ödem):
+                                        angioneurotische Ödeme mit Beteiligung von Gesicht, Gliedmaßen, Lippen,
+                                        Zunge,
+                                        Stimmapparat des Kehlkopfes (Glottis) und/oder Kehlkopf wurden beobachtet.
+                                    </div>
+                                    <hr>
+                                </div>
+                                <div class="row p15" id="gelegentlich-xs">
+                                    <h4> Gelegentlich</h4>
+                                    <div class="row">
+                                        <b>Anzahl der betreffenden Behandelten:</b> <br> Mehr als 1
+                                        von 100 Behandelten
+                                    </div>
+                                    <div class="row">
+                                        <b>Nebenwirkung:</b> <br>
+                                        Vermehrtes Schwitzen, Juckreiz, Nesselsucht, Haarausfall. Selten:
+                                        Schwerwiegende
+                                        Hautreaktionen (Erythema multiforme, Stevens-Johnson-Syndrom, exfoliative
+                                        Dermatitis, toxische epidermale Nekrolyse, Pemphigus, Erythroderma).
+                                    </div>
+                                    <hr>
+                                </div>
+                                <div class="row p15" id="nichtbekannt">
+                                    <h4> Nicht bekannt</h4>
+                                    <div class="row">
+                                        <b>Anzahl der betreffenden Behandelten:</b> <br> Mehr als 1 von 100
+                                        Behandelten
+                                    </div>
+                                    <div class="row">
+                                        <b>Nebenwirkung:</b> <br>
+                                        Ein Symptomenkomplex wurde beschrieben, der mit einigen oder allen der
+                                        folgenden
+                                        Nebenwirkungen einhergehen kann: Fieber, Entzündung seröser Häute
+                                        (Serositis),
+                                        Gefäßentzündung (Vaskulitis), Muskel- und Gelenkschmerzen/Muskel- und
+                                        Gelenkentzündungen (Myalgien/Myositis, Arthralgien/Arthritis) und bestimmten
+                                        Laborwertveränderungen (positive ANA-Titer, erhöhte
+                                        Blutkörperchensenkungsgeschwindigkeit, Eosinophilie und Leukozytose).
+                                        Hautausschlag, Lichtempfindlichkeit oder andere Reaktionen der Haut können
+                                        auftreten.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading head_panel" role="tab" id="nebenhead8">
+                    <h4 class="panel-title text-center-xs" data-toggle="collapse" data-target="#neben8">
+                        Erkrankungen der Nieren und Harnwege
+                    </h4>
+                </div>
+                <div id="neben8" class="panel-collapse collapse" role="tabpanel" aria-labelledby="nebenhead8">
+                    <div class="panel-body">
+                        <table class="sideffect_table hidden-xs">
+                            <thead>
+                                <tr>
+                                    <th>Häufigkeit</th>
+                                    <th style="width: 25%;">Anzahl der betreffenden Behandelten</th>
+                                    <th>Nebenwirkung</th>
+                                </tr>
+                            </thead>
+                            <tbody class="" style="padding: 15px;">
+
+                                <tr id="gelegentlich">
+                                    <td>Gelegentlich</td>
+                                    <td>Bis zu 1 von 100 Behandelten</td>
+                                    <td>
+                                        Nierenfunktionsstörungen, Nierenversagen, vermehrte Eiweißausscheidung im
+                                        Urin
+                                        (Proteinurie).
+                                    </td>
+                                </tr>
+                                <tr id="selten">
+                                    <td>Selten</td>
+                                    <td> Bis zu 1 von 1.000 Behandelten </td>
+                                    <td>
+                                        Verminderte Harnausscheidung </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                        <div class="hidden-sm hidden-md hidden-lg">
+                            <div class="row content_header">
+                                <h3> Häufigkeit der Nebenwirkungen </h3>
+                                <hr>
+                            </div>
+                            <div>
+
+                                <div class="row p15" id="gelegentlich-xs">
+                                    <h4> Gelegentlich</h4>
+                                    <div class="row">
+                                        <b>Anzahl der betreffenden Behandelten:</b> <br> Mehr als 1
+                                        von 100 Behandelten
+                                    </div>
+                                    <div class="row">
+                                        <b>Nebenwirkung:</b> <br>
+                                        Nierenfunktionsstörungen, Nierenversagen, vermehrte Eiweißausscheidung im
+                                        Urin
+                                        (Proteinurie).
+                                    </div>
+                                    <hr>
+                                </div>
+                                <div class="row p15" id="selten-xs">
+                                    <h4> Selten</h4>
+                                    <div class="row">
+                                        <b>Anzahl der betreffenden Behandelten:</b> <br> Mehr als 1
+                                        von 1000 Behandelten
+                                    </div>
+                                    <div class="row">
+                                        <b>Nebenwirkung:</b> <br>
+                                        Verminderte Harnausscheidung
+                                    </div>
+                                    <hr>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading head_panel" role="tab" id="nebenhead9">
+                    <h4 class="panel-title text-center-xs" data-toggle="collapse" data-target="#neben9">
+                        Erkrankungen der Geschlechtsorgane und der Brustdrüse
+                    </h4>
+                </div>
+                <div id="neben9" class="panel-collapse collapse" role="tabpanel" aria-labelledby="nebenhead9">
+                    <div class="panel-body">
+                        <table class="sideffect_table hidden-xs">
+                            <thead>
+                                <tr>
+                                    <th>Häufigkeit</th>
+                                    <th style="width: 25%;">Anzahl der betreffenden Behandelten</th>
+                                    <th>Nebenwirkung</th>
+                                </tr>
+                            </thead>
+                            <tbody class="" style="padding: 15px;">
+
+                                <tr id="gelegentlich">
+                                    <td>Gelegentlich</td>
+                                    <td>Bis zu 1 von 100 Behandelten</td>
+                                    <td>
+                                        Impotenz
+                                    </td>
+                                </tr>
+                                <tr id="selten">
+                                    <td>Selten</td>
+                                    <td> Bis zu 1 von 1.000 Behandelten </td>
+                                    <td>Vergrößerung der Brust bei Männern (Gynäkomastie). </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                        <div class="hidden-sm hidden-md hidden-lg">
+                            <div class="row content_header">
+                                <h3> Häufigkeit der Nebenwirkungen </h3>
+                                <hr>
+                            </div>
+                            <div>
+                                <div class="row p15" id="gelegentlich-xs">
+                                    <h4> Gelegentlich</h4>
+                                    <div class="row">
+                                        <b>Anzahl der betreffenden Behandelten:</b> <br> Mehr als 1
+                                        von 100 Behandelten
+                                    </div>
+                                    <div class="row">
+                                        <b>Nebenwirkung:</b> <br>
+                                        Impotenz
+                                    </div>
+                                    <hr>
+                                </div>
+                                <div class="row p15" id="selten-xs">
+                                    <h4> Selten</h4>
+                                    <div class="row">
+                                        <b>Anzahl der betreffenden Behandelten:</b> <br> Mehr als 1
+                                        von 1000 Behandelten
+                                    </div>
+                                    <div class="row">
+                                        <b>Nebenwirkung:</b> <br>
+                                        Vergrößerung der Brust bei Männern (Gynäkomastie). </div>
+                                    <hr>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading head_panel" role="tab" id="nebenhead10">
+                    <h4 class="panel-title text-center-xs" data-toggle="collapse" data-target="#neben10">
+                        Allgemeine Erkrankungen und Beschwerden am Verabreichungsort
+                    </h4>
+                </div>
+                <div id="neben10" class="panel-collapse collapse" role="tabpanel" aria-labelledby="nebenhead10">
+                    <div class="panel-body">
+                        <table class="sideffect_table hidden-xs">
+                            <thead>
+                                <tr>
+                                    <th>Häufigkeit</th>
+                                    <th style="width: 25%;">Anzahl der betreffenden Behandelten</th>
+                                    <th>Nebenwirkung</th>
+                                </tr>
+                            </thead>
+                            <tbody class="" style="padding: 15px;">
+                                <tr id="sehrhaeufig">
+                                    <td>Sehr häufig</td>
+                                    <td>Mehr als 1 von 10 Behandelten</td>
+                                    <td>Schwächegefühl
+                                    </td>
+                                </tr>
+                                <tr id="haeufig">
+                                    <td>Häufig</td>
+                                    <td>Mehr als 1 von 10 Behandelten </td>
+                                    <td>
+                                        Müdigkeit
+                                    </td>
+                                </tr>
+                                <tr id="gelegentlich">
+                                    <td>Gelegentlich</td>
+                                    <td>Bis zu 1 von 100 Behandelten</td>
+                                    <td>
+                                        Muskelkrämpfe, Gesichtsrötung (Flush), Ohrgeräusche (Tinnitus), Unwohlsein,
+                                        Fieber.
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                        <div class="hidden-sm hidden-md hidden-lg">
+                            <div class="row content_header">
+                                <h3> Häufigkeit der Nebenwirkungen </h3>
+                                <hr>
+                            </div>
+                            <div>
+                                <div class="row p15" id="sehrhaeufig-xs">
+                                    <h4> Sehr häufig</h4>
+                                    <div class="row">
+                                        <b>Anzahl der betreffenden Behandelten:</b> <br> Mehr als 1
+                                        von 10 Behandelten
+                                    </div>
+                                    <div class="row">
+                                        <b>Nebenwirkung:</b> <br>Schwächegefühl
+                                    </div>
+                                    <hr>
+                                </div>
+                                <div class="row p15" id="haeufig-xs">
+                                    <h4> Häufig</h4>
+                                    <div class="row">
+                                        <b>Anzahl der betreffenden Behandelten:</b> <br> Mehr als 1
+                                        von 10 Behandelten
+                                    </div>
+                                    <div class="row">
+                                        <b>Nebenwirkung:</b> <br>
+                                        Müdigkeit
+                                    </div>
+                                    <hr>
+                                </div>
+                                <div class="row p15" id="gelegentlich-xs">
+                                    <h4> Gelegentlich</h4>
+                                    <div class="row">
+                                        <b>Anzahl der betreffenden Behandelten:</b> <br> Mehr als 1
+                                        von 100 Behandelten
+                                    </div>
+                                    <div class="row">
+                                        <b>Nebenwirkung:</b> <br>
+                                        Muskelkrämpfe, Gesichtsrötung (Flush), Ohrgeräusche (Tinnitus), Unwohlsein,
+                                        Fieber. </div>
+                                    <hr>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading head_panel" role="tab" id="nebenhead11">
+                    <h4 class="panel-title text-center-xs" data-toggle="collapse" data-target="#neben11">
+                        Untersuchungen
+                    </h4>
+                </div>
+                <div id="neben11" class="panel-collapse collapse" role="tabpanel" aria-labelledby="nebenhead11">
+                    <div class="panel-body">
+                        <table class="sideffect_table hidden-xs">
+                            <thead>
+                                <tr>
+                                    <th>Häufigkeit</th>
+                                    <th style="width: 25%;">Anzahl der betreffenden Behandelten</th>
+                                    <th>Nebenwirkung</th>
+                                </tr>
+                            </thead>
+                            <tbody class="" style="padding: 15px;">
+
+                                <tr id="haeufig">
+                                    <td>Häufig</td>
+                                    <td>Mehr als 1 von 10 Behandelten </td>
+                                    <td>
+                                        Anstieg der Kaliumwerte im Blut, Anstieg der Kreatininwerte im Blut.
+                                    </td>
+                                </tr>
+                                <tr id="gelegentlich">
+                                    <td>Gelegentlich</td>
+                                    <td>Bis zu 1 von 100 Behandelten</td>
+                                    <td>
+                                        Anstieg des Harnstoffs im Blut, Abnahme der Natriumwerte im Blut.
+                                    </td>
+                                </tr>
+                                <tr id="selten">
+                                    <td>Selten</td>
+                                    <td> Bis zu 1 von 1.000 Behandelten </td>
+                                    <td>
+                                        Erhöhte Leberwerte (Leberenzyme, Serum-Bilirubin).</td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                        <div class="hidden-sm hidden-md hidden-lg">
+                            <div class="row content_header">
+                                <h3> Häufigkeit der Nebenwirkungen </h3>
+                                <hr>
+                            </div>
+                            <div>
+
+                                <div class="row p15" id="haeufig-xs">
+                                    <h4> Häufig</h4>
+                                    <div class="row">
+                                        <b>Anzahl der betreffenden Behandelten:</b> <br> Mehr als 1
+                                        von 10 Behandelten
+                                    </div>
+                                    <div class="row">
+                                        <b>Nebenwirkung:</b> <br>
+                                        Anstieg der Kaliumwerte im Blut, Anstieg der Kreatininwerte im Blut.
+                                    </div>
+                                    <hr>
+                                </div>
+                                <div class="row p15" id="gelegentlich-xs">
+                                    <h4> Gelegentlich</h4>
+                                    <div class="row">
+                                        <b>Anzahl der betreffenden Behandelten:</b> <br> Mehr als 1
+                                        von 100 Behandelten
+                                    </div>
+                                    <div class="row">
+                                        <b>Nebenwirkung:</b> <br>
+                                        Anstieg des Harnstoffs im Blut, Abnahme der Natriumwerte im Blut.
+                                    </div>
+                                    <hr>
+                                </div>
+                                <div class="row p15" id="selten-xs">
+                                    <h4> Selten</h4>
+                                    <div class="row">
+                                        <b>Anzahl der betreffenden Behandelten:</b> <br> Mehr als 1
+                                        von 1000 Behandelten
+                                    </div>
+                                    <div class="row">
+                                        <b>Nebenwirkung:</b> <br>
+                                        Erhöhte Leberwerte (Leberenzyme, Serum-Bilirubin).
+                                    </div>
+                                    <hr>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="row">
+    <div class="alert alert-info" style="margin-top: 40px;">
+        <h4>Gegenmaßnahmen</h4>
+        <ul>
+            <li><b>Schwerwiegende Hautreaktion</b> <br>
+                Falls Sie den Verdacht haben, dass sich bei Ihnen eine schwerwiegende Hautreaktion entwickelt, müssen
+                Sie sofort
+                Ihren Arzt aufsuchen und gegebenenfalls die Behandlung mit Enalapril AL 5mg abbrechen.
+            </li>
+            <li>
+                <b>Gewebeschwellung</b> <br>
+                Eine Gewebeschwellung (angioneurotisches Ödem) mit Beteiligung von Kehlkopf, Stimmapparat des Kehlkopfes
+                und/oder Zunge muss von Ihrem
+                Arzt sofort mit Notfallmedikamenten behandelt werden.
+            </li>
+            <li><b>Gelbsucht</b> <br>
+                Wenn bei Ihnen eine Gelbsucht auftritt oder die
+                Leberenzymwerte bei Ihnen deutlich ansteigen, müssen Sie die Behandlung abbrechen, und Ihr Arzt wird Sie
+                überwachen.
+            </li>
+            <li><b>Fieber, Lymphknotenschwellungen und/oder Halsentzündung</b> <br>
+                Beim Auftreten von Fieber, Lymphknotenschwellungen und/oder Halsentzündung benachrichtigen Sie bitte
+                umgehend Ihren Arzt, damit er das weiße Blutbild untersuchen kann.
+            </li>
+            <li><b>Sonstige</b><br>
+                Sollten Sie die oben genannten Nebenwirkungen
+                bei sich beobachten, benachrichtigen Sie Ihren Arzt. Er wird über den Schweregrad und gegebenenfalls
+                über
+                erforderliche weitere Maßnahmen entscheiden.
+            </li>
+        </ul>
+    </div>
+</div>
+',13,6);
+INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (113,0,'Beispieltext',13,7);
+INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (114,0,'
+<!-- Allgemein -->
+<div class="row" style="padding-left: 15px;">
+    Enalapril AL enthält den Wirkstoff Enalaprilmaleat. Dieser Wirkstoff gehört zu der Klasse der ACE
+    (Angiotensin-ConvertingEnzyme)-Hemmer genannten Arzneimittel.
+</div>
+<div class="row" style="padding-left: 15px;">
+    Enalapril AL wird angewendet
+    <ul>
+        <li> zur Behandlung von Bluthochdruck (Hypertonie).
+        </li>
+        <li> zur Behandlung der Herzleistungsschwäche (Herzinsuffizienz). Es kann die Notwendigkeit von
+            Krankenhauseinweisungen verringern und bei einigen Patienten lebensverlängernd wirken.
+        </li>
+        <li> zur Vorbeugung der Entwicklung von Krankheitszeichen einer Herzleistungs-schwäche. Zu diesen wahrnehmbaren
+            Krankheitszeichen gehören Kurzatmigkeit,
+            Ermüdung bereits nach leichter körperlicher Betätigung wie Gehen, oder Schwellungen an Knöcheln und Füßen.
+        </li>
+    </ul>
+</div>
+<div class="row" style="padding:0 0 0 15px;">
+    Enalapril AL wirkt über eine Erweiterung der Blutgefäße. Das senkt Ihren Blutdruck. Das Arzneimittel beginnt
+    normalerweise innerhalb einer Stunde zu wirken und seine Wirkung dauert mindestens 24 Stunden lang an. Einige
+    Patienten benötigen eine Behandlung von mehreren Wochen, bis die beste Wirkung auf den Blutdruck zu beobachten ist.
+</div>
+',13,8);
+INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (115,0,'
+<div class="row">Was Enalapril AL 5mg enthält:
+    Der Wirkstoff ist: Enalaprilmaleat. Jede Tablette enthält 5 mg Enalaprilmaleat.
+
+    Die sonstigen Bestandteile sind: Croscarmellose-Natrium, Lactose-Monohydrat, Magnesiumstearat (Ph. Eur.),
+    vorverkleisterte Maisstärke, Natriumhydrogencarbonat.
+</div>
+<div class="row">Enalapril AL 5mg sind runde flache weiße Tabletten mit beidseitiger Bruchkerbe.
+
+    Enalapril AL 5mg ist in Packungen mit 30, 50 und 100 Tabletten erhältlich.
+
+    Es werden möglicherweise nicht alle Packungsgrößen in den Verkehr gebracht.
+</div>
+',13,9);
 -- Dump tailored_text
 
 INSERT INTO tailored_text (id, idgender, iddrug, min_age, max_age, text) VALUES (1, 1, 1, 16, 30, 'Hey %firstname% %lastname%, Hier steht eine wichtige Information für Männer im Alter von %age% Jahren, die sich für dieses Medikament interessieren.<br />2 mal täglich einnehmen<br />1 Tablette morgens gegen 9:00<br />1 Tablette am Abend gegen 20:00');

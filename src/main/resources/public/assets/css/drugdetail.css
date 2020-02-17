@@ -141,6 +141,10 @@
     margin-right: 20px;
 }
 
+.bg_orange{
+    background-color: #ffc992b5 !important;
+}
+
 .sideffect_table td, th {
     border: solid 1px;
     padding: 10px;
@@ -159,6 +163,11 @@
 
 .content_header h3 {
     font-size: 21px;
+    margin-bottom: 15px;
+}
+
+.content_header h4 {
+    font-size: 16px;
     margin-bottom: 15px;
 }
 
@@ -328,8 +337,33 @@
 }
 
 
+/* Nebenwirkung */
+
+#sehrhaeufig, #sehrhaeufig-xs {
+    background-color: #87fb87;
+}
+
+#haeufig, #haeufig-xs {
+    background-color: #87fb87;
+}
+
+#gelegentlich, #gelegentlich-xs {
+    background-color: #ffff8f;
+}
+
+#selten, #selten-xs {
+    background-color: #ffc6c6;
+}
+
+#sehrselten, #sehrselten-xs {
+    background-color: #ffc6c6;
+}
+
+#nichtbekannt, #nichtbekannt-xs {
+    background-color: #e4e4e4;
+}
+
 .gradient {
-    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#77ff8c+18,ffea4f+50,ff4c4c+100 */
     background: #77ff8c; /* Old browsers */
     background: -moz-linear-gradient(top, #77ff8c75 18%, #ffea4fcc 25%, #ff4c4c8c 100%); /* FF3.6-15 */
     background: -webkit-linear-gradient(top, #77ff8c75 18%, #ffea4fcc 25%, #ff4c4c8c 100%); /* Chrome10-25,Safari5.1-6 */
@@ -345,7 +379,11 @@
     padding: 15px;
 }
 
-
+.bolt_grey {
+    color: #9e9e9e;
+    font-size: 65px;
+    padding: 0px 15px;
+}
 .panel-title {
     position: relative;
     cursor: pointer;
@@ -372,6 +410,15 @@
 
 .panel-title[aria-expanded="true"]::after {
     content: "\f106";
+}
+
+.usage_tab{
+    width: 65%;
+}
+
+.usage_tab1{
+    width: 80%;
+    margin-top: 12px;
 }
 
 @media screen and (max-width: 480px) {
