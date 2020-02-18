@@ -42995,9 +42995,7 @@ var MenueItem = function (_React$Component) {
 				null,
 				_react2.default.createElement(
 					_reactRouterDom.Link,
-					{ onClick: function onClick() {
-							return window.location.reload(false);
-						}, to: this.props.to, "data-toggle": "collapse", "data-target": ".nav-collapse" },
+					{ to: this.props.to, "data-toggle": "collapse", "data-target": ".nav-collapse" },
 					t(this.props.title)
 				)
 			);
@@ -43180,6 +43178,14 @@ var Navigation = function (_React$Component) {
         key: "updateNavigation",
         value: function updateNavigation() {
             this.forceUpdate();
+        }
+    }, {
+        key: "componentDidMount",
+        value: function componentDidMount() {
+            $('.nav a').on('click', function () {
+                $(".btn-navbar").click(); //bootstrap 2.x
+                $(".navbar-toggle").click(); //bootstrap 3.x by Richard
+            });
         }
     }, {
         key: "render",
@@ -44242,7 +44248,7 @@ exports.default = (0, _reactI18next.translate)()(UserData);
 
 
 Object.defineProperty(exports, "__esModule", {
-	value: true
+    value: true
 });
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -44268,138 +44274,124 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 var UserMenue = function (_React$Component) {
-	_inherits(UserMenue, _React$Component);
+    _inherits(UserMenue, _React$Component);
 
-	function UserMenue(props) {
-		_classCallCheck(this, UserMenue);
+    function UserMenue(props) {
+        _classCallCheck(this, UserMenue);
 
-		var _this = _possibleConstructorReturn(this, (UserMenue.__proto__ || Object.getPrototypeOf(UserMenue)).call(this, props));
+        var _this = _possibleConstructorReturn(this, (UserMenue.__proto__ || Object.getPrototypeOf(UserMenue)).call(this, props));
 
-		_this.status = {
-			show: false
-		};
+        _this.status = {
+            show: false
+        };
 
-		_this.toggleShow = _this.toggleShow.bind(_this);
-		return _this;
-	}
+        _this.toggleShow = _this.toggleShow.bind(_this);
+        return _this;
+    }
 
-	_createClass(UserMenue, [{
-		key: "toggleShow",
-		value: function toggleShow(event) {
-			this.status.show = !this.status.show;
-			this.setState(this.status);
-		}
-	}, {
-		key: "render",
-		value: function render() {
-			var t = this.props.t;
+    _createClass(UserMenue, [{
+        key: "toggleShow",
+        value: function toggleShow(event) {
+            this.status.show = !this.status.show;
+            this.setState(this.status);
+        }
+    }, {
+        key: "render",
+        value: function render() {
+            var t = this.props.t;
 
-			var show = this.status.show;
+            var show = this.status.show;
 
-			var menue = null;
-			if (_User2.default.isAuthenticated()) {
-				menue = _react2.default.createElement(
-					"ul",
-					{ className: "nav navbar-nav navbar-right", onClick: this.toggleShow },
-					_react2.default.createElement(
-						"li",
-						{ className: "dropdown open" },
-						_react2.default.createElement(
-							"a",
-							{ className: "dropdown-toggle" },
-							_react2.default.createElement("span", { className: "glyphicon glyphicon-user" }),
-							" ",
-							_User2.default.firstname,
-							" ",
-							_User2.default.lastname
-						),
-						show && _react2.default.createElement(
-							"ul",
-							{ className: "dropdown-menu" },
-							_react2.default.createElement(
-								"li",
-								null,
-								_react2.default.createElement(
-									_reactRouterDom.Link,
-									{ to: "/drug/taking" },
-									t('userDrugs')
-								)
-							),
-							_react2.default.createElement(
-								"li",
-								null,
-								_react2.default.createElement(
-									_reactRouterDom.Link,
-									{ to: "/drug/remember" },
-									t('rememberedDrugs')
-								)
-							),
-							_react2.default.createElement(
-								"li",
-								null,
-								_react2.default.createElement(
-									_reactRouterDom.Link,
-									{ to: "/user/data" },
-									t('userData')
-								)
-							),
-							_react2.default.createElement(
-								"li",
-								null,
-								_react2.default.createElement(
-									_reactRouterDom.Link,
-									{ to: "/user/login" },
-									t('logout')
-								)
-							)
-						)
-					)
-				);
-			} else {
-				menue = _react2.default.createElement(
-					"ul",
-					{ className: "nav navbar-nav navbar-right", onClick: this.toggleShow },
-					_react2.default.createElement(
-						"li",
-						{ className: "dropdown open" },
-						_react2.default.createElement(
-							"a",
-							{ className: "dropdown-toggle" },
-							t('login'),
-							"/",
-							t('register')
-						),
-						show && _react2.default.createElement(
-							"ul",
-							{ className: "dropdown-menu" },
-							_react2.default.createElement(
-								"li",
-								null,
-								_react2.default.createElement(
-									_reactRouterDom.Link,
-									{ to: "/user/login" },
-									t('login')
-								)
-							),
-							_react2.default.createElement(
-								"li",
-								null,
-								_react2.default.createElement(
-									_reactRouterDom.Link,
-									{ to: "/user/register" },
-									t('register')
-								)
-							)
-						)
-					)
-				);
-			}
+            var menue = null;
+            if (_User2.default.isAuthenticated()) {
+                menue = _react2.default.createElement(
+                    "ul",
+                    { className: "nav navbar-nav navbar-right", onClick: this.toggleShow },
+                    _react2.default.createElement(
+                        "li",
+                        { className: "dropdown open" },
+                        _react2.default.createElement(
+                            "a",
+                            { className: "dropdown-toggle" },
+                            _react2.default.createElement("span", {
+                                className: "glyphicon glyphicon-user" }),
+                            " ",
+                            _User2.default.firstname,
+                            " ",
+                            _User2.default.lastname
+                        ),
+                        show && _react2.default.createElement(
+                            "ul",
+                            { className: "dropdown-menu" },
+                            _react2.default.createElement(
+                                "li",
+                                null,
+                                _react2.default.createElement(
+                                    _reactRouterDom.Link,
+                                    { to: "/drug/taking" },
+                                    t('userDrugs')
+                                )
+                            ),
+                            _react2.default.createElement(
+                                "li",
+                                null,
+                                _react2.default.createElement(
+                                    _reactRouterDom.Link,
+                                    { to: "/drug/remember" },
+                                    t('rememberedDrugs')
+                                )
+                            ),
+                            _react2.default.createElement(
+                                "li",
+                                null,
+                                _react2.default.createElement(
+                                    _reactRouterDom.Link,
+                                    { to: "/user/data" },
+                                    t('userData')
+                                )
+                            ),
+                            _react2.default.createElement(
+                                "li",
+                                null,
+                                _react2.default.createElement(
+                                    _reactRouterDom.Link,
+                                    { to: "/user/login" },
+                                    t('logout')
+                                )
+                            )
+                        )
+                    )
+                );
+            } else {
+                menue = _react2.default.createElement(
+                    "ul",
+                    { className: "nav navbar-nav navbar-right", onClick: this.toggleShow },
+                    _react2.default.createElement(
+                        "li",
+                        null,
+                        _react2.default.createElement(
+                            _reactRouterDom.Link,
+                            { to: "/user/login" },
+                            t('login')
+                        )
+                    ),
+                    _react2.default.createElement(
+                        "li",
+                        null,
+                        _react2.default.createElement(
+                            _reactRouterDom.Link,
+                            { to: "/user/register" },
+                            t('register')
+                        )
+                    )
+                );
+            }
 
-			return menue;
-		}
-	}]);
+            return menue;
+        }
+    }]);
 
-	return UserMenue;
+    return UserMenue;
 }(_react2.default.Component);
 
 exports.default = (0, _reactI18next.translate)()(UserMenue);

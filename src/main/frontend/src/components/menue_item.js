@@ -9,7 +9,7 @@ class MenueItem extends React.Component {
 	  render() {
 	    const {t} = this.props;
 	    return (
-	    		<li><Link onClick={() => window.location.reload(false)} to={this.props.to} data-toggle="collapse" data-target=".nav-collapse">{t(this.props.title)}</Link></li>
+	    		<li><Link to={this.props.to} data-toggle="collapse" data-target=".nav-collapse">{t(this.props.title)}</Link></li>
 	    );
 	  }
 	}

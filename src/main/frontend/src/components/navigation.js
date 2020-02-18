@@ -24,6 +24,13 @@ class Navigation extends React.Component {
         this.forceUpdate();
     }
 
+    componentDidMount() {
+        $('.nav a').on('click', function () {
+            $(".btn-navbar").click(); //bootstrap 2.x
+            $(".navbar-toggle").click(); //bootstrap 3.x by Richard
+        });
+    }
+
     render() {
         const {t} = this.props;
 
@@ -53,18 +60,17 @@ class Navigation extends React.Component {
                         </div>
                         <div className="collapse navbar-collapse" id="myNavbar">
                             <ul className="nav navbar-nav">
-                                <MenueItem  title="about" to="/about"/>
-                                <MenueItem  title="drugs" to="/drug/list"/>
-                        </ul>
-                        <UserMenue/>
+                                <MenueItem title="about" to="/about"/>
+                                <MenueItem title="drugs" to="/drug/list"/>
+                            </ul>
+                            <UserMenue/>
+                        </div>
                     </div>
+                </nav>
             </div>
-    </nav>
-    <
-        /div>
 
-    )
-        ;
+        )
+            ;
     }
 }
 
