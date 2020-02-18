@@ -40,30 +40,31 @@ class Navigation extends React.Component {
                         </div>
                     </div>
                 </div>
+
                 <nav className="navbar navbar-default">
                     <div className="container">
                         <div className="navbar-header">
-                            <button type="button" className="navbar-toggle collapsed" data-toggle="collapse"
-                                    data-target="#navbar" aria-expanded="false">
+                            <button type="button" className="navbar-toggle" data-toggle="collapse"
+                                    data-target="#myNavbar">
                                 <span className="icon-bar"></span>
                                 <span className="icon-bar"></span>
                                 <span className="icon-bar"></span>
                             </button>
                         </div>
-                        <div id="navbar" className="collapse navbar-collapse">
+                        <div className="collapse navbar-collapse" id="myNavbar">
                             <ul className="nav navbar-nav">
-                                <MenueItem title="about" to="/about"/>
-                                <MenueItem title="drugs" to="/drug/list"/>
-                            </ul>
-
-
-                            <UserMenue/>
-                        </div>
+                                <MenueItem  title="about" to="/about"/>
+                                <MenueItem  title="drugs" to="/drug/list"/>
+                        </ul>
+                        <UserMenue/>
                     </div>
-                </nav>
             </div>
+    </nav>
+    <
+        /div>
 
-        );
+    )
+        ;
     }
 }
 

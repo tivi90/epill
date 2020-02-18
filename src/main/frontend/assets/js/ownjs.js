@@ -1,11 +1,9 @@
-$(window).scroll(function() {
+$(window).scroll(function () {
 
-    if ($(this).scrollTop()>40)
-    {
+    if ($(this).scrollTop() > 40) {
         $('.report-round-button').fadeOut();
-    }
-    else
-    {
+    } else {
         $('.report-round-button').fadeIn();
     }
 });
+

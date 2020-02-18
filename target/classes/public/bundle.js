@@ -40400,7 +40400,8 @@ var DrugDetail = function (_React$Component) {
             return drug.wordExplaination.map(function (section) {
                 return _react2.default.createElement(
                     "div",
-                    { key: section.id, className: "modal fade", id: section.name.toLowerCase().split(' ').join('_'), tabIndex: "-1", role: "dialog",
+                    { key: section.id, className: "modal fade", id: section.name.toLowerCase().split(' ').join('_'),
+                        tabIndex: "-1", role: "dialog",
                         "aria-hidden": "true" },
                     _react2.default.createElement(
                         "div",
@@ -41205,101 +41206,105 @@ var DrugDetail = function (_React$Component) {
                                             ),
                                             _react2.default.createElement(
                                                 "div",
-                                                { className: "col-sm-4 col-xs-6 text-center infopart" },
+                                                { className: "row" },
                                                 _react2.default.createElement(
                                                     "div",
-                                                    { "data-toggle": "modal",
-                                                        "data-target": "#drugform" },
-                                                    this.renderPharmaceuticalForm(drug)
-                                                )
-                                            ),
-                                            _react2.default.createElement(
-                                                "div",
-                                                { className: "modal fade", id: "drugform", tabIndex: "-1", role: "dialog",
-                                                    "aria-labelledby": "addressLabel",
-                                                    "aria-hidden": "true" },
-                                                _react2.default.createElement(
-                                                    "div",
-                                                    { className: "modal-dialog", role: "document" },
+                                                    { className: "col-sm-4 col-xs-6 text-center infopart" },
                                                     _react2.default.createElement(
                                                         "div",
-                                                        { className: "modal-content" },
-                                                        _react2.default.createElement(
-                                                            "div",
-                                                            { className: "modal-header" },
-                                                            _react2.default.createElement(
-                                                                "h2",
-                                                                null,
-                                                                "Inhalt und Darstellung des Medikaments"
-                                                            ),
-                                                            _react2.default.createElement(
-                                                                "button",
-                                                                { type: "button", className: "close",
-                                                                    "data-dismiss": "modal", "aria-label": "Close" },
-                                                                _react2.default.createElement(
-                                                                    "span",
-                                                                    { "aria-hidden": "true" },
-                                                                    "\xD7"
-                                                                )
-                                                            )
-                                                        ),
-                                                        _react2.default.createElement(
-                                                            "div",
-                                                            { className: "modal-body", style: { color: "black" } },
-                                                            _react2.default.createElement(
-                                                                "div",
-                                                                { className: "row" },
-                                                                _react2.default.createElement(
-                                                                    "div",
-                                                                    {
-                                                                        className: "col-sm-2" },
-                                                                    this.renderFormImg(drug)
-                                                                ),
-                                                                _react2.default.createElement(
-                                                                    "div",
-                                                                    { className: "col-sm-10" },
-                                                                    this.renderFormdesc(drug)
-                                                                )
-                                                            )
-                                                        ),
-                                                        _react2.default.createElement("span", {
-                                                            dangerouslySetInnerHTML: this.createMarkup(t("modal_close")) })
+                                                        { "data-toggle": "modal",
+                                                            "data-target": "#drugform" },
+                                                        this.renderPharmaceuticalForm(drug)
                                                     )
-                                                )
-                                            ),
-                                            _react2.default.createElement(
-                                                "div",
-                                                { className: "col-sm-4 col-xs-6 text-center infopart" },
-                                                this.renderDisease(drug)
-                                            ),
-                                            _react2.default.createElement(
-                                                "div",
-                                                { className: "col-sm-4 col-xs-6 text-center infopart" },
-                                                this.renderActiveSubstance(drug)
-                                            ),
-                                            showAdditionalInfo && _react2.default.createElement(
-                                                "div",
-                                                { className: "" },
+                                                ),
                                                 _react2.default.createElement(
                                                     "div",
-                                                    { className: "additional-information" },
+                                                    { className: "modal fade", id: "drugform", tabIndex: "-1", role: "dialog",
+                                                        "aria-labelledby": "addressLabel",
+                                                        "aria-hidden": "true" },
                                                     _react2.default.createElement(
-                                                        "section",
-                                                        null,
+                                                        "div",
+                                                        { className: "modal-dialog", role: "document" },
                                                         _react2.default.createElement(
                                                             "div",
-                                                            { className: "col-sm-4 col-xs-6 text-center infopart" },
-                                                            this.renderIndicationGroup(drug)
-                                                        ),
+                                                            { className: "modal-content" },
+                                                            _react2.default.createElement(
+                                                                "div",
+                                                                { className: "modal-header" },
+                                                                _react2.default.createElement(
+                                                                    "h2",
+                                                                    null,
+                                                                    "Inhalt und Darstellung des Medikaments"
+                                                                ),
+                                                                _react2.default.createElement(
+                                                                    "button",
+                                                                    { type: "button", className: "close",
+                                                                        "data-dismiss": "modal", "aria-label": "Close" },
+                                                                    _react2.default.createElement(
+                                                                        "span",
+                                                                        { "aria-hidden": "true" },
+                                                                        "\xD7"
+                                                                    )
+                                                                )
+                                                            ),
+                                                            _react2.default.createElement(
+                                                                "div",
+                                                                { className: "modal-body", style: { color: "black" } },
+                                                                _react2.default.createElement(
+                                                                    "div",
+                                                                    { className: "row" },
+                                                                    _react2.default.createElement(
+                                                                        "div",
+                                                                        {
+                                                                            className: "col-sm-2" },
+                                                                        this.renderFormImg(drug)
+                                                                    ),
+                                                                    _react2.default.createElement(
+                                                                        "div",
+                                                                        { className: "col-sm-10" },
+                                                                        this.renderFormdesc(drug)
+                                                                    )
+                                                                )
+                                                            ),
+                                                            _react2.default.createElement("span", {
+                                                                dangerouslySetInnerHTML: this.createMarkup(t("modal_close")) })
+                                                        )
+                                                    )
+                                                ),
+                                                _react2.default.createElement(
+                                                    "div",
+                                                    { className: "col-sm-4 col-xs-6 text-center infopart" },
+                                                    this.renderDisease(drug)
+                                                ),
+                                                _react2.default.createElement(
+                                                    "div",
+                                                    { className: "col-sm-4 col-xs-6 text-center infopart" },
+                                                    this.renderActiveSubstance(drug)
+                                                ),
+                                                showAdditionalInfo && _react2.default.createElement(
+                                                    "div",
+                                                    { className: "" },
+                                                    _react2.default.createElement(
+                                                        "div",
+                                                        { className: "additional-information" },
                                                         _react2.default.createElement(
-                                                            "div",
-                                                            { className: "col-sm-4 col-xs-6 text-center infopart" },
-                                                            this.renderProductGroup(drug)
-                                                        ),
-                                                        _react2.default.createElement(
-                                                            "div",
-                                                            { className: "col-sm-4 col-xs-6 text-center infopart" },
-                                                            this.renderPZN(drug)
+                                                            "section",
+                                                            null,
+                                                            _react2.default.createElement(
+                                                                "div",
+                                                                { className: "col-sm-4 col-xs-6 text-center infopart" },
+                                                                this.renderIndicationGroup(drug)
+                                                            ),
+                                                            _react2.default.createElement(
+                                                                "div",
+                                                                { className: "col-sm-4 col-xs-6 text-center infopart" },
+                                                                this.renderProductGroup(drug)
+                                                            ),
+                                                            _react2.default.createElement(
+                                                                "div",
+                                                                { className: "col-sm-4 col-xs-6 text-center infopart" },
+                                                                this.renderPZN(drug)
+                                                            )
                                                         )
                                                     )
                                                 )
@@ -42990,7 +42995,9 @@ var MenueItem = function (_React$Component) {
 				null,
 				_react2.default.createElement(
 					_reactRouterDom.Link,
-					{ to: this.props.to, "data-toggle": "collapse", "data-target": ".nav-collapse" },
+					{ onClick: function onClick() {
+							return window.location.reload(false);
+						}, to: this.props.to, "data-toggle": "collapse", "data-target": ".nav-collapse" },
 					t(this.props.title)
 				)
 			);
@@ -43212,8 +43219,8 @@ var Navigation = function (_React$Component) {
                             { className: "navbar-header" },
                             _react2.default.createElement(
                                 "button",
-                                { type: "button", className: "navbar-toggle collapsed", "data-toggle": "collapse",
-                                    "data-target": "#navbar", "aria-expanded": "false" },
+                                { type: "button", className: "navbar-toggle", "data-toggle": "collapse",
+                                    "data-target": "#myNavbar" },
                                 _react2.default.createElement("span", { className: "icon-bar" }),
                                 _react2.default.createElement("span", { className: "icon-bar" }),
                                 _react2.default.createElement("span", { className: "icon-bar" })
@@ -43221,7 +43228,7 @@ var Navigation = function (_React$Component) {
                         ),
                         _react2.default.createElement(
                             "div",
-                            { id: "navbar", className: "collapse navbar-collapse" },
+                            { className: "collapse navbar-collapse", id: "myNavbar" },
                             _react2.default.createElement(
                                 "ul",
                                 { className: "nav navbar-nav" },

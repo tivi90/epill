@@ -346,7 +346,8 @@ class DrugDetail extends React.Component {
         return drug.wordExplaination
             .map((section => {
                 return (
-                    <div key={section.id} className="modal fade" id={section.name.toLowerCase().split(' ').join('_')} tabIndex="-1" role="dialog"
+                    <div key={section.id} className="modal fade" id={section.name.toLowerCase().split(' ').join('_')}
+                         tabIndex="-1" role="dialog"
                          aria-hidden="true">
                         <div className="modal-dialog" role="document">
                             <div className="modal-content">
@@ -839,6 +840,7 @@ class DrugDetail extends React.Component {
                                                 {this.renderPackSecdesc(drug)}
 
                                             </div>
+                                            <div className="row">
                                             <div className="col-sm-4 col-xs-6 text-center infopart">
                                                 <div data-toggle="modal"
                                                      data-target="#drugform">
@@ -894,6 +896,8 @@ class DrugDetail extends React.Component {
                                                     </section>
                                                 </div>
                                             </div>}
+                                            </div>
+
                                             <div className="row text-center">
                                                 <p>
                                                     <a onClick={this.toggleShowAdditionalInfo}>
