@@ -40886,23 +40886,65 @@ var DrugDetail = function (_React$Component) {
             });
         }
     }, {
-        key: "renderSectionList",
-        value: function renderSectionList(drug) {
+        key: "renderPackSecpack",
+        value: function renderPackSecpack(drug) {
             var _this16 = this;
 
             if (!drug.packagingSection) {
                 return null;
             }
 
+            return drug.packagingSection.filter(function (section) {
+                return section.topic.id === 10;
+            }).map(function (section) {
+                return _react2.default.createElement(
+                    "p",
+                    { key: section.id },
+                    _react2.default.createElement("span", { dangerouslySetInnerHTML: _this16.createMarkup(section.text) })
+                );
+            }).reduce(function (prev, curr) {
+                return [prev, curr];
+            });
+        }
+    }, {
+        key: "renderPackSecMoreSub",
+        value: function renderPackSecMoreSub(drug) {
+            var _this17 = this;
+
+            if (!drug.packagingSection) {
+                return null;
+            }
+
+            return drug.packagingSection.filter(function (section) {
+                return section.topic.id === 11;
+            }).map(function (section) {
+                return _react2.default.createElement(
+                    "p",
+                    { key: section.id },
+                    _react2.default.createElement("span", { dangerouslySetInnerHTML: _this17.createMarkup(section.text) })
+                );
+            }).reduce(function (prev, curr) {
+                return [prev, curr];
+            });
+        }
+    }, {
+        key: "renderSectionList",
+        value: function renderSectionList(drug) {
+            var _this18 = this;
+
+            if (!drug.packagingSection) {
+                return null;
+            }
+
             return drug.packagingSection.map(function (section) {
-                return _react2.default.createElement(_accordion2.default, { section: section, toggleOriginalAndTailoredText: _this16.toggleOriginalAndTailoredText,
+                return _react2.default.createElement(_accordion2.default, { section: section, toggleOriginalAndTailoredText: _this18.toggleOriginalAndTailoredText,
                     key: section.id });
             });
         }
     }, {
         key: "render",
         value: function render() {
-            var _this17 = this;
+            var _this19 = this;
 
             var t = this.props.t;
 
@@ -41099,7 +41141,7 @@ var DrugDetail = function (_React$Component) {
                                         "button",
                                         { type: "button", className: "btn btn-like",
                                             onClick: function onClick() {
-                                                return _this17.toggleTaking(drug);
+                                                return _this19.toggleTaking(drug);
                                             } },
                                         _react2.default.createElement("span", {
                                             className: "glyphicon white" + (!drug.isTaken ? " glyphicon-heart" : " glyphicon-minus") })
@@ -41108,7 +41150,7 @@ var DrugDetail = function (_React$Component) {
                                         "button",
                                         { type: "button", className: "btn btn-add",
                                             onClick: function onClick() {
-                                                return _this17.toggleRemember(drug);
+                                                return _this19.toggleRemember(drug);
                                             } },
                                         _react2.default.createElement("span", {
                                             className: "glyphicon white" + (!drug.isRemembered ? " glyphicon-plus" : " glyphicon-minus") })
@@ -41394,13 +41436,30 @@ var DrugDetail = function (_React$Component) {
                                                                     _react2.default.createElement(
                                                                         "div",
                                                                         {
-                                                                            className: "col-sm-2" },
+                                                                            className: "col-sm-2 col-xs-12 xs-center" },
                                                                         this.renderFormImg(drug)
                                                                     ),
                                                                     _react2.default.createElement(
                                                                         "div",
-                                                                        { className: "col-sm-10" },
+                                                                        { className: "col-sm-10 col-xs-12 xs-center" },
                                                                         this.renderFormdesc(drug)
+                                                                    )
+                                                                ),
+                                                                _react2.default.createElement(
+                                                                    "div",
+                                                                    { className: "row" },
+                                                                    _react2.default.createElement(
+                                                                        "div",
+                                                                        {
+                                                                            className: "col-sm-2 col-xs-12 xs-center" },
+                                                                        _react2.default.createElement("i", {
+                                                                            className: "druf_pack_icon fas fa-prescription-bottle-alt" }),
+                                                                        " "
+                                                                    ),
+                                                                    _react2.default.createElement(
+                                                                        "div",
+                                                                        { className: "col-sm-10 col-xs-12 xs-center", style: { paddingTop: "10px" } },
+                                                                        this.renderPackSecpack(drug)
                                                                     )
                                                                 )
                                                             ),
@@ -41424,71 +41483,72 @@ var DrugDetail = function (_React$Component) {
                                                             "data-target": "#infosubstance" },
                                                         _react2.default.createElement("i", {
                                                             className: "fas fa-info-circle" })
-                                                    ),
+                                                    )
+                                                ),
+                                                _react2.default.createElement(
+                                                    "div",
+                                                    { className: "modal fade", id: "infosubstance", tabIndex: "-1",
+                                                        role: "dialog",
+                                                        "aria-labelledby": "addressLabel",
+                                                        "aria-hidden": "true" },
                                                     _react2.default.createElement(
                                                         "div",
-                                                        { className: "modal fade", id: "infosubstance", tabIndex: "-1",
-                                                            role: "dialog",
-                                                            "aria-labelledby": "addressLabel",
-                                                            "aria-hidden": "true" },
+                                                        { className: "modal-dialog", role: "document" },
                                                         _react2.default.createElement(
                                                             "div",
-                                                            { className: "modal-dialog", role: "document" },
+                                                            { className: "modal-content" },
                                                             _react2.default.createElement(
                                                                 "div",
-                                                                { className: "modal-content" },
+                                                                { className: "modal-header" },
+                                                                drug.activeSubstance.map(function (substance) {
+                                                                    return _react2.default.createElement(
+                                                                        "h2",
+                                                                        { key: substance.id },
+                                                                        " ",
+                                                                        _react2.default.createElement("img", { src: "./../../assets/images/lab.svg", className: "infopic", alt: "lab" }),
+                                                                        " ",
+                                                                        substance.name
+                                                                    );
+                                                                }).reduce(function (prev, curr) {
+                                                                    return [prev, ', ', curr];
+                                                                }),
                                                                 _react2.default.createElement(
-                                                                    "div",
-                                                                    { className: "modal-header" },
+                                                                    "button",
+                                                                    { type: "button", className: "close",
+                                                                        "data-dismiss": "modal",
+                                                                        "aria-label": "Close" },
+                                                                    _react2.default.createElement(
+                                                                        "span",
+                                                                        { "aria-hidden": "true" },
+                                                                        "\xD7"
+                                                                    )
+                                                                )
+                                                            ),
+                                                            _react2.default.createElement(
+                                                                "div",
+                                                                { className: "modal-body", style: { color: "black" } },
+                                                                _react2.default.createElement(
+                                                                    "span",
+                                                                    null,
+                                                                    " ",
                                                                     drug.activeSubstance.map(function (substance) {
                                                                         return _react2.default.createElement(
-                                                                            "h2",
+                                                                            "span",
                                                                             { key: substance.id },
-                                                                            " ",
-                                                                            _react2.default.createElement("img", { src: "./../../assets/images/lab.svg", className: "infopic", alt: "lab" }),
-                                                                            " ",
-                                                                            substance.name
+                                                                            substance.name,
+                                                                            " ist ein Arzneistoff aus der Gruppe der sogenannten ",
+                                                                            substance.substanceGroup.name,
+                                                                            "."
                                                                         );
                                                                     }).reduce(function (prev, curr) {
                                                                         return [prev, ', ', curr];
                                                                     }),
-                                                                    _react2.default.createElement(
-                                                                        "button",
-                                                                        { type: "button", className: "close",
-                                                                            "data-dismiss": "modal",
-                                                                            "aria-label": "Close" },
-                                                                        _react2.default.createElement(
-                                                                            "span",
-                                                                            { "aria-hidden": "true" },
-                                                                            "\xD7"
-                                                                        )
-                                                                    )
+                                                                    " "
                                                                 ),
-                                                                _react2.default.createElement(
-                                                                    "div",
-                                                                    { className: "modal-body", style: { color: "black" } },
-                                                                    _react2.default.createElement(
-                                                                        "span",
-                                                                        null,
-                                                                        " ",
-                                                                        drug.activeSubstance.map(function (substance) {
-                                                                            return _react2.default.createElement(
-                                                                                "span",
-                                                                                { key: substance.id },
-                                                                                substance.name,
-                                                                                " ist ein Arzneistoff aus der Gruppe der sogenannten ",
-                                                                                substance.substanceGroup.name,
-                                                                                "."
-                                                                            );
-                                                                        }).reduce(function (prev, curr) {
-                                                                            return [prev, ', ', curr];
-                                                                        }),
-                                                                        " "
-                                                                    )
-                                                                ),
-                                                                _react2.default.createElement("span", {
-                                                                    dangerouslySetInnerHTML: this.createMarkup(t("modal_close")) })
-                                                            )
+                                                                this.renderPackSecMoreSub(drug)
+                                                            ),
+                                                            _react2.default.createElement("span", {
+                                                                dangerouslySetInnerHTML: this.createMarkup(t("modal_close")) })
                                                         )
                                                     )
                                                 ),

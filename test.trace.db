@@ -19676,3 +19676,37 @@ Caused by: java.lang.IllegalStateException: The file is locked: nio:/home/tivi90
 	at org.h2.mvstore.FileStore.open(FileStore.java:173)
 	at org.h2.mvstore.MVStore.<init>(MVStore.java:347)
 	... 123 more
+2020-03-02 21:34:52 jdbc[12]: exception
+org.h2.jdbc.JdbcSQLException: Syntax Fehler in SQL Befehl "INSERT INTO PACKAGING_SECTION (ID, STATE, TEXT, IDDRUG, IDPACKAGING_TOPIC) VALUES (111,0,'
+1 Tablette enthält 6,935 mg Amlodipin als Besilat, entsprechend 5 mg Amlodipin. <br>
+<b>Die sonstigen Bestandteile sind:</b>
+<ul>
+    <li>mikrokristalline Cellulose</li>
+    <li>Calciumhydrogenphosphat-Dihydrat</li>
+    <li>Carboxymethylstärke-Natrium (Typ A)</li>
+    <li>
+        Magnesiumstearat (Ph.Eur.) [pflanzlich]</li>
+</ul>
+',12,1)1[*] "
+Syntax error in SQL statement "INSERT INTO PACKAGING_SECTION (ID, STATE, TEXT, IDDRUG, IDPACKAGING_TOPIC) VALUES (111,0,'
+1 Tablette enthält 6,935 mg Amlodipin als Besilat, entsprechend 5 mg Amlodipin. <br>
+<b>Die sonstigen Bestandteile sind:</b>
+<ul>
+    <li>mikrokristalline Cellulose</li>
+    <li>Calciumhydrogenphosphat-Dihydrat</li>
+    <li>Carboxymethylstärke-Natrium (Typ A)</li>
+    <li>
+        Magnesiumstearat (Ph.Eur.) [pflanzlich]</li>
+</ul>
+',12,1)1[*] "; SQL statement:
+INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (111,0,'
+1 Tablette enthält 6,935 mg Amlodipin als Besilat, entsprechend 5 mg Amlodipin. <br>
+<b>Die sonstigen Bestandteile sind:</b>
+<ul>
+    <li>mikrokristalline Cellulose</li>
+    <li>Calciumhydrogenphosphat-Dihydrat</li>
+    <li>Carboxymethylstärke-Natrium (Typ A)</li>
+    <li>
+        Magnesiumstearat (Ph.Eur.) [pflanzlich]</li>
+</ul>
+',12,1)1 [42000-194]

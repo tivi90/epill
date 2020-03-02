@@ -226,6 +226,8 @@ INSERT INTO packaging_topic (id, order_number, title) VALUES (6,6,'Nebenwirkunge
 INSERT INTO packaging_topic (id, order_number, title) VALUES (7,7,'Aufbewahrung');
 INSERT INTO packaging_topic (id, order_number, title) VALUES (8,8,'Zusatzinformationen');
 INSERT INTO packaging_topic (id, order_number, title) VALUES (9,9,'Inhalt der Packung');
+INSERT INTO packaging_topic (id, order_number, title) VALUES (10,10,'Darstellung des Medikaments');
+INSERT INTO packaging_topic (id, order_number, title) VALUES (11,11,'Wirkstoff');
 
 
 --
@@ -1764,22 +1766,24 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
 INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (96,0,'
 
 <div class="row">
-    Methfomin wird angewendet
+    <h4> Anwendung von Methfomin </h4>
     <ul>
-        <li>zur Behandlung von Patienten mit <b>Zuckerkrankheit (<a class="info_words" type="button"
-            data-toggle="modal" data-target="#diabetes_typ_2">Typ-2-Diabetes</a>)</b>, wenn der Blutzuckerspiegel
-        durch Diät und
-        Bewegung allein nicht ausreichend kontrolliert werden konnte.<br>
-    Wenn Sie an Diabetes leiden, produziert Ihre Bauchspeicheldrüse entweder nicht genug <a class="info_words"
-        type="button" data-toggle="modal" data-target="#insulin">Insulin</a>
-    oder die Körpergewebe sprechen nicht richtig auf das gebildete <a class="info_words" type="button"
-        data-toggle="modal" data-target="#insulin">Insulin</a>
-    an. Hohe Blutzuckerspiegel sind die Folge. Metformin Lich hilft, Ihren Blutzucker auf möglichst normale Werte zu
-    senken.</li>
-    <li>bei <b>übergewichtigen Patienten</b>. <br>
-        Bei übergewichtigen Erwachsenen trägt die langfristige Einnahme von Metformin Lich außerdem dazu bei, das Risiko
-        von  diabetesbedingten Komplikationen zu senken.
-        Unter Metformin Lich wird ein stabiles Körpergewicht oder eine mäßige Gewichtsabnahme beobachtet.</li>
+        <li>Zur Behandlung von Patienten mit <b>Zuckerkrankheit (<a class="info_words" type="button" data-toggle="modal"
+                    data-target="#diabetes_typ_2">Typ-2-Diabetes</a>)</b>, wenn der Blutzuckerspiegel
+            durch Diät und
+            Bewegung allein nicht ausreichend kontrolliert werden konnte.<br>
+            Wenn Sie an Diabetes leiden, produziert Ihre Bauchspeicheldrüse entweder nicht genug <a class="info_words"
+                type="button" data-toggle="modal" data-target="#insulin">Insulin</a>
+            oder die Körpergewebe sprechen nicht richtig auf das gebildete <a class="info_words" type="button"
+                data-toggle="modal" data-target="#insulin">Insulin</a>
+            an. Hohe Blutzuckerspiegel sind die Folge. Metformin Lich hilft, Ihren Blutzucker auf möglichst normale
+            Werte zu
+            senken.</li>
+        <li>Bei <b>übergewichtigen Patienten</b>. <br>
+            Bei übergewichtigen Erwachsenen trägt die langfristige Einnahme von Metformin Lich außerdem dazu bei, das
+            Risiko
+            von diabetesbedingten Komplikationen zu senken.
+            Unter Metformin Lich wird ein stabiles Körpergewicht oder eine mäßige Gewichtsabnahme beobachtet.</li>
     </ul>
 </div>
 
@@ -1810,20 +1814,31 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
 </div>
 ',11,8);
 INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (97,0,'
-<div class="row">Metformin Lich sind weiße, längliche, in der Mitte verjüngte Filmtabletten mit abgeschrägten
-    Kanten und einer Bruchkerbe auf beiden Seiten. Die Tablette kann in gleiche Dosen geteilt werden.
-</div>
-
-<div class="row">Metformin Lich ist in Packungen mit 15, 30, 120, 180 und 600 Filmtabletten erhältlich.<br>
-    Es werden möglicherweise nicht alle Packungsgrößen in den Verkehr gebracht.
-</div>
+Metformin Lich sind weiße, längliche, in der Mitte verjüngte Filmtabletten mit abgeschrägten Kanten und einer Bruchkerbe
+auf beiden Seiten. Die Tablette kann in gleiche Dosen geteilt werden.
 ',11,9);
+INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (98,0,'
+Enalapril AL 5mg ist in Packungen mit 30, 50 und 100 Tabletten erhältlich. Es werden möglicherweise nicht alle
+Packungsgrößen in den Verkehr gebracht.
+',11,10);
+INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (99,0,'
+1 Filmtablette enthält 1000 mg Metforminhydrochlorid, entsprechend 780 mg Metformin.<br>
+<b>Die sonstigen Bestandteile sind:</b>
+<ul>
+    <li>Hypromellose</li>
+    <li>Povidon K25</li>
+    <li>Magnesiumstearat (Ph. Eur.).</li>
+    <li>
+        Macrogol 6000</li>
+    <li>Titandioxid (E 171)</li>
+</ul>
+',11,11);
 
 --Amlodipin--
 
-INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (98,0,'Beispieltext1',12,1);
-INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (99,0,'Beispieltext2',12,2);
-INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (100,0,'
+INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (100,0,'Beispieltext1',12,1);
+INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (101,0,'Beispieltext2',12,2);
+INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (102,0,'
 <div class="row content_header">
     <h1>Warnhinweise und Vorsichtsmaßnahmen
     </h1>
@@ -1983,7 +1998,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
     </div>
 </div>
 ',12,3);
-INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic, address) VALUES (101,0,'Beispieltext',12,4, '
+INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic, address) VALUES (103,0,'Beispieltext',12,4, '
 <div class="row">
     <div class="col-md-9">
         <h3>Pharmazeutischer Unternehmer </h3>
@@ -2010,7 +2025,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic, addre
     <div class="col-md-3">
     </div>
 </div>');
-INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (102,0,'
+INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (104,0,'
 <div class="row">
     <div class="col-sm-2 col-xs-12 text-center">
         <i class="fas fa-user-md doc_icon nopadd"></i>
@@ -2169,7 +2184,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
     </div>
 </div>
 ',12,5);
-INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (103,0,'
+INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (105,0,'
 <div class="row content_header">
     <h1> Nebenwirkungen </h1>
     <hr>
@@ -2395,15 +2410,15 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
     </div>
 </div>
 ',12,6);
-INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (104,0,'Beispieltext',12,7);
-INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (105,0,'
+INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (106,0,'Beispieltext',12,7);
+INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (107,0,'
 <!-- Allgemein -->
 
 <div class="row" style="padding-left: 15px;">
-    Amlodipin (besilat) Dexcel 5 mg wird angewendet
+   <h4> Anwendung von Amlodipin (besilat) Dexcel 5 mg </h4>
     <ul>
-        <li>zur Behandlung von hohem Blutdruck (Hypertonie)</li>
-        <li>>zur Behandlung einer bestimmten Form von Schmerzen im Brustbereich,
+        <li>Zur Behandlung von hohem Blutdruck (Hypertonie)</li>
+        <li>Zur Behandlung einer bestimmten Form von Schmerzen im Brustbereich,
             was als <a class="info_words" type="button" data-toggle="modal" data-target="#angina">Angina pectoris</a>
             oder, in einers seltenen Form, als <i>vasospastische (Prinzmetal-) Angina </i> bezeichnet wird.
         </li>
@@ -2433,21 +2448,32 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
 </div>
 
 ',12,8);
-INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (106,0,'
-<div class="row">Metformin Lich sind weiße, längliche, in der Mitte verjüngte Filmtabletten mit abgeschrägten
-    Kanten und einer Bruchkerbe auf beiden Seiten. Die Tablette kann in gleiche Dosen geteilt werden.
-</div>
-<div class="row">Metformin Lich ist in Packungen mit 15, 30, 120, 180 und 600 Filmtabletten erhältlich.<br>
-    Es werden möglicherweise nicht alle Packungsgrößen in den Verkehr gebracht.
-</div>
+INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (109,0,'
+Amlodipin (besilat) Dexcel 5 mg Tabletten sind weiße, runde Tabletten.
 ',12,9);
+INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (110,0,'
+Amlodipin (besilat) Dexcel 5 mg Tabletten sind in Packungen mit 7, 10, 14, 20, 28, 30, 50, 60 und 100
+    Tabletten erhältlich.
+    Es werden möglicherweise nicht alle Packungsgrößen in den Verkehr gebracht
+',12,10);
+INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (111,0,'
+1 Tablette enthält 6,935 mg Amlodipin als Besilat, entsprechend 5 mg Amlodipin. <br>
+<b>Die sonstigen Bestandteile sind:</b>
+<ul>
+    <li>mikrokristalline Cellulose</li>
+    <li>Calciumhydrogenphosphat-Dihydrat</li>
+    <li>Carboxymethylstärke-Natrium (Typ A)</li>
+    <li>
+        Magnesiumstearat (Ph.Eur.) [pflanzlich]</li>
+</ul>
+',12,11);
 -- Dump tailored_text
 
 --Enalapril--
 
-INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (107,0,'Beispieltext1',13,1);
-INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (108,0,'Beispieltext2',13,2);
-INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (109,0,'
+INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (112,0,'Beispieltext1',13,1);
+INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (113,0,'Beispieltext2',13,2);
+INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (114,0,'
 <div class="row content_header">
     <h1>Warnhinweise und Vorsichtsmaßnahmen
     </h1>
@@ -2788,7 +2814,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
     </div>
 </div>
 ',13,3);
-INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic, address) VALUES (110,0,'Beispieltext',13,4, '
+INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic, address) VALUES (115,0,'Beispieltext',13,4, '
 <div class="row">
     <div class="col-md-9">
         <h3>Pharmazeutischer Unternehmer </h3>
@@ -2825,7 +2851,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic, addre
         <img class="img-responsive" src="/assets/images/company/stada.png" />
     </div>
 </div>');
-INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (111,0,'
+INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (116,0,'
 <div class="row">
     <div class="col-sm-2 col-xs-12 text-center">
         <i class="fas fa-user-md doc_icon nopadd"></i>
@@ -3294,7 +3320,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
     </div>
 </div>
 ',13,5);
-INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (112,0,'
+INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (117,0,'
 <div class="row content_header">
     <h1> Nebenwirkungen </h1>
     <hr>
@@ -4282,18 +4308,18 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
     </div>
 </div>
 ',13,6);
-INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (113,0,'Beispieltext',13,7);
-INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (114,0,'
+INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (118,0,'Beispieltext',13,7);
+INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (119,0,'
 <!-- Allgemein -->
 <div class="row" style="padding-left: 15px;">
-    Enalapril AL wird angewendet
+    <h4> Anwendung von Enalapril AL </h4>
     <ul>
-        <li> zur Behandlung von Bluthochdruck (Hypertonie).
+        <li> Zur Behandlung von Bluthochdruck (Hypertonie).
         </li>
-        <li> zur Behandlung der Herzleistungsschwäche (Herzinsuffizienz). Es kann die Notwendigkeit von
+        <li> Zur Behandlung der Herzleistungsschwäche (Herzinsuffizienz). Es kann die Notwendigkeit von
             Krankenhauseinweisungen verringern und bei einigen Patienten lebensverlängernd wirken.
         </li>
-        <li> zur Vorbeugung der Entwicklung von Krankheitszeichen einer Herzleistungsschwäche, wie z.B.
+        <li> Zur Vorbeugung der Entwicklung von Krankheitszeichen einer Herzleistungsschwäche, wie z.B.
             <ul>
                 <li>Kurzatmigkeit</li>
                 <li>Ermüdung bereits nach leichter körperlicher Betätigung wie Gehen, oder Schwellungen an Knöcheln und
@@ -4303,30 +4329,41 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
     </ul>
 </div>
 <div class="row" style="padding:0 0 0 15px;">
-    Enalapril AL wirkt
+    <h4>Wirkung von Enalapril AL</h4>
     <ul>
-        <li>über eine Erweiterung der Blutgefäße. Das senkt Ihren Blutdruck.<br> Das Arzneimittel beginnt
-            normalerweise innerhalb einer Stunde zu wirken und seine Wirkung dauert mindestens 24 Stunden lang an.<br>
-            Einige
+        <li>Wirkt über eine Erweiterung der Blutgefäße. Das senkt Ihren Blutdruck.
+        <li>Das Arzneimittel beginnt
+            normalerweise innerhalb einer Stunde zu wirken</li>
+        <li> Die Wirkung dauert mindestens 24 Stunden lang an.</li>
+        <li>Einige
             Patienten benötigen eine Behandlung von mehreren Wochen, bis die beste Wirkung auf den Blutdruck zu
             beobachten ist.</li>
     </ul>
 </div>
 ',13,8);
-INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (115,0,'
-<div class="row">Was Enalapril AL 5mg enthält:
-    Der Wirkstoff ist: Enalaprilmaleat. Jede Tablette enthält 5 mg Enalaprilmaleat.
-
-    Die sonstigen Bestandteile sind: Croscarmellose-Natrium, Lactose-Monohydrat, Magnesiumstearat (Ph. Eur.),
-    vorverkleisterte Maisstärke, Natriumhydrogencarbonat.
-</div>
-<div class="row">Enalapril AL 5mg sind runde flache weiße Tabletten mit beidseitiger Bruchkerbe.
-
-    Enalapril AL 5mg ist in Packungen mit 30, 50 und 100 Tabletten erhältlich.
-
-    Es werden möglicherweise nicht alle Packungsgrößen in den Verkehr gebracht.
-</div>
+INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (120,0,'
+Enalapril AL 5mg sind runde flache weiße Tabletten mit beidseitiger Bruchkerbe.
 ',13,9);
+INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (121,0,'
+Enalapril AL 5mg ist in Packungen mit 30, 50 und 100 Tabletten erhältlich.
+Es werden möglicherweise nicht alle Packungsgrößen in den Verkehr gebracht.
+
+',13,10);
+INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (122,0,'
+1 Tablette enthält 5 mg Enalaprilmaleat. <br>
+<b>Die sonstigen Bestandteile sind:</b>
+<ul>
+    <li>Natriumhydrogencarbonat</li>
+    <li>Lactose-Monohydrat</li>
+    <li>Maisstärke</li>
+    <li>
+        Talkum</li>
+    <li>Magnesiumstearat (Ph.Eur.)</li>
+    <li>Hyprolose</li>
+
+</ul>
+',13,11);
+
 -- Dump tailored_text
 
 INSERT INTO tailored_text (id, idgender, iddrug, min_age, max_age, text) VALUES (1, 1, 1, 16, 30, 'Hey %firstname% %lastname%, Hier steht eine wichtige Information für Männer im Alter von %age% Jahren, die sich für dieses Medikament interessieren.<br />2 mal täglich einnehmen<br />1 Tablette morgens gegen 9:00<br />1 Tablette am Abend gegen 20:00');

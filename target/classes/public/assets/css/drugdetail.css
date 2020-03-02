@@ -15,7 +15,13 @@
     margin-top: 15px;
 }
 
-
+.druf_pack_icon{
+    font-size: 50px;
+    text-align: center;
+    color: #616161 !important;
+    padding-top: 15px;
+    padding-left: 10px;
+}
 
 .icon_page {
     width: 50px !important;
@@ -116,8 +122,7 @@
 
 .img-drugform {
     width: 90%;
-    margin-top: 21px;
-}
+ }
 
 .info_words {
     font-weight: bold;
@@ -500,5 +505,10 @@
         font-size: 80px;
         color: #575858;
         margin-bottom: 25px;
+    }
+    .img-drugform {
+        width: 29%;
+        text-align: center;
+        padding-bottom: 15px;
     }
 }

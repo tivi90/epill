@@ -582,6 +582,40 @@ class DrugDetail extends React.Component {
             })).reduce((prev, curr) => [prev, curr]);
     }
 
+    renderPackSecpack(drug) {
+        if (!drug.packagingSection) {
+            return null;
+        }
+
+        return drug.packagingSection
+            .filter(section => {
+                return section.topic.id === 10
+            })
+            .map((section => {
+                return (
+                    <p key={section.id}><span dangerouslySetInnerHTML={this.createMarkup(section.text)}/>
+                    </p>
+                );
+            })).reduce((prev, curr) => [prev, curr]);
+    }
+
+    renderPackSecMoreSub(drug) {
+        if (!drug.packagingSection) {
+            return null;
+        }
+
+        return drug.packagingSection
+            .filter(section => {
+                return section.topic.id === 11
+            })
+            .map((section => {
+                return (
+                    <p key={section.id}><span dangerouslySetInnerHTML={this.createMarkup(section.text)}/>
+                    </p>
+                );
+            })).reduce((prev, curr) => [prev, curr]);
+    }
+
     renderSectionList(drug) {
         if (!drug.packagingSection) {
             return null;
@@ -866,9 +900,17 @@ class DrugDetail extends React.Component {
                                                             <div className="modal-body" style={{color: "black"}}>
                                                                 <div className="row">
                                                                     <div
-                                                                        className="col-sm-2">{this.renderFormImg(drug)}</div>
-                                                                    <div className="col-sm-10">
+                                                                        className="col-sm-2 col-xs-12 xs-center">{this.renderFormImg(drug)}</div>
+                                                                    <div className="col-sm-10 col-xs-12 xs-center">
                                                                         {this.renderFormdesc(drug)}
+                                                                    </div>
+                                                                </div>
+                                                                <div className="row">
+                                                                    <div
+                                                                        className="col-sm-2 col-xs-12 xs-center"><i
+                                                                        className="druf_pack_icon fas fa-prescription-bottle-alt"></i> </div>
+                                                                    <div className="col-sm-10 col-xs-12 xs-center"  style={{paddingTop: "10px"}}>
+                                                                        {this.renderPackSecpack(drug)}
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -885,33 +927,34 @@ class DrugDetail extends React.Component {
                                                     <div style={{cursor: "pointer"}} data-toggle="modal"
                                                          data-target="#infosubstance"><i
                                                         className="fas fa-info-circle"/></div>
-                                                    <div className="modal fade" id="infosubstance" tabIndex="-1"
-                                                         role="dialog"
-                                                         aria-labelledby="addressLabel"
-                                                         aria-hidden="true">
+                                                </div>
+                                                <div className="modal fade" id="infosubstance" tabIndex="-1"
+                                                     role="dialog"
+                                                     aria-labelledby="addressLabel"
+                                                     aria-hidden="true">
 
-                                                        <div className="modal-dialog" role="document">
-                                                            <div className="modal-content">
-                                                                <div className="modal-header">
-                                                                    {drug.activeSubstance.map(substance =>
-                                                                        <h2 key={substance.id}> <img src={"./../../assets/images/lab.svg"} className="infopic" alt={"lab"}/> {substance.name}
-                                                                        </h2>)
-                                                                        .reduce((prev, curr) => [prev, ', ', curr])}
+                                                    <div className="modal-dialog" role="document">
+                                                        <div className="modal-content">
+                                                            <div className="modal-header">
+                                                                {drug.activeSubstance.map(substance =>
+                                                                    <h2 key={substance.id}> <img src={"./../../assets/images/lab.svg"} className="infopic" alt={"lab"}/> {substance.name}
+                                                                    </h2>)
+                                                                    .reduce((prev, curr) => [prev, ', ', curr])}
 
-                                                                    <button type="button" className="close"
-                                                                            data-dismiss="modal"
-                                                                            aria-label="Close">
-                                                                        <span aria-hidden="true">&times;</span>
-                                                                    </button>
-                                                                </div>
-                                                                <div className="modal-body" style={{color: "black"}}>
+                                                                <button type="button" className="close"
+                                                                        data-dismiss="modal"
+                                                                        aria-label="Close">
+                                                                    <span aria-hidden="true">&times;</span>
+                                                                </button>
+                                                            </div>
+                                                            <div className="modal-body" style={{color: "black"}}>
                                                            <span> {drug.activeSubstance.map(substance =>
                                                                <span key={substance.id}>{substance.name} ist ein Arzneistoff aus der Gruppe der sogenannten {substance.substanceGroup.name}.</span>)
                                                                .reduce((prev, curr) => [prev, ', ', curr])} </span>
-                                                                </div>
-                                                                <span
-                                                                    dangerouslySetInnerHTML={this.createMarkup(t("modal_close"))}/>
+                                                                {this.renderPackSecMoreSub(drug)}
                                                             </div>
+                                                            <span
+                                                                dangerouslySetInnerHTML={this.createMarkup(t("modal_close"))}/>
                                                         </div>
                                                     </div>
                                                 </div>
