@@ -145,7 +145,7 @@ INSERT INTO drug_simple (id, name, number, status, version, year, idimage) VALUE
 INSERT INTO drug_simple (id, name, number, status, version, year, idimage) VALUES (9,'Topiramat-Janssen',0,'3915-06-01','1.0','2011-1-1', 1);
 INSERT INTO drug_simple (id, name, number, status, version, year, idimage) VALUES (10,'Toujeo',0,'3915-06-01','1.59','2011-1-1', 10);
 INSERT INTO drug_simple (id, name, number, status, version, year, idimage) VALUES (11,'Metformin',0,'3915-06-01','1.59','2017-4-1', 11);
-INSERT INTO drug_simple (id, name, number, status, version, year, idimage) VALUES (12,'Amlodipin',0,'3915-06-01','1.59','2018-1-1', 12);
+INSERT INTO drug_simple (id, name, number, status, version, year, idimage) VALUES (12,'Amlodipin (besilat)',0,'3915-06-01','1.59','2018-1-1', 12);
 INSERT INTO drug_simple (id, name, number, status, version, year, idimage) VALUES (13,'Enalapril',0,'3915-06-01','1.59','2017-8-1', 13);
 
 
@@ -168,6 +168,13 @@ INSERT INTO drug (id, idindication_group, idproduct_group) VALUES (12,5,1);
 INSERT INTO drug (id, idindication_group, idproduct_group) VALUES (13,5,1);
 
 
+-- Dumping data for table `substance_group`
+--
+INSERT INTO substance_group (id, name) VALUES (1,'Angiotensin-Converting-Enzyme (ACE)-Hemmer');
+INSERT INTO substance_group (id, name) VALUES (2,'Biguanide');
+INSERT INTO substance_group (id, name) VALUES (3,'Calciumantagonisten');
+
+
 --
 -- Dumping data for table `active_substance`
 --
@@ -182,17 +189,15 @@ INSERT INTO active_substance (id, name, idsubstance_group) VALUES (7,'Enoxaparin
 INSERT INTO active_substance (id, name, idsubstance_group) VALUES (8,'Metamizol-Natrium 1 H2O',NULL);
 INSERT INTO active_substance (id, name, idsubstance_group) VALUES (9,'Galantamin',NULL);
 INSERT INTO active_substance (id, name, idsubstance_group) VALUES (10,'Quinaprilhydrochlorid',NULL);
-INSERT INTO active_substance (id, name, idsubstance_group) VALUES (11,'Metforminhydrochlorid',NULL);
-INSERT INTO active_substance (id, name, idsubstance_group) VALUES (12,'Amlodipin',NULL);
-INSERT INTO active_substance (id, name, idsubstance_group) VALUES (13,'Enalaprilmaleat',NULL);
+INSERT INTO active_substance (id, name, idsubstance_group) VALUES (11,'Metforminhydrochlorid',2);
+INSERT INTO active_substance (id, name, idsubstance_group) VALUES (12,'Amlodipin',3);
+INSERT INTO active_substance (id, name, idsubstance_group) VALUES (13,'Enalaprilmaleat',1);
 
 
 --
 -- Dumping data for table `product_group`
 --
 
---
--- Dumping data for table `substance_group`
 --
 
 
@@ -276,6 +281,9 @@ INSERT INTO disease (id, name) VALUES(4, 'Lungenentzündung');
 INSERT INTO disease (id, name) VALUES(5, 'Blasenentzündung');
 INSERT INTO disease (id, name) VALUES(6, 'Zuckerkrankheit (Typ-2 Diabetis)');
 INSERT INTO disease (id, name) VALUES(7, 'Hoher Blutdruck');
+INSERT INTO disease (id, name) VALUES(8, 'Herzleistungsschwäche (Herzinsuffizienz)');
+
+
 
 
 --
@@ -313,6 +321,7 @@ INSERT INTO drug_disease (iddrug, iddisease) VALUES (10, 3);
 INSERT INTO drug_disease (iddrug, iddisease) VALUES (11, 6);
 INSERT INTO drug_disease (iddrug, iddisease) VALUES (12, 7);
 INSERT INTO drug_disease (iddrug, iddisease) VALUES (13, 7);
+INSERT INTO drug_disease (iddrug, iddisease) VALUES (13, 8);
 
 --
 -- Dumping data for table `drug_feature`
@@ -1753,31 +1762,27 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
 ',11,6);
 INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (95,0,'Beispieltext7',11,7);
 INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (96,0,'
+
 <div class="row">
-    Metformin Lich enthält Metformin, einen Arzneistoff aus der Gruppe der sogenannten Biguanide, der zur Behandlung
-    der
-    Zuckerkrankheit (Diabetes) eingesetzt wird. </div>
-<div class="row">
+    Methfomin wird angewendet
+    <ul>
+        <li>zur Behandlung von Patienten mit <b>Zuckerkrankheit (<a class="info_words" type="button"
+            data-toggle="modal" data-target="#diabetes_typ_2">Typ-2-Diabetes</a>)</b>, wenn der Blutzuckerspiegel
+        durch Diät und
+        Bewegung allein nicht ausreichend kontrolliert werden konnte.<br>
     Wenn Sie an Diabetes leiden, produziert Ihre Bauchspeicheldrüse entweder nicht genug <a class="info_words"
         type="button" data-toggle="modal" data-target="#insulin">Insulin</a>
     oder die Körpergewebe sprechen nicht richtig auf das gebildete <a class="info_words" type="button"
         data-toggle="modal" data-target="#insulin">Insulin</a>
     an. Hohe Blutzuckerspiegel sind die Folge. Metformin Lich hilft, Ihren Blutzucker auf möglichst normale Werte zu
-    senken.
+    senken.</li>
+    <li>bei <b>übergewichtigen Patienten</b>. <br>
+        Bei übergewichtigen Erwachsenen trägt die langfristige Einnahme von Metformin Lich außerdem dazu bei, das Risiko
+        von  diabetesbedingten Komplikationen zu senken.
+        Unter Metformin Lich wird ein stabiles Körpergewicht oder eine mäßige Gewichtsabnahme beobachtet.</li>
+    </ul>
 </div>
-<div class="row">
-    Das Arzneimittel wird insbesondere bei übergewichtigen Patienten eingesetzt.
-    Bei übergewichtigen Erwachsenen trägt die langfristige Einnahme von Metformin Lich außerdem dazu bei, das Risiko
-    von
-    diabetesbedingten Komplikationen zu senken.
-    Unter Metformin Lich wird ein stabiles Körpergewicht oder eine mäßige Gewichtsabnahme beobachtet.
-</div>
-<div class="row">
-    Metformin Lich wird zur Behandlung von Patienten mit Zuckerkrankheit (<a class="info_words" type="button"
-        data-toggle="modal" data-target="#diabetes_typ_2">Typ-2-Diabetes</a>) eingesetzt, wenn der Blutzuckerspiegel
-    durch Diät und
-    Bewegung allein nicht ausreichend kontrolliert werden konnte.
-</div>
+
 <div class="row" style="padding:30px 0 30px 0px;">
 
     <table class="sideffect_table">
@@ -2393,21 +2398,18 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
 INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (104,0,'Beispieltext',12,7);
 INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (105,0,'
 <!-- Allgemein -->
+
 <div class="row" style="padding-left: 15px;">
-    Amlodipin (besilat) Dexcel 5 mg enthält den Wirkstoff Amlodipin, der zur Arzneimittelgruppe
-    der so genannten Calciumantagonisten gehört. </div>
-<div class="row" style="padding-left: 15px;">
-    Amlodipin (besilat) Dexcel 5 mg wird zur Behandlung von hohem Blutdruck (Hypertonie)
-    angewendet oder zur Behandlung einer bestimmten Form von Schmerzen im Brustbereich,
-    was als <a class="info_words" type="button" data-toggle="modal" data-target="#angina">Angina pectoris</a> oder, in
-    einer
-    seltenen Form, als <i>vasospastische (Prinzmetal-)
-        Angina </i> bezeichnet wird.
+    Amlodipin (besilat) Dexcel 5 mg wird angewendet
+    <ul>
+        <li>zur Behandlung von hohem Blutdruck (Hypertonie)</li>
+        <li>>zur Behandlung einer bestimmten Form von Schmerzen im Brustbereich,
+            was als <a class="info_words" type="button" data-toggle="modal" data-target="#angina">Angina pectoris</a>
+            oder, in einers seltenen Form, als <i>vasospastische (Prinzmetal-) Angina </i> bezeichnet wird.
+        </li>
+    </ul>
 </div>
-<div class="row" style="padding:0 0 0 15px;">
-    Amlodipin (besilat) Dexcel 5 mg enthält den Wirkstoff Amlodipin, der zur Arzneimittelgruppe
-    der so genannten Calciumantagonisten gehört.
-</div>
+
 <div class="row" style="padding:30px 0 30px 15px;">
     <table class="sideffect_table">
         <tr>
@@ -2441,7 +2443,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
 ',12,9);
 -- Dump tailored_text
 
---Enapril--
+--Enalapril--
 
 INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (107,0,'Beispieltext1',13,1);
 INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (108,0,'Beispieltext2',13,2);
@@ -4284,10 +4286,6 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
 INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (114,0,'
 <!-- Allgemein -->
 <div class="row" style="padding-left: 15px;">
-    Enalapril AL enthält den Wirkstoff Enalaprilmaleat. Dieser Wirkstoff gehört zu der Klasse der ACE
-    (Angiotensin-ConvertingEnzyme)-Hemmer genannten Arzneimittel.
-</div>
-<div class="row" style="padding-left: 15px;">
     Enalapril AL wird angewendet
     <ul>
         <li> zur Behandlung von Bluthochdruck (Hypertonie).
@@ -4295,16 +4293,24 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
         <li> zur Behandlung der Herzleistungsschwäche (Herzinsuffizienz). Es kann die Notwendigkeit von
             Krankenhauseinweisungen verringern und bei einigen Patienten lebensverlängernd wirken.
         </li>
-        <li> zur Vorbeugung der Entwicklung von Krankheitszeichen einer Herzleistungs-schwäche. Zu diesen wahrnehmbaren
-            Krankheitszeichen gehören Kurzatmigkeit,
-            Ermüdung bereits nach leichter körperlicher Betätigung wie Gehen, oder Schwellungen an Knöcheln und Füßen.
+        <li> zur Vorbeugung der Entwicklung von Krankheitszeichen einer Herzleistungsschwäche, wie z.B.
+            <ul>
+                <li>Kurzatmigkeit</li>
+                <li>Ermüdung bereits nach leichter körperlicher Betätigung wie Gehen, oder Schwellungen an Knöcheln und
+                    Füßen</li>
+            </ul>
         </li>
     </ul>
 </div>
 <div class="row" style="padding:0 0 0 15px;">
-    Enalapril AL wirkt über eine Erweiterung der Blutgefäße. Das senkt Ihren Blutdruck. Das Arzneimittel beginnt
-    normalerweise innerhalb einer Stunde zu wirken und seine Wirkung dauert mindestens 24 Stunden lang an. Einige
-    Patienten benötigen eine Behandlung von mehreren Wochen, bis die beste Wirkung auf den Blutdruck zu beobachten ist.
+    Enalapril AL wirkt
+    <ul>
+        <li>über eine Erweiterung der Blutgefäße. Das senkt Ihren Blutdruck.<br> Das Arzneimittel beginnt
+            normalerweise innerhalb einer Stunde zu wirken und seine Wirkung dauert mindestens 24 Stunden lang an.<br>
+            Einige
+            Patienten benötigen eine Behandlung von mehreren Wochen, bis die beste Wirkung auf den Blutdruck zu
+            beobachten ist.</li>
+    </ul>
 </div>
 ',13,8);
 INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (115,0,'

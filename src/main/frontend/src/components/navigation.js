@@ -62,6 +62,7 @@ class Navigation extends React.Component {
                             <ul className="nav navbar-nav">
                                 <MenueItem title="about" to="/about"/>
                                 <MenueItem title="drugs" to="/drug/list"/>
+                                <MenueItem title="definitions" to="/definitions"/>
                             </ul>
                             <UserMenue/>
                         </div>

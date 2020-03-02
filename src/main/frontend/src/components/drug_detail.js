@@ -422,12 +422,13 @@ class DrugDetail extends React.Component {
 
                 <p><b> {t('activeSubstance') + " "}</b></p>
                 <p>    {drug.activeSubstance.map(substance => <span key={substance.id}>{substance.name}
-                    <br/></span>)
+                    <br/></span>
+                )
                     .reduce((prev, curr) => [prev, ', ', curr])}</p>
-
             </section>
         );
     }
+
 
     renderPZN(drug) {
         if (!drug.packaging)
@@ -745,9 +746,7 @@ class DrugDetail extends React.Component {
                                     <div className="drug-features ">
                                         {this.renderDrugFeaturesDesc(drug)}
                                         <div>
-                                            <div style={{cursor: "pointer"}} data-toggle="modal"
-                                                 data-target="#infoicons"><i
-                                                className="fas fa-info-circle"/></div>
+
                                             <div className="modal fade" id="infoicons" tabIndex="-1" role="dialog"
                                                  aria-labelledby="addressLabel"
                                                  aria-hidden="true">
@@ -841,61 +840,97 @@ class DrugDetail extends React.Component {
 
                                             </div>
                                             <div className="row">
-                                            <div className="col-sm-4 col-xs-6 text-center infopart">
-                                                <div data-toggle="modal"
-                                                     data-target="#drugform">
-                                                    {this.renderPharmaceuticalForm(drug)}
+                                                <div className="col-sm-4 col-xs-6 text-center infopart">
+                                                    <div data-toggle="modal"
+                                                         data-target="#drugform">
+                                                        {this.renderPharmaceuticalForm(drug)}
+                                                    </div>
+                                                    <div style={{cursor: "pointer"}} data-toggle="modal"
+                                                         data-target="#drugform"><i
+                                                        className="fas fa-info-circle"/></div>
                                                 </div>
-                                            </div>
-                                            <div className="modal fade" id="drugform" tabIndex="-1" role="dialog"
-                                                 aria-labelledby="addressLabel"
-                                                 aria-hidden="true">
-                                                <div className="modal-dialog" role="document">
-                                                    <div className="modal-content">
-                                                        <div className="modal-header">
-                                                            <h2>Inhalt und Darstellung des
-                                                                Medikaments</h2>
-                                                            <button type="button" className="close"
-                                                                    data-dismiss="modal" aria-label="Close">
-                                                                <span aria-hidden="true">&times;</span>
-                                                            </button>
-                                                        </div>
-                                                        <div className="modal-body" style={{color: "black"}}>
-                                                            <div className="row">
-                                                                <div
-                                                                    className="col-sm-2">{this.renderFormImg(drug)}</div>
-                                                                <div className="col-sm-10">
-                                                                    {this.renderFormdesc(drug)}
+
+                                                <div className="modal fade" id="drugform" tabIndex="-1" role="dialog"
+                                                     aria-labelledby="addressLabel"
+                                                     aria-hidden="true">
+                                                    <div className="modal-dialog" role="document">
+                                                        <div className="modal-content">
+                                                            <div className="modal-header">
+                                                                <h2>Inhalt und Darstellung des
+                                                                    Medikaments</h2>
+                                                                <button type="button" className="close"
+                                                                        data-dismiss="modal" aria-label="Close">
+                                                                    <span aria-hidden="true">&times;</span>
+                                                                </button>
+                                                            </div>
+                                                            <div className="modal-body" style={{color: "black"}}>
+                                                                <div className="row">
+                                                                    <div
+                                                                        className="col-sm-2">{this.renderFormImg(drug)}</div>
+                                                                    <div className="col-sm-10">
+                                                                        {this.renderFormdesc(drug)}
+                                                                    </div>
                                                                 </div>
                                                             </div>
+                                                            <span
+                                                                dangerouslySetInnerHTML={this.createMarkup(t("modal_close"))}/>
                                                         </div>
-                                                        <span
-                                                            dangerouslySetInnerHTML={this.createMarkup(t("modal_close"))}/>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div className="col-sm-4 col-xs-6 text-center infopart">
-                                                {this.renderDisease(drug)}
-                                            </div>
-                                            <div className="col-sm-4 col-xs-6 text-center infopart">
-                                                {this.renderActiveSubstance(drug)}
-                                            </div>
-                                            {showAdditionalInfo &&
-                                            <div className="">
-                                                <div className="additional-information">
-                                                    <section>
-                                                        <div className="col-sm-4 col-xs-6 text-center infopart">
-                                                            {this.renderIndicationGroup(drug)}
-                                                        </div>
-                                                        <div className="col-sm-4 col-xs-6 text-center infopart">
-                                                            {this.renderProductGroup(drug)}
-                                                        </div>
-                                                        <div className="col-sm-4 col-xs-6 text-center infopart">
-                                                            {this.renderPZN(drug)}
-                                                        </div>
-                                                    </section>
+                                                <div className="col-sm-4 col-xs-6 text-center infopart">
+                                                    {this.renderDisease(drug)}
                                                 </div>
-                                            </div>}
+                                                <div className="col-sm-4 col-xs-6 text-center infopart">
+                                                    {this.renderActiveSubstance(drug)}
+                                                    <div style={{cursor: "pointer"}} data-toggle="modal"
+                                                         data-target="#infosubstance"><i
+                                                        className="fas fa-info-circle"/></div>
+                                                    <div className="modal fade" id="infosubstance" tabIndex="-1"
+                                                         role="dialog"
+                                                         aria-labelledby="addressLabel"
+                                                         aria-hidden="true">
+
+                                                        <div className="modal-dialog" role="document">
+                                                            <div className="modal-content">
+                                                                <div className="modal-header">
+                                                                    {drug.activeSubstance.map(substance =>
+                                                                        <h2 key={substance.id}> <img src={"./../../assets/images/lab.svg"} className="infopic" alt={"lab"}/> {substance.name}
+                                                                        </h2>)
+                                                                        .reduce((prev, curr) => [prev, ', ', curr])}
+
+                                                                    <button type="button" className="close"
+                                                                            data-dismiss="modal"
+                                                                            aria-label="Close">
+                                                                        <span aria-hidden="true">&times;</span>
+                                                                    </button>
+                                                                </div>
+                                                                <div className="modal-body" style={{color: "black"}}>
+                                                           <span> {drug.activeSubstance.map(substance =>
+                                                               <span key={substance.id}>{substance.name} ist ein Arzneistoff aus der Gruppe der sogenannten {substance.substanceGroup.name}.</span>)
+                                                               .reduce((prev, curr) => [prev, ', ', curr])} </span>
+                                                                </div>
+                                                                <span
+                                                                    dangerouslySetInnerHTML={this.createMarkup(t("modal_close"))}/>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                {showAdditionalInfo &&
+                                                <div className="">
+                                                    <div className="additional-information">
+                                                        <section>
+                                                            <div className="col-sm-4 col-xs-6 text-center infopart">
+                                                                {this.renderIndicationGroup(drug)}
+                                                            </div>
+                                                            <div className="col-sm-4 col-xs-6 text-center infopart">
+                                                                {this.renderProductGroup(drug)}
+                                                            </div>
+                                                            <div className="col-sm-4 col-xs-6 text-center infopart">
+                                                                {this.renderPZN(drug)}
+                                                            </div>
+                                                        </section>
+                                                    </div>
+                                                </div>}
                                             </div>
 
                                             <div className="row text-center">
