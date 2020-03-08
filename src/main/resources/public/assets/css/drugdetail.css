@@ -15,7 +15,7 @@
     margin-top: 15px;
 }
 
-.druf_pack_icon{
+.druf_pack_icon {
     font-size: 50px;
     text-align: center;
     color: #616161 !important;
@@ -122,7 +122,7 @@
 
 .img-drugform {
     width: 90%;
- }
+}
 
 .info_words {
     font-weight: bold;
@@ -143,7 +143,7 @@
     margin-right: 20px;
 }
 
-.bg_orange{
+.bg_orange {
     background-color: #ffc992b5 !important;
 }
 
@@ -386,6 +386,7 @@
     font-size: 65px;
     padding: 0px 15px;
 }
+
 .panel-title {
     position: relative;
     cursor: pointer;
@@ -414,13 +415,37 @@
     content: "\f106";
 }
 
-.usage_tab{
-    width: 65%;
+.usage_tab {
+    width: 50%;
 }
 
-.usage_tab1{
-    width: 80%;
-    margin-top: 12px;
+.usage_tab1 {
+    width: 62%;
+    margin-top: 5px;
+}
+
+.nav1-tabs {
+    border-bottom: inherit !important;
+}
+
+.nav1-tabs a {
+    margin-bottom: 25px;
+    margin-left: 10px;
+    border-radius: 4px 4px 4px 4px;
+    background-color: #dedede;
+}
+
+.panel-body {
+    padding: 15px;
+    border: 1px #e4e4e4 solid;
+}
+
+.nav1-tabs > li.active > a, .nav1-tabs > li.active > a:focus, .nav1-tabs > li.active > a:hover {
+    color: #fff !important;
+    cursor: default !important;
+    background-color: #131111 !important;
+    border: 1px solid #ddd !important;
+    border-bottom-color: #ddd !important;
 }
 
 @media screen and (max-width: 480px) {
@@ -506,6 +531,7 @@
         color: #575858;
         margin-bottom: 25px;
     }
+
     .img-drugform {
         width: 29%;
         text-align: center;

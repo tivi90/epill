@@ -128,6 +128,7 @@ INSERT INTO image (id, filename, filetype, uploaded_at, image) VALUES (10,'Touje
 INSERT INTO image (id, filename, filetype, uploaded_at, image) VALUES (11,'Metformin','image/png', NOW(), FILE_READ('src/main/frontend/assets/images/metformin.png'));
 INSERT INTO image (id, filename, filetype, uploaded_at, image) VALUES (12,'Amlodipin','image/png', NOW(), FILE_READ('src/main/frontend/assets/images/amlodipin.png'));
 INSERT INTO image (id, filename, filetype, uploaded_at, image) VALUES (13,'Enalapril','image/png', NOW(), FILE_READ('src/main/frontend/assets/images/enalapril.png'));
+INSERT INTO image (id, filename, filetype, uploaded_at, image) VALUES (14,'Salbutamol','image/png', NOW(), FILE_READ('src/main/frontend/assets/images/salbutamol.png'));
 
 
 --
@@ -147,6 +148,7 @@ INSERT INTO drug_simple (id, name, number, status, version, year, idimage) VALUE
 INSERT INTO drug_simple (id, name, number, status, version, year, idimage) VALUES (11,'Metformin',0,'3915-06-01','1.59','2017-4-1', 11);
 INSERT INTO drug_simple (id, name, number, status, version, year, idimage) VALUES (12,'Amlodipin (besilat)',0,'3915-06-01','1.59','2018-1-1', 12);
 INSERT INTO drug_simple (id, name, number, status, version, year, idimage) VALUES (13,'Enalapril',0,'3915-06-01','1.59','2017-8-1', 13);
+INSERT INTO drug_simple (id, name, number, status, version, year, idimage) VALUES (14,'Salbutamol',0,'3915-06-01','1.59','2017-11-1', 14);
 
 
 --
@@ -166,6 +168,7 @@ INSERT INTO drug (id, idindication_group, idproduct_group) VALUES (10,5,1);
 INSERT INTO drug (id, idindication_group, idproduct_group) VALUES (11,5,1);
 INSERT INTO drug (id, idindication_group, idproduct_group) VALUES (12,5,1);
 INSERT INTO drug (id, idindication_group, idproduct_group) VALUES (13,5,1);
+INSERT INTO drug (id, idindication_group, idproduct_group) VALUES (14,4,1);
 
 
 -- Dumping data for table `substance_group`
@@ -192,6 +195,27 @@ INSERT INTO active_substance (id, name, idsubstance_group) VALUES (10,'Quinapril
 INSERT INTO active_substance (id, name, idsubstance_group) VALUES (11,'Metforminhydrochlorid',2);
 INSERT INTO active_substance (id, name, idsubstance_group) VALUES (12,'Amlodipin',3);
 INSERT INTO active_substance (id, name, idsubstance_group) VALUES (13,'Enalaprilmaleat',1);
+INSERT INTO active_substance (id, name, idsubstance_group) VALUES (14,'Salbutamolsulfat',1);
+
+--
+-- Dumping data for table `drug_active_substance`
+--
+
+INSERT INTO drug_active_substance (iddrug, idactive_substance) VALUES (1,1);
+INSERT INTO drug_active_substance (iddrug, idactive_substance) VALUES (2,2);
+INSERT INTO drug_active_substance (iddrug, idactive_substance) VALUES (3,3);
+INSERT INTO drug_active_substance (iddrug, idactive_substance) VALUES (3,4);
+INSERT INTO drug_active_substance (iddrug, idactive_substance) VALUES (4,5);
+INSERT INTO drug_active_substance (iddrug, idactive_substance) VALUES (5,6);
+INSERT INTO drug_active_substance (iddrug, idactive_substance) VALUES (5,1);
+INSERT INTO drug_active_substance (iddrug, idactive_substance) VALUES (6,7);
+INSERT INTO drug_active_substance (iddrug, idactive_substance) VALUES (7,8);
+INSERT INTO drug_active_substance (iddrug, idactive_substance) VALUES (8,9);
+INSERT INTO drug_active_substance (iddrug, idactive_substance) VALUES (10,10);
+INSERT INTO drug_active_substance (iddrug, idactive_substance) VALUES (11,11);
+INSERT INTO drug_active_substance (iddrug, idactive_substance) VALUES (12,12);
+INSERT INTO drug_active_substance (iddrug, idactive_substance) VALUES (13,13);
+INSERT INTO drug_active_substance (iddrug, idactive_substance) VALUES (14,14);
 
 
 --
@@ -211,25 +235,6 @@ INSERT INTO active_substance (id, name, idsubstance_group) VALUES (13,'Enalapril
 -- Dumping data for table `adverse_effect`
 --
 
-
-
---
--- Dumping data for table `packaging_topic`
---
-
-INSERT INTO packaging_topic (id, order_number, title, text) VALUES (1,1,'Anwenderhinweise','<p style="font-weight: bold;"> Lesen Sie die gesamte e-Packungsbeilage sorgfältig durch, denn sie enthält wichtige Informationen für Sie. Um einen bestmöglichen Behandlungserfosm zu erzielen, muss Prospan® Hustensaft jedoch vorschriftsmäßig angewendet werden.</p><ul> <li>Fragen Sie Ihren Apotheker, wenn Sie weitere Informationen oder einen Rat benötigen. </li><li>Wenn sich Ihre Symptome verschlimmern oder nach 7 Tagen keine Besserung eintritt, müssen Sie auf jeden Fall einen Arzt aufsuchen. </li></ul><div class="row alert alert-danger" role="alert"> <div class="col-md-1 alert_style"> <i class="fas fa-exclamation"></i></div><div class="col-md-11"> <p> Wenn eine der aufgeführten Nebenwirkungen Sie erheblich beeinträchtigt oder Sie Nebenwirkungen bemerken, die nicht in dieser Gebrauchsinformation angegeben sind, informieren Sie bitte Ihren <b>Arzt oder Apotheker</b>.</p></div></div>');
-INSERT INTO packaging_topic (id, order_number, title) VALUES (2,2,'Allgemeine Hinweise');
-INSERT INTO packaging_topic (id, order_number, title) VALUES (3,3,'Vorsichtsmaßnahmen und Warnhinweise');
-INSERT INTO packaging_topic (id, order_number, title) VALUES (4,4,'Indikationen');
-INSERT INTO packaging_topic (id, order_number, title) VALUES (5,5,'Anwendung und Dosierung');
-INSERT INTO packaging_topic (id, order_number, title) VALUES (6,6,'Nebenwirkungen');
-INSERT INTO packaging_topic (id, order_number, title) VALUES (7,7,'Aufbewahrung');
-INSERT INTO packaging_topic (id, order_number, title) VALUES (8,8,'Zusatzinformationen');
-INSERT INTO packaging_topic (id, order_number, title) VALUES (9,9,'Inhalt der Packung');
-INSERT INTO packaging_topic (id, order_number, title) VALUES (10,10,'Darstellung des Medikaments');
-INSERT INTO packaging_topic (id, order_number, title) VALUES (11,11,'Wirkstoff');
-
-
 --
 -- Dumping data for table `pharmaceutical_form`
 --
@@ -239,8 +244,22 @@ INSERT INTO pharmaceutical_form (id, name) VALUES (2,'Retardtablette');
 INSERT INTO pharmaceutical_form (id, name) VALUES (3,'Tablette');
 INSERT INTO pharmaceutical_form (id, name) VALUES (4,'Flüssigkeit');
 INSERT INTO pharmaceutical_form (id, name) VALUES (5,'Kapsel');
+INSERT INTO pharmaceutical_form (id, name) VALUES (6,'Inhalativa');
 
 
+--
+-- Dumping data for table `drug_pharmaceutical_form`
+--
+
+INSERT INTO drug_pharmaceutical_form (iddrug, idpharmaceutical_form) VALUES (1,1);
+INSERT INTO drug_pharmaceutical_form (iddrug, idpharmaceutical_form) VALUES (2,1);
+INSERT INTO drug_pharmaceutical_form (iddrug, idpharmaceutical_form) VALUES (3,2);
+INSERT INTO drug_pharmaceutical_form (iddrug, idpharmaceutical_form) VALUES (7,1);
+INSERT INTO drug_pharmaceutical_form (iddrug, idpharmaceutical_form) VALUES (10,1);
+INSERT INTO drug_pharmaceutical_form (iddrug, idpharmaceutical_form) VALUES (11,1);
+INSERT INTO drug_pharmaceutical_form (iddrug, idpharmaceutical_form) VALUES (12,3);
+INSERT INTO drug_pharmaceutical_form (iddrug, idpharmaceutical_form) VALUES (13,3);
+INSERT INTO drug_pharmaceutical_form (iddrug, idpharmaceutical_form) VALUES (14,6);
 
 
 
@@ -269,6 +288,7 @@ INSERT INTO packaging (id, name, pzn, iddrug) VALUES (18,'N1','03738775',10);
 INSERT INTO packaging (id, name, pzn, iddrug) VALUES (19,'N1','08839133',11);
 INSERT INTO packaging (id, name, pzn, iddrug) VALUES (20,'N1','08454491',12);
 INSERT INTO packaging (id, name, pzn, iddrug) VALUES (21,'N1','01097668',13);
+INSERT INTO packaging (id, name, pzn, iddrug) VALUES (22,'N1','1448760',14);
 
 
 
@@ -284,9 +304,7 @@ INSERT INTO disease (id, name) VALUES(5, 'Blasenentzündung');
 INSERT INTO disease (id, name) VALUES(6, 'Zuckerkrankheit (Typ-2 Diabetis)');
 INSERT INTO disease (id, name) VALUES(7, 'Hoher Blutdruck');
 INSERT INTO disease (id, name) VALUES(8, 'Herzleistungsschwäche (Herzinsuffizienz)');
-
-
-
+INSERT INTO disease (id, name) VALUES(9, 'Bronchialasthma');
 
 --
 -- Dumping data for table `gender_disease`
@@ -306,7 +324,6 @@ INSERT INTO gender_disease (idgender, iddisease) VALUES (2, 5);
 -- Dumping data for table `drug_disease`
 --
 
-
 INSERT INTO drug_disease (iddrug, iddisease) VALUES (1, 1);
 INSERT INTO drug_disease (iddrug, iddisease) VALUES (1, 5);
 INSERT INTO drug_disease (iddrug, iddisease) VALUES (2, 3);
@@ -324,6 +341,7 @@ INSERT INTO drug_disease (iddrug, iddisease) VALUES (11, 6);
 INSERT INTO drug_disease (iddrug, iddisease) VALUES (12, 7);
 INSERT INTO drug_disease (iddrug, iddisease) VALUES (13, 7);
 INSERT INTO drug_disease (iddrug, iddisease) VALUES (13, 8);
+INSERT INTO drug_disease (iddrug, iddisease) VALUES (14, 9);
 
 --
 -- Dumping data for table `drug_feature`
@@ -464,40 +482,6 @@ INSERT INTO drug_feature (id, drug_feature)VALUES (15,'Enthält Lactose');
 INSERT INTO drug_feature (id, drug_feature)VALUES (16,'Keine Beinträchtigung durch Nahrung');
 
 
--- Dumping data for table `drug_feature`
---
-
-INSERT INTO drug_feature_gender (drug_feature_id, gender_id) VALUES (8,2);
-
---
--- Dumping data for table `drug_active_substance`
---
-
-INSERT INTO drug_active_substance (iddrug, idactive_substance) VALUES (1,1);
-INSERT INTO drug_active_substance (iddrug, idactive_substance) VALUES (2,2);
-INSERT INTO drug_active_substance (iddrug, idactive_substance) VALUES (3,3);
-INSERT INTO drug_active_substance (iddrug, idactive_substance) VALUES (3,4);
-INSERT INTO drug_active_substance (iddrug, idactive_substance) VALUES (4,5);
-INSERT INTO drug_active_substance (iddrug, idactive_substance) VALUES (5,6);
-INSERT INTO drug_active_substance (iddrug, idactive_substance) VALUES (5,1);
-INSERT INTO drug_active_substance (iddrug, idactive_substance) VALUES (6,7);
-INSERT INTO drug_active_substance (iddrug, idactive_substance) VALUES (7,8);
-INSERT INTO drug_active_substance (iddrug, idactive_substance) VALUES (8,9);
-INSERT INTO drug_active_substance (iddrug, idactive_substance) VALUES (10,10);
-INSERT INTO drug_active_substance (iddrug, idactive_substance) VALUES (11,11);
-INSERT INTO drug_active_substance (iddrug, idactive_substance) VALUES (12,12);
-INSERT INTO drug_active_substance (iddrug, idactive_substance) VALUES (13,13);
-
---
--- Dumping data for table `drug_adverse_effect`
---
-
-
---
--- Dumping data for table `drug_disease`
---
-
-
 --
 -- Dumping data for table `drug_drug_feature`
 --
@@ -543,19 +527,25 @@ INSERT INTO drug_drug_feature (iddrug, iddrug_feature) VALUES (12,3);
 INSERT INTO drug_drug_feature (iddrug, iddrug_feature) VALUES (12,4);
 INSERT INTO drug_drug_feature (iddrug, iddrug_feature) VALUES (13,8);
 INSERT INTO drug_drug_feature (iddrug, iddrug_feature) VALUES (13,4);
+INSERT INTO drug_drug_feature (iddrug, iddrug_feature) VALUES (14,8);
+INSERT INTO drug_drug_feature (iddrug, iddrug_feature) VALUES (14,12);
+
+
+
+
+-- Dumping data for table `drug_feature`
+--
+
+INSERT INTO drug_feature_gender (drug_feature_id, gender_id) VALUES (8,2);
 
 --
--- Dumping data for table `drug_pharmaceutical_form`
+-- Dumping data for table `drug_adverse_effect`
 --
 
-INSERT INTO drug_pharmaceutical_form (iddrug, idpharmaceutical_form) VALUES (1,1);
-INSERT INTO drug_pharmaceutical_form (iddrug, idpharmaceutical_form) VALUES (2,1);
-INSERT INTO drug_pharmaceutical_form (iddrug, idpharmaceutical_form) VALUES (3,2);
-INSERT INTO drug_pharmaceutical_form (iddrug, idpharmaceutical_form) VALUES (7,1);
-INSERT INTO drug_pharmaceutical_form (iddrug, idpharmaceutical_form) VALUES (10,1);
-INSERT INTO drug_pharmaceutical_form (iddrug, idpharmaceutical_form) VALUES (11,1);
-INSERT INTO drug_pharmaceutical_form (iddrug, idpharmaceutical_form) VALUES (12,3);
-INSERT INTO drug_pharmaceutical_form (iddrug, idpharmaceutical_form) VALUES (13,3);
+
+--
+-- Dumping data for table `drug_disease`
+--
 
 
 --
@@ -781,8 +771,26 @@ INSERT INTO drug_interaction (idinteraction, iddrug) VALUES (1, 1), (1, 4), (1, 
 
 
 --
+-- Dumping data for table `packaging_topic`
+--
+
+INSERT INTO packaging_topic (id, order_number, title, text) VALUES (1,1,'Anwenderhinweise','<p style="font-weight: bold;"> Lesen Sie die gesamte e-Packungsbeilage sorgfältig durch, denn sie enthält wichtige Informationen für Sie. Um einen bestmöglichen Behandlungserfosm zu erzielen, muss Prospan® Hustensaft jedoch vorschriftsmäßig angewendet werden.</p><ul> <li>Fragen Sie Ihren Apotheker, wenn Sie weitere Informationen oder einen Rat benötigen. </li><li>Wenn sich Ihre Symptome verschlimmern oder nach 7 Tagen keine Besserung eintritt, müssen Sie auf jeden Fall einen Arzt aufsuchen. </li></ul><div class="row alert alert-danger" role="alert"> <div class="col-md-1 alert_style"> <i class="fas fa-exclamation"></i></div><div class="col-md-11"> <p> Wenn eine der aufgeführten Nebenwirkungen Sie erheblich beeinträchtigt oder Sie Nebenwirkungen bemerken, die nicht in dieser Gebrauchsinformation angegeben sind, informieren Sie bitte Ihren <b>Arzt oder Apotheker</b>.</p></div></div>');
+INSERT INTO packaging_topic (id, order_number, title) VALUES (2,2,'Allgemeine Hinweise');
+INSERT INTO packaging_topic (id, order_number, title) VALUES (3,3,'Vorsichtsmaßnahmen und Warnhinweise');
+INSERT INTO packaging_topic (id, order_number, title) VALUES (4,4,'Indikationen');
+INSERT INTO packaging_topic (id, order_number, title) VALUES (5,5,'Anwendung und Dosierung');
+INSERT INTO packaging_topic (id, order_number, title) VALUES (6,6,'Nebenwirkungen');
+INSERT INTO packaging_topic (id, order_number, title) VALUES (7,7,'Aufbewahrung');
+INSERT INTO packaging_topic (id, order_number, title) VALUES (8,8,'Zusatzinformationen');
+INSERT INTO packaging_topic (id, order_number, title) VALUES (9,9,'Inhalt der Packung');
+INSERT INTO packaging_topic (id, order_number, title) VALUES (10,10,'Darstellung des Medikaments');
+INSERT INTO packaging_topic (id, order_number, title) VALUES (11,11,'Wirkstoff');
+
+
+--
 -- Dumping data for table `packaging_section`
 --
+
 
 INSERT INTO packaging_section (id, state, iddrug, idpackaging_topic, text) VALUES (1,0,1,1, '<h4>Lesen Sie die gesamte Packungsbeilage sorgfältig durch, bevor Sie mit der Einnahme dieses Arzneimittels beginnen, denn sie enthält wichtige Informationen.</h4> <p>Ihr Arzt hat Ihnen ein wirksames Arzneimittel zur Behandlung von nicht organbedingtem Bluthochdruck und Herzleistungsschwäche verschrieben. Den Nutzen von Accupro 10 schätzt Ihr Arzt für Sie höher ein als die möglichen Risiken, die mit seiner Anwendung einhergehen können.</p> <ul> <li> <p>Heben Sie die Packungsbeilage auf. Vielleicht möchten Sie diese später nochmals lesen.</p> </li> <li> <p>Wenn Sie weitere Fragen haben, wenden Sie sich an Ihren Arzt oder Apotheker.</p> </li> <li> <p>Dieses Arzneimittel wurde Ihnen persönlich verschrieben. Geben Sie es nicht an Dritte weiter. Es kann anderen Menschen schaden, auch wenn diese die gleichen Beschwerden haben wie Sie.</p> </li> <li> <p>Wenn Sie Nebenwirkungen bemerken, wenden Sie sich an Ihren Arzt oder Apotheker. Dies gilt auch für Nebenwirkungen, die nicht in dieser Packungsbeilage angegeben sind. Siehe Abschnitt 4.</p> </li> </ul> <p> <italic>Die kursiv geschriebenen Informationen sind ZusatzInformationen für Ihren Arzt.</italic> </p>');
 INSERT INTO packaging_section (id, state, iddrug, idpackaging_topic, text) VALUES (2,0,1,4,'<h4>Was ist Accupro 10 und wofür wird es angewendet?</h4> <p>Accupro 10 ist ein Arzneimittel aus der Gruppe der sogenannten ACE(Angiotensin-Converting-Enzym)-Hemmer und wird zur Senkung des Bluthochdrucks und zur Behandlung der Herzleistungsschwäche angewendet.</p> <p> <b>Accupro 10 wird angewendet bei:</b> </p> <ul> <li> <p>nicht organbedingtem Bluthochdruck <i>(essenzieller Hypertonie)</i> </p> </li> <li> <p>Herzleistungsschwäche <i>(Herzinsuffizienz)</i> – zusätzlich zu harntreibenden Medikamenten <i>(Diuretika)</i> und insbesondere bei schwerer Herzinsuffizienz auch zu Digitalis</p></li></ul>');
@@ -893,35 +901,63 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
     <hr>
 </div>
 <div>
-    Bitte sprechen Sie mit Ihrem Arzt, bevor Sie Metformin Lich einnehmen,
-    <ul>
-        <li>wenn Sie <b>Probleme mit Ihrer Schilddrüse</b> haben (Hypothyreose).<br> Ihr Arzt wird möglicherweise
-            Ihren Blutspiegel des Schilddrüse-stimulierenden Hormons (TSH) regelmäßig überwachen,</li>
-        <li>wenn Sie sich einer Röntgen- oder anderen bildgebenden Untersuchung unterziehen müssen, bei
-            der Ihnen ein <b>jodhaltiges Kontrastmittel</b> gespritzt wird,</li>
-        <li>wenn Sie sich einem <a class="info_words" type="button" data-toggle="modal"
-                data-target="#bei_einer_größeren_operation">größeren
-                operativen Eingriff</a> unterziehen müssen.</li>
-    </ul>
-    <div class="row" style="margin-top: 15px;">
-        <div class="col-sm-2"><b>Unterzuckerung</b></div>
-        <div class="col-sm-10">
-            Metformin Lich allein verursacht keine Unterzuckerung (Hypoglykämie). Wenn Sie jedoch
-            Metformin Lich zusammen mit anderen Arzneimitteln gegen Ihre Zuckerkrankheit einnehmen, die
-            Unterzuckerung hervorrufen können (wie Sulfonylharnstoffe, Insulin, Glinide), besteht ein Risiko
-            eines zu niedrigen Blutzuckerspiegels. Wenn Anzeichen einer Unterzuckerung auftreten, wie
-            Schwächegefühl, Benommenheit, vermehrtes Schwitzen, beschleunigter Herzschlag, Sehstörungen
-            und Konzentrationsschwierigkeiten, hilft es normalerweise, wenn Sie etwas essen oder trinken, das
-            Zucker enthält.
+    <h3 class="not_take"><i class="fas fa-user-injured bolt_grey"></i><i style="    font-size: 47px;
+        " class="fas fa-comments bolt_grey"></i><i class="fas fa-user-md bolt_grey" aria-hidden="true"></i> </h3>
+
+
+    Bitte sprechen Sie mit Ihrem Arzt oder Apotheker, bevor Sie Amlodipin (besilat) Dexcel 5
+    mg einnehmen.<br>
+    Informieren Sie Ihren Arzt, wenn eine der folgenden Voraussetzungen auf Sie zutrifft oder
+    einmal zutraf:
+    <br><br>
+
+    <div class="row">
+        <div class="col-sm-6 nopadd">
+            <div class="row">
+                <div class="col-sm-12 info_notuse bg_orange">
+                    <b> Probleme mit Ihrer Schilddrüse (Hypothyreose)</b><br> Ihr Arzt wird möglicherweise
+                    Ihren Blutspiegel des Schilddrüse-stimulierenden Hormons (TSH) regelmäßig überwachen.
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 info_notuse bg_orange">
+                    <b> Röntgen- oder anderen bildgebenden Untersuchung</b> <br>
+                    Bei
+                    der Ihnen ein jodhaltiges Kontrastmittel gespritzt wird
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 info_notuse bg_orange">
+                    <b> Unterziehung einer <a class="info_words" type="button" data-toggle="modal"
+                            data-target="#bei_einer_größeren_operation">größeren
+                            operativen Eingriff</a></b>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 info_notuse bg_orange">
+                    <b> Vitamin-B12-Blutspiegel</b> <br>
+                    Eine Langzeitbehandlung mit Metformin kann zu einer Abnahme des Vitamin-B12-Blutspiegels und
+                    infolgedessen zu einer Erkrankung der Nerven führen (siehe <a href="#tab4" aria-controls="tab4"
+                        role="tab" data-toggle="tab">Nebenwirkungen
+                    </a>). Ihr Arzt wird möglicherweise Ihren Vitamin-B12-Spiegel regelmäßig überwachen.
+                </div>
+            </div>
         </div>
-    </div>
-    <div class="row" style="margin-top: 15px;">
-        <div class="col-sm-2"><b>Vitamin-B12-Blutspiegel</b></div>
-        <div class="col-sm-10">
-            Eine Langzeitbehandlung mit Metformin kann zu einer Abnahme des Vitamin-B12-Blutspiegels und
-            infolgedessen zu einer Erkrankung der Nerven führen (siehe <a href="#tab4" aria-controls="tab4" role="tab"
-                data-toggle="tab">Nebenwirkungen
-            </a>). Ihr Arzt wird möglicherweise Ihren Vitamin-B12-Spiegel regelmäßig überwachen.
+        <div class="col-sm-6 nopadd">
+            <div class="row">
+                <div class="col-sm-12 info_notuse bg_orange">
+                    <b> Unterzuckerung</b> <br>
+                    Metformin Lich allein verursacht keine Unterzuckerung (Hypoglykämie). <br>Wenn Sie jedoch
+                    Metformin Lich zusammen mit anderen Arzneimitteln gegen Ihre Zuckerkrankheit einnehmen, die
+                    Unterzuckerung hervorrufen können (wie Sulfonylharnstoffe, Insulin, Glinide), besteht ein Risiko
+                    eines zu niedrigen Blutzuckerspiegels. <br>Wenn Anzeichen einer Unterzuckerung auftreten, wie
+                    Schwächegefühl, Benommenheit, vermehrtes Schwitzen, beschleunigter Herzschlag, Sehstörungen
+                    und Konzentrationsschwierigkeiten, hilft es normalerweise, wenn Sie etwas essen oder trinken, das
+                    Zucker enthält.
+                </div>
+            </div>
+
+
         </div>
     </div>
 </div>
@@ -1181,166 +1217,165 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic, ADDRE
 ');
 INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic)VALUES (93,0,'
 <div class="row">
-    <div class="col-sm-2 col-xs-12 xs-center">
-        <i class="fas fa-user-md doc_icon"></i>
-    </div>
-    <div class="col-sm-10 col-xs-12">
-        Nehmen Sie Metformin Lich immer genau nach Absprache mit Ihrem Arzt ein. Fragen Sie bei Ihrem
-        Arzt oder Apotheker nach, wenn Sie sich nicht sicher sind.<br>
-        Metformin Lich kann die Vorzüge einer gesunden Lebensweise nicht ersetzen. Folgen Sie
-        weiterhin allen Ernährungsratschlägen Ihres Arztes und sorgen Sie für regelmäßige körperliche
-        Bewegung.
-        <br>
-        Ihr Arzt führt regelmäßige Blutzuckerkontrollen bei Ihnen durch und passt Ihre
-        MetforminLich-Dosis Ihrem
-        Blutzuckerspiegel an. Sprechen Sie unbedingt regelmäßig mit Ihrem Arzt.
-        Dies ist besonders wichtig für Kinder und Jugendliche oder wenn Sie schon älter sind.<br>
-        – Ihr Arzt überprüft außerdem mindestens einmal jährlich Ihre Nierenfunktion. Wenn Sie älter
-        sind oder eine eingeschränkte Nierenfunktion haben, können auch häufigere Untersuchungen
-        notwendig sein.
+    <h3 class="not_take"><i class="fas fa-user-injured bolt_grey"></i><i style="    font-size: 47px;
+            " class="fas fa-comments bolt_grey"></i><i class="fas fa-user-md bolt_grey" aria-hidden="true"></i> </h3>
+    <ol>
+        <li>Nehmen Sie dieses Arzneimittel immer genau nach Absprache mit Ihrem Arzt oder Apotheker ein.</li>
+        <li>Fragen Sie bei Ihrem Arzt oder Apotheker nach, wenn Sie sich nicht sicher sind.</li>
+        <li>Metformin Lich kann die Vorzüge einer gesunden Lebensweise nicht ersetzen. Folgen Sie
+            weiterhin allen Ernährungsratschlägen Ihres Arztes und sorgen Sie für regelmäßige körperliche
+            Bewegung.</li>
 
-    </div>
+    </ol>
+
+    <br><br>
+    <b> Überwachung</b>
+    <ul>
+        <li>Ihr Arzt führt regelmäßige Blutzuckerkontrollen bei Ihnen durch und passt Ihre
+            MetforminLich-Dosis Ihrem
+            Blutzuckerspiegel an. <br>Sprechen Sie unbedingt regelmäßig mit Ihrem Arzt.
+            Dies ist besonders wichtig für Kinder und Jugendliche oder wenn Sie schon älter sind.</li>
+        <li>Ihr Arzt überprüft außerdem mindestens einmal jährlich Ihre Nierenfunktion. <br>Wenn Sie älter
+            sind oder eine eingeschränkte Nierenfunktion haben, können auch häufigere Untersuchungen
+            notwendig sein.</li>
+    </ul>
 
 </div>
+
+</div>
+
+
 <div class="row content_header">
-    <h1 xs-center>Dosierung</h1>
+    <h3 class="modal-title xs-center">Dosierung</h3>
     <hr />
 
-    <table class="sideffect_table hidden-xs">
-        <thead>
-            <tr>
-                <th></th>
-                <th style="width: 24%;">Kinder ab 10 Jahre</th>
-                <th>Kinder zwischen 10 und 12 Jahre</th>
-                <th style="width: 24%;">Erwachsene</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td> <b>Dosis</b></td>
-                <td>
-                    500 oder 850 mg
-                </td>
-                <td></td>
-                <td>500 - 850 mg</td>
-            </tr>
-            <tr>
-                <td> <b>Wie oft?</b></td>
-                <td>1x täglich</td>
-                <td></td>
-                <td>
-                    2-3x täglich
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <b>Höchstdosis pro Tag</b>
-                </td>
-                <td>
-                    2000mg pro tag <br> (Aufteilung: 2-3 Einnahmen) </td>
-                <td></td>
-                <td>3000mg pro tag <br> (Aufteilung: 3 Einnahmen)</td>
-            </tr>
-            <tr>
-                <td>
-                    <b>Hinweis</b> </td>
-                <td>
-                </td>
-                <td>Wird nur empfohlen auf ausdrücklichen Rat
-                    des Arztes hin, da die Erfahrung in dieser Altersgruppe
-                    begrenzt ist.</td>
-                <td>Falls Sie eine eingeschränkte Nierenfunktion haben, wird Ihr Arzt Ihnen
-                    möglicherweise eine
-                    niedrigere Dosis verordnen.<br>
+    <div class=" with-nav-tabs panel-default">
+        <div style="height: inherit;">
+            <ul class="nav nav-tabs nav1-tabs">
+                <li class="active"><a href="#tab1default" data-toggle="tab">Kinder ab 10 Jahre</a></li>
+                <li><a href="#tab2default" data-toggle="tab">Kinder zwischen 10 und 12 Jahre</a></li>
+                <li><a href="#tab3default" data-toggle="tab">Erwachsene</a></li>
 
-                    Wenn Sie außerdem Insulin anwenden, erfahren Sie von Ihrem Arzt, wie Sie mit der
-                    Einnahme von
-                    Metformin Lich beginnen sollen</td>
-            </tr>
-        </tbody>
-    </table>
-    <table class="sideffect_table hidden-sm hidden-lg hidden-md">
-        <thead>
-            <tr>
-                <th></th>
-                <th style="width: 24%;">Kinder ab 10 Jahre</th>
-                <th>Kinder zwischen 10 und 12 Jahre</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td> <b>Dosis</b></td>
-                <td>
-                    500 oder 850 mg
-                </td>
-                <td></td>
-            </tr>
-            <tr>
-                <td> <b>Wie oft?</b></td>
-                <td>1x täglich</td>
-                <td></td>
+            </ul>
+        </div>
+        <div class="panel-body">
+            <div class="tab-content">
+                <div class="tab-pane fade in active" id="tab1default">
+                    <div class="row content_header" style="margin-top: 15px;">
+                        <table class="sideffect_table  ">
 
-            </tr>
-            <tr>
-                <td>
-                    <b>Höchstdosis pro Tag</b>
-                </td>
-                <td>
-                    2000mg pro tag <br> (Aufteilung: 2-3 Einnahmen) </td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>
-                    <b>Hinweis</b> </td>
-                <td>
-                </td>
-                <td>Wird nur empfohlen auf ausdrücklichen Rat
-                    des Arztes hin, da die Erfahrung in dieser Altersgruppe
-                    begrenzt ist.</td>
 
-            </tr>
-        </tbody>
-    </table>
-    <table class="sideffect_table hidden-sm hidden-lg hidden-md" style="margin-top: 40px;">
-        <thead>
-            <tr>
-                <th style="width: 1%;"></th>
-                <th style="width: 24%;">Erwachsene</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td> <b>Dosis</b></td>
-                <td>500 - 850 mg</td>
-            </tr>
-            <tr>
-                <td> <b>Wie oft?</b></td>
-                <td>
-                    2-3x täglich
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <b>Höchstdosis pro Tag</b>
-                </td>
-                <td>3000mg pro tag <br> (Aufteilung: 3 Einnahmen)</td>
-            </tr>
-            <tr>
-                <td>
-                    <b>Hinweis</b> </td>
-                <td>Falls Sie eine eingeschränkte Nierenfunktion haben, wird Ihr Arzt Ihnen
-                    möglicherweise eine
-                    niedrigere Dosis verordnen.<br>
+                            <tbody>
+                                <tr>
+                                    <td> <b>Dosis</b></td>
+                                    <td>
+                                        500 oder 850 mg
+                                    </td>
 
-                    Wenn Sie außerdem Insulin anwenden, erfahren Sie von Ihrem Arzt, wie Sie mit der
-                    Einnahme von
-                    Metformin Lich beginnen sollen</td>
-            </tr>
-        </tbody>
-    </table>
+                                </tr>
+                                <tr>
+                                    <td> <b>Wie oft?</b></td>
+                                    <td>1x täglich</td>
+
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>Höchstdosis pro Tag</b>
+                                    </td>
+                                    <td>
+                                        2000mg pro tag <br> (Aufteilung: 2-3 Einnahmen) </td>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+                <div class="tab-pane fade" id="tab2default">
+                    <div class="row content_header" style="margin-top: 15px;">
+                        <table class="sideffect_table hidden-xs">
+
+                            <tbody>
+                                <tr>
+                                    <td> <b>Dosis</b></td>
+                                    <td>
+                                        500 oder 850 mg
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td> <b>Wie oft?</b></td>
+                                    <td>1x täglich</td>
+
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>Höchstdosis pro Tag</b>
+                                    </td>
+                                    <td>
+                                        2000mg pro tag <br> (Aufteilung: 2-3 Einnahmen) </td>
+
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>Hinweis</b> </td>
+
+                                    <td>Wird nur empfohlen auf ausdrücklichen Rat
+                                        des Arztes hin, da die Erfahrung in dieser Altersgruppe
+                                        begrenzt ist.</td>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="tab3default">
+                    <div class="row content_header" style="margin-top: 15px;">
+                        <table class="sideffect_table ">
+
+                            <tbody>
+                                <tr>
+                                    <td> <b>Dosis</b></td>
+
+                                    <td>500 - 850 mg</td>
+                                </tr>
+                                <tr>
+                                    <td> <b>Wie oft?</b></td>
+
+                                    <td>
+                                        2-3x täglich
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>Höchstdosis pro Tag</b>
+                                    </td>
+
+                                    <td>3000mg pro tag <br> (Aufteilung: 3 Einnahmen)</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>Hinweis</b> </td>
+
+                                    <td>Falls Sie eine eingeschränkte Nierenfunktion haben, wird Ihr Arzt Ihnen
+                                        möglicherweise eine
+                                        niedrigere Dosis verordnen.<br>
+
+                                        Wenn Sie außerdem Insulin anwenden, erfahren Sie von Ihrem Arzt, wie Sie mit der
+                                        Einnahme von
+                                        Metformin Lich beginnen sollen</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+
 <div class="row content_header">
-    <h1 xs-center>Einnahme von Metformin Lich</h1>
+    <h3 class="modal-title xs-center">Art und Dauer der Anwendung</h3>
     <hr />
     <div class="row text-center">
         <div class="col-sm-4">
@@ -1477,23 +1512,26 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic)VALUES
             </table>
         </div>
     </div>
-</div>
-<div class="row content_header" style="margin-top: 30px;">
-    <h3 class="modal-title xs-center">Teilung der Tablette</h3>
-    <hr />
-    <div class="col-sm-6 col-xs-12 text-center">
-        <h4> Schritt 1</h4>
-        <img src="./../../assets/p_form/usage/notcrack_long.svg" class="usage_tab" alt="Tablette" title="Tablette">
-        <br><br>
-        <p>Legen Sie bitte die Tablette mit der Bruchkerbe nach oben auf eine feste Unterlage.</p>
+    <div class="row" style="margin-top: 30px;">
+        <div class="col-sm-12">
+            <h4 class="modal-title xs-center">Teilung der Tablette</h4>
+            <hr />
+            <div class="col-sm-6 col-xs-12 text-center">
+                <h4> Schritt 1</h4>
+                <img src="./../../assets/p_form/usage/notcrack_long.svg" class="usage_tab" alt="Tablette"
+                    title="Tablette">
+                <br><br>
+                <p>Legen Sie bitte die Tablette mit der Bruchkerbe nach oben auf eine feste Unterlage.</p>
 
-    </div>
-    <div class="col-sm-6 col-xs-12 text-center">
-        <h4>Schritt 2</h4>
-        <img src="./../../assets/p_form/usage/crack_long.svg" class="usage_tab1" alt="Tablette" title="Tablette">
-        <br><br>
-        <p>Drücken Sie mit den Zeigefingern auf die linke und rechte Hälfte der Tablette.</p>
-
+            </div>
+            <div class="col-sm-6 col-xs-12 text-center">
+                <h4>Schritt 2</h4>
+                <img src="./../../assets/p_form/usage/crack_long.svg" class="usage_tab1" alt="Tablette"
+                    title="Tablette">
+                <br><br>
+                <p>Drücken Sie mit den Zeigefingern auf die linke und rechte Hälfte der Tablette.</p>
+            </div>
+        </div>
     </div>
 </div>
 <div class="row content_header" style="margin-top: 30px;">
@@ -1845,30 +1883,56 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
     <hr>
 </div>
 <div>
+    <h3 class="not_take"><i class="fas fa-user-injured bolt_grey"></i><i style="    font-size: 47px;
+        " class="fas fa-comments bolt_grey"></i><i class="fas fa-user-md bolt_grey" aria-hidden="true"></i> </h3>
+
+
     Bitte sprechen Sie mit Ihrem Arzt oder Apotheker, bevor Sie Amlodipin (besilat) Dexcel 5
     mg einnehmen.<br>
     Informieren Sie Ihren Arzt, wenn eine der folgenden Voraussetzungen auf Sie zutrifft oder
     einmal zutraf:
-    <ul>
-        <li>wenn Sie kürzlich einen Herzinfarkt hatten</li>
-        <li> wenn Sie an Herzinsuffizienz leiden</li>
-        <li> wenn Sie an einem starken Blutdruckanstieg leiden (hypertensive Krise)</li>
-        <li> wenn Sie an einer Erkrankung der Leber leiden</li>
-        <li> wenn Sie älter sind und Ihre Dosis erhöht werden muss</li>
-    </ul>
-    <br>
-    <h4>Kinder</h4>
-    Bei Kindern unter 6 Jahren wurde Amlodipin nicht untersucht. <br>
+    <br><br>
+
     <div class="row">
-        <div class="col-sm-1 col-xs-12 xs-center nopadd"> <i
-                class="far fa-arrow-alt-circle-right arrcircle hidden-sm hidden-xs"></i><i
-                class="fas fa-arrow-circle-down arrcircle hidden-md hidden-lg"></i> </div>
-        <div class="col-sm-11 col-xs-12 nopadd"> Amlodipin (besilat) Dexcel 5 mg kann nur bei Kindern und
-            Jugendlichen mit Bluthochdruck im Alter von 6 bis
-            17 Jahren angewendet werden</div>
+        <div class="col-sm-6 nopadd">
+            <div class="row">
+                <div class="col-sm-12 info_notuse bg_orange">
+                    <b> Erleiden eines Herzinfarktes (kürzlich)</b>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 info_notuse bg_orange">
+                    <b> Leiden an Herzerkrankung</b>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 info_notuse bg_orange">
+                    <b> Leiden an einem starken Blutdruckanstieg (hypertensive Krise)</b>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 nopadd">
+            <div class="row">
+                <div class="col-sm-12 info_notuse bg_orange">
+                    <b> Leiden an einer Lebererkrankung</b>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 info_notuse bg_orange">
+                    <b> Wenn Sie älter sind und Ihre Dosis erhöht werden muss</b>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 info_notuse bg_orange">
+                    <b> <i class="fas fa-child"></i> Kinder</b><br>
+                    Bei Kindern unter 6 Jahren wurde Amlodipin nicht untersucht. <br>
+                    Amlodipin (besilat) Dexcel 5 mg kann nur bei Kindern und
+                    Jugendlichen mit Bluthochdruck im Alter von 6 bis
+                    17 Jahren angewendet werden
+                </div>
+            </div>
+        </div>
     </div>
-    <br>
-    Wegen weiteren Informationen sprechen Sie bitte mit Ihrem Arzt.
 </div>
 <div class="panel-group" id="accordion" style="margin: 30 0 30 0;">
     <div class="panel panel-default">
@@ -2027,100 +2091,132 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic, addre
 </div>');
 INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (104,0,'
 <div class="row">
-    <div class="col-sm-2 col-xs-12 text-center">
-        <i class="fas fa-user-md doc_icon nopadd"></i>
-    </div>
-    <div class="col-sm-10 col-xs-12">
-        Nehmen Sie dieses Arzneimittel immer genau nach Absprache mit Ihrem Arztoder
-        Apotheker ein. Fragen Sie bei Ihrem Arzt oder Apotheker nach, wenn Sie sich nicht sicher
-        sind.
-    </div>
-
+    <h3 class="not_take"><i class="fas fa-user-injured bolt_grey"></i><i style="    font-size: 47px;
+        " class="fas fa-comments bolt_grey"></i><i class="fas fa-user-md bolt_grey" aria-hidden="true"></i> </h3>
+    <ol>
+        <li>Nehmen Sie dieses Arzneimittel immer genau nach Absprache mit Ihrem Arzt oder Apotheker ein.</li>
+        <li>Fragen Sie bei Ihrem Arzt oder Apotheker nach, wenn Sie sich nicht sicher sind.</li>
+    </ol>
 </div>
+
 <div class="row content_header">
     <h3 class="modal-title xs-center">Dosierung</h3>
     <hr />
-    <table class="sideffect_table ">
-        <thead>
-            <tr>
-                <th></th>
-                <th> Kindern und Jugendlichen im Alter von 6 bis 17 Jahren</th>
-                <th style="width: 24%;">Erwachsene</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td> <b>Dosis</b></td>
-                <td>2,5mg</td>
-                <td>5mg</td>
-            </tr>
-            <tr>
-                <td> <b>Wie oft?</b></td>
-                <td>1x täglich</td>
-                <td>
-                    1x täglich
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <b>Höchstdosis pro Tag</b>
-                </td>
-                <td>
-                    10mg pro tag </td>
-                <td>5mg pro tag </td>
-            </tr>
-            <tr>
-                <td>
-                    <b>Hinweis</b> </td>
-                <td colspan="2">Tabletten mit 2,5 mg Amlodipin sind derzeit nicht erhältlich und die 2,5 mg Dosierung
-                    kann
-                    mit Amlodipin (besilat) Dexcel 5 mg nicht erhalten werden, da diese nicht so hergestellt
-                    wurden, dass sie in zwei gleiche Dosen geteilt werden können</td>
-            </tr>
-        </tbody>
-    </table>
+
+    <div class=" with-nav-tabs panel-default">
+        <div style="height: inherit;">
+            <ul class="nav nav-tabs nav1-tabs">
+                <li class="active"><a href="#tab1default" data-toggle="tab">Kindern und Jugendlichen im Alter von 6 bis
+                        17 Jahren</a></li>
+                <li><a href="#tab2default" data-toggle="tab">Erwachsene</a></li>
+            </ul>
+        </div>
+        <div class="panel-body">
+            <div class="tab-content">
+                <div class="tab-pane fade in active" id="tab1default">
+                    <div class="row content_header" style="margin-top: 15px;">
+                        <table class="sideffect_table ">
+                            <tbody>
+                                <tr>
+                                    <td> <b>Dosis</b></td>
+                                    <td>2,5mg</td>
+                                </tr>
+                                <tr>
+                                    <td> <b>Wie oft?</b></td>
+                                    <td>1x täglich</td>
+
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>Höchstdosis pro Tag</b>
+                                    </td>
+                                    <td>
+                                        10mg pro tag </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>Hinweis</b> </td>
+                                    <td>Tabletten mit 2,5 mg Amlodipin sind derzeit nicht erhältlich und die
+                                        2,5 mg Dosierung
+                                        kann
+                                        mit Amlodipin (besilat) Dexcel 5 mg nicht erhalten werden, da diese nicht so
+                                        hergestellt
+                                        wurden, dass sie in zwei gleiche Dosen geteilt werden können</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+                <div class="tab-pane fade" id="tab2default">
+                    <div class="row content_header" style="margin-top: 15px;">
+                        <table class="sideffect_table ">
+                            <tbody>
+                                <tr>
+                                    <td> <b>Dosis</b></td>
+                                    <td>5mg</td>
+                                </tr>
+                                <tr>
+                                    <td> <b>Wie oft?</b></td>
+                                    <td>
+                                        1x täglich
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>Höchstdosis pro Tag</b>
+                                    </td>
+
+                                    <td>5mg pro tag </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 <div class="row content_header" style="margin-top: 30px;">
     <h3 class="modal-title xs-center">Art und Dauer der Anwendung</h3>
     <hr />
-    <div class="row xs-center">
-        <div class="col-sm-2 col-xs-12">
-            <i style="font-size: 33px;" class="fas fa-glass-whiskey"></i>
-        </div>
-        <div class="col-sm-10 col-xs-12 m20t">
+
+    <div class="row text-center">
+        <div class="col-sm-6">
+            <i style="font-size:40px;    color: #575858;" class="fas fa-glass-whiskey"></i><br> <br>
             Dieses Arzneimittel
             kann unabhängig von Mahlzeiten oder Getränken
             eingenommen
             werden.Sie sollten dieses Arzneimittel jeden Tag zur gleichen Zeit mit einem Glas Wasser
-            einnehmen.
-        </div>
-    </div>
-    <div class=" row xs-center m20t">
-        <div class="col-sm-2 col-xs-12">
+            einnehmen.</div>
+        <div class="col-sm-6">
             <img width=" 40" src="./../../assets/icons/11.svg" />
-        </div>
-        <div class="col-sm-10 col-xs-12 m20t">
-            Amlodipin (besilat) Dexcel 5 mg darf nicht mit Grapefruitsaft eingenommen
-            werden.
-        </div>
+            <br>
+            <br> Amlodipin (besilat) Dexcel 5 mg darf nicht mit Grapefruitsaft eingenommen
+            werden.</div>
     </div>
-</div>
-<div class="row content_header" style="margin-top: 30px;">
-    <h3 class="modal-title xs-center">Teilung der Tablette</h3>
-    <hr />
-    <div class="col-sm-6 col-xs-12 text-center">
-        <h4> Schritt 1</h4>
-        <img src="./../../assets/p_form/usage/notcrack_small.svg" class="usage_tab" alt="Tablette" title="Tablette">
-        <br><br>
-        <p>Legen Sie bitte die Tablette mit der Bruchkerbe nach oben auf eine feste Unterlage.</p>
 
-    </div>
-    <div class="col-sm-6 col-xs-12 text-center">
-        <h4>Schritt 2</h4>
-        <img src="./../../assets/p_form/usage/crack_small.svg" class="usage_tab1" alt="Tablette" title="Tablette">
-        <br><br>
-        <p>Drücken Sie mit den Zeigefingern auf die linke und rechte Hälfte der Tablette.</p>
+    <div class="row" style="margin-top: 30px;">
+        <div class="col-sm-12">
+            <h4 class="modal-title xs-center">Teilung der Tablette</h4>
+            <hr />
+            <div class="col-sm-6 col-xs-12 text-center">
+                <h4> Schritt 1</h4>
+                <img src="./../../assets/p_form/usage/notcrack_small.svg" class="usage_tab" alt="Tablette"
+                    title="Tablette">
+                <br><br>
+                <p>Legen Sie bitte die Tablette mit der Bruchkerbe nach oben auf eine feste Unterlage.</p>
 
+            </div>
+            <div class="col-sm-6 col-xs-12 text-center">
+                <h4>Schritt 2</h4>
+                <img src="./../../assets/p_form/usage/crack_small.svg" class="usage_tab1" alt="Tablette"
+                    title="Tablette">
+                <br><br>
+                <p>Drücken Sie mit den Zeigefingern auf die linke und rechte Hälfte der Tablette.</p>
+            </div>
+        </div>
     </div>
 </div>
 <div class="row content_header" style="margin-top: 30px;">
@@ -2409,17 +2505,19 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
         Probleme bereitet oder länger als 1 Woche andauert, sollten Sie Ihren Arzt aufsuchen.
     </div>
 </div>
+
 ',12,6);
 INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (106,0,'Beispieltext',12,7);
 INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (107,0,'
 <!-- Allgemein -->
 
 <div class="row" style="padding-left: 15px;">
-   <h4> Anwendung von Amlodipin (besilat) Dexcel 5 mg </h4>
+    <h4> Anwendung von Amlodipin (besilat) Dexcel 5 mg </h4>
     <ul>
         <li>Zur Behandlung von hohem Blutdruck (Hypertonie)</li>
         <li>Zur Behandlung einer bestimmten Form von Schmerzen im Brustbereich,
-            was als <a class="info_words" type="button" data-toggle="modal" data-target="#angina">Angina pectoris</a>
+            was als <a class="info_words" type="button" data-toggle="modal" data-target="#angina_pectoris">Angina
+                pectoris</a>
             oder, in einers seltenen Form, als <i>vasospastische (Prinzmetal-) Angina </i> bezeichnet wird.
         </li>
     </ul>
@@ -2438,7 +2536,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
             <td>
                 <div class="col-sm-12">
                     <b>Patienten mit <a class="info_words" type="button" data-toggle="modal"
-                            data-target="#angina">Angina pectoris</a></b></div>
+                            data-target="#angina_pectoris">Angina pectoris</a></b></div>
             </td>
             <td> Amlodipin (besilat) Dexcel 5 mg wirkt indem es die Blutversorgung des
                 Herzmuskels verbessert, der dadurch besser mit Sauerstoff versorgt wird, wodurch
@@ -2453,8 +2551,8 @@ Amlodipin (besilat) Dexcel 5 mg Tabletten sind weiße, runde Tabletten.
 ',12,9);
 INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (110,0,'
 Amlodipin (besilat) Dexcel 5 mg Tabletten sind in Packungen mit 7, 10, 14, 20, 28, 30, 50, 60 und 100
-    Tabletten erhältlich.
-    Es werden möglicherweise nicht alle Packungsgrößen in den Verkehr gebracht
+Tabletten erhältlich.
+Es werden möglicherweise nicht alle Packungsgrößen in den Verkehr gebracht
 ',12,10);
 INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (111,0,'
 1 Tablette enthält 6,935 mg Amlodipin als Besilat, entsprechend 5 mg Amlodipin. <br>
@@ -2853,35 +2951,34 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic, addre
 </div>');
 INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (116,0,'
 <div class="row">
-    <div class="col-sm-2 col-xs-12 text-center">
-        <i class="fas fa-user-md doc_icon nopadd"></i>
-    </div>
-    <div class="col-sm-10 col-xs-12">
-        Nehmen Sie dieses Arzneimittel immer genau nach Absprache mit Ihrem Arzt oder Apotheker ein. Fragen Sie bei
-        Ihrem Arzt oder Apotheker nach, wenn Sie sich nicht sicher sind. Es ist sehr wichtig, dass Sie Enalapril AL 5
-        mg einnehmen, solange es Ihnen Ihr Arzt verordnet.
-    </div>
+    <h3 class="not_take"><i class="fas fa-user-injured bolt_grey"></i><i style="    font-size: 47px;
+        " class="fas fa-comments bolt_grey"></i><i class="fas fa-user-md bolt_grey" aria-hidden="true"></i> </h3>
+    <ol>
+        <li>Nehmen Sie dieses Arzneimittel immer genau nach Absprache mit Ihrem Arzt oder Apotheker ein.</li>
+        <li>Fragen Sie bei Ihrem Arzt oder Apotheker nach, wenn Sie sich nicht sicher sind.</li>
+        <li> Es ist sehr wichtig, dass Sie Enalapril AL 5mg einnehmen, solange es Ihnen Ihr Arzt verordnet.</li>
+    </ol>
 </div>
 <div class="row content_header">
     <h3 class="modal-title xs-center">Dosierung</h3>
     <hr />
-    <div class="panel with-nav-tabs panel-default">
-        <div class="panel-heading" style="height: inherit;">
-            <ul class="nav nav-tabs">
+    <div class=" with-nav-tabs panel-default">
+        <div style="height: inherit;">
+            <ul class="nav nav-tabs nav1-tabs">
                 <li class="active"><a href="#tab1default" data-toggle="tab">Bluthochdruck</a></li>
+                <li><a href="#tab3default" data-toggle="tab">Eingeschränkte Nierenfunktion</a></li>
+                <li><a href="#tab4default" data-toggle="tab">Ältere Patienten</a></li>
                 <li><a href="#tab2default" data-toggle="tab"> Herzleistungsschwäche / Funktionsstörung der linken
                         Herzkammer
                     </a>
                 </li>
-                <li><a href="#tab3default" data-toggle="tab">Bei eingeschränkter Nierenfunktion</a></li>
-                <li><a href="#tab4default" data-toggle="tab">Bei älteren Patienten</a></li>
 
             </ul>
         </div>
         <div class="panel-body">
             <div class="tab-content">
                 <div class="tab-pane fade in active" id="tab1default">
-                    <div class="row content_header">
+                    <div class="row content_header" style="margin-top: 15px;">
                         <h4>Anfangsdosis</h4>
                         <hr>
                         <table class="sideffect_table ">
@@ -2893,7 +2990,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                                 </tr>
                                 <tr>
                                     <td> <b>Wie oft?</b></td>
-                                    <td>1x täglich</td>
+                                    <td>1x täglich (siehe Aufteilung des Dosis)</td>
 
                                 </tr>
                                 <tr>
@@ -2918,7 +3015,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                             <thead>
                                 <tr>
                                     <th></th>
-                                    <th>Anfangsdosis</th>
+                                    <th style="width: 26%;">Anfangsdosis</th>
                                     <th>Patienten mit stark aktiviertem blutdruckregulierendem System
                                         <span class="tooltip">(z.B)
                                             <span class="tooltiptext">bei Bluthochdruck aufgrund einer
@@ -2939,7 +3036,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                                 </tr>
                                 <tr>
                                     <td> <b>Wie oft?</b></td>
-                                    <td>1x täglich</td>
+                                    <td>1x täglich </td>
                                     <td>1x täglich</td>
 
                                 </tr>
@@ -3036,7 +3133,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                     </div>
                 </div>
                 <div class="tab-pane fade" id="tab2default">
-                    <div class="row content_header">
+                    <div class="row content_header" style="margin-top: 15px;">
                         <h4>Anfangsdosis</h4>
                         <hr>
                         <table class="sideffect_table ">
@@ -3211,51 +3308,96 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
 <div class="row content_header" style="margin-top: 30px;">
     <h3 class="modal-title xs-center">Art und Dauer der Anwendung</h3>
     <hr />
-    <div class="row xs-center">
-        <div class="col-sm-2 col-xs-12">
-            <i style="font-size: 33px;" class="fas fa-glass-whiskey"></i>
-        </div>
-        <div class="col-sm-10 col-xs-12 m20t">
+
+    <div class="row text-center">
+        <div class="col-sm-6">
+            <i style="font-size:40px;    color: #575858;" class="fas fa-glass-whiskey"></i><br> <br>
             Nehmen Sie die Tabletten unzerkaut mit ausreichend Flüssigkeit (z. B. einem Glas Wasser) ein. Die
             Einnahme
-            kann unabhängig von den Mahlzeiten erfolgen.<br>Die angegebene Tagesmenge wird in der Regel morgens auf
-            einmal
-            eingenommen, kann aber gegebenenfalls auch auf 2 Einnahmen morgens und abends verteilt werden.
-        </div>
-    </div>
-    <div class=" row xs-center m20t">
-        <div class="col-sm-2 col-xs-12">
-            <i style="font-size: 33px;" class="fas fa-user-md" aria-hidden="true"></i>
-        </div>
-        <div class="col-sm-10 col-xs-12 m20t">
-            Die Dauer der Behandlung bestimmt Ihr Arzt. Die Behandlung mit Enalapril AL 5mg ist in der Regel eine
+            kann unabhängig von den Mahlzeiten erfolgen. </div>
+        <div class="col-sm-6">
+            <i style="font-size:40px;    color: #575858;" class="fas fa-user-md"></i>
+            <br>
+            <br> Die Dauer der Behandlung bestimmt Ihr Arzt. Die Behandlung mit Enalapril AL 5mg ist in der Regel
+            eine
             Langzeittherapie. <br>
 
             Bitte sprechen Sie mit Ihrem Arzt, wenn Sie den Eindruck haben, dass die Wirkung von Enalapril AL 5mg zu
             stark oder zu schwach ist.
         </div>
     </div>
-</div>
 
-<div class="row content_header" style="margin-top: 30px;">
-    <h3 class="modal-title xs-center">Teilung der Tablette</h3>
-    <hr />
-    <div class="col-sm-6 col-xs-12 text-center">
-        <h4> Schritt 1</h4>
-        <img src="./../../assets/p_form/usage/notcrack_small.svg" class="usage_tab" alt="Tablette" title="Tablette">
-        <br><br>
-        <p>Legen Sie bitte die Tablette mit der Bruchkerbe nach oben auf eine feste Unterlage.</p>
+    <div  class="row hidden-xs" style="margin-top: 30px;">
+        <div class="col-sm-12">
+            <h4>Gleiche Aufteilung der Dosen</h4>
+            <table class="sideffect_table">
+                <thead class="text-center">
+                    <tr>
+                        <th>Anzahl der Einnahmen pro Tag </th>
+                        <th>Morgens <br> zum Frühstück</th>
+                        <th>Mittags <br> zum Mittagessen</th>
+                        <th>Abends <br> zum Abendessen</th>
+                    </tr>
+                </thead>
+                <tbody class="text-center">
+                    <tr>
+                        <td>
+                            1x
+                        </td>
+                        <td>
+                            X
+                        </td>
+                        <td>
 
+                        </td>
+                        <td>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            2x
+                        </td>
+                        <td>
+                            X
+                        </td>
+                        <td>
+
+                        </td>
+                        <td>
+                            X
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
-    <div class="col-sm-6 col-xs-12 text-center">
-        <h4>Schritt 2</h4>
-        <img src="./../../assets/p_form/usage/crack_small.svg" class="usage_tab1" alt="Tablette" title="Tablette">
-        <br><br>
-        <p>Drücken Sie mit den Zeigefingern auf die linke und rechte Hälfte der Tablette.</p>
 
+
+
+    <div class="row" style="margin-top: 30px;">
+        <div class="col-sm-12">
+            <h4 class="modal-title xs-center">Teilung der Tablette</h4>
+            <hr />
+            <div class="col-sm-6 col-xs-12 text-center">
+                <h4> Schritt 1</h4>
+                <img src="./../../assets/p_form/usage/notcrack_small.svg" class="usage_tab" alt="Tablette"
+                    title="Tablette">
+                <br><br>
+                <p>Legen Sie bitte die Tablette mit der Bruchkerbe nach oben auf eine feste Unterlage.</p>
+
+            </div>
+            <div class="col-sm-6 col-xs-12 text-center">
+                <h4>Schritt 2</h4>
+                <img src="./../../assets/p_form/usage/crack_small.svg" class="usage_tab1" alt="Tablette"
+                    title="Tablette">
+                <br><br>
+                <p>Drücken Sie mit den Zeigefingern auf die linke und rechte Hälfte der Tablette.</p>
+            </div>
+        </div>
     </div>
-</div>
 
+</div>
 <div class="row content_header" style="margin-top: 30px;">
     <h3 class="modal-title xs-center">Weitere Informationen</h3>
     <hr />
@@ -4363,8 +4505,772 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
 
 </ul>
 ',13,11);
+--Salbutamol--
 
--- Dump tailored_text
+INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (123,0,'Beispieltext1',14,1);
+INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (124,0,'Beispieltext2',14,2);
+INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (125,0,'
+<div class="row content_header">
+    <h1>Warnhinweise und Vorsichtsmaßnahmen
+    </h1>
+    <hr>
+</div>
+<div>
+    <h3 class="not_take"><i class="fas fa-user-injured bolt_grey"></i><i style="font-size: 47px;
+        " class="fas fa-comments bolt_grey"></i><i class="fas fa-user-md bolt_grey" aria-hidden="true"></i> </h3>
+    Bitte sprechen Sie mit Ihrem Arzt oder Apotheker, bevor Sie Salbutamol einnehmen.<br>
+    Informieren Sie Ihren Arzt, wenn eine der folgenden Voraussetzungen auf Sie zutrifft oder
+    einmal zutraf:
+    <br><br>
+
+    <div class="row">
+        <div class="col-sm-6 nopadd">
+            <div class="row">
+                <div class="col-sm-12 info_notuse bg_orange">
+                    <b> Erleiden eines Herzinfarktes (kürzlich)</b>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 info_notuse bg_orange">
+                    <b> Leiden an Herzerkrankung</b>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 info_notuse bg_orange">
+                    <b> Leiden an einem starken Blutdruckanstieg (hypertensive Krise)</b>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 nopadd">
+            <div class="row">
+                <div class="col-sm-12 info_notuse bg_orange">
+                    <b> Leiden an einer Lebererkrankung</b>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 info_notuse bg_orange">
+                    <b> Wenn Sie älter sind und Ihre Dosis erhöht werden muss</b>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 info_notuse bg_orange">
+                    <b> <i class="fas fa-child"></i> Kinder</b><br>
+                    Bei Kindern unter 6 Jahren wurde Amlodipin nicht untersucht. <br>
+                    Amlodipin (besilat) Dexcel 5 mg kann nur bei Kindern und
+                    Jugendlichen mit Bluthochdruck im Alter von 6 bis
+                    17 Jahren angewendet werden
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="panel-group" id="accordion" style="margin: 30 0 30 0;">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title text-center-xs" data-toggle="collapse" data-target="#collapse3">
+                <img width="40" src="./../../assets/icons/10.svg" /> <span
+                    class="hidden-lg hidden-sm hidden-md"><br><br></span> Einnahme von Amlodipin zusammen mit
+                anderen Medikamente
+            </h4>
+        </div>
+        <div id="collapse3" class="panel-collapse collapse in">
+            <div class="panel-body">
+                Informieren Sie Ihren Arzt oder Apotheker, wenn Sie andere Arzneimittel
+                einnehmen/anwenden, kürzlich andere Arzneimittel eingenommen/angewendet haben oder
+                beabsichtigen andere Arzneimittel einzunehmen/anzuwenden. <br>
+                Amlodipin (besilat) Dexcel 5 mg kann andere Arzneimittel beeinflussen oder von anderen
+                Arzneimitteln beeinflusst werden, wie z.B.:
+                <ul>
+                    <li>Ketoconazol, Itraconazol (gegen Pilzerkrankungen)</li>
+                    <li>Ritonavir, Indinavir, Nelfinavir (so genannte Proteasehemmer gegen HIV-Infektionen)</li>
+                    <li>Rifampicin, Erythromycin, Clarithromycin (Antibiotika)</li>
+                    <li>Hypericum perforatum (Johanniskraut)</li>
+                    <li>Verapamil, Diltiazem (Herzmittel)</li>
+                    <li>Dantrolen (eine Infusion bei schwerer Störung der Körpertemperatur)</li>
+                    <li>Tacrolimus (ein Arzneimittel zur Beeinflussung des Immunsystems)</li>
+                    <li>Simvastatin (zur Senkung der Cholesterinwerte)</li>
+                    <li>Ciclosporin (ein Mittel zur Unterdrückung des Immunsystems)</li>
+                </ul>
+                Amlodipin (besilat) Dexcel 5 mg kann Ihren Blutdruck noch weiter senken, wenn Sie bereits
+                andere blutdrucksenkende Arzneimittel anwenden.
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title text-center-xs" data-toggle="collapse" data-target="#collapse4">
+                <img width="40" src="./../../assets/icons/11.svg" /> <span
+                    class="hidden-lg hidden-sm hidden-md"><br><br></span> Einnahme von Amlodipin zusammen mit
+                Nahrungsmitteln und
+                Getränken
+            </h4>
+        </div>
+        <div id="collapse4" class="panel-collapse collapse">
+            <div class="panel-body">
+                Personen, die Amlodipin (besilat) Dexcel 5 mg einnehmen, sollten keine Grapefruit essen
+                und keinen Grapefruitsaft trinken, weil hierdurch der Blutspiegel des Wirkstoffs Amlodipin
+                erhöht werden kann, was möglicherweise zu einem unkontrollierten Anstieg der
+                blutdrucksenkenden Wirkung von Amlodipin (besilat) Dexcel 5 mg führt.
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title text-center-xs" data-toggle="collapse" data-target="#collapse5">
+                <img width="40" src="./../../assets/icons/8.svg" /> <span
+                    class="hidden-lg hidden-sm hidden-md"><br><br></span> Schwangerschaft und Stillzeit
+            </h4>
+        </div>
+        <div id="collapse5" class="panel-collapse collapse">
+            <div class="panel-body">
+                Wenn Sie schwanger sind oder stillen, oder wenn Sie vermuten, schwanger zu sein oder
+                beabsichtigen, schwanger zu werden, fragen Sie vor der Anwendung dieses Arzneimittels
+                Ihren Arzt oder Apotheker um Rat.
+                <h4>Schwangerschaft</h4>
+                Die Sicherheit von Amlodipin während einer Schwangerschaft konnte nicht nachgewiesen
+                werden. Wenn Sie glauben, schwanger zu sein, oder eine Schwangerschaft planen,
+                müssen Sie dies Ihrem Arzt vor der Einnahme von Amlodipin (besilat) Dexcel 5 mg sagen.</br>
+                <h4>Stillzeit</h4>
+                Es ist nicht bekannt, ob Amlodipin in die Muttermilch übergeht. Wenn Sie stillen oder mit
+                dem Stillen beginnen möchten, müssen Sie dies Ihrem Arzt vor der Einnahme von
+                Amlodipin (besilat) Dexcel 5 mg sagen.
+                Fragen Sie vor der Einnahme von allen Arzneimitteln Ihren Arzt oder Apotheker um Rat.
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title text-center-xs" data-toggle="collapse" data-target="#collapse6">
+                <img width="40" src="./../../assets/icons/3.svg" /><span
+                    class="hidden-lg hidden-sm hidden-md"><br><br></span>
+                Verkehrstüchtigkeit und Fähigkeit zum Bedienen von Maschinen
+            </h4>
+        </div>
+        <div id="collapse6" class="panel-collapse collapse">
+            <div class="panel-body">Die Fähigkeit zur aktiven Teilnahme am Straßenverkehr oder zum Bedienen von
+                Maschinen
+                kann durch Amlodipin (besilat) Dexcel 5 mg beeinträchtigt werden. Falls die Tabletten bei
+                Ihnen ein Krankheitsgefühl, Schwindel oder Müdigkeit hervorrufen oder Kopfschmerzen
+                auftreten, fahren Sie kein Auto oder bedienen Sie keine Maschinen und suchen Sie
+                umgehend Ihren Arzt auf. </div>
+        </div>
+    </div>
+</div>
+</div>
+<h3 class="not_take"><i class="fas fa-bolt bolt_red" aria-hidden="true"></i> <br> Amlodipin (besilat) Dexcel 5 mg
+    nicht
+    einnehmen bei </h3>
+<div class="row">
+    <div class="col-sm-6 nopadd">
+        <div class="row">
+            <div class="col-sm-12 info_notuse"><b>Allergisch </b> gegen
+                <ul>
+                    <li>Amlodipin</li>
+                    <li>Mikrokristalline Cellulose</li>
+                    <li>CalciumhydrogenphosphatDihydrat</li>
+                    <li>Carboxymethylstärke-Natrium (Typ A) (Ph. Eur.)</li>
+                    <li>Magnesiumstearat (Ph.Eur.)
+                        [pflanzlich]</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 info_notuse"> <b>Leiden an stark erniedrigtem Blutdruck (Hypotonie) </b> </div>
+        </div>
+    </div>
+    <div class="col-sm-6 nopadd">
+        <div class="row">
+            <div class="col-sm-12 info_notuse"><b>Leiden an schwerer Verengung des Ausflusstraktes der linken
+                    Herzkammer</b>
+                (Aortenstenose) oder an einem <b>kardiogenen Schock</b> (dann kann Ihr Herz den Körper
+                nicht mehr mit genügend Blut versorgen)</div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 info_notuse"><b>Leiden an Herzinsuffizienz nach einem Herzinfarkt </b>
+            </div>
+        </div>
+    </div>
+</div>
+',14,3);
+INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic, address) VALUES (126,0,'Beispieltext',14,4, '
+<div class="row">
+    <div class="col-md-9">
+        <h3>Pharmazeutischer Unternehmer </h3>
+        <p> Dexcel Pharma GmbH <br />
+            Carl-Zeiss-Str. 2<br />
+            63755 Alzenau<br />
+            <b>Tel.:</b> 0 60 23 - 94 80 - 0 <br />
+            <b>Fax:</b> 0 60 23 - 94 80 - 50 <br />
+        </p>
+    </div>
+    <div class="col-md-3">
+        <img class="img-responsive" src="/assets/images/company/dexcel.jpeg" />
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-9">
+        <h3>Hersteller </h3>
+        <p> Dexcel Pharma GmbH <br />
+            Steinbruch 2, Halle 15<br />
+            Lager im Industriepark Giesbert G.b.R. </br>
+            63755 Alzenau<br />
+        </p>
+    </div>
+    <div class="col-md-3">
+    </div>
+</div>');
+INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (127,0,'
+<!--Anwendung und Dosierung-->
+<div class="row">
+    <h3 class="not_take"><i class="fas fa-user-injured bolt_grey"></i><i style="    font-size: 47px;
+        " class="fas fa-comments bolt_grey"></i><i class="fas fa-user-md bolt_grey" aria-hidden="true"></i> </h3>
+    <ol>
+        <li>Nehmen Sie dieses Arzneimittel immer genau nach Absprache mit Ihrem Arzt oder Apotheker ein.</li>
+        <li>Fragen Sie bei Ihrem Arzt oder Apotheker nach, wenn Sie sich nicht sicher sind.</li>
+    </ol>
+</div>
+
+<div class="row content_header">
+    <h3 class="modal-title xs-center">Dosierung</h3>
+    <hr />
+
+    <div class=" with-nav-tabs panel-default">
+        <div style="height: inherit;">
+            <ul class="nav nav-tabs nav1-tabs">
+                <li class="active"><a href="#tab1default" data-toggle="tab">Erwachsene</a></li>
+                <li><a href="#tab2default" data-toggle="tab">Kinder (4 – 11 Jahre)</a></li>
+                <li><a href="#tab3default" data-toggle="tab">Kinder unter 4 Jahre</a></li>
+
+            </ul>
+        </div>
+        <div class="panel-body">
+            <div class="tab-content">
+                <div class="tab-pane fade in active" id="tab1default">
+                    <div class="row content_header" style="margin-top: 15px;">
+                        <table class="sideffect_table ">
+                            <tbody>
+                                <tr>
+                                    <td> <b>Einzeldosis</b></td>
+                                    <td>1 Sprühstoß &#8793;
+                                        100 Mikrogramm Salbutamol</td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <b>Höchstdosis pro Tag</b>
+                                    </td>
+                                    <td>
+                                        12 Sprühstöße &#8793;
+                                        1,2 mg Salbutamol <br>Eine höhere Dosierung wird in der Regel
+                                        nicht besser wirken, aber es besteht die Gefahr, dass dadurch
+                                        schwerwiegende Nebenwirkungen entstehen. </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>Akutbehandlung</b> </td>
+                                    <td>Zur Akutbehandlung plötzlich auftretender Bronchialkrämpfe
+                                        und anfallsweise auftretender Atemnot wird eine Einzeldosis
+                                        inhaliert.<br>
+                                        Sollte sich die Atemnot 5 – 10 Minuten nach Inhalation der
+                                        ersten Einzeldosis nicht spürbar gebessert haben, kann eine
+                                        weitere Einzeldosis genommen werden.<br>
+                                        Kann ein schwerer Anfall von Luftnot auch durch eine zweite
+                                        Einzeldosis nicht behoben werden, können weitere
+                                        Einzeldosen erforderlich werden. In diesen Fällen muss
+                                        unverzüglich ärztliche Hilfe in Anspruch genommen werden.</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b> Vorbeugung </b> </td>
+                                    <td>Zur gezielten Vorbeugung bei Anstrengungsasthma oder
+                                        vorhersehbarem Allergenkontakt wird eine Einzeldosis, wenn
+                                        möglich 10 – 15 Minuten vorher, inhaliert.<br>
+                                        Der Abstand zwischen den einzelnen Inhalationen soll
+                                        mindestens 3 – 4 Stunden betragen.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+                <div class="tab-pane fade" id="tab2default">
+                    <div class="row content_header" style="margin-top: 15px;">
+                        <table class="sideffect_table ">
+                            <tbody>
+                                <tr>
+                                    <td> <b>Einzeldosis</b></td>
+                                    <td>5mg</td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <b>Höchstdosis pro Tag</b>
+                                    </td>
+
+                                    <td> 6 Sprühstöße &#8793;
+                                        0,6 mg Salbutamol <br> Eine höhere Dosierung wird in der Regel
+                                        nicht besser wirken, aber es besteht die Gefahr, dass dadurch
+                                        schwerwiegende Nebenwirkungen entstehen.</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>Akutbehandlung</b> </td>
+                                    <td>Zur Akutbehandlung plötzlich auftretender Bronchialkrämpfe
+                                        und anfallsweise auftretender Atemnot wird eine Einzeldosis
+                                        inhaliert.<br>
+                                        Sollte sich die Atemnot 5 – 10 Minuten nach Inhalation der
+                                        ersten Einzeldosis nicht spürbar gebessert haben, kann eine
+                                        weitere Einzeldosis genommen werden.<br>
+                                        Kann ein schwerer Anfall von Luftnot auch durch eine zweite
+                                        Einzeldosis nicht behoben werden, können weitere
+                                        Einzeldosen erforderlich werden. In diesen Fällen muss
+                                        unverzüglich ärztliche Hilfe in Anspruch genommen werden.</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b> Vorbeugung </b> </td>
+                                    <td>Zur gezielten Vorbeugung bei Anstrengungsasthma oder
+                                        vorhersehbarem Allergenkontakt wird eine Einzeldosis, wenn
+                                        möglich 10 – 15 Minuten vorher, inhaliert.<br>
+                                        Der Abstand zwischen den einzelnen Inhalationen soll
+                                        mindestens 3 – 4 Stunden betragen.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="tab3default">
+                    <div class="row content_header" style="margin-top: 15px;">
+                        Die Sicherheit von Salbutamol-ratiopharm® N Dosieraerosol
+                        bei Kindern unter 4 Jahren ist mit derjenigen bei Kindern über
+                        4 Jahren vergleichbar.<br> Eine Dosierungsempfehlung kann
+                        jedoch nicht gegeben werden. Bitte wenden Sie sich an Ihren
+                        behandelnden Arzt.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row content_header" style="margin-top: 30px;">
+    <h3 class="modal-title xs-center">Art und Dauer der Anwendung</h3>
+    <hr />
+
+    <div class="row text-center">
+        <div class="col-sm-4">
+            <i style="font-size:40px;    color: #575858;" class="fas fa-child"></i><br> <br>
+            Kinder sollten dieses Arzneimittel nur unter Aufsicht eines
+            Erwachsenen und nach Vorschrift des Arztes anwenden.
+            Jüngere Kinder sollten mit Hilfe Erwachsener inhalieren.
+            <br>
+            Diese müssen das Kind ermuntern auszuatmen und sofort bei Beginn des Einatmens einen
+            Sprühstoß auszulösen.</div>
+        <div class="col-sm-4">
+            <img width=" 40" src="./../../assets/images/sit.svg" />
+            <br>
+            <br> Nach Möglichkeit sollte die Anwendung im Sitzen oder Stehen
+            erfolgen.</div>
+        <div class="col-sm-4">
+            <i style="font-size:40px;    color: #575858;" class="fas fa-hourglass-half"></i><br> <br>
+            Die Dauer der Behandlung richtet sich nach Art, Schwere
+            und Verlauf der Erkrankung und ist vom Arzt individuell zu
+            entscheiden.</div>
+    </div>
+    <div class="row ">
+        <div class="alert alert-info" role="alert">
+            Bei Kindern unter 6 Jahren und älteren Patienten wird der
+            Einsatz einer Inhalierhilfe (Spacer) dringend empfohlen.
+            Bitte bea chten Sie, dass bei Verwendung von Salbutamolratiopharm® N Dosieraerosol zusammen mit einer
+            Inhalierhilfe
+            unter Umständen die Dosis durch den Arzt angepasst werden
+            muss. </div>
+    </div>
+
+    <div class="alert alert-info" role="alert">
+        Bei Kindern unter 6 Jahren und älteren Patienten wird der
+        Einsatz einer Inhalierhilfe (Spacer) dringend empfohlen.
+        Bitte bea chten Sie, dass bei Verwendung von Salbutamolratiopharm® N Dosieraerosol zusammen mit einer
+        Inhalierhilfe
+        unter Umständen die Dosis durch den Arzt angepasst werden
+        muss. </div>
+
+    <div class="row" style="margin-top: 30px;">
+        <div class="col-sm-12">
+            <h4 class="modal-title xs-center">Teilung der Tablette</h4>
+            <hr />
+            <div class="col-sm-6 col-xs-12 text-center">
+                <h4> Schritt 1</h4>
+                <img src="./../../assets/p_form/usage/notcrack_small.svg" class="usage_tab" alt="Tablette"
+                    title="Tablette">
+                <br><br>
+                <p>Legen Sie bitte die Tablette mit der Bruchkerbe nach oben auf eine feste Unterlage.</p>
+
+            </div>
+            <div class="col-sm-6 col-xs-12 text-center">
+                <h4>Schritt 2</h4>
+                <img src="./../../assets/p_form/usage/crack_small.svg" class="usage_tab1" alt="Tablette"
+                    title="Tablette">
+                <br><br>
+                <p>Drücken Sie mit den Zeigefingern auf die linke und rechte Hälfte der Tablette.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row content_header" style="margin-top: 30px;">
+    <h3 class="modal-title xs-center">Weitere Informationen</h3>
+    <hr />
+    <div class="col-md-12">
+        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+            <div class="panel panel-default">
+                <div class="panel-heading head_panel" role="tab" id="headingOne">
+                    <h4 class="panel-title text-center-xs" data-toggle="collapse" data-target="#collapseOne1">
+                        Wenn Sie eine größere Menge von Amlodipin (besilat) Dexcel 5 mg eingenommen haben, als Sie
+                        sollten
+                    </h4>
+                </div>
+                <div id="collapseOne1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                    <div class="panel-body">
+                        <p>Wenn Sie zu viele Tabletten eingenommen haben, kann Ihr Blutdruck abfallen oder auch
+                            gefährlich niedrig werden.
+                            <br>Sie können sich schwindelig, benommen und schwach fühlen
+                            oder ohnmächtig werden. Wenn der Blutdruckabfall stark genug ist, kann es zu einem
+                            Schock kommen.
+                            <br>Ihre Haut kann sich dann kalt und feucht anfühlen und Sie könnten das
+                            Bewusstsein verlieren. Begeben Sie sich sofort in medizinische Überwachung, wenn Sie zu
+                            viele Amlodipin (besilat) Dexcel Tabletten eingenommen haben.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading head_panel" role="tab" id="headingTwo">
+                    <h4 class="panel-title title_pan text-center-xs" data-toggle="collapse" data-target="#collapseTwo2">
+                        Wenn Sie die Einnahme von Amlodipin (besilat) Dexcel 5 mg vergessen haben
+                    </h4>
+                </div>
+                <div id="collapseTwo2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                    <div class="panel-body">
+                        <p>Dies ist nicht schlimm. Nehmen Sie nicht die doppelte Menge ein, wenn Sie die vorherige
+                            Einnahme vergessen haben. <br> Nehmen Sie die nächste Dosis dann wieder zur gewohnten
+                            Zeit ein. </p>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading head_panel" role="tab" id="headingThree">
+                    <h4 class="panel-title text-center-xs" data-toggle="collapse" data-target="#collapseThree3">
+
+                        Wenn Sie die Einnahme von Amlodipin (besilat) Dexcel 5 mg abbrechen
+                    </h4>
+                </div>
+                <div id="collapseThree3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                    <div class="panel-body">
+                        <p>Ihr Arzt wird Ihnen sagen, wie lange Sie dieses Arzneimittel einnehmen müssen. Wenn Sie
+                            die Anwendung dieses Arzneimittels beenden, bevor er Sie dazu aufgefordert hat, können
+                            Ihre Beschwerden zurückkehren.<br>
+                            Wenn Sie weitere Fragen zur Einnahme dieses Arzneimittels haben, wenden Sie sich an
+                            Ihren Arzt oder Apotheker </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+',14,5);
+INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (128,0,'
+<div class="row content_header">
+    <h1> Nebenwirkungen </h1>
+    <hr>
+    Wie alle Arzneimittel kann auch dieses Arzneimittel Nebenwirkungen haben, die aber nicht
+    bei jedem auftreten müssen.
+</div>
+<div class="alert alert-info" style="margin-top: 15px;">
+    Suchen Sie sofort Ihren Arzt auf, wenn bei Ihnen nach der Einnahme dieses Arzneimittels
+    die folgenden Nebenwirkungen auftreten:
+    <ul>
+        <li>plötzliches Keuchen beim Atmen, Schmerzen im Brustbereich, Kurzatmigkeit oder
+            Atembeschwerden</li>
+        <li>Anschwellen der Augenlider, des Gesichts oder der Lippen</li>
+        <li>Anschwellen der Zunge oder der Kehle, was zu starken Atembeschwerden führt</li>
+        <li>schwere Hautreaktionen einschließlich starker Hautausschlag, Nesselsucht, Hautrötung
+            am ganzen Körper, starkes Jucken, Blasenbildung, Abschälen und Anschwellen der
+            Haut, Entzündung von Schleimhäuten (Stevens-Johnson-Syndrom) oder andere
+            allergische Reaktionen
+        <li>Herzinfarkt, ungewöhnlicher Herzschlag</li>
+        <li>Bauchspeicheldrüsenentzündung, die zu starken Bauch- und Rückenschmerzen mit
+            ausgeprägtem Unwohlsein führen kann </li>
+    </ul>
+</div>
+<div class="row">
+    <table class="sideffect_table hidden-xs">
+        <thead>
+            <tr>
+                <th>Häufigkeit</th>
+                <th style="width: 25%;">Anzahl der betreffenden Behandelten</th>
+                <th>Nebenwirkung</th>
+            </tr>
+        </thead>
+        <tbody class="" style="padding: 15px;">
+            <tr id="sehrhaeufig">
+                <td>Sehr häufig</td>
+                <td>Mehr als 1 von 10 Behandelten</td>
+                <td>Knöchelschwellungen (Ödeme)
+                </td>
+            </tr>
+            <tr id="haeufig">
+                <td>Häufig</td>
+                <td>Mehr als 1 von 10 Behandelten </td>
+                <td>
+                    <ul>
+                        <li>Kopfschmerzen, Schwindel, Schläfrigkeit (insbesondere zu Beginn der Behandlung)</li>
+                        <li>Herzklopfen (Palpitationen), Hautrötung mit Wärmegefühl</li>
+                        <li>Bauchschmerzen, Übelkeit</li>
+                        <li>veränderte Darmentleerungsgewohnheiten, Durchfälle, Verstopfung,
+                            Verdauungsstörungen</li>
+                        <li>Müdigkeit, Schwächegefühl</li>
+                        <li>Sehstörungen, Doppeltsehen</li>
+                        <li>Muskelkrämpfe</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr id="gelegentlich">
+                <td>Gelegentlich</td>
+                <td>Bis zu 1 von 100 Behandelten</td>
+                <td>
+                    <ul>
+                        <li>Stimmungsschwankungen, Angst, Depression, Schlaflosigkeit</li>
+                        <li>Zittern, Geschmacksstörungen, kurze Bewusstlosigkeit</li>
+                        <li>verminderte Empfindlichkeit für Berührungsreize oder Kribbeln in den Extremitäten,
+                            Verlust des Schmerzgefühls</li>
+                        <li>Ohrgeräusche</li>
+                        <li>niedriger Blutdruck</li>
+                        <li>Niesen/laufende Nase durch eine Entzündung der Nasenschleimhaut (Rhinitis)</li>
+                        <li>Husten</li>
+                        <li>Mundtrockenheit, Erbrechen</li>
+                        <li>Haarausfall, vermehrtes Schwitzen, Hautjucken, rote Flecken auf der Haut,
+                            Hautverfärbung</li>
+                        <li>Störungen beim Wasserlassen, vermehrter nächtlicher Harndrang, häufigeres
+                            Wasserlassen</li>
+                        <li>Erektionsstörungen, Vergrößerung der Brustdrüsen beim Mann</li>
+                        <li>Schmerzen, Unwohlsein</li>
+                        <li>Gelenk- oder Muskelschmerzen, Rückenschmerzen</li>
+                        <li>Gewichtszunahme oder Gewichtsabnahme</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr id="selten">
+                <td>Selten</td>
+                <td> Bis zu 1 von 1.000 Behandelten </td>
+                <td>
+                    Verwirrung
+                </td>
+            </tr>
+            <tr id="sehrselten">
+                <td>Sehr selten</td>
+                <td> Bis zu 1 von 10.000 Behandelten </td>
+                <td>
+                    <ul>
+                        <li>Verminderung der weißen Blutkörperchen, Verminderung der Blutplättchen, was zu
+                            ungewöhnlichen blauen Flecken oder leichtem Bluten führen kann (Schädigung der
+                            roten Blutzellen)</li>
+                        <li>erhöhter Blutzuckerspiegel (Hyperglykämie)</li>
+                        <li>eine Nervenstörung, die zu Schwächegefühl, verminderter Empfindlichkeit für
+                            Berührungsreize oder Kribbeln führen kann</li>
+                        <li>Schwellung des Zahnfleischs</li>
+                        <li>aufgeblähter Bauch (Gastritis)</li>
+                        <li>gestörte Leberfunktion, Entzündung der Leber (Hepatitis), Gelbfärbung der Haut
+                            (Gelbsucht), Anstieg der Leberenzyme, wodurch bestimmte medizinische Tests
+                            beeinflusst werden können</li>
+                        <li>erhöhte Muskelanspannung</li>
+                        <li>entzündliche Reaktionen der Blutgefäße, häufig mit Hautausschlag</li>
+                        <li>Lichtempfindlichkeit</li>
+                        <li>Störungen, die sich aus Steifheit, Zittern und/oder Bewegungsstörungen
+                            zusammensetzen</li>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="hidden-sm hidden-md hidden-lg">
+        <div class="row content_header">
+            <h3> Häufigkeit der Nebenwirkungen </h3>
+            <hr>
+        </div>
+        <div>
+            <div class="row p15" id="sehrhaeufig-xs">
+                <h4> Sehr häufig</h4>
+                <div class="row">
+                    <b>Anzahl der betreffenden Behandelten:</b> <br> Mehr als 1 von 10 Behandelten
+                </div>
+                <div class="row">
+                    <b>Nebenwirkung:</b> <br>Knöchelschwellungen (Ödeme)
+                </div>
+                <hr>
+            </div>
+
+            <div class="row p15" id="haeufig-xs">
+                <h4> Häufig</h4>
+                <div class="row">
+                    <b>Anzahl der betreffenden Behandelten:</b> <br> Mehr als 1 von 10 Behandelten
+                </div>
+                <div class="row">
+                    <b>Nebenwirkung:</b> <br>
+                    <ul>
+                        <li>Kopfschmerzen, Schwindel, Schläfrigkeit (insbesondere zu Beginn der Behandlung)</li>
+                        <li>Herzklopfen (Palpitationen), Hautrötung mit Wärmegefühl</li>
+                        <li>Bauchschmerzen, Übelkeit</li>
+                        <li>veränderte Darmentleerungsgewohnheiten, Durchfälle, Verstopfung,
+                            Verdauungsstörungen</li>
+                        <li>Müdigkeit, Schwächegefühl</li>
+                        <li>Sehstörungen, Doppeltsehen</li>
+                        <li>Muskelkrämpfe</li>
+                    </ul>
+                </div>
+                <hr>
+            </div>
+            <div class="row p15" id="gelegentlich-xs">
+                <h4> Gelegentlich</h4>
+                <div class="row">
+                    <b>Anzahl der betreffenden Behandelten:</b> <br> Mehr als 1 von 100 Behandelten
+                </div>
+                <div class="row">
+                    <b>Nebenwirkung:</b> <br>
+                    <ul>
+                        <li>Stimmungsschwankungen, Angst, Depression, Schlaflosigkeit</li>
+                        <li>Zittern, Geschmacksstörungen, kurze Bewusstlosigkeit</li>
+                        <li>verminderte Empfindlichkeit für Berührungsreize oder Kribbeln in den Extremitäten,
+                            Verlust des Schmerzgefühls</li>
+                        <li>Ohrgeräusche</li>
+                        <li>niedriger Blutdruck</li>
+                        <li>Niesen/laufende Nase durch eine Entzündung der Nasenschleimhaut (Rhinitis)</li>
+                        <li>Husten</li>
+                        <li>Mundtrockenheit, Erbrechen</li>
+                        <li>Haarausfall, vermehrtes Schwitzen, Hautjucken, rote Flecken auf der Haut,
+                            Hautverfärbung</li>
+                        <li>Störungen beim Wasserlassen, vermehrter nächtlicher Harndrang, häufigeres
+                            Wasserlassen</li>
+                        <li>Erektionsstörungen, Vergrößerung der Brustdrüsen beim Mann</li>
+                        <li>Schmerzen, Unwohlsein</li>
+                        <li>Gelenk- oder Muskelschmerzen, Rückenschmerzen</li>
+                        <li>Gewichtszunahme oder Gewichtsabnahme</li>
+                    </ul>
+                </div>
+                <hr>
+            </div>
+            <div class="row p15" id="selten-xs">
+                <h4> Selten</h4>
+                <div class="row">
+                    <b>Anzahl der betreffenden Behandelten:</b> <br> Mehr als 1 von 1000 Behandelten
+                </div>
+                <div class="row">
+                    <b>Nebenwirkung:</b> <br>
+                    Verwirrung
+                </div>
+                <hr>
+            </div>
+            <div class="row p15" id="sehrselten-xs">
+                <h4> Sehr selten</h4>
+                <div class="row">
+                    <b>Anzahl der betreffenden Behandelten:</b> <br> Mehr als 1 von 10000 Behandelten
+                </div>
+                <div class="row">
+                    <b>Nebenwirkung:</b> <br>
+                    <ul>
+                        <li>Verminderung der weißen Blutkörperchen, Verminderung der Blutplättchen, was zu
+                            ungewöhnlichen blauen Flecken oder leichtem Bluten führen kann (Schädigung der
+                            roten Blutzellen)</li>
+                        <li>erhöhter Blutzuckerspiegel (Hyperglykämie)</li>
+                        <li>eine Nervenstörung, die zu Schwächegefühl, verminderter Empfindlichkeit für
+                            Berührungsreize oder Kribbeln führen kann</li>
+                        <li>Schwellung des Zahnfleischs</li>
+                        <li>aufgeblähter Bauch (Gastritis)</li>
+                        <li>gestörte Leberfunktion, Entzündung der Leber (Hepatitis), Gelbfärbung der Haut
+                            (Gelbsucht), Anstieg der Leberenzyme, wodurch bestimmte medizinische Tests
+                            beeinflusst werden können</li>
+                        <li>erhöhte Muskelanspannung</li>
+                        <li>entzündliche Reaktionen der Blutgefäße, häufig mit Hautausschlag</li>
+                        <li>Lichtempfindlichkeit</li>
+                        <li>Störungen, die sich aus Steifheit, Zittern und/oder Bewegungsstörungen
+                            zusammensetzen</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="alert alert-info" style="margin-top: 40px;">
+        Wenn Ihnen die sehr seltenen Nebenwirkungen
+        Probleme bereitet oder länger als 1 Woche andauert, sollten Sie Ihren Arzt aufsuchen.
+    </div>
+</div>
+
+',14,6);
+INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (129,0,'Beispieltext',14,7);
+INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (130,0,'
+<!-- Allgemein -->
+<div class="row" style="padding-left: 15px;">
+    <h4> Anwendung von Salbutamol </h4>
+    <ul>
+        <li> symptomatischen Behandlung von Erkrankungen mit
+            rückbildungsfähiger (reversibler) Verengung (Obstruktion)
+            der Atemwege wie
+            <ul>
+                <li> Bronchialasthma,
+                <li> COPD (chronische Atemwegserkrankung, die durch</li>
+                Rauchen ausgelöst wird)</li>
+    </ul>
+    </li>
+    <li>Vorbeugung einer
+        <ul>
+            <li>Verkrampfung der Atemwege (Atemnot) bei Anstrengung
+                oder Kontakt mit Allergie auslösenden Stoffen.</li>
+        </ul>
+    </li>
+    <li>
+        Bei Erwachsenen, Jugendlichen und Kindern im Alter von
+        4 bis 11 Jahren (für die Anwendung bei Kleinkindern und
+        Kindern unter 4 Jahren siehe Abschnitt 3. „Wie ist
+        Salbutamol-ratiopharm® N Dosieraerosol anzuwenden?“).
+    </li>
+    </ul>
+
+    Eine längerfristige Behandlung soll nur zusammen mit
+    entzündungshemmenden Medikamenten erfolgen.
+</div>
+',14,8);
+INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (131,0,'
+<!--Inhalt der Packung-->
+<ul>
+    <li>Packung mit 1 Dosieraerosol mit 8,5 g Suspension und
+        Treibmittel (entsprechend 200 Sprühstößen zu je
+        0,1 mg Salbutamol)</li>
+    <li>Packung mit 2 Dosieraerosolen mit 8,5 g Suspension und
+        Treibmittel (entsprechend 200 Sprühstößen zu je
+        0,1 mg Salbutamol)</li>
+    <li>Packung mit 3 Dosieraerosolen mit 8,5 g Suspension und
+        Treibmittel (entsprechend 200 Sprühstößen zu je
+        0,1 mg Salbutamol)</li>
+</ul>
+',14,9);
+INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (132,0,'
+<!--Darstellung des Medikaments-->
+Amlodipin (besilat) Dexcel 5 mg Tabletten sind in Packungen mit 7, 10, 14, 20, 28, 30, 50, 60 und 100
+Tabletten erhältlich.
+Es werden möglicherweise nicht alle Packungsgrößen in den Verkehr gebracht
+',14,10);
+INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (133,0,'
+<!-- Wirkstoff -->
+1 Tablette enthält 6,935 mg Amlodipin als Besilat, entsprechend 5 mg Amlodipin. <br>
+<b>Die sonstigen Bestandteile sind:</b>
+<ul>
+    <li>mikrokristalline Cellulose</li>
+    <li>Calciumhydrogenphosphat-Dihydrat</li>
+    <li>Carboxymethylstärke-Natrium (Typ A)</li>
+    <li>
+        Magnesiumstearat (Ph.Eur.) [pflanzlich]</li>
+</ul>
+',14,11);
+-- Dump tailored_text--
+
 
 INSERT INTO tailored_text (id, idgender, iddrug, min_age, max_age, text) VALUES (1, 1, 1, 16, 30, 'Hey %firstname% %lastname%, Hier steht eine wichtige Information für Männer im Alter von %age% Jahren, die sich für dieses Medikament interessieren.<br />2 mal täglich einnehmen<br />1 Tablette morgens gegen 9:00<br />1 Tablette am Abend gegen 20:00');
 INSERT INTO tailored_text (id, idgender, iddrug, idpackaging_topic, min_age, max_age, text) VALUES (2, 1, 1, 4, 0, 0, 'XYZ... Hier steht eine andere Information für Männer ohne Altersbezug, die sich für diese Medikament interessieren.');
