@@ -147,10 +147,16 @@
     background-color: #ffc992b5 !important;
 }
 
-.sideffect_table td, th {
+.sideffect_table td, .sideffect_table th {
     border: solid 1px;
     padding: 10px;
     font-size: 14px;
+}
+
+.sideffect_table_info th, .sideffect_table_info td {
+    padding: 1.0rem;
+    vertical-align: top;
+    border-bottom: 1px solid #dee2e6;
 }
 
 .content_header {
@@ -218,13 +224,22 @@
 .round_nebenwirkung {
     top: 37%;
 }
-
+.round_info{
+    bottom: 37%;
+}
 
 .report-round-button {
     right: 7%;
     position: fixed;
     z-index: 1001;
     cursor: pointer;
+}
+.report-round-button1 {
+    left: 15%;
+    position: fixed;
+    z-index: 1001;
+    cursor: pointer;
+    bottom: 10%;
 }
 
 .report-round-button .round-button-inner-main {
@@ -235,8 +250,28 @@
     padding-left: 2px;
     color: white;
 }
+.report-round-button1 .round-button-inner-main1 {
+    vertical-align: middle;
+    text-align: center;
+    font-size: 24px;
+    padding-left: 2px;
+    color: white;
+}
 
 .round-button-outer .round-button-inner-main {
+    width: 60px;
+    height: 60px;
+    border-radius: 38px;
+    background-color: #0da59b;
+    padding-top: 19px;
+    position: absolute;
+    z-index: 10;
+    -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12) !important;
+    -moz-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12) !important;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12) !important;
+    cursor: pointer;
+}
+.round-button-outer1 .round-button-inner-main1 {
     width: 60px;
     height: 60px;
     border-radius: 38px;
@@ -387,10 +422,19 @@
     padding: 0px 15px;
 }
 
+.icon_tablet{
+    font-size: 45px;
+    margin-top: 10px;
+}
+
 .panel-title {
     position: relative;
     cursor: pointer;
 
+}
+
+.panel_neben{
+    margin-bottom: 15px!important;
 }
 
 .title_pan::after {
@@ -423,6 +467,12 @@
     width: 62%;
     margin-top: 5px;
 }
+.usage_tab2 {
+    width: 50%;
+    margin-top: 5px;
+}
+
+
 
 .nav1-tabs {
     border-bottom: inherit !important;

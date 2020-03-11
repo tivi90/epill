@@ -378,6 +378,19 @@ img.group.list-group-image {
 
 }
 
+.border-1{
+    border: 1px solid;
+}
+
+.carousel .item {
+    height: 370px;
+    background-color: inherit!important;
+}
+
+.carousel-caption {
+    text-shadow: none!important;
+    color: black;
+}
 
 .icon_modal {
     text-align: center;
@@ -676,6 +689,12 @@ footer .glyphicon {
     visibility: visible;
 }
 
+
+@media (min-width: 768px) {
+    .carousel-caption p {
+        font-size: 14px;
+    }
+}
 @media screen and (max-width: 768px) {
     .col-sm-4 {
         text-align: center;
@@ -694,6 +713,9 @@ footer .glyphicon {
 }
 
 @media screen and (max-width: 480px) {
+    .carousel-indicators {
+        bottom: 0px;
+    }
     .logo {
         font-size: 150px;
     }

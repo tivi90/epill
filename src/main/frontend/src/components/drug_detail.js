@@ -337,6 +337,21 @@ class DrugDetail extends React.Component {
         );
     }
 
+    renderWordExplainationButton(drug){
+        if (!drug.wordExplaination) {
+            return null;
+        }
+        const {t} = this.props;
+        return drug.wordExplaination
+            .map((section => {  return(
+                <div className="round-button-outer1 report-round-button1 round_def">
+                    <div id="defBtn" className="round-button-inner-main1" data-toggle="modal" data-target="#def">
+                        <i className="fas fa-book"></i>                        </div>
+                </div>
+            );
+    })).reduce((prev, curr) => [prev, curr]);
+}
+
     renderWordExplaination(drug) {
 
         if (!drug.wordExplaination) {
@@ -372,6 +387,27 @@ class DrugDetail extends React.Component {
             })).reduce((prev, curr) => [prev, curr]);
 
     }
+
+    renderWordExplainations(drug) {
+
+        if (!drug.wordExplaination) {
+            return null;
+        }
+        const {t} = this.props;
+        return drug.wordExplaination
+            .map((section => {
+                return (
+                    <tr>
+                        <td><p key={section.id}>{section.name}</p></td>
+                        <td><p key={section.id}><span
+                            dangerouslySetInnerHTML={this.createMarkup(section.description)}/>
+                        </p></td>
+                    </tr>
+                );
+            })).reduce((prev, curr) => [prev, curr]);
+
+    }
+
 
     renderFormdesc(drug) {
         if (!drug.packagingSection) {
@@ -726,6 +762,47 @@ class DrugDetail extends React.Component {
                     </div>
                     {/*Button REPORT ENDE*/}
 
+
+                    {/*Button INFO*/}
+                    {this.renderWordExplainationButton(drug)}
+                    <div className="modal fade" id="def" tabIndex="-1" role="dialog" aria-labelledby="addressLabel"
+                         aria-hidden="true">
+                        <div className="modal-dialog modal-lg" role="document">
+                            <div className="modal-content">
+                                <div className="modal-header">
+                                    <h2>Informationen
+                                    </h2>
+                                    <button type="button" className="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div className="modal-body" style={{color: "black"}}>
+                                            <table className="table table-bordered table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>Titel</th>
+                                                    <th>Erklärung</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <script src="assets/js/ownjs.js"></script>
+                                                {this.renderWordExplainations(drug)}
+
+                                                    </tbody>
+                                            </table>
+
+                                <span dangerouslySetInnerHTML={this.createMarkup(t("modal_close"))}/>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+
+                    {/*Button INFO ENDE*/}
+
+
+
+
+
                     <div className='page-header bg_grey'>
                         <div className="container  no-banner">
                             <div className=' pull-right'>
@@ -932,7 +1009,6 @@ class DrugDetail extends React.Component {
                                                      role="dialog"
                                                      aria-labelledby="addressLabel"
                                                      aria-hidden="true">
-
                                                     <div className="modal-dialog" role="document">
                                                         <div className="modal-content">
                                                             <div className="modal-header">
@@ -1020,7 +1096,23 @@ class DrugDetail extends React.Component {
                             Medkamenten</a>
                     </div>
                     {this.renderWordExplaination(drug)}
-
+                    <div className="modal fade" id="neben_info" tabIndex="-1" role="dialog" aria-labelledby="neben_info" aria-hidden="true">
+                        <div className="modal-dialog modal-lg" role="document">
+                            <div className="modal-content">
+                                <div className="modal-header">
+                                    <button type="button" className="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <h2>Angaben zur Häufigkeit von Nebenwirkungen
+                                    </h2>
+                                </div>
+                                <div className="modal-body" style={{color: "black"}}>
+                                    <span dangerouslySetInnerHTML={this.createMarkup(t("frequency_sideeffect"))} />
+                                </div>
+                                <span dangerouslySetInnerHTML={this.createMarkup(t("modal_close"))} />
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         );

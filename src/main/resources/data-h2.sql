@@ -1516,20 +1516,39 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic)VALUES
         <div class="col-sm-12">
             <h4 class="modal-title xs-center">Teilung der Tablette</h4>
             <hr />
-            <div class="col-sm-6 col-xs-12 text-center">
-                <h4> Schritt 1</h4>
-                <img src="./../../assets/p_form/usage/notcrack_long.svg" class="usage_tab" alt="Tablette"
-                    title="Tablette">
-                <br><br>
-                <p>Legen Sie bitte die Tablette mit der Bruchkerbe nach oben auf eine feste Unterlage.</p>
 
-            </div>
-            <div class="col-sm-6 col-xs-12 text-center">
-                <h4>Schritt 2</h4>
-                <img src="./../../assets/p_form/usage/crack_long.svg" class="usage_tab1" alt="Tablette"
-                    title="Tablette">
-                <br><br>
-                <p>Drücken Sie mit den Zeigefingern auf die linke und rechte Hälfte der Tablette.</p>
+            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+
+                </ol>
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <div class="carousel-caption">
+                            <h4> Schritt 1</h4>
+                            <img src="./../../assets/p_form/usage/notcrack_long.svg" class="usage_tab" alt="Tablette"
+                            title="Tablette">
+                        <br><br>
+                        <p>Legen Sie bitte die Tablette mit der Bruchkerbe nach oben auf eine feste Unterlage.</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="carousel-caption">
+                            <h4>Schritt 2</h4>
+                            <img src="./../../assets/p_form/usage/crack_long.svg" class="usage_tab1" alt="Tablette"
+                            title="Tablette">
+                        <br><br>
+                        <p>Drücken Sie mit den Zeigefingern auf die linke und rechte Hälfte der Tablette.</p>
+                        </div>
+                    </div>
+
+                    <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span></a><a class="right carousel-control"
+                        href="#carousel-example-generic" data-slide="next"><span
+                            class="glyphicon glyphicon-chevron-right">
+                        </span></a>
+                </div>
             </div>
         </div>
     </div>
@@ -1604,7 +1623,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
     <thead>
         <tr>
             <th>Häufigkeit</th>
-            <th style="width: 25%;">Anzahl der betreffenden Behandelten</th>
+            <th style="width: 25%;">Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span>  </th>
             <th>Nebenwirkung</th>
         </tr>
     </thead>
@@ -1699,7 +1718,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
         <div class="row p15" id="sehrhaeufig-xs">
             <h4> Sehr häufig</h4>
             <div class="row">
-                <b>Anzahl der betreffenden Behandelten:</b> <br> Mehr als 1 von 10 Behandelten
+                <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span>  :</b> <br> Mehr als 1 von 10 Behandelten
             </div>
             <div class="row">
                 <b>Nebenwirkung:</b> <br><b>Verdauungsprobleme wie</b>
@@ -1726,7 +1745,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
         <div class="row p15" id="haeufig-xs">
             <h4> Häufig</h4>
             <div class="row">
-                <b>Anzahl der betreffenden Behandelten:</b> <br> Mehr als 1 von 10 Behandelten
+                <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1 von 10 Behandelten
             </div>
             <div class="row">
                 <b>Nebenwirkung:</b> <br>
@@ -1738,7 +1757,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
         <div class="row p15" id="sehrselten-xs">
             <h4> Sehr selten</h4>
             <div class="row">
-                <b>Anzahl der betreffenden Behandelten:</b> <br> Mehr als 1 von 10000 Behandelten
+                <b>Anzahl der betreffenden Behandelten: <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> </b> <br> Mehr als 1 von 10000 Behandelten
             </div>
             <div class="row">
                 <b>Nebenwirkung:</b> <br>
@@ -1768,7 +1787,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
         <div class="row p15" id="nichtbekannt">
             <h4> Nicht bekannt</h4>
             <div class="row">
-                <b>Anzahl der betreffenden Behandelten:</b> <br> Mehr als 1 von 100 Behandelten
+                <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1 von 100 Behandelten
             </div>
             <div class="row">
                 <b>Nebenwirkung:</b> <br>
@@ -2201,21 +2220,41 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
         <div class="col-sm-12">
             <h4 class="modal-title xs-center">Teilung der Tablette</h4>
             <hr />
-            <div class="col-sm-6 col-xs-12 text-center">
-                <h4> Schritt 1</h4>
-                <img src="./../../assets/p_form/usage/notcrack_small.svg" class="usage_tab" alt="Tablette"
-                    title="Tablette">
-                <br><br>
-                <p>Legen Sie bitte die Tablette mit der Bruchkerbe nach oben auf eine feste Unterlage.</p>
 
+            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+
+                </ol>
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <div class="carousel-caption">
+                            <h4> Schritt 1</h4>
+                            <img src="./../../assets/p_form/usage/notcrack_small.svg" class="usage_tab" alt="Tablette"
+                                title="Tablette">
+                            <br><br>
+                            <p>Legen Sie bitte die Tablette mit der Bruchkerbe nach oben auf eine feste Unterlage.</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="carousel-caption">
+                            <h4>Schritt 2</h4>
+                            <img src="./../../assets/p_form/usage/crack_small.svg" class="usage_tab1" alt="Tablette"
+                                title="Tablette">
+                            <br><br>
+                            <p>Drücken Sie mit den Zeigefingern auf die linke und rechte Hälfte der Tablette.</p>
+                        </div>
+                    </div>
+
+                    <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span></a><a class="right carousel-control"
+                        href="#carousel-example-generic" data-slide="next"><span
+                            class="glyphicon glyphicon-chevron-right">
+                        </span></a>
+                </div>
             </div>
-            <div class="col-sm-6 col-xs-12 text-center">
-                <h4>Schritt 2</h4>
-                <img src="./../../assets/p_form/usage/crack_small.svg" class="usage_tab1" alt="Tablette"
-                    title="Tablette">
-                <br><br>
-                <p>Drücken Sie mit den Zeigefingern auf die linke und rechte Hälfte der Tablette.</p>
-            </div>
+
         </div>
     </div>
 </div>
@@ -2309,7 +2348,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
         <thead>
             <tr>
                 <th>Häufigkeit</th>
-                <th style="width: 25%;">Anzahl der betreffenden Behandelten</th>
+                <th style="width: 25%;">Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> </th>
                 <th>Nebenwirkung</th>
             </tr>
         </thead>
@@ -2403,7 +2442,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
             <div class="row p15" id="sehrhaeufig-xs">
                 <h4> Sehr häufig</h4>
                 <div class="row">
-                    <b>Anzahl der betreffenden Behandelten:</b> <br> Mehr als 1 von 10 Behandelten
+                    <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1 von 10 Behandelten
                 </div>
                 <div class="row">
                     <b>Nebenwirkung:</b> <br>Knöchelschwellungen (Ödeme)
@@ -2414,7 +2453,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
             <div class="row p15" id="haeufig-xs">
                 <h4> Häufig</h4>
                 <div class="row">
-                    <b>Anzahl der betreffenden Behandelten:</b> <br> Mehr als 1 von 10 Behandelten
+                    <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1 von 10 Behandelten
                 </div>
                 <div class="row">
                     <b>Nebenwirkung:</b> <br>
@@ -2434,7 +2473,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
             <div class="row p15" id="gelegentlich-xs">
                 <h4> Gelegentlich</h4>
                 <div class="row">
-                    <b>Anzahl der betreffenden Behandelten:</b> <br> Mehr als 1 von 100 Behandelten
+                    <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1 von 100 Behandelten
                 </div>
                 <div class="row">
                     <b>Nebenwirkung:</b> <br>
@@ -2463,7 +2502,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
             <div class="row p15" id="selten-xs">
                 <h4> Selten</h4>
                 <div class="row">
-                    <b>Anzahl der betreffenden Behandelten:</b> <br> Mehr als 1 von 1000 Behandelten
+                    <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1 von 1000 Behandelten
                 </div>
                 <div class="row">
                     <b>Nebenwirkung:</b> <br>
@@ -2474,7 +2513,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
             <div class="row p15" id="sehrselten-xs">
                 <h4> Sehr selten</h4>
                 <div class="row">
-                    <b>Anzahl der betreffenden Behandelten:</b> <br> Mehr als 1 von 10000 Behandelten
+                    <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1 von 10000 Behandelten
                 </div>
                 <div class="row">
                     <b>Nebenwirkung:</b> <br>
@@ -3379,21 +3418,41 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
         <div class="col-sm-12">
             <h4 class="modal-title xs-center">Teilung der Tablette</h4>
             <hr />
-            <div class="col-sm-6 col-xs-12 text-center">
-                <h4> Schritt 1</h4>
-                <img src="./../../assets/p_form/usage/notcrack_small.svg" class="usage_tab" alt="Tablette"
-                    title="Tablette">
-                <br><br>
-                <p>Legen Sie bitte die Tablette mit der Bruchkerbe nach oben auf eine feste Unterlage.</p>
 
+            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+
+                </ol>
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <div class="carousel-caption">
+                            <h4> Schritt 1</h4>
+                            <img src="./../../assets/p_form/usage/notcrack_small.svg" class="usage_tab" alt="Tablette"
+                            title="Tablette">
+                        <br><br>
+                        <p>Legen Sie bitte die Tablette mit der Bruchkerbe nach oben auf eine feste Unterlage.</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="carousel-caption">
+                            <h4>Schritt 2</h4>
+                            <img src="./../../assets/p_form/usage/crack_small.svg" class="usage_tab1" alt="Tablette"
+                            title="Tablette">
+                        <br><br>
+                        <p>Drücken Sie mit den Zeigefingern auf die linke und rechte Hälfte der Tablette.</p>
+                        </div>
+                    </div>
+
+                    <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span></a><a class="right carousel-control"
+                        href="#carousel-example-generic" data-slide="next"><span
+                            class="glyphicon glyphicon-chevron-right">
+                        </span></a>
+                </div>
             </div>
-            <div class="col-sm-6 col-xs-12 text-center">
-                <h4>Schritt 2</h4>
-                <img src="./../../assets/p_form/usage/crack_small.svg" class="usage_tab1" alt="Tablette"
-                    title="Tablette">
-                <br><br>
-                <p>Drücken Sie mit den Zeigefingern auf die linke und rechte Hälfte der Tablette.</p>
-            </div>
+
         </div>
     </div>
 
@@ -3486,7 +3545,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                             <thead>
                                 <tr>
                                     <th>Häufigkeit</th>
-                                    <th style="width: 25%;">Anzahl der betreffenden Behandelten</th>
+                                    <th style="width: 25%;">Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> </th>
                                     <th>Nebenwirkung</th>
                                 </tr>
                             </thead>
@@ -3524,7 +3583,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                                 <div class="row p15" id="gelegentlich-xs">
                                     <h4> Gelegentlich</h4>
                                     <div class="row">
-                                        <b>Anzahl der betreffenden Behandelten:</b> <br> Mehr als 1 von 100
+                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1 von 100
                                         Behandelten
                                     </div>
                                     <div class="row">
@@ -3539,7 +3598,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                                 <div class="row p15" id="selten-xs">
                                     <h4> Selten</h4>
                                     <div class="row">
-                                        <b>Anzahl der betreffenden Behandelten:</b> <br> Mehr als 1 von 1000
+                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1 von 1000
                                         Behandelten
                                     </div>
                                     <div class="row">
@@ -3571,7 +3630,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                             <thead>
                                 <tr>
                                     <th>Häufigkeit</th>
-                                    <th style="width: 25%;">Anzahl der betreffenden Behandelten</th>
+                                    <th style="width: 25%;">Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> </th>
                                     <th>Nebenwirkung</th>
                                 </tr>
                             </thead>
@@ -3594,7 +3653,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                                 <div class="row p15" id="gelegentlich-xs">
                                     <h4> Gelegentlich</h4>
                                     <div class="row">
-                                        <b>Anzahl der betreffenden Behandelten:</b> <br> Mehr als 1 von 100
+                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1 von 100
                                         Behandelten
                                     </div>
                                     <div class="row">
@@ -3621,7 +3680,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                             <thead>
                                 <tr>
                                     <th>Häufigkeit</th>
-                                    <th style="width: 25%;">Anzahl der betreffenden Behandelten</th>
+                                    <th style="width: 25%;">Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> </th>
                                     <th>Nebenwirkung</th>
                                 </tr>
                             </thead>
@@ -3643,7 +3702,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                                 <div class="row p15" id="sehrhaeufig-xs">
                                     <h4> Sehr häufig</h4>
                                     <div class="row">
-                                        <b>Anzahl der betreffenden Behandelten:</b> <br> Mehr als 1 von 10
+                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1 von 10
                                         Behandelten
                                     </div>
                                     <div class="row">
@@ -3668,7 +3727,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                             <thead>
                                 <tr>
                                     <th>Häufigkeit</th>
-                                    <th style="width: 25%;">Anzahl der betreffenden Behandelten</th>
+                                    <th style="width: 25%;">Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> </th>
                                     <th>Nebenwirkung</th>
                                 </tr>
                             </thead>
@@ -3720,7 +3779,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                                 <div class="row p15" id="sehrhaeufig-xs">
                                     <h4> Sehr häufig</h4>
                                     <div class="row">
-                                        <b>Anzahl der betreffenden Behandelten:</b> <br> Mehr als 1 von 10
+                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1 von 10
                                         Behandelten
                                     </div>
                                     <div class="row">
@@ -3731,7 +3790,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                                 <div class="row p15" id="haeufig-xs">
                                     <h4> Häufig</h4>
                                     <div class="row">
-                                        <b>Anzahl der betreffenden Behandelten:</b> <br> Mehr als 1 von 10
+                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1 von 10
                                         Behandelten
                                     </div>
                                     <div class="row">
@@ -3751,7 +3810,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                                 <div class="row p15" id="gelegentlich-xs">
                                     <h4> Gelegentlich</h4>
                                     <div class="row">
-                                        <b>Anzahl der betreffenden Behandelten:</b> <br> Mehr als 1 von 100
+                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1 von 100
                                         Behandelten
                                     </div>
                                     <div class="row">
@@ -3764,7 +3823,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                                 <div class="row p15" id="selten-xs">
                                     <h4> Selten</h4>
                                     <div class="row">
-                                        <b>Anzahl der betreffenden Behandelten:</b> <br> Mehr als 1 von 1000
+                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1 von 1000
                                         Behandelten
                                     </div>
                                     <div class="row">
@@ -3791,7 +3850,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                             <thead>
                                 <tr>
                                     <th>Häufigkeit</th>
-                                    <th style="width: 25%;">Anzahl der betreffenden Behandelten</th>
+                                    <th style="width: 25%;">Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> </th>
                                     <th>Nebenwirkung</th>
                                 </tr>
                             </thead>
@@ -3848,7 +3907,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                                 <div class="row p15" id="sehrhaeufig-xs">
                                     <h4> Sehr häufig</h4>
                                     <div class="row">
-                                        <b>Anzahl der betreffenden Behandelten:</b> <br> Mehr als 1
+                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1
                                         von 10 Behandelten
                                     </div>
                                     <div class="row">
@@ -3859,7 +3918,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                                 <div class="row p15" id="haeufig-xs">
                                     <h4> Häufig</h4>
                                     <div class="row">
-                                        <b>Anzahl der betreffenden Behandelten:</b> <br> Mehr als 1
+                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1
                                         von 10 Behandelten
                                     </div>
                                     <div class="row">
@@ -3872,7 +3931,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                                 <div class="row p15" id="gelegentlich-xs">
                                     <h4> Gelegentlich</h4>
                                     <div class="row">
-                                        <b>Anzahl der betreffenden Behandelten:</b> <br> Mehr als 1
+                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1
                                         von 100 Behandelten
                                     </div>
                                     <div class="row">
@@ -3887,7 +3946,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                                 <div class="row p15" id="selten-xs">
                                     <h4> Selten</h4>
                                     <div class="row">
-                                        <b>Anzahl der betreffenden Behandelten:</b> <br> Mehr als 1
+                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1
                                         von 1000 Behandelten
                                     </div>
                                     <div class="row">
@@ -3901,7 +3960,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                                 <div class="row p15" id="sehrselten-xs">
                                     <h4> Sehr selten</h4>
                                     <div class="row">
-                                        <b>Anzahl der betreffenden Behandelten:</b> <br> Mehr als 1
+                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1
                                         von 10000 Behandelten
                                     </div>
                                     <div class="row">
@@ -3926,7 +3985,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                             <thead>
                                 <tr>
                                     <th>Häufigkeit</th>
-                                    <th style="width: 25%;">Anzahl der betreffenden Behandelten</th>
+                                    <th style="width: 25%;">Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> </th>
                                     <th>Nebenwirkung</th>
                                 </tr>
                             </thead>
@@ -3952,7 +4011,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                                 <div class="row p15" id="selten-xs">
                                     <h4> Selten</h4>
                                     <div class="row">
-                                        <b>Anzahl der betreffenden Behandelten:</b> <br> Mehr als 1
+                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1
                                         von 1000 Behandelten
                                     </div>
                                     <div class="row">
@@ -3981,7 +4040,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                             <thead>
                                 <tr>
                                     <th>Häufigkeit</th>
-                                    <th style="width: 25%;">Anzahl der betreffenden Behandelten</th>
+                                    <th style="width: 25%;">Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> </th>
                                     <th>Nebenwirkung</th>
                                 </tr>
                             </thead>
@@ -4036,7 +4095,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                                 <div class="row p15" id="haeufig-xs">
                                     <h4> Häufig</h4>
                                     <div class="row">
-                                        <b>Anzahl der betreffenden Behandelten:</b> <br> Mehr als 1
+                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1
                                         von 10 Behandelten
                                     </div>
                                     <div class="row">
@@ -4051,7 +4110,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                                 <div class="row p15" id="gelegentlich-xs">
                                     <h4> Gelegentlich</h4>
                                     <div class="row">
-                                        <b>Anzahl der betreffenden Behandelten:</b> <br> Mehr als 1
+                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1
                                         von 100 Behandelten
                                     </div>
                                     <div class="row">
@@ -4066,7 +4125,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                                 <div class="row p15" id="nichtbekannt">
                                     <h4> Nicht bekannt</h4>
                                     <div class="row">
-                                        <b>Anzahl der betreffenden Behandelten:</b> <br> Mehr als 1 von 100
+                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1 von 100
                                         Behandelten
                                     </div>
                                     <div class="row">
@@ -4100,7 +4159,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                             <thead>
                                 <tr>
                                     <th>Häufigkeit</th>
-                                    <th style="width: 25%;">Anzahl der betreffenden Behandelten</th>
+                                    <th style="width: 25%;">Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> </th>
                                     <th>Nebenwirkung</th>
                                 </tr>
                             </thead>
@@ -4134,7 +4193,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                                 <div class="row p15" id="gelegentlich-xs">
                                     <h4> Gelegentlich</h4>
                                     <div class="row">
-                                        <b>Anzahl der betreffenden Behandelten:</b> <br> Mehr als 1
+                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1
                                         von 100 Behandelten
                                     </div>
                                     <div class="row">
@@ -4148,7 +4207,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                                 <div class="row p15" id="selten-xs">
                                     <h4> Selten</h4>
                                     <div class="row">
-                                        <b>Anzahl der betreffenden Behandelten:</b> <br> Mehr als 1
+                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1
                                         von 1000 Behandelten
                                     </div>
                                     <div class="row">
@@ -4174,7 +4233,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                             <thead>
                                 <tr>
                                     <th>Häufigkeit</th>
-                                    <th style="width: 25%;">Anzahl der betreffenden Behandelten</th>
+                                    <th style="width: 25%;">Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> </th>
                                     <th>Nebenwirkung</th>
                                 </tr>
                             </thead>
@@ -4204,7 +4263,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                                 <div class="row p15" id="gelegentlich-xs">
                                     <h4> Gelegentlich</h4>
                                     <div class="row">
-                                        <b>Anzahl der betreffenden Behandelten:</b> <br> Mehr als 1
+                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1
                                         von 100 Behandelten
                                     </div>
                                     <div class="row">
@@ -4216,7 +4275,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                                 <div class="row p15" id="selten-xs">
                                     <h4> Selten</h4>
                                     <div class="row">
-                                        <b>Anzahl der betreffenden Behandelten:</b> <br> Mehr als 1
+                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1
                                         von 1000 Behandelten
                                     </div>
                                     <div class="row">
@@ -4241,7 +4300,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                             <thead>
                                 <tr>
                                     <th>Häufigkeit</th>
-                                    <th style="width: 25%;">Anzahl der betreffenden Behandelten</th>
+                                    <th style="width: 25%;">Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> </th>
                                     <th>Nebenwirkung</th>
                                 </tr>
                             </thead>
@@ -4279,7 +4338,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                                 <div class="row p15" id="sehrhaeufig-xs">
                                     <h4> Sehr häufig</h4>
                                     <div class="row">
-                                        <b>Anzahl der betreffenden Behandelten:</b> <br> Mehr als 1
+                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1
                                         von 10 Behandelten
                                     </div>
                                     <div class="row">
@@ -4290,7 +4349,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                                 <div class="row p15" id="haeufig-xs">
                                     <h4> Häufig</h4>
                                     <div class="row">
-                                        <b>Anzahl der betreffenden Behandelten:</b> <br> Mehr als 1
+                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1
                                         von 10 Behandelten
                                     </div>
                                     <div class="row">
@@ -4302,7 +4361,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                                 <div class="row p15" id="gelegentlich-xs">
                                     <h4> Gelegentlich</h4>
                                     <div class="row">
-                                        <b>Anzahl der betreffenden Behandelten:</b> <br> Mehr als 1
+                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1
                                         von 100 Behandelten
                                     </div>
                                     <div class="row">
@@ -4329,7 +4388,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                             <thead>
                                 <tr>
                                     <th>Häufigkeit</th>
-                                    <th style="width: 25%;">Anzahl der betreffenden Behandelten</th>
+                                    <th style="width: 25%;">Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> </th>
                                     <th>Nebenwirkung</th>
                                 </tr>
                             </thead>
@@ -4368,7 +4427,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                                 <div class="row p15" id="haeufig-xs">
                                     <h4> Häufig</h4>
                                     <div class="row">
-                                        <b>Anzahl der betreffenden Behandelten:</b> <br> Mehr als 1
+                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1
                                         von 10 Behandelten
                                     </div>
                                     <div class="row">
@@ -4380,7 +4439,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                                 <div class="row p15" id="gelegentlich-xs">
                                     <h4> Gelegentlich</h4>
                                     <div class="row">
-                                        <b>Anzahl der betreffenden Behandelten:</b> <br> Mehr als 1
+                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1
                                         von 100 Behandelten
                                     </div>
                                     <div class="row">
@@ -4392,7 +4451,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                                 <div class="row p15" id="selten-xs">
                                     <h4> Selten</h4>
                                     <div class="row">
-                                        <b>Anzahl der betreffenden Behandelten:</b> <br> Mehr als 1
+                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1
                                         von 1000 Behandelten
                                     </div>
                                     <div class="row">
@@ -4505,6 +4564,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
 
 </ul>
 ',13,11);
+
 --Salbutamol--
 
 INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (123,0,'Beispieltext1',14,1);
@@ -4527,168 +4587,300 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
         <div class="col-sm-6 nopadd">
             <div class="row">
                 <div class="col-sm-12 info_notuse bg_orange">
-                    <b> Erleiden eines Herzinfarktes (kürzlich)</b>
+                    <b> Überempfindlichkeit gegen andere Sympathomimetika</b>
                 </div>
             </div>
             <div class="row">
                 <div class="col-sm-12 info_notuse bg_orange">
-                    <b> Leiden an Herzerkrankung</b>
+                    <b> Schweren Herzerkrankung </b>
+                    <p>Insbesondere bei frischem
+                        Herzinfarkt, koronarer Herzkrankheit (Erkrankung der Herzkranzgefäße), hypertropher obstruktiver
+                        Kardiomyopathie
+                        (eine chronische Herzmuskelerkrankung), tachykarden
+                        Arrhythmien (Herzrhythmusstörungen mit erhöhter
+                        Herzschlagfrequenz)</p>
                 </div>
             </div>
             <div class="row">
                 <div class="col-sm-12 info_notuse bg_orange">
-                    <b> Leiden an einem starken Blutdruckanstieg (hypertensive Krise)</b>
+                    <b> Schwerer und unbehandelter Hypertonie (Bluthochdruck) </b>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 info_notuse bg_orange">
+                    <b> Phäochromozytom (bestimmte Erkrankung des Nebennierenmarks) </b>
                 </div>
             </div>
         </div>
         <div class="col-sm-6 nopadd">
             <div class="row">
                 <div class="col-sm-12 info_notuse bg_orange">
-                    <b> Leiden an einer Lebererkrankung</b>
+                    <b> Einnahme von Herzglykosiden (Arzneimittel zur Behandlung
+                        von Herzschwäche)</b>
                 </div>
             </div>
             <div class="row">
                 <div class="col-sm-12 info_notuse bg_orange">
-                    <b> Wenn Sie älter sind und Ihre Dosis erhöht werden muss</b>
+                    <b> Aneurysmen (krankhafte Ausweitungen der Gefäßwand)</b>
                 </div>
             </div>
             <div class="row">
                 <div class="col-sm-12 info_notuse bg_orange">
-                    <b> <i class="fas fa-child"></i> Kinder</b><br>
-                    Bei Kindern unter 6 Jahren wurde Amlodipin nicht untersucht. <br>
-                    Amlodipin (besilat) Dexcel 5 mg kann nur bei Kindern und
-                    Jugendlichen mit Bluthochdruck im Alter von 6 bis
-                    17 Jahren angewendet werden
+                    <b> Hyperthyreose/Thyreotoxikose (Überfunktion der Schilddrüse)</b>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 info_notuse bg_orange">
+                    <b> schwer kontrollierbarem Diabetes mellitus</b>
                 </div>
             </div>
         </div>
     </div>
 </div>
 <div class="panel-group" id="accordion" style="margin: 30 0 30 0;">
-    <div class="panel panel-default">
+    <div class="panel panel-default panel_neben">
+        <div class="panel-heading">
+            <h4 class="panel-title text-center-xs" data-toggle="collapse" data-target="#collapse0">
+                <img width="40" src="./../../assets/icons/10.svg" /> <span
+                    class="hidden-lg hidden-sm hidden-md"><br><br></span> Spezielle Therapiehinweise
+            </h4>
+        </div>
+        <div id="collapse0" class="panel-collapse collapse in">
+            <div class="panel-body">
+                <ul>
+                    <li> Eine Behandlung des fortdauernden Asthma bronchiale soll
+                        nur zusammen mit entzündungshemmenden Medikamenten
+                        erfolgen.
+                        Ein ansteigender Bedarf von Beta2-Sympathomimetika, wie
+                        Salbutamol-ratiopharm® N Dosieraerosol, ist ein Anzeichen für
+                        eine Verschlechterung der Erkrankung.</li>
+                    <li>Kommt es trotz Behandlung zu keiner Besserung oder gar zu
+                        einer Verschlechterung der Beschwerden, muss die Therapie
+                        durch den Arzt überdacht und gegebenenfalls neu festgesetzt
+                        werden. Die Therapie kann durch Kombination mit entzündungshemmenden Arzneimitteln,
+                        Dosisanpassung einer bereits
+                        bestehenden entzündungshemmenden Behandlung oder die
+                        zusätzliche Gabe weiterer Arzneimittel ergänzt werden.</li>
+                    <li> Bei akuter oder sich rasch verschlimmernder Atemnot muss
+                        unverzüglich ärztliche Hilfe in Anspruch genommen werden.
+                        Wie andere Beta-Agonisten kann Salbutamol bei manchen
+                        Patienten eine bedeutende Hypokaliämie (Senkung des
+                        Blutkalium-Spiegels) herbeiführen.</li>
+                    <li> Eine erhebliche Überschreitung der vorgegebenen Dosierung –
+                        sowohl beim akuten Anfall als auch bei der Tagesdosis – kann
+                        wegen der Nebenwirkungen auf das Herz gefährlich sein.</li>
+                    <li> Wenn Sie bereits an einer schweren Herzerkrankung leiden und
+                        gleichzeitig Salbutamol erhalten ist besondere Vorsicht geboten.
+                        Es gibt im Zusammenhang mit Salbutamol Hinweise darauf,
+                        dass selten ein Sauerstoffmangel am Herzmuskel (myokardialer
+                        Ischämie) auftreten kann. Sie sollten dringend ärztlichen Rat
+                        suchen, wenn Sie Schmerzen in der Brust haben oder es
+                        Anzeichen gibt, dass Ihre Herzerkrankung sich verschlimmert.</li>
+                    <li> Es ist wiederholt über ein erhöhtes Risiko für schwere
+                        Komplikationen und Todesfälle bei der Behandlung des
+                        Asthma bronchiale mit β-Sympathomimetika zur Inhalation
+                        berichtet worden, ohne dass die ursächlichen Zusammenhänge bisher hinreichend geklärt werden
+                        konnten.</li>
+                    <li> Besondere Vorsicht ist erforderlich, wenn in Notfallsituationen
+                        wiederholt Salbutamol verabreicht wird. Nach Gabe hoher
+                        Dosen kann es – in seltenen Fällen – zu einer so genannten
+                        Laktatazidose kommen. Die Laktatazidose kann die Ursache für
+                        eine zunehmende Atemnot sein.</li>
+                    <li>Bei der Inhalation von Salbutamol-ratiopharm® N
+                        Dosieraerosol in hohen Dosen kann der Blutzuckerspiegel
+                        ansteigen. Als Diabetiker sollten Sie häufig Ihre Blutzuckerwerte kontrollieren.</li>
+                    <li> Zur Beurteilung von Krankheitsverlauf und Behandlungserfolg
+                        ist eine tägliche Selbstkontrolle nach ärztlicher Anleitung
+                        wichtig. Messen Sie z. B. regelmäßig die maximale Atemstoßstärke mit einem Peak-flow-Meter.</li>
+                    <li> Es ist für den Patienten möglicherweise gefährlich, den
+                    <li> Gebrauch von Beta2-Sympathomimetika wie Salbutamolratiopharm® N Dosier aerosol selbst zu
+                        erhöhen.</li>
+                    <li> Wie bei anderen Inhalationstherapien kann nach der
+                        Anwendung von Salbutamol-ratiopharm® N Dosieraerosol ein
+                        Bronchial krampf (paradoxer Bronchospasmus) auftreten mit
+                        einer sofortigen Zunahme des Giemens (Keuchens). In diesem
+                        Fall sollte sofort ein bronchienerweiterndes Arzneimittel mit
+                        schnellem Wirkungseintritt inhaliert werden.</li>
+                    <li>Die Behandlung
+                        mit Salbutamol-ratiopharm® N Dosieraerosol soll unverzüglich
+                        abgebrochen und der behandelnde Arzt informiert werden.
+                        Dieser entscheidet, ob weitere Maßnahmen erforderlich sind.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default panel_neben">
+        <div class="panel-heading">
+            <h4 class="panel-title text-center-xs" data-toggle="collapse" data-target="#collapse1">
+                <img width="40" src="./../../assets/icons/10.svg" /> <span
+                    class="hidden-lg hidden-sm hidden-md"><br><br></span> Kinder und Jugendliche
+            </h4>
+        </div>
+        <div id="collapse1" class="panel-collapse collapse in">
+            <div class="panel-body">
+                Die besonderen Dosierungsempfehlungen für Kinder sind zu
+                beachten (siehe auch 3. „Wie ist Salbutamol-ratiopharm® N
+                Dosieraerosol anzuwenden?“).
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default panel_neben">
+        <div class="panel-heading">
+            <h4 class="panel-title text-center-xs" data-toggle="collapse" data-target="#collapse2">
+                <img width="40" src="./../../assets/icons/10.svg" /> <span
+                    class="hidden-lg hidden-sm hidden-md"><br><br></span> Ältere Menschen
+            </h4>
+        </div>
+        <div id="collapse2" class="panel-collapse collapse in">
+            <div class="panel-body">
+                Die Dosierung muss bei älteren Menschen nicht speziell
+                angepasst werden.
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default panel_neben">
         <div class="panel-heading">
             <h4 class="panel-title text-center-xs" data-toggle="collapse" data-target="#collapse3">
                 <img width="40" src="./../../assets/icons/10.svg" /> <span
-                    class="hidden-lg hidden-sm hidden-md"><br><br></span> Einnahme von Amlodipin zusammen mit
+                    class="hidden-lg hidden-sm hidden-md"><br><br></span> Einnahme von Salbutamol-ratiopharm® N
+                Dosieraerosol zusammen mit
                 anderen Medikamente
             </h4>
         </div>
         <div id="collapse3" class="panel-collapse collapse in">
             <div class="panel-body">
-                Informieren Sie Ihren Arzt oder Apotheker, wenn Sie andere Arzneimittel
-                einnehmen/anwenden, kürzlich andere Arzneimittel eingenommen/angewendet haben oder
-                beabsichtigen andere Arzneimittel einzunehmen/anzuwenden. <br>
-                Amlodipin (besilat) Dexcel 5 mg kann andere Arzneimittel beeinflussen oder von anderen
-                Arzneimitteln beeinflusst werden, wie z.B.:
+                Informieren Sie Ihren Arzt oder Apotheker, wenn Sie andere
+                Arzneimittel einnehmen/anwenden, kürzlich andere Arzneimittel eingenommen/angewendet haben oder
+                beabsichtigen
+                andere Arzneimittel einzunehmen/anzuwenden.<br>
+                Es können sowohl Wirkungen als auch Nebenwirkungen der
+                kombinierten Arzneimittel verändert werden. Dies kann vorkommen, wenn Sie Salbutamol-ratiopharm® N
+                Dosieraerosol
+                anwenden zusammen mit
                 <ul>
-                    <li>Ketoconazol, Itraconazol (gegen Pilzerkrankungen)</li>
-                    <li>Ritonavir, Indinavir, Nelfinavir (so genannte Proteasehemmer gegen HIV-Infektionen)</li>
-                    <li>Rifampicin, Erythromycin, Clarithromycin (Antibiotika)</li>
-                    <li>Hypericum perforatum (Johanniskraut)</li>
-                    <li>Verapamil, Diltiazem (Herzmittel)</li>
-                    <li>Dantrolen (eine Infusion bei schwerer Störung der Körpertemperatur)</li>
-                    <li>Tacrolimus (ein Arzneimittel zur Beeinflussung des Immunsystems)</li>
-                    <li>Simvastatin (zur Senkung der Cholesterinwerte)</li>
-                    <li>Ciclosporin (ein Mittel zur Unterdrückung des Immunsystems)</li>
+                    <li>Beta-Rezeptorenblockern (Mittel zur Blutdrucksenkung)</li>
+                    <li>Antidiabetika (Mittel gegen Zuckerkrankheit)</li>
+                    <li>Digitalisglykosiden (Herzglykoside) und Mitteln gegen
+                        Herzrhythmusstörungen</li>
+                    <li>Anästhetika (Narkosemittel)</li>
+                    <li>Sympathomimetika (Mittel zur Beeinflussung des
+                        vegetativen Nervensystems)</li>
+                    <li>Theophyllin oder anderen Sympathomimetika, auch
+                        Substanzen, wie z. B. L-Dopa, L-Thyroxin, Oxytocin oder
+                        Alkohol</li>
+                    <li> Mutterkornalkaloiden, wie z. B. Ergotamin</li>
+                    <li>Arzneimitteln zur Behandlung von Depressionen (Monoaminoxidasehemmern oder trizyklischen
+                        Antidepressiva)</li>
+                    <li>Procarbazin</li>
                 </ul>
-                Amlodipin (besilat) Dexcel 5 mg kann Ihren Blutdruck noch weiter senken, wenn Sie bereits
-                andere blutdrucksenkende Arzneimittel anwenden.
+                Die durch Salbutamol-ratiopharm® N Dosieraerosol
+                möglicherweise ausgelöste Hypokaliämie (Senkung des
+                Blutkaliumspiegels) kann bei gleichzeitiger Einnahme von
+                Methylxanthinen (z. B. Theophyllin), Kortikoiden, Diuretika
+                oder Digitalisglykosiden noch verstärkt werden. <br>
+                <b>Hinweis:</b><br>
+                Wenn bei Ihnen eine Narkose geplant ist, sollten Sie
+                Salbutamol-ratiopharm® N Dosieraerosol eventuell 6 Stunden
+                zuvor nicht mehr anwenden. Fragen Sie Ihren Arzt.
             </div>
         </div>
     </div>
-    <div class="panel panel-default">
+
+    <div class="panel panel-default panel_neben">
         <div class="panel-heading">
             <h4 class="panel-title text-center-xs" data-toggle="collapse" data-target="#collapse4">
-                <img width="40" src="./../../assets/icons/11.svg" /> <span
-                    class="hidden-lg hidden-sm hidden-md"><br><br></span> Einnahme von Amlodipin zusammen mit
-                Nahrungsmitteln und
-                Getränken
-            </h4>
-        </div>
-        <div id="collapse4" class="panel-collapse collapse">
-            <div class="panel-body">
-                Personen, die Amlodipin (besilat) Dexcel 5 mg einnehmen, sollten keine Grapefruit essen
-                und keinen Grapefruitsaft trinken, weil hierdurch der Blutspiegel des Wirkstoffs Amlodipin
-                erhöht werden kann, was möglicherweise zu einem unkontrollierten Anstieg der
-                blutdrucksenkenden Wirkung von Amlodipin (besilat) Dexcel 5 mg führt.
-            </div>
-        </div>
-    </div>
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <h4 class="panel-title text-center-xs" data-toggle="collapse" data-target="#collapse5">
                 <img width="40" src="./../../assets/icons/8.svg" /> <span
                     class="hidden-lg hidden-sm hidden-md"><br><br></span> Schwangerschaft und Stillzeit
             </h4>
         </div>
-        <div id="collapse5" class="panel-collapse collapse">
+        <div id="collapse4" class="panel-collapse collapse">
             <div class="panel-body">
-                Wenn Sie schwanger sind oder stillen, oder wenn Sie vermuten, schwanger zu sein oder
-                beabsichtigen, schwanger zu werden, fragen Sie vor der Anwendung dieses Arzneimittels
+                Wenn Sie schwanger sind oder stillen, oder wenn Sie vermuten, schwanger zu sein oder beabsichtigen,
+                schwanger zu
+                werden, fragen Sie vor der Anwendung dieses Arzneimittels
                 Ihren Arzt oder Apotheker um Rat.
                 <h4>Schwangerschaft</h4>
-                Die Sicherheit von Amlodipin während einer Schwangerschaft konnte nicht nachgewiesen
-                werden. Wenn Sie glauben, schwanger zu sein, oder eine Schwangerschaft planen,
-                müssen Sie dies Ihrem Arzt vor der Einnahme von Amlodipin (besilat) Dexcel 5 mg sagen.</br>
+                Salbutamol passiert die Plazentaschranke. Für den Menschen
+                liegen über eine Anwendung während der Schwangerschaft
+                unzureichende Erfahrungen vor.
+                Ein Anstieg der Herzfrequenz (Tachykardie) und ein
+                erniedrigter Blutzuckerspiegel (Hypoglykämie) des Neugeborenen sind bei der Anwendung von Salbutamol als
+                wehenhemmendes Mittel beschrieben worden. Studien bei
+                der Ratte haben in sehr hoher Dosierung eine Fortpflanzung
+                gefährdende Wirkung gezeigt. Das mögliche Risiko für den
+                Menschen ist nicht bekannt.
+                Salbutamol-ratiopharm® N Dosieraerosol sollte in der
+                Schwangerschaft, insbesondere während der ersten drei
+                Monate, nur nach strenger Indikationsstellung angewendet
+                werden. Das Gleiche gilt wegen der wehenhemmenden
+                Wirkung für die Anwendung am Ende der Schwangerschaft.
+                Salbutamol-ratiopharm® N Dosieraerosol darf nicht zur
+                Behandlung vorzeitiger Wehen angewendet werden</br>
                 <h4>Stillzeit</h4>
-                Es ist nicht bekannt, ob Amlodipin in die Muttermilch übergeht. Wenn Sie stillen oder mit
-                dem Stillen beginnen möchten, müssen Sie dies Ihrem Arzt vor der Einnahme von
-                Amlodipin (besilat) Dexcel 5 mg sagen.
-                Fragen Sie vor der Einnahme von allen Arzneimitteln Ihren Arzt oder Apotheker um Rat.
+                Da Salbutamol wahrscheinlich in die Muttermilch übergeht,
+                wird die Anwendung in der Stillzeit nur nach sorgfältiger
+                Nutzen-Risiko- Abwägung empfohlen.
             </div>
         </div>
     </div>
-    <div class="panel panel-default">
+    <div class="panel panel-default panel_neben">
         <div class="panel-heading">
-            <h4 class="panel-title text-center-xs" data-toggle="collapse" data-target="#collapse6">
+            <h4 class="panel-title text-center-xs" data-toggle="collapse" data-target="#collapse5">
                 <img width="40" src="./../../assets/icons/3.svg" /><span
                     class="hidden-lg hidden-sm hidden-md"><br><br></span>
                 Verkehrstüchtigkeit und Fähigkeit zum Bedienen von Maschinen
             </h4>
         </div>
+        <div id="collapse5" class="panel-collapse collapse">
+            <div class="panel-body">Durch individuell auftretende unterschiedliche Reaktionen,
+                insbe sondere bei höherer Dosierung, kann die Fähigkeit zur
+                aktiven Teilnahme am Straßenverkehr oder zum Bedienen von
+                Maschinen beeinträchtigt werden. Dies gilt im verstärkten
+                Maß bei Behandlungsbeginn sowie im Zusammenwirken mit
+                Alkohol oder Beruhigungs- und Schlafmitteln </div>
+        </div>
+    </div>
+    <div class="panel panel-default panel_neben">
+        <div class="panel-heading">
+            <h4 class="panel-title text-center-xs" data-toggle="collapse" data-target="#collapse6">
+                <img width="40" src="./../../assets/icons/3.svg" /><span
+                    class="hidden-lg hidden-sm hidden-md"><br><br></span>
+                Auswirkungen bei Fehlgebrauch zu Dopingzwecken
+            </h4>
+        </div>
         <div id="collapse6" class="panel-collapse collapse">
-            <div class="panel-body">Die Fähigkeit zur aktiven Teilnahme am Straßenverkehr oder zum Bedienen von
-                Maschinen
-                kann durch Amlodipin (besilat) Dexcel 5 mg beeinträchtigt werden. Falls die Tabletten bei
-                Ihnen ein Krankheitsgefühl, Schwindel oder Müdigkeit hervorrufen oder Kopfschmerzen
-                auftreten, fahren Sie kein Auto oder bedienen Sie keine Maschinen und suchen Sie
-                umgehend Ihren Arzt auf. </div>
+            <div class="panel-body">Die Anwendung von Salbutamol-ratiopharm® N Dosieraerosol
+                kann bei Dopingkontrollen zu positiven Ergebnissen führen.
+                Die Anwendung von Salbutamol-ratiopharm® N Dosieraerosol
+                als Dopingmittel kann zu einer Gefährdung der Gesundheit
+                führen. </div>
         </div>
     </div>
 </div>
 </div>
-<h3 class="not_take"><i class="fas fa-bolt bolt_red" aria-hidden="true"></i> <br> Amlodipin (besilat) Dexcel 5 mg
-    nicht
-    einnehmen bei </h3>
+<h3 class="not_take"><i class="fas fa-bolt bolt_red" aria-hidden="true"></i> <br> Salbutamol-ratiopharm® N Dosieraerosol
+    nicht anwenden bei </h3>
 <div class="row">
     <div class="col-sm-6 nopadd">
         <div class="row">
             <div class="col-sm-12 info_notuse"><b>Allergisch </b> gegen
                 <ul>
-                    <li>Amlodipin</li>
-                    <li>Mikrokristalline Cellulose</li>
-                    <li>CalciumhydrogenphosphatDihydrat</li>
-                    <li>Carboxymethylstärke-Natrium (Typ A) (Ph. Eur.)</li>
-                    <li>Magnesiumstearat (Ph.Eur.)
-                        [pflanzlich]</li>
+                    <li>Salbutamol</li>
+                    <li>Ethanol (3,9 mg/Sprühstoß)</li>
+                    <li>Norfluran (HFA-134a)</li>
+
                 </ul>
             </div>
         </div>
-        <div class="row">
-            <div class="col-sm-12 info_notuse"> <b>Leiden an stark erniedrigtem Blutdruck (Hypotonie) </b> </div>
-        </div>
+
     </div>
     <div class="col-sm-6 nopadd">
         <div class="row">
-            <div class="col-sm-12 info_notuse"><b>Leiden an schwerer Verengung des Ausflusstraktes der linken
-                    Herzkammer</b>
-                (Aortenstenose) oder an einem <b>kardiogenen Schock</b> (dann kann Ihr Herz den Körper
-                nicht mehr mit genügend Blut versorgen)</div>
+            <div class="col-sm-12 info_notuse"><b>Bei gleichzeitiger Behandlung mit Beta-Rezeptorenblockern.
+                    Beta-Rezeptorenblocker können schwere Bronchialkrämpfe
+                    auslösen.</div>
         </div>
-        <div class="row">
-            <div class="col-sm-12 info_notuse"><b>Leiden an Herzinsuffizienz nach einem Herzinfarkt </b>
-            </div>
-        </div>
+
     </div>
 </div>
 ',14,3);
@@ -4696,27 +4888,36 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic, addre
 <div class="row">
     <div class="col-md-9">
         <h3>Pharmazeutischer Unternehmer </h3>
-        <p> Dexcel Pharma GmbH <br />
-            Carl-Zeiss-Str. 2<br />
-            63755 Alzenau<br />
+        <p> ratiopharm GmbH <br />
+            Graf-Arco-Str. 3<br />
+            89079 Ulm<br />
             <b>Tel.:</b> 0 60 23 - 94 80 - 0 <br />
             <b>Fax:</b> 0 60 23 - 94 80 - 50 <br />
         </p>
     </div>
     <div class="col-md-3">
-        <img class="img-responsive" src="/assets/images/company/dexcel.jpeg" />
+        <img class="img-responsive" src="/assets/images/company/ratiopharm.png" />
     </div>
 </div>
 <div class="row">
     <div class="col-md-9">
         <h3>Hersteller </h3>
-        <p> Dexcel Pharma GmbH <br />
-            Steinbruch 2, Halle 15<br />
-            Lager im Industriepark Giesbert G.b.R. </br>
-            63755 Alzenau<br />
+        <p> Merckle GmbH<br />
+            Ludwig-Merckle-Str. 3<br />
+            89143 Blaubeuren<br />
+        </p>
+        <p> Norton (Waterford) Limited<br>
+            T/A Ivax Pharmaceuticals Ireland<br>
+            T/A Teva Pharmaceuticals Ireland<br />
+            Unit 301 IDA Industrial Park<br>
+            Cork Road<br />
+            Waterford<br />
+            Irland
         </p>
     </div>
     <div class="col-md-3">
+        <img class="img-responsive" src="/assets/images/company/merkle.png" />
+
     </div>
 </div>');
 INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (127,0,'
@@ -4734,7 +4935,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
     <h3 class="modal-title xs-center">Dosierung</h3>
     <hr />
 
-    <div class=" with-nav-tabs panel-default">
+    <div class=" with-nav-tabs panel-default panel_neben">
         <div style="height: inherit;">
             <ul class="nav nav-tabs nav1-tabs">
                 <li class="active"><a href="#tab1default" data-toggle="tab">Erwachsene</a></li>
@@ -4751,8 +4952,8 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                             <tbody>
                                 <tr>
                                     <td> <b>Einzeldosis</b></td>
-                                    <td>1 Sprühstoß &#8793;
-                                        100 Mikrogramm Salbutamol</td>
+                                    <td>1-2 Sprühstoße &#8793;
+                                        100-200 Mikrogramm Salbutamol</td>
                                 </tr>
 
                                 <tr>
@@ -4799,7 +5000,8 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                             <tbody>
                                 <tr>
                                     <td> <b>Einzeldosis</b></td>
-                                    <td>5mg</td>
+                                    <td>1 Sprühstoß &#8793;
+                                        100 Mikrogramm Salbutamol</td>
                                 </tr>
 
                                 <tr>
@@ -4855,7 +5057,6 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
 <div class="row content_header" style="margin-top: 30px;">
     <h3 class="modal-title xs-center">Art und Dauer der Anwendung</h3>
     <hr />
-
     <div class="row text-center">
         <div class="col-sm-4">
             <i style="font-size:40px;    color: #575858;" class="fas fa-child"></i><br> <br>
@@ -4876,106 +5077,276 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
             und Verlauf der Erkrankung und ist vom Arzt individuell zu
             entscheiden.</div>
     </div>
-    <div class="row ">
-        <div class="alert alert-info" role="alert">
-            Bei Kindern unter 6 Jahren und älteren Patienten wird der
-            Einsatz einer Inhalierhilfe (Spacer) dringend empfohlen.
-            Bitte bea chten Sie, dass bei Verwendung von Salbutamolratiopharm® N Dosieraerosol zusammen mit einer
-            Inhalierhilfe
-            unter Umständen die Dosis durch den Arzt angepasst werden
-            muss. </div>
-    </div>
-
-    <div class="alert alert-info" role="alert">
-        Bei Kindern unter 6 Jahren und älteren Patienten wird der
-        Einsatz einer Inhalierhilfe (Spacer) dringend empfohlen.
-        Bitte bea chten Sie, dass bei Verwendung von Salbutamolratiopharm® N Dosieraerosol zusammen mit einer
-        Inhalierhilfe
-        unter Umständen die Dosis durch den Arzt angepasst werden
-        muss. </div>
-
     <div class="row" style="margin-top: 30px;">
         <div class="col-sm-12">
-            <h4 class="modal-title xs-center">Teilung der Tablette</h4>
+            <h4 class="modal-title xs-center">Bedienungsanleitung</h4>
             <hr />
-            <div class="col-sm-6 col-xs-12 text-center">
-                <h4> Schritt 1</h4>
-                <img src="./../../assets/p_form/usage/notcrack_small.svg" class="usage_tab" alt="Tablette"
-                    title="Tablette">
-                <br><br>
-                <p>Legen Sie bitte die Tablette mit der Bruchkerbe nach oben auf eine feste Unterlage.</p>
-
-            </div>
-            <div class="col-sm-6 col-xs-12 text-center">
-                <h4>Schritt 2</h4>
-                <img src="./../../assets/p_form/usage/crack_small.svg" class="usage_tab1" alt="Tablette"
-                    title="Tablette">
-                <br><br>
-                <p>Drücken Sie mit den Zeigefingern auf die linke und rechte Hälfte der Tablette.</p>
+            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="5"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="6"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="7"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="8"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="9"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <div class="carousel-caption">
+                            <h4> Schritt 1</h4>
+                            <img src="./../../assets/medication/14/1.JPG" class="usage_tab2" alt="Tablette"
+                                title="Tablette">
+                            <br><br>
+                            <p> Durch leichtes Zusammendrücken
+                                der Seitenflächen die Schutzkappe
+                                vom Mundrohr entfernen.</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="carousel-caption">
+                            <h4>Schritt 2</h4>
+                            <br><br>
+                            <p> Das Mundrohr inklusive des
+                                Wirkstoffbehälters auf das
+                                Vorhandensein von losen Fremdkörpern prüfen.</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="carousel-caption">
+                            <h4>Schritt 3</h4>
+                            <img src="./../../assets/medication/14/3.JPG" class="usage_tab2" alt="Tablette"
+                                title="Tablette">
+                            <br><br>
+                            <p> Das Dosieraerosol kräftig
+                                schütteln, um sicherzustellen,
+                                dass mögliche Fremdkörper
+                                entfernt werden und der Inhalt
+                                gleichmäßig durchmischt wird.</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="carousel-caption">
+                            <h4>Schritt 4</h4>
+                            <img src="./../../assets/medication/14/4.JPG" class="usage_tab2" alt="Tablette"
+                                title="Tablette">
+                            <br><br>
+                            <p> Das Dosieraerosol zwischen
+                                Daumen und Zeigefinger, aufrecht mit
+                                dem Behälterboden nach oben
+                                halten.
+                                Das Dosieraerosol ist bei der
+                                Inhalation senkrecht, mit dem
+                                Boden nach oben zu halten,
+                                unabhängig von der Körper position.
+                                Langsam so tief wie möglich ausatmen.</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="carousel-caption">
+                            <h4>Schritt 5</h4>
+                            <img src="./../../assets/medication/14/5.JPG" class="usage_tab2" alt="Tablette"
+                                title="Tablette">
+                            <br><br>
+                            <p> Dann das Mundrohr mit den
+                                Lippen fest umschließen, aber
+                                nicht auf das Mundrohr beißen. </p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="carousel-caption">
+                            <h4>Schritt 6</h4>
+                            <img src="./../../assets/medication/14/6.JPG" class="usage_tab2" alt="Tablette"
+                                title="Tablette">
+                            <br><br>
+                            <p> Tief und gleichmäßig durch das
+                                Mundrohr einatmen. Kurz nach
+                                Beginn des Einatmens den Wirkstoffbehälter einmal fest nach
+                                unten drücken; währenddessen
+                                und auch danach weiter gleichmäßig und tief einatmen.</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="carousel-caption">
+                            <h4>Schritt 7</h4>
+                            <img src="./../../assets/medication/14/7.JPG" class="usage_tab2" alt="Tablette"
+                                title="Tablette">
+                            <br><br>
+                            <p> Den Atem so lange wie möglich
+                                anhalten. Das Mundrohr absetzen
+                                und den Zeigefinger vom oberen
+                                Ende des Dosieraerosols nehmen.</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="carousel-caption">
+                            <h4>Schritt 8</h4>
+                            <br><br>
+                            <p> Wenn ein weiterer Sprühstoß
+                                inhaliert werden soll, das Dosieraerosol weiterhin aufrecht halten
+                                und ca. eine halbe Minute warten,
+                                bevor die Schritte 3 bis 7 wiederholt werden.</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="carousel-caption">
+                            <h4>Schritt 9</h4>
+                            <img src="./../../assets/medication/14/9.JPG" class="usage_tab2" alt="Tablette"
+                                title="Tablette">
+                            <br><br>
+                            <p> Die Schutzkappe wieder auf das
+                                Mundrohr aufsetzen, indem diese
+                                bis zum Einrasten fest auf das
+                                Mundrohr gedrückt wird.</p>
+                        </div>
+                    </div>
+                    <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span></a><a class="right carousel-control"
+                        href="#carousel-example-generic" data-slide="next"><span
+                            class="glyphicon glyphicon-chevron-right">
+                        </span></a>
+                </div>
             </div>
         </div>
     </div>
+
+    <div class="row">
+        <div class="alert alert-info" role="alert">
+            <b> Wichtig:</b>
+            <ul>
+                <li>Die Schritte 5, 6 und 7 nicht hastig durchführen. Es ist wichtig,
+                    mit dem Einatmen zu beginnen, bevor der Sprühstoß
+                    ausgelöst wird.</li>
+                <li>Das Dosieraerosol ist stets senkrecht,
+                    mit dem Boden nach oben zu halten, unabhängig von der
+                    Körperposition, in der inhaliert wird.</li>
+                <li> Bei Kindern unter 6 Jahren und älteren Patienten wird der
+                    Einsatz einer Inhalierhilfe (Spacer) dringend empfohlen.</li>
+                <li>Bitte beachten Sie, dass bei Verwendung von Salbutamolratiopharm® N Dosieraerosol zusammen mit
+                    einer
+                    Inhalierhilfe
+                    unter Umständen die Dosis durch den Arzt angepasst werden
+                    muss.</li>
+                <li data-toggle="modal" data-target="#myModal" style="cursor: pointer;color: #00283b;"><i
+                        class="fas fa-broom"></i> Reinigung des
+                    Mundrohres</li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <!-- Modal -->
+        <div id="myModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Reinigung des
+                            Mundrohres</h4>
+                    </div>
+                    <div class="modal-body">
+                        <ul>
+                            <li>Das Mundrohr sollte regelmäßig, am besten täglich
+                                gereinigt werden.</li>
+                            <li>Spülen Sie das Mundrohr nach Herausnehmen des
+                                Behälters gründlich in warmem fließendem Wasser. Das
+                                Wasser soll nacheinander von beiden Richtungen durch die
+                                Öffnungen einlaufen, damit eine mögliche Verstopfung der
+                                kleinen Öffnung im Innern des Mundstücks freigesetzt
+                                werden kann.</li>
+                            <li>Anschließend trocknen Sie es bitte sorgfältig von innen und
+                                außen.</li>
+                            <li>Der Behälter wird erst in das vollständig getrocknete
+                                Mundrohr wieder eingesetzt.</li>
+                            <li>Bitte achten Sie darauf, dass der Behälter nicht ins Wasser
+                                gelegt wird.</li>
+                        </ul>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
 </div>
 <div class="row content_header" style="margin-top: 30px;">
     <h3 class="modal-title xs-center">Weitere Informationen</h3>
     <hr />
     <div class="col-md-12">
         <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-            <div class="panel panel-default">
+            <div class="panel panel-default panel_neben">
                 <div class="panel-heading head_panel" role="tab" id="headingOne">
                     <h4 class="panel-title text-center-xs" data-toggle="collapse" data-target="#collapseOne1">
-                        Wenn Sie eine größere Menge von Amlodipin (besilat) Dexcel 5 mg eingenommen haben, als Sie
+                        Wenn Sie eine größere Menge von Salbutamolratiopharm® N Dosieraerosol eingenommen haben, als Sie
                         sollten
                     </h4>
                 </div>
                 <div id="collapseOne1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
                     <div class="panel-body">
-                        <p>Wenn Sie zu viele Tabletten eingenommen haben, kann Ihr Blutdruck abfallen oder auch
-                            gefährlich niedrig werden.
-                            <br>Sie können sich schwindelig, benommen und schwach fühlen
-                            oder ohnmächtig werden. Wenn der Blutdruckabfall stark genug ist, kann es zu einem
-                            Schock kommen.
-                            <br>Ihre Haut kann sich dann kalt und feucht anfühlen und Sie könnten das
-                            Bewusstsein verlieren. Begeben Sie sich sofort in medizinische Überwachung, wenn Sie zu
-                            viele Amlodipin (besilat) Dexcel Tabletten eingenommen haben.
+                        <p>Die Symptome bzw. Anzeichen einer Überdosierung
+                            entsprechen den Nebenwirkungen. Diese treten dann sehr
+                            schnell und gegebenenfalls in verstärktem Umfang in
+                            Erscheinung.<br>
+                            <b>Symptome bzw. Anzeichen einer Überdosierung sind:</b>
+                            Herzrasen, Herzklopfen, unregelmäßiger und/oder
+                            beschleunigter Herzschlag, Ruhelosigkeit, Schlafstörungen,
+                            Brustschmerzen und heftiges Zittern insbesondere an den
+                            Händen, aber auch am ganzen Körper. Gelegentlich sind nach
+                            exzessiven Salbutamol-Anwendungen psychotische
+                            Reaktionen beobachtet worden. Weiterhin kann es zum
+                            Auftreten einer Laktatazidose kommen, die sich durch eine
+                            vertiefte Atmung, Übelkeit und Bauchschmerzen äußern kann.
+                            Treten diese Beschwerden auf, soll unverzüglich ärztliche
+                            Hilfe in Anspruch genommen werden.
                         </p>
                     </div>
                 </div>
             </div>
-            <div class="panel panel-default">
+            <div class="panel panel-default panel_neben">
                 <div class="panel-heading head_panel" role="tab" id="headingTwo">
                     <h4 class="panel-title title_pan text-center-xs" data-toggle="collapse" data-target="#collapseTwo2">
-                        Wenn Sie die Einnahme von Amlodipin (besilat) Dexcel 5 mg vergessen haben
+                        Wenn Sie die Einnahme von Salbutamol-ratiopharm® N
+                        Dosieraerosol vergessen haben
                     </h4>
                 </div>
                 <div id="collapseTwo2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
                     <div class="panel-body">
-                        <p>Dies ist nicht schlimm. Nehmen Sie nicht die doppelte Menge ein, wenn Sie die vorherige
-                            Einnahme vergessen haben. <br> Nehmen Sie die nächste Dosis dann wieder zur gewohnten
-                            Zeit ein. </p>
+                        <p>Sie sollten in keinem Fall
+                            die Dosis beim nächsten Mal erhöhen!<br>
+                            Eine nachträgliche Anwendung ist nicht erforderlich.
+                            Salbutamol-ratiopharm® N Dosieraerosol sollte möglichst nur
+                            bei Bedarf angewendet werden. </p>
                     </div>
                 </div>
             </div>
-            <div class="panel panel-default">
+            <div class="panel panel-default panel_neben">
                 <div class="panel-heading head_panel" role="tab" id="headingThree">
                     <h4 class="panel-title text-center-xs" data-toggle="collapse" data-target="#collapseThree3">
 
-                        Wenn Sie die Einnahme von Amlodipin (besilat) Dexcel 5 mg abbrechen
+                        Wenn Sie die Einnahme von Salbutamol-ratiopharm® N
+                        Dosieraerosol abbrechen
                     </h4>
                 </div>
                 <div id="collapseThree3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
                     <div class="panel-body">
-                        <p>Ihr Arzt wird Ihnen sagen, wie lange Sie dieses Arzneimittel einnehmen müssen. Wenn Sie
-                            die Anwendung dieses Arzneimittels beenden, bevor er Sie dazu aufgefordert hat, können
-                            Ihre Beschwerden zurückkehren.<br>
-                            Wenn Sie weitere Fragen zur Einnahme dieses Arzneimittels haben, wenden Sie sich an
-                            Ihren Arzt oder Apotheker </p>
+                        <p>Es könnte sich hierdurch Ihre Krankheit verschlechtern. Bitte brechen Sie die Behandlung mit
+                            Salbutamol-ratiopharm® N Dosieraerosol nicht ohne Rücksprache mit Ihrem Arzt ab. </p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+</div>
+
 ',14,5);
 INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (128,0,'
 <div class="row content_header">
@@ -4988,218 +5359,606 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
     Suchen Sie sofort Ihren Arzt auf, wenn bei Ihnen nach der Einnahme dieses Arzneimittels
     die folgenden Nebenwirkungen auftreten:
     <ul>
-        <li>plötzliches Keuchen beim Atmen, Schmerzen im Brustbereich, Kurzatmigkeit oder
-            Atembeschwerden</li>
-        <li>Anschwellen der Augenlider, des Gesichts oder der Lippen</li>
-        <li>Anschwellen der Zunge oder der Kehle, was zu starken Atembeschwerden führt</li>
-        <li>schwere Hautreaktionen einschließlich starker Hautausschlag, Nesselsucht, Hautrötung
-            am ganzen Körper, starkes Jucken, Blasenbildung, Abschälen und Anschwellen der
-            Haut, Entzündung von Schleimhäuten (Stevens-Johnson-Syndrom) oder andere
-            allergische Reaktionen
-        <li>Herzinfarkt, ungewöhnlicher Herzschlag</li>
-        <li>Bauchspeicheldrüsenentzündung, die zu starken Bauch- und Rückenschmerzen mit
-            ausgeprägtem Unwohlsein führen kann </li>
+        <li>Zittern (Tremor)
+        <li>Übelkeit</li>
+        <li>Schwitzen</li>
+        <li>Kopfschmerzen</li>
+        <li>Schwindel</li>
+        <li>Herzklopfen (Palpitationen)</li>
     </ul>
+    Diese Nebenwirkungen können sich
+    bei Fortführung der Behandlung im Verlaufe von 1 – 2 Wochen
+    zurückbilden.
 </div>
-<div class="row">
-    <table class="sideffect_table hidden-xs">
-        <thead>
-            <tr>
-                <th>Häufigkeit</th>
-                <th style="width: 25%;">Anzahl der betreffenden Behandelten</th>
-                <th>Nebenwirkung</th>
-            </tr>
-        </thead>
-        <tbody class="" style="padding: 15px;">
-            <tr id="sehrhaeufig">
-                <td>Sehr häufig</td>
-                <td>Mehr als 1 von 10 Behandelten</td>
-                <td>Knöchelschwellungen (Ödeme)
-                </td>
-            </tr>
-            <tr id="haeufig">
-                <td>Häufig</td>
-                <td>Mehr als 1 von 10 Behandelten </td>
-                <td>
-                    <ul>
-                        <li>Kopfschmerzen, Schwindel, Schläfrigkeit (insbesondere zu Beginn der Behandlung)</li>
-                        <li>Herzklopfen (Palpitationen), Hautrötung mit Wärmegefühl</li>
-                        <li>Bauchschmerzen, Übelkeit</li>
-                        <li>veränderte Darmentleerungsgewohnheiten, Durchfälle, Verstopfung,
-                            Verdauungsstörungen</li>
-                        <li>Müdigkeit, Schwächegefühl</li>
-                        <li>Sehstörungen, Doppeltsehen</li>
-                        <li>Muskelkrämpfe</li>
-                    </ul>
-                </td>
-            </tr>
-            <tr id="gelegentlich">
-                <td>Gelegentlich</td>
-                <td>Bis zu 1 von 100 Behandelten</td>
-                <td>
-                    <ul>
-                        <li>Stimmungsschwankungen, Angst, Depression, Schlaflosigkeit</li>
-                        <li>Zittern, Geschmacksstörungen, kurze Bewusstlosigkeit</li>
-                        <li>verminderte Empfindlichkeit für Berührungsreize oder Kribbeln in den Extremitäten,
-                            Verlust des Schmerzgefühls</li>
-                        <li>Ohrgeräusche</li>
-                        <li>niedriger Blutdruck</li>
-                        <li>Niesen/laufende Nase durch eine Entzündung der Nasenschleimhaut (Rhinitis)</li>
-                        <li>Husten</li>
-                        <li>Mundtrockenheit, Erbrechen</li>
-                        <li>Haarausfall, vermehrtes Schwitzen, Hautjucken, rote Flecken auf der Haut,
-                            Hautverfärbung</li>
-                        <li>Störungen beim Wasserlassen, vermehrter nächtlicher Harndrang, häufigeres
-                            Wasserlassen</li>
-                        <li>Erektionsstörungen, Vergrößerung der Brustdrüsen beim Mann</li>
-                        <li>Schmerzen, Unwohlsein</li>
-                        <li>Gelenk- oder Muskelschmerzen, Rückenschmerzen</li>
-                        <li>Gewichtszunahme oder Gewichtsabnahme</li>
-                    </ul>
-                </td>
-            </tr>
-            <tr id="selten">
-                <td>Selten</td>
-                <td> Bis zu 1 von 1.000 Behandelten </td>
-                <td>
-                    Verwirrung
-                </td>
-            </tr>
-            <tr id="sehrselten">
-                <td>Sehr selten</td>
-                <td> Bis zu 1 von 10.000 Behandelten </td>
-                <td>
-                    <ul>
-                        <li>Verminderung der weißen Blutkörperchen, Verminderung der Blutplättchen, was zu
-                            ungewöhnlichen blauen Flecken oder leichtem Bluten führen kann (Schädigung der
-                            roten Blutzellen)</li>
-                        <li>erhöhter Blutzuckerspiegel (Hyperglykämie)</li>
-                        <li>eine Nervenstörung, die zu Schwächegefühl, verminderter Empfindlichkeit für
-                            Berührungsreize oder Kribbeln führen kann</li>
-                        <li>Schwellung des Zahnfleischs</li>
-                        <li>aufgeblähter Bauch (Gastritis)</li>
-                        <li>gestörte Leberfunktion, Entzündung der Leber (Hepatitis), Gelbfärbung der Haut
-                            (Gelbsucht), Anstieg der Leberenzyme, wodurch bestimmte medizinische Tests
-                            beeinflusst werden können</li>
-                        <li>erhöhte Muskelanspannung</li>
-                        <li>entzündliche Reaktionen der Blutgefäße, häufig mit Hautausschlag</li>
-                        <li>Lichtempfindlichkeit</li>
-                        <li>Störungen, die sich aus Steifheit, Zittern und/oder Bewegungsstörungen
-                            zusammensetzen</li>
-                    </ul>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <div class="hidden-sm hidden-md hidden-lg">
-        <div class="row content_header">
-            <h3> Häufigkeit der Nebenwirkungen </h3>
-            <hr>
-        </div>
-        <div>
-            <div class="row p15" id="sehrhaeufig-xs">
-                <h4> Sehr häufig</h4>
-                <div class="row">
-                    <b>Anzahl der betreffenden Behandelten:</b> <br> Mehr als 1 von 10 Behandelten
+<div class="row" style="margin-top: 30px;">
+    <div class="col-md-12">
+        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+            <div class="panel panel-default panel_neben">
+                <div class="panel-heading head_panel" role="tab" id="nebenhead1">
+                    <h4 class="panel-title text-center-xs" data-toggle="collapse" data-target="#neben1">
+                        Erkrankungen des Immunsystems </h4>
                 </div>
-                <div class="row">
-                    <b>Nebenwirkung:</b> <br>Knöchelschwellungen (Ödeme)
-                </div>
-                <hr>
-            </div>
+                <div id="neben1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="nebenhead1">
+                    <div class="panel-body">
+                        <table class="sideffect_table hidden-xs">
+                            <thead>
+                                <tr>
+                                    <th>Häufigkeit</th>
+                                    <th style="width: 25%;">Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> </th>
+                                    <th>Nebenwirkung</th>
+                                </tr>
+                            </thead>
+                            <tbody class="" style="padding: 15px;">
+                                <tr id="nichtbekannt">
+                                    <td>Nicht Bekannt</td>
+                                    <td>Häufigkeit auf Grundlage der verfügbaren Daten nicht abschätzbar</td>
+                                    <td>
+                                        Überempfindlichkeitsreaktionen einschließlich
+                                        Juckreiz, Nesselsucht (Urtikaria), Schwellung
+                                        im Mund-Rachenbereich (Quincke-Ödem),
+                                        Hautausschlag (Exanthem), Bronchialkrampf
+                                        (Bronchospasmus), Blutdruckabfall und
+                                        Kollaps.
+                                    </td>
+                                </tr>
 
-            <div class="row p15" id="haeufig-xs">
-                <h4> Häufig</h4>
-                <div class="row">
-                    <b>Anzahl der betreffenden Behandelten:</b> <br> Mehr als 1 von 10 Behandelten
-                </div>
-                <div class="row">
-                    <b>Nebenwirkung:</b> <br>
-                    <ul>
-                        <li>Kopfschmerzen, Schwindel, Schläfrigkeit (insbesondere zu Beginn der Behandlung)</li>
-                        <li>Herzklopfen (Palpitationen), Hautrötung mit Wärmegefühl</li>
-                        <li>Bauchschmerzen, Übelkeit</li>
-                        <li>veränderte Darmentleerungsgewohnheiten, Durchfälle, Verstopfung,
-                            Verdauungsstörungen</li>
-                        <li>Müdigkeit, Schwächegefühl</li>
-                        <li>Sehstörungen, Doppeltsehen</li>
-                        <li>Muskelkrämpfe</li>
-                    </ul>
-                </div>
-                <hr>
-            </div>
-            <div class="row p15" id="gelegentlich-xs">
-                <h4> Gelegentlich</h4>
-                <div class="row">
-                    <b>Anzahl der betreffenden Behandelten:</b> <br> Mehr als 1 von 100 Behandelten
-                </div>
-                <div class="row">
-                    <b>Nebenwirkung:</b> <br>
-                    <ul>
-                        <li>Stimmungsschwankungen, Angst, Depression, Schlaflosigkeit</li>
-                        <li>Zittern, Geschmacksstörungen, kurze Bewusstlosigkeit</li>
-                        <li>verminderte Empfindlichkeit für Berührungsreize oder Kribbeln in den Extremitäten,
-                            Verlust des Schmerzgefühls</li>
-                        <li>Ohrgeräusche</li>
-                        <li>niedriger Blutdruck</li>
-                        <li>Niesen/laufende Nase durch eine Entzündung der Nasenschleimhaut (Rhinitis)</li>
-                        <li>Husten</li>
-                        <li>Mundtrockenheit, Erbrechen</li>
-                        <li>Haarausfall, vermehrtes Schwitzen, Hautjucken, rote Flecken auf der Haut,
-                            Hautverfärbung</li>
-                        <li>Störungen beim Wasserlassen, vermehrter nächtlicher Harndrang, häufigeres
-                            Wasserlassen</li>
-                        <li>Erektionsstörungen, Vergrößerung der Brustdrüsen beim Mann</li>
-                        <li>Schmerzen, Unwohlsein</li>
-                        <li>Gelenk- oder Muskelschmerzen, Rückenschmerzen</li>
-                        <li>Gewichtszunahme oder Gewichtsabnahme</li>
-                    </ul>
-                </div>
-                <hr>
-            </div>
-            <div class="row p15" id="selten-xs">
-                <h4> Selten</h4>
-                <div class="row">
-                    <b>Anzahl der betreffenden Behandelten:</b> <br> Mehr als 1 von 1000 Behandelten
-                </div>
-                <div class="row">
-                    <b>Nebenwirkung:</b> <br>
-                    Verwirrung
-                </div>
-                <hr>
-            </div>
-            <div class="row p15" id="sehrselten-xs">
-                <h4> Sehr selten</h4>
-                <div class="row">
-                    <b>Anzahl der betreffenden Behandelten:</b> <br> Mehr als 1 von 10000 Behandelten
-                </div>
-                <div class="row">
-                    <b>Nebenwirkung:</b> <br>
-                    <ul>
-                        <li>Verminderung der weißen Blutkörperchen, Verminderung der Blutplättchen, was zu
-                            ungewöhnlichen blauen Flecken oder leichtem Bluten führen kann (Schädigung der
-                            roten Blutzellen)</li>
-                        <li>erhöhter Blutzuckerspiegel (Hyperglykämie)</li>
-                        <li>eine Nervenstörung, die zu Schwächegefühl, verminderter Empfindlichkeit für
-                            Berührungsreize oder Kribbeln führen kann</li>
-                        <li>Schwellung des Zahnfleischs</li>
-                        <li>aufgeblähter Bauch (Gastritis)</li>
-                        <li>gestörte Leberfunktion, Entzündung der Leber (Hepatitis), Gelbfärbung der Haut
-                            (Gelbsucht), Anstieg der Leberenzyme, wodurch bestimmte medizinische Tests
-                            beeinflusst werden können</li>
-                        <li>erhöhte Muskelanspannung</li>
-                        <li>entzündliche Reaktionen der Blutgefäße, häufig mit Hautausschlag</li>
-                        <li>Lichtempfindlichkeit</li>
-                        <li>Störungen, die sich aus Steifheit, Zittern und/oder Bewegungsstörungen
-                            zusammensetzen</li>
-                    </ul>
+                            </tbody>
+                        </table>
+                        <div class="hidden-sm hidden-md hidden-lg">
+                            <div class="row content_header">
+                                <h3> Häufigkeit der Nebenwirkungen </h3>
+                                <hr>
+                            </div>
+                            <div>
+                                <div class="row p15" id="nichtbekannt">
+                                    <h4> Nicht bekannt</h4>
+                                    <div class="row">
+                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Häufigkeit auf Grundlage der
+                                        verfügbaren Daten nicht abschätzbar< </div> <div class="row">
+                                            <b>Nebenwirkung:</b> <br>
+                                            Überempfindlichkeitsreaktionen einschließlich
+                                            Juckreiz, Nesselsucht (Urtikaria), Schwellung
+                                            im Mund-Rachenbereich (Quincke-Ödem),
+                                            Hautausschlag (Exanthem), Bronchialkrampf
+                                            (Bronchospasmus), Blutdruckabfall und
+                                            Kollaps.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+            <div class="panel panel-default panel_neben">
+                <div class="panel-heading head_panel" role="tab" id="nebenhead2">
+                    <h4 class="panel-title title_pan text-center-xs" data-toggle="collapse" data-target="#neben2">
+                        Stoffwechsel- und Ernährungsstörungen </h4>
+                </div>
+                <div id="neben2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="nebenhead2">
+                    <div class="panel-body">
+                        <table class="sideffect_table hidden-xs">
+                            <thead>
+                                <tr>
+                                    <th>Häufigkeit</th>
+                                    <th style="width: 25%;">Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> </th>
+                                    <th>Nebenwirkung</th>
+                                </tr>
+                            </thead>
+                            <tbody class="" style="padding: 15px;">
+                                <tr id="haeufig">
+                                    <td>Häufig</td>
+                                    <td>Mehr als 1 von 10 Behandelten </td>
+                                    <td>
+                                        Erhöhter Blutzuckergehalt (Hyperglykämie).
+                                    </td>
+                                </tr>
+                                <tr id="nichtbekannt">
+                                    <td>Nicht Bekannt</td>
+                                    <td>Häufigkeit auf Grundlage der verfügbaren Daten nicht abschätzbar</td>
+                                    <td>
+                                        Senkung des Blut-Kaliumspiegels
+                                        (Hypokaliämie): unter der Therapie mit Beta2-
+                                        Agonisten kann es möglicherweise zu einer
+                                        sehr ausgeprägten Senkung des BlutkaliumSpiegels kommen; Übersäuerung des Blutes
+                                        (Laktatazidose).
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                        <div class="hidden-sm hidden-md hidden-lg">
+                            <div class="row content_header">
+                                <h3> Häufigkeit der Nebenwirkungen </h3>
+                                <hr>
+                            </div>
+                            <div class="row p15" id="haeufig-xs">
+                                <h4> Häufig</h4>
+                                <div class="row">
+                                    <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1 von 10 Behandelten
+                                </div>
+                                <div class="row">
+                                    <b>Nebenwirkung:</b> <br>
+                                    Erhöhter Blutzuckergehalt (Hyperglykämie).
+                                </div>
+                                <hr>
+                            </div>
+                            <div class="row p15" id="nichtbekannt">
+                                <h4> Nicht bekannt</h4>
+                                <div class="row">
+                                    <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Häufigkeit auf Grundlage der
+                                    verfügbaren Daten nicht abschätzbar< </div> <div class="row">
+                                        <b>Nebenwirkung:</b> <br>
+                                        Senkung des Blut-Kaliumspiegels
+                                        (Hypokaliämie): unter der Therapie mit Beta2-
+                                        Agonisten kann es möglicherweise zu einer
+                                        sehr ausgeprägten Senkung des BlutkaliumSpiegels kommen; Übersäuerung des Blutes
+                                        (Laktatazidose).
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default panel_neben">
+                <div class="panel-heading head_panel" role="tab" id="nebenhead3">
+                    <h4 class="panel-title text-center-xs" data-toggle="collapse" data-target="#neben3">
+                        Psychiatrische Erkrankungen
+                    </h4>
+                </div>
+                <div id="neben3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="nebenhead3">
+                    <div class="panel-body">
+                        <table class="sideffect_table hidden-xs">
+                            <thead>
+                                <tr>
+                                    <th>Häufigkeit</th>
+                                    <th style="width: 25%;">Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> </th>
+                                    <th>Nebenwirkung</th>
+                                </tr>
+                            </thead>
+                            <tbody class="" style="padding: 15px;">
+                                <tr id="nichtbekannt">
+                                    <td>Nicht Bekannt</td>
+                                    <td>Häufigkeit auf Grundlage der verfügbaren Daten nicht abschätzbar</td>
+                                    <td>
+                                        Schlaflosigkeit (Insomnie)
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                        <div class="hidden-sm hidden-md hidden-lg">
+                            <div class="row content_header">
+                                <h3> Häufigkeit der Nebenwirkungen </h3>
+                                <hr>
+                            </div>
+                            <div>
+                                <div class="row p15" id="nichtbekannt">
+                                    <h4> Nicht bekannt</h4>
+                                    <div class="row">
+                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Häufigkeit auf Grundlage der
+                                        verfügbaren Daten nicht abschätzbar< </div> <div class="row">
+                                            <b>Nebenwirkung:</b> <br>
+                                            Schlaflosigkeit (Insomnie)
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default panel_neben">
+                <div class="panel-heading head_panel" role="tab" id="nebenhead4">
+                    <h4 class="panel-title text-center-xs" data-toggle="collapse" data-target="#neben4">
+                        Erkrankungen des Nervensystems </h4>
+                </div>
+                <div id="neben4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="nebenhead4">
+                    <div class="panel-body">
+                        <table class="sideffect_table hidden-xs">
+                            <thead>
+                                <tr>
+                                    <th>Häufigkeit</th>
+                                    <th style="width: 25%;">Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> </th>
+                                    <th>Nebenwirkung</th>
+                                </tr>
+                            </thead>
+                            <tbody class="" style="padding: 15px;">
+
+                                <tr id="haeufig">
+                                    <td>Häufig</td>
+                                    <td>Mehr als 1 von 10 Behandelten </td>
+                                    <td>
+                                        Zittern (Tremor), Kopfschmerzen
+                                    </td>
+                                </tr>
+                                <tr id="gelegentlich">
+                                    <td>Gelegentlich</td>
+                                    <td>Bis zu 1 von 100 Behandelten</td>
+                                    <td>
+                                        Unruhe
+                                    </td>
+                                </tr>
+                                <tr id="nichtbekannt">
+                                    <td>Nicht Bekannt</td>
+                                    <td>Häufigkeit auf Grundlage der verfügbaren Daten nicht abschätzbar</td>
+                                    <td>
+                                        Schwindel </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="hidden-sm hidden-md hidden-lg">
+                            <div class="row content_header">
+                                <h3> Häufigkeit der Nebenwirkungen </h3>
+                                <hr>
+                            </div>
+                            <div>
+
+                                <div class="row p15" id="haeufig-xs">
+                                    <h4> Häufig</h4>
+                                    <div class="row">
+                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1 von 10
+                                        Behandelten
+                                    </div>
+                                    <div class="row">
+                                        <b>Nebenwirkung:</b> <br>
+                                        Zittern (Tremor), Kopfschmerzen.
+                                    </div>
+                                    <hr>
+                                </div>
+                                <div class="row p15" id="gelegentlich-xs">
+                                    <h4> Gelegentlich</h4>
+                                    <div class="row">
+                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1 von 100
+                                        Behandelten
+                                    </div>
+                                    <div class="row">
+                                        <b>Nebenwirkung:</b> <br>
+                                        Unruhe
+                                    </div>
+                                    <hr>
+                                </div>
+                                <div class="row p15" id="nichtbekannt">
+                                    <h4> Nicht bekannt</h4>
+                                    <div class="row">
+                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Häufigkeit auf Grundlage der
+                                        verfügbaren Daten nicht abschätzbar</div>
+                                    <div class="row">
+                                        <b>Nebenwirkung:</b> <br>
+                                        Schwindel </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default panel_neben">
+                <div class="panel-heading head_panel" role="tab" id="nebenhead5">
+                    <h4 class="panel-title text-center-xs" data-toggle="collapse" data-target="#neben5">
+                        Herzerkrankungen </h4>
+                </div>
+                <div id="neben5" class="panel-collapse collapse" role="tabpanel" aria-labelledby="nebenhead5">
+                    <div class="panel-body">
+                        <table class="sideffect_table hidden-xs">
+                            <thead>
+                                <tr>
+                                    <th>Häufigkeit</th>
+                                    <th style="width: 25%;">Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> </th>
+                                    <th>Nebenwirkung</th>
+                                </tr>
+                            </thead>
+                            <tbody class="" style="padding: 15px;">
+
+                                <tr id="haeufig">
+                                    <td>Häufig</td>
+                                    <td>Mehr als 1 von 10 Behandelten </td>
+                                    <td>
+                                        Herzrasen (Tachykardie).
+                                        Herzrhythmusstörungen einschließlich
+                                        Vorhofflimmern, Anstieg der Herzfrequenz
+                                        (supraventrikuläre Tachykardie) und
+                                        unregelmäßigem Puls (ventrikuläre
+                                        Extrasystolie), Brustenge (pektanginöse
+                                        Beschwerden) und Herzklopfen
+                                        (Palpitationen), Sauerstoffmangel am
+                                        Herzmuskel (myokardiale Ischämie) </td>
+                                </tr>
+                                <tr id="nichtbekannt">
+                                    <td>Nicht Bekannt</td>
+                                    <td>Häufigkeit auf Grundlage der verfügbaren Daten nicht abschätzbar</td>
+                                    <td>
+                                        Minderdurchblutung des Herzmuskels
+                                        (Myokardischämie). </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                        <div class="hidden-sm hidden-md hidden-lg">
+                            <div class="row content_header">
+                                <h3> Häufigkeit der Nebenwirkungen </h3>
+                                <hr>
+                            </div>
+                            <div>
+
+                                <div class="row p15" id="haeufig-xs">
+                                    <h4> Häufig</h4>
+                                    <div class="row">
+                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1
+                                        von 10 Behandelten
+                                    </div>
+                                    <div class="row">
+                                        <b>Nebenwirkung:</b> <br>
+                                        Durchfall, Bauchschmerzen, Geschmacksveränderungen.
+
+                                    </div>
+                                    <hr>
+                                </div>
+                                <div class="row p15" id="nichtbekannt">
+                                    <h4> Nicht bekannt</h4>
+                                    <div class="row">
+                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Häufigkeit auf Grundlage der
+                                        verfügbaren Daten nicht abschätzbar</div>
+                                    <div class="row">
+                                        <b>Nebenwirkung:</b> <br>
+                                        Minderdurchblutung des Herzmuskels
+                                        (Myokardischämie). </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default panel_neben">
+                <div class="panel-heading head_panel" role="tab" id="nebenhead6">
+                    <h4 class="panel-title text-center-xs" data-toggle="collapse" data-target="#neben6">
+                        Gefäßerkrankungen </h4>
+                </div>
+                <div id="neben6" class="panel-collapse collapse" role="tabpanel" aria-labelledby="nebenhead6">
+                    <div class="panel-body">
+                        <table class="sideffect_table hidden-xs">
+                            <thead>
+                                <tr>
+                                    <th>Häufigkeit</th>
+                                    <th style="width: 25%;">Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> </th>
+                                    <th>Nebenwirkung</th>
+                                </tr>
+                            </thead>
+                            <tbody class="" style="padding: 15px;">
+                                <tr id="nichtbekannt">
+                                    <td>Nicht Bekannt</td>
+                                    <td>Häufigkeit auf Grundlage der verfügbaren Daten nicht abschätzbar</td>
+                                    <td>
+                                        Periphere Erweiterung der Blutgefäße </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                        <div class="hidden-sm hidden-md hidden-lg">
+                            <div class="row content_header">
+                                <h3> Häufigkeit der Nebenwirkungen </h3>
+                                <hr>
+                            </div>
+                            <div>
+                                <div class="row p15" id="nichtbekannt">
+                                    <h4> Nicht bekannt</h4>
+                                    <div class="row">
+                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Häufigkeit auf Grundlage der
+                                        verfügbaren Daten nicht abschätzbar</div>
+                                    <div class="row">
+                                        <b>Nebenwirkung:</b> <br>
+                                        Periphere Erweiterung der Blutgefäße </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default panel_neben">
+                <div class="panel-heading head_panel" role="tab" id="nebenhead7">
+                    <h4 class="panel-title text-center-xs" data-toggle="collapse" data-target="#neben7">
+                        Erkrankungen der Atemwege, des Brustraums und
+                        Mediastinums </h4>
+                </div>
+                <div id="neben7" class="panel-collapse collapse" role="tabpanel" aria-labelledby="nebenhead7">
+                    <div class="panel-body">
+                        <table class="sideffect_table hidden-xs">
+                            <thead>
+                                <tr>
+                                    <th>Häufigkeit</th>
+                                    <th style="width: 25%;">Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> </th>
+                                    <th>Nebenwirkung</th>
+                                    <th>Hinweis</th>
+                                </tr>
+                            </thead>
+                            <tbody class="" style="padding: 15px;">
+
+                                <tr id="nichtbekannt">
+                                    <td>Nicht Bekannt</td>
+                                    <td>Häufigkeit auf Grundlage der verfügbaren Daten nicht abschätzbar</td>
+                                    <td>
+                                        Husten, Bronchialkrampf (paradoxer
+                                        Bronchospasmus), Reizung im Rachenbereich. </td>
+                                    <td>Wie bei anderen Inhalationstherapien kann nach der
+                                        Anwendung von Salbutamol-ratiopharm® N Dosieraerosol ein
+                                        Bronchialkrampf auftreten mit einer sofortigen Zunahme des
+                                        Giemens (Keuchens). In diesem Fall sollte sofort ein anderes
+                                        bronchienerweiterndes Arzneimittel mit schnellem
+                                        Wirkungseintritt inhaliert werden. Die Behandlung mit
+                                        Salbutamol-ratiopharm® N Dosieraerosol soll unverzüglich
+                                        abgebrochen und der behandelnde Arzt informiert werden.
+                                        Dieser entscheidet, ob weitere Maßnahmen erforderlich sind.</td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                        <div class="hidden-sm hidden-md hidden-lg">
+                            <div class="row content_header">
+                                <h3> Häufigkeit der Nebenwirkungen </h3>
+                                <hr>
+                            </div>
+                            <div>
+                                <div class="row p15" id="nichtbekannt">
+                                    <h4> Nicht bekannt</h4>
+                                    <div class="row">
+                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Häufigkeit auf Grundlage der
+                                        verfügbaren Daten nicht abschätzbar</div>
+                                    <div class="row">
+                                        <b>Nebenwirkung:</b> <br>
+                                        Husten, Bronchialkrampf (paradoxer
+                                        Bronchospasmus), Reizung im Rachenbereich. </div>
+                                    <div class="row">
+                                        <b>Hinweis:</b> <br>
+                                        Wie bei anderen Inhalationstherapien kann nach der
+                                        Anwendung von Salbutamol-ratiopharm® N Dosieraerosol ein
+                                        Bronchialkrampf auftreten mit einer sofortigen Zunahme des
+                                        Giemens (Keuchens). In diesem Fall sollte sofort ein anderes
+                                        bronchienerweiterndes Arzneimittel mit schnellem
+                                        Wirkungseintritt inhaliert werden. Die Behandlung mit
+                                        Salbutamol-ratiopharm® N Dosieraerosol soll unverzüglich
+                                        abgebrochen und der behandelnde Arzt informiert werden.
+                                        Dieser entscheidet, ob weitere Maßnahmen erforderlich sind.
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default panel_neben">
+                <div class="panel-heading head_panel" role="tab" id="nebenhead8">
+                    <h4 class="panel-title text-center-xs" data-toggle="collapse" data-target="#neben8">
+                        Erkrankungen des Gastrointestinaltrakts </h4>
+                </div>
+                <div id="neben8" class="panel-collapse collapse" role="tabpanel" aria-labelledby="nebenhead8">
+                    <div class="panel-body">
+                        <table class="sideffect_table hidden-xs">
+                            <thead>
+                                <tr>
+                                    <th>Häufigkeit</th>
+                                    <th style="width: 25%;">Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> </th>
+                                    <th>Nebenwirkung</th>
+                                </tr>
+                            </thead>
+                            <tbody class="" style="padding: 15px;">
+
+                                <tr id="gelegentlich">
+                                    <td>Gelegentlich</td>
+                                    <td>Bis zu 1 von 100 Behandelten</td>
+                                    <td>
+                                        Reizung im Mund oder Rachenbereich und
+                                        Änderung des Geschmackempfindens.
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                        <div class="hidden-sm hidden-md hidden-lg">
+                            <div class="row content_header">
+                                <h3> Häufigkeit der Nebenwirkungen </h3>
+                                <hr>
+                            </div>
+                            <div>
+
+                                <div class="row p15" id="gelegentlich-xs">
+                                    <h4> Gelegentlich</h4>
+                                    <div class="row">
+                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1
+                                        von 100 Behandelten
+                                    </div>
+                                    <div class="row">
+                                        <b>Nebenwirkung:</b> <br>
+                                        Reizung im Mund oder Rachenbereich und
+                                        Änderung des Geschmackempfindens
+                                    </div>
+                                    <hr>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default panel_neben">
+                <div class="panel-heading head_panel" role="tab" id="nebenhead9">
+                    <h4 class="panel-title text-center-xs" data-toggle="collapse" data-target="#neben9">
+                        Skelettmuskulatur-, Bindegewebs- und Knochenerkrankungen </h4>
+                </div>
+                <div id="neben9" class="panel-collapse collapse" role="tabpanel" aria-labelledby="nebenhead9">
+                    <div class="panel-body">
+                        <table class="sideffect_table hidden-xs">
+                            <thead>
+                                <tr>
+                                    <th>Häufigkeit</th>
+                                    <th style="width: 25%;">Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> </th>
+                                    <th>Nebenwirkung</th>
+                                </tr>
+                            </thead>
+                            <tbody class="" style="padding: 15px;">
+
+                                <tr id="gelegentlich">
+                                    <td>Gelegentlich</td>
+                                    <td>Bis zu 1 von 100 Behandelten</td>
+                                    <td>
+                                        Muskelkrämpfe
+                                    </td>
+                                </tr>
+                                <tr id="selten">
+                                    <td>Selten</td>
+                                    <td> Bis zu 1 von 1.000 Behandelten </td>
+                                    <td> Störungen beim Wasserlassen, Sodbrennen
+                                        sowie Blutdrucksteigerungen oder -senkungen . </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                        <div class="hidden-sm hidden-md hidden-lg">
+                            <div class="row content_header">
+                                <h3> Häufigkeit der Nebenwirkungen </h3>
+                                <hr>
+                            </div>
+                            <div>
+                                <div class="row p15" id="gelegentlich-xs">
+                                    <h4> Gelegentlich</h4>
+                                    <div class="row">
+                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1
+                                        von 100 Behandelten
+                                    </div>
+                                    <div class="row">
+                                        <b>Nebenwirkung:</b> <br>
+                                        Muskelkrämpfe
+                                    </div>
+                                    <hr>
+                                </div>
+                                <div class="row p15" id="selten-xs">
+                                    <h4> Selten</h4>
+                                    <div class="row">
+                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1
+                                        von 1000 Behandelten
+                                    </div>
+                                    <div class="row">
+                                        <b>Nebenwirkung:</b> <br>
+                                        Störungen beim Wasserlassen, Sodbrennen
+                                        sowie Blutdrucksteigerungen oder -senkungen . </div>
+                                    <hr>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            Vereinzelt ist über zentralnervös stimulierende Wirkungen
+            nach Inhalation von Salbutamol berichtet worden, die sich in
+            Übererregbarkeit, hyperaktiven Verhaltensauffälligkeiten,
+            Schlafstörungen sowie Halluzinationen äußerten. Diese
+            Beobachtungen wurden überwiegend (zu 90 %) bei Kindern
+            im Alter bis zu 12 Jahren gemacht.<br>
+            Einige der genannten Nebenwirkungen können unter
+            Umständen akut lebensbedrohlich sein (wie z. B. lebensbedrohliche Tachykardien). Darum sollten Sie sofort einen
+            Arzt informieren, falls ein derartiges Ereignis plötzlich auftritt
+            oder sich unerwartet stark entwickelt.
         </div>
-    </div>
-    <div class="alert alert-info" style="margin-top: 40px;">
-        Wenn Ihnen die sehr seltenen Nebenwirkungen
-        Probleme bereitet oder länger als 1 Woche andauert, sollten Sie Ihren Arzt aufsuchen.
     </div>
 </div>
 
@@ -5253,20 +6012,20 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
 ',14,9);
 INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (132,0,'
 <!--Darstellung des Medikaments-->
-Amlodipin (besilat) Dexcel 5 mg Tabletten sind in Packungen mit 7, 10, 14, 20, 28, 30, 50, 60 und 100
-Tabletten erhältlich.
-Es werden möglicherweise nicht alle Packungsgrößen in den Verkehr gebracht
+
 ',14,10);
 INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (133,0,'
 <!-- Wirkstoff -->
-1 Tablette enthält 6,935 mg Amlodipin als Besilat, entsprechend 5 mg Amlodipin. <br>
+Der Wirkstoff ist: Salbutamol.<br>
+ Jeder Sprühstoß zu 0,025 ml Suspension und Treibmittel
+enthält 0,12 mg Salbutamolsulfat.<br>
+ Dies entspricht einer vom Mundrohr abgegebenen Menge
+von 0,09 mg Salbutamol.<br>
 <b>Die sonstigen Bestandteile sind:</b>
 <ul>
-    <li>mikrokristalline Cellulose</li>
-    <li>Calciumhydrogenphosphat-Dihydrat</li>
-    <li>Carboxymethylstärke-Natrium (Typ A)</li>
-    <li>
-        Magnesiumstearat (Ph.Eur.) [pflanzlich]</li>
+    <li>Ethanol (3,9 mg/Sprühstoß)</li>
+    <li>Norfluran (HFA-134a)</li>
+
 </ul>
 ',14,11);
 -- Dump tailored_text--

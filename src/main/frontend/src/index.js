@@ -22,7 +22,6 @@ import Register from "./components/register";
 import DrugList from "./components/drug_list";
 import DrugDetail from "./components/drug_detail";
 import UserData from "./components/user/data";
-import Definitions from "./components/definitions";
 
 
 class Root extends React.Component {
@@ -78,8 +77,7 @@ class Root extends React.Component {
 	                
 	                {/* Information sites */}
 	                <Route path="/about" component={About} />
-                    <Route path="/definitions" component={Definitions} />
-                    <Route path="/imprint" component={Imprint} />
+                                      <Route path="/imprint" component={Imprint} />
                     <Route path="/privacy" component={Privacy} />
 	                
 	                {/* Default route */}
