@@ -4638,21 +4638,169 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
     </div>
 </div>
 <div class="panel-group" id="accordion" style="margin: 30 0 30 0;">
+
+    <div class="panel panel-default panel_neben">
+        <div class="panel-heading">
+            <h4 class="panel-title text-center-xs" data-toggle="collapse" data-target="#collapse1">
+                <img width="40" src="./../../assets/icons/17.svg" /> <span
+                    class="hidden-lg hidden-sm hidden-md"><br><br></span> Kinder und Jugendliche
+            </h4>
+        </div>
+        <div id="collapse1" class="panel-collapse collapse in">
+            <div class="panel-body">
+                Die besonderen Dosierungsempfehlungen für Kinder sind zu
+                beachten (siehe auch 3. „Wie ist Salbutamol-ratiopharm® N
+                Dosieraerosol anzuwenden?“).
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default panel_neben">
+        <div class="panel-heading">
+            <h4 class="panel-title text-center-xs" data-toggle="collapse" data-target="#collapse2">
+                <img width="40" src="./../../assets/icons/18.svg" /> <span
+                    class="hidden-lg hidden-sm hidden-md"><br><br></span> Ältere Menschen
+            </h4>
+        </div>
+        <div id="collapse2" class="panel-collapse collapse">
+            <div class="panel-body">
+                Die Dosierung muss bei älteren Menschen nicht speziell
+                angepasst werden.
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default panel_neben">
+        <div class="panel-heading">
+            <h4 class="panel-title text-center-xs" data-toggle="collapse" data-target="#collapse3">
+                <img width="40" src="./../../assets/icons/10.svg" /> <span
+                    class="hidden-lg hidden-sm hidden-md"><br><br></span> Einnahme von Salbutamol-ratiopharm® N
+                Dosieraerosol zusammen mit
+                anderen Medikamente
+            </h4>
+        </div>
+        <div id="collapse3" class="panel-collapse collapse">
+            <div class="panel-body">
+                Informieren Sie Ihren Arzt oder Apotheker, wenn Sie andere
+                Arzneimittel einnehmen/anwenden, kürzlich andere Arzneimittel eingenommen/angewendet haben oder
+                beabsichtigen
+                andere Arzneimittel einzunehmen/anzuwenden.<br>
+                Es können sowohl Wirkungen als auch Nebenwirkungen der
+                kombinierten Arzneimittel verändert werden. Dies kann vorkommen, wenn Sie Salbutamol-ratiopharm® N
+                Dosieraerosol
+                anwenden zusammen mit
+                <ul>
+                    <li>Beta-Rezeptorenblockern (Mittel zur Blutdrucksenkung)</li>
+                    <li>Antidiabetika (Mittel gegen Zuckerkrankheit)</li>
+                    <li>Digitalisglykosiden (Herzglykoside) und Mitteln gegen
+                        Herzrhythmusstörungen</li>
+                    <li>Anästhetika (Narkosemittel)</li>
+                    <li>Sympathomimetika (Mittel zur Beeinflussung des
+                        vegetativen Nervensystems)</li>
+                    <li>Theophyllin oder anderen Sympathomimetika, auch
+                        Substanzen, wie z. B. L-Dopa, L-Thyroxin, Oxytocin oder
+                        Alkohol</li>
+                    <li> Mutterkornalkaloiden, wie z. B. Ergotamin</li>
+                    <li>Arzneimitteln zur Behandlung von Depressionen (Monoaminoxidasehemmern oder trizyklischen
+                        Antidepressiva)</li>
+                    <li>Procarbazin</li>
+                </ul>
+                Die durch Salbutamol
+                möglicherweise ausgelöste Hypokaliämie (Senkung des
+                Blutkaliumspiegels) kann bei gleichzeitiger Einnahme von
+                Methylxanthinen (z. B. Theophyllin), Kortikoiden, Diuretika
+                oder Digitalisglykosiden noch verstärkt werden. <br>
+                <b>Hinweis:</b><br>
+                Wenn bei Ihnen eine Narkose geplant ist, sollten Sie
+                Salbutamol eventuell 6 Stunden
+                zuvor nicht mehr anwenden. Fragen Sie Ihren Arzt.
+            </div>
+        </div>
+    </div>
+
+    <div class="panel panel-default panel_neben">
+        <div class="panel-heading">
+            <h4 class="panel-title text-center-xs" data-toggle="collapse" data-target="#collapse4">
+                <img width="40" src="./../../assets/icons/8.svg" /> <span
+                    class="hidden-lg hidden-sm hidden-md"><br><br></span> Schwangerschaft und Stillzeit
+            </h4>
+        </div>
+        <div id="collapse4" class="panel-collapse collapse">
+            <div class="panel-body">
+                Wenn Sie schwanger sind oder stillen, oder wenn Sie vermuten, schwanger zu sein oder beabsichtigen,
+                schwanger zu
+                werden, fragen Sie vor der Anwendung dieses Arzneimittels
+                Ihren Arzt oder Apotheker um Rat.
+                <h4>Schwangerschaft</h4>
+                Salbutamol passiert die Plazentaschranke. Für den Menschen
+                liegen über eine Anwendung während der Schwangerschaft
+                unzureichende Erfahrungen vor.
+                Ein Anstieg der Herzfrequenz (Tachykardie) und ein
+                erniedrigter Blutzuckerspiegel (Hypoglykämie) des Neugeborenen sind bei der Anwendung von Salbutamol als
+                wehenhemmendes Mittel beschrieben worden. Studien bei
+                der Ratte haben in sehr hoher Dosierung eine Fortpflanzung
+                gefährdende Wirkung gezeigt. Das mögliche Risiko für den
+                Menschen ist nicht bekannt.
+                Salbutamol sollte in der
+                Schwangerschaft, insbesondere während der ersten drei
+                Monate, nur nach strenger Indikationsstellung angewendet
+                werden. Das Gleiche gilt wegen der wehenhemmenden
+                Wirkung für die Anwendung am Ende der Schwangerschaft.
+                Salbutamol darf nicht zur
+                Behandlung vorzeitiger Wehen angewendet werden</br>
+                <h4>Stillzeit</h4>
+                Da Salbutamol wahrscheinlich in die Muttermilch übergeht,
+                wird die Anwendung in der Stillzeit nur nach sorgfältiger
+                Nutzen-Risiko- Abwägung empfohlen.
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default panel_neben">
+        <div class="panel-heading">
+            <h4 class="panel-title text-center-xs" data-toggle="collapse" data-target="#collapse5">
+                <img width="40" src="./../../assets/icons/3.svg" /><span
+                    class="hidden-lg hidden-sm hidden-md"><br><br></span>
+                Verkehrstüchtigkeit und Fähigkeit zum Bedienen von Maschinen
+            </h4>
+        </div>
+        <div id="collapse5" class="panel-collapse collapse">
+            <div class="panel-body">Durch individuell auftretende unterschiedliche Reaktionen,
+                insbe sondere bei höherer Dosierung, kann die Fähigkeit zur
+                aktiven Teilnahme am Straßenverkehr oder zum Bedienen von
+                Maschinen beeinträchtigt werden. Dies gilt im verstärkten
+                Maß bei Behandlungsbeginn sowie im Zusammenwirken mit
+                Alkohol oder Beruhigungs- und Schlafmitteln </div>
+        </div>
+    </div>
+    <div class="panel panel-default panel_neben">
+        <div class="panel-heading">
+            <h4 class="panel-title text-center-xs" data-toggle="collapse" data-target="#collapse6">
+                <img width="40" src="./../../assets/icons/3.svg" /><span
+                    class="hidden-lg hidden-sm hidden-md"><br><br></span>
+                Auswirkungen bei Fehlgebrauch zu Dopingzwecken
+            </h4>
+        </div>
+        <div id="collapse6" class="panel-collapse collapse">
+            <div class="panel-body">Die Anwendung von Salbutamol
+                kann bei Dopingkontrollen zu positiven Ergebnissen führen.
+                Die Anwendung von Salbutamol
+                als Dopingmittel kann zu einer Gefährdung der Gesundheit
+                führen. </div>
+        </div>
+    </div>
     <div class="panel panel-default panel_neben">
         <div class="panel-heading">
             <h4 class="panel-title text-center-xs" data-toggle="collapse" data-target="#collapse0">
-                <img width="40" src="./../../assets/icons/10.svg" /> <span
+                <img width="40" src="./../../assets/icons/19.svg" /> <span
                     class="hidden-lg hidden-sm hidden-md"><br><br></span> Spezielle Therapiehinweise
             </h4>
         </div>
-        <div id="collapse0" class="panel-collapse collapse in">
+        <div id="collapse0" class="panel-collapse collapse">
             <div class="panel-body">
                 <ul>
                     <li> Eine Behandlung des fortdauernden Asthma bronchiale soll
                         nur zusammen mit entzündungshemmenden Medikamenten
                         erfolgen.
                         Ein ansteigender Bedarf von Beta2-Sympathomimetika, wie
-                        Salbutamol-ratiopharm® N Dosieraerosol, ist ein Anzeichen für
+                        Salbutamol, ist ein Anzeichen für
                         eine Verschlechterung der Erkrankung.</li>
                     <li>Kommt es trotz Behandlung zu keiner Besserung oder gar zu
                         einer Verschlechterung der Beschwerden, muss die Therapie
@@ -4696,169 +4844,22 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                     <li> Gebrauch von Beta2-Sympathomimetika wie Salbutamolratiopharm® N Dosier aerosol selbst zu
                         erhöhen.</li>
                     <li> Wie bei anderen Inhalationstherapien kann nach der
-                        Anwendung von Salbutamol-ratiopharm® N Dosieraerosol ein
+                        Anwendung von Salbutamol ein
                         Bronchial krampf (paradoxer Bronchospasmus) auftreten mit
                         einer sofortigen Zunahme des Giemens (Keuchens). In diesem
                         Fall sollte sofort ein bronchienerweiterndes Arzneimittel mit
                         schnellem Wirkungseintritt inhaliert werden.</li>
                     <li>Die Behandlung
-                        mit Salbutamol-ratiopharm® N Dosieraerosol soll unverzüglich
+                        mit Salbutamol soll unverzüglich
                         abgebrochen und der behandelnde Arzt informiert werden.
                         Dieser entscheidet, ob weitere Maßnahmen erforderlich sind.</li>
                 </ul>
             </div>
         </div>
     </div>
-    <div class="panel panel-default panel_neben">
-        <div class="panel-heading">
-            <h4 class="panel-title text-center-xs" data-toggle="collapse" data-target="#collapse1">
-                <img width="40" src="./../../assets/icons/10.svg" /> <span
-                    class="hidden-lg hidden-sm hidden-md"><br><br></span> Kinder und Jugendliche
-            </h4>
-        </div>
-        <div id="collapse1" class="panel-collapse collapse in">
-            <div class="panel-body">
-                Die besonderen Dosierungsempfehlungen für Kinder sind zu
-                beachten (siehe auch 3. „Wie ist Salbutamol-ratiopharm® N
-                Dosieraerosol anzuwenden?“).
-            </div>
-        </div>
-    </div>
-    <div class="panel panel-default panel_neben">
-        <div class="panel-heading">
-            <h4 class="panel-title text-center-xs" data-toggle="collapse" data-target="#collapse2">
-                <img width="40" src="./../../assets/icons/10.svg" /> <span
-                    class="hidden-lg hidden-sm hidden-md"><br><br></span> Ältere Menschen
-            </h4>
-        </div>
-        <div id="collapse2" class="panel-collapse collapse in">
-            <div class="panel-body">
-                Die Dosierung muss bei älteren Menschen nicht speziell
-                angepasst werden.
-            </div>
-        </div>
-    </div>
-    <div class="panel panel-default panel_neben">
-        <div class="panel-heading">
-            <h4 class="panel-title text-center-xs" data-toggle="collapse" data-target="#collapse3">
-                <img width="40" src="./../../assets/icons/10.svg" /> <span
-                    class="hidden-lg hidden-sm hidden-md"><br><br></span> Einnahme von Salbutamol-ratiopharm® N
-                Dosieraerosol zusammen mit
-                anderen Medikamente
-            </h4>
-        </div>
-        <div id="collapse3" class="panel-collapse collapse in">
-            <div class="panel-body">
-                Informieren Sie Ihren Arzt oder Apotheker, wenn Sie andere
-                Arzneimittel einnehmen/anwenden, kürzlich andere Arzneimittel eingenommen/angewendet haben oder
-                beabsichtigen
-                andere Arzneimittel einzunehmen/anzuwenden.<br>
-                Es können sowohl Wirkungen als auch Nebenwirkungen der
-                kombinierten Arzneimittel verändert werden. Dies kann vorkommen, wenn Sie Salbutamol-ratiopharm® N
-                Dosieraerosol
-                anwenden zusammen mit
-                <ul>
-                    <li>Beta-Rezeptorenblockern (Mittel zur Blutdrucksenkung)</li>
-                    <li>Antidiabetika (Mittel gegen Zuckerkrankheit)</li>
-                    <li>Digitalisglykosiden (Herzglykoside) und Mitteln gegen
-                        Herzrhythmusstörungen</li>
-                    <li>Anästhetika (Narkosemittel)</li>
-                    <li>Sympathomimetika (Mittel zur Beeinflussung des
-                        vegetativen Nervensystems)</li>
-                    <li>Theophyllin oder anderen Sympathomimetika, auch
-                        Substanzen, wie z. B. L-Dopa, L-Thyroxin, Oxytocin oder
-                        Alkohol</li>
-                    <li> Mutterkornalkaloiden, wie z. B. Ergotamin</li>
-                    <li>Arzneimitteln zur Behandlung von Depressionen (Monoaminoxidasehemmern oder trizyklischen
-                        Antidepressiva)</li>
-                    <li>Procarbazin</li>
-                </ul>
-                Die durch Salbutamol-ratiopharm® N Dosieraerosol
-                möglicherweise ausgelöste Hypokaliämie (Senkung des
-                Blutkaliumspiegels) kann bei gleichzeitiger Einnahme von
-                Methylxanthinen (z. B. Theophyllin), Kortikoiden, Diuretika
-                oder Digitalisglykosiden noch verstärkt werden. <br>
-                <b>Hinweis:</b><br>
-                Wenn bei Ihnen eine Narkose geplant ist, sollten Sie
-                Salbutamol-ratiopharm® N Dosieraerosol eventuell 6 Stunden
-                zuvor nicht mehr anwenden. Fragen Sie Ihren Arzt.
-            </div>
-        </div>
-    </div>
-
-    <div class="panel panel-default panel_neben">
-        <div class="panel-heading">
-            <h4 class="panel-title text-center-xs" data-toggle="collapse" data-target="#collapse4">
-                <img width="40" src="./../../assets/icons/8.svg" /> <span
-                    class="hidden-lg hidden-sm hidden-md"><br><br></span> Schwangerschaft und Stillzeit
-            </h4>
-        </div>
-        <div id="collapse4" class="panel-collapse collapse">
-            <div class="panel-body">
-                Wenn Sie schwanger sind oder stillen, oder wenn Sie vermuten, schwanger zu sein oder beabsichtigen,
-                schwanger zu
-                werden, fragen Sie vor der Anwendung dieses Arzneimittels
-                Ihren Arzt oder Apotheker um Rat.
-                <h4>Schwangerschaft</h4>
-                Salbutamol passiert die Plazentaschranke. Für den Menschen
-                liegen über eine Anwendung während der Schwangerschaft
-                unzureichende Erfahrungen vor.
-                Ein Anstieg der Herzfrequenz (Tachykardie) und ein
-                erniedrigter Blutzuckerspiegel (Hypoglykämie) des Neugeborenen sind bei der Anwendung von Salbutamol als
-                wehenhemmendes Mittel beschrieben worden. Studien bei
-                der Ratte haben in sehr hoher Dosierung eine Fortpflanzung
-                gefährdende Wirkung gezeigt. Das mögliche Risiko für den
-                Menschen ist nicht bekannt.
-                Salbutamol-ratiopharm® N Dosieraerosol sollte in der
-                Schwangerschaft, insbesondere während der ersten drei
-                Monate, nur nach strenger Indikationsstellung angewendet
-                werden. Das Gleiche gilt wegen der wehenhemmenden
-                Wirkung für die Anwendung am Ende der Schwangerschaft.
-                Salbutamol-ratiopharm® N Dosieraerosol darf nicht zur
-                Behandlung vorzeitiger Wehen angewendet werden</br>
-                <h4>Stillzeit</h4>
-                Da Salbutamol wahrscheinlich in die Muttermilch übergeht,
-                wird die Anwendung in der Stillzeit nur nach sorgfältiger
-                Nutzen-Risiko- Abwägung empfohlen.
-            </div>
-        </div>
-    </div>
-    <div class="panel panel-default panel_neben">
-        <div class="panel-heading">
-            <h4 class="panel-title text-center-xs" data-toggle="collapse" data-target="#collapse5">
-                <img width="40" src="./../../assets/icons/3.svg" /><span
-                    class="hidden-lg hidden-sm hidden-md"><br><br></span>
-                Verkehrstüchtigkeit und Fähigkeit zum Bedienen von Maschinen
-            </h4>
-        </div>
-        <div id="collapse5" class="panel-collapse collapse">
-            <div class="panel-body">Durch individuell auftretende unterschiedliche Reaktionen,
-                insbe sondere bei höherer Dosierung, kann die Fähigkeit zur
-                aktiven Teilnahme am Straßenverkehr oder zum Bedienen von
-                Maschinen beeinträchtigt werden. Dies gilt im verstärkten
-                Maß bei Behandlungsbeginn sowie im Zusammenwirken mit
-                Alkohol oder Beruhigungs- und Schlafmitteln </div>
-        </div>
-    </div>
-    <div class="panel panel-default panel_neben">
-        <div class="panel-heading">
-            <h4 class="panel-title text-center-xs" data-toggle="collapse" data-target="#collapse6">
-                <img width="40" src="./../../assets/icons/3.svg" /><span
-                    class="hidden-lg hidden-sm hidden-md"><br><br></span>
-                Auswirkungen bei Fehlgebrauch zu Dopingzwecken
-            </h4>
-        </div>
-        <div id="collapse6" class="panel-collapse collapse">
-            <div class="panel-body">Die Anwendung von Salbutamol-ratiopharm® N Dosieraerosol
-                kann bei Dopingkontrollen zu positiven Ergebnissen führen.
-                Die Anwendung von Salbutamol-ratiopharm® N Dosieraerosol
-                als Dopingmittel kann zu einer Gefährdung der Gesundheit
-                führen. </div>
-        </div>
-    </div>
 </div>
 </div>
-<h3 class="not_take"><i class="fas fa-bolt bolt_red" aria-hidden="true"></i> <br> Salbutamol-ratiopharm® N Dosieraerosol
+<h3 class="not_take"><i class="fas fa-bolt bolt_red" aria-hidden="true"></i> <br> Salbutamol
     nicht anwenden bei </h3>
 <div class="row">
     <div class="col-sm-6 nopadd">
@@ -4948,7 +4949,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
             <div class="tab-content">
                 <div class="tab-pane fade in active" id="tab1default">
                     <div class="row content_header" style="margin-top: 15px;">
-                        <table class="sideffect_table ">
+                        <table class="sideffect_table">
                             <tbody>
                                 <tr>
                                     <td> <b>Einzeldosis</b></td>
@@ -4991,7 +4992,9 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                                 </tr>
                             </tbody>
                         </table>
+
                     </div>
+
 
                 </div>
                 <div class="tab-pane fade" id="tab2default">
@@ -5040,10 +5043,11 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                             </tbody>
                         </table>
                     </div>
+
                 </div>
                 <div class="tab-pane fade" id="tab3default">
                     <div class="row content_header" style="margin-top: 15px;">
-                        Die Sicherheit von Salbutamol-ratiopharm® N Dosieraerosol
+                        Die Sicherheit von Salbutamol
                         bei Kindern unter 4 Jahren ist mit derjenigen bei Kindern über
                         4 Jahren vergleichbar.<br> Eine Dosierungsempfehlung kann
                         jedoch nicht gegeben werden. Bitte wenden Sie sich an Ihren
@@ -5230,10 +5234,12 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                     Inhalierhilfe
                     unter Umständen die Dosis durch den Arzt angepasst werden
                     muss.</li>
-                <li data-toggle="modal" data-target="#myModal" style="cursor: pointer;color: #00283b;"><i
-                        class="fas fa-broom"></i> Reinigung des
-                    Mundrohres</li>
-            </ul>
+
+            </ul> <br>
+            <span data-toggle="modal" data-target="#myModal"
+                style="cursor: pointer;padding: 11px;color: #00283b;border: 1px solid #333;"><i
+                    class="fas fa-broom"></i> Reinigung des
+                Mundrohres </span>
         </div>
     </div>
     <div class="row">
@@ -5285,7 +5291,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
             <div class="panel panel-default panel_neben">
                 <div class="panel-heading head_panel" role="tab" id="headingOne">
                     <h4 class="panel-title text-center-xs" data-toggle="collapse" data-target="#collapseOne1">
-                        Wenn Sie eine größere Menge von Salbutamolratiopharm® N Dosieraerosol eingenommen haben, als Sie
+                        Wenn Sie eine größere Menge von Salbutamol eingenommen haben, als Sie
                         sollten
                     </h4>
                 </div>
@@ -5294,8 +5300,8 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                         <p>Die Symptome bzw. Anzeichen einer Überdosierung
                             entsprechen den Nebenwirkungen. Diese treten dann sehr
                             schnell und gegebenenfalls in verstärktem Umfang in
-                            Erscheinung.<br>
-                            <b>Symptome bzw. Anzeichen einer Überdosierung sind:</b>
+                            Erscheinung.<br><br>
+                            <b>Symptome bzw. Anzeichen einer Überdosierung sind:</b><br>
                             Herzrasen, Herzklopfen, unregelmäßiger und/oder
                             beschleunigter Herzschlag, Ruhelosigkeit, Schlafstörungen,
                             Brustschmerzen und heftiges Zittern insbesondere an den
@@ -5313,8 +5319,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
             <div class="panel panel-default panel_neben">
                 <div class="panel-heading head_panel" role="tab" id="headingTwo">
                     <h4 class="panel-title title_pan text-center-xs" data-toggle="collapse" data-target="#collapseTwo2">
-                        Wenn Sie die Einnahme von Salbutamol-ratiopharm® N
-                        Dosieraerosol vergessen haben
+                        Wenn Sie die Einnahme von Salbutamol vergessen haben
                     </h4>
                 </div>
                 <div id="collapseTwo2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
@@ -5322,7 +5327,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                         <p>Sie sollten in keinem Fall
                             die Dosis beim nächsten Mal erhöhen!<br>
                             Eine nachträgliche Anwendung ist nicht erforderlich.
-                            Salbutamol-ratiopharm® N Dosieraerosol sollte möglichst nur
+                            Salbutamol sollte möglichst nur
                             bei Bedarf angewendet werden. </p>
                     </div>
                 </div>
@@ -5331,14 +5336,13 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                 <div class="panel-heading head_panel" role="tab" id="headingThree">
                     <h4 class="panel-title text-center-xs" data-toggle="collapse" data-target="#collapseThree3">
 
-                        Wenn Sie die Einnahme von Salbutamol-ratiopharm® N
-                        Dosieraerosol abbrechen
+                        Wenn Sie die Einnahme von Salbutamol abbrechen
                     </h4>
                 </div>
                 <div id="collapseThree3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
                     <div class="panel-body">
                         <p>Es könnte sich hierdurch Ihre Krankheit verschlechtern. Bitte brechen Sie die Behandlung mit
-                            Salbutamol-ratiopharm® N Dosieraerosol nicht ohne Rücksprache mit Ihrem Arzt ab. </p>
+                            Salbutamol nicht ohne Rücksprache mit Ihrem Arzt ab. </p>
                     </div>
                 </div>
             </div>
@@ -5384,7 +5388,9 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                             <thead>
                                 <tr>
                                     <th>Häufigkeit</th>
-                                    <th style="width: 25%;">Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> </th>
+                                    <th style="width: 25%;">Anzahl der betreffenden Behandelten <span
+                                            style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i
+                                                class="fas fa-info-circle"></i></span> </th>
                                     <th>Nebenwirkung</th>
                                 </tr>
                             </thead>
@@ -5413,7 +5419,10 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                                 <div class="row p15" id="nichtbekannt">
                                     <h4> Nicht bekannt</h4>
                                     <div class="row">
-                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Häufigkeit auf Grundlage der
+                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer"
+                                                data-toggle="modal" data-target="#neben_info"><i
+                                                    class="fas fa-info-circle"></i></span> :</b> <br> Häufigkeit auf
+                                        Grundlage der
                                         verfügbaren Daten nicht abschätzbar< </div> <div class="row">
                                             <b>Nebenwirkung:</b> <br>
                                             Überempfindlichkeitsreaktionen einschließlich
@@ -5440,7 +5449,9 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                             <thead>
                                 <tr>
                                     <th>Häufigkeit</th>
-                                    <th style="width: 25%;">Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> </th>
+                                    <th style="width: 25%;">Anzahl der betreffenden Behandelten <span
+                                            style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i
+                                                class="fas fa-info-circle"></i></span> </th>
                                     <th>Nebenwirkung</th>
                                 </tr>
                             </thead>
@@ -5474,7 +5485,10 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                             <div class="row p15" id="haeufig-xs">
                                 <h4> Häufig</h4>
                                 <div class="row">
-                                    <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1 von 10 Behandelten
+                                    <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer"
+                                            data-toggle="modal" data-target="#neben_info"><i
+                                                class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1 von 10
+                                    Behandelten
                                 </div>
                                 <div class="row">
                                     <b>Nebenwirkung:</b> <br>
@@ -5485,7 +5499,10 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                             <div class="row p15" id="nichtbekannt">
                                 <h4> Nicht bekannt</h4>
                                 <div class="row">
-                                    <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Häufigkeit auf Grundlage der
+                                    <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer"
+                                            data-toggle="modal" data-target="#neben_info"><i
+                                                class="fas fa-info-circle"></i></span> :</b> <br> Häufigkeit auf
+                                    Grundlage der
                                     verfügbaren Daten nicht abschätzbar< </div> <div class="row">
                                         <b>Nebenwirkung:</b> <br>
                                         Senkung des Blut-Kaliumspiegels
@@ -5512,7 +5529,9 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                             <thead>
                                 <tr>
                                     <th>Häufigkeit</th>
-                                    <th style="width: 25%;">Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> </th>
+                                    <th style="width: 25%;">Anzahl der betreffenden Behandelten <span
+                                            style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i
+                                                class="fas fa-info-circle"></i></span> </th>
                                     <th>Nebenwirkung</th>
                                 </tr>
                             </thead>
@@ -5536,7 +5555,10 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                                 <div class="row p15" id="nichtbekannt">
                                     <h4> Nicht bekannt</h4>
                                     <div class="row">
-                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Häufigkeit auf Grundlage der
+                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer"
+                                                data-toggle="modal" data-target="#neben_info"><i
+                                                    class="fas fa-info-circle"></i></span> :</b> <br> Häufigkeit auf
+                                        Grundlage der
                                         verfügbaren Daten nicht abschätzbar< </div> <div class="row">
                                             <b>Nebenwirkung:</b> <br>
                                             Schlaflosigkeit (Insomnie)
@@ -5558,7 +5580,9 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                             <thead>
                                 <tr>
                                     <th>Häufigkeit</th>
-                                    <th style="width: 25%;">Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> </th>
+                                    <th style="width: 25%;">Anzahl der betreffenden Behandelten <span
+                                            style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i
+                                                class="fas fa-info-circle"></i></span> </th>
                                     <th>Nebenwirkung</th>
                                 </tr>
                             </thead>
@@ -5596,7 +5620,9 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                                 <div class="row p15" id="haeufig-xs">
                                     <h4> Häufig</h4>
                                     <div class="row">
-                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1 von 10
+                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer"
+                                                data-toggle="modal" data-target="#neben_info"><i
+                                                    class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1 von 10
                                         Behandelten
                                     </div>
                                     <div class="row">
@@ -5608,7 +5634,9 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                                 <div class="row p15" id="gelegentlich-xs">
                                     <h4> Gelegentlich</h4>
                                     <div class="row">
-                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1 von 100
+                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer"
+                                                data-toggle="modal" data-target="#neben_info"><i
+                                                    class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1 von 100
                                         Behandelten
                                     </div>
                                     <div class="row">
@@ -5620,7 +5648,10 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                                 <div class="row p15" id="nichtbekannt">
                                     <h4> Nicht bekannt</h4>
                                     <div class="row">
-                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Häufigkeit auf Grundlage der
+                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer"
+                                                data-toggle="modal" data-target="#neben_info"><i
+                                                    class="fas fa-info-circle"></i></span> :</b> <br> Häufigkeit auf
+                                        Grundlage der
                                         verfügbaren Daten nicht abschätzbar</div>
                                     <div class="row">
                                         <b>Nebenwirkung:</b> <br>
@@ -5642,7 +5673,9 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                             <thead>
                                 <tr>
                                     <th>Häufigkeit</th>
-                                    <th style="width: 25%;">Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> </th>
+                                    <th style="width: 25%;">Anzahl der betreffenden Behandelten <span
+                                            style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i
+                                                class="fas fa-info-circle"></i></span> </th>
                                     <th>Nebenwirkung</th>
                                 </tr>
                             </thead>
@@ -5682,7 +5715,9 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                                 <div class="row p15" id="haeufig-xs">
                                     <h4> Häufig</h4>
                                     <div class="row">
-                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1
+                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer"
+                                                data-toggle="modal" data-target="#neben_info"><i
+                                                    class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1
                                         von 10 Behandelten
                                     </div>
                                     <div class="row">
@@ -5695,7 +5730,10 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                                 <div class="row p15" id="nichtbekannt">
                                     <h4> Nicht bekannt</h4>
                                     <div class="row">
-                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Häufigkeit auf Grundlage der
+                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer"
+                                                data-toggle="modal" data-target="#neben_info"><i
+                                                    class="fas fa-info-circle"></i></span> :</b> <br> Häufigkeit auf
+                                        Grundlage der
                                         verfügbaren Daten nicht abschätzbar</div>
                                     <div class="row">
                                         <b>Nebenwirkung:</b> <br>
@@ -5718,7 +5756,9 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                             <thead>
                                 <tr>
                                     <th>Häufigkeit</th>
-                                    <th style="width: 25%;">Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> </th>
+                                    <th style="width: 25%;">Anzahl der betreffenden Behandelten <span
+                                            style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i
+                                                class="fas fa-info-circle"></i></span> </th>
                                     <th>Nebenwirkung</th>
                                 </tr>
                             </thead>
@@ -5741,7 +5781,10 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                                 <div class="row p15" id="nichtbekannt">
                                     <h4> Nicht bekannt</h4>
                                     <div class="row">
-                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Häufigkeit auf Grundlage der
+                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer"
+                                                data-toggle="modal" data-target="#neben_info"><i
+                                                    class="fas fa-info-circle"></i></span> :</b> <br> Häufigkeit auf
+                                        Grundlage der
                                         verfügbaren Daten nicht abschätzbar</div>
                                     <div class="row">
                                         <b>Nebenwirkung:</b> <br>
@@ -5765,7 +5808,9 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                             <thead>
                                 <tr>
                                     <th>Häufigkeit</th>
-                                    <th style="width: 25%;">Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> </th>
+                                    <th style="width: 25%;">Anzahl der betreffenden Behandelten <span
+                                            style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i
+                                                class="fas fa-info-circle"></i></span> </th>
                                     <th>Nebenwirkung</th>
                                     <th>Hinweis</th>
                                 </tr>
@@ -5779,12 +5824,12 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                                         Husten, Bronchialkrampf (paradoxer
                                         Bronchospasmus), Reizung im Rachenbereich. </td>
                                     <td>Wie bei anderen Inhalationstherapien kann nach der
-                                        Anwendung von Salbutamol-ratiopharm® N Dosieraerosol ein
+                                        Anwendung von Salbutamol ein
                                         Bronchialkrampf auftreten mit einer sofortigen Zunahme des
                                         Giemens (Keuchens). In diesem Fall sollte sofort ein anderes
                                         bronchienerweiterndes Arzneimittel mit schnellem
                                         Wirkungseintritt inhaliert werden. Die Behandlung mit
-                                        Salbutamol-ratiopharm® N Dosieraerosol soll unverzüglich
+                                        Salbutamol soll unverzüglich
                                         abgebrochen und der behandelnde Arzt informiert werden.
                                         Dieser entscheidet, ob weitere Maßnahmen erforderlich sind.</td>
                                 </tr>
@@ -5800,7 +5845,10 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                                 <div class="row p15" id="nichtbekannt">
                                     <h4> Nicht bekannt</h4>
                                     <div class="row">
-                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Häufigkeit auf Grundlage der
+                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer"
+                                                data-toggle="modal" data-target="#neben_info"><i
+                                                    class="fas fa-info-circle"></i></span> :</b> <br> Häufigkeit auf
+                                        Grundlage der
                                         verfügbaren Daten nicht abschätzbar</div>
                                     <div class="row">
                                         <b>Nebenwirkung:</b> <br>
@@ -5809,12 +5857,12 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                                     <div class="row">
                                         <b>Hinweis:</b> <br>
                                         Wie bei anderen Inhalationstherapien kann nach der
-                                        Anwendung von Salbutamol-ratiopharm® N Dosieraerosol ein
+                                        Anwendung von Salbutamol ein
                                         Bronchialkrampf auftreten mit einer sofortigen Zunahme des
                                         Giemens (Keuchens). In diesem Fall sollte sofort ein anderes
                                         bronchienerweiterndes Arzneimittel mit schnellem
                                         Wirkungseintritt inhaliert werden. Die Behandlung mit
-                                        Salbutamol-ratiopharm® N Dosieraerosol soll unverzüglich
+                                        Salbutamol soll unverzüglich
                                         abgebrochen und der behandelnde Arzt informiert werden.
                                         Dieser entscheidet, ob weitere Maßnahmen erforderlich sind.
 
@@ -5836,7 +5884,9 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                             <thead>
                                 <tr>
                                     <th>Häufigkeit</th>
-                                    <th style="width: 25%;">Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> </th>
+                                    <th style="width: 25%;">Anzahl der betreffenden Behandelten <span
+                                            style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i
+                                                class="fas fa-info-circle"></i></span> </th>
                                     <th>Nebenwirkung</th>
                                 </tr>
                             </thead>
@@ -5863,7 +5913,9 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                                 <div class="row p15" id="gelegentlich-xs">
                                     <h4> Gelegentlich</h4>
                                     <div class="row">
-                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1
+                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer"
+                                                data-toggle="modal" data-target="#neben_info"><i
+                                                    class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1
                                         von 100 Behandelten
                                     </div>
                                     <div class="row">
@@ -5890,7 +5942,9 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                             <thead>
                                 <tr>
                                     <th>Häufigkeit</th>
-                                    <th style="width: 25%;">Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> </th>
+                                    <th style="width: 25%;">Anzahl der betreffenden Behandelten <span
+                                            style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i
+                                                class="fas fa-info-circle"></i></span> </th>
                                     <th>Nebenwirkung</th>
                                 </tr>
                             </thead>
@@ -5921,7 +5975,9 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                                 <div class="row p15" id="gelegentlich-xs">
                                     <h4> Gelegentlich</h4>
                                     <div class="row">
-                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1
+                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer"
+                                                data-toggle="modal" data-target="#neben_info"><i
+                                                    class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1
                                         von 100 Behandelten
                                     </div>
                                     <div class="row">
@@ -5933,7 +5989,9 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                                 <div class="row p15" id="selten-xs">
                                     <h4> Selten</h4>
                                     <div class="row">
-                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1
+                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer"
+                                                data-toggle="modal" data-target="#neben_info"><i
+                                                    class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1
                                         von 1000 Behandelten
                                     </div>
                                     <div class="row">
@@ -5955,7 +6013,8 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
             Beobachtungen wurden überwiegend (zu 90 %) bei Kindern
             im Alter bis zu 12 Jahren gemacht.<br>
             Einige der genannten Nebenwirkungen können unter
-            Umständen akut lebensbedrohlich sein (wie z. B. lebensbedrohliche Tachykardien). Darum sollten Sie sofort einen
+            Umständen akut lebensbedrohlich sein (wie z. B. lebensbedrohliche Tachykardien). Darum sollten Sie sofort
+            einen
             Arzt informieren, falls ein derartiges Ereignis plötzlich auftritt
             oder sich unerwartet stark entwickelt.
         </div>
@@ -5987,8 +6046,8 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
     <li>
         Bei Erwachsenen, Jugendlichen und Kindern im Alter von
         4 bis 11 Jahren (für die Anwendung bei Kleinkindern und
-        Kindern unter 4 Jahren siehe Abschnitt 3. „Wie ist
-        Salbutamol-ratiopharm® N Dosieraerosol anzuwenden?“).
+        Kindern unter 4 Jahren siehe Abschnitt 3. <a href="#tab3" aria-controls="tab3" role="tab"
+            data-toggle="tab">Anwendung</a>).
     </li>
     </ul>
 
@@ -6017,9 +6076,9 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
 INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (133,0,'
 <!-- Wirkstoff -->
 Der Wirkstoff ist: Salbutamol.<br>
- Jeder Sprühstoß zu 0,025 ml Suspension und Treibmittel
+Jeder Sprühstoß zu 0,025 ml Suspension und Treibmittel
 enthält 0,12 mg Salbutamolsulfat.<br>
- Dies entspricht einer vom Mundrohr abgegebenen Menge
+Dies entspricht einer vom Mundrohr abgegebenen Menge
 von 0,09 mg Salbutamol.<br>
 <b>Die sonstigen Bestandteile sind:</b>
 <ul>

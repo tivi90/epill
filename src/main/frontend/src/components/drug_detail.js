@@ -1,6 +1,6 @@
 import axios from "axios";
 import React from "react";
-
+import scrollToComponent from 'react-scroll-to-component';
 import {translate} from "react-i18next";
 import {toast} from 'react-toastify';
 
@@ -688,6 +688,8 @@ class DrugDetail extends React.Component {
         }));
     }
 
+
+
     render() {
         let that = this;
         setTimeout(function(){that.setState({timePassed: true})}, 1000);
@@ -740,11 +742,12 @@ class DrugDetail extends React.Component {
                         <div className="modal-dialog" role="document">
                             <div className="modal-content">
                                 <div className="modal-header">
-                                    <h2>Informationen
-                                    </h2>
                                     <button type="button" className="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
+                                    <h2>Informationen
+                                    </h2>
+
                                 </div>
                                 <div className="modal-body" style={{color: "black"}}>
                                     <span
@@ -793,10 +796,11 @@ class DrugDetail extends React.Component {
                         <div className="modal-dialog" role="document">
                             <div className="modal-content">
                                 <div className="modal-header">
-                                    <h2>Meldung von Nebenwirkungen </h2>
                                     <button type="button" className="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
+                                    <h2>Meldung von Nebenwirkungen </h2>
+
                                 </div>
                                 <div className="modal-body" style={{color: "black"}}>
                                     <span dangerouslySetInnerHTML={this.createMarkup(t("inform"))}/>
@@ -815,11 +819,12 @@ class DrugDetail extends React.Component {
                         <div className="modal-dialog modal-lg" role="document">
                             <div className="modal-content">
                                 <div className="modal-header">
-                                    <h2>Fachausdrücke
-                                    </h2>
                                     <button type="button" className="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
+                                    <h2>Fachausdrücke
+                                    </h2>
+
                                 </div>
                                 <div className="modal-body" style={{color: "black"}}>
 
@@ -939,7 +944,7 @@ class DrugDetail extends React.Component {
                                                 <a href="#tab1"
                                                    aria-controls="tab1"
                                                    role="tab"
-                                                   data-toggle="tab">Allgemeine
+                                                   data-toggle="tab" onClick={this.handleScrollToStats} >Allgemeine
                                                     Informationen</a></li>
                                             <div id="arrow-down">
                                                 <FontAwesomeIcon icon={faChevronDown}/>
@@ -948,7 +953,7 @@ class DrugDetail extends React.Component {
                                                 <a href="#tab2"
                                                    aria-controls="tab2"
                                                    role="tab"
-                                                   data-toggle="tab">Vor der
+                                                   data-toggle="tab" >Vor der
                                                     Anwendung </a></li>
                                             <div id="arrow-down">
                                                 <FontAwesomeIcon icon={faChevronDown}/>
@@ -973,7 +978,7 @@ class DrugDetail extends React.Component {
                                 </div>
                                 <div className="col-xs-12 col-sm-12 col-md-9 infobox">
                                     <div className="tab-content">
-                                        <div role="tabpanel" className="tab-pane active w3-animate-opacity" id="tab1">
+                                        <div role="tabpanel" className="tab-pane active w3-animate-opacity tab1" id="tab1">
                                             <div className="row content_header">
                                                 <h1>Allgemeine Informationen</h1>
                                                 <hr/>
