@@ -1,6 +1,6 @@
 $(window).scroll(function () {
 
-    if ($(this).scrollTop() > 40) {
+    if ($(this).scrollTop() > 140) {
         $('.report-round-button').fadeOut();
     } else {
         $('.report-round-button').fadeIn();

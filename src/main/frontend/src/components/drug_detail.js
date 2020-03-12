@@ -337,20 +337,21 @@ class DrugDetail extends React.Component {
         );
     }
 
-    renderWordExplainationButton(drug){
+    renderWordExplainationButton(drug) {
         if (!drug.wordExplaination) {
             return null;
         }
         const {t} = this.props;
         return drug.wordExplaination
-            .map((section => {  return(
-                <div className="round-button-outer1 report-round-button1 round_def">
-                    <div id="defBtn" className="round-button-inner-main1" data-toggle="modal" data-target="#def">
-                        <i className="fas fa-book"></i>                        </div>
-                </div>
-            );
-    })).reduce((prev, curr) => [prev, curr]);
-}
+            .map((section => {
+                return (
+                    <div className="round-button-outer1 report-round-button1 round_def">
+                        <div id="defBtn" className="round-button-inner-main1" data-toggle="modal" data-target="#def">
+                            <i className="fas fa-book"></i></div>
+                    </div>
+                );
+            })).reduce((prev, curr) => [prev, curr]);
+    }
 
     renderWordExplaination(drug) {
 
@@ -397,12 +398,30 @@ class DrugDetail extends React.Component {
         return drug.wordExplaination
             .map((section => {
                 return (
-                    <tr>
-                        <td><p key={section.id}>{section.name}</p></td>
-                        <td><p key={section.id}><span
-                            dangerouslySetInnerHTML={this.createMarkup(section.description)}/>
-                        </p></td>
-                    </tr>
+                    <div>
+                        <div className="row hidden-lg hidden-md hidden-sm explain_box" key={section.id}>
+                        <h4 >{section.name}</h4>
+                            <p key={section.id}><span dangerouslySetInnerHTML={this.createMarkup(section.description)}/>
+                            </p>
+                        </div>
+
+                    <table className="table table-bordered table-striped hidden-xs">
+                        <thead>
+                        <tr>
+                            <th>Begriff</th>
+                            <th>Erklärung</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <script src="assets/js/ownjs.js"></script>
+                        <tr>
+                            <td><p key={section.id}>{section.name}</p></td>
+                            <td><p key={section.id}><span
+                                dangerouslySetInnerHTML={this.createMarkup(section.description)}/>
+                            </p></td>
+                        </tr>
+                        </tbody>
+                    </table></div>
                 );
             })).reduce((prev, curr) => [prev, curr]);
 
@@ -473,6 +492,7 @@ class DrugDetail extends React.Component {
         const {t} = this.props;
 
         return (
+            <div className="col-sm-4 col-xs-6 text-center infopart">
             <section className="pzn diseases row">
                 <FontAwesomeIcon className="infopic" icon={faHashtag}/>
 
@@ -482,6 +502,7 @@ class DrugDetail extends React.Component {
                         <br/></span>)
                         .reduce((prev, curr) => [prev, curr])}</p>
             </section>
+            </div>
         );
     }
 
@@ -492,6 +513,7 @@ class DrugDetail extends React.Component {
         const {t} = this.props;
 
         return (
+            <div className="col-sm-4 col-xs-6 text-center infopart">
             <section className="row diseases">
                 <img src={"./../../assets/images/ind_group.svg"} alt={"ind_group"} className="infopic"/>
 
@@ -499,6 +521,7 @@ class DrugDetail extends React.Component {
                 <p>{drug.indicationGroup.name}</p>
 
             </section>
+            </div>
         );
     }
 
@@ -510,6 +533,7 @@ class DrugDetail extends React.Component {
         const {t} = this.props;
 
         return (
+            <div className="col-sm-4 col-xs-6 text-center infopart">
             <section className="row diseases">
                 <img src={"./../../assets/images/productgroup.png"} alt={"productgroup"} className="infopic"/>
 
@@ -518,6 +542,7 @@ class DrugDetail extends React.Component {
                 <p>{drug.productGroup.name}</p>
 
             </section>
+            </div>
         );
     }
 
@@ -664,6 +689,8 @@ class DrugDetail extends React.Component {
     }
 
     render() {
+        let that = this;
+        setTimeout(function(){that.setState({timePassed: true})}, 1000);
         const {t} = this.props;
         const drug = this.state.drug;
         const showAdditionalInfo = this.state.showAdditionalInfo;
@@ -683,6 +710,24 @@ class DrugDetail extends React.Component {
         }
         return (
             <div>
+                <div id="myCarousel" className="carousel carousel-fade" data-ride="carousel">
+                    <div className="carousel-inner">
+                        <div className="carousel-item active item_drug">
+                            <div className="mask flex-center">
+                                <div className="container">
+                                    <div className="row align-items-center">
+                                        <div className="col-md-8 col-12 order-md-1 order-2">
+                                            <h4>{drug.name}</h4>
+                                        </div>
+                                        <div className="col-xs-8 col-md-4 col-12 order-md-2 order-1"><img
+                                            src="/assets/images/epil_circle.png" className="img-responsive" alt="slide"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div className="no-banner">
                     {/*Button INFO*/}
                     <div className="round-button-outer report-round-button round_info">
@@ -770,37 +815,22 @@ class DrugDetail extends React.Component {
                         <div className="modal-dialog modal-lg" role="document">
                             <div className="modal-content">
                                 <div className="modal-header">
-                                    <h2>Informationen
+                                    <h2>Fachausdrücke
                                     </h2>
                                     <button type="button" className="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
                                 </div>
                                 <div className="modal-body" style={{color: "black"}}>
-                                            <table className="table table-bordered table-striped">
-                                            <thead>
-                                                <tr>
-                                                    <th>Titel</th>
-                                                    <th>Erklärung</th>
-                                                </tr>
-                                                </thead>
-                                                <tbody>
-                                                <script src="assets/js/ownjs.js"></script>
-                                                {this.renderWordExplainations(drug)}
 
-                                                    </tbody>
-                                            </table>
-
-                                <span dangerouslySetInnerHTML={this.createMarkup(t("modal_close"))}/>
+                                    {this.renderWordExplainations(drug)}
+                                    <span dangerouslySetInnerHTML={this.createMarkup(t("modal_close"))}/>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    </div>
 
                     {/*Button INFO ENDE*/}
-
-
-
 
 
                     <div className='page-header bg_grey'>
@@ -864,12 +894,12 @@ class DrugDetail extends React.Component {
                                                 <div className="modal-dialog" role="document">
                                                     <div className="modal-content">
                                                         <div className="modal-header">
-                                                            <h2> Was bedeuten die Symbole?
-                                                            </h2>
                                                             <button type="button" className="close" data-dismiss="modal"
                                                                     aria-label="Close">
                                                                 <span aria-hidden="true">&times;</span>
                                                             </button>
+                                                            <h2> Was bedeuten die Symbole?
+                                                            </h2>
                                                         </div>
                                                         <div className="modal-body" style={{color: "black"}}>
                                                             {drug.drugFeature.map(feature =>
@@ -967,12 +997,12 @@ class DrugDetail extends React.Component {
                                                     <div className="modal-dialog" role="document">
                                                         <div className="modal-content">
                                                             <div className="modal-header">
-                                                                <h2>Inhalt und Darstellung des
-                                                                    Medikaments</h2>
                                                                 <button type="button" className="close"
                                                                         data-dismiss="modal" aria-label="Close">
                                                                     <span aria-hidden="true">&times;</span>
                                                                 </button>
+                                                                <h2>Inhalt und Darstellung des
+                                                                    Medikaments</h2>
                                                             </div>
                                                             <div className="modal-body" style={{color: "black"}}>
                                                                 <div className="row">
@@ -985,8 +1015,10 @@ class DrugDetail extends React.Component {
                                                                 <div className="row">
                                                                     <div
                                                                         className="col-sm-2 col-xs-12 xs-center"><i
-                                                                        className="druf_pack_icon fas fa-prescription-bottle-alt"></i> </div>
-                                                                    <div className="col-sm-10 col-xs-12 xs-center"  style={{paddingTop: "10px"}}>
+                                                                        className="druf_pack_icon fas fa-prescription-bottle-alt"></i>
+                                                                    </div>
+                                                                    <div className="col-sm-10 col-xs-12 xs-center"
+                                                                         style={{paddingTop: "10px"}}>
                                                                         {this.renderPackSecpack(drug)}
                                                                     </div>
                                                                 </div>
@@ -1012,16 +1044,18 @@ class DrugDetail extends React.Component {
                                                     <div className="modal-dialog" role="document">
                                                         <div className="modal-content">
                                                             <div className="modal-header">
-                                                                {drug.activeSubstance.map(substance =>
-                                                                    <h2 key={substance.id}> <img src={"./../../assets/images/lab.svg"} className="infopic" alt={"lab"}/> {substance.name}
-                                                                    </h2>)
-                                                                    .reduce((prev, curr) => [prev, ', ', curr])}
-
                                                                 <button type="button" className="close"
                                                                         data-dismiss="modal"
                                                                         aria-label="Close">
                                                                     <span aria-hidden="true">&times;</span>
                                                                 </button>
+                                                                {drug.activeSubstance.map(substance =>
+                                                                    <h2 key={substance.id}><img
+                                                                        src={"./../../assets/images/lab.svg"}
+                                                                        className="infopic"
+                                                                        alt={"lab"}/> {substance.name}
+                                                                    </h2>)
+                                                                    .reduce((prev, curr) => [prev, ', ', curr])}
                                                             </div>
                                                             <div className="modal-body" style={{color: "black"}}>
                                                            <span> {drug.activeSubstance.map(substance =>
@@ -1038,15 +1072,9 @@ class DrugDetail extends React.Component {
                                                 <div className="">
                                                     <div className="additional-information">
                                                         <section>
-                                                            <div className="col-sm-4 col-xs-6 text-center infopart">
                                                                 {this.renderIndicationGroup(drug)}
-                                                            </div>
-                                                            <div className="col-sm-4 col-xs-6 text-center infopart">
                                                                 {this.renderProductGroup(drug)}
-                                                            </div>
-                                                            <div className="col-sm-4 col-xs-6 text-center infopart">
                                                                 {this.renderPZN(drug)}
-                                                            </div>
                                                         </section>
                                                     </div>
                                                 </div>}
@@ -1096,7 +1124,8 @@ class DrugDetail extends React.Component {
                             Medkamenten</a>
                     </div>
                     {this.renderWordExplaination(drug)}
-                    <div className="modal fade" id="neben_info" tabIndex="-1" role="dialog" aria-labelledby="neben_info" aria-hidden="true">
+                    <div className="modal fade" id="neben_info" tabIndex="-1" role="dialog" aria-labelledby="neben_info"
+                         aria-hidden="true">
                         <div className="modal-dialog modal-lg" role="document">
                             <div className="modal-content">
                                 <div className="modal-header">
@@ -1107,9 +1136,9 @@ class DrugDetail extends React.Component {
                                     </h2>
                                 </div>
                                 <div className="modal-body" style={{color: "black"}}>
-                                    <span dangerouslySetInnerHTML={this.createMarkup(t("frequency_sideeffect"))} />
+                                    <span dangerouslySetInnerHTML={this.createMarkup(t("frequency_sideeffect"))}/>
                                 </div>
-                                <span dangerouslySetInnerHTML={this.createMarkup(t("modal_close"))} />
+                                <span dangerouslySetInnerHTML={this.createMarkup(t("modal_close"))}/>
                             </div>
                         </div>
                     </div>
