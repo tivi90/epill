@@ -46,16 +46,17 @@ Navbar
 }
 
 #myCarousel .carousel-item a {
-    background: #F47735;
+    background: inherit;
     font-size: 14px;
-    color: #FFF;
-    padding: 13px 32px;
+    color: #62626a;
+    padding: 6px 6px;
     display: inline-block;
 }
 
 #myCarousel .carousel-item a:hover {
-    background: #394fa2;
+    background: #0da59b;
     text-decoration: none;
+    color: white;
 }
 
 #myCarousel .carousel-item h4 {
@@ -72,6 +73,7 @@ Navbar
 #myCarousel .carousel-item a {
     -webkit-animation-name: fadeInUp;
     animation-name: fadeInUp;
+    width: 100%;
 }
 
 #myCarousel .carousel-item .mask img {
@@ -91,6 +93,51 @@ Navbar
     animation-fill-mode: both;
 }
 
+.searchbox {
+    overflow-y: scroll;
+    height: 333px;
+
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.no-results {
+    padding: 15px
+}
+
+.carousel-haeufig{
+    text-align: center;
+    border: 1px solid;
+    margin-bottom: 30px;
+    margin-right: 15px;
+    height: 165px;
+}
+.carousel-haeufig-pic{
+    height: 112px;
+    padding: 10px;
+}
+.carousel-haeufig-text{
+    color: black;
+}
+
 #myCarousel .container {
     max-width: 1430px;
 }
@@ -105,6 +152,19 @@ Navbar
     z-index: 1;
     background: url(/assets/images/titelbild1.jpg) center center no-repeat;
     background-size: cover;
+    margin-bottom: 60px;
+}
+
+.searchimg {
+    width: 95px !important;
+    margin-top: 10px !important;
+    -webkit-animation-name: none !important;
+    animation-name: none !important;
+}
+
+.drugname_search {
+    padding-top: 20px;
+    font-size: 16px;
 }
 
 .carousel-control-next, .carousel-control-prev {
@@ -378,17 +438,17 @@ img.group.list-group-image {
 
 }
 
-.border-1{
+.border-1 {
     border: 1px solid;
 }
 
 .carousel .item {
     height: 370px;
-    background-color: inherit!important;
+    background-color: inherit !important;
 }
 
 .carousel-caption {
-    text-shadow: none!important;
+    text-shadow: none !important;
     color: black;
 }
 
@@ -695,6 +755,7 @@ footer .glyphicon {
         font-size: 14px;
     }
 }
+
 @media screen and (max-width: 768px) {
     .col-sm-4 {
         text-align: center;
@@ -716,6 +777,7 @@ footer .glyphicon {
     .carousel-indicators {
         bottom: 0px;
     }
+
     .logo {
         font-size: 150px;
     }

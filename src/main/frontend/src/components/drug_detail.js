@@ -237,9 +237,9 @@ class DrugDetail extends React.Component {
 
     renderDrugFeatures(drug) {
 
-        if (!drug.drugFeature)
+        if (!drug.drugFeature) {
             return;
-
+        }
         return (
             <p>
                 {drug.drugFeature.map(feature => <img key={feature.id}
@@ -252,8 +252,9 @@ class DrugDetail extends React.Component {
 
     renderDrugFeaturesDesc(drug) {
         const {t} = this.props;
-        if (!drug.drugFeature)
-            return;
+        if (!drug.drugFeature) {
+            return null;
+        }
         return (
 
             <span>
@@ -298,7 +299,7 @@ class DrugDetail extends React.Component {
 
     renderDisease(drug) {
         if (!drug.disease) {
-            return;
+            return null;
         }
 
         const {t} = this.props;
@@ -315,7 +316,7 @@ class DrugDetail extends React.Component {
 
     renderPharmaceuticalForm(drug) {
         if (!drug.pharmaceuticalForm) {
-            return;
+            return null;
         }
 
         const {t} = this.props;
@@ -342,15 +343,13 @@ class DrugDetail extends React.Component {
             return null;
         }
         const {t} = this.props;
-        return drug.wordExplaination
-            .map((section => {
                 return (
                     <div className="round-button-outer1 report-round-button1 round_def">
                         <div id="defBtn" className="round-button-inner-main1" data-toggle="modal" data-target="#def">
                             <i className="fas fa-book"></i></div>
                     </div>
                 );
-            })).reduce((prev, curr) => [prev, curr]);
+
     }
 
     renderWordExplaination(drug) {
@@ -486,9 +485,9 @@ class DrugDetail extends React.Component {
 
 
     renderPZN(drug) {
-        if (!drug.packaging)
+        if (!drug.packaging) {
             return null;
-
+        }
         const {t} = this.props;
 
         return (
@@ -507,9 +506,9 @@ class DrugDetail extends React.Component {
     }
 
     renderIndicationGroup(drug) {
-        if (!drug.indicationGroup || !drug.indicationGroup.name)
+        if (!drug.indicationGroup || !drug.indicationGroup.name) {
             return null;
-
+        }
         const {t} = this.props;
 
         return (
@@ -527,9 +526,9 @@ class DrugDetail extends React.Component {
 
     renderProductGroup(drug) {
 
-        if (!drug.productGroup || !drug.productGroup.name)
-            return null;
-
+        if (!drug.productGroup || !drug.productGroup.name) {
+        return null;
+    }
         const {t} = this.props;
 
         return (
@@ -559,7 +558,7 @@ class DrugDetail extends React.Component {
     }
 
     renderPackcompany(drug) {
-        if (!drug.packagingSection) {
+        if (!drug.packagingSection){
             return null;
         }
 
@@ -576,7 +575,7 @@ class DrugDetail extends React.Component {
     }
 
     renderPackSecdesc(drug) {
-        if (!drug.packagingSection) {
+        if (!drug.packagingSection){
             return null;
         }
 
@@ -593,7 +592,7 @@ class DrugDetail extends React.Component {
     }
 
     renderPackSecvor(drug) {
-        if (!drug.packagingSection) {
+        if (!drug.packagingSection){
             return null;
         }
 
@@ -610,7 +609,7 @@ class DrugDetail extends React.Component {
     }
 
     renderPackSecdos(drug) {
-        if (!drug.packagingSection) {
+        if (!drug.packagingSection){
             return null;
         }
 
@@ -627,7 +626,7 @@ class DrugDetail extends React.Component {
     }
 
     renderPackSecneben(drug) {
-        if (!drug.packagingSection) {
+        if (!drug.packagingSection){
             return null;
         }
 
@@ -644,7 +643,7 @@ class DrugDetail extends React.Component {
     }
 
     renderPackSecpack(drug) {
-        if (!drug.packagingSection) {
+        if (!drug.packagingSection){
             return null;
         }
 
@@ -661,7 +660,7 @@ class DrugDetail extends React.Component {
     }
 
     renderPackSecMoreSub(drug) {
-        if (!drug.packagingSection) {
+        if (!drug.packagingSection){
             return null;
         }
 
@@ -922,7 +921,7 @@ class DrugDetail extends React.Component {
                                                                               key={feature.id}>{feature.drugFeature}</span>
                                                                     </div>
                                                                 </div>
-                                                            )}
+                                                            ).reduce((prev, curr) => [prev, ', ', curr])}
                                                             <div className="row">
                                                                 Weitere Informationen finden Sie unter der Rubrik <a
                                                                 href="#tab2" aria-controls="tab2" role="tab"

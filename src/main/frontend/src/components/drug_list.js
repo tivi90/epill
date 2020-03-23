@@ -9,6 +9,8 @@ import EmptyList from "./empty_list";
 import Loading from "./loading";
 import User from "./../util/User";
 import Carousel1 from "./carousel_drugs";
+import AutoComplete from "./auto_complete";
+import MostVisitedItems from "./most_visited_items";
 
 class DrugList extends React.Component {
     constructor(props) {
@@ -418,10 +420,11 @@ class DrugList extends React.Component {
             return (
                 <div id="products" key={drug.id}>
                     <div className={itemClass.join(' ')}>
-                        <div className="thumbnail medicine">
-                            <div className={col4Class.join('list_pic ')}>
-                                <Link to={`/drug/${drug.id}`}><h4 className={drugname.join('not')}>
-                                    {drug.name}</h4></Link>
+                            <div className="thumbnail medicine">
+                                <Link to={`/drug/${drug.id}`} >
+                                <div className={col4Class.join('list_pic ')}>
+                                <h4 className={drugname.join('not')}>
+                                    {drug.name}</h4>
                                 <Link to={`/drug/${drug.id}`}>
                                     <img className="group list-group-image" alt={drug.name}
                                          title={drug.name} src={`/image/drug/${drug.id}`}/>
@@ -429,9 +432,9 @@ class DrugList extends React.Component {
                                 <div className={medfeat.join('not')}>
                                     {this.renderDrugFeatures(drug)}
                                 </div>
-                                <Link to={`/drug/${drug.id}`}><h4 className={drugname1.join(' hidden ')}>
-                                    {drug.name}</h4></Link>
-                            </div>
+                                <h4 className={drugname1.join(' hidden ')}>
+                                    {drug.name}</h4>
+                                </div></Link>
                             <div className={col8Class.join(' ')}>
                                 <div className={col7Class.join('di ')}>
                                     {this.renderPharmaceuticalForm(drug)}
@@ -519,6 +522,12 @@ class DrugList extends React.Component {
         return (
             <div><Carousel1/>
                 <div className="container">
+
+                    {User.isAuthenticated() &&
+                    <MostVisitedItems />
+                    }
+
+
                     <div className="well well-sm hidden-xs">
                         <div className="btn-group">
                             <div id="list" className="btn btn-default btn-sm"
@@ -528,7 +537,7 @@ class DrugList extends React.Component {
                             }</div>
                         </div>
                     </div>
-                    <div className="container">
+                    <div>
                         {User.isAuthenticated() && User.levelOfDetail > 1 &&
                         <div className="alert modal1 " data-dismiss="alert">
                             <div className="alert bubble_left  row ">

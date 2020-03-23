@@ -49,7 +49,7 @@ class Carousel extends React.Component {
         return (
             <div id="myCarousel" className="carousel carousel-fade" data-ride="carousel">
                 <div className="carousel-inner">
-                    <div className="carousel-item active">
+                    <div className="carousel-item active img_drug">
                         <div className="mask flex-center">
                             <div className="container">
                                 <div className="row align-items-center">
