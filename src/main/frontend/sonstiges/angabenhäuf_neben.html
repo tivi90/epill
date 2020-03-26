@@ -1,0 +1,55 @@
+<div className="modal fade" id="neben_info" tabIndex="-1" role="dialog" aria-labelledby="neben_info" aria-hidden="true">
+    <div className="modal-dialog" role="document">
+        <div className="modal-content">
+            <div className="modal-header">
+                <h2>Angaben zur Häufigkeit von Nebenwirkungen
+                </h2>
+                <button type="button" className="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div className="modal-body" style={{color: "black"}}>
+                <table>
+                    <thead>
+                        <th>Die Nebenwirkung betrifft </th>
+                        <th>Erklärung in Prozentangaben</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>mehr als 1 Behandelten von 10 </td>
+                            <td>Bei mehr als 10 % der Behandelten ist die Nebenwirkung aufgetreten.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1 bis 10 Behandelte von 100 </td>
+                            <td>Bei 1 bis 10 % der Behandelten ist die Nebenwirkung aufgetreten.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                1 bis 10 Behandelte von 1.000
+                            </td>
+                            <td>Bei 0,1 % bis 1 % der Behandelten ist die Nebenwirkung aufgetreten.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1 bis 10 Behandelte von 10.000 </td>
+                            <td>Bei 0,01 % bis 0,1 % der Behandelten ist die Nebenwirkung aufgetreten.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>weniger als 1 Behandelten von 10.000 </td>
+                            <td>Bei weniger als 0,01 % der Behandelten ist die Nebenwirkung aufgetreten.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> Häufigkeit auf Grundlage der verfügbaren Daten nicht abschätzbar</td>
+                            <td>Es sind nur Einzelfälle bekannt, daraus kann die Häufigkeit des Auftretens nicht
+                                bestimmt werden.</td>
+                        </tr>
+                    </tbody>
+            </div>
+            <span dangerouslySetInnerHTML={this.createMarkup(t("modal_close"))} />
+        </div>
+    </div>
+</div>

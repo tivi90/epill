@@ -579,4 +579,15 @@ class DrugList extends React.Component {
     }
 }
 
+$(document).ready(function() {
+    var dialogShown = localStorage.getItem('dialogShown')
+
+    if (!dialogShown) {
+        $(window).load(function(){
+            $('#wizardmodal').modal('show');
+            localStorage.setItem('dialogShown', 1)
+        });
+    }
+});
+
 export default translate()(DrugList);

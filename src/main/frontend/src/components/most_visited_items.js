@@ -49,9 +49,6 @@ class MostVisitedItems extends React.Component {
                             <div id="Carousel" className="carousel slide">
                                 <div className="carousel-inner">
                                     {invocations
-                                        .filter(invocation => {
-                                            return invocation.drug.id < 7
-                                        })
                                         .map(invocation => <DrugMiniature invocation={invocation}
                                                                                   key={invocation.drug.id}/>)}
                                 </div>
@@ -64,5 +61,7 @@ class MostVisitedItems extends React.Component {
         }
 
 }
+
+
 
 export default translate()(MostVisitedItems);

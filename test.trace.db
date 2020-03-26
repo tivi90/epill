@@ -22063,3 +22063,55 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                                             INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic, address) VALUES (126,0,'Beispieltext',14,4, ' <div class="row"> <div class="col-md-9"> <h3>Pharmazeutischer Unternehmer </h3> <p> ratiopharm GmbH <br /> Graf-Arco-Str. 3<br /> 89079 Ulm<br /> <b>Tel.:</b> 0 60 23 - 94 80 - 0 <br /> <b>Fax:</b> 0 60 23 - 94 80 - 50 <br /> </p> </div> <div class="col-md-3"> <img class="img-responsive" src="/assets/images/company/ratiopharm.png" /> </div> </div> <div class="row"> <div class="col-md-9"> <h3>Hersteller </h3> <p> Merckle GmbH<br /> Ludwig-Merckle-Str. 3<br /> 89143 Blaubeuren<br /> </p> <p> Norton (Waterford) Limited<br> T/A Ivax Pharmaceuticals Ireland<br> T/A Teva Pharmaceuticals Ireland<br /> Unit 301 IDA Industrial Park<br> Cork Road<br /> Waterford<br /> Irland </p> </div> <div class="col-md-3"> <img class="img-responsive" src="/assets/images/company/merkle.png" /> </div> </div>');
                                             INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (127,0,' <! <div class="row"> <h3 class="not_take"><i class="fas fa-user-injured bolt_grey"></i><i style="    font-size: 47px;
                                                     " class="fas fa-comments bolt_grey"></i><i class="fas fa-user-md bolt_grey" aria-hidden="true"></i> </h3> <ol> <li>Nehmen Sie dieses Arzneimittel immer genau nach Absprache mit Ihrem Arzt oder Apotheker ein.</li> <li>Fragen Sie bei Ihrem Arzt oder Apotheker nach, wenn Sie sich nicht sicher sind.</li> </ol> </div> <div class="row content_header"> <h3 class="modal-title xs-center">Dosierung</h3> <hr /> <div class=" with-nav-tabs panel-default panel_neben"> <div style="height: inherit;"> <ul class="nav nav-tabs nav1-tabs"> <li class="active"><a href="#tab1default" data-toggle="tab">Erwachsene</a></li> <li><a href="#tab2default" data-toggle="tab">Kinder (4 – 11 Jahre)</a></li> <li><a href="#tab3default" data-toggle="tab">Kinder unter 4 Jahre</a></li> </ul> </div> <div class="panel-body"> <div class="tab-content"> <div class="tab-pane fade in active" id="tab1default"> <div class="row content_header" style="margin-top: 15px;"> <table class="sideffect_table "> <tbody> <tr> <td> <b>Einzeldosis</b></td> <td>1-2 Sprühstoße &#8793 [42001-194]
+2020-03-25 22:55:21 database: flush
+org.h2.message.DbException: Allgemeiner Fehler: "java.lang.IllegalStateException: The file is locked: nio:/home/tivi90/epill_t/test.mv.db [1.4.196/7]"
+General error: "java.lang.IllegalStateException: The file is locked: nio:/home/tivi90/epill_t/test.mv.db [1.4.196/7]" [50000-196]
+	at org.h2.message.DbException.get(DbException.java:168)
+	at org.h2.message.DbException.convert(DbException.java:295)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:95)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:378)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:361)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2930)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:155)
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:100)
+	at org.h2.engine.Database.getPageStore(Database.java:2476)
+	at org.h2.engine.Database.open(Database.java:697)
+	at org.h2.engine.Database.openDatabase(Database.java:276)
+	at org.h2.engine.Database.<init>(Database.java:270)
+	at org.h2.engine.Engine.openSession(Engine.java:64)
+	at org.h2.engine.Engine.openSession(Engine.java:176)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:154)
+	at org.h2.engine.Engine.createSession(Engine.java:137)
+	at org.h2.engine.Engine.createSession(Engine.java:27)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:354)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:116)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:100)
+	at org.h2.Driver.connect(Driver.java:69)
+	at com.intellij.database.remote.jdbc.helpers.JdbcHelperImpl.connect(JdbcHelperImpl.java:590)
+	at com.intellij.database.remote.jdbc.impl.RemoteDriverImpl.connect(RemoteDriverImpl.java:37)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:359)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:562)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:796)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:677)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:676)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: org.h2.jdbc.JdbcSQLException: Allgemeiner Fehler: "java.lang.IllegalStateException: The file is locked: nio:/home/tivi90/epill_t/test.mv.db [1.4.196/7]"
+General error: "java.lang.IllegalStateException: The file is locked: nio:/home/tivi90/epill_t/test.mv.db [1.4.196/7]" [50000-196]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	... 40 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:/home/tivi90/epill_t/test.mv.db [1.4.196/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:765)
+	at org.h2.mvstore.FileStore.open(FileStore.java:173)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:347)
+	... 35 more

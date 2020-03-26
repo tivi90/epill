@@ -14252,9 +14252,7 @@ var MostVisitedItems = function (_React$Component) {
                             _react2.default.createElement(
                                 "div",
                                 { className: "carousel-inner" },
-                                invocations.filter(function (invocation) {
-                                    return invocation.drug.id < 7;
-                                }).map(function (invocation) {
+                                invocations.map(function (invocation) {
                                     return _react2.default.createElement(_drug_miniature2.default, { invocation: invocation,
                                         key: invocation.drug.id });
                                 })
@@ -46419,6 +46417,17 @@ var DrugList = function (_React$Component) {
 
     return DrugList;
 }(_react2.default.Component);
+
+$(document).ready(function () {
+    var dialogShown = localStorage.getItem('dialogShown');
+
+    if (!dialogShown) {
+        $(window).load(function () {
+            $('#wizardmodal').modal('show');
+            localStorage.setItem('dialogShown', 1);
+        });
+    }
+});
 
 exports.default = (0, _reactI18next.translate)()(DrugList);
 
