@@ -348,7 +348,7 @@ class DrugList extends React.Component {
         const {t} = this.props;
         return (
             <section className="diseases ">
-                <div className="col-xs-9">
+                <div className="col-xs-7">
                     <p><b>  {t('pharmaceuticalForm') + ": "} </b></p>
                     <ul>  {drug.pharmaceuticalForm.map(pharmaceuticalForm =>
                         <li key={pharmaceuticalForm.id}>
@@ -405,6 +405,10 @@ class DrugList extends React.Component {
             let col8Class = [" "];
             let col7Class = ["full_content"];
             let coltorowClass = ["col-xs-4 nopadd"];
+            let btnlike = ["btn big_btn btn-like "];
+            let btnadd = ["btn big_btn btn-add"];
+            let btnopen = ["btn big_btn btn-open "];
+
             if (this.state.addClass) {
                 itemClass.push('list-group-item nopadd');
                 drugname.push('');
@@ -416,6 +420,11 @@ class DrugList extends React.Component {
                 col7Class.push('col-md-7 ');
                 col8Class.push('col-md-8 ');
                 coltorowClass.push('fullrow');
+                btnlike.push('btnheight');
+                btnadd.push('btnheight');
+                btnopen.push('btnheight');
+
+
             }
             return (
                 <div id="products" key={drug.id}>
@@ -461,21 +470,21 @@ class DrugList extends React.Component {
                                         <div className="action-pattern">
                                             <div>
                                                 <div className={coltorowClass.join(' ')}>
-                                                    <button type="button" className="btn btn-like big_btn"
+                                                    <button type="button" className={btnlike.join(' btnheight ')}
                                                             onClick={() => this.toggleTaking(drug)}>
                                                 <span
                                                     className={"glyphicon white " + (drug.isTaken ? 'glyphicon-minus' : 'glyphicon-heart')}/>
                                                     </button>
                                                 </div>
                                                 <div className={coltorowClass.join(' ')}>
-                                                    <button type="button" className="btn btn-add big_btn"
+                                                    <button type="button" className={btnadd.join(' btnheight ')}
                                                             onClick={() => this.toggleRemember(drug)}>
                                                 <span
                                                     className={"glyphicon white " + (drug.isRemembered ? 'glyphicon-minus' : 'glyphicon-plus')}/>
                                                     </button>
                                                 </div>
                                                 <div className={coltorowClass.join(' ')}>
-                                                    <button type="button" className="btn btn-open big_btn">
+                                                    <button type="button" className={btnopen.join(' btnheight ')}>
                                                         <Link to={`/drug/${drug.id}`}>
                                                                 <span
                                                                     className="glyphicon glyphicon-eye-open white"/>

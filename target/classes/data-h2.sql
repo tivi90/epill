@@ -915,49 +915,95 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
         <div class="col-sm-6 nopadd">
             <div class="row">
                 <div class="col-sm-12 info_notuse bg_orange">
-                    <b> Probleme mit Ihrer Schilddrüse (Hypothyreose)</b><br> Ihr Arzt wird möglicherweise
-                    Ihren Blutspiegel des Schilddrüse-stimulierenden Hormons (TSH) regelmäßig überwachen.
+                    <div class="row">
+                        <div class="col-xs-10 nopadd">
+                            <b> Probleme mit Ihrer Schilddrüse (Hypothyreose)</b>
+                        </div>
+                        <div class="col-xs-2">
+                            <img width="32" src="./../../assets/disease/injection.svg"></div>
+                    </div>
+                    <div class="row">
+                        Ihr Arzt wird möglicherweise
+                        Ihren Blutspiegel des Schilddrüse-stimulierenden Hormons (TSH) regelmäßig überwachen.
+                    </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-sm-12 info_notuse bg_orange">
-                    <b> Röntgen- oder anderen bildgebenden Untersuchung</b> <br>
-                    Bei
-                    der Ihnen ein jodhaltiges Kontrastmittel gespritzt wird
+                    <div class="row">
+                        <div class="col-xs-10 nopadd">
+                            <b> Röntgen- oder anderen bildgebenden
+                                Untersuchung</b>
+                        </div>
+                        <div class="col-xs-2">
+                            <img width="32" src="./../../assets/disease/injection.svg"></div>
+                    </div>
+                    <div class="row">
+                        Bei
+                        der Ihnen ein jodhaltiges Kontrastmittel gespritzt wird
+                    </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-sm-12 info_notuse bg_orange">
-                    <b> Unterziehung einer <a class="info_words" type="button" data-toggle="modal"
-                            data-target="#bei_einer_größeren_operation">größeren
-                            operativen Eingriff</a></b>
+                    <div class="row">
+                        <div class="col-xs-10 nopadd">
+                            <b> Unterziehung einer <a class="info_words" type="button" data-toggle="modal"
+                                    data-target="#bei_einer_größeren_operation">größeren
+                                    operativen Eingriff</a></b>
+                        </div>
+                        <div class="col-xs-2">
+                            <img width="32" src="./../../assets/disease/op.svg">
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-sm-12 info_notuse bg_orange">
-                    <b> Vitamin-B12-Blutspiegel</b> <br>
-                    Eine Langzeitbehandlung mit Metformin kann zu einer Abnahme des Vitamin-B12-Blutspiegels und
-                    infolgedessen zu einer Erkrankung der Nerven führen (siehe <a href="#tab4" aria-controls="tab4"
-                        role="tab" data-toggle="tab">Nebenwirkungen
-                    </a>). Ihr Arzt wird möglicherweise Ihren Vitamin-B12-Spiegel regelmäßig überwachen.
+                    <div class="row">
+                        <div class="col-xs-10 nopadd">
+                            <b> Vitamin-B12-Blutspiegel</b>
+                        </div>
+                        <div class="col-xs-2">
+                            <img width="32" src="./../../assets/disease/op.svg">
+                        </div>
+                    </div>
+                    <div class="row">
+                        Eine Langzeitbehandlung mit Metformin kann zu einer Abnahme des Vitamin-B12-Blutspiegels
+                        und
+                        infolgedessen zu einer Erkrankung der Nerven führen (siehe <a href="#tab4" aria-controls="tab4"
+                            role="tab" data-toggle="tab">Nebenwirkungen
+                        </a>). Ihr Arzt wird möglicherweise Ihren Vitamin-B12-Spiegel regelmäßig überwachen.
+                    </div>
                 </div>
             </div>
         </div>
         <div class="col-sm-6 nopadd">
             <div class="row">
                 <div class="col-sm-12 info_notuse bg_orange">
-                    <b> Unterzuckerung</b> <br>
-                    Metformin Lich allein verursacht keine Unterzuckerung (Hypoglykämie). <br>Wenn Sie jedoch
-                    Metformin Lich zusammen mit anderen Arzneimitteln gegen Ihre Zuckerkrankheit einnehmen, die
-                    Unterzuckerung hervorrufen können (wie Sulfonylharnstoffe, Insulin, Glinide), besteht ein Risiko
-                    eines zu niedrigen Blutzuckerspiegels. <br>Wenn Anzeichen einer Unterzuckerung auftreten, wie
-                    Schwächegefühl, Benommenheit, vermehrtes Schwitzen, beschleunigter Herzschlag, Sehstörungen
-                    und Konzentrationsschwierigkeiten, hilft es normalerweise, wenn Sie etwas essen oder trinken, das
-                    Zucker enthält.
+                    <div class="row">
+                        <div class="col-xs-10 nopadd">
+                            <b> Unterzuckerung</b>
+                        </div>
+                        <div class="col-xs-2">
+                            <img width="32" src="./../../assets/disease/diabetes.svg">
+                        </div>
+                    </div>
+                    <div class="row">
+                        Metformin Lich allein verursacht keine Unterzuckerung (Hypoglykämie). <br>Wenn Sie jedoch
+                        Metformin Lich zusammen mit anderen Arzneimitteln gegen Ihre Zuckerkrankheit einnehmen, die
+                        Unterzuckerung hervorrufen können (wie Sulfonylharnstoffe, Insulin, Glinide), besteht ein
+                        Risiko
+                        eines zu niedrigen Blutzuckerspiegels. <br>Wenn Anzeichen einer Unterzuckerung auftreten,
+                        wie
+                        Schwächegefühl, Benommenheit, vermehrtes Schwitzen, beschleunigter Herzschlag, Sehstörungen
+                        und Konzentrationsschwierigkeiten, hilft es normalerweise, wenn Sie etwas essen oder
+                        trinken,
+                        das
+                        Zucker enthält.
+                    </div>
                 </div>
             </div>
-
-
         </div>
     </div>
 </div>
@@ -968,7 +1014,8 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
         <div class="panel-heading">
             <h4 class="panel-title text-center-xs" data-toggle="collapse" data-target="#collapseOne">
                 <img width="40" src="./../../assets/icons/10.svg" /> <span
-                    class="hidden-lg hidden-sm hidden-md"><br><br></span> Einnahme von Metformin Lich zusammen mit
+                    class="hidden-lg hidden-sm hidden-md"><br><br></span> Einnahme von Metformin Lich zusammen
+                mit
                 anderen Medikamente
             </h4>
         </div>
@@ -1014,16 +1061,19 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
             <h4 class="panel-title text-center-xs" data-toggle="collapse" data-target="#collapseTwo">
 
                 <img width="40" src="./../../assets/icons/5.svg" /> <span
-                    class="hidden-lg hidden-sm hidden-md"><br><br></span> Einnahme von Metformin Lich zusammen mit
+                    class="hidden-lg hidden-sm hidden-md"><br><br></span> Einnahme von Metformin Lich zusammen
+                mit
                 Alkohol
 
             </h4>
         </div>
         <div id="collapseTwo" class="panel-collapse collapse">
-            <div class="panel-body">Meiden Sie während der Einnahme von Metformin Lich übermäßigen Alkoholkonsum, da
+            <div class="panel-body">Meiden Sie während der Einnahme von Metformin Lich übermäßigen
+                Alkoholkonsum, da
                 dieser
                 das Risiko einer <a class="info_words" type="button" data-toggle="modal"
-                    data-target="#laktatazidose">Laktatazidose</a> erhöhen kann. Im Allgemeinen sollten Sie den Konsum
+                    data-target="#laktatazidose">Laktatazidose</a> erhöhen kann. Im Allgemeinen sollten Sie den
+                Konsum
                 von
                 Alkohol und
                 die
@@ -1038,7 +1088,8 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
             </h4>
         </div>
         <div id="collapseThree" class="panel-collapse collapse">
-            <div class="panel-body">Wenn Sie schwanger sind oder stillen oder wenn Sie vermuten, schwanger zu sein,
+            <div class="panel-body">Wenn Sie schwanger sind oder stillen oder wenn Sie vermuten, schwanger zu
+                sein,
                 oder
                 beabsichtigen,
                 schwanger zu werden, fragen Sie vor der Einnahme dieses Arzneimittels Ihren Arzt oder Apotheker
@@ -1059,7 +1110,8 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
             </h4>
         </div>
         <div id="collapseFour" class="panel-collapse collapse">
-            <div class="panel-body">Metformin Lich selbst führt nicht zu einer Unterzuckerung (Hypoglykämie). Das
+            <div class="panel-body">Metformin Lich selbst führt nicht zu einer Unterzuckerung (Hypoglykämie).
+                Das
                 heißt,
                 dass Ihre
                 Verkehrstüchtigkeit oder Fähigkeit zum Bedienen von Maschinen durch die Einnahme von Metformin
@@ -1082,7 +1134,8 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
         </div>
     </div>
 </div>
-<h3 class="not_take"><i class="fas fa-bolt bolt_red" aria-hidden="true"></i> <br>Metformin Lich nicht einnehmen bei
+<h3 class="not_take"><i class="fas fa-bolt bolt_red" aria-hidden="true"></i> <br>Metformin Lich nicht einnehmen
+    bei
 </h3>
 <div class="row">
     <div class="col-sm-6 nopadd">
@@ -1125,7 +1178,8 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-12 info_notuse">Trinken von viel Alkohol oder Leiden unter einer Alkoholvergiftung
+            <div class="col-sm-12 info_notuse">Trinken von viel Alkohol oder Leiden unter einer
+                Alkoholvergiftung
                 leiden.</div>
         </div>
     </div>
@@ -1154,7 +1208,8 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-12 info_notuse"> Behandlung wegen dekompensierter Herzschwäche oder Erleiden eines
+            <div class="col-sm-12 info_notuse"> Behandlung wegen dekompensierter Herzschwäche oder Erleiden
+                eines
                 Herzinfarkt vor
                 Kurzem, schwere Kreislaufprobleme (wie zum Beispiel einen Schock) oder
                 Schwierigkeiten mit der Atmung haben. <br> Dies könnte zu einem Sauerstoffmangel im Gewebe
@@ -1165,7 +1220,8 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
     </div>
 </div>
 ',11,3);
-INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic, ADDRESS) VALUES (92,0,'Beispieltext4',11,4,'
+INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic, ADDRESS) VALUES
+(92,0,'Beispieltext4',11,4,'
 <div class="row">
     <div class="col-md-9">
         <h3>Pharmazeutischer Unternehmer </h3>
@@ -1361,7 +1417,8 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic)VALUES
                                         möglicherweise eine
                                         niedrigere Dosis verordnen.<br>
 
-                                        Wenn Sie außerdem Insulin anwenden, erfahren Sie von Ihrem Arzt, wie Sie mit der
+                                        Wenn Sie außerdem Insulin anwenden, erfahren Sie von Ihrem Arzt, wie Sie mit
+                                        der
                                         Einnahme von
                                         Metformin Lich beginnen sollen</td>
                                 </tr>
@@ -1528,18 +1585,19 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic)VALUES
                         <div class="carousel-caption">
                             <h4> Schritt 1</h4>
                             <img src="./../../assets/p_form/usage/notcrack_long.svg" class="usage_tab" alt="Tablette"
-                            title="Tablette">
-                        <br><br>
-                        <p>Legen Sie bitte die Tablette mit der Bruchkerbe nach oben auf eine feste Unterlage.</p>
+                                title="Tablette">
+                            <br><br>
+                            <p>Legen Sie bitte die Tablette mit der Bruchkerbe nach oben auf eine feste Unterlage.
+                            </p>
                         </div>
                     </div>
                     <div class="item">
                         <div class="carousel-caption">
                             <h4>Schritt 2</h4>
                             <img src="./../../assets/p_form/usage/crack_long.svg" class="usage_tab1" alt="Tablette"
-                            title="Tablette">
-                        <br><br>
-                        <p>Drücken Sie mit den Zeigefingern auf die linke und rechte Hälfte der Tablette.</p>
+                                title="Tablette">
+                            <br><br>
+                            <p>Drücken Sie mit den Zeigefingern auf die linke und rechte Hälfte der Tablette.</p>
                         </div>
                     </div>
 
@@ -1623,7 +1681,8 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
     <thead>
         <tr>
             <th>Häufigkeit</th>
-            <th style="width: 25%;">Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span>  </th>
+            <th style="width: 25%;">Anzahl der betreffenden Behandelten <span style="cursor: pointer"
+                    data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> </th>
             <th>Nebenwirkung</th>
         </tr>
     </thead>
@@ -1718,7 +1777,10 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
         <div class="row p15" id="sehrhaeufig-xs">
             <h4> Sehr häufig</h4>
             <div class="row">
-                <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span>  :</b> <br> Mehr als 1 von 10 Behandelten
+                <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal"
+                        data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1
+                von 10
+                Behandelten
             </div>
             <div class="row">
                 <b>Nebenwirkung:</b> <br><b>Verdauungsprobleme wie</b>
@@ -1745,7 +1807,10 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
         <div class="row p15" id="haeufig-xs">
             <h4> Häufig</h4>
             <div class="row">
-                <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1 von 10 Behandelten
+                <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal"
+                        data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1
+                von 10
+                Behandelten
             </div>
             <div class="row">
                 <b>Nebenwirkung:</b> <br>
@@ -1757,7 +1822,9 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
         <div class="row p15" id="sehrselten-xs">
             <h4> Sehr selten</h4>
             <div class="row">
-                <b>Anzahl der betreffenden Behandelten: <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> </b> <br> Mehr als 1 von 10000 Behandelten
+                <b>Anzahl der betreffenden Behandelten: <span style="cursor: pointer" data-toggle="modal"
+                        data-target="#neben_info"><i class="fas fa-info-circle"></i></span> </b> <br> Mehr als 1 von
+                10000 Behandelten
             </div>
             <div class="row">
                 <b>Nebenwirkung:</b> <br>
@@ -1787,7 +1854,10 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
         <div class="row p15" id="nichtbekannt">
             <h4> Nicht bekannt</h4>
             <div class="row">
-                <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1 von 100 Behandelten
+                <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal"
+                        data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1
+                von
+                100 Behandelten
             </div>
             <div class="row">
                 <b>Nebenwirkung:</b> <br>
@@ -1826,7 +1896,8 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
     <h4> Anwendung von Methfomin </h4>
     <ul>
         <li>Zur Behandlung von Patienten mit <b>Zuckerkrankheit (<a class="info_words" type="button" data-toggle="modal"
-                    data-target="#diabetes_typ_2">Typ-2-Diabetes</a>)</b>, wenn der Blutzuckerspiegel
+                    data-target="#diabetes_typ_2">Typ-2-Diabetes</a>)</b>, wenn der
+            Blutzuckerspiegel
             durch Diät und
             Bewegung allein nicht ausreichend kontrolliert werden konnte.<br>
             Wenn Sie an Diabetes leiden, produziert Ihre Bauchspeicheldrüse entweder nicht genug <a class="info_words"
@@ -1837,7 +1908,8 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
             Werte zu
             senken.</li>
         <li>Bei <b>übergewichtigen Patienten</b>. <br>
-            Bei übergewichtigen Erwachsenen trägt die langfristige Einnahme von Metformin Lich außerdem dazu bei, das
+            Bei übergewichtigen Erwachsenen trägt die langfristige Einnahme von Metformin Lich außerdem dazu bei,
+            das
             Risiko
             von diabetesbedingten Komplikationen zu senken.
             Unter Metformin Lich wird ein stabiles Körpergewicht oder eine mäßige Gewichtsabnahme beobachtet.</li>
@@ -1871,7 +1943,8 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
 </div>
 ',11,8);
 INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (97,0,'
-Metformin Lich sind weiße, längliche, in der Mitte verjüngte Filmtabletten mit abgeschrägten Kanten und einer Bruchkerbe
+Metformin Lich sind weiße, längliche, in der Mitte verjüngte Filmtabletten mit abgeschrägten Kanten und einer
+Bruchkerbe
 auf beiden Seiten. Die Tablette kann in gleiche Dosen geteilt werden.
 ',11,9);
 INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (98,0,'
@@ -1916,38 +1989,84 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
         <div class="col-sm-6 nopadd">
             <div class="row">
                 <div class="col-sm-12 info_notuse bg_orange">
-                    <b> Erleiden eines Herzinfarktes (kürzlich)</b>
+                    <div class="row">
+                        <div class="col-xs-10 nopadd">
+                            <b> Erleiden eines Herzinfarktes (kürzlich)</b>
+                        </div>
+                        <div class="col-xs-2">
+                            <img width="32" src="./../../assets/disease/heart.svg">
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-sm-12 info_notuse bg_orange">
-                    <b> Leiden an Herzerkrankung</b>
+                    <div class="row">
+                        <div class="col-xs-10 nopadd">
+                            <b> Leiden an Herzerkrankung</b>
+                        </div>
+                        <div class="col-xs-2">
+                            <img width="32" src="./../../assets/disease/heart.svg">
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-sm-12 info_notuse bg_orange">
-                    <b> Leiden an einem starken Blutdruckanstieg (hypertensive Krise)</b>
+                    <div class="row">
+                        <div class="col-xs-10 nopadd">
+                            <b> Leiden an einem starken Blutdruckanstieg (hypertensive Krise)</b>
+                        </div>
+                        <div class="col-xs-2">
+                            <img width="32" src="./../../assets/disease/bloodpressure.png">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="col-sm-6 nopadd">
             <div class="row">
                 <div class="col-sm-12 info_notuse bg_orange">
-                    <b> Leiden an einer Lebererkrankung</b>
+                    <div class="row">
+                        <div class="col-xs-10 nopadd">
+                            <b> Leiden an einer Lebererkrankung</b>
+                        </div>
+                        <div class="col-xs-2">
+                            <img width="32" src="./../../assets/disease/liver.svg">
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-sm-12 info_notuse bg_orange">
-                    <b> Wenn Sie älter sind und Ihre Dosis erhöht werden muss</b>
+                    <div class="row">
+                        <div class="col-xs-10 nopadd">
+                            <b> Wenn Sie älter sind und Ihre Dosis erhöht werden muss</b>
+                        </div>
+                        <div class="col-xs-2">
+                            <img width="32" src="./../../assets/disease/old.svg">
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-sm-12 info_notuse bg_orange">
-                    <b> <i class="fas fa-child"></i> Kinder</b><br>
-                    Bei Kindern unter 6 Jahren wurde Amlodipin nicht untersucht. <br>
-                    Amlodipin (besilat) Dexcel 5 mg kann nur bei Kindern und
-                    Jugendlichen mit Bluthochdruck im Alter von 6 bis
-                    17 Jahren angewendet werden
+                    <div class="row">
+                        <div class="col-xs-10 nopadd">
+                            <b> Kinder</b><br>
+
+                        </div>
+                        <div class="col-xs-2">
+                            <img width="32" src="./../../assets/disease/child.svg">
+                        </div>
+                    </div>
+                    <div class="row">
+                        Bei Kindern unter 6 Jahren wurde Amlodipin nicht untersucht. <br>
+                        Amlodipin (besilat) Dexcel 5 mg kann nur bei Kindern und
+                        Jugendlichen mit Bluthochdruck im Alter von 6 bis
+                        17 Jahren angewendet werden
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -2348,7 +2467,8 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
         <thead>
             <tr>
                 <th>Häufigkeit</th>
-                <th style="width: 25%;">Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> </th>
+                <th style="width: 25%;">Anzahl der betreffenden Behandelten <span style="cursor: pointer"
+                        data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> </th>
                 <th>Nebenwirkung</th>
             </tr>
         </thead>
@@ -2442,7 +2562,9 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
             <div class="row p15" id="sehrhaeufig-xs">
                 <h4> Sehr häufig</h4>
                 <div class="row">
-                    <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1 von 10 Behandelten
+                    <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal"
+                            data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1
+                    von 10 Behandelten
                 </div>
                 <div class="row">
                     <b>Nebenwirkung:</b> <br>Knöchelschwellungen (Ödeme)
@@ -2453,7 +2575,9 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
             <div class="row p15" id="haeufig-xs">
                 <h4> Häufig</h4>
                 <div class="row">
-                    <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1 von 10 Behandelten
+                    <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal"
+                            data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1
+                    von 10 Behandelten
                 </div>
                 <div class="row">
                     <b>Nebenwirkung:</b> <br>
@@ -2473,7 +2597,9 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
             <div class="row p15" id="gelegentlich-xs">
                 <h4> Gelegentlich</h4>
                 <div class="row">
-                    <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1 von 100 Behandelten
+                    <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal"
+                            data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1
+                    von 100 Behandelten
                 </div>
                 <div class="row">
                     <b>Nebenwirkung:</b> <br>
@@ -2502,7 +2628,9 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
             <div class="row p15" id="selten-xs">
                 <h4> Selten</h4>
                 <div class="row">
-                    <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1 von 1000 Behandelten
+                    <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal"
+                            data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1
+                    von 1000 Behandelten
                 </div>
                 <div class="row">
                     <b>Nebenwirkung:</b> <br>
@@ -2513,7 +2641,9 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
             <div class="row p15" id="sehrselten-xs">
                 <h4> Sehr selten</h4>
                 <div class="row">
-                    <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1 von 10000 Behandelten
+                    <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal"
+                            data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1
+                    von 10000 Behandelten
                 </div>
                 <div class="row">
                     <b>Nebenwirkung:</b> <br>
@@ -2629,123 +2759,286 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
         <div class="col-sm-6 nopadd">
             <div class="row">
                 <div class="col-sm-12 info_notuse bg_orange">
-                    <b> Leiden an Herzerkrankung</b>
+                    <div class="row">
+                        <div class="col-xs-10 nopadd">
+                            <b> Leiden an Herzerkrankung</b>
+                        </div>
+                        <div class="col-xs-2">
+                            <img width="32" src="./../../assets/disease/heart.svg">
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-sm-12 info_notuse bg_orange">
-                    <b> Leiden an Erkrankung der Blutgefäße im Gehirn</b>
+                    <div class="row">
+                        <div class="col-xs-10 nopadd">
+                            <b> Leiden an Erkrankung der Blutgefäße im Gehirn</b>
+                        </div>
+                        <div class="col-xs-2">
+                            <img width="32" src="./../../assets/disease/brain.svg">
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-sm-12 info_notuse bg_orange">
-                    <b> Leiden an Veränderungen in der Blutbildung </b><br>
-                    z.B. einer verminderten Anzahl von oder einem
-                    Mangel an
-                    weißen Blutkörperchen (Neutropenie/Agranulozytose), einer niedrigen Anzahl an Blutplättchen
-                    (Thrombozytopenie)
-                    oder einer verminderten Anzahl roter Blutkörperchen (Anämie) </div>
+                    <div class="row">
+                        <div class="col-xs-10 nopadd">
+                            <b> Leiden an Veränderungen in der Blutbildung </b>
+                        </div>
+                        <div class="col-xs-2">
+                            <img width="32" src="./../../assets/disease/heart.svg">
+                        </div>
+                    </div>
+                    <div class="row">
+                        z.B. einer verminderten Anzahl von oder einem
+                        Mangel an
+                        weißen Blutkörperchen (Neutropenie/Agranulozytose), einer niedrigen Anzahl an Blutplättchen
+                        (Thrombozytopenie)
+                        oder einer verminderten Anzahl roter Blutkörperchen (Anämie)
+                    </div>
+                </div>
             </div>
+
             <div class="row">
                 <div class="col-sm-12 info_notuse bg_orange">
-                    <b> Leiden an Lebererkrankung</b>
+                    <div class="row">
+                        <div class="col-xs-10 nopadd">
+                            <b> Leiden an Lebererkrankung</b>
+                        </div>
+                        <div class="col-xs-2">
+                            <img width="32" src="./../../assets/disease/liver.svg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-12 info_notuse bg_orange">
+                    <div class="row">
+                        <div class="col-xs-10 nopadd">
+                            <b> Leiden an Nierenerkrankung (einschließlich einer Nierenverpflanzung)</b>
+                        </div>
+                        <div class="col-xs-2">
+                            <img width="32" src="./../../assets/disease/kidney.svg">
+                        </div>
+                    </div>
+                    <div class="row">
+
+                        Dies kann
+                        zu
+                        erhöhten
+                        Kaliumspiegeln im Blut führen, was schwerwiegend sein kann. Ihr Arzt muss möglicherweise die
+                        Dosis
+                        von
+                        ENALAPRIL
+                        AL anpassen oder Ihren Kaliumspiegel im Blut überwachen.
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-12 info_notuse bg_orange">
+                    <div class="row">
+                        <div class="col-xs-10 nopadd">
+                            <b> Erhalten von Blutwäsche (Dialyse) </b>
+                        </div>
+                        <div class="col-xs-2">
+                            <img width="32" src="./../../assets/disease/heart.svg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-12 info_notuse bg_orange">
+                    <div class="row">
+                        <div class="col-xs-10 nopadd">
+                            <b> Kürzlich sehr krank mit übermäßigem Erbrechen
+                                oder
+                                leiden an starkem
+                                Durchfall </b>
+                        </div>
+                        <div class="col-xs-2">
+                            <img width="32" src="./../../assets/disease/heart.svg">
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-sm-12 info_notuse bg_orange">
-                    <b> Leiden an Nierenerkrankung</b> <br>(einschließlich einer Nierenverpflanzung). Dies kann zu
-                    erhöhten
-                    Kaliumspiegeln im Blut führen, was schwerwiegend sein kann. Ihr Arzt muss möglicherweise die Dosis
+                    <div class="row">
+                        <div class="col-xs-10 nopadd">
+                            <b> Einhalten einer salzarme Diät</b>
+                        </div>
+                        <div class="col-xs-2">
+                            <img width="32" src="./../../assets/disease/heart.svg">
+                        </div>
+                    </div>
+                    <div class="row"></div>
+                    Einnahme
                     von
-                    ENALAPRIL
-                    AL anpassen oder Ihren Kaliumspiegel im Blut überwachen.
+                    Kaliumergänzungsmittel <br>Einnahmen von kaliumsparende Arzneimittel oder
+                    Präparate, die Kaliumsalze enthalten
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-12 info_notuse bg_orange"><b> Erhalten von Blutwäsche (Dialyse) </b></div>
+                <div class="col-sm-12 info_notuse bg_orange">
+                    <div class="row">
+                        <div class="col-xs-10 nopadd"><b> Älter als 70 Jahre</b></div>
+                        <div class="col-xs-2">
+                            <img width="32" src="./../../assets/disease/old.svg">
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="row">
-                <div class="col-sm-12 info_notuse bg_orange"><b> Kürzlich sehr krank mit übermäßigem Erbrechen oder
-                        leiden an starkem
-                        Durchfall </b></div>
-            </div>
-            <div class="row">
-                <div class="col-sm-12 info_notuse bg_orange"><b> Einhalten einer salzarme Diät</b> <br> Einnahme von
-                    Kaliumergänzungsmittel <br>Einnahmen von kaliumsparende Arzneimittel oder
-                    Präparate, die Kaliumsalze enthalten</div>
-            </div>
-            <div class="row">
-                <div class="col-sm-12 info_notuse bg_orange"><b> Älter als 70 Jahre</b></div>
-            </div>
-            <div class="row">
-                <div class="col-sm-12 info_notuse bg_orange"><b> Leiden an Zuckerkrankheit (Diabetes mellitus)</b> <br>
-                    Sie sollten Ihr
-                    Blut auf niedrige
-                    Blutzuckerspiegel
-                    überprüfen lassen, besonders im ersten Monat der Behandlung. Der Kaliumspiegel im Blut kann in
-                    diesem Fall
-                    erhöht sein.</div>
+                <div class="col-sm-12 info_notuse bg_orange">
+                    <div class="row">
+                        <div class="col-xs-10 nopadd">
+                            <b> Leiden an Zuckerkrankheit (Diabetes
+                                mellitus)</b>
+                        </div>
+                        <div class="col-xs-2">
+                            <img width="32" src="./../../assets/disease/diabetes.svg">
+                        </div>
+                    </div>
+                    <div class="row">
+                        Sie sollten Ihr
+                        Blut auf niedrige
+                        Blutzuckerspiegel
+                        überprüfen lassen, besonders im ersten Monat der Behandlung. Der Kaliumspiegel im Blut kann
+                        in
+                        diesem Fall
+                        erhöht sein.</div>
+                </div>
             </div>
         </div>
         <div class="col-sm-6 nopadd">
-
-
             <div class="row">
-                <div class="col-sm-12 info_notuse bg_orange"><b> Auftreten einer allergischen Reaktion</b><br>
-                    Schwellung an Gesicht,
-                    Lippen, Zunge
-                    oder
-                    Rachen und mit Schluck- oder Atembeschwerden. <br> Bitte beachten Sie, dass Patienten mit schwarzer
-                    Hautfarbe ein
-                    erhöhtes Risiko haben, so auf ACE-Hemmer zu reagieren.</div>
-            </div>
-            <div class="row">
-                <div class="col-sm-12 info_notuse bg_orange"><b> Niedrigen Blutdruck</b><br> (Sie können das eventuell
-                    als Schwäche- oder
-                    Schwindelgefühl, besonders
-                    im
-                    Stehen, bemerken)</div>
-            </div>
-            <div class="row">
-                <div class="col-sm-12 info_notuse bg_orange"><b> Leiden einer Kollagen-Erkrankung mit
-                        Gefäßbeteiligung</b><br> (z.B. Lupus
-                    erythematodes, rheumatoide
-                    Arthritis oder Sklerodermie), wenn Sie mit Arzneimitteln, die das Immunsystem unterdrücken,
-                    behandelt werden
-                    oder wenn Sie Allopurinol (Arzneimittel gegen Gicht) oder Procainamid (Arzneimittel gegen
-                    Herzrhythmusstörungen)
-                    erhalten, bzw. wenn Sie gleichzeitig mehrere der o. g. Risikofaktoren aufweisen</div>
-            </div>
-            <div class="row">
-                <div class="col-sm-12 info_notuse bg_orange"><b> Stillen Ihres Kindes oder möchten </b><br> (siehe unter
-                    Abschnitt
-                    Schwangerschaft und Stillzeit)</div>
-            </div>
-            <div class="row">
-                <div class="col-sm-12 info_notuse bg_orange"><b> Anwendung folgender Arzneimittel</b> <br>
-                    <ul>
-                        <li> Sirolimus, Everolimus und andere Arzneimittel, die zur Klasse der mTOR-Inhibitoren gehören
-                            (werden
-                            zur
-                            Verhinderung einer Abstoßung des Organtransplantats verwendet),</li>
-                        Erhöht sich das Risiko eines Angioödems (rasche
-                        Schwellung
-                        unter der Haut in Bereichen wie dem Rachen)
-                    </ul>
+                <div class="col-sm-12 info_notuse bg_orange">
+                    <div class="row">
+                        <div class="col-xs-10 nopadd">
+                            <b> Auftreten einer allergischen Reaktion</b>
+                        </div>
+                        <div class="col-xs-2">
+                            <img width="32" src="./../../assets/disease/allergy.svg">
+                        </div>
+                    </div>
+                    <div class="row">
+                        Schwellung an Gesicht,
+                        Lippen, Zunge
+                        oder
+                        Rachen und mit Schluck- oder Atembeschwerden. <br> Bitte beachten Sie, dass Patienten mit
+                        schwarzer
+                        Hautfarbe ein
+                        erhöhtes Risiko haben, so auf ACE-Hemmer zu reagieren.</div>
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-12 info_notuse bg_orange"><b> Einnahme folgenden Arzneimittel zur Behandlung von
-                        hohem Blutdruck </b>
-                    <ul>
-                        <li> einen Angiotensin-II-Rezeptor-AnTagonisten (diese werden auch als Sartane bezeichnet – z.B.
-                            Valsartan,
-                            Telmisartan, Irbesartan), insbesondere wenn Sie Nierenprobleme aufgrund von Diabetes
-                            mellitus haben,
-                        </li>
+                <div class="col-sm-12 info_notuse bg_orange">
+                    <div class="row">
+                        <div class="col-xs-10 nopadd">
+                            <b> Niedrigen Blutdruck</b></div>
+                        <div class="col-xs-2">
+                            <img width="32" src="./../../assets/disease/bloodpressure.png">
+                        </div>
+                    </div>
+                    <div class="row">Sie können das
+                        eventuell
+                        als Schwäche- oder
+                        Schwindelgefühl, besonders
+                        im
+                        Stehen, bemerken</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 info_notuse bg_orange">
+                    <div class="row">
+                        <div class="col-xs-10 nopadd">
+                            <b> Leiden einer Kollagen-Erkrankung mit
+                                Gefäßbeteiligung</b>
+                        </div>
+                        <div class="col-xs-2">
+                            <img width="32" src="./../../assets/disease/heart.svg">
+                        </div>
+                    </div>
+                    <div class="row"> (z.B. Lupus
+                        erythematodes, rheumatoide
+                        Arthritis oder Sklerodermie), wenn Sie mit Arzneimitteln, die das Immunsystem unterdrücken,
+                        behandelt werden
+                        oder wenn Sie Allopurinol (Arzneimittel gegen Gicht) oder Procainamid (Arzneimittel gegen
+                        Herzrhythmusstörungen)
+                        erhalten, bzw. wenn Sie gleichzeitig mehrere der o. g. Risikofaktoren aufweisen
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 info_notuse bg_orange">
+                    <div class="row">
+                        <div class="col-xs-10 nopadd">
+                            <b> Stillen Ihres Kindes oder möchten </b></div>
+                        <div class="col-xs-2">
+                            <img width="32" src="./../../assets/disease/child.svg">
+                        </div>
+                    </div>
+                    <div class="row">
 
-                        <li>Aliskiren.</li>
-                    </ul>
+                        (siehe unter
+                        Abschnitt
+                        Schwangerschaft und Stillzeit)</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 info_notuse bg_orange">
+                    <div class="row">
+                        <div class="col-xs-10 nopadd">
+                            <b> Anwendung folgender Arzneimittel</b> </div>
+                        <div class="col-xs-2">
+                            <img width="32" src="./../../assets/disease/heart.svg">
+                        </div>
+                    </div>
+                    <div class="row">
+
+                        <ul>
+                            <li> Sirolimus, Everolimus und andere Arzneimittel, die zur Klasse der mTOR-Inhibitoren
+                                gehören
+                                (werden
+                                zur
+                                Verhinderung einer Abstoßung des Organtransplantats verwendet),</li>
+                            Erhöht sich das Risiko eines Angioödems (rasche
+                            Schwellung
+                            unter der Haut in Bereichen wie dem Rachen)
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 info_notuse bg_orange">
+                    <div class="row">
+                        <div class="col-xs-10 nopadd">
+                            <b> Einnahme folgenden Arzneimittel zur Behandlung
+                                von
+                                hohem Blutdruck </b>
+                        </div>
+                        <div class="col-xs-2">
+                            <img width="32" src="./../../assets/disease/bloodpressure.png">
+                        </div>
+                    </div>
+                    <div class="row">
+
+                        <ul>
+                            <li> einen Angiotensin-II-Rezeptor-AnTagonisten (diese werden auch als Sartane
+                                bezeichnet – z.B.
+                                Valsartan,
+                                Telmisartan, Irbesartan), insbesondere wenn Sie Nierenprobleme aufgrund von Diabetes
+                                mellitus haben,
+                            </li>
+
+                            <li>Aliskiren.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -2754,39 +3047,50 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
 
 
     <div class="row">
-        Ihr Arzt wird gegebenenfalls Ihre Nierenfunktion, Ihren Blutdruck und die Elektrolytwerte (z.B. Kalium) in Ihrem
+        Ihr Arzt wird gegebenenfalls Ihre Nierenfunktion, Ihren Blutdruck und die Elektrolytwerte (z.B. Kalium)
+        in Ihrem
         Blut in regelmäßigen Abständen überprüfen.<br><br>
 
         Bitte beachten Sie, dass bei Patienten mit schwarzer Hautfarbe die Blutdrucksenkung durch ACE-Hemmer im
         Vergleich zu Patienten mit nicht schwarzer Hautfarbe weniger stark ist.<br><br>
 
-        Teilen Sie Ihrem Arzt mit, wenn Sie vermuten, schwanger zu sein (oder schwanger werden könnten). Die Einnahme
-        von Enalapril AL in der frühen Phase der Schwangerschaft wird nicht empfohlen, und Enalapril AL darf nicht mehr
-        nach dem dritten Schwangerschaftsmonat eingenommen werden, da die Einnahme von Enalapril AL in diesem Stadium zu
-        schweren Schädigungen Ihres ungeborenen Kindes führen kann (siehe unter Abschnitt 2.: Schwangerschaft und
+        Teilen Sie Ihrem Arzt mit, wenn Sie vermuten, schwanger zu sein (oder schwanger werden könnten). Die
+        Einnahme
+        von Enalapril AL in der frühen Phase der Schwangerschaft wird nicht empfohlen, und Enalapril AL darf
+        nicht mehr
+        nach dem dritten Schwangerschaftsmonat eingenommen werden, da die Einnahme von Enalapril AL in diesem
+        Stadium zu
+        schweren Schädigungen Ihres ungeborenen Kindes führen kann (siehe unter Abschnitt 2.: Schwangerschaft
+        und
         Stillzeit).<br><br>
 
-        Wenn Sie sich nicht sicher sind, ob einer oder mehrere der oben genannten Punkte auf Sie zutreffen, wenden Sie
+        Wenn Sie sich nicht sicher sind, ob einer oder mehrere der oben genannten Punkte auf Sie zutreffen,
+        wenden Sie
         sich bitte an Ihren Arzt oder Apotheker, bevor Sie Enalapril AL einnehmen.<br><br>
     </div>
     <div class="row">
         WENN SIE EINE BESONDERE BEHANDLUNG ERHALTEN SOLLEN:
         <ul>
-            <li>Wenn eine der folgenden Behandlungen für Sie geplant ist, informieren Sie bitte Ihren Arzt, dass Sie
+            <li>Wenn eine der folgenden Behandlungen für Sie geplant ist, informieren Sie bitte Ihren Arzt, dass
+                Sie
                 ENALAPRIL
                 AL einnehmen:
                 <ul>
-                    <li>alle Operationen oder jeder Einsatz von Betäubungs- oder Narkosemitteln (auch beim Zahnarzt),
+                    <li>alle Operationen oder jeder Einsatz von Betäubungs- oder Narkosemitteln (auch beim
+                        Zahnarzt),
                     </li>
-                    <li> eine Behandlung zur Entfernung von Cholesterin aus dem Blut, die als LDL-Apherese bezeichnet
+                    <li> eine Behandlung zur Entfernung von Cholesterin aus dem Blut, die als LDL-Apherese
+                        bezeichnet
                         wird,
                     </li>
-                    <li> eine Desensibilisierungsbehandlung, um das Ausmaß einer allergischen Reaktion auf Bienen- oder
+                    <li> eine Desensibilisierungsbehandlung, um das Ausmaß einer allergischen Reaktion auf
+                        Bienen- oder
                         Wespenstiche zu
                         vermindern.</li>
                 </ul>
             </li>
-            <li> Wenn eine der o. g. Behandlungen oder Eingriffe für Sie geplant ist, sprechen Sie vorher mit Ihrem
+            <li> Wenn eine der o. g. Behandlungen oder Eingriffe für Sie geplant ist, sprechen Sie vorher mit
+                Ihrem
                 Arzt oder
                 Zahnarzt.</li>
         </ul>
@@ -2803,47 +3107,64 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
         </div>
         <div id="collapse3" class="panel-collapse collapse in">
             <div class="panel-body">
-                Informieren Sie Ihren Arzt oder Apotheker, wenn Sie andere Arzneimittel anwenden, kürzlich andere
+                Informieren Sie Ihren Arzt oder Apotheker, wenn Sie andere Arzneimittel anwenden, kürzlich
+                andere
                 Arzneimittel angewendet haben oder beabsichtigen, andere Arzneimittel anzuwenden.
                 <br><br>
-                Einige Arzneimittel können in ihrer Wirkung durch Enalapril AL beeinflusst werden, sowie auch andere
-                Arzneimittel die Wirkung von Enalapril AL beeinflussen können. Daher ist es wichtig, Ihren Arzt oder
-                Apotheker zu informieren, insbesondere wenn Sie eines oder mehrere der folgenden Arzneimittel einnehmen
+                Einige Arzneimittel können in ihrer Wirkung durch Enalapril AL beeinflusst werden, sowie auch
+                andere
+                Arzneimittel die Wirkung von Enalapril AL beeinflussen können. Daher ist es wichtig, Ihren Arzt
+                oder
+                Apotheker zu informieren, insbesondere wenn Sie eines oder mehrere der folgenden Arzneimittel
+                einnehmen
                 oder anwenden:
                 <ul>
-                    <li> andere blutdrucksenkende Arzneimittel, wie z.B. Betablocker oder harntreibende Arzneimittel
+                    <li> andere blutdrucksenkende Arzneimittel, wie z.B. Betablocker oder harntreibende
+                        Arzneimittel
                         (Diuretika),</li>
-                    <li> Kalium-Ergänzungsmittel oder kaliumhaltige Salzersatzstoffe, Diuretika (Wassertabletten,
-                        insbesondere jene, die als kaliumsparend bezeichnet werden), andere Arzneimittel, die den
-                        Kaliumspiegel in Ihrem Körper erhöhen können (wie Heparin und Co-Trimoxazol, auch bekannt als
+                    <li> Kalium-Ergänzungsmittel oder kaliumhaltige Salzersatzstoffe, Diuretika
+                        (Wassertabletten,
+                        insbesondere jene, die als kaliumsparend bezeichnet werden), andere Arzneimittel, die
+                        den
+                        Kaliumspiegel in Ihrem Körper erhöhen können (wie Heparin und Co-Trimoxazol, auch
+                        bekannt als
                         Trimethoprim/ Sulfamethoxazol),</li>
                     <li> Arzneimittel zur Behandlung der Zuckerkrankheit (einschließlich blutzuckersenkender
                         Arzneimittel zur
                         Einnahme und Insulin),</li>
                     <li> Lithium (Arzneimittel gegen bestimmte Depressionen),</li>
-                    <li> Arzneimittel gegen Depressionen, die als trizyklische Antidepressiva bezeichnet werden,</li>
-                    <li> Arzneimittel zur Behandlung seelischer Probleme, die als Antipsychotika bezeichnet werden,</li>
+                    <li> Arzneimittel gegen Depressionen, die als trizyklische Antidepressiva bezeichnet werden,
+                    </li>
+                    <li> Arzneimittel zur Behandlung seelischer Probleme, die als Antipsychotika bezeichnet
+                        werden,</li>
                     <li> bestimmte Arzneimittel zur Behandlung von Husten und Erkältungen oder Arzneimittel zur
                         Gewichtsabnahme, die einen als „Sympathomimetikum“ bezeichneten Stoff enthalten,</li>
-                    <li> bestimmte Arzneimittel zur Behandlung von Schmerzen oder Gelenkerkrankungen, darunter auch
+                    <li> bestimmte Arzneimittel zur Behandlung von Schmerzen oder Gelenkerkrankungen, darunter
+                        auch
                         Goldpräparate,</li>
                     <li> Acetylsalicylsäure (z.B. Aspirin),</li>
                     <li>Arzneimittel zur Auflösung von Blutgerinnseln (Thrombolytika),</li>
                     <li> Alkohol,</li>
-                    <li> Arzneimittel, die sehr oft zur Verhinderung einer Abstoßung des Organtransplantats verwendet
+                    <li> Arzneimittel, die sehr oft zur Verhinderung einer Abstoßung des Organtransplantats
+                        verwendet
                         werden
-                        (Sirolimus, Everolimus und andere Arzneimittel, die zur Klasse der mTORInhibitoren gehören).
+                        (Sirolimus, Everolimus und andere Arzneimittel, die zur Klasse der mTORInhibitoren
+                        gehören).
                         Siehe
                         unter Abschnitt 2.: Warnhinweise und Vorsichtsmaßnahmen.</li>
                 </ul>
-                Ihr Arzt muss unter Umständen Ihre Dosierung anpassen und/ oder sonstige Vorsichtsmaßnahmen treffen:
+                Ihr Arzt muss unter Umständen Ihre Dosierung anpassen und/ oder sonstige Vorsichtsmaßnahmen
+                treffen:
                 <ul>
                     <li>
-                        wenn Sie einen Angiotensin-II-Rezeptor-AnTagonisten oder Aliskiren einnehmen (siehe unter
+                        wenn Sie einen Angiotensin-II-Rezeptor-AnTagonisten oder Aliskiren einnehmen (siehe
+                        unter
                         Abschnitt 2.:
-                        „Enalapril AL darf NICHT eingenommen werden“ und „Warnhinweise und Vorsichtsmaßnahmen“).</li>
+                        „Enalapril AL darf NICHT eingenommen werden“ und „Warnhinweise und Vorsichtsmaßnahmen“).
+                    </li>
                 </ul>
-                Wenn Sie sich nicht sicher sind, ob einer oder mehrere der oben genannten Punkte auf Sie zutreffen,
+                Wenn Sie sich nicht sicher sind, ob einer oder mehrere der oben genannten Punkte auf Sie
+                zutreffen,
                 wenden Sie sich bitte an Ihren Arzt oder Apotheker, bevor Sie Enalapril AL einnehmen.
             </div>
         </div>
@@ -2859,7 +3180,8 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
         </div>
         <div id="collapse4" class="panel-collapse collapse">
             <div class="panel-body">
-                Enalapril AL kann mit oder ohne Nahrung eingenommen werden. Die meisten Patienten nehmen Enalapril AL
+                Enalapril AL kann mit oder ohne Nahrung eingenommen werden. Die meisten Patienten nehmen
+                Enalapril AL
                 mit etwas Wasser ein.
             </div>
         </div>
@@ -2873,21 +3195,31 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
         </div>
         <div id="collapse5" class="panel-collapse collapse">
             <div class="panel-body">
-                Wenn Sie schwanger sind oder stillen, oder wenn Sie vermuten, schwanger zu sein oder beabsichtigen,
-                schwanger zu werden, fragen Sie vor der Anwendung dieses Arzneimittels Ihren Arzt oder Apotheker um Rat.
+                Wenn Sie schwanger sind oder stillen, oder wenn Sie vermuten, schwanger zu sein oder
+                beabsichtigen,
+                schwanger zu werden, fragen Sie vor der Anwendung dieses Arzneimittels Ihren Arzt oder Apotheker
+                um Rat.
                 <h4>Schwangerschaft</h4>
-                Teilen Sie Ihrem Arzt mit, wenn Sie vermuten, schwanger zu sein (oder schwanger werden könnten). In der
-                Regel wird Ihr Arzt Ihnen empfehlen, Enalapril AL vor einer Schwangerschaft bzw. sobald Sie wissen, dass
-                Sie schwanger sind, abzusetzen, und er wird Ihnen ein anderes Arzneimittel empfehlen. Die Anwendung von
-                Enalapril AL in der frühen Schwangerschaft wird nicht empfohlen und Enalapril AL darf nicht mehr nach
-                dem dritten Schwangerschaftsmonat eingenommen werden, da die Einnahme von Enalapril AL in diesem Stadium
+                Teilen Sie Ihrem Arzt mit, wenn Sie vermuten, schwanger zu sein (oder schwanger werden könnten).
+                In der
+                Regel wird Ihr Arzt Ihnen empfehlen, Enalapril AL vor einer Schwangerschaft bzw. sobald Sie
+                wissen, dass
+                Sie schwanger sind, abzusetzen, und er wird Ihnen ein anderes Arzneimittel empfehlen. Die
+                Anwendung von
+                Enalapril AL in der frühen Schwangerschaft wird nicht empfohlen und Enalapril AL darf nicht mehr
+                nach
+                dem dritten Schwangerschaftsmonat eingenommen werden, da die Einnahme von Enalapril AL in diesem
+                Stadium
                 zu schweren Schädigungen Ihres ungeborenen Kindes führen kann.</br>
                 <h4>Stillzeit</h4>
-                Teilen sie Ihrem Arzt mit, wenn Sie stillen oder mit dem Stillen beginnen wollen. Das Stillen von
-                Neugeborenen (in den ersten Wochen nach der Geburt) und besonders von Frühgeburten wird nicht empfohlen,
+                Teilen sie Ihrem Arzt mit, wenn Sie stillen oder mit dem Stillen beginnen wollen. Das Stillen
+                von
+                Neugeborenen (in den ersten Wochen nach der Geburt) und besonders von Frühgeburten wird nicht
+                empfohlen,
                 wenn Sie Enalapril AL einnehmen.
                 <br>
-                Bei älteren Säuglingen sollte der Arzt Sie über Nutzen und mögliche Schäden der Anwendung von ENALAPRIL
+                Bei älteren Säuglingen sollte der Arzt Sie über Nutzen und mögliche Schäden der Anwendung von
+                ENALAPRIL
                 AL in der Stillzeit im Vergleich zu Behandlungsalternativen aufklären.
             </div>
         </div>
@@ -2901,7 +3233,8 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
             </h4>
         </div>
         <div id="collapse6" class="panel-collapse collapse">
-            <div class="panel-body">Sie können unter der Behandlung Schwindel oder Müdigkeit spüren. Wenn dies der Fall
+            <div class="panel-body">Sie können unter der Behandlung Schwindel oder Müdigkeit spüren. Wenn dies
+                der Fall
                 ist, sollten Sie kein Fahrzeug steuern oder Werkzeuge bzw. Maschinen bedienen. </div>
         </div>
     </div>
@@ -2914,7 +3247,8 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
             </h4>
         </div>
         <div id="collapse7" class="panel-collapse collapse">
-            <div class="panel-body">Bitte nehmen Sie Enalapril AL daher erst nach Rücksprache mit Ihrem Arzt ein, wenn
+            <div class="panel-body">Bitte nehmen Sie Enalapril AL daher erst nach Rücksprache mit Ihrem Arzt
+                ein, wenn
                 Ihnen bekannt ist, dass Sie unter einer Unverträglichkeit gegenüber bestimmten Zuckern leiden.
 
             </div>
@@ -2935,7 +3269,8 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-12 info_notuse"> Wenn bei Ihnen während einer früheren Behandlung mit einem ACE-Hemmer
+            <div class="col-sm-12 info_notuse"> Wenn bei Ihnen während einer früheren Behandlung mit einem
+                ACE-Hemmer
                 Gewebeschwellungen (angioneurotische Ödeme) auftraten wenn Sie eine vererbte Neigung zu
                 Gewebeschwellungen oder Gewebeschwellungen aus unbekannter Ursache haben (hereditäres oder
                 idiopathisches Angioödem)</div>
@@ -2951,7 +3286,8 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
     </div>
 </div>
 ',13,3);
-INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic, address) VALUES (115,0,'Beispieltext',13,4, '
+INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic, address) VALUES
+(115,0,'Beispieltext',13,4, '
 <div class="row">
     <div class="col-md-9">
         <h3>Pharmazeutischer Unternehmer </h3>
@@ -3126,12 +3462,15 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                                     <td>
                                         <b>Hinweis</b> </td>
                                     <td>Eine vorausgegangene Therapie mit hoch
-                                        dosierten harntreibenden Arzneimitteln kann zu einem Flüssigkeitsmangel führen,
+                                        dosierten harntreibenden Arzneimitteln kann zu einem Flüssigkeitsmangel
+                                        führen,
                                         so
                                         dass die Gefahr
-                                        eines Blutdruckabfalls bei Therapiebeginn besteht. Wenn möglich sollten diese
+                                        eines Blutdruckabfalls bei Therapiebeginn besteht. Wenn möglich sollten
+                                        diese
                                         Arzneimittel 2-3 Tage
-                                        lang abgesetzt werden, bevor die Therapie mit Enalapril AL 5mg eingeleitet wird.
+                                        lang abgesetzt werden, bevor die Therapie mit Enalapril AL 5mg eingeleitet
+                                        wird.
                                         Die
                                         Nierenfunktion und die Kaliumwerte im Blut sollten überwacht werden.
                                     </td>
@@ -3212,7 +3551,8 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                         <h4> Erhaltungsdosis</h4>
                         <hr>
                         Zu Beginn der Therapie mit Enalapril AL 5mg kann es bei Patienten mit
-                        Herzleistungsschwäche zu einem Blutdruckabfall kommen.<br>Wenn dieser behoben ist, sollte die
+                        Herzleistungsschwäche zu einem Blutdruckabfall kommen.<br>Wenn dieser behoben ist, sollte
+                        die
                         Dosis
                         schrittweise über einen Zeitraum von 2-4 Wochen auf die Erhaltungsdosis von 20 mg
                         Enalaprilmaleat
@@ -3245,19 +3585,26 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                             </tbody>
                         </table>
                         <br> Für die höheren Dosierungen stehen Tabletten mit
-                        geeigneter Wirkstoffstärke zur Verfügung. Sie sollten besonders vorsichtig sein, wenn Sie Ihre
+                        geeigneter Wirkstoffstärke zur Verfügung. Sie sollten besonders vorsichtig sein, wenn Sie
+                        Ihre
                         erste
-                        Dosis einnehmen oder wenn Ihre Dosis erhöht wird. Teilen Sie Ihrem Arzt unverzüglich mit, wenn
+                        Dosis einnehmen oder wenn Ihre Dosis erhöht wird. Teilen Sie Ihrem Arzt unverzüglich mit,
+                        wenn
                         Sie
                         sich benommen oder schwindlig fühlen. Vor und nach Beginn der Einnahme von Enalapril AL 5mg
-                        sollten Blutdruck und Nierenfunktion engmaschig überwacht werden, da über Blutdruckabfall und
+                        sollten Blutdruck und Nierenfunktion engmaschig überwacht werden, da über Blutdruckabfall
+                        und
                         (seltener) nachfolgendem Nierenversagen berichtet wurde. <br>Wenn Sie mit harntreibenden
                         Arzneimitteln
-                        behandelt werden, sollte – falls möglich – deren Dosis vor Beginn der Einnahme von Enalapril AL
+                        behandelt werden, sollte – falls möglich – deren Dosis vor Beginn der Einnahme von Enalapril
+                        AL
                         5
-                        mg verringert werden. <br> Ein Blutdruckabfall bei Therapiebeginn mit Enalapril AL 5mg bedeutet
-                        nicht, dass auch während der Dauerbehandlung mit Enalapril AL 5mg solche Reaktionen auftreten
-                        werden und schließt die Weiterbehandlung mit dem Arzneimittel nicht aus. Die Kaliumwerte im Blut
+                        mg verringert werden. <br> Ein Blutdruckabfall bei Therapiebeginn mit Enalapril AL 5mg
+                        bedeutet
+                        nicht, dass auch während der Dauerbehandlung mit Enalapril AL 5mg solche Reaktionen
+                        auftreten
+                        werden und schließt die Weiterbehandlung mit dem Arzneimittel nicht aus. Die Kaliumwerte im
+                        Blut
                         und
                         die Nierenfunktion sollten ebenfalls überwacht werden.
                     </div>
@@ -3366,7 +3713,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
         </div>
     </div>
 
-    <div  class="row hidden-xs" style="margin-top: 30px;">
+    <div class="row hidden-xs" style="margin-top: 30px;">
         <div class="col-sm-12">
             <h4>Gleiche Aufteilung der Dosen</h4>
             <table class="sideffect_table">
@@ -3430,18 +3777,19 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                         <div class="carousel-caption">
                             <h4> Schritt 1</h4>
                             <img src="./../../assets/p_form/usage/notcrack_small.svg" class="usage_tab" alt="Tablette"
-                            title="Tablette">
-                        <br><br>
-                        <p>Legen Sie bitte die Tablette mit der Bruchkerbe nach oben auf eine feste Unterlage.</p>
+                                title="Tablette">
+                            <br><br>
+                            <p>Legen Sie bitte die Tablette mit der Bruchkerbe nach oben auf eine feste Unterlage.
+                            </p>
                         </div>
                     </div>
                     <div class="item">
                         <div class="carousel-caption">
                             <h4>Schritt 2</h4>
                             <img src="./../../assets/p_form/usage/crack_small.svg" class="usage_tab1" alt="Tablette"
-                            title="Tablette">
-                        <br><br>
-                        <p>Drücken Sie mit den Zeigefingern auf die linke und rechte Hälfte der Tablette.</p>
+                                title="Tablette">
+                            <br><br>
+                            <p>Drücken Sie mit den Zeigefingern auf die linke und rechte Hälfte der Tablette.</p>
                         </div>
                     </div>
 
@@ -3545,7 +3893,9 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                             <thead>
                                 <tr>
                                     <th>Häufigkeit</th>
-                                    <th style="width: 25%;">Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> </th>
+                                    <th style="width: 25%;">Anzahl der betreffenden Behandelten <span
+                                            style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i
+                                                class="fas fa-info-circle"></i></span> </th>
                                     <th>Nebenwirkung</th>
                                 </tr>
                             </thead>
@@ -3583,7 +3933,10 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                                 <div class="row p15" id="gelegentlich-xs">
                                     <h4> Gelegentlich</h4>
                                     <div class="row">
-                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1 von 100
+                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer"
+                                                data-toggle="modal" data-target="#neben_info"><i
+                                                    class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1 von
+                                        100
                                         Behandelten
                                     </div>
                                     <div class="row">
@@ -3598,7 +3951,10 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                                 <div class="row p15" id="selten-xs">
                                     <h4> Selten</h4>
                                     <div class="row">
-                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1 von 1000
+                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer"
+                                                data-toggle="modal" data-target="#neben_info"><i
+                                                    class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1 von
+                                        1000
                                         Behandelten
                                     </div>
                                     <div class="row">
@@ -3630,7 +3986,9 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                             <thead>
                                 <tr>
                                     <th>Häufigkeit</th>
-                                    <th style="width: 25%;">Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> </th>
+                                    <th style="width: 25%;">Anzahl der betreffenden Behandelten <span
+                                            style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i
+                                                class="fas fa-info-circle"></i></span> </th>
                                     <th>Nebenwirkung</th>
                                 </tr>
                             </thead>
@@ -3653,7 +4011,10 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                                 <div class="row p15" id="gelegentlich-xs">
                                     <h4> Gelegentlich</h4>
                                     <div class="row">
-                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1 von 100
+                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer"
+                                                data-toggle="modal" data-target="#neben_info"><i
+                                                    class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1 von
+                                        100
                                         Behandelten
                                     </div>
                                     <div class="row">
@@ -3680,7 +4041,9 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                             <thead>
                                 <tr>
                                     <th>Häufigkeit</th>
-                                    <th style="width: 25%;">Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> </th>
+                                    <th style="width: 25%;">Anzahl der betreffenden Behandelten <span
+                                            style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i
+                                                class="fas fa-info-circle"></i></span> </th>
                                     <th>Nebenwirkung</th>
                                 </tr>
                             </thead>
@@ -3702,7 +4065,10 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                                 <div class="row p15" id="sehrhaeufig-xs">
                                     <h4> Sehr häufig</h4>
                                     <div class="row">
-                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1 von 10
+                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer"
+                                                data-toggle="modal" data-target="#neben_info"><i
+                                                    class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1 von
+                                        10
                                         Behandelten
                                     </div>
                                     <div class="row">
@@ -3727,7 +4093,9 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                             <thead>
                                 <tr>
                                     <th>Häufigkeit</th>
-                                    <th style="width: 25%;">Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> </th>
+                                    <th style="width: 25%;">Anzahl der betreffenden Behandelten <span
+                                            style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i
+                                                class="fas fa-info-circle"></i></span> </th>
                                     <th>Nebenwirkung</th>
                                 </tr>
                             </thead>
@@ -3779,7 +4147,10 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                                 <div class="row p15" id="sehrhaeufig-xs">
                                     <h4> Sehr häufig</h4>
                                     <div class="row">
-                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1 von 10
+                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer"
+                                                data-toggle="modal" data-target="#neben_info"><i
+                                                    class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1 von
+                                        10
                                         Behandelten
                                     </div>
                                     <div class="row">
@@ -3790,7 +4161,10 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                                 <div class="row p15" id="haeufig-xs">
                                     <h4> Häufig</h4>
                                     <div class="row">
-                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1 von 10
+                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer"
+                                                data-toggle="modal" data-target="#neben_info"><i
+                                                    class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1 von
+                                        10
                                         Behandelten
                                     </div>
                                     <div class="row">
@@ -3810,7 +4184,10 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                                 <div class="row p15" id="gelegentlich-xs">
                                     <h4> Gelegentlich</h4>
                                     <div class="row">
-                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1 von 100
+                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer"
+                                                data-toggle="modal" data-target="#neben_info"><i
+                                                    class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1 von
+                                        100
                                         Behandelten
                                     </div>
                                     <div class="row">
@@ -3823,7 +4200,10 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                                 <div class="row p15" id="selten-xs">
                                     <h4> Selten</h4>
                                     <div class="row">
-                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1 von 1000
+                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer"
+                                                data-toggle="modal" data-target="#neben_info"><i
+                                                    class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1 von
+                                        1000
                                         Behandelten
                                     </div>
                                     <div class="row">
@@ -3850,7 +4230,9 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                             <thead>
                                 <tr>
                                     <th>Häufigkeit</th>
-                                    <th style="width: 25%;">Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> </th>
+                                    <th style="width: 25%;">Anzahl der betreffenden Behandelten <span
+                                            style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i
+                                                class="fas fa-info-circle"></i></span> </th>
                                     <th>Nebenwirkung</th>
                                 </tr>
                             </thead>
@@ -3907,7 +4289,9 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                                 <div class="row p15" id="sehrhaeufig-xs">
                                     <h4> Sehr häufig</h4>
                                     <div class="row">
-                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1
+                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer"
+                                                data-toggle="modal" data-target="#neben_info"><i
+                                                    class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1
                                         von 10 Behandelten
                                     </div>
                                     <div class="row">
@@ -3918,7 +4302,9 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                                 <div class="row p15" id="haeufig-xs">
                                     <h4> Häufig</h4>
                                     <div class="row">
-                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1
+                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer"
+                                                data-toggle="modal" data-target="#neben_info"><i
+                                                    class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1
                                         von 10 Behandelten
                                     </div>
                                     <div class="row">
@@ -3931,7 +4317,9 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                                 <div class="row p15" id="gelegentlich-xs">
                                     <h4> Gelegentlich</h4>
                                     <div class="row">
-                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1
+                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer"
+                                                data-toggle="modal" data-target="#neben_info"><i
+                                                    class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1
                                         von 100 Behandelten
                                     </div>
                                     <div class="row">
@@ -3946,7 +4334,9 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                                 <div class="row p15" id="selten-xs">
                                     <h4> Selten</h4>
                                     <div class="row">
-                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1
+                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer"
+                                                data-toggle="modal" data-target="#neben_info"><i
+                                                    class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1
                                         von 1000 Behandelten
                                     </div>
                                     <div class="row">
@@ -3960,7 +4350,9 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                                 <div class="row p15" id="sehrselten-xs">
                                     <h4> Sehr selten</h4>
                                     <div class="row">
-                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1
+                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer"
+                                                data-toggle="modal" data-target="#neben_info"><i
+                                                    class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1
                                         von 10000 Behandelten
                                     </div>
                                     <div class="row">
@@ -3985,7 +4377,9 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                             <thead>
                                 <tr>
                                     <th>Häufigkeit</th>
-                                    <th style="width: 25%;">Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> </th>
+                                    <th style="width: 25%;">Anzahl der betreffenden Behandelten <span
+                                            style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i
+                                                class="fas fa-info-circle"></i></span> </th>
                                     <th>Nebenwirkung</th>
                                 </tr>
                             </thead>
@@ -4011,7 +4405,9 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                                 <div class="row p15" id="selten-xs">
                                     <h4> Selten</h4>
                                     <div class="row">
-                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1
+                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer"
+                                                data-toggle="modal" data-target="#neben_info"><i
+                                                    class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1
                                         von 1000 Behandelten
                                     </div>
                                     <div class="row">
@@ -4040,7 +4436,9 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                             <thead>
                                 <tr>
                                     <th>Häufigkeit</th>
-                                    <th style="width: 25%;">Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> </th>
+                                    <th style="width: 25%;">Anzahl der betreffenden Behandelten <span
+                                            style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i
+                                                class="fas fa-info-circle"></i></span> </th>
                                     <th>Nebenwirkung</th>
                                 </tr>
                             </thead>
@@ -4095,7 +4493,9 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                                 <div class="row p15" id="haeufig-xs">
                                     <h4> Häufig</h4>
                                     <div class="row">
-                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1
+                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer"
+                                                data-toggle="modal" data-target="#neben_info"><i
+                                                    class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1
                                         von 10 Behandelten
                                     </div>
                                     <div class="row">
@@ -4110,7 +4510,9 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                                 <div class="row p15" id="gelegentlich-xs">
                                     <h4> Gelegentlich</h4>
                                     <div class="row">
-                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1
+                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer"
+                                                data-toggle="modal" data-target="#neben_info"><i
+                                                    class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1
                                         von 100 Behandelten
                                     </div>
                                     <div class="row">
@@ -4125,7 +4527,10 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                                 <div class="row p15" id="nichtbekannt">
                                     <h4> Nicht bekannt</h4>
                                     <div class="row">
-                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1 von 100
+                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer"
+                                                data-toggle="modal" data-target="#neben_info"><i
+                                                    class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1 von
+                                        100
                                         Behandelten
                                     </div>
                                     <div class="row">
@@ -4159,7 +4564,9 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                             <thead>
                                 <tr>
                                     <th>Häufigkeit</th>
-                                    <th style="width: 25%;">Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> </th>
+                                    <th style="width: 25%;">Anzahl der betreffenden Behandelten <span
+                                            style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i
+                                                class="fas fa-info-circle"></i></span> </th>
                                     <th>Nebenwirkung</th>
                                 </tr>
                             </thead>
@@ -4193,7 +4600,9 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                                 <div class="row p15" id="gelegentlich-xs">
                                     <h4> Gelegentlich</h4>
                                     <div class="row">
-                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1
+                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer"
+                                                data-toggle="modal" data-target="#neben_info"><i
+                                                    class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1
                                         von 100 Behandelten
                                     </div>
                                     <div class="row">
@@ -4207,7 +4616,9 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                                 <div class="row p15" id="selten-xs">
                                     <h4> Selten</h4>
                                     <div class="row">
-                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1
+                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer"
+                                                data-toggle="modal" data-target="#neben_info"><i
+                                                    class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1
                                         von 1000 Behandelten
                                     </div>
                                     <div class="row">
@@ -4233,7 +4644,9 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                             <thead>
                                 <tr>
                                     <th>Häufigkeit</th>
-                                    <th style="width: 25%;">Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> </th>
+                                    <th style="width: 25%;">Anzahl der betreffenden Behandelten <span
+                                            style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i
+                                                class="fas fa-info-circle"></i></span> </th>
                                     <th>Nebenwirkung</th>
                                 </tr>
                             </thead>
@@ -4263,7 +4676,9 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                                 <div class="row p15" id="gelegentlich-xs">
                                     <h4> Gelegentlich</h4>
                                     <div class="row">
-                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1
+                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer"
+                                                data-toggle="modal" data-target="#neben_info"><i
+                                                    class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1
                                         von 100 Behandelten
                                     </div>
                                     <div class="row">
@@ -4275,7 +4690,9 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                                 <div class="row p15" id="selten-xs">
                                     <h4> Selten</h4>
                                     <div class="row">
-                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1
+                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer"
+                                                data-toggle="modal" data-target="#neben_info"><i
+                                                    class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1
                                         von 1000 Behandelten
                                     </div>
                                     <div class="row">
@@ -4300,7 +4717,9 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                             <thead>
                                 <tr>
                                     <th>Häufigkeit</th>
-                                    <th style="width: 25%;">Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> </th>
+                                    <th style="width: 25%;">Anzahl der betreffenden Behandelten <span
+                                            style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i
+                                                class="fas fa-info-circle"></i></span> </th>
                                     <th>Nebenwirkung</th>
                                 </tr>
                             </thead>
@@ -4338,7 +4757,9 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                                 <div class="row p15" id="sehrhaeufig-xs">
                                     <h4> Sehr häufig</h4>
                                     <div class="row">
-                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1
+                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer"
+                                                data-toggle="modal" data-target="#neben_info"><i
+                                                    class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1
                                         von 10 Behandelten
                                     </div>
                                     <div class="row">
@@ -4349,7 +4770,9 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                                 <div class="row p15" id="haeufig-xs">
                                     <h4> Häufig</h4>
                                     <div class="row">
-                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1
+                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer"
+                                                data-toggle="modal" data-target="#neben_info"><i
+                                                    class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1
                                         von 10 Behandelten
                                     </div>
                                     <div class="row">
@@ -4361,7 +4784,9 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                                 <div class="row p15" id="gelegentlich-xs">
                                     <h4> Gelegentlich</h4>
                                     <div class="row">
-                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1
+                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer"
+                                                data-toggle="modal" data-target="#neben_info"><i
+                                                    class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1
                                         von 100 Behandelten
                                     </div>
                                     <div class="row">
@@ -4388,7 +4813,9 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                             <thead>
                                 <tr>
                                     <th>Häufigkeit</th>
-                                    <th style="width: 25%;">Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> </th>
+                                    <th style="width: 25%;">Anzahl der betreffenden Behandelten <span
+                                            style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i
+                                                class="fas fa-info-circle"></i></span> </th>
                                     <th>Nebenwirkung</th>
                                 </tr>
                             </thead>
@@ -4427,7 +4854,9 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                                 <div class="row p15" id="haeufig-xs">
                                     <h4> Häufig</h4>
                                     <div class="row">
-                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1
+                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer"
+                                                data-toggle="modal" data-target="#neben_info"><i
+                                                    class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1
                                         von 10 Behandelten
                                     </div>
                                     <div class="row">
@@ -4439,7 +4868,9 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                                 <div class="row p15" id="gelegentlich-xs">
                                     <h4> Gelegentlich</h4>
                                     <div class="row">
-                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1
+                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer"
+                                                data-toggle="modal" data-target="#neben_info"><i
+                                                    class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1
                                         von 100 Behandelten
                                     </div>
                                     <div class="row">
@@ -4451,7 +4882,9 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                                 <div class="row p15" id="selten-xs">
                                     <h4> Selten</h4>
                                     <div class="row">
-                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1
+                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer"
+                                                data-toggle="modal" data-target="#neben_info"><i
+                                                    class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1
                                         von 1000 Behandelten
                                     </div>
                                     <div class="row">
@@ -4587,51 +5020,110 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
         <div class="col-sm-6 nopadd">
             <div class="row">
                 <div class="col-sm-12 info_notuse bg_orange">
-                    <b> Überempfindlichkeit gegen andere Sympathomimetika</b>
+                    <div class="row">
+                        <div class="col-xs-10 nopadd">
+                            <b> Überempfindlichkeit gegen andere Sympathomimetika</b>
+                        </div>
+                        <div class="col-xs-2">
+                            <img width="32" src="./../../assets/disease/heart.svg">
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-sm-12 info_notuse bg_orange">
-                    <b> Schweren Herzerkrankung </b>
-                    <p>Insbesondere bei frischem
-                        Herzinfarkt, koronarer Herzkrankheit (Erkrankung der Herzkranzgefäße), hypertropher obstruktiver
-                        Kardiomyopathie
-                        (eine chronische Herzmuskelerkrankung), tachykarden
-                        Arrhythmien (Herzrhythmusstörungen mit erhöhter
-                        Herzschlagfrequenz)</p>
+                    <div class="row">
+                        <div class="col-xs-10 nopadd">
+                            <b> Schweren Herzerkrankung </b>
+                        </div>
+                        <div class="col-xs-2">
+                            <img width="32" src="./../../assets/disease/heart.svg">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <p>Insbesondere bei frischem
+                            Herzinfarkt, koronarer Herzkrankheit (Erkrankung der Herzkranzgefäße), hypertropher
+                            obstruktiver
+                            Kardiomyopathie
+                            (eine chronische Herzmuskelerkrankung), tachykarden
+                            Arrhythmien (Herzrhythmusstörungen mit erhöhter
+                            Herzschlagfrequenz)</p>
+                    </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-sm-12 info_notuse bg_orange">
-                    <b> Schwerer und unbehandelter Hypertonie (Bluthochdruck) </b>
+                    <div class="row">
+                        <div class="col-xs-10 nopadd">
+                            <b> Schwerer und unbehandelter Hypertonie (Bluthochdruck) </b>
+                        </div>
+                        <div class="col-xs-2">
+                            <img width="32" src="./../../assets/disease/bloodpressure.png">
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-sm-12 info_notuse bg_orange">
-                    <b> Phäochromozytom (bestimmte Erkrankung des Nebennierenmarks) </b>
+                    <div class="row">
+                        <div class="col-xs-10 nopadd">
+                            <b> Phäochromozytom (bestimmte Erkrankung des Nebennierenmarks) </b>
+                        </div>
+                        <div class="col-xs-2">
+                            <img width="32" src="./../../assets/disease/kidney.svg">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="col-sm-6 nopadd">
             <div class="row">
                 <div class="col-sm-12 info_notuse bg_orange">
-                    <b> Einnahme von Herzglykosiden (Arzneimittel zur Behandlung
-                        von Herzschwäche)</b>
+                    <div class="row">
+                        <div class="col-xs-10 nopadd">
+                            <b> Einnahme von Herzglykosiden (Arzneimittel zur Behandlung
+                                von Herzschwäche)</b>
+                        </div>
+                        <div class="col-xs-2">
+                            <img width="32" src="./../../assets/disease/heart.svg">
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-sm-12 info_notuse bg_orange">
-                    <b> Aneurysmen (krankhafte Ausweitungen der Gefäßwand)</b>
+                    <div class="row">
+                        <div class="col-xs-10 nopadd">
+                            <b> Aneurysmen (krankhafte Ausweitungen der Gefäßwand)</b>
+                        </div>
+                        <div class="col-xs-2">
+                            <img width="32" src="./../../assets/disease/heart.svg">
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-sm-12 info_notuse bg_orange">
-                    <b> Hyperthyreose/Thyreotoxikose (Überfunktion der Schilddrüse)</b>
+                    <div class="row">
+                        <div class="col-xs-10 nopadd">
+                            <b> Hyperthyreose/Thyreotoxikose (Überfunktion der Schilddrüse)</b>
+                        </div>
+                        <div class="col-xs-2">
+                            <img width="32" src="./../../assets/disease/heart.svg">
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-sm-12 info_notuse bg_orange">
-                    <b> schwer kontrollierbarem Diabetes mellitus</b>
+                    <div class="row">
+                        <div class="col-xs-10 nopadd">
+                            <b> Schwer kontrollierbarem Diabetes mellitus</b>
+                        </div>
+                        <div class="col-xs-2">
+                            <img width="32" src="./../../assets/disease/diabetes.svg">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

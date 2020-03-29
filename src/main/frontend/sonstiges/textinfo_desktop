@@ -1,0 +1,47 @@
+"textinfo_desktop": "
+<div class=\"panel panel-default panelinfo\">
+    <div class=\"panel-heading panel-heading-info\">
+        <p class=\"panel-title panel-title -info text-center-xs \" data-toggle=\"collapse\" data-target=\"#collapseinfo\">
+            Lesen Sie die gesamte e-Packungsbeilage sorgfältig durch, denn sie
+            enthält wichtige Informationen für Sie. Um einen bestmöglichen Behandlungserfosm zu erzielen, muss %XXX%
+            jedoch
+            vorschriftsmäßig angewendet werden.
+        </p>
+    </div>
+    <div id=\"collapseinfo" class=\"panel-collapse collapse\">
+        <div class=\"panel-body panelbodyinfo\">
+            <div class=\"row alert alertinfo\" role=\"alert\">
+                <div class=\"row\">
+                    <div class=\"col-md-1  \"> <i class=\"fas fa-user-md black size40\" ></i>
+                    </div>
+                    <div class=\"col-md-11\">
+                        <ul>
+                            <li>Fragen Sie Ihren Apotheker, wenn Sie weitere Informationen oder einen Rat benötigen.
+                            </li>
+                            <li>Wenn sich Ihre Symptome verschlimmern oder nach 7 Tagen keine Besserung eintritt, müssen
+                                Sie
+                                auf
+                                jeden Fall
+                                einen Arzt aufsuchen. </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class=\"row\">
+                    <div class=\"col-md-1  \"> <i class=\"fas fa-exclamation red size40\"></i>
+                    </div>
+                    <div class=\"col-md-11\">
+                        <ul>
+                            <li>Wenn eine der aufgeführten Nebenwirkungen Sie erheblich beeinträchtigt oder Sie
+                                Nebenwirkungen
+                                bemerken,
+                                die nicht in dieser Gebrauchsinformation angegeben sind, informieren Sie bitte Ihren
+                                <b>Arzt oder
+                                    Apotheker.</b>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>",

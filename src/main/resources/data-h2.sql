@@ -1964,7 +1964,6 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
 </ul>
 ',11,11);
 
-
 --Amlodipin--
 
 INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (100,0,'Beispieltext1',12,1);
@@ -2055,15 +2054,19 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                     <div class="row">
                         <div class="col-xs-10 nopadd">
                             <b> Kinder</b><br>
-                            Bei Kindern unter 6 Jahren wurde Amlodipin nicht untersucht. <br>
-                            Amlodipin (besilat) Dexcel 5 mg kann nur bei Kindern und
-                            Jugendlichen mit Bluthochdruck im Alter von 6 bis
-                            17 Jahren angewendet werden
+
                         </div>
                         <div class="col-xs-2">
                             <img width="32" src="./../../assets/disease/child.svg">
                         </div>
                     </div>
+                    <div class="row">
+                        Bei Kindern unter 6 Jahren wurde Amlodipin nicht untersucht. <br>
+                        Amlodipin (besilat) Dexcel 5 mg kann nur bei Kindern und
+                        Jugendlichen mit Bluthochdruck im Alter von 6 bis
+                        17 Jahren angewendet werden
+                    </div>
+
                 </div>
             </div>
         </div>

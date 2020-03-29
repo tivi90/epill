@@ -14252,9 +14252,7 @@ var MostVisitedItems = function (_React$Component) {
                             _react2.default.createElement(
                                 "div",
                                 { className: "carousel-inner" },
-                                invocations.filter(function (invocation) {
-                                    return invocation.drug.id < 7;
-                                }).map(function (invocation) {
+                                invocations.map(function (invocation) {
                                     return _react2.default.createElement(_drug_miniature2.default, { invocation: invocation,
                                         key: invocation.drug.id });
                                 })
@@ -44752,7 +44750,9 @@ var DrugDetail = function (_React$Component) {
                                                 "h4",
                                                 null,
                                                 drug.name
-                                            )
+                                            ),
+                                            _react2.default.createElement("span", { className: "hidden-xs hidden-sm",
+                                                dangerouslySetInnerHTML: this.createMarkup(t("textinfo_desktop").replace("%XXX%", drug.name)) })
                                         ),
                                         _react2.default.createElement(
                                             "div",
@@ -46034,7 +46034,7 @@ var DrugList = function (_React$Component) {
                 { className: "diseases " },
                 _react2.default.createElement(
                     "div",
-                    { className: "col-xs-9" },
+                    { className: "col-xs-7" },
                     _react2.default.createElement(
                         "p",
                         null,
@@ -46136,6 +46136,10 @@ var DrugList = function (_React$Component) {
                 var col8Class = [" "];
                 var col7Class = ["full_content"];
                 var coltorowClass = ["col-xs-4 nopadd"];
+                var btnlike = ["btn big_btn btn-like "];
+                var btnadd = ["btn big_btn btn-add"];
+                var btnopen = ["btn big_btn btn-open "];
+
                 if (_this10.state.addClass) {
                     itemClass.push('list-group-item nopadd');
                     drugname.push('');
@@ -46147,6 +46151,9 @@ var DrugList = function (_React$Component) {
                     col7Class.push('col-md-7 ');
                     col8Class.push('col-md-8 ');
                     coltorowClass.push('fullrow');
+                    btnlike.push('btnheight');
+                    btnadd.push('btnheight');
+                    btnopen.push('btnheight');
                 }
                 return _react2.default.createElement(
                     "div",
@@ -46241,7 +46248,7 @@ var DrugList = function (_React$Component) {
                                                     { className: coltorowClass.join(' ') },
                                                     _react2.default.createElement(
                                                         "button",
-                                                        { type: "button", className: "btn btn-like big_btn",
+                                                        { type: "button", className: btnlike.join(' btnheight '),
                                                             onClick: function onClick() {
                                                                 return _this10.toggleTaking(drug);
                                                             } },
@@ -46254,7 +46261,7 @@ var DrugList = function (_React$Component) {
                                                     { className: coltorowClass.join(' ') },
                                                     _react2.default.createElement(
                                                         "button",
-                                                        { type: "button", className: "btn btn-add big_btn",
+                                                        { type: "button", className: btnadd.join(' btnheight '),
                                                             onClick: function onClick() {
                                                                 return _this10.toggleRemember(drug);
                                                             } },
@@ -46267,7 +46274,7 @@ var DrugList = function (_React$Component) {
                                                     { className: coltorowClass.join(' ') },
                                                     _react2.default.createElement(
                                                         "button",
-                                                        { type: "button", className: "btn btn-open big_btn" },
+                                                        { type: "button", className: btnopen.join(' btnheight ') },
                                                         _react2.default.createElement(
                                                             _reactRouterDom.Link,
                                                             { to: "/drug/" + drug.id },
@@ -46419,6 +46426,17 @@ var DrugList = function (_React$Component) {
 
     return DrugList;
 }(_react2.default.Component);
+
+$(document).ready(function () {
+    var dialogShown = localStorage.getItem('dialogShown');
+
+    if (!dialogShown) {
+        $(window).load(function () {
+            $('#wizardmodal').modal('show');
+            localStorage.setItem('dialogShown', 1);
+        });
+    }
+});
 
 exports.default = (0, _reactI18next.translate)()(DrugList);
 

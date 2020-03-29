@@ -20,6 +20,18 @@ Navbar
     padding: 15px;
 }
 
+.red {
+    color: red!important;
+}
+
+.black{
+    color: black!important;
+}
+
+.size40{
+    font-size: 40px;
+}
+
 
 #myCarousel .carousel-item .mask {
     position: absolute;
@@ -62,7 +74,7 @@ Navbar
 #myCarousel .carousel-item h4 {
     -webkit-animation-name: fadeInLeft;
     animation-name: fadeInLeft;
-    margin-top: 12%;
+    margin-top: 6%;
 }
 
 #myCarousel .carousel-item p {
@@ -123,18 +135,20 @@ Navbar
     padding: 15px
 }
 
-.carousel-haeufig{
+.carousel-haeufig {
     text-align: center;
     border: 1px solid;
     margin-bottom: 30px;
     margin-right: 15px;
     height: 165px;
 }
-.carousel-haeufig-pic{
+
+.carousel-haeufig-pic {
     height: 112px;
     padding: 10px;
 }
-.carousel-haeufig-text{
+
+.carousel-haeufig-text {
     color: black;
 }
 
@@ -405,7 +419,6 @@ img.group.list-group-image {
 
 
 .action-pattern {
-    border-bottom: solid 2px #11a59b;
 }
 
 
@@ -432,7 +445,7 @@ img.group.list-group-image {
 }
 
 .big_btn {
-    width: 100% !important;
+    width: 100%;
     border-radius: 0 !important;
     padding: 12px 18px !important;
 

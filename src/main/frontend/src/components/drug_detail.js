@@ -719,6 +719,8 @@ class DrugDetail extends React.Component {
                                     <div className="row align-items-center">
                                         <div className="col-md-8 col-12 order-md-1 order-2">
                                             <h4>{drug.name}</h4>
+                                            <span className="hidden-xs hidden-sm"
+                                            dangerouslySetInnerHTML={this.createMarkup(t("textinfo_desktop").replace("%XXX%", drug.name))}/>
                                         </div>
                                         <div className="col-xs-8 col-md-4 col-12 order-md-2 order-1"><img
                                             src="/assets/images/epil_circle.png" className="img-responsive" alt="slide"/>

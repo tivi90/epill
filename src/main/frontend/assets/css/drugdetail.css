@@ -224,7 +224,8 @@
 .round_nebenwirkung {
     top: 37%;
 }
-.round_info{
+
+.round_info {
     bottom: 37%;
 }
 
@@ -234,6 +235,7 @@
     z-index: 1001;
     cursor: pointer;
 }
+
 .report-round-button1 {
     left: 2%;
     position: fixed;
@@ -250,6 +252,7 @@
     padding-left: 2px;
     color: white;
 }
+
 .report-round-button1 .round-button-inner-main1 {
     vertical-align: middle;
     text-align: center;
@@ -272,6 +275,7 @@
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12) !important;
     cursor: pointer;
 }
+
 .round-button-outer1 .round-button-inner-main1 {
     width: 60px;
     height: 60px;
@@ -299,7 +303,7 @@
     color: #6b6767;
 }
 
-.item_drug{
+.item_drug {
     height: 60% !important;
     min-height: 404px !important;
 }
@@ -347,8 +351,17 @@
     width: 100% !important;
 }
 
+.btnheight {
+    padding: 34px 0px 34px 1px !important;
+    width: 76% !important;
+}
+
+.btn-open {
+    background-color: #484545;
+}
+
 .item.list-group-item .list-group-image {
-    height: 180px;
+    height: 130px;
 }
 
 .item.list-group-item .thumbnail {
@@ -427,7 +440,7 @@
     padding: 0px 15px;
 }
 
-.icon_tablet{
+.icon_tablet {
     font-size: 45px;
     margin-top: 10px;
 }
@@ -438,8 +451,8 @@
 
 }
 
-.panel_neben{
-    margin-bottom: 15px!important;
+.panel_neben {
+    margin-bottom: 15px !important;
 }
 
 .title_pan::after {
@@ -464,6 +477,45 @@
     content: "\f106";
 }
 
+
+.panelinfo {
+    margin-bottom: 0px !important;
+    background-color: inherit !important;
+    border: none !important;
+}
+
+.panelinfo > .panel-heading-info {
+    background-color: inherit !important;
+    padding: 0px !important;
+}
+
+.panel-heading-info p {
+    font-size: 14px !important;
+    color: #000000 !important;
+}
+
+.panel-title-info::after {
+    content: "\f107";
+    color: #333 !important;
+    top: 9px !important;
+    right: 12px !important;
+    position: absolute;
+    font-size: 26px;
+}
+
+.panelbodyinfo {
+    padding: 0px !important;
+    border: none !important;
+}
+
+.alertinfo{
+    background-color: #ffffff9c !important;
+    padding: 12px !important;
+    font-size: 14px!important;
+
+}
+
+
 .usage_tab {
     width: 50%;
 }
@@ -472,11 +524,11 @@
     width: 62%;
     margin-top: 5px;
 }
+
 .usage_tab2 {
     width: 50%;
     margin-top: 5px;
 }
-
 
 
 .nav1-tabs {
@@ -555,6 +607,11 @@
         text-align: center;
     }
 
+    .carousel-item h4 {
+        margin-top: 20%;
+        margin-left: 35px;
+    }
+
     .round_info {
         top: 14%;
         right: inherit;
@@ -593,7 +650,7 @@
         padding-bottom: 15px;
     }
 
-    .explain_box{
+    .explain_box {
         border: 1px solid;
         padding: 10px;
         margin-bottom: 15px;
