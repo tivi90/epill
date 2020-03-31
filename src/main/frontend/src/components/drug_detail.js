@@ -344,12 +344,12 @@ class DrugDetail extends React.Component {
             return null;
         }
         const {t} = this.props;
-                return (
-                    <div className="round-button-outer1 report-round-button1 round_def">
-                        <div id="defBtn" className="round-button-inner-main1" data-toggle="modal" data-target="#def">
-                            <i className="fas fa-book"></i></div>
-                    </div>
-                );
+        return (
+            <div className="round-button-outer1 report-round-button1 round_def">
+                <div id="defBtn" className="round-button-inner-main1" data-toggle="modal" data-target="#def">
+                    <i className="fas fa-book"></i></div>
+            </div>
+        );
 
     }
 
@@ -389,41 +389,69 @@ class DrugDetail extends React.Component {
 
     }
 
-    renderWordExplainations(drug) {
+    renderWordExplainationsdesktop(drug) {
 
         if (!drug.wordExplaination) {
             return null;
         }
         const {t} = this.props;
-        return drug.wordExplaination
-            .map((section => {
-                return (
-                    <div>
-                        <div className="row hidden-lg hidden-md hidden-sm explain_box" key={section.id}>
-                        <h4 >{section.name}</h4>
-                            <p key={section.id}><span dangerouslySetInnerHTML={this.createMarkup(section.description)}/>
-                            </p>
-                        </div>
+        return (
+            <div>
+                <input type="text" id="myInput" onKeyUp={this.myFunction.bind(this)} placeholder="Begriff eingeben"
+                       title="Begriff eingeben"/>
+                <table id="myTable" className="table table-bordered table-striped hidden-xs">
+                    <thead>
+                    <tr>
+                        <th>Begriff</th>
+                        <th>Erklärung</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <script src="assets/js/ownjs.js"></script>
+                    {drug.wordExplaination
+                        .map((section => {
+                            return (
+                                <tr key={section.id}>
+                                    <td><p key={section.id}>{section.name}</p></td>
+                                    <td><p key={section.id}><span
+                                        dangerouslySetInnerHTML={this.createMarkup(section.description)}/>
+                                    </p></td>
+                                </tr>
+                            )
+                        })).reduce((prev, curr) => [prev, curr])}
+                    </tbody>
+                </table>
+            </div>
+        )
 
-                    <table className="table table-bordered table-striped hidden-xs">
-                        <thead>
-                        <tr>
-                            <th>Begriff</th>
-                            <th>Erklärung</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <script src="assets/js/ownjs.js"></script>
-                        <tr>
-                            <td><p key={section.id}>{section.name}</p></td>
-                            <td><p key={section.id}><span
-                                dangerouslySetInnerHTML={this.createMarkup(section.description)}/>
-                            </p></td>
-                        </tr>
-                        </tbody>
-                    </table></div>
-                );
-            })).reduce((prev, curr) => [prev, curr]);
+    }
+
+
+    renderWordExplainationsmobile(drug) {
+
+        if (!drug.wordExplaination) {
+            return null;
+        }
+        const {t} = this.props;
+        return (
+            <div>
+                <script src="assets/js/ownjs.js"></script>
+                {drug.wordExplaination
+                    .map((section => {
+                        return (
+                            <div className="row hidden-lg hidden-md hidden-sm explain_box" key={section.id}>
+                                <h4>{section.name}</h4>
+                                <p key={section.id}><span
+                                    dangerouslySetInnerHTML={this.createMarkup(section.description)}/>
+                                </p>
+                            </div>
+
+
+                        )
+                    })).reduce((prev, curr) => [prev, curr])}
+
+            </div>
+        )
 
     }
 
@@ -453,15 +481,15 @@ class DrugDetail extends React.Component {
         const {t} = this.props;
         return (
             <span>
-            {drug.pharmaceuticalForm.map(pharmaceuticalForm => <img key={pharmaceuticalForm.id}
-                                                                    src={"./../../assets/p_form/" + pharmaceuticalForm.id + ".svg"}
-                                                                    className="img-drugform"
-                                                                    alt={pharmaceuticalForm.name}
-                                                                    title={pharmaceuticalForm.name}/>
-            )
-                .reduce((prev, curr) => [prev, curr])
-            }
-            </span>
+                    {drug.pharmaceuticalForm.map(pharmaceuticalForm => <img key={pharmaceuticalForm.id}
+                                                                            src={"./../../assets/p_form/" + pharmaceuticalForm.id + ".svg"}
+                                                                            className="img-drugform"
+                                                                            alt={pharmaceuticalForm.name}
+                                                                            title={pharmaceuticalForm.name}/>
+                    )
+                        .reduce((prev, curr) => [prev, curr])
+                    }
+                    </span>
 
         );
     }
@@ -493,15 +521,15 @@ class DrugDetail extends React.Component {
 
         return (
             <div className="col-sm-4 col-xs-6 text-center infopart">
-            <section className="pzn diseases row">
-                <FontAwesomeIcon className="infopic" icon={faHashtag}/>
+                <section className="pzn diseases row">
+                    <FontAwesomeIcon className="infopic" icon={faHashtag}/>
 
-                <p><b>  {t('pzn') + " "}</b>
-                    {drug.packaging.map(packaging => <span key={packaging.id}> <br/>{packaging.name}
-                        <br/>{packaging.pzn}
-                        <br/></span>)
-                        .reduce((prev, curr) => [prev, curr])}</p>
-            </section>
+                    <p><b>  {t('pzn') + " "}</b>
+                        {drug.packaging.map(packaging => <span key={packaging.id}> <br/>{packaging.name}
+                            <br/>{packaging.pzn}
+                            <br/></span>)
+                            .reduce((prev, curr) => [prev, curr])}</p>
+                </section>
             </div>
         );
     }
@@ -514,13 +542,13 @@ class DrugDetail extends React.Component {
 
         return (
             <div className="col-sm-4 col-xs-6 text-center infopart">
-            <section className="row diseases">
-                <img src={"./../../assets/images/ind_group.svg"} alt={"ind_group"} className="infopic"/>
+                <section className="row diseases">
+                    <img src={"./../../assets/images/ind_group.svg"} alt={"ind_group"} className="infopic"/>
 
-                <p><b>     {t('indicationGroup') + " "}  </b></p>
-                <p>{drug.indicationGroup.name}</p>
+                    <p><b>     {t('indicationGroup') + " "}  </b></p>
+                    <p>{drug.indicationGroup.name}</p>
 
-            </section>
+                </section>
             </div>
         );
     }
@@ -528,20 +556,20 @@ class DrugDetail extends React.Component {
     renderProductGroup(drug) {
 
         if (!drug.productGroup || !drug.productGroup.name) {
-        return null;
-    }
+            return null;
+        }
         const {t} = this.props;
 
         return (
             <div className="col-sm-4 col-xs-6 text-center infopart">
-            <section className="row diseases">
-                <img src={"./../../assets/images/productgroup.png"} alt={"productgroup"} className="infopic"/>
+                <section className="row diseases">
+                    <img src={"./../../assets/images/productgroup.png"} alt={"productgroup"} className="infopic"/>
 
-                <p><b>      {t('productGroup') + " "}</b></p>
+                    <p><b>      {t('productGroup') + " "}</b></p>
 
-                <p>{drug.productGroup.name}</p>
+                    <p>{drug.productGroup.name}</p>
 
-            </section>
+                </section>
             </div>
         );
     }
@@ -559,7 +587,7 @@ class DrugDetail extends React.Component {
     }
 
     renderPackcompany(drug) {
-        if (!drug.packagingSection){
+        if (!drug.packagingSection) {
             return null;
         }
 
@@ -576,7 +604,7 @@ class DrugDetail extends React.Component {
     }
 
     renderPackSecdesc(drug) {
-        if (!drug.packagingSection){
+        if (!drug.packagingSection) {
             return null;
         }
 
@@ -593,7 +621,7 @@ class DrugDetail extends React.Component {
     }
 
     renderPackSecvor(drug) {
-        if (!drug.packagingSection){
+        if (!drug.packagingSection) {
             return null;
         }
 
@@ -610,7 +638,7 @@ class DrugDetail extends React.Component {
     }
 
     renderPackSecdos(drug) {
-        if (!drug.packagingSection){
+        if (!drug.packagingSection) {
             return null;
         }
 
@@ -627,7 +655,7 @@ class DrugDetail extends React.Component {
     }
 
     renderPackSecneben(drug) {
-        if (!drug.packagingSection){
+        if (!drug.packagingSection) {
             return null;
         }
 
@@ -644,7 +672,7 @@ class DrugDetail extends React.Component {
     }
 
     renderPackSecpack(drug) {
-        if (!drug.packagingSection){
+        if (!drug.packagingSection) {
             return null;
         }
 
@@ -661,7 +689,7 @@ class DrugDetail extends React.Component {
     }
 
     renderPackSecMoreSub(drug) {
-        if (!drug.packagingSection){
+        if (!drug.packagingSection) {
             return null;
         }
 
@@ -691,25 +719,26 @@ class DrugDetail extends React.Component {
     componentDidMount() {
         document.addEventListener("scroll", () => {
             if (window.scrollY > 170) {
-                this.setState({ thePosition: true })
+                this.setState({thePosition: true})
             } else {
-                this.setState({ thePosition: false })
+                this.setState({thePosition: false})
             }
         });
         window.scrollTo(0, 0);
     }
+
     onScrollStep = () => {
-        if (window.pageYOffset === 0){
+        if (window.pageYOffset === 0) {
             clearInterval(this.state.intervalId);
         }
         window.scroll(0, window.pageYOffset - this.props.scrollStepInPx);
     }
     scrollToTop = () => {
         let intervalId = setInterval(this.onScrollStep, this.props.delayInMs);
-        this.setState({ intervalId: intervalId });
+        this.setState({intervalId: intervalId});
     }
     renderGoTopIcon = () => {
-        if (this.state.thePosition){
+        if (this.state.thePosition) {
             return (
                 <div className="go-top" onClick={this.scrollToTop}>
                     Go Top
@@ -718,9 +747,30 @@ class DrugDetail extends React.Component {
         }
     }
 
+    myFunction = () => {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0];
+            if (td) {
+                txtValue = td.textContent || td.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+
     render() {
         let that = this;
-        setTimeout(function(){that.setState({timePassed: true})}, 1000);
+        setTimeout(function () {
+            that.setState({timePassed: true})
+        }, 1000);
         const {t} = this.props;
         const drug = this.state.drug;
         const showAdditionalInfo = this.state.showAdditionalInfo;
@@ -749,10 +799,11 @@ class DrugDetail extends React.Component {
                                         <div className="col-md-8 col-12 order-md-1 order-2">
                                             <h4>{drug.name}</h4>
                                             <span className="hidden-xs hidden-sm"
-                                            dangerouslySetInnerHTML={this.createMarkup(t("textinfo_desktop").replace("%XXX%", drug.name))}/>
+                                                  dangerouslySetInnerHTML={this.createMarkup(t("textinfo_desktop").replace("%XXX%", drug.name))}/>
                                         </div>
                                         <div className="col-xs-8 col-md-4 col-12 order-md-2 order-1"><img
-                                            src="/assets/images/epil_circle.png" className="img-responsive" alt="slide"/>
+                                            src="/assets/images/epil_circle.png" className="img-responsive"
+                                            alt="slide"/>
                                         </div>
                                     </div>
                                 </div>
@@ -780,8 +831,8 @@ class DrugDetail extends React.Component {
 
                                 </div>
                                 <div className="modal-body" style={{color: "black"}}>
-                                    <span
-                                        dangerouslySetInnerHTML={this.createMarkup(t("textinfo").replace("%XXX%", drug.name))}/>
+                    <span
+                        dangerouslySetInnerHTML={this.createMarkup(t("textinfo").replace("%XXX%", drug.name))}/>
                                 </div>
                                 <span dangerouslySetInnerHTML={this.createMarkup(t("modal_close"))}/>
                             </div>
@@ -858,7 +909,9 @@ class DrugDetail extends React.Component {
                                 </div>
                                 <div className="modal-body" style={{color: "black"}}>
 
-                                    {this.renderWordExplainations(drug)}
+                                    {this.renderWordExplainationsdesktop(drug)}
+                                    {this.renderWordExplainationsmobile(drug)}
+
                                     <span dangerouslySetInnerHTML={this.createMarkup(t("modal_close"))}/>
                                 </div>
                             </div>
@@ -976,7 +1029,7 @@ class DrugDetail extends React.Component {
                                                 <a href="#tab1"
                                                    aria-controls="tab1"
                                                    role="tab"
-                                                   data-toggle="tab" onClick={this.handleScrollToStats} >Allgemeine
+                                                   data-toggle="tab" onClick={this.handleScrollToStats}>Allgemeine
                                                     Informationen</a></li>
                                             <div id="arrow-down">
                                                 <FontAwesomeIcon icon={faChevronDown}/>
@@ -985,7 +1038,7 @@ class DrugDetail extends React.Component {
                                                 <a href="#tab2"
                                                    aria-controls="tab2"
                                                    role="tab"
-                                                   data-toggle="tab" >Vor der
+                                                   data-toggle="tab">Vor der
                                                     Anwendung </a></li>
                                             <div id="arrow-down">
                                                 <FontAwesomeIcon icon={faChevronDown}/>
@@ -1010,7 +1063,8 @@ class DrugDetail extends React.Component {
                                 </div>
                                 <div className="col-xs-12 col-sm-12 col-md-9 infobox">
                                     <div className="tab-content">
-                                        <div role="tabpanel" className="tab-pane active w3-animate-opacity tab1" id="tab1">
+                                        <div role="tabpanel" className="tab-pane active w3-animate-opacity tab1"
+                                             id="tab1">
                                             <div className="row content_header">
                                                 <h1>Allgemeine Informationen</h1>
                                                 <hr/>
@@ -1095,9 +1149,10 @@ class DrugDetail extends React.Component {
                                                                     .reduce((prev, curr) => [prev, ', ', curr])}
                                                             </div>
                                                             <div className="modal-body" style={{color: "black"}}>
-                                                           <span> {drug.activeSubstance.map(substance =>
-                                                               <span key={substance.id}>{substance.name} ist ein Arzneistoff aus der Gruppe der sogenannten {substance.substanceGroup.name}.</span>)
-                                                               .reduce((prev, curr) => [prev, ', ', curr])} </span>
+                    <span> {drug.activeSubstance.map(substance =>
+                        <span
+                            key={substance.id}>{substance.name} ist ein Arzneistoff aus der Gruppe der sogenannten {substance.substanceGroup.name}.</span>)
+                        .reduce((prev, curr) => [prev, ', ', curr])} </span>
                                                                 {this.renderPackSecMoreSub(drug)}
                                                             </div>
                                                             <span
@@ -1109,9 +1164,9 @@ class DrugDetail extends React.Component {
                                                 <div className="">
                                                     <div className="additional-information">
                                                         <section>
-                                                                {this.renderIndicationGroup(drug)}
-                                                                {this.renderProductGroup(drug)}
-                                                                {this.renderPZN(drug)}
+                                                            {this.renderIndicationGroup(drug)}
+                                                            {this.renderProductGroup(drug)}
+                                                            {this.renderPZN(drug)}
                                                         </section>
                                                     </div>
                                                 </div>}
