@@ -2,6 +2,23 @@
 Navbar
  */
 
+
+.go-top {
+    position: fixed;
+    cursor: pointer;
+    bottom: 30px;
+    right: 0;
+    color: #ffffff;
+    background-color: #c679e3;
+    z-index: 1;
+    width: 90px;
+    text-align: center;
+    height: 45px;
+    border-radius: 10px 0 0 10px;
+    line-height: 46px;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
 .load_css {
     text-align: center;
     padding: 60px 0 60px 0;
@@ -72,19 +89,16 @@ Navbar
 }
 
 #myCarousel .carousel-item h4 {
-    -webkit-animation-name: fadeInLeft;
-    animation-name: fadeInLeft;
     margin-top: 6%;
 }
 
 #myCarousel .carousel-item p {
-    -webkit-animation-name: slideInRight;
-    animation-name: slideInRight;
+
 }
 
 #myCarousel .carousel-item a {
-    -webkit-animation-name: fadeInUp;
-    animation-name: fadeInUp;
+    -webkit-animation-name: slideInRight;
+    animation-name: slideInRight;
     width: 100%;
 }
 

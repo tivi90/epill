@@ -655,4 +655,8 @@
         padding: 10px;
         margin-bottom: 15px;
     }
+
+    .featurette-image{
+        max-width: 190px;
+    }
 }

@@ -26,7 +26,8 @@ class DrugDetail extends React.Component {
         this.state = {
             drug: undefined,
             showAdditionalInfo: false,
-
+            intervalId: 0,
+            thePosition: false
         }
 
         this.toggleShowAdditionalInfo = this.toggleShowAdditionalInfo.bind(this);
@@ -687,7 +688,35 @@ class DrugDetail extends React.Component {
         }));
     }
 
-
+    componentDidMount() {
+        document.addEventListener("scroll", () => {
+            if (window.scrollY > 170) {
+                this.setState({ thePosition: true })
+            } else {
+                this.setState({ thePosition: false })
+            }
+        });
+        window.scrollTo(0, 0);
+    }
+    onScrollStep = () => {
+        if (window.pageYOffset === 0){
+            clearInterval(this.state.intervalId);
+        }
+        window.scroll(0, window.pageYOffset - this.props.scrollStepInPx);
+    }
+    scrollToTop = () => {
+        let intervalId = setInterval(this.onScrollStep, this.props.delayInMs);
+        this.setState({ intervalId: intervalId });
+    }
+    renderGoTopIcon = () => {
+        if (this.state.thePosition){
+            return (
+                <div className="go-top" onClick={this.scrollToTop}>
+                    Go Top
+                </div>
+            )
+        }
+    }
 
     render() {
         let that = this;
@@ -710,7 +739,7 @@ class DrugDetail extends React.Component {
             );
         }
         return (
-            <div>
+            <div onload="window.scroll(0,300);">
                 <div id="myCarousel" className="carousel carousel-fade" data-ride="carousel">
                     <div className="carousel-inner">
                         <div className="carousel-item active item_drug">
@@ -733,7 +762,7 @@ class DrugDetail extends React.Component {
                 </div>
                 <div className="no-banner">
                     {/*Button INFO*/}
-                    <div className="round-button-outer report-round-button round_info">
+                    <div className="round-button-outer report-round-button round_info hidden-lg hidden-md">
                         <div id="reportBtn" className="round-button-inner-main" data-toggle="modal" data-target="#info">
                             <FontAwesomeIcon icon={faInfo}/>
                         </div>
@@ -893,7 +922,9 @@ class DrugDetail extends React.Component {
                                     <div className="drug-features ">
                                         {this.renderDrugFeaturesDesc(drug)}
                                         <div>
-
+                                            <div style={{cursor: "pointer"}} data-toggle="modal"
+                                                 data-target="#infoicons"><i
+                                                className="fas fa-info-circle"/></div>
                                             <div className="modal fade" id="infoicons" tabIndex="-1" role="dialog"
                                                  aria-labelledby="addressLabel"
                                                  aria-hidden="true">
@@ -1130,6 +1161,8 @@ class DrugDetail extends React.Component {
                             Medkamenten</a>
                     </div>
                     {this.renderWordExplaination(drug)}
+                    {this.renderGoTopIcon()}
+
                     <div className="modal fade" id="neben_info" tabIndex="-1" role="dialog" aria-labelledby="neben_info"
                          aria-hidden="true">
                         <div className="modal-dialog modal-lg" role="document">

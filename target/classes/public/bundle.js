@@ -43732,10 +43732,33 @@ var DrugDetail = function (_React$Component) {
 
         var _this = _possibleConstructorReturn(this, (DrugDetail.__proto__ || Object.getPrototypeOf(DrugDetail)).call(this, props));
 
+        _this.onScrollStep = function () {
+            if (window.pageYOffset === 0) {
+                clearInterval(_this.state.intervalId);
+            }
+            window.scroll(0, window.pageYOffset - _this.props.scrollStepInPx);
+        };
+
+        _this.scrollToTop = function () {
+            var intervalId = setInterval(_this.onScrollStep, _this.props.delayInMs);
+            _this.setState({ intervalId: intervalId });
+        };
+
+        _this.renderGoTopIcon = function () {
+            if (_this.state.thePosition) {
+                return _react2.default.createElement(
+                    "div",
+                    { className: "go-top", onClick: _this.scrollToTop },
+                    "Go Top"
+                );
+            }
+        };
+
         _this.state = {
             drug: undefined,
-            showAdditionalInfo: false
-
+            showAdditionalInfo: false,
+            intervalId: 0,
+            thePosition: false
         };
 
         _this.toggleShowAdditionalInfo = _this.toggleShowAdditionalInfo.bind(_this);
@@ -44697,9 +44720,23 @@ var DrugDetail = function (_React$Component) {
             });
         }
     }, {
+        key: "componentDidMount",
+        value: function componentDidMount() {
+            var _this20 = this;
+
+            document.addEventListener("scroll", function () {
+                if (window.scrollY > 170) {
+                    _this20.setState({ thePosition: true });
+                } else {
+                    _this20.setState({ thePosition: false });
+                }
+            });
+            window.scrollTo(0, 0);
+        }
+    }, {
         key: "render",
         value: function render() {
-            var _this20 = this;
+            var _this21 = this;
 
             var that = this;
             setTimeout(function () {
@@ -44724,7 +44761,7 @@ var DrugDetail = function (_React$Component) {
             }
             return _react2.default.createElement(
                 "div",
-                null,
+                { onload: "window.scroll(0,300);" },
                 _react2.default.createElement(
                     "div",
                     { id: "myCarousel", className: "carousel carousel-fade", "data-ride": "carousel" },
@@ -44771,7 +44808,7 @@ var DrugDetail = function (_React$Component) {
                     { className: "no-banner" },
                     _react2.default.createElement(
                         "div",
-                        { className: "round-button-outer report-round-button round_info" },
+                        { className: "round-button-outer report-round-button round_info hidden-lg hidden-md" },
                         _react2.default.createElement(
                             "div",
                             { id: "reportBtn", className: "round-button-inner-main", "data-toggle": "modal", "data-target": "#info" },
@@ -44979,7 +45016,7 @@ var DrugDetail = function (_React$Component) {
                                         "button",
                                         { type: "button", className: "btn btn-like",
                                             onClick: function onClick() {
-                                                return _this20.toggleTaking(drug);
+                                                return _this21.toggleTaking(drug);
                                             } },
                                         _react2.default.createElement("span", {
                                             className: "glyphicon white" + (!drug.isTaken ? " glyphicon-heart" : " glyphicon-minus") })
@@ -44988,7 +45025,7 @@ var DrugDetail = function (_React$Component) {
                                         "button",
                                         { type: "button", className: "btn btn-add",
                                             onClick: function onClick() {
-                                                return _this20.toggleRemember(drug);
+                                                return _this21.toggleRemember(drug);
                                             } },
                                         _react2.default.createElement("span", {
                                             className: "glyphicon white" + (!drug.isRemembered ? " glyphicon-plus" : " glyphicon-minus") })
@@ -45043,6 +45080,13 @@ var DrugDetail = function (_React$Component) {
                                         _react2.default.createElement(
                                             "div",
                                             null,
+                                            _react2.default.createElement(
+                                                "div",
+                                                { style: { cursor: "pointer" }, "data-toggle": "modal",
+                                                    "data-target": "#infoicons" },
+                                                _react2.default.createElement("i", {
+                                                    className: "fas fa-info-circle" })
+                                            ),
                                             _react2.default.createElement(
                                                 "div",
                                                 { className: "modal fade", id: "infoicons", tabIndex: "-1", role: "dialog",
@@ -45491,6 +45535,7 @@ var DrugDetail = function (_React$Component) {
                         )
                     ),
                     this.renderWordExplaination(drug),
+                    this.renderGoTopIcon(),
                     _react2.default.createElement(
                         "div",
                         { className: "modal fade", id: "neben_info", tabIndex: "-1", role: "dialog", "aria-labelledby": "neben_info",
