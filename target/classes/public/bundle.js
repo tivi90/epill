@@ -43732,26 +43732,17 @@ var DrugDetail = function (_React$Component) {
 
         var _this = _possibleConstructorReturn(this, (DrugDetail.__proto__ || Object.getPrototypeOf(DrugDetail)).call(this, props));
 
-        _this.onScrollStep = function () {
-            if (window.pageYOffset === 0) {
-                clearInterval(_this.state.intervalId);
-            }
-            window.scroll(0, window.pageYOffset - _this.props.scrollStepInPx);
-        };
-
         _this.scrollToTop = function () {
-            var intervalId = setInterval(_this.onScrollStep, _this.props.delayInMs);
-            _this.setState({ intervalId: intervalId });
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
         };
 
         _this.renderGoTopIcon = function () {
-            if (_this.state.thePosition) {
-                return _react2.default.createElement(
-                    "div",
-                    { className: "go-top", onClick: _this.scrollToTop },
-                    "Go Top"
-                );
-            }
+            return _react2.default.createElement(
+                "div",
+                null,
+                _react2.default.createElement("span", { onClick: _this.scrollToTop.bind(_this), id: "button_top" })
+            );
         };
 
         _this.myFunction = function () {
@@ -44762,23 +44753,9 @@ var DrugDetail = function (_React$Component) {
             });
         }
     }, {
-        key: "componentDidMount",
-        value: function componentDidMount() {
-            var _this21 = this;
-
-            document.addEventListener("scroll", function () {
-                if (window.scrollY > 170) {
-                    _this21.setState({ thePosition: true });
-                } else {
-                    _this21.setState({ thePosition: false });
-                }
-            });
-            window.scrollTo(0, 0);
-        }
-    }, {
         key: "render",
         value: function render() {
-            var _this22 = this;
+            var _this21 = this;
 
             var that = this;
             setTimeout(function () {
@@ -45060,7 +45037,7 @@ var DrugDetail = function (_React$Component) {
                                         "button",
                                         { type: "button", className: "btn btn-like",
                                             onClick: function onClick() {
-                                                return _this22.toggleTaking(drug);
+                                                return _this21.toggleTaking(drug);
                                             } },
                                         _react2.default.createElement("span", {
                                             className: "glyphicon white" + (!drug.isTaken ? " glyphicon-heart" : " glyphicon-minus") })
@@ -45069,7 +45046,7 @@ var DrugDetail = function (_React$Component) {
                                         "button",
                                         { type: "button", className: "btn btn-add",
                                             onClick: function onClick() {
-                                                return _this22.toggleRemember(drug);
+                                                return _this21.toggleRemember(drug);
                                             } },
                                         _react2.default.createElement("span", {
                                             className: "glyphicon white" + (!drug.isRemembered ? " glyphicon-plus" : " glyphicon-minus") })
@@ -46929,27 +46906,27 @@ var Footer = function (_React$Component) {
                                 )
                             )
                         )
-                    ),
+                    )
+                ),
+                _react2.default.createElement(
+                    "div",
+                    { className: "row" },
                     _react2.default.createElement(
                         "div",
-                        { className: "row leg-room" },
+                        { className: "col-md-12 text-center" },
                         _react2.default.createElement(
-                            "div",
-                            { className: "col-md-12 text-center" },
+                            "h3",
+                            { className: "text-uppercase" },
+                            "ePill"
+                        ),
+                        _react2.default.createElement(
+                            "p",
+                            { className: "monospaced" },
+                            "\xA92019 ePill ",
                             _react2.default.createElement(
-                                "h3",
+                                "span",
                                 { className: "text-uppercase" },
-                                "ePill"
-                            ),
-                            _react2.default.createElement(
-                                "p",
-                                { className: "monospaced" },
-                                "\xA92019 ePill ",
-                                _react2.default.createElement(
-                                    "span",
-                                    { className: "text-uppercase" },
-                                    "All Rights Reserved"
-                                )
+                                "All Rights Reserved"
                             )
                         )
                     )

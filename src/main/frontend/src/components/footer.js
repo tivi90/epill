@@ -73,15 +73,16 @@ class Footer extends React.Component {
                         </div>
                     </div>
 
-                    <div className="row leg-room">
-                        <div className="col-md-12 text-center">
-                            <h3 className="text-uppercase">ePill</h3>
-                            <p className="monospaced">
-                                &copy;2019 ePill <span className="text-uppercase">All Rights Reserved</span>
-                            </p>
-                        </div>
+                </div>
+                <div className="row">
+                    <div className="col-md-12 text-center">
+                        <h3 className="text-uppercase">ePill</h3>
+                        <p className="monospaced">
+                            &copy;2019 ePill <span className="text-uppercase">All Rights Reserved</span>
+                        </p>
                     </div>
                 </div>
+
             </footer>
         );
     }
