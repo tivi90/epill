@@ -21,6 +21,7 @@
    
 package com.doccuty.epill.iteminvocation;
 
+
 import de.uniks.networkparser.interfaces.SendableEntity;
 import java.beans.PropertyChangeSupport;
 import java.util.Date;
@@ -43,7 +44,6 @@ import java.beans.PropertyChangeListener;
 import com.doccuty.epill.drug.Drug;
 import com.doccuty.epill.packagingsection.PackagingSection;
 import com.doccuty.epill.user.User;
-
 
 @Entity
 @Table(name="item_invocation")

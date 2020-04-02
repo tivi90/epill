@@ -45527,6 +45527,21 @@ var DrugDetail = function (_React$Component) {
                                         _react2.default.createElement(
                                             "div",
                                             { role: "tabpanel", className: "tab-pane w3-animate-opacity", id: "tab4" },
+                                            _react2.default.createElement(
+                                                "div",
+                                                { "class": "row content_header" },
+                                                _react2.default.createElement(
+                                                    "h1",
+                                                    null,
+                                                    " Nebenwirkungen "
+                                                ),
+                                                _react2.default.createElement("hr", null),
+                                                _react2.default.createElement(
+                                                    "p",
+                                                    null,
+                                                    "Wie alle Arzneimittel kann auch dieses Arzneimittel Nebenwirkungen haben, die aber nicht bei jedem auftreten m\xFCssen."
+                                                )
+                                            ),
                                             this.renderPackSecneben(drug),
                                             _react2.default.createElement(
                                                 "div",

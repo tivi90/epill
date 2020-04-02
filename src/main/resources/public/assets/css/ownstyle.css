@@ -17,6 +17,7 @@ Navbar
     visibility: hidden;
     z-index: 1000;
 }
+
 #button_top::after {
     content: "\f077";
     font-family: FontAwesome;
@@ -26,13 +27,16 @@ Navbar
     line-height: 50px;
     color: #fff;
 }
+
 #button_top:hover {
     cursor: pointer;
     background-color: #333;
 }
+
 #button_top:active {
     background-color: #555;
 }
+
 #button_top.show {
     opacity: 1;
     visibility: visible;
@@ -57,14 +61,30 @@ Navbar
 }
 
 .red {
-    color: red!important;
+    color: red !important;
 }
 
-.black{
-    color: black!important;
+.black {
+    color: black !important;
 }
 
-.size40{
+.brightgreen {
+    background-color: #87fb876b;
+}
+
+.brightred {
+    background-color: #ffc6c68a;
+}
+
+.brightyellow {
+    background-color: #ffff8f85;
+}
+
+.brightgrey {
+    background-color: #e4e4e470;
+}
+
+.size40 {
     font-size: 40px;
 }
 

@@ -131,6 +131,29 @@
     border-color: #0da59b;
 }
 
+.neben_tile {
+    border: solid 1px black;
+    height: 144px;
+    text-align: center;
+    display: inline-table;
+    align-items: center;
+    justify-content: center;
+    padding: 43px;
+    cursor: pointer;
+}
+
+.neben_tile:hover{
+    background-color: #26a076;
+    color: white;
+}
+
+.neben_tile h1 {
+    font-size: 20px;
+    vertical-align: middle;
+    margin-top: 0;
+}
+
+
 .img-drugform {
     width: 90%;
 }
@@ -519,10 +542,10 @@
     border: none !important;
 }
 
-.alertinfo{
+.alertinfo {
     background-color: #ffffff9c !important;
     padding: 12px !important;
-    font-size: 14px!important;
+    font-size: 14px !important;
 
 }
 
@@ -667,7 +690,7 @@
         margin-bottom: 15px;
     }
 
-    .featurette-image{
+    .featurette-image {
         max-width: 190px;
     }
 }

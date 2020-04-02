@@ -6,6 +6,7 @@
 /home/tivi90/epill_t/src/main/java/com/doccuty/epill/model/PackagingAddress.java
 /home/tivi90/epill_t/src/main/java/com/doccuty/epill/drug/Drug.java
 /home/tivi90/epill_t/src/main/java/com/doccuty/epill/model/util/DiseaseSet.java
+/home/tivi90/epill_t/src/main/java/com/doccuty/epill/sideeffectcontent/SideEffectContentRepository.java
 /home/tivi90/epill_t/src/main/java/com/doccuty/epill/model/util/ProductGroupCreator.java
 /home/tivi90/epill_t/src/main/java/com/doccuty/epill/model/util/GenderCreator.java
 /home/tivi90/epill_t/src/main/java/com/doccuty/epill/image/Image.java
@@ -20,6 +21,7 @@
 /home/tivi90/epill_t/src/main/java/com/doccuty/epill/authentication/LoginAttemptRepository.java
 /home/tivi90/epill_t/src/main/java/com/doccuty/epill/tailoredtext/TailoredText.java
 /home/tivi90/epill_t/src/main/java/com/doccuty/epill/packagingsection/PackagingSectionService.java
+/home/tivi90/epill_t/src/main/java/com/doccuty/epill/model/SideEffect.java
 /home/tivi90/epill_t/src/main/java/com/doccuty/epill/model/PackagingTopic.java
 /home/tivi90/epill_t/src/main/java/com/doccuty/epill/model/Packaging.java
 /home/tivi90/epill_t/src/main/java/com/doccuty/epill/tailoredtext/TailoredTextRepository.java
@@ -30,12 +32,14 @@
 /home/tivi90/epill_t/src/main/java/com/doccuty/epill/language/LanguageService.java
 /home/tivi90/epill_t/src/main/java/com/doccuty/epill/model/util/ImageCreator.java
 /home/tivi90/epill_t/src/main/java/com/doccuty/epill/model/util/WordExplainationCreator.java
+/home/tivi90/epill_t/src/main/java/com/doccuty/epill/model/util/SideEffectContentCreator.java
 /home/tivi90/epill_t/src/main/java/com/doccuty/epill/model/util/GenderSet.java
 /home/tivi90/epill_t/src/main/java/com/doccuty/epill/packagingsection/PackagingSectionRepository.java
 /home/tivi90/epill_t/src/main/java/com/doccuty/epill/model/util/WordExplainationSet.java
 /home/tivi90/epill_t/src/main/java/com/doccuty/epill/model/util/PackagingSet.java
 /home/tivi90/epill_t/src/main/java/com/doccuty/epill/model/util/IntakeInformationSet.java
 /home/tivi90/epill_t/src/main/java/com/doccuty/epill/language/LanguageController.java
+/home/tivi90/epill_t/src/main/java/com/doccuty/epill/drug/SideEffectRepository.java
 /home/tivi90/epill_t/src/main/java/com/doccuty/epill/model/WordExplaination.java
 /home/tivi90/epill_t/src/main/java/com/doccuty/epill/model/util/PackagingSectionCreator.java
 /home/tivi90/epill_t/src/main/java/com/doccuty/epill/model/DrugFeature.java
@@ -51,14 +55,17 @@
 /home/tivi90/epill_t/src/main/java/com/doccuty/epill/model/IndicationGroup.java
 /home/tivi90/epill_t/src/main/java/com/doccuty/epill/model/util/LanguageCreator.java
 /home/tivi90/epill_t/src/main/java/com/doccuty/epill/model/IntakeInformation.java
+/home/tivi90/epill_t/src/main/java/com/doccuty/epill/sideeffectcontent/SideEffectContent.java
 /home/tivi90/epill_t/src/main/java/com/doccuty/epill/drug/PharmaceuticalFormRepository.java
 /home/tivi90/epill_t/src/main/java/com/doccuty/epill/model/util/IndicationGroupCreator.java
 /home/tivi90/epill_t/src/main/java/com/doccuty/epill/model/ProductGroup.java
 /home/tivi90/epill_t/src/main/java/com/doccuty/epill/gender/GenderService.java
 /home/tivi90/epill_t/src/main/java/com/doccuty/epill/model/util/PackagingAddressCreator.java
 /home/tivi90/epill_t/src/main/java/com/doccuty/epill/model/util/ProductGroupSet.java
+/home/tivi90/epill_t/src/main/java/com/doccuty/epill/sideeffectcontent/SideEffectContentService.java
 /home/tivi90/epill_t/src/main/java/com/doccuty/epill/image/ImageController.java
 /home/tivi90/epill_t/src/main/java/com/doccuty/epill/language/Language.java
+/home/tivi90/epill_t/src/main/java/com/doccuty/epill/model/util/SideEffectContentSet.java
 /home/tivi90/epill_t/src/main/java/com/doccuty/epill/model/util/LanguageSet.java
 /home/tivi90/epill_t/src/main/java/com/doccuty/epill/packagingsection/PackagingSectionController.java
 /home/tivi90/epill_t/src/main/java/com/doccuty/epill/model/util/CountrySet.java
@@ -89,6 +96,7 @@
 /home/tivi90/epill_t/src/main/java/com/doccuty/epill/model/util/PackagingCreator.java
 /home/tivi90/epill_t/src/main/java/com/doccuty/epill/model/util/CreatorCreator.java
 /home/tivi90/epill_t/src/main/java/com/doccuty/epill/authentication/JWTFilter.java
+/home/tivi90/epill_t/src/main/java/com/doccuty/epill/model/util/SideEffectSet.java
 /home/tivi90/epill_t/src/main/java/com/doccuty/epill/model/util/IndicationGroupSet.java
 /home/tivi90/epill_t/src/main/java/com/doccuty/epill/user/UserController.java
 /home/tivi90/epill_t/src/main/java/com/doccuty/epill/country/CountryRepository.java
@@ -98,6 +106,7 @@
 /home/tivi90/epill_t/src/main/java/com/doccuty/epill/util/AddressService.java
 /home/tivi90/epill_t/src/main/java/com/doccuty/epill/model/util/SubstanceGroupCreator.java
 /home/tivi90/epill_t/src/main/java/com/doccuty/epill/drug/WordExplainationRepository.java
+/home/tivi90/epill_t/src/main/java/com/doccuty/epill/model/util/SideEffectCreator.java
 /home/tivi90/epill_t/src/main/java/com/doccuty/epill/disease/DiseaseRepository.java
 /home/tivi90/epill_t/src/main/java/com/doccuty/epill/model/util/PackagingAddressSet.java
 /home/tivi90/epill_t/src/main/java/com/doccuty/epill/disease/DiseaseService.java

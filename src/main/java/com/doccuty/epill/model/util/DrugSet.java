@@ -34,6 +34,7 @@ import com.doccuty.epill.iteminvocation.ItemInvocation;
 import com.doccuty.epill.model.ActiveSubstance;
 import com.doccuty.epill.model.util.ProductGroupSet;
 import com.doccuty.epill.packagingsection.PackagingSection;
+import com.doccuty.epill.sideeffectcontent.SideEffectContent;
 import com.doccuty.epill.model.ProductGroup;
 import com.doccuty.epill.model.util.IndicationGroupSet;
 import com.doccuty.epill.model.IndicationGroup;
@@ -43,6 +44,7 @@ import com.doccuty.epill.model.PharmaceuticalForm;
 import com.doccuty.epill.model.WordExplaination;
 import com.doccuty.epill.model.util.AdverseEffectSet;
 import com.doccuty.epill.model.AdverseEffect;
+import com.doccuty.epill.model.SideEffect;
 import com.doccuty.epill.model.util.InteractionSet;
 import com.doccuty.epill.model.Interaction;
 import com.doccuty.epill.model.util.ItemInvocationSet;
@@ -273,6 +275,88 @@ public class DrugSet extends HashSet<Drug>
    }
 
    /**
+    * Loop through the current set of Drug objects and collect a set of the PackagingSection objects reached via packagingSection.
+    *
+    * @return Set of PackagingSection objects reachable via packagingSection
+    */
+   public SideEffectContentSet getSideEffectContent()
+   {
+      SideEffectContentSet result = new SideEffectContentSet();
+
+      for (Drug obj : this)
+      {
+         result.with(obj.getSideEffectContent());
+      }
+
+      return result;
+   }
+
+   /**
+    * Loop through the current set of Drug objects and collect all contained objects with reference packagingSection pointing to the object passed as parameter.
+    *
+    * @param value The object required as packagingSection neighbor of the collected results.
+    *
+    * @return Set of PackagingSection objects referring to value via packagingSection
+    */
+   public DrugSet filterSideEffectContent(Object value)
+   {
+      ObjectSet neighbors = new ObjectSet();
+
+      if (value instanceof Collection)
+      {
+         neighbors.addAll((Collection<?>) value);
+      }
+      else
+      {
+         neighbors.add(value);
+      }
+
+      DrugSet answer = new DrugSet();
+
+      for (Drug obj : this)
+      {
+         if ( ! Collections.disjoint(neighbors, obj.getSideEffectContent()))
+         {
+            answer.add(obj);
+         }
+      }
+
+      return answer;
+   }
+
+   /**
+    * Loop through current set of ModelType objects and attach the Drug object passed as parameter to the PackagingSection attribute of each of it.
+    *
+    * @return The original set of ModelType objects now with the new neighbor attached to their PackagingSection attributes.
+    */
+   public DrugSet withSideEffectContent(SideEffectContent value)
+   {
+      for (Drug obj : this)
+      {
+         obj.withSideEffectContent(value);
+      }
+
+      return this;
+   }
+
+   /**
+    * Loop through current set of ModelType objects and remove the Drug object passed as parameter from the PackagingSection attribute of each of it.
+    *
+    * @return The original set of ModelType objects now without the old neighbor.
+    */
+   public DrugSet withoutSideEffectContent(SideEffectContent value)
+   {
+      for (Drug obj : this)
+      {
+         obj.withoutSideEffectContent(value);
+      }
+
+      return this;
+   }
+
+
+
+   /**
     * Loop through the current set of Drug objects and collect a set of the PackagingSection objects reached via packagingSection. 
     * 
     * @return Set of PackagingSection objects reachable via packagingSection
@@ -324,7 +408,7 @@ public class DrugSet extends HashSet<Drug>
 
    /**
     * Loop through current set of ModelType objects and attach the Drug object passed as parameter to the PackagingSection attribute of each of it. 
-    * 
+    *
     * @return The original set of ModelType objects now with the new neighbor attached to their PackagingSection attributes.
     */
    public DrugSet withPackagingSection(PackagingSection value)
@@ -333,13 +417,13 @@ public class DrugSet extends HashSet<Drug>
       {
          obj.withPackagingSection(value);
       }
-      
+
       return this;
    }
 
    /**
     * Loop through current set of ModelType objects and remove the Drug object passed as parameter from the PackagingSection attribute of each of it. 
-    * 
+    *
     * @return The original set of ModelType objects now without the old neighbor.
     */
    public DrugSet withoutPackagingSection(PackagingSection value)
@@ -348,7 +432,7 @@ public class DrugSet extends HashSet<Drug>
       {
          obj.withoutPackagingSection(value);
       }
-      
+
       return this;
    }
 

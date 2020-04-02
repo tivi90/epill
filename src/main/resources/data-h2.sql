@@ -533,6 +533,22 @@ INSERT INTO drug_drug_feature (iddrug, iddrug_feature) VALUES (14,12);
 
 
 
+--
+-- Dumping data for table `side_Effect`
+--
+INSERT INTO side_effect (id, side_effect, description_drug ) VALUES (1,'hauefig','
+<p>Tierversuche sind in §7 (2) Tierschutzgesetz definiert als „Eingriffe oder Behandlungen zu Versuchszwecken an Tieren
+    oder am Erbgut von Tieren, wenn sie mit Schmerzen, Leiden oder Schäden für die Tiere verbunden sein können oder dazu
+    führen können, dass Tiere geboren werden (…), die Schmerzen, Leiden oder Schäden erleiden.“ Tierversuche sind auch
+    Eingriffe oder Behandlungen, die nicht Versuchszwecken dienen, zur<ul>
+        <li> Herstellung, Gewinnung, Aufbewahrung oder Vermehrung von Stoffen, Produkten oder Organismen</li>
+        <li> Organ- oder Gewebeentnahme, um diese zu wissenschaftlichen Zwecken zu kultivieren, transplantieren,
+            untersuchen</li>
+        <li>Verwendung zu Aus-, Fort- oder Weiterbildungszwecken </li>
+    </ul><b>Bei diesem Medikament wurden keine Tierversuche durchgeführt.</b></p>
+');
+
+
 -- Dumping data for table `drug_feature`
 --
 
@@ -1677,6 +1693,51 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
     <h3> Nebenwirkungen für Erwachsene <i class="fas fa-male"></i> <i class="fas fa-blind"></i> </h3>
     <hr>
 </div>
+
+<div class="row">
+    <div class="col-lg-6 neben_tile brightgreen">
+        <h1>Sehr häufig</h1>
+        <p>mehr als 1 Behandelten von 10
+        </p>
+    </div>
+    <div class="col-lg-6 neben_tile brightgreen">
+        <h1>Häufig</h1>
+        <p>1 bis 10 Behandelte von 100
+        </p>
+    </div>
+    <div class="col-lg-12 neben_tile brightyellow">
+        <h1>Gelegentlich</h1>
+        <p>1 bis 10 Behandelte von 1.000
+        </p>
+    </div>
+    <div class="col-lg-6 neben_tile brightred">
+        <h1>Selten</h1>
+        <p>1 bis 10 Behandelte von 10.000
+        </p>
+    </div>
+    <div class="col-lg-6 neben_tile brightred">
+        <h1>Sehr selten</h1>
+        <p>weniger als 1 Behandelten von 10.000
+        </p>
+    </div>
+    <div class="col-lg-12 neben_tile brightgrey">
+        <h1>Nicht bekannt</h1>
+        <p>Häufigkeit auf Grundlage der verfügbaren Daten nicht abschätzbar
+        </p>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
 <table class="sideffect_table hidden-xs">
     <thead>
         <tr>

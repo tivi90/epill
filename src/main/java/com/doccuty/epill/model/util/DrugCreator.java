@@ -22,6 +22,7 @@
 package com.doccuty.epill.model.util;
 
 import com.doccuty.epill.model.*;
+import com.doccuty.epill.sideeffectcontent.SideEffectContent;
 import de.uniks.networkparser.interfaces.SendableEntityCreator;
 import de.uniks.networkparser.interfaces.SendableEntityCreatorNoIndex;
 
@@ -35,6 +36,7 @@ import com.doccuty.epill.image.Image;
 import com.doccuty.epill.iteminvocation.ItemInvocation;
 import com.doccuty.epill.packagingsection.PackagingSection;
 
+
 public class DrugCreator implements SendableEntityCreatorNoIndex {
     private final String[] properties = new String[]
             {
@@ -42,6 +44,7 @@ public class DrugCreator implements SendableEntityCreatorNoIndex {
                     Drug.PROPERTY_NAME,
                     Drug.PROPERTY_PACKAGING,
                     Drug.PROPERTY_PACKAGINGSECTION,
+                    Drug.PROPERTY_SIDEEFFECTCONTENT,
                     Drug.PROPERTY_ADVERSEEFFECTS,
                     Drug.PROPERTY_ACTIVESUBSTANCE,
                     Drug.PROPERTY_PHARMACEUTICALFORM,
@@ -52,6 +55,7 @@ public class DrugCreator implements SendableEntityCreatorNoIndex {
                     //Drug.PROPERTY_CLICKS,
                     Drug.PROPERTY_DISEASE,
                     Drug.PROPERTY_DRUGFEATURE,
+                    Drug.PROPERTY_SIDEEFFECT,
                     Drug.PROPERTY_TAILOREDSUMMARY,
                     Drug.PROPERTY_IMAGE,
                     Drug.PROPERTY_REMEMBERED,
@@ -162,6 +166,12 @@ public class DrugCreator implements SendableEntityCreatorNoIndex {
 
         if (Drug.PROPERTY_DRUGFEATURE.equalsIgnoreCase(attribute)) {
             return ((Drug) target).getDrugFeature();
+        }
+        if (Drug.PROPERTY_SIDEEFFECT.equalsIgnoreCase(attribute)) {
+            return ((Drug) target).getSideEffect();
+        }
+        if (Drug.PROPERTY_SIDEEFFECTCONTENT.equalsIgnoreCase(attribute)) {
+            return ((Drug) target).getSideEffectContent();
         }
 
 
@@ -322,6 +332,19 @@ public class DrugCreator implements SendableEntityCreatorNoIndex {
 
         if (Drug.PROPERTY_DRUGFEATURE.equalsIgnoreCase(attrName)) {
             ((Drug) target).withDrugFeature((DrugFeature) value);
+            return true;
+        }
+        if (Drug.PROPERTY_SIDEEFFECT.equalsIgnoreCase(attrName)) {
+            ((Drug) target).withSideEffect((SideEffect) value);
+            return true;
+        }
+        if (Drug.PROPERTY_SIDEEFFECTCONTENT.equalsIgnoreCase(attrName)) {
+            ((Drug) target).withSideEffectContent((SideEffectContent) value);
+            return true;
+        }
+
+        if ((Drug.PROPERTY_SIDEEFFECTCONTENT + SendableEntityCreator.REMOVE).equalsIgnoreCase(attrName)) {
+            ((Drug) target).withoutSideEffectContent((SideEffectContent) value);
             return true;
         }
 

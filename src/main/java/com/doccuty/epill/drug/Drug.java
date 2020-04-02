@@ -19,6 +19,7 @@
    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. 
  */
 
+
 package com.doccuty.epill.drug;
 
 import java.util.ArrayList;
@@ -48,9 +49,12 @@ import com.doccuty.epill.model.Interaction;
 import com.doccuty.epill.model.util.ItemInvocationSet;
 import com.doccuty.epill.model.util.UserSet;
 import com.doccuty.epill.packagingsection.PackagingSection;
+import com.doccuty.epill.sideeffectcontent.SideEffectContent;
 import com.doccuty.epill.user.User;
 import com.doccuty.epill.model.Packaging;
 import com.doccuty.epill.model.DrugFeature;
+import com.doccuty.epill.model.SideEffect;
+
 
 @Entity
 @Table(name = "drug")
@@ -61,6 +65,7 @@ public class Drug extends SimpleDrug {
 		setProductGroup(null);
 		setIndicationGroup(null);
 		withoutPackagingSection(this.getPackagingSection().toArray(new PackagingSection[this.getPackagingSection().size()]));
+		withoutSideEffectContent(this.getSideEffectContent().toArray(new SideEffectContent[this.getSideEffectContent().size()]));
 		withoutActiveSubstance(this.getActiveSubstance().toArray(new ActiveSubstance[this.getActiveSubstance().size()]));
 		withoutPharmaceuticalForm(this.getPharmaceuticalForm().toArray(new PharmaceuticalForm[this.getPharmaceuticalForm().size()]));
 		withoutWordExplaination(this.getWordExplaination().toArray(new WordExplaination[this.getWordExplaination().size()]));
@@ -68,6 +73,7 @@ public class Drug extends SimpleDrug {
 		withoutInteraction(this.getInteraction().toArray(new Interaction[this.getInteraction().size()]));
 		withoutClicks(this.getClicks().toArray(new ItemInvocation[this.getClicks().size()]));
 		withoutDisease(this.getDisease().toArray(new Disease[this.getDisease().size()]));
+		withoutSideEffect(this.getSideEffect().toArray(new SideEffect[this.getSideEffect().size()]));
 		firePropertyChange("REMOVE_YOU", this, null);
 	}
 
@@ -143,6 +149,66 @@ public class Drug extends SimpleDrug {
 	 * </pre>
 	 */
 
+	public static final String PROPERTY_SIDEEFFECTCONTENT = "sideeffectContent";
+
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "drug")
+	private List<SideEffectContent> sideeffectContent = null;
+
+	public List<SideEffectContent> getSideEffectContent() {
+		if (this.sideeffectContent == null) {
+			return new ArrayList<SideEffectContent>();
+		}
+
+		return this.sideeffectContent;
+	}
+
+	public Drug withSideEffectContent(SideEffectContent... value) {
+		if (value == null) {
+			return this;
+		}
+		for (SideEffectContent item : value) {
+			if (item != null) {
+				if (this.sideeffectContent == null) {
+					this.sideeffectContent = new ArrayList<SideEffectContent>();
+				}
+
+				boolean changed = this.sideeffectContent.add(item);
+
+				if (changed) {
+					item.withDrug(this);
+					firePropertyChange(PROPERTY_PACKAGINGSECTION, null, item);
+				}
+			}
+		}
+		return this;
+	}
+
+	public Drug withoutSideEffectContent(SideEffectContent... value) {
+		for (SideEffectContent item : value) {
+			if ((this.sideeffectContent != null) && (item != null)) {
+				if (this.sideeffectContent.remove(item)) {
+					item.setDrug(null);
+					firePropertyChange(PROPERTY_SIDEEFFECTCONTENT, item, null);
+				}
+			}
+		}
+		return this;
+	}
+
+	public SideEffectContent createSideEffectContent() {
+		SideEffectContent value = new SideEffectContent();
+		withSideEffectContent(value);
+		return value;
+	}
+
+	/********************************************************************
+	 * <pre>
+	 *              one                       many
+	 * Drug ----------------------------------- PackagingSection
+	 *              drug                   packagingSection
+	 * </pre>
+	 */
+
 	public static final String PROPERTY_PACKAGINGSECTION = "packagingSection";
 
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "drug")
@@ -194,6 +260,7 @@ public class Drug extends SimpleDrug {
 		withPackagingSection(value);
 		return value;
 	}
+
 
 	/********************************************************************
 	 * <pre>
@@ -255,6 +322,70 @@ public class Drug extends SimpleDrug {
 		withDrugFeature(value);
 		return value;
 	}
+
+	/********************************************************************
+	 * <pre>
+	 *              many                       many
+	 * Drug ----------------------------------- Drug
+	 *              drug                   	sideEffect
+	 * </pre>
+	 */
+
+	public static final String PROPERTY_SIDEEFFECT = "sideEffect";
+
+	@ManyToMany(cascade = CascadeType.MERGE)
+	@JoinTable(name = "drug_side_effect", joinColumns = @JoinColumn(name = "iddrug"), inverseJoinColumns = @JoinColumn(name = "idside_effect"))
+	private List<SideEffect> sideEffect = null;
+
+	public List<SideEffect> getSideEffect() {
+		if (this.sideEffect == null) {
+			return new ArrayList<SideEffect>();
+		}
+
+		return this.sideEffect;
+	}
+
+	public Drug withSideEffect(SideEffect... value) {
+		if (value == null) {
+			return this;
+		}
+		for (SideEffect item : value) {
+			if (item != null) {
+				if (this.sideEffect == null) {
+					this.sideEffect = new ArrayList<SideEffect>();
+				}
+
+				boolean changed = this.sideEffect.add(item);
+
+				if (changed) {
+					item.withDrug(this);
+					firePropertyChange(PROPERTY_ACTIVESUBSTANCE, null, item);
+				}
+			}
+		}
+		return this;
+	}
+
+	public Drug withoutSideEffect(SideEffect... value) {
+		for (SideEffect item : value) {
+			if ((this.sideEffect != null) && (item != null)) {
+				if (this.sideEffect.remove(item)) {
+					item.withoutDrug(this);
+					firePropertyChange(PROPERTY_ACTIVESUBSTANCE, item, null);
+				}
+			}
+		}
+		return this;
+	}
+
+	public SideEffect createSideEffect() {
+		SideEffect value = new SideEffect();
+		withSideEffect(value);
+		return value;
+	}
+
+
+
 
 	/********************************************************************
 	 * <pre>

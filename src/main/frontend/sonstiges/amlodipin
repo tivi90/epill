@@ -88,15 +88,19 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                     <div class="row">
                         <div class="col-xs-10 nopadd">
                             <b> Kinder</b><br>
-                            Bei Kindern unter 6 Jahren wurde Amlodipin nicht untersucht. <br>
-                            Amlodipin (besilat) Dexcel 5 mg kann nur bei Kindern und
-                            Jugendlichen mit Bluthochdruck im Alter von 6 bis
-                            17 Jahren angewendet werden
+
                         </div>
                         <div class="col-xs-2">
                             <img width="32" src="./../../assets/disease/child.svg">
                         </div>
                     </div>
+                    <div class="row">
+                        Bei Kindern unter 6 Jahren wurde Amlodipin nicht untersucht. <br>
+                        Amlodipin (besilat) Dexcel 5 mg kann nur bei Kindern und
+                        Jugendlichen mit Bluthochdruck im Alter von 6 bis
+                        17 Jahren angewendet werden
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -469,12 +473,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
 </div>
 ',12,5);
 INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (105,0,'
-<div class="row content_header">
-    <h1> Nebenwirkungen </h1>
-    <hr>
-    Wie alle Arzneimittel kann auch dieses Arzneimittel Nebenwirkungen haben, die aber nicht
-    bei jedem auftreten müssen.
-</div>
+
 <div class="alert alert-info" style="margin-top: 15px;">
     Suchen Sie sofort Ihren Arzt auf, wenn bei Ihnen nach der Einnahme dieses Arzneimittels
     die folgenden Nebenwirkungen auftreten:

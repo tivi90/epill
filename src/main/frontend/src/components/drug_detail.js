@@ -1177,6 +1177,14 @@ class DrugDetail extends React.Component {
                                             {this.renderPackSecdos(drug)}
                                         </div>
                                         <div role="tabpanel" className="tab-pane w3-animate-opacity" id="tab4">
+                                            <div class="row content_header">
+                                                <h1> Nebenwirkungen </h1>
+                                                <hr/>
+                                                <p>Wie alle Arzneimittel kann auch dieses Arzneimittel Nebenwirkungen
+                                                    haben, die aber nicht
+                                                    bei jedem auftreten müssen.</p>
+
+                                            </div>
                                             {this.renderPackSecneben(drug)}
                                             {/*Button REPORT*/}
                                             <div className="text-right">

@@ -141,55 +141,55 @@ public class PackagingSection implements SendableEntity {
 	public static final String PROPERTY_STATE = "state";
 
 	private int state;
-	
+
 	public int getState()
 	{
-	   return this.state;
+		return this.state;
 	}
-	
+
 	public void setState(int value)
 	{
-	   if (this.state != value) {
-	   
-	      int oldValue = this.state;
-	      this.state = value;
-	      this.firePropertyChange(PROPERTY_STATE, oldValue, value);
-	   }
+		if (this.state != value) {
+
+			int oldValue = this.state;
+			this.state = value;
+			this.firePropertyChange(PROPERTY_STATE, oldValue, value);
+		}
 	}
-	
+
 	public PackagingSection withState(int value)
 	{
-	   setState(value);
-	   return this;
+		setState(value);
+		return this;
 	}
-	
-	
+
+
 	// ==========================================================================
 
 	public static final String PROPERTY_ISTAILORED = "isTailored";
 
 	@Transient
 	private boolean isTailored = false;
-	
+
 	public boolean getIsTailored()
 	{
-	   return this.isTailored;
+		return this.isTailored;
 	}
-	
+
 	public void setIsTailored(boolean value)
 	{
-	   if (this.isTailored != value) {
-	   
-	      boolean oldValue = this.isTailored;
-	      this.isTailored = value;
-	      this.firePropertyChange(PROPERTY_ISTAILORED, oldValue, value);
-	   }
+		if (this.isTailored != value) {
+
+			boolean oldValue = this.isTailored;
+			this.isTailored = value;
+			this.firePropertyChange(PROPERTY_ISTAILORED, oldValue, value);
+		}
 	}
-	
+
 	public PackagingSection withIsTailored(boolean value)
 	{
-	   setIsTailored(value);
-	   return this;
+		setIsTailored(value);
+		return this;
 	}
 
 	// ==========================================================================
@@ -201,25 +201,25 @@ public class PackagingSection implements SendableEntity {
 	private PackagingTopic topic;
 
 	public PackagingTopic getTopic()
-   {
-      return this.topic;
-   }
+	{
+		return this.topic;
+	}
 
 	public void setTopic(PackagingTopic value)
-   {
-      if (this.topic != value) {
-      
-         PackagingTopic oldValue = this.topic;
-         this.topic = value;
-         this.firePropertyChange(PROPERTY_TOPIC, oldValue, value);
-      }
-   }
+	{
+		if (this.topic != value) {
+
+			PackagingTopic oldValue = this.topic;
+			this.topic = value;
+			this.firePropertyChange(PROPERTY_TOPIC, oldValue, value);
+		}
+	}
 
 	public PackagingSection withTopic(PackagingTopic value)
-   {
-      setTopic(value);
-      return this;
-   }
+	{
+		setTopic(value);
+		return this;
+	}
 
 
 
@@ -231,25 +231,25 @@ public class PackagingSection implements SendableEntity {
 	private String text;
 
 	public String getText()
-   {
-      return this.text;
-   }
+	{
+		return this.text;
+	}
 
 	public void setText(String value)
-   {
-      if ( ! EntityUtil.stringEquals(this.text, value)) {
-      
-         String oldValue = this.text;
-         this.text = value;
-         this.firePropertyChange(PROPERTY_TEXT, oldValue, value);
-      }
-   }
+	{
+		if ( ! EntityUtil.stringEquals(this.text, value)) {
+
+			String oldValue = this.text;
+			this.text = value;
+			this.firePropertyChange(PROPERTY_TEXT, oldValue, value);
+		}
+	}
 
 	public PackagingSection withText(String value)
-   {
-	   setText(value);
-      return this;
-   }
+	{
+		setText(value);
+		return this;
+	}
 
 	// ==========================================================================
 
@@ -280,87 +280,87 @@ public class PackagingSection implements SendableEntity {
 	}
 
 	/********************************************************************
-    * <pre>
-    *              many                       one
-    * PackagingSection ----------------------------------- Drug
-    *              packagingSection                   drug
-    * </pre>
-    */
-   
-   public static final String PROPERTY_DRUG = "drug";
+	 * <pre>
+	 *              many                       one
+	 * PackagingSection ----------------------------------- Drug
+	 *              packagingSection                   drug
+	 * </pre>
+	 */
+
+	public static final String PROPERTY_DRUG = "drug";
 
 	@ManyToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "iddrug")
 	private Drug drug = null;
 
 	public Drug getDrug()
-   {
-      return this.drug;
-   }
+	{
+		return this.drug;
+	}
 
 	public boolean setDrug(Drug value)
-   {
-      boolean changed = false;
-      
-      if (this.drug != value)
-      {
-         Drug oldValue = this.drug;
-         
-         if (this.drug != null)
-         {
-            this.drug = null;
-            oldValue.withoutPackagingSection(this);
-         }
-         
-         this.drug = value;
-         
-         if (value != null)
-         {
-            value.withPackagingSection(this);
-         }
-         
-         firePropertyChange(PROPERTY_DRUG, oldValue, value);
-         changed = true;
-      }
-      
-      return changed;
-   }
+	{
+		boolean changed = false;
+
+		if (this.drug != value)
+		{
+			Drug oldValue = this.drug;
+
+			if (this.drug != null)
+			{
+				this.drug = null;
+				oldValue.withoutPackagingSection(this);
+			}
+
+			this.drug = value;
+
+			if (value != null)
+			{
+				value.withPackagingSection(this);
+			}
+
+			firePropertyChange(PROPERTY_DRUG, oldValue, value);
+			changed = true;
+		}
+
+		return changed;
+	}
 
 	public PackagingSection withDrug(Drug value)
-   {
-      setDrug(value);
-      return this;
-   }
+	{
+		setDrug(value);
+		return this;
+	}
 
 	public Drug createDrug()
-   {
-      Drug value = new Drug();
-      withDrug(value);
-      return value;
-   }
+	{
+		Drug value = new Drug();
+		withDrug(value);
+		return value;
+	}
 
 	/********************************************************************
-    * <pre>
-    *              one                       many
-    * PackagingSection ----------------------------------- ItemInvocation
-    *              packagingSection                   clicks
-    * </pre>
-    */
-   
-   public static final String PROPERTY_CLICKS = "clicks";
+	 * <pre>
+	 *              one                       many
+	 * PackagingSection ----------------------------------- ItemInvocation
+	 *              packagingSection                   clicks
+	 * </pre>
+	 */
+
+	public static final String PROPERTY_CLICKS = "clicks";
 
 	@OneToMany(cascade=CascadeType.ALL, mappedBy="packagingSection")
-   private Set<ItemInvocation> clicks = null;
+	private Set<ItemInvocation> clicks = null;
 
 	public Set<ItemInvocation> getClicks()
-   {
-      if (this.clicks == null)
-      {
-         return ItemInvocationSet.EMPTY_SET;
-      }
-   
-      return this.clicks;
-   }
+	{
+		if (this.clicks == null)
+		{
+			return ItemInvocationSet.EMPTY_SET;
+		}
+
+		return this.clicks;
+	}
 
 	public PackagingSection withClicks(ItemInvocation... value) {
 		if (value == null) {
