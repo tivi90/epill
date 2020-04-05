@@ -43718,8 +43718,6 @@ var _reactRouterDom = __webpack_require__(13);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
@@ -44850,30 +44848,39 @@ var DrugDetail = function (_React$Component) {
                 drug.sideEffectContent.map(function (section) {
                     return _react2.default.createElement(
                         "div",
-                        { className: "sehrhaeufig_cont hidden-sm hidden-md hidden-lg" },
+                        { className: "sehrhaeufig_cont hidden-sm hidden-md hidden-lg  " },
                         _react2.default.createElement(
                             "div",
-                            _defineProperty({ className: "row", key: section.id }, "className", section.number),
+                            { key: section.id, className: section.number },
                             _react2.default.createElement(
-                                "h4",
-                                null,
-                                "Erkrankung"
-                            ),
-                            _react2.default.createElement("br", null),
-                            _react2.default.createElement(
-                                "span",
-                                { key: section.id },
-                                section.purpose
-                            ),
-                            _react2.default.createElement(
-                                "h4",
-                                null,
-                                "Nebenwirkung:"
-                            ),
-                            " ",
-                            _react2.default.createElement("br", null),
-                            _react2.default.createElement("span", { dangerouslySetInnerHTML: _this22.createMarkup(section.text) }),
-                            _react2.default.createElement("hr", null)
+                                "div",
+                                { className: "neben_xs" },
+                                _react2.default.createElement(
+                                    "div",
+                                    { className: "neben_xs" },
+                                    _react2.default.createElement(
+                                        "h4",
+                                        null,
+                                        "Erkrankung"
+                                    ),
+                                    _react2.default.createElement(
+                                        "b",
+                                        null,
+                                        " ",
+                                        _react2.default.createElement(
+                                            "span",
+                                            { key: section.id },
+                                            section.purpose
+                                        )
+                                    ),
+                                    _react2.default.createElement(
+                                        "h4",
+                                        null,
+                                        "Nebenwirkung:"
+                                    ),
+                                    _react2.default.createElement("span", { dangerouslySetInnerHTML: _this22.createMarkup(section.text) })
+                                )
+                            )
                         )
                     );
                 }).reduce(function (prev, curr) {
@@ -44944,30 +44951,35 @@ var DrugDetail = function (_React$Component) {
                 drug.sideEffectContent.map(function (section) {
                     return _react2.default.createElement(
                         "div",
-                        { className: "haeufig_cont hidden-sm hidden-md hidden-lg" },
+                        { className: "haeufig_cont hidden-sm hidden-md hidden-lg  " },
                         _react2.default.createElement(
                             "div",
-                            _defineProperty({ className: "row", key: section.id }, "className", section.number),
+                            { key: section.id, className: section.number },
                             _react2.default.createElement(
-                                "h4",
-                                null,
-                                "Erkrankung"
-                            ),
-                            _react2.default.createElement("br", null),
-                            _react2.default.createElement(
-                                "span",
-                                { key: section.id },
-                                section.purpose
-                            ),
-                            _react2.default.createElement(
-                                "h4",
-                                null,
-                                "Nebenwirkung:"
-                            ),
-                            " ",
-                            _react2.default.createElement("br", null),
-                            _react2.default.createElement("span", { dangerouslySetInnerHTML: _this24.createMarkup(section.text) }),
-                            _react2.default.createElement("hr", null)
+                                "div",
+                                { className: "neben_xs" },
+                                _react2.default.createElement(
+                                    "h4",
+                                    null,
+                                    "Erkrankung"
+                                ),
+                                _react2.default.createElement(
+                                    "b",
+                                    null,
+                                    " ",
+                                    _react2.default.createElement(
+                                        "span",
+                                        { key: section.id },
+                                        section.purpose
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    "h4",
+                                    null,
+                                    "Nebenwirkung:"
+                                ),
+                                _react2.default.createElement("span", { dangerouslySetInnerHTML: _this24.createMarkup(section.text) })
+                            )
                         )
                     );
                 }).reduce(function (prev, curr) {
@@ -45038,30 +45050,35 @@ var DrugDetail = function (_React$Component) {
                 drug.sideEffectContent.map(function (section) {
                     return _react2.default.createElement(
                         "div",
-                        { className: "gelegentlich_cont hidden-sm hidden-md hidden-lg" },
+                        { className: "gelegentlich_cont hidden-sm hidden-md hidden-lg  " },
                         _react2.default.createElement(
                             "div",
-                            _defineProperty({ className: "row", key: section.id }, "className", section.number),
+                            { key: section.id, className: section.number },
                             _react2.default.createElement(
-                                "h4",
-                                null,
-                                "Erkrankung"
-                            ),
-                            _react2.default.createElement("br", null),
-                            _react2.default.createElement(
-                                "span",
-                                { key: section.id },
-                                section.purpose
-                            ),
-                            _react2.default.createElement(
-                                "h4",
-                                null,
-                                "Nebenwirkung:"
-                            ),
-                            " ",
-                            _react2.default.createElement("br", null),
-                            _react2.default.createElement("span", { dangerouslySetInnerHTML: _this26.createMarkup(section.text) }),
-                            _react2.default.createElement("hr", null)
+                                "div",
+                                { className: "neben_xs" },
+                                _react2.default.createElement(
+                                    "h4",
+                                    null,
+                                    "Erkrankung"
+                                ),
+                                _react2.default.createElement(
+                                    "b",
+                                    null,
+                                    " ",
+                                    _react2.default.createElement(
+                                        "span",
+                                        { key: section.id },
+                                        section.purpose
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    "h4",
+                                    null,
+                                    "Nebenwirkung:"
+                                ),
+                                _react2.default.createElement("span", { dangerouslySetInnerHTML: _this26.createMarkup(section.text) })
+                            )
                         )
                     );
                 }).reduce(function (prev, curr) {
@@ -45132,30 +45149,35 @@ var DrugDetail = function (_React$Component) {
                 drug.sideEffectContent.map(function (section) {
                     return _react2.default.createElement(
                         "div",
-                        { className: "selten_cont hidden-sm hidden-md hidden-lg" },
+                        { className: "selten_cont hidden-sm hidden-md hidden-lg  " },
                         _react2.default.createElement(
                             "div",
-                            _defineProperty({ className: "row", key: section.id }, "className", section.number),
+                            { key: section.id, className: section.number },
                             _react2.default.createElement(
-                                "h4",
-                                null,
-                                "Erkrankung"
-                            ),
-                            _react2.default.createElement("br", null),
-                            _react2.default.createElement(
-                                "span",
-                                { key: section.id },
-                                section.purpose
-                            ),
-                            _react2.default.createElement(
-                                "h4",
-                                null,
-                                "Nebenwirkung:"
-                            ),
-                            " ",
-                            _react2.default.createElement("br", null),
-                            _react2.default.createElement("span", { dangerouslySetInnerHTML: _this28.createMarkup(section.text) }),
-                            _react2.default.createElement("hr", null)
+                                "div",
+                                { className: "neben_xs" },
+                                _react2.default.createElement(
+                                    "h4",
+                                    null,
+                                    "Erkrankung"
+                                ),
+                                _react2.default.createElement(
+                                    "b",
+                                    null,
+                                    " ",
+                                    _react2.default.createElement(
+                                        "span",
+                                        { key: section.id },
+                                        section.purpose
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    "h4",
+                                    null,
+                                    "Nebenwirkung:"
+                                ),
+                                _react2.default.createElement("span", { dangerouslySetInnerHTML: _this28.createMarkup(section.text) })
+                            )
                         )
                     );
                 }).reduce(function (prev, curr) {
@@ -45226,30 +45248,35 @@ var DrugDetail = function (_React$Component) {
                 drug.sideEffectContent.map(function (section) {
                     return _react2.default.createElement(
                         "div",
-                        { className: "sehrselten_cont hidden-sm hidden-md hidden-lg" },
+                        { className: "sehrselten_cont hidden-sm hidden-md hidden-lg  " },
                         _react2.default.createElement(
                             "div",
-                            _defineProperty({ className: "row", key: section.id }, "className", section.number),
+                            { key: section.id, className: section.number },
                             _react2.default.createElement(
-                                "h4",
-                                null,
-                                "Erkrankung"
-                            ),
-                            _react2.default.createElement("br", null),
-                            _react2.default.createElement(
-                                "span",
-                                { key: section.id },
-                                section.purpose
-                            ),
-                            _react2.default.createElement(
-                                "h4",
-                                null,
-                                "Nebenwirkung:"
-                            ),
-                            " ",
-                            _react2.default.createElement("br", null),
-                            _react2.default.createElement("span", { dangerouslySetInnerHTML: _this30.createMarkup(section.text) }),
-                            _react2.default.createElement("hr", null)
+                                "div",
+                                { className: "neben_xs" },
+                                _react2.default.createElement(
+                                    "h4",
+                                    null,
+                                    "Erkrankung"
+                                ),
+                                _react2.default.createElement(
+                                    "b",
+                                    null,
+                                    " ",
+                                    _react2.default.createElement(
+                                        "span",
+                                        { key: section.id },
+                                        section.purpose
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    "h4",
+                                    null,
+                                    "Nebenwirkung:"
+                                ),
+                                _react2.default.createElement("span", { dangerouslySetInnerHTML: _this30.createMarkup(section.text) })
+                            )
                         )
                     );
                 }).reduce(function (prev, curr) {
@@ -45320,30 +45347,35 @@ var DrugDetail = function (_React$Component) {
                 drug.sideEffectContent.map(function (section) {
                     return _react2.default.createElement(
                         "div",
-                        { className: "sehrhaeufig_cont hidden-sm hidden-md hidden-lg" },
+                        { className: "nichtbekannt_cont hidden-sm hidden-md hidden-lg " },
                         _react2.default.createElement(
                             "div",
-                            _defineProperty({ className: "row", key: section.id }, "className", section.number),
+                            { key: section.id, className: section.number },
                             _react2.default.createElement(
-                                "h4",
-                                null,
-                                "Erkrankung"
-                            ),
-                            _react2.default.createElement("br", null),
-                            _react2.default.createElement(
-                                "span",
-                                { key: section.id },
-                                section.purpose
-                            ),
-                            _react2.default.createElement(
-                                "h4",
-                                null,
-                                "Nebenwirkung:"
-                            ),
-                            " ",
-                            _react2.default.createElement("br", null),
-                            _react2.default.createElement("span", { dangerouslySetInnerHTML: _this32.createMarkup(section.text) }),
-                            _react2.default.createElement("hr", null)
+                                "div",
+                                { className: "neben_xs" },
+                                _react2.default.createElement(
+                                    "h4",
+                                    null,
+                                    "Erkrankung"
+                                ),
+                                _react2.default.createElement(
+                                    "b",
+                                    null,
+                                    " ",
+                                    _react2.default.createElement(
+                                        "span",
+                                        { key: section.id },
+                                        section.purpose
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    "h4",
+                                    null,
+                                    "Nebenwirkung:"
+                                ),
+                                _react2.default.createElement("span", { dangerouslySetInnerHTML: _this32.createMarkup(section.text) })
+                            )
                         )
                     );
                 }).reduce(function (prev, curr) {

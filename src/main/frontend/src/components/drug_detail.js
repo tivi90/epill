@@ -753,13 +753,16 @@ class DrugDetail extends React.Component {
                 {drug.sideEffectContent
                     .map((section => {
                         return (
-                            <div className="sehrhaeufig_cont hidden-sm hidden-md hidden-lg">
-                                <div className="row" key={section.id} className={section.number}>
-                                    <h4>Erkrankung</h4><br/>
-                                    <span key={section.id}>{section.purpose}</span>
-                                    <h4>Nebenwirkung:</h4> <br/>
-                                    <span dangerouslySetInnerHTML={this.createMarkup(section.text)}/>
-                                    <hr/>
+                            <div className="sehrhaeufig_cont hidden-sm hidden-md hidden-lg  ">
+                                <div key={section.id} className={section.number}>
+                                    <div className="neben_xs">
+                                        <div className="neben_xs">
+                                            <h4>Erkrankung</h4>
+                                            <b> <span key={section.id}>{section.purpose}</span></b>
+                                            <h4>Nebenwirkung:</h4>
+                                            <span dangerouslySetInnerHTML={this.createMarkup(section.text)}/>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         )
@@ -806,13 +809,14 @@ class DrugDetail extends React.Component {
                 {drug.sideEffectContent
                     .map((section => {
                         return (
-                            <div className="haeufig_cont hidden-sm hidden-md hidden-lg">
-                                <div className="row" key={section.id} className={section.number}>
-                                    <h4>Erkrankung</h4><br/>
-                                    <span key={section.id}>{section.purpose}</span>
-                                    <h4>Nebenwirkung:</h4> <br/>
-                                    <span dangerouslySetInnerHTML={this.createMarkup(section.text)}/>
-                                    <hr/>
+                            <div className="haeufig_cont hidden-sm hidden-md hidden-lg  ">
+                                <div key={section.id} className={section.number} >
+                                    <div className="neben_xs">
+                                        <h4>Erkrankung</h4>
+                                        <b> <span key={section.id}>{section.purpose}</span></b>
+                                        <h4>Nebenwirkung:</h4>
+                                        <span dangerouslySetInnerHTML={this.createMarkup(section.text)}/>
+                                    </div>
                                 </div>
                             </div>
                         )
@@ -859,13 +863,14 @@ class DrugDetail extends React.Component {
                 {drug.sideEffectContent
                     .map((section => {
                         return (
-                            <div className="gelegentlich_cont hidden-sm hidden-md hidden-lg">
-                                <div className="row" key={section.id} className={section.number}>
-                                    <h4>Erkrankung</h4><br/>
-                                    <span key={section.id}>{section.purpose}</span>
-                                    <h4>Nebenwirkung:</h4> <br/>
-                                    <span dangerouslySetInnerHTML={this.createMarkup(section.text)}/>
-                                    <hr/>
+                            <div className="gelegentlich_cont hidden-sm hidden-md hidden-lg  ">
+                                <div key={section.id} className={section.number} >
+                                    <div className="neben_xs">
+                                        <h4>Erkrankung</h4>
+                                        <b> <span key={section.id}>{section.purpose}</span></b>
+                                        <h4>Nebenwirkung:</h4>
+                                        <span dangerouslySetInnerHTML={this.createMarkup(section.text)}/>
+                                    </div>
                                 </div>
                             </div>
                         )
@@ -912,13 +917,14 @@ class DrugDetail extends React.Component {
                 {drug.sideEffectContent
                     .map((section => {
                         return (
-                            <div className="selten_cont hidden-sm hidden-md hidden-lg">
-                                <div className="row" key={section.id} className={section.number}>
-                                    <h4>Erkrankung</h4><br/>
-                                    <span key={section.id}>{section.purpose}</span>
-                                    <h4>Nebenwirkung:</h4> <br/>
-                                    <span dangerouslySetInnerHTML={this.createMarkup(section.text)}/>
-                                    <hr/>
+                            <div className="selten_cont hidden-sm hidden-md hidden-lg  ">
+                                <div key={section.id} className={section.number} >
+                                    <div className="neben_xs">
+                                        <h4>Erkrankung</h4>
+                                        <b> <span key={section.id}>{section.purpose}</span></b>
+                                        <h4>Nebenwirkung:</h4>
+                                        <span dangerouslySetInnerHTML={this.createMarkup(section.text)}/>
+                                    </div>
                                 </div>
                             </div>
                         )
@@ -965,13 +971,14 @@ class DrugDetail extends React.Component {
                 {drug.sideEffectContent
                     .map((section => {
                         return (
-                            <div className="sehrselten_cont hidden-sm hidden-md hidden-lg">
-                                <div className="row" key={section.id} className={section.number}>
-                                    <h4>Erkrankung</h4><br/>
-                                    <span key={section.id}>{section.purpose}</span>
-                                    <h4>Nebenwirkung:</h4> <br/>
-                                    <span dangerouslySetInnerHTML={this.createMarkup(section.text)}/>
-                                    <hr/>
+                            <div className="sehrselten_cont hidden-sm hidden-md hidden-lg  ">
+                                <div key={section.id} className={section.number} >
+                                    <div className="neben_xs">
+                                        <h4>Erkrankung</h4>
+                                        <b> <span key={section.id}>{section.purpose}</span></b>
+                                        <h4>Nebenwirkung:</h4>
+                                        <span dangerouslySetInnerHTML={this.createMarkup(section.text)}/>
+                                    </div>
                                 </div>
                             </div>
                         )
@@ -1020,13 +1027,14 @@ class DrugDetail extends React.Component {
                 {drug.sideEffectContent
                     .map((section => {
                         return (
-                            <div className="sehrhaeufig_cont hidden-sm hidden-md hidden-lg">
-                                <div className="row" key={section.id} className={section.number}>
-                                    <h4>Erkrankung</h4><br/>
-                                    <span key={section.id}>{section.purpose}</span>
-                                    <h4>Nebenwirkung:</h4> <br/>
-                                    <span dangerouslySetInnerHTML={this.createMarkup(section.text)}/>
-                                    <hr/>
+                            <div className="nichtbekannt_cont hidden-sm hidden-md hidden-lg ">
+                                <div key={section.id} className={section.number} >
+                                    <div className="neben_xs">
+                                        <h4>Erkrankung</h4>
+                                        <b> <span key={section.id}>{section.purpose}</span></b>
+                                        <h4>Nebenwirkung:</h4>
+                                        <span dangerouslySetInnerHTML={this.createMarkup(section.text)}/>
+                                    </div>
                                 </div>
                             </div>
                         )
