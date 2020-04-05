@@ -149,17 +149,17 @@ public class Drug extends SimpleDrug {
 	 * </pre>
 	 */
 
-	public static final String PROPERTY_SIDEEFFECTCONTENT = "sideeffectContent";
+	public static final String PROPERTY_SIDEEFFECTCONTENT = "sideEffectContent";
 
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "drug")
-	private List<SideEffectContent> sideeffectContent = null;
+	private List<SideEffectContent> sideEffectContent = null;
 
 	public List<SideEffectContent> getSideEffectContent() {
-		if (this.sideeffectContent == null) {
+		if (this.sideEffectContent == null) {
 			return new ArrayList<SideEffectContent>();
 		}
 
-		return this.sideeffectContent;
+		return this.sideEffectContent;
 	}
 
 	public Drug withSideEffectContent(SideEffectContent... value) {
@@ -168,11 +168,11 @@ public class Drug extends SimpleDrug {
 		}
 		for (SideEffectContent item : value) {
 			if (item != null) {
-				if (this.sideeffectContent == null) {
-					this.sideeffectContent = new ArrayList<SideEffectContent>();
+				if (this.sideEffectContent == null) {
+					this.sideEffectContent = new ArrayList<SideEffectContent>();
 				}
 
-				boolean changed = this.sideeffectContent.add(item);
+				boolean changed = this.sideEffectContent.add(item);
 
 				if (changed) {
 					item.withDrug(this);
@@ -185,8 +185,8 @@ public class Drug extends SimpleDrug {
 
 	public Drug withoutSideEffectContent(SideEffectContent... value) {
 		for (SideEffectContent item : value) {
-			if ((this.sideeffectContent != null) && (item != null)) {
-				if (this.sideeffectContent.remove(item)) {
+			if ((this.sideEffectContent != null) && (item != null)) {
+				if (this.sideEffectContent.remove(item)) {
 					item.setDrug(null);
 					firePropertyChange(PROPERTY_SIDEEFFECTCONTENT, item, null);
 				}

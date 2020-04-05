@@ -7,6 +7,8 @@ package com.doccuty.epill.model;
 import com.doccuty.epill.drug.Drug;
 import com.doccuty.epill.model.util.DrugSet;
 
+import com.doccuty.epill.model.util.SideEffectContentSet;
+import com.doccuty.epill.sideeffectcontent.SideEffectContent;
 import de.uniks.networkparser.EntityUtil;
 import de.uniks.networkparser.interfaces.SendableEntity;
 
@@ -14,6 +16,21 @@ import javax.persistence.*;
 import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeSupport;
 import java.util.Set;
+
+
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+
+
+
 
 
 @Entity
@@ -242,4 +259,63 @@ public class SideEffect implements SendableEntity {
 	      return value;
 	   }
 
+	/********************************************************************
+	 * <pre>
+	 *              one                       many
+	 * SideEffectContent ----------------------------------- Sideeffect
+	 *              packagingSection                   clicks
+	 * </pre>
+	 */
+
+	public static final String PROPERTY_SIDEEFFECTCONTENT = "sideEffectContent";
+
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "topic")
+	private Set<SideEffectContent> sideEffectContent = null;
+
+	public Set<SideEffectContent> getSideEffectContent() {
+		if (this.sideEffectContent == null) {
+			return SideEffectContentSet.EMPTY_SET;
+		}
+
+		return this.sideEffectContent;
+	}
+
+	public SideEffect withSideEffectContent(SideEffectContent... value) {
+		if (value == null) {
+			return this;
+		}
+		for (SideEffectContent item : value) {
+			if (item != null) {
+				if (this.sideEffectContent == null) {
+					this.sideEffectContent = new SideEffectContentSet();
+				}
+
+				boolean changed = this.sideEffectContent.add(item);
+
+				if (changed) {
+					item.withTopic(this);
+					firePropertyChange(PROPERTY_SIDEEFFECTCONTENT, null, item);
+				}
+			}
+		}
+		return this;
+	}
+
+	public SideEffect withoutEffectContent(SideEffectContent... value) {
+		for (SideEffectContent item : value) {
+			if ((this.sideEffectContent != null) && (item != null)) {
+				if (this.sideEffectContent.remove(item)) {
+					item.setTopic(null);
+					firePropertyChange(PROPERTY_SIDEEFFECTCONTENT, item, null);
+				}
+			}
+		}
+		return this;
+	}
+
+	public SideEffectContent createClicks() {
+		SideEffectContent value = new SideEffectContent();
+		withSideEffectContent(value);
+		return value;
+	}
 }

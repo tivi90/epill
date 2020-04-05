@@ -22304,3 +22304,542 @@ java.sql.SQLClientInfoException: Client info name 'ApplicationName' not supporte
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at java.base/java.lang.Thread.run(Thread.java:834)
+2020-04-04 00:51:33 jdbc[3]: exception
+java.sql.SQLClientInfoException: Client info name 'ApplicationName' not supported.
+	at org.h2.jdbc.JdbcConnection.setClientInfo(JdbcConnection.java:1740)
+	at com.intellij.database.remote.jdbc.impl.RemoteConnectionImpl.setClientInfo(RemoteConnectionImpl.java:495)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:359)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:562)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:796)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:677)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:676)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2020-04-04 01:04:26 jdbc[3]: exception
+java.sql.SQLClientInfoException: Client info name 'ApplicationName' not supported.
+	at org.h2.jdbc.JdbcConnection.setClientInfo(JdbcConnection.java:1740)
+	at com.intellij.database.remote.jdbc.impl.RemoteConnectionImpl.setClientInfo(RemoteConnectionImpl.java:495)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:359)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:562)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:796)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:677)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:676)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2020-04-04 01:04:29 jdbc[3]: exception
+java.sql.SQLClientInfoException: Client info name 'ApplicationName' not supported.
+	at org.h2.jdbc.JdbcConnection.setClientInfo(JdbcConnection.java:1740)
+	at com.intellij.database.remote.jdbc.impl.RemoteConnectionImpl.setClientInfo(RemoteConnectionImpl.java:495)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:359)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:562)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:796)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:677)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:676)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2020-04-04 01:04:32 jdbc[3]: exception
+java.sql.SQLClientInfoException: Client info name 'ApplicationName' not supported.
+	at org.h2.jdbc.JdbcConnection.setClientInfo(JdbcConnection.java:1740)
+	at com.intellij.database.remote.jdbc.impl.RemoteConnectionImpl.setClientInfo(RemoteConnectionImpl.java:495)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:359)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:562)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:796)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:677)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:676)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2020-04-04 01:04:44 jdbc[4]: exception
+java.sql.SQLClientInfoException: Client info name 'ApplicationName' not supported.
+	at org.h2.jdbc.JdbcConnection.setClientInfo(JdbcConnection.java:1740)
+	at com.intellij.database.remote.jdbc.impl.RemoteConnectionImpl.setClientInfo(RemoteConnectionImpl.java:495)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:359)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:562)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:796)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:677)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:676)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2020-04-04 02:28:50 jdbc[3]: exception
+java.sql.SQLClientInfoException: Client info name 'ApplicationName' not supported.
+	at org.h2.jdbc.JdbcConnection.setClientInfo(JdbcConnection.java:1740)
+	at com.intellij.database.remote.jdbc.impl.RemoteConnectionImpl.setClientInfo(RemoteConnectionImpl.java:495)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:359)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:562)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:796)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:677)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:676)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2020-04-04 02:28:52 jdbc[4]: exception
+java.sql.SQLClientInfoException: Client info name 'ApplicationName' not supported.
+	at org.h2.jdbc.JdbcConnection.setClientInfo(JdbcConnection.java:1740)
+	at com.intellij.database.remote.jdbc.impl.RemoteConnectionImpl.setClientInfo(RemoteConnectionImpl.java:495)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:359)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:562)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:796)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:677)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:676)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2020-04-04 17:27:45 jdbc[3]: exception
+java.sql.SQLClientInfoException: Client info name 'ApplicationName' not supported.
+	at org.h2.jdbc.JdbcConnection.setClientInfo(JdbcConnection.java:1740)
+	at com.intellij.database.remote.jdbc.impl.RemoteConnectionImpl.setClientInfo(RemoteConnectionImpl.java:495)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:359)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:562)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:796)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:677)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:676)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2020-04-04 17:27:54 jdbc[3]: exception
+java.sql.SQLClientInfoException: Client info name 'ApplicationName' not supported.
+	at org.h2.jdbc.JdbcConnection.setClientInfo(JdbcConnection.java:1740)
+	at com.intellij.database.remote.jdbc.impl.RemoteConnectionImpl.setClientInfo(RemoteConnectionImpl.java:495)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:359)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:562)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:796)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:677)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:676)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2020-04-04 20:03:15 jdbc[12]: exception
+org.h2.jdbc.JdbcSQLException: Syntax Fehler in SQL Befehl "INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text ) VALUES (1,1,0,11,1,'hi',<b>Verdauungsprobleme wie</b> <ul> <li>Übelkeit</li> <li>Erbrechen</li> <li>Durchfall</li> <li>Bauchschmerzen</li> <li>Appetitverlust</li> </ul> Diese Nebenwirkungen treten meistens zu Beginn der Behandlung mit Metformin Lich auf. </br> </br> <b>Vorbeugung:</b> </br>Eine Aufteilung der Tagesdosis auf mehrere über den Tag verteilte Einnahmen und die Einnahme von Metformin Lich mit oder direkt nach einer Mahlzeit. </br> <span style="" color: red;"">Wenn die Beschwerden andauern, nehmen Sie Metformin Lich nicht weiter ein und sprechen Sie mit Ihrem Arzt.</span>');
+INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect, text ) VALUES (2,2,0,11,2,'Test2');
+INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect, text ) VALUES (3,3,0,11,3,'Test3');
+INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect, text ) VALUES (4,2,0,11,2,'Test4');
+
+
+
+
+
+
+INSERT INTO drug_feature_gender (drug_feature_id, gender_id) VALUES (8,2);
+
+
+
+
+
+
+INSERT INTO word_Explaination (id, name, description) VALUES (1,'Insulin', '<p>Insulin ist ein von der Bauchspeicheldrüse gebildetes Hormon, das für die Aufnahme von Glukose (Zucker) aus dem Blut in die Körperzellen sorgt. Dort wird die Glukose in Energie umgewandelt oder als Vorrat zur späteren Verwendung gespeichert. </p>' );
+INSERT INTO word_Explaination (id, name, description) VALUES (2,'Ketoazidose', ' <p> Die Ketoazidose ist ein Zustand, bei dem sich als „Ketonkörper“ bezeichnete Substanzen im Blut anhäufen, die zu einem diabetischen Präkoma führen können. Zu den Symptomen gehören Magenschmerzen, schnelle und tiefe Atmung, Schläfrigkeit oder die Entwicklung eines ungewöhnlichen fruchtigen Geruchs des Atems. </p>');
+INSERT INTO word_Explaination (id, name, description) VALUES (3,'Laktatazidose', 'Metformin Lich kann vor allem dann, wenn Ihre Nieren nicht richtig funktionieren, eine sehr seltene, aber sehr schwerwiegende Nebenwirkung verursachen, die als Laktatazidose bezeichnet wird. Das Risiko, eine Laktatazidose zu entwickeln, wird auch durch schlecht eingestellten Diabetes, schwere Infektionen, längeres Fasten oder Alkoholkonsum, Dehydrierung (weitere Informationen siehe unten), Leberprobleme und Erkrankungen erhöht, bei denen ein Teil des Körpers nicht mit genügend Sauerstoff versorgt wird (zum Beispiel bei akuten schweren Herzerkrankungen). <hr> <div class=""row""> <div class=""col-md-10""> Falls einer der genannten Punkte auf Sie zutrifft, sprechen Sie mit Ihrem Arzt hinsichtlich weiterer Anweisungen. </div> <div class=""col-md-2""> <i style=""font-size:40px;color: #575858;"" class=""fas fa-user-md""></i> </div> </div> <hr> Unterbrechen Sie die Einnahme von Metformin Lich für eine kurze Zeit, wenn Sie einen Zustand haben, der mit einer Dehydrierung (erheblicher Verlust an Körperflüssigkeit) verbunden sein kann, wie beispielsweise schweres Erbrechen, Durchfall, Fieber, Hitzebelastung oder geringere Flüssigkeitsaufnahme als normalerweise. Sprechen Sie hinsichtlich weiterer Anweisungen mit Ihrem Arzt.<br> Beenden Sie die Einnahme von Metformin Lich und wenden Sie sich unverzüglich an einen Arzt oder an das nächstgelegene Krankenhaus, wenn Sie Symptome einer Laktatazidose bemerken, da dieser Zustand zum Koma führen kann. Symptome einer Laktatazidose sind: <ul> <li>Erbrechen</li> <li>Bauchschmerzen</li> <li>Muskelkrämpfe</li> <li>allgemeines Unwohlsein mit starker Müdigkeit</li> <li>Schwierigkeiten beim Atmen</li> <li>verringerte Körpertemperatur und Herzklopfen</li> </ul> <hr> <div class=""row""> <div class=""col-md-10""> Eine Laktatazidose ist ein medizinischer Notfall und muss in einem Krankenhaus behandelt werden. Es ist wichtig, dass Sie regelmäßig Ihre Medikation einnehmen, die Diätanweisungen beachten und Ihr Sportprogramm absolvieren, da dies das Risiko einer Laktatazidose vermindern kann. </div> <div class=""col-md-2""> <i style=""font-size:40px;color: #f94343;"" class=""fas fa-hospital""></i> </div> </div>');
+INSERT INTO word_Explaination (id, name, description) VALUES (4,'Hepatitis', '<p> Hepatitis ist eine Leberentzündung. Diese kann Müdigkeit, Appetitverlust und Gewichtsabnahme mit oder ohne Gelbfärbung der Haut und des Augenweißes verursachen. </p>');
+INSERT INTO word_Explaination (id, name, description) VALUES (5,'Diabetes Typ 2', '<p>Diabetes Typ 2, auch nicht insulinabhängiger Diabetes“ genannt, tritt meist nach dem 40. Lebensjahr auf. Hierbei besteht ein „relativer Insulinmangel“. Die Bauchspeicheldrüse produziert zwar Insulin, aber die Körperzellen verlieren ihre Empfindlichkeit für das Hormon und/oder die Ausschüttung des Insulins aus den Zellen der Bauchspeicheldrüse ist gestört. Die Bauchspeicheldrüse versucht dies auszugleichen, indem sie immer mehr Insulin ausschüttet. Doch trotz erhöhtem Insulinspiegel gelangt immer weniger Zucker in die Körperzellen. Sehr häufig können Menschen mit Diabetes Typ 2 zunächst mit einer Ernährungsumstellung allein oder aber in einer Kombination mit Tabletten behandelt werden. Im Krankheitsverlauf vermindert sich aber die Insulinproduktion der Bauchspeicheldrüse, wodurch auch bei Menschen mit Typ-2-Diabetes der Insulinmangel weiter fortschreitet. Der dadurch veränderte Stoffwechsel muss dann ebenfalls mit Insulin-Injektionen behandelt werden. <br> Ursachen eines Typ-2-Diabetes sind: <ul> <li>eine entsprechende genetische Disposition, <li> häufig verbunden mit starkem Übergewicht (Adipositas) <li>und zu wenig körperliche Bewegung. <li>Auch erhöhte Blutfettwerte sowie Bluthochdruck gehen oft mit einem Prädiabetes oder Diabetes einher (Metabolisches Syndrom). </ul> <br> Sehr häufig können Menschen mit Diabetes Typ 2 mit einer Ernährungsumstellung allein oder aber in einer Kombination mit Tabletten behandelt werden. Bei zunehmender Krankheitsdauer müssen allerdings auch Typ-2-Diabetiker mit einem Fortschreiten des Insulinmangels rechnen. Der dadurch veränderte Stoffwechsel muss dann ebenfalls mit Insulin-Injektionen behandelt werden. <a href=""https://www.diabetesde.org/ueber_diabetes/was_ist_diabetes_/was_ist_diabetes_typ_2"">Quelle</a> </p>');
+INSERT INTO word_Explaination (id, name, description) VALUES (6,'Bei einer größeren Operation', '<p> Falls bei Ihnen eine größere Operation geplant ist, müssen Sie die Einnahme von Metformin Lich während des Eingriffs und für einige Zeit danach unterbrechen. Ihr Arzt wird entscheiden, wann Sie Ihre Behandlung mit Metformin Lich beenden müssen und wann die Behandlung wieder begonnen werden kann. <br> Ihr Arzt entscheidet, ob Sie während dieser Zeit eine andere Behandlung benötigen.<br> Während der Behandlung mit Metformin Lich wird Ihr Arzt mindestens einmal jährlich oder – falls Sie älter sind und/oder sich Ihre Nierenfunktion verschlechtert – auch häufiger Ihre Nierenfunktion kontrollieren. </p>');
+INSERT INTO word_Explaination (id, name, description) VALUES (7,'Angina pectoris', ' <p>Angina pectoris (mediz. Stenokardie) bedeutet Brustenge. Sie äußert sich in einem plötzlich auftretenden Schmerz in der Herzgegend sowie einem Druckgefühl in der Brust. Ausgelöst wird die Angina pectoris durch einen Sauerstoffmangel des Herzens. Es besteht Lebensgefahr, deshalb sollte man sofort den Notarzt rufen! Angina pectoris lässt sich normalerweise mit Medikamenten gut behandeln. Akute Angina-pectoris Schmerzen im Brustbereich werden durch dieses Arzneimittel nicht sofort gelindert. <br> Quelle: <a href=""https://www.netdoktor.de/krankheiten/angina-pectoris/"">https://www.netdoktor.de/krankheiten/angina-pectoris/</a> </p>');
+
+
+
+INSERT INTO drug_word_explaination (iddrug, idword_Explaination) VALUES (11,1);
+INSERT INTO drug_word_explaination (iddrug, idword_Explaination) VALUES (11,2);
+INSERT INTO drug_word_explaination (iddrug, idword_Explaination) VALUES (11,3);
+INSERT INTO drug_word_explaination (iddrug, idword_Explaination) VALUES (11,4);
+INSERT INTO drug_word_explaination (iddrug, idword_Explaination) VALUES (11,5);
+INSERT INTO drug_word_explaination (iddrug, idword_Explaination) VALUES (11,6);
+INSERT INTO drug_word_explaination (iddrug, idword_Explaination) VALUES (12,7);
+
+
+
+
+INSERT INTO interaction (id, interaction) VALUES (1, 'Kann zu Durchfall führen');
+INSERT INTO interaction (id, interaction) VALUES (2, 'Kann sehr ermüdend wirken');
+
+
+
+INSERT INTO interaction_drug (idinteraction, iddrug) VALUES (1, 2), (1, 3), (1, 5), (2, 3);
+
+
+INSERT INTO drug_interaction (idinteraction, iddrug) VALUES (1, 1), (1, 4), (1, 3), (2, 1);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+INSERT INTO packaging_topic (id, order_number, title, text) VALUES (1,1,'Anwenderhinweise','<p style=""font-weight: bold;""> Lesen Sie die gesamte e-Packungsbeilage sorgfältig durch, denn sie enthält wichtige Informationen für Sie. Um einen bestmöglichen Behandlungserfosm zu erzielen, muss Prospan® Hustensaft jedoch vorschriftsmäßig angewendet werden.</p><ul> <li>Fragen Sie Ihren Apotheker, wenn Sie weitere Informationen oder einen Rat benötigen. </li><li>Wenn sich Ihre Symptome verschlimmern oder nach 7 Tagen keine Besserung eintritt, müssen Sie auf jeden Fall einen Arzt aufsuchen. </li></ul><div class=""row alert alert-danger"" role=""alert""> <div class=""col-md-1 alert_style""> <i class=""fas fa-exclamation""></i></div><div class=""col-md-11""> <p> Wenn eine der aufgeführten Nebenwirkungen Sie erheblich beeinträchtigt oder Sie Nebenwirkungen bemerken, die nicht in dieser Gebrauchsinformation angegeben sind, informieren Sie bitte Ihren <b>Arzt oder Apotheker</b>.</p></div></div>');
+INSERT INTO packaging_topic (id, order_number, title) VALUES (2,2,'Allgemeine Hinweise');
+INSERT INTO packaging_topic (id, order_number, title) VALUES (3,3,'Vorsichtsmaßnahmen und Warnhinweise');
+INSERT INTO packaging_topic (id, order_number, title) VALUES (4,4,'Indikationen');
+INSERT INTO packaging_topic (id, order_number, title) VALUES (5,5,'Anwendung und Dosierung');
+INSERT INTO packaging_topic (id, order_number, title) VALUES (6,6,'Nebenwirkungen');
+INSERT INTO packaging_topic (id, order_number, title) VALUES (7,7,'Aufbewahrung');
+INSERT INTO packaging_topic (id, order_number, title) VALUES (8,8,'Zusatzinformationen');
+INSERT INTO packaging_topic (id, order_number, title) VALUES (9,9,'Inhalt der Packung');
+INSERT INTO packaging_topic (id, order_number, title) VALUES (10,10,'Darstellung des Medikaments');
+INSERT INTO packaging_topic (id, order_number, title) VALUES (11,11,'Wirkstoff');
+
+
+
+
+INSERT INTO packaging_section (id, state, iddrug, idpackaging_topic, text) VALUES (1,0,1,1, '<h4>Lesen Sie die gesamte Packungsbeilage sorgfältig durch, bevor Sie mit der Einnahme dieses Arzneimittels beginnen, denn sie enthält wichtige Informationen.</h4> <p>Ihr Arzt hat Ihnen ein wirksames Arzneimittel zur Behandlung von nicht organbedingtem Bluthochdruck und Herzleistungsschwäche verschrieben. Den Nutzen von Accupro 10 schätzt Ihr Arzt für Sie höher ein als die möglichen Risiken, die mit seiner Anwendung einhergehen können.</p> <ul> <li> <p>Heben Sie die Packungsbeilage auf. Vielleicht möchten Sie diese später nochmals lesen.</p> </li> <li> <p>Wenn Sie weitere Fragen haben, wenden Sie sich an Ihren Arzt oder Apotheker.</p> </li> <li> <p>Dieses Arzneimittel wurde Ihnen persönlich verschrieben. Geben Sie es nicht an Dritte weiter. Es kann anderen Menschen schaden, auch wenn diese die gleichen Beschwerden haben wie Sie.</p> </li> <li> <p>Wenn Sie Nebenwirkungen bemerken, wenden Sie sich an Ihren Arzt oder Apotheker. Dies gilt auch für Nebenwirkungen, die nicht in dieser Packungsbeilage angegeben sind. Siehe Abschnitt 4.</p> </li> </ul> <p> <italic>Die kursiv geschriebenen Informationen sind ZusatzInformationen für Ihren Arzt.</italic> </p>');
+INSERT INTO packaging_section (id, state, iddrug, idpackaging_topic, text) VALUES (2,0,1,4,'<h4>Was ist Accupro 10 und wofür wird es angewendet?</h4> <p>Accupro 10 ist ein Arzneimittel aus der Gruppe der sogenannten ACE(Angiotensin-Converting-Enzym)-Hemmer und wird zur Senkung des Bluthochdrucks und zur Behandlung der Herzleistungsschwäche angewendet.</p> <p> <b>Accupro 10 wird angewendet bei:</b> </p> <ul> <li> <p>nicht organbedingtem Bluthochdruck <i>(essenzieller Hypertonie)</i> </p> </li> <li> <p>Herzleistungsschwäche <i>(Herzinsuffizienz)</i> – zusätzlich zu harntreibenden Medikamenten <i>(Diuretika)</i> und insbesondere bei schwerer Herzinsuffizienz auch zu Digitalis</p></li></ul>');
+INSERT INTO packaging_section (id, state, iddrug, idpackaging_topic, text) VALUES (3,0,1,5,[*]'<h4>Wie ist Accupro 10 richtig einzunehmen?(<i>Dosierung</i>)</h4> <p>Nehmen Sie dieses Arzneimittel immer genau nach Absprache mit Ihrem Arzt oder Apotheker ein. Fragen Sie bei Ihrem Arzt oder Apotheker nach, wenn Sie sich nicht sicher sind.</p> <p> <b>Wie Sie Accupro 10 richtig einnehmen</b> </p> <p>Die Einnahme von Accupro 10 kann unabhängig von den Mahlzeiten erfolgen, die Tagesdosis kann auf einmal eingenommen oder auf 2 Einzelgaben verteilt werden. Nehmen Sie die Tabletten bitte mit ausreichend Flüssigkeit, z. B. einem großen Glas Wasser, ein.</p> <p>Falls vom Arzt nicht anders verordnet, ist die übliche Dosis:</p> <table> <tbody> <tr> <td/> <td> <p> <b>Anfangsdosis</b> </p> </td> <td> <p> <b>Erhaltungsdosis</b> </p> </td> <td> <p> <b>Maximaldosis</b> </p> </td> </tr> <tr> <td> <p> <b>Nicht organbedingter Bluthochdruck <i>(essenzielle Hypertonie)</i> </b> </p> </td> <td> <p>10 mg Quinapril pro Tag (entsprechend 1 Filmtablette Accupro 10). Wird mit dieser Dosis keine Blutdrucknormalisierung erreicht, kann die Dosis auf 20 mg pro Tag (entsprechend 2 Filmtabletten Accupro 10) erhöht </p> </td> <td> <p>Die Erhaltungsdosis beträgt in der Regel 10 mg pro Tag (entsprechend 1 Filmtablette Accupro 10).</p> </td> <td> <p>Die Maximaldosis von zweimal 20 mg (entsprechend jeweils 2 Filmtabletten Accupro 10 morgens und abends) sollte nicht überschritten werden.</p> </td> </tr> <tr> <td/> <td> <p>werden. Eine Dosiserhöhung sollte erst nach 3 Wochen erfolgen. Die Tagesdosis kann auf einmal eingenommen werden oder auf 2 Einzelgaben verteilt werden (morgens und abends).</p> </td> <td/> <td/> </tr> <tr> <td> <p> <b>Herzleistungs-schwäche <i>(Herzinsuffizienz)</i> </b> </p> </td> <td> <p>Accupro 10 kann als Zusatzmedikation zu einer bestehenden Therapie mit harntreibenden Arzneimitteln (Diuretika) und Digitalis gegeben werden. Die Anfangsdosis beträgt 2,5 mg Quinapril morgens und abends (entsprechend je ½ Filmtablette Accupro 5"
+Syntax error in SQL statement "INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text ) VALUES (1,1,0,11,1,'hi',<b>Verdauungsprobleme wie</b> <ul> <li>Übelkeit</li> <li>Erbrechen</li> <li>Durchfall</li> <li>Bauchschmerzen</li> <li>Appetitverlust</li> </ul> Diese Nebenwirkungen treten meistens zu Beginn der Behandlung mit Metformin Lich auf. </br> </br> <b>Vorbeugung:</b> </br>Eine Aufteilung der Tagesdosis auf mehrere über den Tag verteilte Einnahmen und die Einnahme von Metformin Lich mit oder direkt nach einer Mahlzeit. </br> <span style="" color: red;"">Wenn die Beschwerden andauern, nehmen Sie Metformin Lich nicht weiter ein und sprechen Sie mit Ihrem Arzt.</span>');
+INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect, text ) VALUES (2,2,0,11,2,'Test2');
+INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect, text ) VALUES (3,3,0,11,3,'Test3');
+INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect, text ) VALUES (4,2,0,11,2,'Test4');
+
+
+
+
+
+
+INSERT INTO drug_feature_gender (drug_feature_id, gender_id) VALUES (8,2);
+
+
+
+
+
+
+INSERT INTO word_Explaination (id, name, description) VALUES (1,'Insulin', '<p>Insulin ist ein von der Bauchspeicheldrüse gebildetes Hormon, das für die Aufnahme von Glukose (Zucker) aus dem Blut in die Körperzellen sorgt. Dort wird die Glukose in Energie umgewandelt oder als Vorrat zur späteren Verwendung gespeichert. </p>' );
+INSERT INTO word_Explaination (id, name, description) VALUES (2,'Ketoazidose', ' <p> Die Ketoazidose ist ein Zustand, bei dem sich als „Ketonkörper“ bezeichnete Substanzen im Blut anhäufen, die zu einem diabetischen Präkoma führen können. Zu den Symptomen gehören Magenschmerzen, schnelle und tiefe Atmung, Schläfrigkeit oder die Entwicklung eines ungewöhnlichen fruchtigen Geruchs des Atems. </p>');
+INSERT INTO word_Explaination (id, name, description) VALUES (3,'Laktatazidose', 'Metformin Lich kann vor allem dann, wenn Ihre Nieren nicht richtig funktionieren, eine sehr seltene, aber sehr schwerwiegende Nebenwirkung verursachen, die als Laktatazidose bezeichnet wird. Das Risiko, eine Laktatazidose zu entwickeln, wird auch durch schlecht eingestellten Diabetes, schwere Infektionen, längeres Fasten oder Alkoholkonsum, Dehydrierung (weitere Informationen siehe unten), Leberprobleme und Erkrankungen erhöht, bei denen ein Teil des Körpers nicht mit genügend Sauerstoff versorgt wird (zum Beispiel bei akuten schweren Herzerkrankungen). <hr> <div class=""row""> <div class=""col-md-10""> Falls einer der genannten Punkte auf Sie zutrifft, sprechen Sie mit Ihrem Arzt hinsichtlich weiterer Anweisungen. </div> <div class=""col-md-2""> <i style=""font-size:40px;color: #575858;"" class=""fas fa-user-md""></i> </div> </div> <hr> Unterbrechen Sie die Einnahme von Metformin Lich für eine kurze Zeit, wenn Sie einen Zustand haben, der mit einer Dehydrierung (erheblicher Verlust an Körperflüssigkeit) verbunden sein kann, wie beispielsweise schweres Erbrechen, Durchfall, Fieber, Hitzebelastung oder geringere Flüssigkeitsaufnahme als normalerweise. Sprechen Sie hinsichtlich weiterer Anweisungen mit Ihrem Arzt.<br> Beenden Sie die Einnahme von Metformin Lich und wenden Sie sich unverzüglich an einen Arzt oder an das nächstgelegene Krankenhaus, wenn Sie Symptome einer Laktatazidose bemerken, da dieser Zustand zum Koma führen kann. Symptome einer Laktatazidose sind: <ul> <li>Erbrechen</li> <li>Bauchschmerzen</li> <li>Muskelkrämpfe</li> <li>allgemeines Unwohlsein mit starker Müdigkeit</li> <li>Schwierigkeiten beim Atmen</li> <li>verringerte Körpertemperatur und Herzklopfen</li> </ul> <hr> <div class=""row""> <div class=""col-md-10""> Eine Laktatazidose ist ein medizinischer Notfall und muss in einem Krankenhaus behandelt werden. Es ist wichtig, dass Sie regelmäßig Ihre Medikation einnehmen, die Diätanweisungen beachten und Ihr Sportprogramm absolvieren, da dies das Risiko einer Laktatazidose vermindern kann. </div> <div class=""col-md-2""> <i style=""font-size:40px;color: #f94343;"" class=""fas fa-hospital""></i> </div> </div>');
+INSERT INTO word_Explaination (id, name, description) VALUES (4,'Hepatitis', '<p> Hepatitis ist eine Leberentzündung. Diese kann Müdigkeit, Appetitverlust und Gewichtsabnahme mit oder ohne Gelbfärbung der Haut und des Augenweißes verursachen. </p>');
+INSERT INTO word_Explaination (id, name, description) VALUES (5,'Diabetes Typ 2', '<p>Diabetes Typ 2, auch nicht insulinabhängiger Diabetes“ genannt, tritt meist nach dem 40. Lebensjahr auf. Hierbei besteht ein „relativer Insulinmangel“. Die Bauchspeicheldrüse produziert zwar Insulin, aber die Körperzellen verlieren ihre Empfindlichkeit für das Hormon und/oder die Ausschüttung des Insulins aus den Zellen der Bauchspeicheldrüse ist gestört. Die Bauchspeicheldrüse versucht dies auszugleichen, indem sie immer mehr Insulin ausschüttet. Doch trotz erhöhtem Insulinspiegel gelangt immer weniger Zucker in die Körperzellen. Sehr häufig können Menschen mit Diabetes Typ 2 zunächst mit einer Ernährungsumstellung allein oder aber in einer Kombination mit Tabletten behandelt werden. Im Krankheitsverlauf vermindert sich aber die Insulinproduktion der Bauchspeicheldrüse, wodurch auch bei Menschen mit Typ-2-Diabetes der Insulinmangel weiter fortschreitet. Der dadurch veränderte Stoffwechsel muss dann ebenfalls mit Insulin-Injektionen behandelt werden. <br> Ursachen eines Typ-2-Diabetes sind: <ul> <li>eine entsprechende genetische Disposition, <li> häufig verbunden mit starkem Übergewicht (Adipositas) <li>und zu wenig körperliche Bewegung. <li>Auch erhöhte Blutfettwerte sowie Bluthochdruck gehen oft mit einem Prädiabetes oder Diabetes einher (Metabolisches Syndrom). </ul> <br> Sehr häufig können Menschen mit Diabetes Typ 2 mit einer Ernährungsumstellung allein oder aber in einer Kombination mit Tabletten behandelt werden. Bei zunehmender Krankheitsdauer müssen allerdings auch Typ-2-Diabetiker mit einem Fortschreiten des Insulinmangels rechnen. Der dadurch veränderte Stoffwechsel muss dann ebenfalls mit Insulin-Injektionen behandelt werden. <a href=""https://www.diabetesde.org/ueber_diabetes/was_ist_diabetes_/was_ist_diabetes_typ_2"">Quelle</a> </p>');
+INSERT INTO word_Explaination (id, name, description) VALUES (6,'Bei einer größeren Operation', '<p> Falls bei Ihnen eine größere Operation geplant ist, müssen Sie die Einnahme von Metformin Lich während des Eingriffs und für einige Zeit danach unterbrechen. Ihr Arzt wird entscheiden, wann Sie Ihre Behandlung mit Metformin Lich beenden müssen und wann die Behandlung wieder begonnen werden kann. <br> Ihr Arzt entscheidet, ob Sie während dieser Zeit eine andere Behandlung benötigen.<br> Während der Behandlung mit Metformin Lich wird Ihr Arzt mindestens einmal jährlich oder – falls Sie älter sind und/oder sich Ihre Nierenfunktion verschlechtert – auch häufiger Ihre Nierenfunktion kontrollieren. </p>');
+INSERT INTO word_Explaination (id, name, description) VALUES (7,'Angina pectoris', ' <p>Angina pectoris (mediz. Stenokardie) bedeutet Brustenge. Sie äußert sich in einem plötzlich auftretenden Schmerz in der Herzgegend sowie einem Druckgefühl in der Brust. Ausgelöst wird die Angina pectoris durch einen Sauerstoffmangel des Herzens. Es besteht Lebensgefahr, deshalb sollte man sofort den Notarzt rufen! Angina pectoris lässt sich normalerweise mit Medikamenten gut behandeln. Akute Angina-pectoris Schmerzen im Brustbereich werden durch dieses Arzneimittel nicht sofort gelindert. <br> Quelle: <a href=""https://www.netdoktor.de/krankheiten/angina-pectoris/"">https://www.netdoktor.de/krankheiten/angina-pectoris/</a> </p>');
+
+
+
+INSERT INTO drug_word_explaination (iddrug, idword_Explaination) VALUES (11,1);
+INSERT INTO drug_word_explaination (iddrug, idword_Explaination) VALUES (11,2);
+INSERT INTO drug_word_explaination (iddrug, idword_Explaination) VALUES (11,3);
+INSERT INTO drug_word_explaination (iddrug, idword_Explaination) VALUES (11,4);
+INSERT INTO drug_word_explaination (iddrug, idword_Explaination) VALUES (11,5);
+INSERT INTO drug_word_explaination (iddrug, idword_Explaination) VALUES (11,6);
+INSERT INTO drug_word_explaination (iddrug, idword_Explaination) VALUES (12,7);
+
+
+
+
+INSERT INTO interaction (id, interaction) VALUES (1, 'Kann zu Durchfall führen');
+INSERT INTO interaction (id, interaction) VALUES (2, 'Kann sehr ermüdend wirken');
+
+
+
+INSERT INTO interaction_drug (idinteraction, iddrug) VALUES (1, 2), (1, 3), (1, 5), (2, 3);
+
+
+INSERT INTO drug_interaction (idinteraction, iddrug) VALUES (1, 1), (1, 4), (1, 3), (2, 1);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+INSERT INTO packaging_topic (id, order_number, title, text) VALUES (1,1,'Anwenderhinweise','<p style=""font-weight: bold;""> Lesen Sie die gesamte e-Packungsbeilage sorgfältig durch, denn sie enthält wichtige Informationen für Sie. Um einen bestmöglichen Behandlungserfosm zu erzielen, muss Prospan® Hustensaft jedoch vorschriftsmäßig angewendet werden.</p><ul> <li>Fragen Sie Ihren Apotheker, wenn Sie weitere Informationen oder einen Rat benötigen. </li><li>Wenn sich Ihre Symptome verschlimmern oder nach 7 Tagen keine Besserung eintritt, müssen Sie auf jeden Fall einen Arzt aufsuchen. </li></ul><div class=""row alert alert-danger"" role=""alert""> <div class=""col-md-1 alert_style""> <i class=""fas fa-exclamation""></i></div><div class=""col-md-11""> <p> Wenn eine der aufgeführten Nebenwirkungen Sie erheblich beeinträchtigt oder Sie Nebenwirkungen bemerken, die nicht in dieser Gebrauchsinformation angegeben sind, informieren Sie bitte Ihren <b>Arzt oder Apotheker</b>.</p></div></div>');
+INSERT INTO packaging_topic (id, order_number, title) VALUES (2,2,'Allgemeine Hinweise');
+INSERT INTO packaging_topic (id, order_number, title) VALUES (3,3,'Vorsichtsmaßnahmen und Warnhinweise');
+INSERT INTO packaging_topic (id, order_number, title) VALUES (4,4,'Indikationen');
+INSERT INTO packaging_topic (id, order_number, title) VALUES (5,5,'Anwendung und Dosierung');
+INSERT INTO packaging_topic (id, order_number, title) VALUES (6,6,'Nebenwirkungen');
+INSERT INTO packaging_topic (id, order_number, title) VALUES (7,7,'Aufbewahrung');
+INSERT INTO packaging_topic (id, order_number, title) VALUES (8,8,'Zusatzinformationen');
+INSERT INTO packaging_topic (id, order_number, title) VALUES (9,9,'Inhalt der Packung');
+INSERT INTO packaging_topic (id, order_number, title) VALUES (10,10,'Darstellung des Medikaments');
+INSERT INTO packaging_topic (id, order_number, title) VALUES (11,11,'Wirkstoff');
+
+
+
+
+INSERT INTO packaging_section (id, state, iddrug, idpackaging_topic, text) VALUES (1,0,1,1, '<h4>Lesen Sie die gesamte Packungsbeilage sorgfältig durch, bevor Sie mit der Einnahme dieses Arzneimittels beginnen, denn sie enthält wichtige Informationen.</h4> <p>Ihr Arzt hat Ihnen ein wirksames Arzneimittel zur Behandlung von nicht organbedingtem Bluthochdruck und Herzleistungsschwäche verschrieben. Den Nutzen von Accupro 10 schätzt Ihr Arzt für Sie höher ein als die möglichen Risiken, die mit seiner Anwendung einhergehen können.</p> <ul> <li> <p>Heben Sie die Packungsbeilage auf. Vielleicht möchten Sie diese später nochmals lesen.</p> </li> <li> <p>Wenn Sie weitere Fragen haben, wenden Sie sich an Ihren Arzt oder Apotheker.</p> </li> <li> <p>Dieses Arzneimittel wurde Ihnen persönlich verschrieben. Geben Sie es nicht an Dritte weiter. Es kann anderen Menschen schaden, auch wenn diese die gleichen Beschwerden haben wie Sie.</p> </li> <li> <p>Wenn Sie Nebenwirkungen bemerken, wenden Sie sich an Ihren Arzt oder Apotheker. Dies gilt auch für Nebenwirkungen, die nicht in dieser Packungsbeilage angegeben sind. Siehe Abschnitt 4.</p> </li> </ul> <p> <italic>Die kursiv geschriebenen Informationen sind ZusatzInformationen für Ihren Arzt.</italic> </p>');
+INSERT INTO packaging_section (id, state, iddrug, idpackaging_topic, text) VALUES (2,0,1,4,'<h4>Was ist Accupro 10 und wofür wird es angewendet?</h4> <p>Accupro 10 ist ein Arzneimittel aus der Gruppe der sogenannten ACE(Angiotensin-Converting-Enzym)-Hemmer und wird zur Senkung des Bluthochdrucks und zur Behandlung der Herzleistungsschwäche angewendet.</p> <p> <b>Accupro 10 wird angewendet bei:</b> </p> <ul> <li> <p>nicht organbedingtem Bluthochdruck <i>(essenzieller Hypertonie)</i> </p> </li> <li> <p>Herzleistungsschwäche <i>(Herzinsuffizienz)</i> – zusätzlich zu harntreibenden Medikamenten <i>(Diuretika)</i> und insbesondere bei schwerer Herzinsuffizienz auch zu Digitalis</p></li></ul>');
+INSERT INTO packaging_section (id, state, iddrug, idpackaging_topic, text) VALUES (3,0,1,5,[*]'<h4>Wie ist Accupro 10 richtig einzunehmen?(<i>Dosierung</i>)</h4> <p>Nehmen Sie dieses Arzneimittel immer genau nach Absprache mit Ihrem Arzt oder Apotheker ein. Fragen Sie bei Ihrem Arzt oder Apotheker nach, wenn Sie sich nicht sicher sind.</p> <p> <b>Wie Sie Accupro 10 richtig einnehmen</b> </p> <p>Die Einnahme von Accupro 10 kann unabhängig von den Mahlzeiten erfolgen, die Tagesdosis kann auf einmal eingenommen oder auf 2 Einzelgaben verteilt werden. Nehmen Sie die Tabletten bitte mit ausreichend Flüssigkeit, z. B. einem großen Glas Wasser, ein.</p> <p>Falls vom Arzt nicht anders verordnet, ist die übliche Dosis:</p> <table> <tbody> <tr> <td/> <td> <p> <b>Anfangsdosis</b> </p> </td> <td> <p> <b>Erhaltungsdosis</b> </p> </td> <td> <p> <b>Maximaldosis</b> </p> </td> </tr> <tr> <td> <p> <b>Nicht organbedingter Bluthochdruck <i>(essenzielle Hypertonie)</i> </b> </p> </td> <td> <p>10 mg Quinapril pro Tag (entsprechend 1 Filmtablette Accupro 10). Wird mit dieser Dosis keine Blutdrucknormalisierung erreicht, kann die Dosis auf 20 mg pro Tag (entsprechend 2 Filmtabletten Accupro 10) erhöht </p> </td> <td> <p>Die Erhaltungsdosis beträgt in der Regel 10 mg pro Tag (entsprechend 1 Filmtablette Accupro 10).</p> </td> <td> <p>Die Maximaldosis von zweimal 20 mg (entsprechend jeweils 2 Filmtabletten Accupro 10 morgens und abends) sollte nicht überschritten werden.</p> </td> </tr> <tr> <td/> <td> <p>werden. Eine Dosiserhöhung sollte erst nach 3 Wochen erfolgen. Die Tagesdosis kann auf einmal eingenommen werden oder auf 2 Einzelgaben verteilt werden (morgens und abends).</p> </td> <td/> <td/> </tr> <tr> <td> <p> <b>Herzleistungs-schwäche <i>(Herzinsuffizienz)</i> </b> </p> </td> <td> <p>Accupro 10 kann als Zusatzmedikation zu einer bestehenden Therapie mit harntreibenden Arzneimitteln (Diuretika) und Digitalis gegeben werden. Die Anfangsdosis beträgt 2,5 mg Quinapril morgens und abends (entsprechend je ½ Filmtablette Accupro 5"; SQL statement:
+INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text ) VALUES (1,1,0,11,1,'hi',<b>Verdauungsprobleme wie</b> <ul> <li>Übelkeit</li> <li>Erbrechen</li> <li>Durchfall</li> <li>Bauchschmerzen</li> <li>Appetitverlust</li> </ul> Diese Nebenwirkungen treten meistens zu Beginn der Behandlung mit Metformin Lich auf. </br> </br> <b>Vorbeugung:</b> </br>Eine Aufteilung der Tagesdosis auf mehrere über den Tag verteilte Einnahmen und die Einnahme von Metformin Lich mit oder direkt nach einer Mahlzeit. </br> <span style=" color: red;">Wenn die Beschwerden andauern, nehmen Sie Metformin Lich nicht weiter ein und sprechen Sie mit Ihrem Arzt.</span>');
+INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect, text ) VALUES (2,2,0,11,2,'Test2');
+INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect, text ) VALUES (3,3,0,11,3,'Test3');
+INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect, text ) VALUES (4,2,0,11,2,'Test4');
+
+
+
+
+
+
+INSERT INTO drug_feature_gender (drug_feature_id, gender_id) VALUES (8,2);
+
+
+
+
+
+
+INSERT INTO word_Explaination (id, name, description) VALUES (1,'Insulin', '<p>Insulin ist ein von der Bauchspeicheldrüse gebildetes Hormon, das für die Aufnahme von Glukose (Zucker) aus dem Blut in die Körperzellen sorgt. Dort wird die Glukose in Energie umgewandelt oder als Vorrat zur späteren Verwendung gespeichert. </p>' );
+INSERT INTO word_Explaination (id, name, description) VALUES (2,'Ketoazidose', ' <p> Die Ketoazidose ist ein Zustand, bei dem sich als „Ketonkörper“ bezeichnete Substanzen im Blut anhäufen, die zu einem diabetischen Präkoma führen können. Zu den Symptomen gehören Magenschmerzen, schnelle und tiefe Atmung, Schläfrigkeit oder die Entwicklung eines ungewöhnlichen fruchtigen Geruchs des Atems. </p>');
+INSERT INTO word_Explaination (id, name, description) VALUES (3,'Laktatazidose', 'Metformin Lich kann vor allem dann, wenn Ihre Nieren nicht richtig funktionieren, eine sehr seltene, aber sehr schwerwiegende Nebenwirkung verursachen, die als Laktatazidose bezeichnet wird. Das Risiko, eine Laktatazidose zu entwickeln, wird auch durch schlecht eingestellten Diabetes, schwere Infektionen, längeres Fasten oder Alkoholkonsum, Dehydrierung (weitere Informationen siehe unten), Leberprobleme und Erkrankungen erhöht, bei denen ein Teil des Körpers nicht mit genügend Sauerstoff versorgt wird (zum Beispiel bei akuten schweren Herzerkrankungen). <hr> <div class="row"> <div class="col-md-10"> Falls einer der genannten Punkte auf Sie zutrifft, sprechen Sie mit Ihrem Arzt hinsichtlich weiterer Anweisungen. </div> <div class="col-md-2"> <i style="font-size:40px;color: #575858;" class="fas fa-user-md"></i> </div> </div> <hr> Unterbrechen Sie die Einnahme von Metformin Lich für eine kurze Zeit, wenn Sie einen Zustand haben, der mit einer Dehydrierung (erheblicher Verlust an Körperflüssigkeit) verbunden sein kann, wie beispielsweise schweres Erbrechen, Durchfall, Fieber, Hitzebelastung oder geringere Flüssigkeitsaufnahme als normalerweise. Sprechen Sie hinsichtlich weiterer Anweisungen mit Ihrem Arzt.<br> Beenden Sie die Einnahme von Metformin Lich und wenden Sie sich unverzüglich an einen Arzt oder an das nächstgelegene Krankenhaus, wenn Sie Symptome einer Laktatazidose bemerken, da dieser Zustand zum Koma führen kann. Symptome einer Laktatazidose sind: <ul> <li>Erbrechen</li> <li>Bauchschmerzen</li> <li>Muskelkrämpfe</li> <li>allgemeines Unwohlsein mit starker Müdigkeit</li> <li>Schwierigkeiten beim Atmen</li> <li>verringerte Körpertemperatur und Herzklopfen</li> </ul> <hr> <div class="row"> <div class="col-md-10"> Eine Laktatazidose ist ein medizinischer Notfall und muss in einem Krankenhaus behandelt werden. Es ist wichtig, dass Sie regelmäßig Ihre Medikation einnehmen, die Diätanweisungen beachten und Ihr Sportprogramm absolvieren, da dies das Risiko einer Laktatazidose vermindern kann. </div> <div class="col-md-2"> <i style="font-size:40px;color: #f94343;" class="fas fa-hospital"></i> </div> </div>');
+INSERT INTO word_Explaination (id, name, description) VALUES (4,'Hepatitis', '<p> Hepatitis ist eine Leberentzündung. Diese kann Müdigkeit, Appetitverlust und Gewichtsabnahme mit oder ohne Gelbfärbung der Haut und des Augenweißes verursachen. </p>');
+INSERT INTO word_Explaination (id, name, description) VALUES (5,'Diabetes Typ 2', '<p>Diabetes Typ 2, auch nicht insulinabhängiger Diabetes“ genannt, tritt meist nach dem 40. Lebensjahr auf. Hierbei besteht ein „relativer Insulinmangel“. Die Bauchspeicheldrüse produziert zwar Insulin, aber die Körperzellen verlieren ihre Empfindlichkeit für das Hormon und/oder die Ausschüttung des Insulins aus den Zellen der Bauchspeicheldrüse ist gestört. Die Bauchspeicheldrüse versucht dies auszugleichen, indem sie immer mehr Insulin ausschüttet. Doch trotz erhöhtem Insulinspiegel gelangt immer weniger Zucker in die Körperzellen. Sehr häufig können Menschen mit Diabetes Typ 2 zunächst mit einer Ernährungsumstellung allein oder aber in einer Kombination mit Tabletten behandelt werden. Im Krankheitsverlauf vermindert sich aber die Insulinproduktion der Bauchspeicheldrüse, wodurch auch bei Menschen mit Typ-2-Diabetes der Insulinmangel weiter fortschreitet. Der dadurch veränderte Stoffwechsel muss dann ebenfalls mit Insulin-Injektionen behandelt werden. <br> Ursachen eines Typ-2-Diabetes sind: <ul> <li>eine entsprechende genetische Disposition, <li> häufig verbunden mit starkem Übergewicht (Adipositas) <li>und zu wenig körperliche Bewegung. <li>Auch erhöhte Blutfettwerte sowie Bluthochdruck gehen oft mit einem Prädiabetes oder Diabetes einher (Metabolisches Syndrom). </ul> <br> Sehr häufig können Menschen mit Diabetes Typ 2 mit einer Ernährungsumstellung allein oder aber in einer Kombination mit Tabletten behandelt werden. Bei zunehmender Krankheitsdauer müssen allerdings auch Typ-2-Diabetiker mit einem Fortschreiten des Insulinmangels rechnen. Der dadurch veränderte Stoffwechsel muss dann ebenfalls mit Insulin-Injektionen behandelt werden. <a href="https://www.diabetesde.org/ueber_diabetes/was_ist_diabetes_/was_ist_diabetes_typ_2">Quelle</a> </p>');
+INSERT INTO word_Explaination (id, name, description) VALUES (6,'Bei einer größeren Operation', '<p> Falls bei Ihnen eine größere Operation geplant ist, müssen Sie die Einnahme von Metformin Lich während des Eingriffs und für einige Zeit danach unterbrechen. Ihr Arzt wird entscheiden, wann Sie Ihre Behandlung mit Metformin Lich beenden müssen und wann die Behandlung wieder begonnen werden kann. <br> Ihr Arzt entscheidet, ob Sie während dieser Zeit eine andere Behandlung benötigen.<br> Während der Behandlung mit Metformin Lich wird Ihr Arzt mindestens einmal jährlich oder – falls Sie älter sind und/oder sich Ihre Nierenfunktion verschlechtert – auch häufiger Ihre Nierenfunktion kontrollieren. </p>');
+INSERT INTO word_Explaination (id, name, description) VALUES (7,'Angina pectoris', ' <p>Angina pectoris (mediz. Stenokardie) bedeutet Brustenge. Sie äußert sich in einem plötzlich auftretenden Schmerz in der Herzgegend sowie einem Druckgefühl in der Brust. Ausgelöst wird die Angina pectoris durch einen Sauerstoffmangel des Herzens. Es besteht Lebensgefahr, deshalb sollte man sofort den Notarzt rufen! Angina pectoris lässt sich normalerweise mit Medikamenten gut behandeln. Akute Angina-pectoris Schmerzen im Brustbereich werden durch dieses Arzneimittel nicht sofort gelindert. <br> Quelle: <a href="https://www.netdoktor.de/krankheiten/angina-pectoris/">https://www.netdoktor.de/krankheiten/angina-pectoris/</a> </p>');
+
+
+
+INSERT INTO drug_word_explaination (iddrug, idword_Explaination) VALUES (11,1);
+INSERT INTO drug_word_explaination (iddrug, idword_Explaination) VALUES (11,2);
+INSERT INTO drug_word_explaination (iddrug, idword_Explaination) VALUES (11,3);
+INSERT INTO drug_word_explaination (iddrug, idword_Explaination) VALUES (11,4);
+INSERT INTO drug_word_explaination (iddrug, idword_Explaination) VALUES (11,5);
+INSERT INTO drug_word_explaination (iddrug, idword_Explaination) VALUES (11,6);
+INSERT INTO drug_word_explaination (iddrug, idword_Explaination) VALUES (12,7);
+
+
+
+
+INSERT INTO interaction (id, interaction) VALUES (1, 'Kann zu Durchfall führen');
+INSERT INTO interaction (id, interaction) VALUES (2, 'Kann sehr ermüdend wirken');
+
+
+
+INSERT INTO interaction_drug (idinteraction, iddrug) VALUES (1, 2), (1, 3), (1, 5), (2, 3);
+
+
+INSERT INTO drug_interaction (idinteraction, iddrug) VALUES (1, 1), (1, 4), (1, 3), (2, 1);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+INSERT INTO packaging_topic (id, order_number, title, text) VALUES (1,1,'Anwenderhinweise','<p style="font-weight: bold;"> Lesen Sie die gesamte e-Packungsbeilage sorgfältig durch, denn sie enthält wichtige Informationen für Sie. Um einen bestmöglichen Behandlungserfosm zu erzielen, muss Prospan® Hustensaft jedoch vorschriftsmäßig angewendet werden.</p><ul> <li>Fragen Sie Ihren Apotheker, wenn Sie weitere Informationen oder einen Rat benötigen. </li><li>Wenn sich Ihre Symptome verschlimmern oder nach 7 Tagen keine Besserung eintritt, müssen Sie auf jeden Fall einen Arzt aufsuchen. </li></ul><div class="row alert alert-danger" role="alert"> <div class="col-md-1 alert_style"> <i class="fas fa-exclamation"></i></div><div class="col-md-11"> <p> Wenn eine der aufgeführten Nebenwirkungen Sie erheblich beeinträchtigt oder Sie Nebenwirkungen bemerken, die nicht in dieser Gebrauchsinformation angegeben sind, informieren Sie bitte Ihren <b>Arzt oder Apotheker</b>.</p></div></div>');
+INSERT INTO packaging_topic (id, order_number, title) VALUES (2,2,'Allgemeine Hinweise');
+INSERT INTO packaging_topic (id, order_number, title) VALUES (3,3,'Vorsichtsmaßnahmen und Warnhinweise');
+INSERT INTO packaging_topic (id, order_number, title) VALUES (4,4,'Indikationen');
+INSERT INTO packaging_topic (id, order_number, title) VALUES (5,5,'Anwendung und Dosierung');
+INSERT INTO packaging_topic (id, order_number, title) VALUES (6,6,'Nebenwirkungen');
+INSERT INTO packaging_topic (id, order_number, title) VALUES (7,7,'Aufbewahrung');
+INSERT INTO packaging_topic (id, order_number, title) VALUES (8,8,'Zusatzinformationen');
+INSERT INTO packaging_topic (id, order_number, title) VALUES (9,9,'Inhalt der Packung');
+INSERT INTO packaging_topic (id, order_number, title) VALUES (10,10,'Darstellung des Medikaments');
+INSERT INTO packaging_topic (id, order_number, title) VALUES (11,11,'Wirkstoff');
+
+
+
+
+INSERT INTO packaging_section (id, state, iddrug, idpackaging_topic, text) VALUES (1,0,1,1, '<h4>Lesen Sie die gesamte Packungsbeilage sorgfältig durch, bevor Sie mit der Einnahme dieses Arzneimittels beginnen, denn sie enthält wichtige Informationen.</h4> <p>Ihr Arzt hat Ihnen ein wirksames Arzneimittel zur Behandlung von nicht organbedingtem Bluthochdruck und Herzleistungsschwäche verschrieben. Den Nutzen von Accupro 10 schätzt Ihr Arzt für Sie höher ein als die möglichen Risiken, die mit seiner Anwendung einhergehen können.</p> <ul> <li> <p>Heben Sie die Packungsbeilage auf. Vielleicht möchten Sie diese später nochmals lesen.</p> </li> <li> <p>Wenn Sie weitere Fragen haben, wenden Sie sich an Ihren Arzt oder Apotheker.</p> </li> <li> <p>Dieses Arzneimittel wurde Ihnen persönlich verschrieben. Geben Sie es nicht an Dritte weiter. Es kann anderen Menschen schaden, auch wenn diese die gleichen Beschwerden haben wie Sie.</p> </li> <li> <p>Wenn Sie Nebenwirkungen bemerken, wenden Sie sich an Ihren Arzt oder Apotheker. Dies gilt auch für Nebenwirkungen, die nicht in dieser Packungsbeilage angegeben sind. Siehe Abschnitt 4.</p> </li> </ul> <p> <italic>Die kursiv geschriebenen Informationen sind ZusatzInformationen für Ihren Arzt.</italic> </p>');
+INSERT INTO packaging_section (id, state, iddrug, idpackaging_topic, text) VALUES (2,0,1,4,'<h4>Was ist Accupro 10 und wofür wird es angewendet?</h4> <p>Accupro 10 ist ein Arzneimittel aus der Gruppe der sogenannten ACE(Angiotensin-Converting-Enzym)-Hemmer und wird zur Senkung des Bluthochdrucks und zur Behandlung der Herzleistungsschwäche angewendet.</p> <p> <b>Accupro 10 wird angewendet bei:</b> </p> <ul> <li> <p>nicht organbedingtem Bluthochdruck <i>(essenzieller Hypertonie)</i> </p> </li> <li> <p>Herzleistungsschwäche <i>(Herzinsuffizienz)</i> – zusätzlich zu harntreibenden Medikamenten <i>(Diuretika)</i> und insbesondere bei schwerer Herzinsuffizienz auch zu Digitalis</p></li></ul>');
+INSERT INTO packaging_section (id, state, iddrug, idpackaging_topic, text) VALUES (3,0,1,5,'<h4>Wie ist Accupro 10 richtig einzunehmen?(<i>Dosierung</i>)</h4> <p>Nehmen Sie dieses Arzneimittel immer genau nach Absprache mit Ihrem Arzt oder Apotheker ein. Fragen Sie bei Ihrem Arzt oder Apotheker nach, wenn Sie sich nicht sicher sind.</p> <p> <b>Wie Sie Accupro 10 richtig einnehmen</b> </p> <p>Die Einnahme von Accupro 10 kann unabhängig von den Mahlzeiten erfolgen, die Tagesdosis kann auf einmal eingenommen oder auf 2 Einzelgaben verteilt werden. Nehmen Sie die Tabletten bitte mit ausreichend Flüssigkeit, z. B. einem großen Glas Wasser, ein.</p> <p>Falls vom Arzt nicht anders verordnet, ist die übliche Dosis:</p> <table> <tbody> <tr> <td/> <td> <p> <b>Anfangsdosis</b> </p> </td> <td> <p> <b>Erhaltungsdosis</b> </p> </td> <td> <p> <b>Maximaldosis</b> </p> </td> </tr> <tr> <td> <p> <b>Nicht organbedingter Bluthochdruck <i>(essenzielle Hypertonie)</i> </b> </p> </td> <td> <p>10 mg Quinapril pro Tag (entsprechend 1 Filmtablette Accupro 10). Wird mit dieser Dosis keine Blutdrucknormalisierung erreicht, kann die Dosis auf 20 mg pro Tag (entsprechend 2 Filmtabletten Accupro 10) erhöht </p> </td> <td> <p>Die Erhaltungsdosis beträgt in der Regel 10 mg pro Tag (entsprechend 1 Filmtablette Accupro 10).</p> </td> <td> <p>Die Maximaldosis von zweimal 20 mg (entsprechend jeweils 2 Filmtabletten Accupro 10 morgens und abends) sollte nicht überschritten werden.</p> </td> </tr> <tr> <td/> <td> <p>werden. Eine Dosiserhöhung sollte erst nach 3 Wochen erfolgen. Die Tagesdosis kann auf einmal eingenommen werden oder auf 2 Einzelgaben verteilt werden (morgens und abends).</p> </td> <td/> <td/> </tr> <tr> <td> <p> <b>Herzleistungs-schwäche <i>(Herzinsuffizienz)</i> </b> </p> </td> <td> <p>Accupro 10 kann als Zusatzmedikation zu einer bestehenden Therapie mit harntreibenden Arzneimitteln (Diuretika) und Digitalis gegeben werden. Die Anfangsdosis beträgt 2,5 mg Quinapril morgens und abends (entsprechend je ½ Filmtablette Accupro 5 [42000-194]
+2020-04-04 18:12:14 jdbc[3]: exception
+java.sql.SQLClientInfoException: Client info name 'ApplicationName' not supported.
+	at org.h2.jdbc.JdbcConnection.setClientInfo(JdbcConnection.java:1740)
+	at com.intellij.database.remote.jdbc.impl.RemoteConnectionImpl.setClientInfo(RemoteConnectionImpl.java:495)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:359)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:562)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:796)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:677)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:676)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2020-04-04 18:12:21 jdbc[3]: exception
+java.sql.SQLClientInfoException: Client info name 'ApplicationName' not supported.
+	at org.h2.jdbc.JdbcConnection.setClientInfo(JdbcConnection.java:1740)
+	at com.intellij.database.remote.jdbc.impl.RemoteConnectionImpl.setClientInfo(RemoteConnectionImpl.java:495)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:359)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:562)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:796)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:677)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:676)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2020-04-05 01:55:30 jdbc[12]: exception
+org.h2.jdbc.JdbcSQLException: Syntax Fehler in SQL Befehl "INSERT INTO SIDE_EFFECT_CONTENT (ID, NUMBER, STATE,IDDRUG, IDSIDE_EFFECT,PURPOSE, TEXT )VALUES (8,4,0,12,4,'Nicht Bekannt','Verwirrung') INSERT[*] INTO SIDE_EFFECT_CONTENT (ID, NUMBER, STATE,IDDRUG, IDSIDE_EFFECT,PURPOSE, TEXT )VALUES (9,5,0,12,5,'Nicht Bekannt',' <ul>
+    <li>Verminderung der weißen Blutkörperchen, Verminderung der Blutplättchen, was zu
+        ungewöhnlichen blauen Flecken oder leichtem Bluten führen kann (Schädigung der
+        roten Blutzellen)</li>
+    <li>erhöhter Blutzuckerspiegel (Hyperglykämie)</li>
+    <li>eine Nervenstörung, die zu Schwächegefühl, verminderter Empfindlichkeit für
+        Berührungsreize oder Kribbeln führen kann</li>
+    <li>Schwellung des Zahnfleischs</li>
+    <li>aufgeblähter Bauch (Gastritis)</li>
+    <li>gestörte Leberfunktion, Entzündung der Leber (Hepatitis), Gelbfärbung der Haut
+        (Gelbsucht), Anstieg der Leberenzyme, wodurch bestimmte medizinische Tests
+        beeinflusst werden können</li>
+    <li>erhöhte Muskelanspannung</li>
+    <li>entzündliche Reaktionen der Blutgefäße, häufig mit Hautausschlag</li>
+    <li>Lichtempfindlichkeit</li>
+    <li>Störungen, die sich aus Steifheit, Zittern und/oder Bewegungsstörungen
+        zusammensetzen</li>
+</ul>') "
+Syntax error in SQL statement "INSERT INTO SIDE_EFFECT_CONTENT (ID, NUMBER, STATE,IDDRUG, IDSIDE_EFFECT,PURPOSE, TEXT )VALUES (8,4,0,12,4,'Nicht Bekannt','Verwirrung') INSERT[*] INTO SIDE_EFFECT_CONTENT (ID, NUMBER, STATE,IDDRUG, IDSIDE_EFFECT,PURPOSE, TEXT )VALUES (9,5,0,12,5,'Nicht Bekannt',' <ul>
+    <li>Verminderung der weißen Blutkörperchen, Verminderung der Blutplättchen, was zu
+        ungewöhnlichen blauen Flecken oder leichtem Bluten führen kann (Schädigung der
+        roten Blutzellen)</li>
+    <li>erhöhter Blutzuckerspiegel (Hyperglykämie)</li>
+    <li>eine Nervenstörung, die zu Schwächegefühl, verminderter Empfindlichkeit für
+        Berührungsreize oder Kribbeln führen kann</li>
+    <li>Schwellung des Zahnfleischs</li>
+    <li>aufgeblähter Bauch (Gastritis)</li>
+    <li>gestörte Leberfunktion, Entzündung der Leber (Hepatitis), Gelbfärbung der Haut
+        (Gelbsucht), Anstieg der Leberenzyme, wodurch bestimmte medizinische Tests
+        beeinflusst werden können</li>
+    <li>erhöhte Muskelanspannung</li>
+    <li>entzündliche Reaktionen der Blutgefäße, häufig mit Hautausschlag</li>
+    <li>Lichtempfindlichkeit</li>
+    <li>Störungen, die sich aus Steifheit, Zittern und/oder Bewegungsstörungen
+        zusammensetzen</li>
+</ul>') "; SQL statement:
+INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (8,4,0,12,4,'Nicht Bekannt','Verwirrung') INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (9,5,0,12,5,'Nicht Bekannt',' <ul>
+    <li>Verminderung der weißen Blutkörperchen, Verminderung der Blutplättchen, was zu
+        ungewöhnlichen blauen Flecken oder leichtem Bluten führen kann (Schädigung der
+        roten Blutzellen)</li>
+    <li>erhöhter Blutzuckerspiegel (Hyperglykämie)</li>
+    <li>eine Nervenstörung, die zu Schwächegefühl, verminderter Empfindlichkeit für
+        Berührungsreize oder Kribbeln führen kann</li>
+    <li>Schwellung des Zahnfleischs</li>
+    <li>aufgeblähter Bauch (Gastritis)</li>
+    <li>gestörte Leberfunktion, Entzündung der Leber (Hepatitis), Gelbfärbung der Haut
+        (Gelbsucht), Anstieg der Leberenzyme, wodurch bestimmte medizinische Tests
+        beeinflusst werden können</li>
+    <li>erhöhte Muskelanspannung</li>
+    <li>entzündliche Reaktionen der Blutgefäße, häufig mit Hautausschlag</li>
+    <li>Lichtempfindlichkeit</li>
+    <li>Störungen, die sich aus Steifheit, Zittern und/oder Bewegungsstörungen
+        zusammensetzen</li>
+</ul>') [42000-194]

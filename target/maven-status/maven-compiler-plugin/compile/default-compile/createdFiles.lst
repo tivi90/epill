@@ -62,6 +62,7 @@ com/doccuty/epill/model/util/SubstanceGroupSet.class
 com/doccuty/epill/user/UserController.class
 com/doccuty/epill/packaging/PackagingTopicRepository.class
 com/doccuty/epill/model/util/ProductGroupCreator.class
+com/doccuty/epill/sideeffectcontent/SideEffectContentController.class
 com/doccuty/epill/gender/GenderController.class
 com/doccuty/epill/model/AdverseEffect.class
 com/doccuty/epill/drug/DrugService$1.class

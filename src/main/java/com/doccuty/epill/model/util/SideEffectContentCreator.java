@@ -34,6 +34,8 @@ public class SideEffectContentCreator implements SendableEntityCreatorNoIndex {
                     SideEffectContent.PROPERTY_ID,
                     SideEffectContent.PROPERTY_TOPIC,
                     SideEffectContent.PROPERTY_TEXT,
+                    SideEffectContent.PROPERTY_PURPOSE,
+                    SideEffectContent.PROPERTY_NUMBER,
 
                     //SideEffectContent.PROPERTY_DRUG,
 
@@ -69,6 +71,13 @@ public class SideEffectContentCreator implements SendableEntityCreatorNoIndex {
         if (SideEffectContent.PROPERTY_TEXT.equalsIgnoreCase(attribute)) {
             return ((SideEffectContent) target).getText();
         }
+        if (SideEffectContent.PROPERTY_PURPOSE.equalsIgnoreCase(attribute)) {
+            return ((SideEffectContent) target).getPurpose();
+        }
+
+        if (SideEffectContent.PROPERTY_NUMBER.equalsIgnoreCase(attribute)) {
+            return ((SideEffectContent) target).getNumber();
+        }
 
         if (SideEffectContent.PROPERTY_DRUG.equalsIgnoreCase(attribute)) {
             return ((SideEffectContent) target).getDrug();
@@ -82,6 +91,14 @@ public class SideEffectContentCreator implements SendableEntityCreatorNoIndex {
 
         if (SideEffectContent.PROPERTY_TEXT.equalsIgnoreCase(attrName)) {
             ((SideEffectContent) target).setText((String) value);
+            return true;
+        }
+        if (SideEffectContent.PROPERTY_PURPOSE.equalsIgnoreCase(attrName)) {
+            ((SideEffectContent) target).setPurpose((String) value);
+            return true;
+        }
+        if (SideEffectContent.PROPERTY_NUMBER.equalsIgnoreCase(attrName)) {
+            ((SideEffectContent) target).setNumber((String) value);
             return true;
         }
         if (SideEffectContent.PROPERTY_TOPIC.equalsIgnoreCase(attrName)) {

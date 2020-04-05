@@ -45,7 +45,7 @@ import de.uniks.networkparser.EntityUtil;
 
 
 @Entity
-@Table(name = "sideEffect_content")
+@Table(name = "sideEffectContent")
 public class SideEffectContent implements SendableEntity {
 
 	// ==========================================================================
@@ -130,6 +130,8 @@ public class SideEffectContent implements SendableEntity {
 
 		result.append(" ").append(this.getId());
 		result.append(" ").append(this.getText());
+		result.append(" ").append(this.getNumber());
+
 		return result.substring(1);
 	}
 
@@ -220,6 +222,60 @@ public class SideEffectContent implements SendableEntity {
 	   setText(value);
       return this;
    }
+	// ==========================================================================
+
+	public static final String PROPERTY_PURPOSE = "purpose";
+
+	@Column(name="purpose", columnDefinition="TEXT")
+	private String purpose;
+
+	public String getPurpose()
+	{
+		return this.purpose;
+	}
+
+	public void setPurpose(String value)
+	{
+		if ( ! EntityUtil.stringEquals(this.purpose, value)) {
+
+			String oldValue = this.purpose;
+			this.purpose = value;
+			this.firePropertyChange(PROPERTY_PURPOSE, oldValue, value);
+		}
+	}
+
+	public SideEffectContent withPurpose(String value)
+	{
+		setPurpose(value);
+		return this;
+	}
+// ==========================================================================
+
+	public static final String PROPERTY_NUMBER = "number";
+
+	@Column(name="number", columnDefinition="BIGINT")
+	private String number;
+
+	public String getNumber()
+	{
+		return this.number;
+	}
+
+	public void setNumber(String value)
+	{
+		if ( ! EntityUtil.stringEquals(this.number, value)) {
+
+			String oldValue = this.number;
+			this.number = value;
+			this.firePropertyChange(PROPERTY_NUMBER, oldValue, value);
+		}
+	}
+
+	public SideEffectContent withNumber(String value)
+	{
+		setNumber(value);
+		return this;
+	}
 
 	// ==========================================================================
 

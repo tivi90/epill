@@ -25,6 +25,8 @@ $(window).on('beforeunload', function(){
     $(window).scrollTop(0);
 });
 
+$(".haeufig_cont > .1").css("display", "none");
+
 
 function myFunction() {
     var input, filter, table, tr, td, i, txtValue;

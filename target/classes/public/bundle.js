@@ -43718,6 +43718,8 @@ var _reactRouterDom = __webpack_require__(13);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
@@ -43731,6 +43733,39 @@ var DrugDetail = function (_React$Component) {
         _classCallCheck(this, DrugDetail);
 
         var _this = _possibleConstructorReturn(this, (DrugDetail.__proto__ || Object.getPrototypeOf(DrugDetail)).call(this, props));
+
+        _this.renderhide = function () {
+            $(".sehrhaeufig_cont > .2").css("display", "none");
+            $(".sehrhaeufig_cont > .3").css("display", "none");
+            $(".sehrhaeufig_cont > .4").css("display", "none");
+            $(".sehrhaeufig_cont > .5").css("display", "none");
+            $(".sehrhaeufig_cont > .6").css("display", "none");
+            $(".haeufig_cont > .1").css("display", "none");
+            $(".haeufig_cont > .3").css("display", "none");
+            $(".haeufig_cont > .4").css("display", "none");
+            $(".haeufig_cont > .5").css("display", "none");
+            $(".haeufig_cont > .6").css("display", "none");
+            $(".gelegentlich_cont > .1").css("display", "none");
+            $(".gelegentlich_cont > .2").css("display", "none");
+            $(".gelegentlich_cont > .4").css("display", "none");
+            $(".gelegentlich_cont > .5").css("display", "none");
+            $(".gelegentlich_cont > .6").css("display", "none");
+            $(".selten_cont > .1").css("display", "none");
+            $(".selten_cont > .2").css("display", "none");
+            $(".selten_cont > .3").css("display", "none");
+            $(".selten_cont > .5").css("display", "none");
+            $(".selten_cont > .6").css("display", "none");
+            $(".sehrselten_cont > .1").css("display", "none");
+            $(".sehrselten_cont > .2").css("display", "none");
+            $(".sehrselten_cont > .3").css("display", "none");
+            $(".sehrselten_cont > .4").css("display", "none");
+            $(".sehrselten_cont > .6").css("display", "none");
+            $(".nichtbekannt_cont > .1").css("display", "none");
+            $(".nichtbekannt_cont > .2").css("display", "none");
+            $(".nichtbekannt_cont > .3").css("display", "none");
+            $(".nichtbekannt_cont > .4").css("display", "none");
+            $(".nichtbekannt_cont > .5").css("display", "none");
+        };
 
         _this.scrollToTop = function () {
             document.body.scrollTop = 0;
@@ -44753,9 +44788,573 @@ var DrugDetail = function (_React$Component) {
             });
         }
     }, {
+        key: "rendersehrhaeufigdesktop",
+        value: function rendersehrhaeufigdesktop(drug) {
+            var _this21 = this;
+
+            if (!drug.sideEffectContent) {
+                return null;
+            }
+            return _react2.default.createElement(
+                "table",
+                { className: "sideffect_table hidden-xs" },
+                _react2.default.createElement(
+                    "thead",
+                    null,
+                    _react2.default.createElement(
+                        "tr",
+                        null,
+                        _react2.default.createElement(
+                            "th",
+                            null,
+                            "Erkrankung"
+                        ),
+                        _react2.default.createElement(
+                            "th",
+                            null,
+                            "Nebenwirkung"
+                        )
+                    )
+                ),
+                _react2.default.createElement(
+                    "tbody",
+                    { className: "sehrhaeufig_cont" },
+                    drug.sideEffectContent.map(function (section) {
+                        return _react2.default.createElement(
+                            "tr",
+                            { id: "sehrhaeufig", key: section.id, className: section.number },
+                            _react2.default.createElement(
+                                "td",
+                                { key: section.id },
+                                section.purpose
+                            ),
+                            _react2.default.createElement("td", { dangerouslySetInnerHTML: _this21.createMarkup(section.text) })
+                        );
+                    }).reduce(function (prev, curr) {
+                        return [prev, curr];
+                    })
+                )
+            );
+        }
+    }, {
+        key: "rendersehrhaeufigmobile",
+        value: function rendersehrhaeufigmobile(drug) {
+            var _this22 = this;
+
+            if (!drug.sideEffectContent) {
+                return null;
+            }
+            return _react2.default.createElement(
+                "div",
+                null,
+                drug.sideEffectContent.map(function (section) {
+                    return _react2.default.createElement(
+                        "div",
+                        { className: "sehrhaeufig_cont hidden-sm hidden-md hidden-lg" },
+                        _react2.default.createElement(
+                            "div",
+                            _defineProperty({ className: "row", key: section.id }, "className", section.number),
+                            _react2.default.createElement(
+                                "h4",
+                                null,
+                                "Erkrankung"
+                            ),
+                            _react2.default.createElement("br", null),
+                            _react2.default.createElement(
+                                "span",
+                                { key: section.id },
+                                section.purpose
+                            ),
+                            _react2.default.createElement(
+                                "h4",
+                                null,
+                                "Nebenwirkung:"
+                            ),
+                            " ",
+                            _react2.default.createElement("br", null),
+                            _react2.default.createElement("span", { dangerouslySetInnerHTML: _this22.createMarkup(section.text) }),
+                            _react2.default.createElement("hr", null)
+                        )
+                    );
+                }).reduce(function (prev, curr) {
+                    return [prev, curr];
+                })
+            );
+        }
+    }, {
+        key: "renderhaeufigdesktop",
+        value: function renderhaeufigdesktop(drug) {
+            var _this23 = this;
+
+            if (!drug.sideEffectContent) {
+                return null;
+            }
+            return _react2.default.createElement(
+                "table",
+                { className: "sideffect_table hidden-xs" },
+                _react2.default.createElement(
+                    "thead",
+                    null,
+                    _react2.default.createElement(
+                        "tr",
+                        null,
+                        _react2.default.createElement(
+                            "th",
+                            null,
+                            "Erkrankung"
+                        ),
+                        _react2.default.createElement(
+                            "th",
+                            null,
+                            "Nebenwirkung"
+                        )
+                    )
+                ),
+                _react2.default.createElement(
+                    "tbody",
+                    { className: "haeufig_cont" },
+                    drug.sideEffectContent.map(function (section) {
+                        return _react2.default.createElement(
+                            "tr",
+                            { id: "haeufig", key: section.id, className: section.number },
+                            _react2.default.createElement(
+                                "td",
+                                { key: section.id },
+                                section.purpose
+                            ),
+                            _react2.default.createElement("td", { dangerouslySetInnerHTML: _this23.createMarkup(section.text) })
+                        );
+                    }).reduce(function (prev, curr) {
+                        return [prev, curr];
+                    })
+                )
+            );
+        }
+    }, {
+        key: "renderhaeufigmobile",
+        value: function renderhaeufigmobile(drug) {
+            var _this24 = this;
+
+            if (!drug.sideEffectContent) {
+                return null;
+            }
+            return _react2.default.createElement(
+                "div",
+                null,
+                drug.sideEffectContent.map(function (section) {
+                    return _react2.default.createElement(
+                        "div",
+                        { className: "haeufig_cont hidden-sm hidden-md hidden-lg" },
+                        _react2.default.createElement(
+                            "div",
+                            _defineProperty({ className: "row", key: section.id }, "className", section.number),
+                            _react2.default.createElement(
+                                "h4",
+                                null,
+                                "Erkrankung"
+                            ),
+                            _react2.default.createElement("br", null),
+                            _react2.default.createElement(
+                                "span",
+                                { key: section.id },
+                                section.purpose
+                            ),
+                            _react2.default.createElement(
+                                "h4",
+                                null,
+                                "Nebenwirkung:"
+                            ),
+                            " ",
+                            _react2.default.createElement("br", null),
+                            _react2.default.createElement("span", { dangerouslySetInnerHTML: _this24.createMarkup(section.text) }),
+                            _react2.default.createElement("hr", null)
+                        )
+                    );
+                }).reduce(function (prev, curr) {
+                    return [prev, curr];
+                })
+            );
+        }
+    }, {
+        key: "rendergelegentlichdesktop",
+        value: function rendergelegentlichdesktop(drug) {
+            var _this25 = this;
+
+            if (!drug.sideEffectContent) {
+                return null;
+            }
+            return _react2.default.createElement(
+                "table",
+                { className: "sideffect_table hidden-xs" },
+                _react2.default.createElement(
+                    "thead",
+                    null,
+                    _react2.default.createElement(
+                        "tr",
+                        null,
+                        _react2.default.createElement(
+                            "th",
+                            null,
+                            "Erkrankung"
+                        ),
+                        _react2.default.createElement(
+                            "th",
+                            null,
+                            "Nebenwirkung"
+                        )
+                    )
+                ),
+                _react2.default.createElement(
+                    "tbody",
+                    { className: "gelegentlich_cont" },
+                    drug.sideEffectContent.map(function (section) {
+                        return _react2.default.createElement(
+                            "tr",
+                            { id: "gelegentlich", key: section.id, className: section.number },
+                            _react2.default.createElement(
+                                "td",
+                                { key: section.id },
+                                section.purpose
+                            ),
+                            _react2.default.createElement("td", { dangerouslySetInnerHTML: _this25.createMarkup(section.text) })
+                        );
+                    }).reduce(function (prev, curr) {
+                        return [prev, curr];
+                    })
+                )
+            );
+        }
+    }, {
+        key: "rendergelegentlichmobile",
+        value: function rendergelegentlichmobile(drug) {
+            var _this26 = this;
+
+            if (!drug.sideEffectContent) {
+                return null;
+            }
+            return _react2.default.createElement(
+                "div",
+                null,
+                drug.sideEffectContent.map(function (section) {
+                    return _react2.default.createElement(
+                        "div",
+                        { className: "gelegentlich_cont hidden-sm hidden-md hidden-lg" },
+                        _react2.default.createElement(
+                            "div",
+                            _defineProperty({ className: "row", key: section.id }, "className", section.number),
+                            _react2.default.createElement(
+                                "h4",
+                                null,
+                                "Erkrankung"
+                            ),
+                            _react2.default.createElement("br", null),
+                            _react2.default.createElement(
+                                "span",
+                                { key: section.id },
+                                section.purpose
+                            ),
+                            _react2.default.createElement(
+                                "h4",
+                                null,
+                                "Nebenwirkung:"
+                            ),
+                            " ",
+                            _react2.default.createElement("br", null),
+                            _react2.default.createElement("span", { dangerouslySetInnerHTML: _this26.createMarkup(section.text) }),
+                            _react2.default.createElement("hr", null)
+                        )
+                    );
+                }).reduce(function (prev, curr) {
+                    return [prev, curr];
+                })
+            );
+        }
+    }, {
+        key: "renderseltendesktop",
+        value: function renderseltendesktop(drug) {
+            var _this27 = this;
+
+            if (!drug.sideEffectContent) {
+                return null;
+            }
+            return _react2.default.createElement(
+                "table",
+                { className: "sideffect_table hidden-xs" },
+                _react2.default.createElement(
+                    "thead",
+                    null,
+                    _react2.default.createElement(
+                        "tr",
+                        null,
+                        _react2.default.createElement(
+                            "th",
+                            null,
+                            "Erkrankung"
+                        ),
+                        _react2.default.createElement(
+                            "th",
+                            null,
+                            "Nebenwirkung"
+                        )
+                    )
+                ),
+                _react2.default.createElement(
+                    "tbody",
+                    { className: "selten_cont" },
+                    drug.sideEffectContent.map(function (section) {
+                        return _react2.default.createElement(
+                            "tr",
+                            { id: "selten", key: section.id, className: section.number },
+                            _react2.default.createElement(
+                                "td",
+                                { key: section.id },
+                                section.purpose
+                            ),
+                            _react2.default.createElement("td", { dangerouslySetInnerHTML: _this27.createMarkup(section.text) })
+                        );
+                    }).reduce(function (prev, curr) {
+                        return [prev, curr];
+                    })
+                )
+            );
+        }
+    }, {
+        key: "renderseltenmobile",
+        value: function renderseltenmobile(drug) {
+            var _this28 = this;
+
+            if (!drug.sideEffectContent) {
+                return null;
+            }
+            return _react2.default.createElement(
+                "div",
+                null,
+                drug.sideEffectContent.map(function (section) {
+                    return _react2.default.createElement(
+                        "div",
+                        { className: "selten_cont hidden-sm hidden-md hidden-lg" },
+                        _react2.default.createElement(
+                            "div",
+                            _defineProperty({ className: "row", key: section.id }, "className", section.number),
+                            _react2.default.createElement(
+                                "h4",
+                                null,
+                                "Erkrankung"
+                            ),
+                            _react2.default.createElement("br", null),
+                            _react2.default.createElement(
+                                "span",
+                                { key: section.id },
+                                section.purpose
+                            ),
+                            _react2.default.createElement(
+                                "h4",
+                                null,
+                                "Nebenwirkung:"
+                            ),
+                            " ",
+                            _react2.default.createElement("br", null),
+                            _react2.default.createElement("span", { dangerouslySetInnerHTML: _this28.createMarkup(section.text) }),
+                            _react2.default.createElement("hr", null)
+                        )
+                    );
+                }).reduce(function (prev, curr) {
+                    return [prev, curr];
+                })
+            );
+        }
+    }, {
+        key: "rendersehrseltendesktop",
+        value: function rendersehrseltendesktop(drug) {
+            var _this29 = this;
+
+            if (!drug.sideEffectContent) {
+                return null;
+            }
+            return _react2.default.createElement(
+                "table",
+                { className: "sideffect_table hidden-xs" },
+                _react2.default.createElement(
+                    "thead",
+                    null,
+                    _react2.default.createElement(
+                        "tr",
+                        null,
+                        _react2.default.createElement(
+                            "th",
+                            null,
+                            "Erkrankung"
+                        ),
+                        _react2.default.createElement(
+                            "th",
+                            null,
+                            "Nebenwirkung"
+                        )
+                    )
+                ),
+                _react2.default.createElement(
+                    "tbody",
+                    { className: "sehrselten_cont" },
+                    drug.sideEffectContent.map(function (section) {
+                        return _react2.default.createElement(
+                            "tr",
+                            { id: "sehrselten", key: section.id, className: section.number },
+                            _react2.default.createElement(
+                                "td",
+                                { key: section.id },
+                                section.purpose
+                            ),
+                            _react2.default.createElement("td", { dangerouslySetInnerHTML: _this29.createMarkup(section.text) })
+                        );
+                    }).reduce(function (prev, curr) {
+                        return [prev, curr];
+                    })
+                )
+            );
+        }
+    }, {
+        key: "rendersehrseltenmobile",
+        value: function rendersehrseltenmobile(drug) {
+            var _this30 = this;
+
+            if (!drug.sideEffectContent) {
+                return null;
+            }
+            return _react2.default.createElement(
+                "div",
+                null,
+                drug.sideEffectContent.map(function (section) {
+                    return _react2.default.createElement(
+                        "div",
+                        { className: "sehrselten_cont hidden-sm hidden-md hidden-lg" },
+                        _react2.default.createElement(
+                            "div",
+                            _defineProperty({ className: "row", key: section.id }, "className", section.number),
+                            _react2.default.createElement(
+                                "h4",
+                                null,
+                                "Erkrankung"
+                            ),
+                            _react2.default.createElement("br", null),
+                            _react2.default.createElement(
+                                "span",
+                                { key: section.id },
+                                section.purpose
+                            ),
+                            _react2.default.createElement(
+                                "h4",
+                                null,
+                                "Nebenwirkung:"
+                            ),
+                            " ",
+                            _react2.default.createElement("br", null),
+                            _react2.default.createElement("span", { dangerouslySetInnerHTML: _this30.createMarkup(section.text) }),
+                            _react2.default.createElement("hr", null)
+                        )
+                    );
+                }).reduce(function (prev, curr) {
+                    return [prev, curr];
+                })
+            );
+        }
+    }, {
+        key: "rendernichtbekanntdesktop",
+        value: function rendernichtbekanntdesktop(drug) {
+            var _this31 = this;
+
+            if (!drug.sideEffectContent) {
+                return null;
+            }
+            return _react2.default.createElement(
+                "table",
+                { className: "sideffect_table hidden-xs" },
+                _react2.default.createElement(
+                    "thead",
+                    null,
+                    _react2.default.createElement(
+                        "tr",
+                        null,
+                        _react2.default.createElement(
+                            "th",
+                            null,
+                            "Erkrankung"
+                        ),
+                        _react2.default.createElement(
+                            "th",
+                            null,
+                            "Nebenwirkung"
+                        )
+                    )
+                ),
+                _react2.default.createElement(
+                    "tbody",
+                    { className: "nichtbekannt_cont" },
+                    drug.sideEffectContent.map(function (section) {
+                        return _react2.default.createElement(
+                            "tr",
+                            { id: "nichtbekannt", key: section.id, className: section.number },
+                            _react2.default.createElement(
+                                "td",
+                                { key: section.id },
+                                section.purpose
+                            ),
+                            _react2.default.createElement("td", { dangerouslySetInnerHTML: _this31.createMarkup(section.text) })
+                        );
+                    }).reduce(function (prev, curr) {
+                        return [prev, curr];
+                    })
+                )
+            );
+        }
+    }, {
+        key: "rendernichtbekanntmobile",
+        value: function rendernichtbekanntmobile(drug) {
+            var _this32 = this;
+
+            if (!drug.sideEffectContent) {
+                return null;
+            }
+            return _react2.default.createElement(
+                "div",
+                null,
+                drug.sideEffectContent.map(function (section) {
+                    return _react2.default.createElement(
+                        "div",
+                        { className: "sehrhaeufig_cont hidden-sm hidden-md hidden-lg" },
+                        _react2.default.createElement(
+                            "div",
+                            _defineProperty({ className: "row", key: section.id }, "className", section.number),
+                            _react2.default.createElement(
+                                "h4",
+                                null,
+                                "Erkrankung"
+                            ),
+                            _react2.default.createElement("br", null),
+                            _react2.default.createElement(
+                                "span",
+                                { key: section.id },
+                                section.purpose
+                            ),
+                            _react2.default.createElement(
+                                "h4",
+                                null,
+                                "Nebenwirkung:"
+                            ),
+                            " ",
+                            _react2.default.createElement("br", null),
+                            _react2.default.createElement("span", { dangerouslySetInnerHTML: _this32.createMarkup(section.text) }),
+                            _react2.default.createElement("hr", null)
+                        )
+                    );
+                }).reduce(function (prev, curr) {
+                    return [prev, curr];
+                })
+            );
+        }
+    }, {
         key: "render",
         value: function render() {
-            var _this21 = this;
+            var _this33 = this;
 
             var that = this;
             setTimeout(function () {
@@ -44831,7 +45430,8 @@ var DrugDetail = function (_React$Component) {
                         { className: "round-button-outer report-round-button round_info hidden-lg hidden-md" },
                         _react2.default.createElement(
                             "div",
-                            { id: "reportBtn", className: "round-button-inner-main", "data-toggle": "modal", "data-target": "#info" },
+                            { id: "reportBtn", className: "round-button-inner-main", "data-toggle": "modal",
+                                "data-target": "#info" },
                             _react2.default.createElement(_reactFontawesome.FontAwesomeIcon, { icon: _freeSolidSvgIcons.faInfo })
                         )
                     ),
@@ -44885,7 +45485,8 @@ var DrugDetail = function (_React$Component) {
                     ),
                     _react2.default.createElement(
                         "div",
-                        { className: "modal fade", id: "address", tabIndex: "-1", role: "dialog", "aria-labelledby": "addressLabel",
+                        { className: "modal fade", id: "address", tabIndex: "-1", role: "dialog",
+                            "aria-labelledby": "addressLabel",
                             "aria-hidden": "true" },
                         _react2.default.createElement(
                             "div",
@@ -44932,7 +45533,8 @@ var DrugDetail = function (_React$Component) {
                     ),
                     _react2.default.createElement(
                         "div",
-                        { className: "modal fade", id: "melden", tabIndex: "-1", role: "dialog", "aria-labelledby": "addressLabel",
+                        { className: "modal fade", id: "melden", tabIndex: "-1", role: "dialog",
+                            "aria-labelledby": "addressLabel",
                             "aria-hidden": "true" },
                         _react2.default.createElement(
                             "div",
@@ -45037,7 +45639,7 @@ var DrugDetail = function (_React$Component) {
                                         "button",
                                         { type: "button", className: "btn btn-like",
                                             onClick: function onClick() {
-                                                return _this21.toggleTaking(drug);
+                                                return _this33.toggleTaking(drug);
                                             } },
                                         _react2.default.createElement("span", {
                                             className: "glyphicon white" + (!drug.isTaken ? " glyphicon-heart" : " glyphicon-minus") })
@@ -45046,7 +45648,7 @@ var DrugDetail = function (_React$Component) {
                                         "button",
                                         { type: "button", className: "btn btn-add",
                                             onClick: function onClick() {
-                                                return _this21.toggleRemember(drug);
+                                                return _this33.toggleRemember(drug);
                                             } },
                                         _react2.default.createElement("span", {
                                             className: "glyphicon white" + (!drug.isRemembered ? " glyphicon-plus" : " glyphicon-minus") })
@@ -45124,7 +45726,8 @@ var DrugDetail = function (_React$Component) {
                                                             { className: "modal-header" },
                                                             _react2.default.createElement(
                                                                 "button",
-                                                                { type: "button", className: "close", "data-dismiss": "modal",
+                                                                { type: "button", className: "close",
+                                                                    "data-dismiss": "modal",
                                                                     "aria-label": "Close" },
                                                                 _react2.default.createElement(
                                                                     "span",
@@ -45305,7 +45908,8 @@ var DrugDetail = function (_React$Component) {
                                                 ),
                                                 _react2.default.createElement(
                                                     "div",
-                                                    { className: "modal fade", id: "drugform", tabIndex: "-1", role: "dialog",
+                                                    { className: "modal fade", id: "drugform", tabIndex: "-1",
+                                                        role: "dialog",
                                                         "aria-labelledby": "addressLabel",
                                                         "aria-hidden": "true" },
                                                     _react2.default.createElement(
@@ -45537,12 +46141,464 @@ var DrugDetail = function (_React$Component) {
                                                 ),
                                                 _react2.default.createElement("hr", null),
                                                 _react2.default.createElement(
-                                                    "p",
+                                                    "h4",
                                                     null,
                                                     "Wie alle Arzneimittel kann auch dieses Arzneimittel Nebenwirkungen haben, die aber nicht bei jedem auftreten m\xFCssen."
+                                                ),
+                                                this.renderPackSecneben(drug),
+                                                _react2.default.createElement(
+                                                    "div",
+                                                    { className: "row", style: { marginBottom: "30px" } },
+                                                    _react2.default.createElement(
+                                                        "h4",
+                                                        null,
+                                                        "Weiterhin k\xF6nnen folgende Nebenwirkungen auftreten."
+                                                    ),
+                                                    _react2.default.createElement(
+                                                        "p",
+                                                        { style: { fontStyle: "italic" } },
+                                                        " Bei der Bewertung von Nebenwirkungen werden folgende H\xE4ufigkeitsangaben zugrunde gelegt. Klicken Sie auf die Kachel um Informationen zu den Nebenwikungen zu erhalten "
+                                                    ),
+                                                    _react2.default.createElement(
+                                                        "div",
+                                                        { onClick: this.renderhide.bind(this),
+                                                            className: "col-lg-6 col-xs-12 neben_tile brightgreen",
+                                                            "data-toggle": "modal",
+                                                            "data-target": "#neben_sehrhaeufig" },
+                                                        _react2.default.createElement(
+                                                            "h1",
+                                                            null,
+                                                            "Sehr h\xE4ufig"
+                                                        ),
+                                                        _react2.default.createElement(
+                                                            "p",
+                                                            null,
+                                                            "Die Nebenwirkung betrifft mehr als 1 Behandelten von 10"
+                                                        )
+                                                    ),
+                                                    _react2.default.createElement(
+                                                        "div",
+                                                        { onClick: this.renderhide.bind(this),
+                                                            className: "col-lg-6 col-xs-12  neben_tile brightgreen",
+                                                            "data-toggle": "modal",
+                                                            "data-target": "#neben_haeufig" },
+                                                        _react2.default.createElement(
+                                                            "h1",
+                                                            null,
+                                                            "H\xE4ufig"
+                                                        ),
+                                                        _react2.default.createElement(
+                                                            "p",
+                                                            null,
+                                                            "Die Nebenwirkung betrifft 1 bis 10 Behandelte von 100"
+                                                        )
+                                                    ),
+                                                    _react2.default.createElement(
+                                                        "div",
+                                                        { onClick: this.renderhide.bind(this),
+                                                            className: "col-lg-6 col-xs-12  neben_tile brightyellow",
+                                                            "data-toggle": "modal",
+                                                            "data-target": "#neben_gelegentlich" },
+                                                        _react2.default.createElement(
+                                                            "h1",
+                                                            null,
+                                                            "Gelegentlich"
+                                                        ),
+                                                        _react2.default.createElement(
+                                                            "p",
+                                                            null,
+                                                            "Die Nebenwirkung betrifft 1 bis 10 Behandelte von 1.000"
+                                                        )
+                                                    ),
+                                                    _react2.default.createElement(
+                                                        "div",
+                                                        { onClick: this.renderhide.bind(this),
+                                                            className: "col-lg-6 col-xs-12  neben_tile brightred",
+                                                            "data-toggle": "modal",
+                                                            "data-target": "#neben_selten" },
+                                                        _react2.default.createElement(
+                                                            "h1",
+                                                            null,
+                                                            "Selten"
+                                                        ),
+                                                        _react2.default.createElement(
+                                                            "p",
+                                                            null,
+                                                            "Die Nebenwirkung betrifft 1 bis 10 Behandelte von 10.000"
+                                                        )
+                                                    ),
+                                                    _react2.default.createElement(
+                                                        "div",
+                                                        { onClick: this.renderhide.bind(this),
+                                                            className: "col-lg-6 col-xs-12  neben_tile brightred",
+                                                            "data-toggle": "modal",
+                                                            "data-target": "#neben_sehrselten" },
+                                                        _react2.default.createElement(
+                                                            "h1",
+                                                            null,
+                                                            "Sehr selten"
+                                                        ),
+                                                        _react2.default.createElement(
+                                                            "p",
+                                                            null,
+                                                            "Die Nebenwirkung betrifft weniger als 1 Behandelten von 10.000"
+                                                        )
+                                                    ),
+                                                    _react2.default.createElement(
+                                                        "div",
+                                                        { onClick: this.renderhide.bind(this),
+                                                            className: "col-lg-6 col-xs-12  neben_tile brightgrey",
+                                                            "data-toggle": "modal",
+                                                            "data-target": "#neben_nichtbekannt" },
+                                                        _react2.default.createElement(
+                                                            "h1",
+                                                            null,
+                                                            "Nicht bekannt"
+                                                        ),
+                                                        _react2.default.createElement(
+                                                            "p",
+                                                            null,
+                                                            "H\xE4ufigkeit auf Grundlage der verf\xFCgbaren Daten nicht absch\xE4tzbar"
+                                                        )
+                                                    )
+                                                ),
+                                                _react2.default.createElement(
+                                                    "div",
+                                                    { className: "modal fade", id: "neben_sehrhaeufig", tabIndex: "-1",
+                                                        role: "dialog", "aria-labelledby": "neben_info",
+                                                        "aria-hidden": "true" },
+                                                    _react2.default.createElement(
+                                                        "div",
+                                                        { className: "modal-dialog modal-lg", role: "document" },
+                                                        _react2.default.createElement(
+                                                            "div",
+                                                            { className: "modal-content brightgreen" },
+                                                            _react2.default.createElement(
+                                                                "div",
+                                                                { className: "modal-header" },
+                                                                _react2.default.createElement(
+                                                                    "button",
+                                                                    { type: "button", className: "close",
+                                                                        "data-dismiss": "modal", "aria-label": "Close" },
+                                                                    _react2.default.createElement(
+                                                                        "span",
+                                                                        { "aria-hidden": "true" },
+                                                                        "\xD7"
+                                                                    )
+                                                                ),
+                                                                _react2.default.createElement(
+                                                                    "h2",
+                                                                    null,
+                                                                    "Sehr h\xE4ufig"
+                                                                ),
+                                                                _react2.default.createElement(
+                                                                    "p",
+                                                                    null,
+                                                                    "Die Nebenwirkung betrifft mehr als 1 Behandelten von 10 "
+                                                                ),
+                                                                _react2.default.createElement(
+                                                                    "p",
+                                                                    null,
+                                                                    _react2.default.createElement(
+                                                                        "b",
+                                                                        null,
+                                                                        "Bedeutung"
+                                                                    ),
+                                                                    " Bei mehr als 10 % der Behandelten ist die Nebenwirkung aufgetreten."
+                                                                )
+                                                            ),
+                                                            _react2.default.createElement(
+                                                                "div",
+                                                                { className: "modal-body", style: { color: "black" } },
+                                                                this.rendersehrhaeufigdesktop(drug),
+                                                                this.rendersehrhaeufigmobile(drug)
+                                                            ),
+                                                            _react2.default.createElement("span", {
+                                                                dangerouslySetInnerHTML: this.createMarkup(t("modal_close")) })
+                                                        )
+                                                    )
+                                                ),
+                                                _react2.default.createElement(
+                                                    "div",
+                                                    { className: "modal fade", id: "neben_haeufig", tabIndex: "-1",
+                                                        role: "dialog", "aria-labelledby": "neben_haeufig",
+                                                        "aria-hidden": "true" },
+                                                    _react2.default.createElement(
+                                                        "div",
+                                                        { className: "modal-dialog modal-lg", role: "document" },
+                                                        _react2.default.createElement(
+                                                            "div",
+                                                            { className: "modal-content brightgreen" },
+                                                            _react2.default.createElement(
+                                                                "div",
+                                                                { className: "modal-header" },
+                                                                _react2.default.createElement(
+                                                                    "button",
+                                                                    { type: "button", className: "close",
+                                                                        "data-dismiss": "modal", "aria-label": "Close" },
+                                                                    _react2.default.createElement(
+                                                                        "span",
+                                                                        { "aria-hidden": "true" },
+                                                                        "\xD7"
+                                                                    )
+                                                                ),
+                                                                _react2.default.createElement(
+                                                                    "h2",
+                                                                    null,
+                                                                    "H\xE4ufig "
+                                                                ),
+                                                                _react2.default.createElement(
+                                                                    "p",
+                                                                    null,
+                                                                    "Die Nebenwirkung betrifft 1 bis 10 Behandelte von 100 "
+                                                                ),
+                                                                _react2.default.createElement(
+                                                                    "p",
+                                                                    null,
+                                                                    _react2.default.createElement(
+                                                                        "b",
+                                                                        null,
+                                                                        "Bedeutung"
+                                                                    ),
+                                                                    " Bei 1 bis 10 % der Behandelten ist die Nebenwirkung aufgetreten."
+                                                                )
+                                                            ),
+                                                            _react2.default.createElement(
+                                                                "div",
+                                                                { className: "modal-body", style: { color: "black" } },
+                                                                this.renderhaeufigdesktop(drug),
+                                                                this.renderhaeufigmobile(drug)
+                                                            ),
+                                                            _react2.default.createElement("span", {
+                                                                dangerouslySetInnerHTML: this.createMarkup(t("modal_close")) })
+                                                        )
+                                                    )
+                                                ),
+                                                _react2.default.createElement(
+                                                    "div",
+                                                    { className: "modal fade", id: "neben_gelegentlich", tabIndex: "-1",
+                                                        role: "dialog", "aria-labelledby": "neben_gelegentlich",
+                                                        "aria-hidden": "true" },
+                                                    _react2.default.createElement(
+                                                        "div",
+                                                        { className: "modal-dialog modal-lg", role: "document" },
+                                                        _react2.default.createElement(
+                                                            "div",
+                                                            { className: "modal-content brightyellow" },
+                                                            _react2.default.createElement(
+                                                                "div",
+                                                                { className: "modal-header" },
+                                                                _react2.default.createElement(
+                                                                    "button",
+                                                                    { type: "button", className: "close",
+                                                                        "data-dismiss": "modal", "aria-label": "Close" },
+                                                                    _react2.default.createElement(
+                                                                        "span",
+                                                                        { "aria-hidden": "true" },
+                                                                        "\xD7"
+                                                                    )
+                                                                ),
+                                                                _react2.default.createElement(
+                                                                    "h2",
+                                                                    null,
+                                                                    "Gelegentlich "
+                                                                ),
+                                                                _react2.default.createElement(
+                                                                    "p",
+                                                                    null,
+                                                                    " Die Nebenwirkung betrifft 1 bis 10 Behandelte von 1.000 "
+                                                                ),
+                                                                _react2.default.createElement(
+                                                                    "p",
+                                                                    null,
+                                                                    _react2.default.createElement(
+                                                                        "b",
+                                                                        null,
+                                                                        "Bedeutung"
+                                                                    ),
+                                                                    " Bei 0,1 % bis 1 % der Behandelten ist die Nebenwirkung aufgetreten."
+                                                                )
+                                                            ),
+                                                            _react2.default.createElement(
+                                                                "div",
+                                                                { className: "modal-body", style: { color: "black" } },
+                                                                this.rendergelegentlichdesktop(drug),
+                                                                this.rendergelegentlichmobile(drug)
+                                                            ),
+                                                            _react2.default.createElement("span", {
+                                                                dangerouslySetInnerHTML: this.createMarkup(t("modal_close")) })
+                                                        )
+                                                    )
+                                                ),
+                                                _react2.default.createElement(
+                                                    "div",
+                                                    { className: "modal fade", id: "neben_selten", tabIndex: "-1",
+                                                        role: "dialog", "aria-labelledby": "neben_selten",
+                                                        "aria-hidden": "true" },
+                                                    _react2.default.createElement(
+                                                        "div",
+                                                        { className: "modal-dialog modal-lg", role: "document" },
+                                                        _react2.default.createElement(
+                                                            "div",
+                                                            { className: "modal-content brightred" },
+                                                            _react2.default.createElement(
+                                                                "div",
+                                                                { className: "modal-header" },
+                                                                _react2.default.createElement(
+                                                                    "button",
+                                                                    { type: "button", className: "close",
+                                                                        "data-dismiss": "modal", "aria-label": "Close" },
+                                                                    _react2.default.createElement(
+                                                                        "span",
+                                                                        { "aria-hidden": "true" },
+                                                                        "\xD7"
+                                                                    )
+                                                                ),
+                                                                _react2.default.createElement(
+                                                                    "h2",
+                                                                    null,
+                                                                    "Selten "
+                                                                ),
+                                                                _react2.default.createElement(
+                                                                    "p",
+                                                                    null,
+                                                                    " Die Nebenwirkung betriff 1 bis 10 Behandelte von 10.000 "
+                                                                ),
+                                                                _react2.default.createElement(
+                                                                    "p",
+                                                                    null,
+                                                                    _react2.default.createElement(
+                                                                        "b",
+                                                                        null,
+                                                                        "Bedeutung"
+                                                                    ),
+                                                                    " Bei 0,01 % bis 0,1 % der Behandelten ist die Nebenwirkung aufgetreten."
+                                                                )
+                                                            ),
+                                                            _react2.default.createElement(
+                                                                "div",
+                                                                { className: "modal-body", style: { color: "black" } },
+                                                                this.renderseltendesktop(drug),
+                                                                this.renderseltenmobile(drug)
+                                                            ),
+                                                            _react2.default.createElement("span", {
+                                                                dangerouslySetInnerHTML: this.createMarkup(t("modal_close")) })
+                                                        )
+                                                    )
+                                                ),
+                                                _react2.default.createElement(
+                                                    "div",
+                                                    { className: "modal fade", id: "neben_sehrselten", tabIndex: "-1",
+                                                        role: "dialog", "aria-labelledby": "neben_sehrselten",
+                                                        "aria-hidden": "true" },
+                                                    _react2.default.createElement(
+                                                        "div",
+                                                        { className: "modal-dialog modal-lg", role: "document" },
+                                                        _react2.default.createElement(
+                                                            "div",
+                                                            { className: "modal-content brightred" },
+                                                            _react2.default.createElement(
+                                                                "div",
+                                                                { className: "modal-header" },
+                                                                _react2.default.createElement(
+                                                                    "button",
+                                                                    { type: "button", className: "close",
+                                                                        "data-dismiss": "modal", "aria-label": "Close" },
+                                                                    _react2.default.createElement(
+                                                                        "span",
+                                                                        { "aria-hidden": "true" },
+                                                                        "\xD7"
+                                                                    )
+                                                                ),
+                                                                _react2.default.createElement(
+                                                                    "h2",
+                                                                    null,
+                                                                    "Sehr selten"
+                                                                ),
+                                                                _react2.default.createElement(
+                                                                    "p",
+                                                                    null,
+                                                                    " Die Nebenwirkung betrifft weniger als 1 Behandelten von 10.000 "
+                                                                ),
+                                                                _react2.default.createElement(
+                                                                    "p",
+                                                                    null,
+                                                                    _react2.default.createElement(
+                                                                        "b",
+                                                                        null,
+                                                                        "Bedeutung"
+                                                                    ),
+                                                                    " Bei weniger als 0,01 % der Behandelten ist die Nebenwirkung aufgetreten."
+                                                                )
+                                                            ),
+                                                            _react2.default.createElement(
+                                                                "div",
+                                                                { className: "modal-body", style: { color: "black" } },
+                                                                this.rendersehrseltendesktop(drug),
+                                                                this.rendersehrseltenmobile(drug)
+                                                            ),
+                                                            _react2.default.createElement("span", {
+                                                                dangerouslySetInnerHTML: this.createMarkup(t("modal_close")) })
+                                                        )
+                                                    )
+                                                ),
+                                                _react2.default.createElement(
+                                                    "div",
+                                                    { className: "modal fade", id: "neben_nichtbekannt", tabIndex: "-1",
+                                                        role: "dialog", "aria-labelledby": "neben_nichtbekannt",
+                                                        "aria-hidden": "true" },
+                                                    _react2.default.createElement(
+                                                        "div",
+                                                        { className: "modal-dialog modal-lg", role: "document" },
+                                                        _react2.default.createElement(
+                                                            "div",
+                                                            { className: "modal-content brightgrey" },
+                                                            _react2.default.createElement(
+                                                                "div",
+                                                                { className: "modal-header" },
+                                                                _react2.default.createElement(
+                                                                    "button",
+                                                                    { type: "button", className: "close",
+                                                                        "data-dismiss": "modal", "aria-label": "Close" },
+                                                                    _react2.default.createElement(
+                                                                        "span",
+                                                                        { "aria-hidden": "true" },
+                                                                        "\xD7"
+                                                                    )
+                                                                ),
+                                                                _react2.default.createElement(
+                                                                    "h2",
+                                                                    null,
+                                                                    "Nicht Bekannt "
+                                                                ),
+                                                                _react2.default.createElement(
+                                                                    "p",
+                                                                    null,
+                                                                    " H\xE4ufigkeit auf Grundlage der verf\xFCgbaren Daten nicht absch\xE4tzbar "
+                                                                ),
+                                                                _react2.default.createElement(
+                                                                    "p",
+                                                                    null,
+                                                                    _react2.default.createElement(
+                                                                        "b",
+                                                                        null,
+                                                                        "Bedeutung"
+                                                                    ),
+                                                                    " Es sind nur Einzelf\xE4lle bekannt, daraus kann die H\xE4ufigkeit des Auftretens nicht bestimmt werden."
+                                                                )
+                                                            ),
+                                                            _react2.default.createElement(
+                                                                "div",
+                                                                { className: "modal-body", style: { color: "black" } },
+                                                                this.rendernichtbekanntdesktop(drug),
+                                                                this.rendernichtbekanntmobile(drug)
+                                                            ),
+                                                            _react2.default.createElement("span", {
+                                                                dangerouslySetInnerHTML: this.createMarkup(t("modal_close")) })
+                                                        )
+                                                    )
                                                 )
                                             ),
-                                            this.renderPackSecneben(drug),
                                             _react2.default.createElement(
                                                 "div",
                                                 { className: "text-right" },
@@ -45552,7 +46608,8 @@ var DrugDetail = function (_React$Component) {
                                                         "data-toggle": "modal",
                                                         "data-target": "#melden" },
                                                     "Meldung von Nebenwirkungen",
-                                                    _react2.default.createElement("i", { className: "fas fa-comment-medical", style: { marginLeft: "15px" } })
+                                                    _react2.default.createElement("i", { className: "fas fa-comment-medical",
+                                                        style: { marginLeft: "15px" } })
                                                 )
                                             )
                                         )
@@ -45576,7 +46633,8 @@ var DrugDetail = function (_React$Component) {
                     this.renderGoTopIcon(),
                     _react2.default.createElement(
                         "div",
-                        { className: "modal fade", id: "neben_info", tabIndex: "-1", role: "dialog", "aria-labelledby": "neben_info",
+                        { className: "modal fade", id: "neben_info", tabIndex: "-1", role: "dialog",
+                            "aria-labelledby": "neben_info",
                             "aria-hidden": "true" },
                         _react2.default.createElement(
                             "div",

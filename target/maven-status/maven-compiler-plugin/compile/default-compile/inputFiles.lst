@@ -110,6 +110,7 @@
 /home/tivi90/epill_t/src/main/java/com/doccuty/epill/disease/DiseaseRepository.java
 /home/tivi90/epill_t/src/main/java/com/doccuty/epill/model/util/PackagingAddressSet.java
 /home/tivi90/epill_t/src/main/java/com/doccuty/epill/disease/DiseaseService.java
+/home/tivi90/epill_t/src/main/java/com/doccuty/epill/sideeffectcontent/SideEffectContentController.java
 /home/tivi90/epill_t/src/main/java/com/doccuty/epill/model/util/SubstanceGroupSet.java
 /home/tivi90/epill_t/src/main/java/com/doccuty/epill/authentication/JWTConfiguration.java
 /home/tivi90/epill_t/src/main/java/com/doccuty/epill/tailoredtext/TailoredTextService.java

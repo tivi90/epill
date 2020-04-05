@@ -251,6 +251,7 @@ public class SideEffectContentSet extends HashSet<SideEffectContent>
    }
 
 
+
    /**
     * Loop through the current set of SideEffectContent objects and collect those SideEffectContent objects where the text attribute matches the parameter value. 
     * 
@@ -314,7 +315,88 @@ public class SideEffectContentSet extends HashSet<SideEffectContent>
       
       return this;
    }
+   /**
+    * Loop through the current set of SideEffectContent objects and collect a list of the Purpose attribute values.
+    *
+    * @return List of String objects reachable via Purpose attribute
+    */
+   public ObjectSet getPurpose()
+   {
+      ObjectSet result = new ObjectSet();
 
+      for (SideEffectContent obj : this)
+      {
+         result.add(obj.getPurpose());
+      }
+
+      return result;
+   }
+
+
+
+   /**
+    * Loop through the current set of SideEffectContent objects and collect those SideEffectContent objects where the Purpose attribute matches the parameter value.
+    *
+    * @param value Search value
+    *
+    * @return Subset of SideEffectContent objects that match the parameter
+    */
+   public SideEffectContentSet filterPurpose(String value)
+   {
+      SideEffectContentSet result = new SideEffectContentSet();
+
+      for (SideEffectContent obj : this)
+      {
+         if (value.equals(obj.getPurpose()))
+         {
+            result.add(obj);
+         }
+      }
+
+      return result;
+   }
+
+
+   /**
+    * Loop through the current set of SideEffectContent objects and collect those SideEffectContent objects where the Purpose attribute is between lower and upper.
+    *
+    * @param lower Lower bound
+    * @param upper Upper bound
+    *
+    * @return Subset of SideEffectContent objects that match the parameter
+    */
+   public SideEffectContentSet filterPurpose(String lower, String upper)
+   {
+      SideEffectContentSet result = new SideEffectContentSet();
+
+      for (SideEffectContent obj : this)
+      {
+         if (lower.compareTo(obj.getPurpose()) <= 0 && obj.getPurpose().compareTo(upper) <= 0)
+         {
+            result.add(obj);
+         }
+      }
+
+      return result;
+   }
+
+
+   /**
+    * Loop through the current set of SideEffectContent objects and assign value to the Purpose attribute of each of it.
+    *
+    * @param value New attribute value
+    *
+    * @return Current set of SideEffectContent objects now with new attribute values.
+    */
+   public SideEffectContentSet withPurpose(String value)
+   {
+      for (SideEffectContent obj : this)
+      {
+         obj.setPurpose(value);
+      }
+
+      return this;
+   }
 
    /**
     * Loop through the current set of SideEffectContent objects and collect a set of the Drug objects reached via drug. 

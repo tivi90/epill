@@ -536,23 +536,191 @@ INSERT INTO drug_drug_feature (iddrug, iddrug_feature) VALUES (14,12);
 --
 -- Dumping data for table `side_Effect`
 --
-INSERT INTO side_effect (id, side_effect, description_drug ) VALUES (1,'hauefig','
-<p>Tierversuche sind in §7 (2) Tierschutzgesetz definiert als „Eingriffe oder Behandlungen zu Versuchszwecken an Tieren
-    oder am Erbgut von Tieren, wenn sie mit Schmerzen, Leiden oder Schäden für die Tiere verbunden sein können oder dazu
-    führen können, dass Tiere geboren werden (…), die Schmerzen, Leiden oder Schäden erleiden.“ Tierversuche sind auch
-    Eingriffe oder Behandlungen, die nicht Versuchszwecken dienen, zur<ul>
-        <li> Herstellung, Gewinnung, Aufbewahrung oder Vermehrung von Stoffen, Produkten oder Organismen</li>
-        <li> Organ- oder Gewebeentnahme, um diese zu wissenschaftlichen Zwecken zu kultivieren, transplantieren,
-            untersuchen</li>
-        <li>Verwendung zu Aus-, Fort- oder Weiterbildungszwecken </li>
-    </ul><b>Bei diesem Medikament wurden keine Tierversuche durchgeführt.</b></p>
+INSERT INTO side_effect (id, side_effect ) VALUES (1,'sehrhäufig');
+INSERT INTO side_effect (id, side_effect ) VALUES (2,'haeufig');
+INSERT INTO side_effect (id, side_effect ) VALUES (3,'gelegentlich');
+INSERT INTO side_effect (id, side_effect ) VALUES (4,'selten');
+INSERT INTO side_effect (id, side_effect ) VALUES (5,'sehrselten');
+INSERT INTO side_effect (id, side_effect ) VALUES (6,'nichtbekannt');
+
+
+INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text ) VALUES (1,1,0,11,1,'Nicht
+Bekannt','<b>Verdauungsprobleme wie</b>
+<ul>
+    <li>Übelkeit</li>
+    <li>Erbrechen</li>
+    <li>Durchfall</li>
+    <li>Bauchschmerzen</li>
+    <li>Appetitverlust</li>
+</ul>
+Diese Nebenwirkungen treten meistens zu Beginn der Behandlung mit
+Metformin Lich auf. </br> </br>
+<b>Vorbeugung:</b> </br>Eine Aufteilung der Tagesdosis auf mehrere über den Tag
+verteilte
+Einnahmen und die Einnahme von Metformin Lich mit oder direkt nach einer Mahlzeit.
+</br>
+<span style=" color: red;">Wenn die Beschwerden andauern, nehmen Sie Metformin Lich
+    nicht weiter ein
+    und sprechen Sie mit Ihrem
+    Arzt.</span>');
+INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (2,2,0,11,2,'Nicht
+Bekannt','Geschmacksveränderungen');
+INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (3,5,0,11,5,'Nicht
+Bekannt','<b>Übersäuerung des Blutes mit Milchsäure (<a class=" info_words" type="button" data-toggle="modal"
+        data-target="#laktatazidose">Laktatazidose</a>)</b> </br>Dies
+ist eine
+sehr seltene, aber schwerwiegende Komplikation, insbesondere bei Patienten mit
+eingeschränkter
+Nierenfunktion. Die Symptome einer <a class="info_words" type="button" data-toggle="modal"
+    data-target="#laktatazidose">Laktatazidose</a> sind unspezifisch.
+</br> </br>
+<b>Auffällige Leberfunktionswerte oder <a class="info_words" type="button" data-toggle="modal"
+        data-target="#hepatitis">Hepatitis</a></b> </br> Wenn Sie
+derartige Beschwerden bekommen, nehmen
+Sie
+Metformin Lich nicht weiter ein und sprechen Sie sofort mit Ihrem Arzt.</br></br>
+<b>Hautreaktionen wie</b>
+<ul>
+    <li> Rötung (Erythem)</li>
+    <li>Juckreiz oder juckender Ausschlag (Quaddeln)
+</ul>
+</br>
+<b>Niedrige Konzentration von Vitamin B12 im Blut.</b>');
+INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (4,6,0,11,6,'Nicht
+Bekannt','<ul>
+    <li>Verringerte Anzahl der roten Blutkörperchen, die eine blassgelbe Haut,
+        Schwächegefühl
+        oder Atemlosigkeit verursachen kann (hämolytische Anämie).</li>
+    <li>Abnahme des Schilddrüse-stimulierenden Hormon-(TSH-)Blutspiegels bei Patienten
+        mit
+        einer Schilddrüsenunterfunktion (Hypothyreose).</li>
+    Niedriger Magnesiumspiegel im Blut (Hypomagnesiämie) im Rahmen einer
+    Durchfallerkrankung.</li>
+    <li>Eine Erkrankung, bei der die Funktionalität des Gehirns betroffen ist
+        (Enzephalopathie).
+    <li>Überempfindlichkeit der Haut gegenüber Licht (Photosensitivität).</li>
+
+    <li>Erkrankung der Nerven bei Patienten mit Vitamin-B12-Mangel, die Schwächegefühl,
+        Kribbeln oder Taubheitsgefühl verursachen kann (periphere Neuropathie).
+    </li>
+</ul>');
+INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (5,1,0,12,1,'Nicht
+Bekannt','Knöchelschwellungen (Ödeme)');
+INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (6,2,0,12,2,'Nicht
+Bekannt',' <ul>
+    <li>Kopfschmerzen, Schwindel, Schläfrigkeit (insbesondere zu Beginn der Behandlung)</li>
+    <li>Herzklopfen (Palpitationen), Hautrötung mit Wärmegefühl</li>
+    <li>Bauchschmerzen, Übelkeit</li>
+    <li>veränderte Darmentleerungsgewohnheiten, Durchfälle, Verstopfung,
+        Verdauungsstörungen</li>
+    <li>Müdigkeit, Schwächegefühl</li>
+    <li>Sehstörungen, Doppeltsehen</li>
+    <li>Muskelkrämpfe</li>
+</ul>');
+INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (7,3,0,12,3,'Nicht
+Bekannt',' <ul>
+    <li>Stimmungsschwankungen, Angst, Depression, Schlaflosigkeit</li>
+    <li>Zittern, Geschmacksstörungen, kurze Bewusstlosigkeit</li>
+    <li>verminderte Empfindlichkeit für Berührungsreize oder Kribbeln in den Extremitäten,
+        Verlust des Schmerzgefühls</li>
+    <li>Ohrgeräusche</li>
+    <li>niedriger Blutdruck</li>
+    <li>Niesen/laufende Nase durch eine Entzündung der Nasenschleimhaut (Rhinitis)</li>
+    <li>Husten</li>
+    <li>Mundtrockenheit, Erbrechen</li>
+    <li>Haarausfall, vermehrtes Schwitzen, Hautjucken, rote Flecken auf der Haut,
+        Hautverfärbung</li>
+    <li>Störungen beim Wasserlassen, vermehrter nächtlicher Harndrang, häufigeres
+        Wasserlassen</li>
+    <li>Erektionsstörungen, Vergrößerung der Brustdrüsen beim Mann</li>
+    <li>Schmerzen, Unwohlsein</li>
+    <li>Gelenk- oder Muskelschmerzen, Rückenschmerzen</li>
+    <li>Gewichtszunahme oder Gewichtsabnahme</li>
+</ul>');
+INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (8,4,0,12,4,'Nicht
+Bekannt','Verwirrung');
+INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (9,5,0,12,5,'Nicht
+Bekannt',' <ul>
+    <li>Verminderung der weißen Blutkörperchen, Verminderung der Blutplättchen, was zu
+        ungewöhnlichen blauen Flecken oder leichtem Bluten führen kann (Schädigung der
+        roten Blutzellen)</li>
+    <li>erhöhter Blutzuckerspiegel (Hyperglykämie)</li>
+    <li>eine Nervenstörung, die zu Schwächegefühl, verminderter Empfindlichkeit für
+        Berührungsreize oder Kribbeln führen kann</li>
+    <li>Schwellung des Zahnfleischs</li>
+    <li>aufgeblähter Bauch (Gastritis)</li>
+    <li>gestörte Leberfunktion, Entzündung der Leber (Hepatitis), Gelbfärbung der Haut
+        (Gelbsucht), Anstieg der Leberenzyme, wodurch bestimmte medizinische Tests
+        beeinflusst werden können</li>
+    <li>erhöhte Muskelanspannung</li>
+    <li>entzündliche Reaktionen der Blutgefäße, häufig mit Hautausschlag</li>
+    <li>Lichtempfindlichkeit</li>
+    <li>Störungen, die sich aus Steifheit, Zittern und/oder Bewegungsstörungen
+        zusammensetzen</li>
+</ul>');
+INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (10,3,0,13,3,'
+Erkrankungen des Blutes-und Lymphsystems
+','Blutarmut durch vermehrten Zerfall roter Blutkörperchen (hämolytische Anämie), Blutarmut durch Blutbildungsstörung im
+Knochenmark (aplastische Anämie)');
+INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (11,4,0,13,4,'
+Erkrankungen des Blutes-und Lymphsystems
+','Verminderung der Anzahl bestimmter Blutzellen (Neutropenie, Thrombozytopenie, Panzytopenie) bis zu einer hochgradigen
+Verminderung bestimmter weißer Blutkörperchen mit Infektneigung und schweren Allgemeinsymptomen (Agranulozytose),
+Abnahme bestimmter Laborwerte (Hämoglobin und Hämatokrit), herabgesetzte Funktion des Knochenmarks
+(Knochenmarksdepression), Lymphknotenschwellung, Autoimmunkrankheiten.
+');
+INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (12,3,0,13,3,' Stoffwechsel- und Ernährungsstörungen ','Zu niedrige Blutzuckerwerte (Hypoglykämie).
+');
+INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (13,1,0,13,1,' Augenerkrankungen ','Verschwommensehen
+');
+INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (14,1,0,13,1,' Herz-Kreislauf-System ','Schwindel ');
+INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (15,2,0,13,2,' Herz-Kreislauf-System ','Übermäßige Blutdrucksenkung einschließlich übermäßiger Blutdruckabfall bei Lagewechsel vom Liegen zum Stehen (orthostatische Hypotonie), kurzzeitiger Bewusstseinsverlust (Synkope), Herzinfarkt oder Schlaganfall, vermutlich infolge übermäßigen Blutdruckabfalls bei gefährdeten Patienten (Patienten mit Durchblutungsstörungen im Bereich des Herzens und/oder des Gehirns), Schmerzenim Brustkorb, Herzrhythmusstörungen, Herzengegefühl (Angina pectoris), beschleunigter Herzschlag (Tachykardie). ');
+INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (16,3,0,13,3,' Herz-Kreislauf-System ','Übermäßiger Blutdruckabfall bei Lagewechsel vom Liegen zum Stehen (orthostatische Hypotonie), Herzklopfen.
+');
+INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (17,4,0,13,4,' Herz-Kreislauf-System ','Durch Gefäßkrämpfe bedingte Durchblutungsstörungen an Händen und Füßen (Raynaud-Phänomen).
+');
+INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (18,1,0,13,1,' Erkrankungen der Atemwege, des Brustraums und Mediastinums
+','Übelkeit
+');
+INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (19,2,0,13,2,' Erkrankungen der Atemwege, des Brustraums und Mediastinums
+','Durchfall, Bauchschmerzen, Geschmacksveränderungen.
+');
+INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (20,3,0,13,3,' Erkrankungen der Atemwege, des Brustraums und Mediastinums
+','Darmverschluss (Ileus), Entzündung der Bauchspeicheldrüse, Erbrechen, Verdauungsstörungen, Verstopfung, Appetitlosigkeit, Magenreizung, Mundtrockenheit, Magengeschwür (peptisches Ulkus).
+');
+INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (21,4,0,13,4,' Erkrankungen der Atemwege, des Brustraums und Mediastinums
+','Entzündungen der Mundschleimhaut mit Geschwürbildung (Stomatitis/aphthöse Ulzerationen), Entzündungen der Zungenschleimhaut (Glossitis).
+');
+INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (22,5,0,13,5,' Erkrankungen der Atemwege, des Brustraums und Mediastinums
+','Gewebeschwellung des Darms (intestinales angioneurotisches Ödem).
+');
+INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (23,4,0,13,4,' Leber- und Gallenerkrankungen ','Leberversagen, Leberentzündung (Hepatitis - hepatozellulär oder cholestatisch, einschließlich hepatische Nekrose), Gelbsucht.
+');
+INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (24,2,0,13,2,' Erkrankungen der Haut und des Unterhautzellgewebes ','Ausschlag, Überempfindlichkeit/Gewebeschwellung (angioneurotisches Ödem): angioneurotische Ödeme mit Beteiligung von Gesicht, Gliedmaßen, Lippen, Zunge, Stimmapparat des Kehlkopfes (Glottis) und/oder Kehlkopf wurden beobachtet.
+');
+INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (25,3,0,13,3,' Erkrankungen der Haut und des Unterhautzellgewebes ','Vermehrtes Schwitzen, Juckreiz, Nesselsucht, Haarausfall. Selten: Schwerwiegende Hautreaktionen (Erythema multiforme, Stevens-Johnson-Syndrom, exfoliative Dermatitis, toxische epidermale Nekrolyse, Pemphigus, Erythroderma).
+');
+INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (26,6,0,13,6,' Erkrankungen der Haut und des Unterhautzellgewebes ','Ein Symptomenkomplex wurde beschrieben, der mit einigen oder allen der folgenden Nebenwirkungen einhergehen kann: Fieber, Entzündung seröser Häute (Serositis), Gefäßentzündung (Vaskulitis), Muskel- und Gelenkschmerzen/Muskel- und Gelenkentzündungen (Myalgien/Myositis, Arthralgien/Arthritis) und bestimmten Laborwertveränderungen (positive ANA-Titer, erhöhte Blutkörperchensenkungsgeschwindigkeit, Eosinophilie und Leukozytose). Hautausschlag, Lichtempfindlichkeit oder andere Reaktionen der Haut können auftreten.
+');
+INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (27,3,0,13,3,' Erkrankungen der Nieren und Harnwege ','Nierenfunktionsstörungen, Nierenversagen, vermehrte Eiweißausscheidung im Urin (Proteinurie).
+');
+INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (28,4,0,13,4,' Erkrankungen der Nieren und Harnwege ','Verminderte Harnausscheidung
+');
+INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (29,3,0,13,3,' Erkrankungen der Geschlechtsorgane und der Brustdrüse ','Impotenz
+');
+INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (30,4,0,13,4,' Erkrankungen der Geschlechtsorgane und der Brustdrüse ','Vergrößerung der Brust bei Männern (Gynäkomastie).
+');
+INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (31,1,0,13,1,' Allgemeine Erkrankungen und Beschwerden am Verabreichungsort ','Schwächegefühl
+');
+INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (32,2,0,13,2,' Allgemeine Erkrankungen und Beschwerden am Verabreichungsort ','Müdigkeit ');
+INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (33,3,0,13,3,' Allgemeine Erkrankungen und Beschwerden am Verabreichungsort ','Muskelkrämpfe, Gesichtsrötung (Flush), Ohrgeräusche (Tinnitus), Unwohlsein, Fieber.
+');
+INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (34,2,0,13,2,' Untersuchungen ','Schwächegefühl ');
+INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (35,3,0,13,3,' Untersuchungen ','Müdigkeit
+');
+INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (36,4,0,13,4,' Untersuchungen ','Muskelkrämpfe, Gesichtsrötung (Flush), Ohrgeräusche (Tinnitus), Unwohlsein, Fieber.
 ');
 
-
--- Dumping data for table `drug_feature`
---
-
-INSERT INTO drug_feature_gender (drug_feature_id, gender_id) VALUES (8,2);
 
 --
 -- Dumping data for table `drug_adverse_effect`
@@ -1689,263 +1857,14 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic)VALUES
 </div>
 ',11,5);
 INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (94,0,'
-<div className="row content_header">
-    <h3> Nebenwirkungen für Erwachsene <i class="fas fa-male"></i> <i class="fas fa-blind"></i> </h3>
+<div class="alert alert-info" style="margin-top: 15px;">
+    Metformin Lich kann eine sehr seltent, aber sehr schwerwiegende Nebenwirkung, die sogenannte <a class=" info_words" type="button"
+    data-toggle="modal" data-target="#laktatazidose">Laktatazidose</a>,
+    hervorrufen. Falls diese bei Ihnen auftritt, müssen Sie die Einnahme von Metformin Lich beenden und umgehend einen
+    Arzt oder das nächstgelegene Krankenhaus aufsuchen, da eine <a class=" info_words" type="button"
+    data-toggle="modal" data-target="#laktatazidose">Laktatazidose</a> zum Koma führen kann.
     <hr>
-</div>
-
-<div class="row">
-    <div class="col-lg-6 neben_tile brightgreen">
-        <h1>Sehr häufig</h1>
-        <p>mehr als 1 Behandelten von 10
-        </p>
-    </div>
-    <div class="col-lg-6 neben_tile brightgreen">
-        <h1>Häufig</h1>
-        <p>1 bis 10 Behandelte von 100
-        </p>
-    </div>
-    <div class="col-lg-12 neben_tile brightyellow">
-        <h1>Gelegentlich</h1>
-        <p>1 bis 10 Behandelte von 1.000
-        </p>
-    </div>
-    <div class="col-lg-6 neben_tile brightred">
-        <h1>Selten</h1>
-        <p>1 bis 10 Behandelte von 10.000
-        </p>
-    </div>
-    <div class="col-lg-6 neben_tile brightred">
-        <h1>Sehr selten</h1>
-        <p>weniger als 1 Behandelten von 10.000
-        </p>
-    </div>
-    <div class="col-lg-12 neben_tile brightgrey">
-        <h1>Nicht bekannt</h1>
-        <p>Häufigkeit auf Grundlage der verfügbaren Daten nicht abschätzbar
-        </p>
-    </div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-<table class="sideffect_table hidden-xs">
-    <thead>
-        <tr>
-            <th>Häufigkeit</th>
-            <th style="width: 25%;">Anzahl der betreffenden Behandelten <span style="cursor: pointer"
-                    data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> </th>
-            <th>Nebenwirkung</th>
-        </tr>
-    </thead>
-    <tbody class="">
-        <tr id="sehrhaeufig">
-            <td>Sehr häufig</td>
-            <td>Mehr als 1 von 10 Behandelten</td>
-            <td><b>Verdauungsprobleme wie</b>
-                <ul>
-                    <li>Übelkeit</li>
-                    <li>Erbrechen</li>
-                    <li>Durchfall</li>
-                    <li>Bauchschmerzen</li>
-                    <li>Appetitverlust</li>
-                </ul>
-                Diese Nebenwirkungen treten meistens zu Beginn der Behandlung mit
-                Metformin Lich auf. </br> </br>
-                <b>Vorbeugung:</b> </br>Eine Aufteilung der Tagesdosis auf mehrere über den Tag
-                verteilte
-                Einnahmen und die Einnahme von Metformin Lich mit oder direkt nach einer Mahlzeit.
-                </br>
-                <span style=" color: red;">Wenn die Beschwerden andauern, nehmen Sie Metformin Lich
-                    nicht weiter ein
-                    und sprechen Sie mit Ihrem
-                    Arzt.</span>
-            </td>
-        </tr>
-        <tr id="haeufig">
-            <td>Häufig</td>
-            <td>Mehr als 1 von 10 Behandelten </td>
-            <td><b>Geschmacksveränderungen</b></td>
-        </tr>
-        <tr id="sehrselten">
-            <td>Sehr selten</td>
-            <td>Bis zu 1 von 10.000 Behandelten</td>
-            <td>
-                <b>Übersäuerung des Blutes mit Milchsäure (<a class=" info_words" type="button" data-toggle="modal"
-                        data-target="#laktatazidose">Laktatazidose</a>)</b> </br>Dies
-                ist eine
-                sehr seltene, aber schwerwiegende Komplikation, insbesondere bei Patienten mit
-                eingeschränkter
-                Nierenfunktion. Die Symptome einer <a class="info_words" type="button" data-toggle="modal"
-                    data-target="#laktatazidose">Laktatazidose</a> sind unspezifisch.
-                </br> </br>
-                <b>Auffällige Leberfunktionswerte oder <a class="info_words" type="button" data-toggle="modal"
-                        data-target="#hepatitis">Hepatitis</a></b> </br> Wenn Sie
-                derartige Beschwerden bekommen, nehmen
-                Sie
-                Metformin Lich nicht weiter ein und sprechen Sie sofort mit Ihrem Arzt.</br></br>
-                <b>Hautreaktionen wie</b>
-                <ul>
-                    <li> Rötung (Erythem)</li>
-                    <li>Juckreiz oder juckender Ausschlag (Quaddeln)
-                </ul>
-                </br>
-                <b>Niedrige Konzentration von Vitamin B12 im Blut.</b>
-
-            </td>
-        </tr>
-        <tr id="nichtbekannt">
-            <td>Nicht Bekannt</td>
-            <td>Häufigkeit auf Grundlage der verfügbaren Daten nicht abschätzbar</td>
-            <td>
-                <ul>
-                    <li>Verringerte Anzahl der roten Blutkörperchen, die eine blassgelbe Haut,
-                        Schwächegefühl
-                        oder Atemlosigkeit verursachen kann (hämolytische Anämie).</li>
-                    <li>Abnahme des Schilddrüse-stimulierenden Hormon-(TSH-)Blutspiegels bei Patienten
-                        mit
-                        einer Schilddrüsenunterfunktion (Hypothyreose).</li>
-                    Niedriger Magnesiumspiegel im Blut (Hypomagnesiämie) im Rahmen einer
-                    Durchfallerkrankung.</li>
-                    <li>Eine Erkrankung, bei der die Funktionalität des Gehirns betroffen ist
-                        (Enzephalopathie).
-                    <li>Überempfindlichkeit der Haut gegenüber Licht (Photosensitivität).</li>
-
-                    <li>Erkrankung der Nerven bei Patienten mit Vitamin-B12-Mangel, die Schwächegefühl,
-                        Kribbeln oder Taubheitsgefühl verursachen kann (periphere Neuropathie).
-                    </li>
-                </ul>
-            </td>
-        </tr>
-    </tbody>
-</table>
-
-<div class="hidden-sm hidden-md hidden-lg">
-    <div class="row content_header">
-        <h3> Häufigkeit der Nebenwirkungen </h3>
-        <hr>
-    </div>
-    <div>
-        <div class="row p15" id="sehrhaeufig-xs">
-            <h4> Sehr häufig</h4>
-            <div class="row">
-                <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal"
-                        data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1
-                von 10
-                Behandelten
-            </div>
-            <div class="row">
-                <b>Nebenwirkung:</b> <br><b>Verdauungsprobleme wie</b>
-                <ul>
-                    <li>Übelkeit</li>
-                    <li>Erbrechen</li>
-                    <li>Durchfall</li>
-                    <li>Bauchschmerzen</li>
-                    <li>Appetitverlust</li>
-                </ul>
-                Diese Nebenwirkungen treten meistens zu Beginn der Behandlung mit
-                Metformin Lich auf. </br> </br>
-                <b>Vorbeugung:</b> </br>Eine Aufteilung der Tagesdosis auf mehrere über den Tag
-                verteilte
-                Einnahmen und die Einnahme von Metformin Lich mit oder direkt nach einer Mahlzeit.
-                </br>
-                <span style=" color: red;">Wenn die Beschwerden andauern, nehmen Sie Metformin Lich
-                    nicht weiter ein
-                    und sprechen Sie mit Ihrem
-                    Arzt.</span>
-            </div>
-            <hr>
-        </div>
-        <div class="row p15" id="haeufig-xs">
-            <h4> Häufig</h4>
-            <div class="row">
-                <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal"
-                        data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1
-                von 10
-                Behandelten
-            </div>
-            <div class="row">
-                <b>Nebenwirkung:</b> <br>
-                Geschmacksveränderungen
-            </div>
-            <hr>
-        </div>
-
-        <div class="row p15" id="sehrselten-xs">
-            <h4> Sehr selten</h4>
-            <div class="row">
-                <b>Anzahl der betreffenden Behandelten: <span style="cursor: pointer" data-toggle="modal"
-                        data-target="#neben_info"><i class="fas fa-info-circle"></i></span> </b> <br> Mehr als 1 von
-                10000 Behandelten
-            </div>
-            <div class="row">
-                <b>Nebenwirkung:</b> <br>
-                <b>Übersäuerung des Blutes mit Milchsäure (<a class=" info_words" type="button" data-toggle="modal"
-                        data-target="#laktatazidose">Laktatazidose</a>)</b> </br>Dies
-                ist eine
-                sehr seltene, aber schwerwiegende Komplikation, insbesondere bei Patienten mit
-                eingeschränkter
-                Nierenfunktion. Die Symptome einer <a class="info_words" type="button" data-toggle="modal"
-                    data-target="#laktatazidose">Laktatazidose</a> sind unspezifisch.
-                </br> </br>
-                <b>Auffällige Leberfunktionswerte oder <a class="info_words" type="button" data-toggle="modal"
-                        data-target="#hepatitis">Hepatitis</a></b> </br> Wenn Sie
-                derartige Beschwerden bekommen, nehmen
-                Sie
-                Metformin Lich nicht weiter ein und sprechen Sie sofort mit Ihrem Arzt.</br></br>
-                <b>Hautreaktionen wie</b>
-                <ul>
-                    <li> Rötung (Erythem)</li>
-                    <li>Juckreiz oder juckender Ausschlag (Quaddeln)
-                </ul>
-                </br>
-                <b>Niedrige Konzentration von Vitamin B12 im Blut.</b>
-            </div>
-            <hr>
-        </div>
-        <div class="row p15" id="nichtbekannt">
-            <h4> Nicht bekannt</h4>
-            <div class="row">
-                <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal"
-                        data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1
-                von
-                100 Behandelten
-            </div>
-            <div class="row">
-                <b>Nebenwirkung:</b> <br>
-                <ul>
-                    <li>Verringerte Anzahl der roten Blutkörperchen, die eine blassgelbe Haut,
-                        Schwächegefühl
-                        oder Atemlosigkeit verursachen kann (hämolytische Anämie).</li>
-                    <li>Abnahme des Schilddrüse-stimulierenden Hormon-(TSH-)Blutspiegels bei Patienten
-                        mit
-                        einer Schilddrüsenunterfunktion (Hypothyreose).</li>
-                    Niedriger Magnesiumspiegel im Blut (Hypomagnesiämie) im Rahmen einer
-                    Durchfallerkrankung.</li>
-                    <li>Eine Erkrankung, bei der die Funktionalität des Gehirns betroffen ist
-                        (Enzephalopathie).
-                    <li>Überempfindlichkeit der Haut gegenüber Licht (Photosensitivität).</li>
-
-                    <li>Erkrankung der Nerven bei Patienten mit Vitamin-B12-Mangel, die Schwächegefühl,
-                        Kribbeln oder Taubheitsgefühl verursachen kann (periphere Neuropathie).
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
-<div>
-    <h3>Nebenwirkungen für Kinder und Jugendliche <i class="fas fa-child"></i> </h3>
-    <hr>
+    <h5>Nebenwirkungen für Kinder und Jugendliche <i class="fas fa-child"></i> </h5>
     Begrenzte Daten für Kinder und Jugendliche zeigten, dass die Nebenwirkungen in Art und
     Schwere jenen glichen, wie sie für Erwachsene gemeldet wurden.
 </div>
@@ -2500,12 +2419,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
 </div>
 ',12,5);
 INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (105,0,'
-<div class="row content_header">
-    <h1> Nebenwirkungen </h1>
-    <hr>
-    Wie alle Arzneimittel kann auch dieses Arzneimittel Nebenwirkungen haben, die aber nicht
-    bei jedem auftreten müssen.
-</div>
+
 <div class="alert alert-info" style="margin-top: 15px;">
     Suchen Sie sofort Ihren Arzt auf, wenn bei Ihnen nach der Einnahme dieses Arzneimittels
     die folgenden Nebenwirkungen auftreten:
@@ -2521,219 +2435,9 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
         <li>Herzinfarkt, ungewöhnlicher Herzschlag</li>
         <li>Bauchspeicheldrüsenentzündung, die zu starken Bauch- und Rückenschmerzen mit
             ausgeprägtem Unwohlsein führen kann </li>
+        <li>Wenn Ihnen die sehr seltenen Nebenwirkungen
+            Probleme bereitet oder länger als 1 Woche andauert</li>
     </ul>
-</div>
-<div class="row">
-    <table class="sideffect_table hidden-xs">
-        <thead>
-            <tr>
-                <th>Häufigkeit</th>
-                <th style="width: 25%;">Anzahl der betreffenden Behandelten <span style="cursor: pointer"
-                        data-toggle="modal" data-target="#neben_info"><i class="fas fa-info-circle"></i></span> </th>
-                <th>Nebenwirkung</th>
-            </tr>
-        </thead>
-        <tbody class="" style="padding: 15px;">
-            <tr id="sehrhaeufig">
-                <td>Sehr häufig</td>
-                <td>Mehr als 1 von 10 Behandelten</td>
-                <td>Knöchelschwellungen (Ödeme)
-                </td>
-            </tr>
-            <tr id="haeufig">
-                <td>Häufig</td>
-                <td>Mehr als 1 von 10 Behandelten </td>
-                <td>
-                    <ul>
-                        <li>Kopfschmerzen, Schwindel, Schläfrigkeit (insbesondere zu Beginn der Behandlung)</li>
-                        <li>Herzklopfen (Palpitationen), Hautrötung mit Wärmegefühl</li>
-                        <li>Bauchschmerzen, Übelkeit</li>
-                        <li>veränderte Darmentleerungsgewohnheiten, Durchfälle, Verstopfung,
-                            Verdauungsstörungen</li>
-                        <li>Müdigkeit, Schwächegefühl</li>
-                        <li>Sehstörungen, Doppeltsehen</li>
-                        <li>Muskelkrämpfe</li>
-                    </ul>
-                </td>
-            </tr>
-            <tr id="gelegentlich">
-                <td>Gelegentlich</td>
-                <td>Bis zu 1 von 100 Behandelten</td>
-                <td>
-                    <ul>
-                        <li>Stimmungsschwankungen, Angst, Depression, Schlaflosigkeit</li>
-                        <li>Zittern, Geschmacksstörungen, kurze Bewusstlosigkeit</li>
-                        <li>verminderte Empfindlichkeit für Berührungsreize oder Kribbeln in den Extremitäten,
-                            Verlust des Schmerzgefühls</li>
-                        <li>Ohrgeräusche</li>
-                        <li>niedriger Blutdruck</li>
-                        <li>Niesen/laufende Nase durch eine Entzündung der Nasenschleimhaut (Rhinitis)</li>
-                        <li>Husten</li>
-                        <li>Mundtrockenheit, Erbrechen</li>
-                        <li>Haarausfall, vermehrtes Schwitzen, Hautjucken, rote Flecken auf der Haut,
-                            Hautverfärbung</li>
-                        <li>Störungen beim Wasserlassen, vermehrter nächtlicher Harndrang, häufigeres
-                            Wasserlassen</li>
-                        <li>Erektionsstörungen, Vergrößerung der Brustdrüsen beim Mann</li>
-                        <li>Schmerzen, Unwohlsein</li>
-                        <li>Gelenk- oder Muskelschmerzen, Rückenschmerzen</li>
-                        <li>Gewichtszunahme oder Gewichtsabnahme</li>
-                    </ul>
-                </td>
-            </tr>
-            <tr id="selten">
-                <td>Selten</td>
-                <td> Bis zu 1 von 1.000 Behandelten </td>
-                <td>
-                    Verwirrung
-                </td>
-            </tr>
-            <tr id="sehrselten">
-                <td>Sehr selten</td>
-                <td> Bis zu 1 von 10.000 Behandelten </td>
-                <td>
-                    <ul>
-                        <li>Verminderung der weißen Blutkörperchen, Verminderung der Blutplättchen, was zu
-                            ungewöhnlichen blauen Flecken oder leichtem Bluten führen kann (Schädigung der
-                            roten Blutzellen)</li>
-                        <li>erhöhter Blutzuckerspiegel (Hyperglykämie)</li>
-                        <li>eine Nervenstörung, die zu Schwächegefühl, verminderter Empfindlichkeit für
-                            Berührungsreize oder Kribbeln führen kann</li>
-                        <li>Schwellung des Zahnfleischs</li>
-                        <li>aufgeblähter Bauch (Gastritis)</li>
-                        <li>gestörte Leberfunktion, Entzündung der Leber (Hepatitis), Gelbfärbung der Haut
-                            (Gelbsucht), Anstieg der Leberenzyme, wodurch bestimmte medizinische Tests
-                            beeinflusst werden können</li>
-                        <li>erhöhte Muskelanspannung</li>
-                        <li>entzündliche Reaktionen der Blutgefäße, häufig mit Hautausschlag</li>
-                        <li>Lichtempfindlichkeit</li>
-                        <li>Störungen, die sich aus Steifheit, Zittern und/oder Bewegungsstörungen
-                            zusammensetzen</li>
-                    </ul>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <div class="hidden-sm hidden-md hidden-lg">
-        <div class="row content_header">
-            <h3> Häufigkeit der Nebenwirkungen </h3>
-            <hr>
-        </div>
-        <div>
-            <div class="row p15" id="sehrhaeufig-xs">
-                <h4> Sehr häufig</h4>
-                <div class="row">
-                    <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal"
-                            data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1
-                    von 10 Behandelten
-                </div>
-                <div class="row">
-                    <b>Nebenwirkung:</b> <br>Knöchelschwellungen (Ödeme)
-                </div>
-                <hr>
-            </div>
-
-            <div class="row p15" id="haeufig-xs">
-                <h4> Häufig</h4>
-                <div class="row">
-                    <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal"
-                            data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1
-                    von 10 Behandelten
-                </div>
-                <div class="row">
-                    <b>Nebenwirkung:</b> <br>
-                    <ul>
-                        <li>Kopfschmerzen, Schwindel, Schläfrigkeit (insbesondere zu Beginn der Behandlung)</li>
-                        <li>Herzklopfen (Palpitationen), Hautrötung mit Wärmegefühl</li>
-                        <li>Bauchschmerzen, Übelkeit</li>
-                        <li>veränderte Darmentleerungsgewohnheiten, Durchfälle, Verstopfung,
-                            Verdauungsstörungen</li>
-                        <li>Müdigkeit, Schwächegefühl</li>
-                        <li>Sehstörungen, Doppeltsehen</li>
-                        <li>Muskelkrämpfe</li>
-                    </ul>
-                </div>
-                <hr>
-            </div>
-            <div class="row p15" id="gelegentlich-xs">
-                <h4> Gelegentlich</h4>
-                <div class="row">
-                    <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal"
-                            data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1
-                    von 100 Behandelten
-                </div>
-                <div class="row">
-                    <b>Nebenwirkung:</b> <br>
-                    <ul>
-                        <li>Stimmungsschwankungen, Angst, Depression, Schlaflosigkeit</li>
-                        <li>Zittern, Geschmacksstörungen, kurze Bewusstlosigkeit</li>
-                        <li>verminderte Empfindlichkeit für Berührungsreize oder Kribbeln in den Extremitäten,
-                            Verlust des Schmerzgefühls</li>
-                        <li>Ohrgeräusche</li>
-                        <li>niedriger Blutdruck</li>
-                        <li>Niesen/laufende Nase durch eine Entzündung der Nasenschleimhaut (Rhinitis)</li>
-                        <li>Husten</li>
-                        <li>Mundtrockenheit, Erbrechen</li>
-                        <li>Haarausfall, vermehrtes Schwitzen, Hautjucken, rote Flecken auf der Haut,
-                            Hautverfärbung</li>
-                        <li>Störungen beim Wasserlassen, vermehrter nächtlicher Harndrang, häufigeres
-                            Wasserlassen</li>
-                        <li>Erektionsstörungen, Vergrößerung der Brustdrüsen beim Mann</li>
-                        <li>Schmerzen, Unwohlsein</li>
-                        <li>Gelenk- oder Muskelschmerzen, Rückenschmerzen</li>
-                        <li>Gewichtszunahme oder Gewichtsabnahme</li>
-                    </ul>
-                </div>
-                <hr>
-            </div>
-            <div class="row p15" id="selten-xs">
-                <h4> Selten</h4>
-                <div class="row">
-                    <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal"
-                            data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1
-                    von 1000 Behandelten
-                </div>
-                <div class="row">
-                    <b>Nebenwirkung:</b> <br>
-                    Verwirrung
-                </div>
-                <hr>
-            </div>
-            <div class="row p15" id="sehrselten-xs">
-                <h4> Sehr selten</h4>
-                <div class="row">
-                    <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer" data-toggle="modal"
-                            data-target="#neben_info"><i class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1
-                    von 10000 Behandelten
-                </div>
-                <div class="row">
-                    <b>Nebenwirkung:</b> <br>
-                    <ul>
-                        <li>Verminderung der weißen Blutkörperchen, Verminderung der Blutplättchen, was zu
-                            ungewöhnlichen blauen Flecken oder leichtem Bluten führen kann (Schädigung der
-                            roten Blutzellen)</li>
-                        <li>erhöhter Blutzuckerspiegel (Hyperglykämie)</li>
-                        <li>eine Nervenstörung, die zu Schwächegefühl, verminderter Empfindlichkeit für
-                            Berührungsreize oder Kribbeln führen kann</li>
-                        <li>Schwellung des Zahnfleischs</li>
-                        <li>aufgeblähter Bauch (Gastritis)</li>
-                        <li>gestörte Leberfunktion, Entzündung der Leber (Hepatitis), Gelbfärbung der Haut
-                            (Gelbsucht), Anstieg der Leberenzyme, wodurch bestimmte medizinische Tests
-                            beeinflusst werden können</li>
-                        <li>erhöhte Muskelanspannung</li>
-                        <li>entzündliche Reaktionen der Blutgefäße, häufig mit Hautausschlag</li>
-                        <li>Lichtempfindlichkeit</li>
-                        <li>Störungen, die sich aus Steifheit, Zittern und/oder Bewegungsstörungen
-                            zusammensetzen</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="alert alert-info" style="margin-top: 40px;">
-        Wenn Ihnen die sehr seltenen Nebenwirkungen
-        Probleme bereitet oder länger als 1 Woche andauert, sollten Sie Ihren Arzt aufsuchen.
-    </div>
 </div>
 
 ',12,6);
@@ -2795,6 +2499,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
         Magnesiumstearat (Ph.Eur.) [pflanzlich]</li>
 </ul>
 ',12,11);
+-- Dump tailored_text
 -- Dump tailored_text
 
 --Enalapril--
@@ -3931,1044 +3636,28 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
 </div>
 ',13,5);
 INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (117,0,'
-<div class="row content_header">
-    <h1> Nebenwirkungen </h1>
-    <hr>
+<div class="alert alert-info" style="margin-top: 15px;">
+    Beenden Sie die Behandlung mit Enalapril-ratiopharm®
+    und wenden Sie sich umgehend an einen Arzt, wenn Sie
+    eines oder mehrere der folgenden Anzeichen bemerken:
+    <ul>
+        <li>>Schwellungen an Gesicht, Lippen, Zunge oder Rachen, die
+            Atem- und Schluckbeschwerden bereiten können</li>
+        <li>Schwellungen an Händen, Füßen oder Knöcheln</li>
+        <li>Auftreten eines Hautausschlages mit roten Quaddeln
+            (Nesselsucht).</li>
+    </ul>
+    Bitte beachten Sie, dass für Patienten mit schwarzer
+    Hautfarbe das Risiko für diese Art von Reaktion höher ist.
+    Wenn eines der o. g. Anzeichen auftritt, beenden Sie bitte umgehend die Einnahme von Enalapril-ratiopharm® und
+    wenden Sie sich an einen Arzt. <br><br>
+    Zu Beginn der Behandlung mit diesem Arzneimittel können
+    Sie sich schwach oder schwindelig fühlen. In diesem Fall hilft
+    es, sich hinzulegen. Diese Beschwerden werden durch die
+    Blutdrucksenkung verursacht und sollten sich mit
+    andauernder Behandlung verbessern. <br>Wenn Sie sich Sorgen
+    machen, sprechen Sie mit Ihrem Arzt.
 </div>
-<div class="row">
-    Wie alle Arzneimittel kann auch dieses Arzneimittel Nebenwirkungen haben, die aber nicht
-    bei jedem auftreten müssen.
-</div>
-<div class="row" style="margin-top: 30px;">
-    <div class="col-md-12">
-        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-            <div class="panel panel-default">
-                <div class="panel-heading head_panel" role="tab" id="nebenhead1">
-                    <h4 class="panel-title text-center-xs" data-toggle="collapse" data-target="#neben1">
-                        Erkrankungen des Blutes-und Lymphsystems
-                    </h4>
-                </div>
-                <div id="neben1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="nebenhead1">
-                    <div class="panel-body">
-                        <table class="sideffect_table hidden-xs">
-                            <thead>
-                                <tr>
-                                    <th>Häufigkeit</th>
-                                    <th style="width: 25%;">Anzahl der betreffenden Behandelten <span
-                                            style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i
-                                                class="fas fa-info-circle"></i></span> </th>
-                                    <th>Nebenwirkung</th>
-                                </tr>
-                            </thead>
-                            <tbody class="" style="padding: 15px;">
-                                <tr id="gelegentlich">
-                                    <td>Gelegentlich</td>
-                                    <td>Bis zu 1 von 100 Behandelten</td>
-                                    <td>
-                                        Blutarmut durch vermehrten Zerfall roter Blutkörperchen (hämolytische
-                                        Anämie),
-                                        Blutarmut durch Blutbildungsstörung im Knochenmark (aplastische Anämie)
-                                    </td>
-                                </tr>
-                                <tr id="selten">
-                                    <td>Selten</td>
-                                    <td> Bis zu 1 von 1.000 Behandelten </td>
-                                    <td>
-                                        Verminderung der Anzahl bestimmter Blutzellen (Neutropenie,
-                                        Thrombozytopenie,
-                                        Panzytopenie) bis zu einer hochgradigen Verminderung bestimmter weißer
-                                        Blutkörperchen mit Infektneigung und schweren Allgemeinsymptomen
-                                        (Agranulozytose), Abnahme bestimmter Laborwerte (Hämoglobin und Hämatokrit),
-                                        herabgesetzte Funktion des Knochenmarks (Knochenmarksdepression),
-                                        Lymphknotenschwellung, Autoimmunkrankheiten. </td>
-                                </tr>
-
-                            </tbody>
-                        </table>
-                        <div class="hidden-sm hidden-md hidden-lg">
-                            <div class="row content_header">
-                                <h3> Häufigkeit der Nebenwirkungen </h3>
-                                <hr>
-                            </div>
-                            <div>
-                                <div class="row p15" id="gelegentlich-xs">
-                                    <h4> Gelegentlich</h4>
-                                    <div class="row">
-                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer"
-                                                data-toggle="modal" data-target="#neben_info"><i
-                                                    class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1 von
-                                        100
-                                        Behandelten
-                                    </div>
-                                    <div class="row">
-                                        <b>Nebenwirkung:</b> <br>
-                                        Blutarmut durch vermehrten Zerfall roter Blutkörperchen (hämolytische
-                                        Anämie),
-                                        Blutarmut durch Blutbildungsstörung im Knochenmark (aplastische Anämie)
-
-                                    </div>
-                                    <hr>
-                                </div>
-                                <div class="row p15" id="selten-xs">
-                                    <h4> Selten</h4>
-                                    <div class="row">
-                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer"
-                                                data-toggle="modal" data-target="#neben_info"><i
-                                                    class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1 von
-                                        1000
-                                        Behandelten
-                                    </div>
-                                    <div class="row">
-                                        <b>Nebenwirkung:</b> <br>
-                                        Verminderung der Anzahl bestimmter Blutzellen (Neutropenie,
-                                        Thrombozytopenie,
-                                        Panzytopenie) bis zu einer hochgradigen Verminderung bestimmter weißer
-                                        Blutkörperchen mit Infektneigung und schweren Allgemeinsymptomen
-                                        (Agranulozytose), Abnahme bestimmter Laborwerte (Hämoglobin und Hämatokrit),
-                                        herabgesetzte Funktion des Knochenmarks (Knochenmarksdepression),
-                                        Lymphknotenschwellung, Autoimmunkrankheiten. </div>
-                                    <hr>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="panel panel-default">
-                <div class="panel-heading head_panel" role="tab" id="nebenhead2">
-                    <h4 class="panel-title title_pan text-center-xs" data-toggle="collapse" data-target="#neben2">
-                        Stoffwechsel- und Ernährungsstörungen
-                    </h4>
-                </div>
-                <div id="neben2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="nebenhead2">
-                    <div class="panel-body">
-                        <table class="sideffect_table hidden-xs">
-                            <thead>
-                                <tr>
-                                    <th>Häufigkeit</th>
-                                    <th style="width: 25%;">Anzahl der betreffenden Behandelten <span
-                                            style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i
-                                                class="fas fa-info-circle"></i></span> </th>
-                                    <th>Nebenwirkung</th>
-                                </tr>
-                            </thead>
-                            <tbody class="" style="padding: 15px;">
-                                <tr id="gelegentlich">
-                                    <td>Gelegentlich</td>
-                                    <td>Bis zu 1 von 100 Behandelten</td>
-                                    <td>
-                                        Zu niedrige Blutzuckerwerte (Hypoglykämie).
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <div class="hidden-sm hidden-md hidden-lg">
-                            <div class="row content_header">
-                                <h3> Häufigkeit der Nebenwirkungen </h3>
-                                <hr>
-                            </div>
-                            <div>
-                                <div class="row p15" id="gelegentlich-xs">
-                                    <h4> Gelegentlich</h4>
-                                    <div class="row">
-                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer"
-                                                data-toggle="modal" data-target="#neben_info"><i
-                                                    class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1 von
-                                        100
-                                        Behandelten
-                                    </div>
-                                    <div class="row">
-                                        <b>Nebenwirkung:</b> <br>
-                                        Zu niedrige Blutzuckerwerte (Hypoglykämie).
-
-                                    </div>
-                                    <hr>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="panel panel-default">
-                <div class="panel-heading head_panel" role="tab" id="nebenhead3">
-                    <h4 class="panel-title text-center-xs" data-toggle="collapse" data-target="#neben3">
-                        Augenerkrankungen
-                    </h4>
-                </div>
-                <div id="neben3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="nebenhead3">
-                    <div class="panel-body">
-                        <table class="sideffect_table hidden-xs">
-                            <thead>
-                                <tr>
-                                    <th>Häufigkeit</th>
-                                    <th style="width: 25%;">Anzahl der betreffenden Behandelten <span
-                                            style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i
-                                                class="fas fa-info-circle"></i></span> </th>
-                                    <th>Nebenwirkung</th>
-                                </tr>
-                            </thead>
-                            <tbody class="" style="padding: 15px;">
-                                <tr id="sehrhaeufig">
-                                    <td>Sehr häufig</td>
-                                    <td>Mehr als 1 von 10 Behandelten</td>
-                                    <td>Verschwommensehen
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <div class="hidden-sm hidden-md hidden-lg">
-                            <div class="row content_header">
-                                <h3> Häufigkeit der Nebenwirkungen </h3>
-                                <hr>
-                            </div>
-                            <div>
-                                <div class="row p15" id="sehrhaeufig-xs">
-                                    <h4> Sehr häufig</h4>
-                                    <div class="row">
-                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer"
-                                                data-toggle="modal" data-target="#neben_info"><i
-                                                    class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1 von
-                                        10
-                                        Behandelten
-                                    </div>
-                                    <div class="row">
-                                        <b>Nebenwirkung:</b> <br>Verschwommensehen
-                                    </div>
-                                    <hr>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="panel panel-default">
-                <div class="panel-heading head_panel" role="tab" id="nebenhead4">
-                    <h4 class="panel-title text-center-xs" data-toggle="collapse" data-target="#neben4">
-                        Herz-Kreislauf-System
-                    </h4>
-                </div>
-                <div id="neben4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="nebenhead4">
-                    <div class="panel-body">
-                        <table class="sideffect_table hidden-xs">
-                            <thead>
-                                <tr>
-                                    <th>Häufigkeit</th>
-                                    <th style="width: 25%;">Anzahl der betreffenden Behandelten <span
-                                            style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i
-                                                class="fas fa-info-circle"></i></span> </th>
-                                    <th>Nebenwirkung</th>
-                                </tr>
-                            </thead>
-                            <tbody class="" style="padding: 15px;">
-                                <tr id="sehrhaeufig">
-                                    <td>Sehr häufig</td>
-                                    <td>Mehr als 1 von 10 Behandelten</td>
-                                    <td>Schwindel
-                                    </td>
-                                </tr>
-                                <tr id="haeufig">
-                                    <td>Häufig</td>
-                                    <td>Mehr als 1 von 10 Behandelten </td>
-                                    <td>
-                                        Übermäßige Blutdrucksenkung einschließlich übermäßiger Blutdruckabfall bei
-                                        Lagewechsel vom Liegen zum Stehen (orthostatische Hypotonie), kurzzeitiger
-                                        Bewusstseinsverlust (Synkope), Herzinfarkt oder Schlaganfall, vermutlich
-                                        infolge
-                                        übermäßigen Blutdruckabfalls bei gefährdeten Patienten (Patienten mit
-                                        Durchblutungsstörungen im Bereich des Herzens und/oder des Gehirns),
-                                        Schmerzenim
-                                        Brustkorb, Herzrhythmusstörungen, Herzengegefühl (Angina pectoris),
-                                        beschleunigter Herzschlag (Tachykardie).
-                                    </td>
-                                </tr>
-                                <tr id="gelegentlich">
-                                    <td>Gelegentlich</td>
-                                    <td>Bis zu 1 von 100 Behandelten</td>
-                                    <td>
-                                        Übermäßiger Blutdruckabfall bei Lagewechsel vom Liegen zum Stehen
-                                        (orthostatische Hypotonie), Herzklopfen.
-                                    </td>
-                                </tr>
-                                <tr id="selten">
-                                    <td>Selten</td>
-                                    <td> Bis zu 1 von 1.000 Behandelten </td>
-                                    <td>
-                                        Durch Gefäßkrämpfe bedingte Durchblutungsstörungen an Händen und Füßen
-                                        (Raynaud-Phänomen). </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <div class="hidden-sm hidden-md hidden-lg">
-                            <div class="row content_header">
-                                <h3> Häufigkeit der Nebenwirkungen </h3>
-                                <hr>
-                            </div>
-                            <div>
-                                <div class="row p15" id="sehrhaeufig-xs">
-                                    <h4> Sehr häufig</h4>
-                                    <div class="row">
-                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer"
-                                                data-toggle="modal" data-target="#neben_info"><i
-                                                    class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1 von
-                                        10
-                                        Behandelten
-                                    </div>
-                                    <div class="row">
-                                        <b>Nebenwirkung:</b> <br>Schwindel
-                                    </div>
-                                    <hr>
-                                </div>
-                                <div class="row p15" id="haeufig-xs">
-                                    <h4> Häufig</h4>
-                                    <div class="row">
-                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer"
-                                                data-toggle="modal" data-target="#neben_info"><i
-                                                    class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1 von
-                                        10
-                                        Behandelten
-                                    </div>
-                                    <div class="row">
-                                        <b>Nebenwirkung:</b> <br>
-                                        Übermäßige Blutdrucksenkung einschließlich übermäßiger Blutdruckabfall bei
-                                        Lagewechsel vom Liegen zum Stehen (orthostatische Hypotonie), kurzzeitiger
-                                        Bewusstseinsverlust (Synkope), Herzinfarkt oder Schlaganfall, vermutlich
-                                        infolge
-                                        übermäßigen Blutdruckabfalls bei gefährdeten Patienten (Patienten mit
-                                        Durchblutungsstörungen im Bereich des Herzens und/oder des Gehirns),
-                                        Schmerzenim
-                                        Brustkorb, Herzrhythmusstörungen, Herzengegefühl (Angina pectoris),
-                                        beschleunigter Herzschlag (Tachykardie).
-                                    </div>
-                                    <hr>
-                                </div>
-                                <div class="row p15" id="gelegentlich-xs">
-                                    <h4> Gelegentlich</h4>
-                                    <div class="row">
-                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer"
-                                                data-toggle="modal" data-target="#neben_info"><i
-                                                    class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1 von
-                                        100
-                                        Behandelten
-                                    </div>
-                                    <div class="row">
-                                        <b>Nebenwirkung:</b> <br>
-                                        Übermäßiger Blutdruckabfall bei Lagewechsel vom Liegen zum Stehen
-                                        (orthostatische Hypotonie), Herzklopfen.
-                                    </div>
-                                    <hr>
-                                </div>
-                                <div class="row p15" id="selten-xs">
-                                    <h4> Selten</h4>
-                                    <div class="row">
-                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer"
-                                                data-toggle="modal" data-target="#neben_info"><i
-                                                    class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1 von
-                                        1000
-                                        Behandelten
-                                    </div>
-                                    <div class="row">
-                                        <b>Nebenwirkung:</b> <br>
-                                        Durch Gefäßkrämpfe bedingte Durchblutungsstörungen an Händen und Füßen
-                                        (Raynaud-Phänomen).
-                                    </div>
-                                    <hr>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="panel panel-default">
-                <div class="panel-heading head_panel" role="tab" id="nebenhead5">
-                    <h4 class="panel-title text-center-xs" data-toggle="collapse" data-target="#neben5">
-                        Erkrankungen der Atemwege, des Brustraums und Mediastinums
-                    </h4>
-                </div>
-                <div id="neben5" class="panel-collapse collapse" role="tabpanel" aria-labelledby="nebenhead5">
-                    <div class="panel-body">
-                        <table class="sideffect_table hidden-xs">
-                            <thead>
-                                <tr>
-                                    <th>Häufigkeit</th>
-                                    <th style="width: 25%;">Anzahl der betreffenden Behandelten <span
-                                            style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i
-                                                class="fas fa-info-circle"></i></span> </th>
-                                    <th>Nebenwirkung</th>
-                                </tr>
-                            </thead>
-                            <tbody class="" style="padding: 15px;">
-                                <tr id="sehrhaeufig">
-                                    <td>Sehr häufig</td>
-                                    <td>Mehr als 1 von 10 Behandelten</td>
-                                    <td>Übelkeit
-                                    </td>
-                                </tr>
-                                <tr id="haeufig">
-                                    <td>Häufig</td>
-                                    <td>Mehr als 1 von 10 Behandelten </td>
-                                    <td>
-                                        Durchfall, Bauchschmerzen, Geschmacksveränderungen.
-                                    </td>
-                                </tr>
-                                <tr id="gelegentlich">
-                                    <td>Gelegentlich</td>
-                                    <td>Bis zu 1 von 100 Behandelten</td>
-                                    <td>
-                                        Darmverschluss (Ileus), Entzündung der Bauchspeicheldrüse,
-                                        Erbrechen,
-                                        Verdauungsstörungen, Verstopfung, Appetitlosigkeit,
-                                        Magenreizung,
-                                        Mundtrockenheit, Magengeschwür (peptisches Ulkus).
-                                    </td>
-                                </tr>
-                                <tr id="selten">
-                                    <td>Selten</td>
-                                    <td> Bis zu 1 von 1.000 Behandelten </td>
-                                    <td>
-                                        Entzündungen der Mundschleimhaut mit Geschwürbildung
-                                        (Stomatitis/aphthöse
-                                        Ulzerationen), Entzündungen der Zungenschleimhaut
-                                        (Glossitis). </td>
-                                </tr>
-                                <tr id="sehrselten">
-                                    <td>Sehr selten</td>
-                                    <td> Bis zu 1 von 10.000 Behandelten </td>
-                                    <td>
-                                        Gewebeschwellung des Darms (intestinales angioneurotisches
-                                        Ödem).
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <div class="hidden-sm hidden-md hidden-lg">
-                            <div class="row content_header">
-                                <h3> Häufigkeit der Nebenwirkungen </h3>
-                                <hr>
-                            </div>
-                            <div>
-                                <div class="row p15" id="sehrhaeufig-xs">
-                                    <h4> Sehr häufig</h4>
-                                    <div class="row">
-                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer"
-                                                data-toggle="modal" data-target="#neben_info"><i
-                                                    class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1
-                                        von 10 Behandelten
-                                    </div>
-                                    <div class="row">
-                                        <b>Nebenwirkung:</b> <br>Übelkeit
-                                    </div>
-                                    <hr>
-                                </div>
-                                <div class="row p15" id="haeufig-xs">
-                                    <h4> Häufig</h4>
-                                    <div class="row">
-                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer"
-                                                data-toggle="modal" data-target="#neben_info"><i
-                                                    class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1
-                                        von 10 Behandelten
-                                    </div>
-                                    <div class="row">
-                                        <b>Nebenwirkung:</b> <br>
-                                        Durchfall, Bauchschmerzen, Geschmacksveränderungen.
-
-                                    </div>
-                                    <hr>
-                                </div>
-                                <div class="row p15" id="gelegentlich-xs">
-                                    <h4> Gelegentlich</h4>
-                                    <div class="row">
-                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer"
-                                                data-toggle="modal" data-target="#neben_info"><i
-                                                    class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1
-                                        von 100 Behandelten
-                                    </div>
-                                    <div class="row">
-                                        <b>Nebenwirkung:</b> <br>
-                                        Darmverschluss (Ileus), Entzündung der Bauchspeicheldrüse,
-                                        Erbrechen, Verdauungsstörungen, Verstopfung,
-                                        Appetitlosigkeit, Magenreizung, Mundtrockenheit,
-                                        Magengeschwür (peptisches Ulkus).
-                                    </div>
-                                    <hr>
-                                </div>
-                                <div class="row p15" id="selten-xs">
-                                    <h4> Selten</h4>
-                                    <div class="row">
-                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer"
-                                                data-toggle="modal" data-target="#neben_info"><i
-                                                    class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1
-                                        von 1000 Behandelten
-                                    </div>
-                                    <div class="row">
-                                        <b>Nebenwirkung:</b> <br>
-                                        Entzündungen der Mundschleimhaut mit Geschwürbildung
-                                        (Stomatitis/aphthöse Ulzerationen), Entzündungen der
-                                        Zungenschleimhaut (Glossitis).
-                                    </div>
-                                    <hr>
-                                </div>
-                                <div class="row p15" id="sehrselten-xs">
-                                    <h4> Sehr selten</h4>
-                                    <div class="row">
-                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer"
-                                                data-toggle="modal" data-target="#neben_info"><i
-                                                    class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1
-                                        von 10000 Behandelten
-                                    </div>
-                                    <div class="row">
-                                        <b>Nebenwirkung:</b> <br>
-                                        Gewebeschwellung des Darms (intestinales angioneurotisches Ödem).
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="panel panel-default">
-                <div class="panel-heading head_panel" role="tab" id="nebenhead6">
-                    <h4 class="panel-title text-center-xs" data-toggle="collapse" data-target="#neben6">
-                        Leber- und Gallenerkrankungen
-                    </h4>
-                </div>
-                <div id="neben6" class="panel-collapse collapse" role="tabpanel" aria-labelledby="nebenhead6">
-                    <div class="panel-body">
-                        <table class="sideffect_table hidden-xs">
-                            <thead>
-                                <tr>
-                                    <th>Häufigkeit</th>
-                                    <th style="width: 25%;">Anzahl der betreffenden Behandelten <span
-                                            style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i
-                                                class="fas fa-info-circle"></i></span> </th>
-                                    <th>Nebenwirkung</th>
-                                </tr>
-                            </thead>
-                            <tbody class="" style="padding: 15px;">
-
-                                <tr id="selten">
-                                    <td>Selten</td>
-                                    <td> Bis zu 1 von 1.000 Behandelten </td>
-                                    <td>
-                                        Leberversagen, Leberentzündung (Hepatitis - hepatozellulär oder
-                                        cholestatisch,
-                                        einschließlich hepatische Nekrose), Gelbsucht. </td>
-                                </tr>
-
-                            </tbody>
-                        </table>
-                        <div class="hidden-sm hidden-md hidden-lg">
-                            <div class="row content_header">
-                                <h3> Häufigkeit der Nebenwirkungen </h3>
-                                <hr>
-                            </div>
-                            <div>
-                                <div class="row p15" id="selten-xs">
-                                    <h4> Selten</h4>
-                                    <div class="row">
-                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer"
-                                                data-toggle="modal" data-target="#neben_info"><i
-                                                    class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1
-                                        von 1000 Behandelten
-                                    </div>
-                                    <div class="row">
-                                        <b>Nebenwirkung:</b> <br>
-                                        Leberversagen, Leberentzündung (Hepatitis - hepatozellulär oder
-                                        cholestatisch,
-                                        einschließlich hepatische Nekrose), Gelbsucht.
-                                    </div>
-                                    <hr>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="panel panel-default">
-                <div class="panel-heading head_panel" role="tab" id="nebenhead7">
-                    <h4 class="panel-title text-center-xs" data-toggle="collapse" data-target="#neben7">
-                        Erkrankungen der Haut und des Unterhautzellgewebes
-                    </h4>
-                </div>
-                <div id="neben7" class="panel-collapse collapse" role="tabpanel" aria-labelledby="nebenhead7">
-                    <div class="panel-body">
-                        <table class="sideffect_table hidden-xs">
-                            <thead>
-                                <tr>
-                                    <th>Häufigkeit</th>
-                                    <th style="width: 25%;">Anzahl der betreffenden Behandelten <span
-                                            style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i
-                                                class="fas fa-info-circle"></i></span> </th>
-                                    <th>Nebenwirkung</th>
-                                </tr>
-                            </thead>
-                            <tbody class="" style="padding: 15px;">
-
-                                <tr id="haeufig">
-                                    <td>Häufig</td>
-                                    <td>Mehr als 1 von 10 Behandelten </td>
-                                    <td>
-                                        Ausschlag, Überempfindlichkeit/Gewebeschwellung (angioneurotisches Ödem):
-                                        angioneurotische Ödeme mit Beteiligung von Gesicht, Gliedmaßen, Lippen,
-                                        Zunge,
-                                        Stimmapparat des Kehlkopfes (Glottis) und/oder Kehlkopf wurden beobachtet.
-                                    </td>
-                                </tr>
-                                <tr id="gelegentlich">
-                                    <td>Gelegentlich</td>
-                                    <td>Bis zu 1 von 100 Behandelten</td>
-                                    <td>
-                                        Vermehrtes Schwitzen, Juckreiz, Nesselsucht, Haarausfall. Selten:
-                                        Schwerwiegende
-                                        Hautreaktionen (Erythema multiforme, Stevens-Johnson-Syndrom, exfoliative
-                                        Dermatitis, toxische epidermale Nekrolyse, Pemphigus, Erythroderma).
-                                    </td>
-                                </tr>
-                                <tr id="nichtbekannt">
-                                    <td>Nicht Bekannt</td>
-                                    <td>Häufigkeit auf Grundlage der verfügbaren Daten nicht abschätzbar</td>
-                                    <td>
-                                        Ein Symptomenkomplex wurde beschrieben, der mit einigen oder allen der
-                                        folgenden
-                                        Nebenwirkungen einhergehen kann: Fieber, Entzündung seröser Häute
-                                        (Serositis),
-                                        Gefäßentzündung (Vaskulitis), Muskel- und Gelenkschmerzen/Muskel- und
-                                        Gelenkentzündungen (Myalgien/Myositis, Arthralgien/Arthritis) und bestimmten
-                                        Laborwertveränderungen (positive ANA-Titer, erhöhte
-                                        Blutkörperchensenkungsgeschwindigkeit, Eosinophilie und Leukozytose).
-                                        Hautausschlag, Lichtempfindlichkeit oder andere Reaktionen der Haut können
-                                        auftreten.
-                                    </td>
-                                </tr>
-
-                            </tbody>
-                        </table>
-                        <div class="hidden-sm hidden-md hidden-lg">
-                            <div class="row content_header">
-                                <h3> Häufigkeit der Nebenwirkungen </h3>
-                                <hr>
-                            </div>
-                            <div>
-
-                                <div class="row p15" id="haeufig-xs">
-                                    <h4> Häufig</h4>
-                                    <div class="row">
-                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer"
-                                                data-toggle="modal" data-target="#neben_info"><i
-                                                    class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1
-                                        von 10 Behandelten
-                                    </div>
-                                    <div class="row">
-                                        <b>Nebenwirkung:</b> <br>
-                                        Ausschlag, Überempfindlichkeit/Gewebeschwellung (angioneurotisches Ödem):
-                                        angioneurotische Ödeme mit Beteiligung von Gesicht, Gliedmaßen, Lippen,
-                                        Zunge,
-                                        Stimmapparat des Kehlkopfes (Glottis) und/oder Kehlkopf wurden beobachtet.
-                                    </div>
-                                    <hr>
-                                </div>
-                                <div class="row p15" id="gelegentlich-xs">
-                                    <h4> Gelegentlich</h4>
-                                    <div class="row">
-                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer"
-                                                data-toggle="modal" data-target="#neben_info"><i
-                                                    class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1
-                                        von 100 Behandelten
-                                    </div>
-                                    <div class="row">
-                                        <b>Nebenwirkung:</b> <br>
-                                        Vermehrtes Schwitzen, Juckreiz, Nesselsucht, Haarausfall. Selten:
-                                        Schwerwiegende
-                                        Hautreaktionen (Erythema multiforme, Stevens-Johnson-Syndrom, exfoliative
-                                        Dermatitis, toxische epidermale Nekrolyse, Pemphigus, Erythroderma).
-                                    </div>
-                                    <hr>
-                                </div>
-                                <div class="row p15" id="nichtbekannt">
-                                    <h4> Nicht bekannt</h4>
-                                    <div class="row">
-                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer"
-                                                data-toggle="modal" data-target="#neben_info"><i
-                                                    class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1 von
-                                        100
-                                        Behandelten
-                                    </div>
-                                    <div class="row">
-                                        <b>Nebenwirkung:</b> <br>
-                                        Ein Symptomenkomplex wurde beschrieben, der mit einigen oder allen der
-                                        folgenden
-                                        Nebenwirkungen einhergehen kann: Fieber, Entzündung seröser Häute
-                                        (Serositis),
-                                        Gefäßentzündung (Vaskulitis), Muskel- und Gelenkschmerzen/Muskel- und
-                                        Gelenkentzündungen (Myalgien/Myositis, Arthralgien/Arthritis) und bestimmten
-                                        Laborwertveränderungen (positive ANA-Titer, erhöhte
-                                        Blutkörperchensenkungsgeschwindigkeit, Eosinophilie und Leukozytose).
-                                        Hautausschlag, Lichtempfindlichkeit oder andere Reaktionen der Haut können
-                                        auftreten.
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="panel panel-default">
-                <div class="panel-heading head_panel" role="tab" id="nebenhead8">
-                    <h4 class="panel-title text-center-xs" data-toggle="collapse" data-target="#neben8">
-                        Erkrankungen der Nieren und Harnwege
-                    </h4>
-                </div>
-                <div id="neben8" class="panel-collapse collapse" role="tabpanel" aria-labelledby="nebenhead8">
-                    <div class="panel-body">
-                        <table class="sideffect_table hidden-xs">
-                            <thead>
-                                <tr>
-                                    <th>Häufigkeit</th>
-                                    <th style="width: 25%;">Anzahl der betreffenden Behandelten <span
-                                            style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i
-                                                class="fas fa-info-circle"></i></span> </th>
-                                    <th>Nebenwirkung</th>
-                                </tr>
-                            </thead>
-                            <tbody class="" style="padding: 15px;">
-
-                                <tr id="gelegentlich">
-                                    <td>Gelegentlich</td>
-                                    <td>Bis zu 1 von 100 Behandelten</td>
-                                    <td>
-                                        Nierenfunktionsstörungen, Nierenversagen, vermehrte Eiweißausscheidung im
-                                        Urin
-                                        (Proteinurie).
-                                    </td>
-                                </tr>
-                                <tr id="selten">
-                                    <td>Selten</td>
-                                    <td> Bis zu 1 von 1.000 Behandelten </td>
-                                    <td>
-                                        Verminderte Harnausscheidung </td>
-                                </tr>
-
-                            </tbody>
-                        </table>
-                        <div class="hidden-sm hidden-md hidden-lg">
-                            <div class="row content_header">
-                                <h3> Häufigkeit der Nebenwirkungen </h3>
-                                <hr>
-                            </div>
-                            <div>
-
-                                <div class="row p15" id="gelegentlich-xs">
-                                    <h4> Gelegentlich</h4>
-                                    <div class="row">
-                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer"
-                                                data-toggle="modal" data-target="#neben_info"><i
-                                                    class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1
-                                        von 100 Behandelten
-                                    </div>
-                                    <div class="row">
-                                        <b>Nebenwirkung:</b> <br>
-                                        Nierenfunktionsstörungen, Nierenversagen, vermehrte Eiweißausscheidung im
-                                        Urin
-                                        (Proteinurie).
-                                    </div>
-                                    <hr>
-                                </div>
-                                <div class="row p15" id="selten-xs">
-                                    <h4> Selten</h4>
-                                    <div class="row">
-                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer"
-                                                data-toggle="modal" data-target="#neben_info"><i
-                                                    class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1
-                                        von 1000 Behandelten
-                                    </div>
-                                    <div class="row">
-                                        <b>Nebenwirkung:</b> <br>
-                                        Verminderte Harnausscheidung
-                                    </div>
-                                    <hr>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="panel panel-default">
-                <div class="panel-heading head_panel" role="tab" id="nebenhead9">
-                    <h4 class="panel-title text-center-xs" data-toggle="collapse" data-target="#neben9">
-                        Erkrankungen der Geschlechtsorgane und der Brustdrüse
-                    </h4>
-                </div>
-                <div id="neben9" class="panel-collapse collapse" role="tabpanel" aria-labelledby="nebenhead9">
-                    <div class="panel-body">
-                        <table class="sideffect_table hidden-xs">
-                            <thead>
-                                <tr>
-                                    <th>Häufigkeit</th>
-                                    <th style="width: 25%;">Anzahl der betreffenden Behandelten <span
-                                            style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i
-                                                class="fas fa-info-circle"></i></span> </th>
-                                    <th>Nebenwirkung</th>
-                                </tr>
-                            </thead>
-                            <tbody class="" style="padding: 15px;">
-
-                                <tr id="gelegentlich">
-                                    <td>Gelegentlich</td>
-                                    <td>Bis zu 1 von 100 Behandelten</td>
-                                    <td>
-                                        Impotenz
-                                    </td>
-                                </tr>
-                                <tr id="selten">
-                                    <td>Selten</td>
-                                    <td> Bis zu 1 von 1.000 Behandelten </td>
-                                    <td>Vergrößerung der Brust bei Männern (Gynäkomastie). </td>
-                                </tr>
-
-                            </tbody>
-                        </table>
-                        <div class="hidden-sm hidden-md hidden-lg">
-                            <div class="row content_header">
-                                <h3> Häufigkeit der Nebenwirkungen </h3>
-                                <hr>
-                            </div>
-                            <div>
-                                <div class="row p15" id="gelegentlich-xs">
-                                    <h4> Gelegentlich</h4>
-                                    <div class="row">
-                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer"
-                                                data-toggle="modal" data-target="#neben_info"><i
-                                                    class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1
-                                        von 100 Behandelten
-                                    </div>
-                                    <div class="row">
-                                        <b>Nebenwirkung:</b> <br>
-                                        Impotenz
-                                    </div>
-                                    <hr>
-                                </div>
-                                <div class="row p15" id="selten-xs">
-                                    <h4> Selten</h4>
-                                    <div class="row">
-                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer"
-                                                data-toggle="modal" data-target="#neben_info"><i
-                                                    class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1
-                                        von 1000 Behandelten
-                                    </div>
-                                    <div class="row">
-                                        <b>Nebenwirkung:</b> <br>
-                                        Vergrößerung der Brust bei Männern (Gynäkomastie). </div>
-                                    <hr>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="panel panel-default">
-                <div class="panel-heading head_panel" role="tab" id="nebenhead10">
-                    <h4 class="panel-title text-center-xs" data-toggle="collapse" data-target="#neben10">
-                        Allgemeine Erkrankungen und Beschwerden am Verabreichungsort
-                    </h4>
-                </div>
-                <div id="neben10" class="panel-collapse collapse" role="tabpanel" aria-labelledby="nebenhead10">
-                    <div class="panel-body">
-                        <table class="sideffect_table hidden-xs">
-                            <thead>
-                                <tr>
-                                    <th>Häufigkeit</th>
-                                    <th style="width: 25%;">Anzahl der betreffenden Behandelten <span
-                                            style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i
-                                                class="fas fa-info-circle"></i></span> </th>
-                                    <th>Nebenwirkung</th>
-                                </tr>
-                            </thead>
-                            <tbody class="" style="padding: 15px;">
-                                <tr id="sehrhaeufig">
-                                    <td>Sehr häufig</td>
-                                    <td>Mehr als 1 von 10 Behandelten</td>
-                                    <td>Schwächegefühl
-                                    </td>
-                                </tr>
-                                <tr id="haeufig">
-                                    <td>Häufig</td>
-                                    <td>Mehr als 1 von 10 Behandelten </td>
-                                    <td>
-                                        Müdigkeit
-                                    </td>
-                                </tr>
-                                <tr id="gelegentlich">
-                                    <td>Gelegentlich</td>
-                                    <td>Bis zu 1 von 100 Behandelten</td>
-                                    <td>
-                                        Muskelkrämpfe, Gesichtsrötung (Flush), Ohrgeräusche (Tinnitus), Unwohlsein,
-                                        Fieber.
-                                    </td>
-                                </tr>
-
-                            </tbody>
-                        </table>
-                        <div class="hidden-sm hidden-md hidden-lg">
-                            <div class="row content_header">
-                                <h3> Häufigkeit der Nebenwirkungen </h3>
-                                <hr>
-                            </div>
-                            <div>
-                                <div class="row p15" id="sehrhaeufig-xs">
-                                    <h4> Sehr häufig</h4>
-                                    <div class="row">
-                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer"
-                                                data-toggle="modal" data-target="#neben_info"><i
-                                                    class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1
-                                        von 10 Behandelten
-                                    </div>
-                                    <div class="row">
-                                        <b>Nebenwirkung:</b> <br>Schwächegefühl
-                                    </div>
-                                    <hr>
-                                </div>
-                                <div class="row p15" id="haeufig-xs">
-                                    <h4> Häufig</h4>
-                                    <div class="row">
-                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer"
-                                                data-toggle="modal" data-target="#neben_info"><i
-                                                    class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1
-                                        von 10 Behandelten
-                                    </div>
-                                    <div class="row">
-                                        <b>Nebenwirkung:</b> <br>
-                                        Müdigkeit
-                                    </div>
-                                    <hr>
-                                </div>
-                                <div class="row p15" id="gelegentlich-xs">
-                                    <h4> Gelegentlich</h4>
-                                    <div class="row">
-                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer"
-                                                data-toggle="modal" data-target="#neben_info"><i
-                                                    class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1
-                                        von 100 Behandelten
-                                    </div>
-                                    <div class="row">
-                                        <b>Nebenwirkung:</b> <br>
-                                        Muskelkrämpfe, Gesichtsrötung (Flush), Ohrgeräusche (Tinnitus), Unwohlsein,
-                                        Fieber. </div>
-                                    <hr>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="panel panel-default">
-                <div class="panel-heading head_panel" role="tab" id="nebenhead11">
-                    <h4 class="panel-title text-center-xs" data-toggle="collapse" data-target="#neben11">
-                        Untersuchungen
-                    </h4>
-                </div>
-                <div id="neben11" class="panel-collapse collapse" role="tabpanel" aria-labelledby="nebenhead11">
-                    <div class="panel-body">
-                        <table class="sideffect_table hidden-xs">
-                            <thead>
-                                <tr>
-                                    <th>Häufigkeit</th>
-                                    <th style="width: 25%;">Anzahl der betreffenden Behandelten <span
-                                            style="cursor: pointer" data-toggle="modal" data-target="#neben_info"><i
-                                                class="fas fa-info-circle"></i></span> </th>
-                                    <th>Nebenwirkung</th>
-                                </tr>
-                            </thead>
-                            <tbody class="" style="padding: 15px;">
-
-                                <tr id="haeufig">
-                                    <td>Häufig</td>
-                                    <td>Mehr als 1 von 10 Behandelten </td>
-                                    <td>
-                                        Anstieg der Kaliumwerte im Blut, Anstieg der Kreatininwerte im Blut.
-                                    </td>
-                                </tr>
-                                <tr id="gelegentlich">
-                                    <td>Gelegentlich</td>
-                                    <td>Bis zu 1 von 100 Behandelten</td>
-                                    <td>
-                                        Anstieg des Harnstoffs im Blut, Abnahme der Natriumwerte im Blut.
-                                    </td>
-                                </tr>
-                                <tr id="selten">
-                                    <td>Selten</td>
-                                    <td> Bis zu 1 von 1.000 Behandelten </td>
-                                    <td>
-                                        Erhöhte Leberwerte (Leberenzyme, Serum-Bilirubin).</td>
-                                </tr>
-
-                            </tbody>
-                        </table>
-                        <div class="hidden-sm hidden-md hidden-lg">
-                            <div class="row content_header">
-                                <h3> Häufigkeit der Nebenwirkungen </h3>
-                                <hr>
-                            </div>
-                            <div>
-
-                                <div class="row p15" id="haeufig-xs">
-                                    <h4> Häufig</h4>
-                                    <div class="row">
-                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer"
-                                                data-toggle="modal" data-target="#neben_info"><i
-                                                    class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1
-                                        von 10 Behandelten
-                                    </div>
-                                    <div class="row">
-                                        <b>Nebenwirkung:</b> <br>
-                                        Anstieg der Kaliumwerte im Blut, Anstieg der Kreatininwerte im Blut.
-                                    </div>
-                                    <hr>
-                                </div>
-                                <div class="row p15" id="gelegentlich-xs">
-                                    <h4> Gelegentlich</h4>
-                                    <div class="row">
-                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer"
-                                                data-toggle="modal" data-target="#neben_info"><i
-                                                    class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1
-                                        von 100 Behandelten
-                                    </div>
-                                    <div class="row">
-                                        <b>Nebenwirkung:</b> <br>
-                                        Anstieg des Harnstoffs im Blut, Abnahme der Natriumwerte im Blut.
-                                    </div>
-                                    <hr>
-                                </div>
-                                <div class="row p15" id="selten-xs">
-                                    <h4> Selten</h4>
-                                    <div class="row">
-                                        <b>Anzahl der betreffenden Behandelten <span style="cursor: pointer"
-                                                data-toggle="modal" data-target="#neben_info"><i
-                                                    class="fas fa-info-circle"></i></span> :</b> <br> Mehr als 1
-                                        von 1000 Behandelten
-                                    </div>
-                                    <div class="row">
-                                        <b>Nebenwirkung:</b> <br>
-                                        Erhöhte Leberwerte (Leberenzyme, Serum-Bilirubin).
-                                    </div>
-                                    <hr>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-
 <div class="row">
     <div class="alert alert-info" style="margin-top: 40px;">
         <h4>Gegenmaßnahmen</h4>

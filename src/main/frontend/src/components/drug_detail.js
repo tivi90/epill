@@ -716,6 +716,360 @@ class DrugDetail extends React.Component {
         }));
     }
 
+    rendersehrhaeufigdesktop(drug) {
+        if (!drug.sideEffectContent) {
+            return null;
+        }
+        return (
+            <table className="sideffect_table hidden-xs">
+                <thead>
+                <tr>
+                    <th>Erkrankung</th>
+                    <th>Nebenwirkung</th>
+                </tr>
+                </thead>
+                <tbody className="sehrhaeufig_cont">
+                {drug.sideEffectContent
+                    .map((section => {
+                        return (
+                            <tr id="sehrhaeufig" key={section.id} className={section.number}>
+                                <td key={section.id}>{section.purpose}</td>
+                                <td dangerouslySetInnerHTML={this.createMarkup(section.text)}/>
+                            </tr>
+                        );
+                    }))
+                    .reduce((prev, curr) => [prev, curr])
+                }
+                </tbody>
+            </table>
+        )
+    }
+
+    rendersehrhaeufigmobile(drug) {
+        if (!drug.sideEffectContent) {
+            return null;
+        }
+        return (<div>
+                {drug.sideEffectContent
+                    .map((section => {
+                        return (
+                            <div className="sehrhaeufig_cont hidden-sm hidden-md hidden-lg">
+                                <div className="row" key={section.id} className={section.number}>
+                                    <h4>Erkrankung</h4><br/>
+                                    <span key={section.id}>{section.purpose}</span>
+                                    <h4>Nebenwirkung:</h4> <br/>
+                                    <span dangerouslySetInnerHTML={this.createMarkup(section.text)}/>
+                                    <hr/>
+                                </div>
+                            </div>
+                        )
+                    }))
+                    .reduce((prev, curr) => [prev, curr])
+                }</div>
+        )
+    }
+
+    renderhaeufigdesktop(drug) {
+        if (!drug.sideEffectContent) {
+            return null;
+        }
+        return (
+            <table className="sideffect_table hidden-xs">
+                <thead>
+                <tr>
+                    <th>Erkrankung</th>
+                    <th>Nebenwirkung</th>
+                </tr>
+                </thead>
+                <tbody className="haeufig_cont">
+                {drug.sideEffectContent
+                    .map((section => {
+                        return (
+                            <tr id="haeufig" key={section.id} className={section.number}>
+                                <td key={section.id}>{section.purpose}</td>
+                                <td dangerouslySetInnerHTML={this.createMarkup(section.text)}/>
+                            </tr>
+                        );
+                    }))
+                    .reduce((prev, curr) => [prev, curr])
+                }
+                </tbody>
+            </table>
+        )
+    }
+
+    renderhaeufigmobile(drug) {
+        if (!drug.sideEffectContent) {
+            return null;
+        }
+        return (<div>
+                {drug.sideEffectContent
+                    .map((section => {
+                        return (
+                            <div className="haeufig_cont hidden-sm hidden-md hidden-lg">
+                                <div className="row" key={section.id} className={section.number}>
+                                    <h4>Erkrankung</h4><br/>
+                                    <span key={section.id}>{section.purpose}</span>
+                                    <h4>Nebenwirkung:</h4> <br/>
+                                    <span dangerouslySetInnerHTML={this.createMarkup(section.text)}/>
+                                    <hr/>
+                                </div>
+                            </div>
+                        )
+                    }))
+                    .reduce((prev, curr) => [prev, curr])
+                }</div>
+        )
+    }
+
+    rendergelegentlichdesktop(drug) {
+        if (!drug.sideEffectContent) {
+            return null;
+        }
+        return (
+            <table className="sideffect_table hidden-xs">
+                <thead>
+                <tr>
+                    <th>Erkrankung</th>
+                    <th>Nebenwirkung</th>
+                </tr>
+                </thead>
+                <tbody className="gelegentlich_cont">
+                {drug.sideEffectContent
+                    .map((section => {
+                        return (
+                            <tr id="gelegentlich" key={section.id} className={section.number}>
+                                <td key={section.id}>{section.purpose}</td>
+                                <td dangerouslySetInnerHTML={this.createMarkup(section.text)}/>
+                            </tr>
+                        );
+                    }))
+                    .reduce((prev, curr) => [prev, curr])
+                }
+                </tbody>
+            </table>
+        )
+    }
+
+    rendergelegentlichmobile(drug) {
+        if (!drug.sideEffectContent) {
+            return null;
+        }
+        return (<div>
+                {drug.sideEffectContent
+                    .map((section => {
+                        return (
+                            <div className="gelegentlich_cont hidden-sm hidden-md hidden-lg">
+                                <div className="row" key={section.id} className={section.number}>
+                                    <h4>Erkrankung</h4><br/>
+                                    <span key={section.id}>{section.purpose}</span>
+                                    <h4>Nebenwirkung:</h4> <br/>
+                                    <span dangerouslySetInnerHTML={this.createMarkup(section.text)}/>
+                                    <hr/>
+                                </div>
+                            </div>
+                        )
+                    }))
+                    .reduce((prev, curr) => [prev, curr])
+                }</div>
+        )
+    }
+
+    renderseltendesktop(drug) {
+        if (!drug.sideEffectContent) {
+            return null;
+        }
+        return (
+            <table className="sideffect_table hidden-xs">
+                <thead>
+                <tr>
+                    <th>Erkrankung</th>
+                    <th>Nebenwirkung</th>
+                </tr>
+                </thead>
+                <tbody className="selten_cont">
+                {drug.sideEffectContent
+                    .map((section => {
+                        return (
+                            <tr id="selten" key={section.id} className={section.number}>
+                                <td key={section.id}>{section.purpose}</td>
+                                <td dangerouslySetInnerHTML={this.createMarkup(section.text)}/>
+                            </tr>
+                        );
+                    }))
+                    .reduce((prev, curr) => [prev, curr])
+                }
+                </tbody>
+            </table>
+        )
+    }
+
+    renderseltenmobile(drug) {
+        if (!drug.sideEffectContent) {
+            return null;
+        }
+        return (<div>
+                {drug.sideEffectContent
+                    .map((section => {
+                        return (
+                            <div className="selten_cont hidden-sm hidden-md hidden-lg">
+                                <div className="row" key={section.id} className={section.number}>
+                                    <h4>Erkrankung</h4><br/>
+                                    <span key={section.id}>{section.purpose}</span>
+                                    <h4>Nebenwirkung:</h4> <br/>
+                                    <span dangerouslySetInnerHTML={this.createMarkup(section.text)}/>
+                                    <hr/>
+                                </div>
+                            </div>
+                        )
+                    }))
+                    .reduce((prev, curr) => [prev, curr])
+                }</div>
+        )
+    }
+
+    rendersehrseltendesktop(drug) {
+        if (!drug.sideEffectContent) {
+            return null;
+        }
+        return (
+            <table className="sideffect_table hidden-xs">
+                <thead>
+                <tr>
+                    <th>Erkrankung</th>
+                    <th>Nebenwirkung</th>
+                </tr>
+                </thead>
+                <tbody className="sehrselten_cont">
+                {drug.sideEffectContent
+                    .map((section => {
+                        return (
+                            <tr id="sehrselten" key={section.id} className={section.number}>
+                                <td key={section.id}>{section.purpose}</td>
+                                <td dangerouslySetInnerHTML={this.createMarkup(section.text)}/>
+                            </tr>
+                        );
+                    }))
+                    .reduce((prev, curr) => [prev, curr])
+                }
+                </tbody>
+            </table>
+        )
+    }
+
+    rendersehrseltenmobile(drug) {
+        if (!drug.sideEffectContent) {
+            return null;
+        }
+        return (<div>
+                {drug.sideEffectContent
+                    .map((section => {
+                        return (
+                            <div className="sehrselten_cont hidden-sm hidden-md hidden-lg">
+                                <div className="row" key={section.id} className={section.number}>
+                                    <h4>Erkrankung</h4><br/>
+                                    <span key={section.id}>{section.purpose}</span>
+                                    <h4>Nebenwirkung:</h4> <br/>
+                                    <span dangerouslySetInnerHTML={this.createMarkup(section.text)}/>
+                                    <hr/>
+                                </div>
+                            </div>
+                        )
+                    }))
+                    .reduce((prev, curr) => [prev, curr])
+                }</div>
+        )
+    }
+
+    rendernichtbekanntdesktop(drug) {
+        if (!drug.sideEffectContent) {
+            return null;
+        }
+        return (
+            <table className="sideffect_table hidden-xs">
+                <thead>
+                <tr>
+                    <th>Erkrankung</th>
+                    <th>Nebenwirkung</th>
+                </tr>
+                </thead>
+                <tbody className="nichtbekannt_cont">
+                {drug.sideEffectContent
+                    .map((section => {
+                        return (
+                            <tr id="nichtbekannt" key={section.id} className={section.number}>
+                                <td key={section.id}>{section.purpose}</td>
+                                <td dangerouslySetInnerHTML={this.createMarkup(section.text)}/>
+
+                                {}
+                            </tr>
+                        );
+                    }))
+                    .reduce((prev, curr) => [prev, curr])
+                }
+                </tbody>
+            </table>
+        )
+    }
+
+    rendernichtbekanntmobile(drug) {
+        if (!drug.sideEffectContent) {
+            return null;
+        }
+        return (<div>
+                {drug.sideEffectContent
+                    .map((section => {
+                        return (
+                            <div className="sehrhaeufig_cont hidden-sm hidden-md hidden-lg">
+                                <div className="row" key={section.id} className={section.number}>
+                                    <h4>Erkrankung</h4><br/>
+                                    <span key={section.id}>{section.purpose}</span>
+                                    <h4>Nebenwirkung:</h4> <br/>
+                                    <span dangerouslySetInnerHTML={this.createMarkup(section.text)}/>
+                                    <hr/>
+                                </div>
+                            </div>
+                        )
+                    }))
+                    .reduce((prev, curr) => [prev, curr])
+                }</div>
+        )
+    }
+
+
+    renderhide = () => {
+        $(".sehrhaeufig_cont > .2").css("display", "none");
+        $(".sehrhaeufig_cont > .3").css("display", "none");
+        $(".sehrhaeufig_cont > .4").css("display", "none");
+        $(".sehrhaeufig_cont > .5").css("display", "none");
+        $(".sehrhaeufig_cont > .6").css("display", "none");
+        $(".haeufig_cont > .1").css("display", "none");
+        $(".haeufig_cont > .3").css("display", "none");
+        $(".haeufig_cont > .4").css("display", "none");
+        $(".haeufig_cont > .5").css("display", "none");
+        $(".haeufig_cont > .6").css("display", "none");
+        $(".gelegentlich_cont > .1").css("display", "none");
+        $(".gelegentlich_cont > .2").css("display", "none");
+        $(".gelegentlich_cont > .4").css("display", "none");
+        $(".gelegentlich_cont > .5").css("display", "none");
+        $(".gelegentlich_cont > .6").css("display", "none");
+        $(".selten_cont > .1").css("display", "none");
+        $(".selten_cont > .2").css("display", "none");
+        $(".selten_cont > .3").css("display", "none");
+        $(".selten_cont > .5").css("display", "none");
+        $(".selten_cont > .6").css("display", "none");
+        $(".sehrselten_cont > .1").css("display", "none");
+        $(".sehrselten_cont > .2").css("display", "none");
+        $(".sehrselten_cont > .3").css("display", "none");
+        $(".sehrselten_cont > .4").css("display", "none");
+        $(".sehrselten_cont > .6").css("display", "none");
+        $(".nichtbekannt_cont > .1").css("display", "none");
+        $(".nichtbekannt_cont > .2").css("display", "none");
+        $(".nichtbekannt_cont > .3").css("display", "none");
+        $(".nichtbekannt_cont > .4").css("display", "none");
+        $(".nichtbekannt_cont > .5").css("display", "none");
+
+    }
 
     scrollToTop = () => {
         document.body.scrollTop = 0;
@@ -797,7 +1151,8 @@ class DrugDetail extends React.Component {
                 <div className="no-banner">
                     {/*Button INFO*/}
                     <div className="round-button-outer report-round-button round_info hidden-lg hidden-md">
-                        <div id="reportBtn" className="round-button-inner-main" data-toggle="modal" data-target="#info">
+                        <div id="reportBtn" className="round-button-inner-main" data-toggle="modal"
+                             data-target="#info">
                             <FontAwesomeIcon icon={faInfo}/>
                         </div>
                     </div>
@@ -814,8 +1169,8 @@ class DrugDetail extends React.Component {
 
                                 </div>
                                 <div className="modal-body" style={{color: "black"}}>
-                    <span
-                        dangerouslySetInnerHTML={this.createMarkup(t("textinfo").replace("%XXX%", drug.name))}/>
+            <span
+                dangerouslySetInnerHTML={this.createMarkup(t("textinfo").replace("%XXX%", drug.name))}/>
                                 </div>
                                 <span dangerouslySetInnerHTML={this.createMarkup(t("modal_close"))}/>
                             </div>
@@ -829,7 +1184,8 @@ class DrugDetail extends React.Component {
                              data-target="#address">
                             <FontAwesomeIcon icon={faAddressCard}/></div>
                     </div>
-                    <div className="modal fade" id="address" tabIndex="-1" role="dialog" aria-labelledby="addressLabel"
+                    <div className="modal fade" id="address" tabIndex="-1" role="dialog"
+                         aria-labelledby="addressLabel"
                          aria-hidden="true">
                         <div className="modal-dialog" role="document">
                             <div className="modal-content">
@@ -855,7 +1211,8 @@ class DrugDetail extends React.Component {
                             <FontAwesomeIcon icon={faCommentMedical}/>
                         </div>
                     </div>
-                    <div className="modal fade" id="melden" tabIndex="-1" role="dialog" aria-labelledby="addressLabel"
+                    <div className="modal fade" id="melden" tabIndex="-1" role="dialog"
+                         aria-labelledby="addressLabel"
                          aria-hidden="true">
                         <div className="modal-dialog" role="document">
                             <div className="modal-content">
@@ -967,7 +1324,8 @@ class DrugDetail extends React.Component {
                                                 <div className="modal-dialog" role="document">
                                                     <div className="modal-content">
                                                         <div className="modal-header">
-                                                            <button type="button" className="close" data-dismiss="modal"
+                                                            <button type="button" className="close"
+                                                                    data-dismiss="modal"
                                                                     aria-label="Close">
                                                                 <span aria-hidden="true">&times;</span>
                                                             </button>
@@ -976,26 +1334,27 @@ class DrugDetail extends React.Component {
                                                         </div>
                                                         <div className="modal-body" style={{color: "black"}}>
                                                             {drug.drugFeature.map(feature =>
-                                                                <div className="row">
-                                                                    <div className="col-sm-1 col-xs-12">
-                                                                        <img key={feature.id}
-                                                                             src={"./../../assets/icons/" + feature.id + ".svg"}
-                                                                             alt={feature.drugFeature}
-                                                                             title={feature.drugFeature}
-                                                                             className="drug-feature-icon icon_page"/>
+                                                                    <div className="row">
+                                                                        <div className="col-sm-1 col-xs-12">
+                                                                            <img key={feature.id}
+                                                                                 src={"./../../assets/icons/" + feature.id + ".svg"}
+                                                                                 alt={feature.drugFeature}
+                                                                                 title={feature.drugFeature}
+                                                                                 className="drug-feature-icon icon_page"/>
+                                                                        </div>
+                                                                        <div
+                                                                            className="col-sm-11 col-xs-12 drug-feature-title">
+                                        <span className="drug-feature-title"
+                                              key={feature.id}>{feature.drugFeature}</span>
+                                                                        </div>
                                                                     </div>
-                                                                    <div
-                                                                        className="col-sm-11 col-xs-12 drug-feature-title">
-                                                                        <span className="drug-feature-title"
-                                                                              key={feature.id}>{feature.drugFeature}</span>
-                                                                    </div>
-                                                                </div>
                                                             ).reduce((prev, curr) => [prev, ', ', curr])}
                                                             <div className="row">
                                                                 Weitere Informationen finden Sie unter der Rubrik <a
                                                                 href="#tab2" aria-controls="tab2" role="tab"
                                                                 data-toggle="tab" aria-expanded="true"
-                                                                data-dismiss="modal">Warnhinweise und Vorsichtsmaßnahmen
+                                                                data-dismiss="modal">Warnhinweise und
+                                                                Vorsichtsmaßnahmen
                                                             </a></div>
                                                         </div>
                                                         <span
@@ -1065,7 +1424,8 @@ class DrugDetail extends React.Component {
                                                         className="fas fa-info-circle"/></div>
                                                 </div>
 
-                                                <div className="modal fade" id="drugform" tabIndex="-1" role="dialog"
+                                                <div className="modal fade" id="drugform" tabIndex="-1"
+                                                     role="dialog"
                                                      aria-labelledby="addressLabel"
                                                      aria-hidden="true">
                                                     <div className="modal-dialog" role="document">
@@ -1132,10 +1492,10 @@ class DrugDetail extends React.Component {
                                                                     .reduce((prev, curr) => [prev, ', ', curr])}
                                                             </div>
                                                             <div className="modal-body" style={{color: "black"}}>
-                    <span> {drug.activeSubstance.map(substance =>
-                        <span
-                            key={substance.id}>{substance.name} ist ein Arzneistoff aus der Gruppe der sogenannten {substance.substanceGroup.name}.</span>)
-                        .reduce((prev, curr) => [prev, ', ', curr])} </span>
+            <span> {drug.activeSubstance.map(substance =>
+                <span
+                    key={substance.id}>{substance.name} ist ein Arzneistoff aus der Gruppe der sogenannten {substance.substanceGroup.name}.</span>)
+                .reduce((prev, curr) => [prev, ', ', curr])} </span>
                                                                 {this.renderPackSecMoreSub(drug)}
                                                             </div>
                                                             <span
@@ -1180,18 +1540,248 @@ class DrugDetail extends React.Component {
                                             <div class="row content_header">
                                                 <h1> Nebenwirkungen </h1>
                                                 <hr/>
-                                                <p>Wie alle Arzneimittel kann auch dieses Arzneimittel Nebenwirkungen
+                                                <h4>Wie alle Arzneimittel kann auch dieses Arzneimittel
+                                                    Nebenwirkungen
                                                     haben, die aber nicht
-                                                    bei jedem auftreten müssen.</p>
+                                                    bei jedem auftreten müssen.</h4>
+                                                {this.renderPackSecneben(drug)}
 
+                                                <div className="row" style={{marginBottom: "30px"}}>
+
+                                                    <h4>Weiterhin können folgende Nebenwirkungen auftreten.
+                                                    </h4>
+                                                    <p style={{fontStyle: "italic"}}> Bei der
+                                                        Bewertung von Nebenwirkungen werden folgende Häufigkeitsangaben
+                                                        zugrunde gelegt. Klicken Sie auf die Kachel um
+                                                        Informationen zu den Nebenwikungen zu erhalten </p>
+                                                    <div onClick={this.renderhide.bind(this)}
+                                                         className="col-lg-6 col-xs-12 neben_tile brightgreen"
+                                                         data-toggle="modal"
+                                                         data-target="#neben_sehrhaeufig">
+                                                        <h1>Sehr häufig</h1>
+                                                        <p>Die Nebenwirkung betrifft mehr als 1 Behandelten von 10
+                                                        </p>
+                                                    </div>
+                                                    <div onClick={this.renderhide.bind(this)}
+                                                         className="col-lg-6 col-xs-12  neben_tile brightgreen"
+                                                         data-toggle="modal"
+                                                         data-target="#neben_haeufig">
+                                                        <h1>Häufig</h1>
+                                                        <p>Die Nebenwirkung betrifft 1 bis 10 Behandelte von 100
+                                                        </p>
+                                                    </div>
+                                                    <div onClick={this.renderhide.bind(this)}
+                                                         className="col-lg-6 col-xs-12  neben_tile brightyellow"
+                                                         data-toggle="modal"
+                                                         data-target="#neben_gelegentlich">
+                                                        <h1>Gelegentlich</h1>
+                                                        <p>Die Nebenwirkung betrifft 1 bis 10 Behandelte von 1.000
+                                                        </p>
+                                                    </div>
+                                                    <div onClick={this.renderhide.bind(this)}
+                                                         className="col-lg-6 col-xs-12  neben_tile brightred"
+                                                         data-toggle="modal"
+                                                         data-target="#neben_selten">
+                                                        <h1>Selten</h1>
+                                                        <p>Die Nebenwirkung betrifft 1 bis 10 Behandelte von 10.000
+                                                        </p>
+                                                    </div>
+                                                    <div onClick={this.renderhide.bind(this)}
+                                                         className="col-lg-6 col-xs-12  neben_tile brightred"
+                                                         data-toggle="modal"
+                                                         data-target="#neben_sehrselten">
+                                                        <h1>Sehr selten</h1>
+                                                        <p>Die Nebenwirkung betrifft weniger als 1 Behandelten von
+                                                            10.000
+                                                        </p>
+                                                    </div>
+                                                    <div onClick={this.renderhide.bind(this)}
+                                                         className="col-lg-6 col-xs-12  neben_tile brightgrey"
+                                                         data-toggle="modal"
+                                                         data-target="#neben_nichtbekannt">
+                                                        <h1>Nicht bekannt</h1>
+                                                        <p>Häufigkeit auf Grundlage der verfügbaren Daten nicht
+                                                            abschätzbar
+                                                        </p>
+                                                    </div>
+                                                </div>
+
+
+                                                <div className="modal fade" id="neben_sehrhaeufig" tabIndex="-1"
+                                                     role="dialog" aria-labelledby="neben_info"
+                                                     aria-hidden="true">
+                                                    <div className="modal-dialog modal-lg" role="document">
+                                                        <div className="modal-content brightgreen">
+                                                            <div className="modal-header">
+                                                                <button type="button" className="close"
+                                                                        data-dismiss="modal" aria-label="Close">
+                                                                    <span aria-hidden="true">&times;</span>
+                                                                </button>
+                                                                <h2>
+                                                                    Sehr häufig
+                                                                </h2>
+                                                                <p>Die Nebenwirkung betrifft mehr als 1 Behandelten von
+                                                                    10 </p>
+                                                                <p><b>Bedeutung</b> Bei mehr als 10 % der Behandelten
+                                                                    ist die Nebenwirkung aufgetreten.
+                                                                </p>
+                                                            </div>
+                                                            <div className="modal-body" style={{color: "black"}}>
+                                                                {this.rendersehrhaeufigdesktop(drug)}
+                                                                {this.rendersehrhaeufigmobile(drug)}
+                                                            </div>
+                                                            <span
+                                                                dangerouslySetInnerHTML={this.createMarkup(t("modal_close"))}/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div className="modal fade" id="neben_haeufig" tabIndex="-1"
+                                                     role="dialog" aria-labelledby="neben_haeufig"
+                                                     aria-hidden="true">
+                                                    <div className="modal-dialog modal-lg" role="document">
+                                                        <div className="modal-content brightgreen">
+                                                            <div className="modal-header">
+                                                                <button type="button" className="close"
+                                                                        data-dismiss="modal" aria-label="Close">
+                                                                    <span aria-hidden="true">&times;</span>
+                                                                </button>
+                                                                <h2>
+                                                                    Häufig </h2>
+                                                                <p>Die Nebenwirkung betrifft 1 bis 10 Behandelte von
+                                                                    100 </p>
+                                                                <p><b>Bedeutung</b> Bei 1 bis 10 % der Behandelten ist
+                                                                    die Nebenwirkung aufgetreten.
+                                                                </p>
+                                                            </div>
+                                                            <div className="modal-body" style={{color: "black"}}>
+                                                                {this.renderhaeufigdesktop(drug)}
+                                                                {this.renderhaeufigmobile(drug)}
+                                                            </div>
+                                                            <span
+                                                                dangerouslySetInnerHTML={this.createMarkup(t("modal_close"))}/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div className="modal fade" id="neben_gelegentlich" tabIndex="-1"
+                                                     role="dialog" aria-labelledby="neben_gelegentlich"
+                                                     aria-hidden="true">
+                                                    <div className="modal-dialog modal-lg" role="document">
+                                                        <div className="modal-content brightyellow">
+                                                            <div className="modal-header">
+                                                                <button type="button" className="close"
+                                                                        data-dismiss="modal" aria-label="Close">
+                                                                    <span aria-hidden="true">&times;</span>
+                                                                </button>
+                                                                <h2>
+                                                                    Gelegentlich </h2>
+                                                                <p> Die Nebenwirkung betrifft 1 bis 10 Behandelte von
+                                                                    1.000 </p>
+                                                                <p><b>Bedeutung</b> Bei 0,1 % bis 1 % der Behandelten
+                                                                    ist die Nebenwirkung aufgetreten.
+                                                                </p>
+
+                                                            </div>
+                                                            <div className="modal-body" style={{color: "black"}}>
+                                                                {this.rendergelegentlichdesktop(drug)}
+                                                                {this.rendergelegentlichmobile(drug)}
+                                                            </div>
+                                                            <span
+                                                                dangerouslySetInnerHTML={this.createMarkup(t("modal_close"))}/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div className="modal fade" id="neben_selten" tabIndex="-1"
+                                                     role="dialog" aria-labelledby="neben_selten"
+                                                     aria-hidden="true">
+                                                    <div className="modal-dialog modal-lg" role="document">
+                                                        <div className="modal-content brightred">
+                                                            <div className="modal-header">
+                                                                <button type="button" className="close"
+                                                                        data-dismiss="modal" aria-label="Close">
+                                                                    <span aria-hidden="true">&times;</span>
+                                                                </button>
+                                                                <h2>
+                                                                    Selten </h2>
+                                                                <p> Die Nebenwirkung betriff 1 bis 10 Behandelte von
+                                                                    10.000 </p>
+                                                                <p><b>Bedeutung</b> Bei 0,01 % bis 0,1 % der Behandelten
+                                                                    ist die Nebenwirkung aufgetreten.
+                                                                </p>
+                                                            </div>
+                                                            <div className="modal-body" style={{color: "black"}}>
+                                                                {this.renderseltendesktop(drug)}
+                                                                {this.renderseltenmobile(drug)}
+                                                            </div>
+                                                            <span
+                                                                dangerouslySetInnerHTML={this.createMarkup(t("modal_close"))}/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div className="modal fade" id="neben_sehrselten" tabIndex="-1"
+                                                     role="dialog" aria-labelledby="neben_sehrselten"
+                                                     aria-hidden="true">
+                                                    <div className="modal-dialog modal-lg" role="document">
+                                                        <div className="modal-content brightred">
+                                                            <div className="modal-header">
+                                                                <button type="button" className="close"
+                                                                        data-dismiss="modal" aria-label="Close">
+                                                                    <span aria-hidden="true">&times;</span>
+                                                                </button>
+                                                                <h2>
+                                                                    Sehr selten
+                                                                </h2>
+                                                                <p> Die Nebenwirkung betrifft weniger als 1 Behandelten
+                                                                    von 10.000 </p>
+                                                                <p><b>Bedeutung</b> Bei weniger als 0,01 % der
+                                                                    Behandelten ist die Nebenwirkung aufgetreten.
+                                                                </p>
+                                                            </div>
+                                                            <div className="modal-body" style={{color: "black"}}>
+                                                                {this.rendersehrseltendesktop(drug)}
+                                                                {this.rendersehrseltenmobile(drug)}
+                                                            </div>
+                                                            <span
+                                                                dangerouslySetInnerHTML={this.createMarkup(t("modal_close"))}/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div className="modal fade" id="neben_nichtbekannt" tabIndex="-1"
+                                                     role="dialog" aria-labelledby="neben_nichtbekannt"
+                                                     aria-hidden="true">
+                                                    <div className="modal-dialog modal-lg" role="document">
+                                                        <div className="modal-content brightgrey">
+                                                            <div className="modal-header">
+                                                                <button type="button" className="close"
+                                                                        data-dismiss="modal" aria-label="Close">
+                                                                    <span aria-hidden="true">&times;</span>
+                                                                </button>
+                                                                <h2>
+                                                                    Nicht Bekannt </h2>
+                                                                <p> Häufigkeit auf Grundlage der verfügbaren Daten nicht
+                                                                    abschätzbar </p>
+                                                                <p><b>Bedeutung</b> Es sind nur Einzelfälle bekannt,
+                                                                    daraus kann die Häufigkeit des Auftretens nicht
+                                                                    bestimmt werden.
+
+                                                                </p>
+                                                            </div>
+                                                            <div className="modal-body" style={{color: "black"}}>
+                                                                {this.rendernichtbekanntdesktop(drug)}
+                                                                {this.rendernichtbekanntmobile(drug)}
+                                                            </div>
+                                                            <span
+                                                                dangerouslySetInnerHTML={this.createMarkup(t("modal_close"))}/>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            {this.renderPackSecneben(drug)}
                                             {/*Button REPORT*/}
                                             <div className="text-right">
                                                 <button type="button" className="btn btn-success neben_button"
                                                         data-toggle="modal"
                                                         data-target="#melden">Meldung von Nebenwirkungen
-                                                    <i className="fas fa-comment-medical" style={{marginLeft: "15px"}}/>
+                                                    <i className="fas fa-comment-medical"
+                                                       style={{marginLeft: "15px"}}/>
                                                 </button>
                                             </div>
                                             {/*Button REPORT ENDE*/
@@ -1209,7 +1799,8 @@ class DrugDetail extends React.Component {
                     {this.renderWordExplaination(drug)}
                     {this.renderGoTopIcon()}
 
-                    <div className="modal fade" id="neben_info" tabIndex="-1" role="dialog" aria-labelledby="neben_info"
+                    <div className="modal fade" id="neben_info" tabIndex="-1" role="dialog"
+                         aria-labelledby="neben_info"
                          aria-hidden="true">
                         <div className="modal-dialog modal-lg" role="document">
                             <div className="modal-content">
@@ -1235,4 +1826,9 @@ class DrugDetail extends React.Component {
 }
 
 
-export default translate()(DrugDetail);
+export default translate()
+
+(
+    DrugDetail
+)
+;

@@ -133,7 +133,7 @@
 
 .neben_tile {
     border: solid 1px black;
-    height: 144px;
+    height: 170px;
     text-align: center;
     display: inline-table;
     align-items: center;
@@ -429,27 +429,27 @@
 /* Nebenwirkung */
 
 #sehrhaeufig, #sehrhaeufig-xs {
-    background-color: #87fb87;
+    background-color: #f0fff0;
 }
 
 #haeufig, #haeufig-xs {
-    background-color: #87fb87;
+    background-color: #f0fff0;
 }
 
 #gelegentlich, #gelegentlich-xs {
-    background-color: #ffff8f;
+    background-color: #ffffe2;
 }
 
 #selten, #selten-xs {
-    background-color: #ffc6c6;
+    background-color: #ffeded;
 }
 
 #sehrselten, #sehrselten-xs {
-    background-color: #ffc6c6;
+    background-color: #ffeded;
 }
 
 #nichtbekannt, #nichtbekannt-xs {
-    background-color: #e4e4e4;
+    background-color: #f1f1f1;
 }
 
 .gradient {
