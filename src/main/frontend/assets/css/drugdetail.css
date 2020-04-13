@@ -1,7 +1,7 @@
 
 .row {
-    margin-left: 0px !important;
-    margin-right: 0px !important;
+    margin-left: 0  !important;
+    margin-right: 0  !important;
 }
 
 .med_header {
@@ -15,7 +15,7 @@
     margin-top: 15px;
 }
 
-.druf_pack_icon {
+.drug_pack_icon {
     font-size: 50px;
     text-align: center;
     color: #616161 !important;
@@ -51,6 +51,22 @@
     padding: 12px 20px 12px 40px;
     border: 1px solid #ddd;
     margin-bottom: 12px;
+}
+.myInput {
+    background-image: url('./../../assets/images/searchicon.png');
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    width: 100%;
+    font-size: 16px;
+    padding: 12px 20px 12px 40px;
+    border: 1px solid #ddd;
+    margin-bottom: 12px;
+}
+
+.helptext {
+    font-size: 12px;
+    font-style: italic;
+    color: #525252;
 }
 
 .med_head {
@@ -258,9 +274,12 @@
 .round_nebenwirkung {
     top: 37%;
 }
+.round_aufbewahrung {
+    top: 30%;
+}
 
 .round_info {
-    bottom: 37%;
+    bottom: 28%;
 }
 
 .report-round-button {
@@ -324,6 +343,17 @@
     cursor: pointer;
 }
 
+.addresicons{
+    padding: 2px;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #0a887f;
+}
+
+.addresstext{
+    margin-bottom: 10px;
+}
+
 .med_drugfeature {
     padding-top: 5px;
     padding-bottom: 5px;
@@ -350,10 +380,10 @@
 
 .thumbnail {
     margin-bottom: 20px;
-    padding: 0px;
+    padding: 0 ;
     -webkit-border-radius: 0px;
     -moz-border-radius: 0px;
-    border-radius: 0px;
+    border-radius: 0 ;
 }
 
 .di > .diseases {
@@ -458,6 +488,10 @@
     margin-bottom: 15px;
 }
 
+.nebenall{
+    margin-top: 30px;
+}
+
 .gradient {
     background: #77ff8c; /* Old browsers */
     background: -moz-linear-gradient(top, #77ff8c75 18%, #ffea4fcc 25%, #ff4c4c8c 100%); /* FF3.6-15 */
@@ -513,20 +547,25 @@
     text-align: right;
 }
 
+.pharmadetails{
+    color: #11a59b;
+    cursor: pointer;
+ }
+
 .panel-title[aria-expanded="true"]::after {
     content: "\f106";
 }
 
 
 .panelinfo {
-    margin-bottom: 0px !important;
+    margin-bottom: 0  !important;
     background-color: inherit !important;
     border: none !important;
 }
 
 .panelinfo > .panel-heading-info {
     background-color: inherit !important;
-    padding: 0px !important;
+    padding: 0  !important;
 }
 
 .panel-heading-info p {
@@ -596,7 +635,6 @@
 }
 
 @media screen and (max-width: 480px) {
-
     .report-round-button {
         right: 20%;
     }
@@ -653,21 +691,21 @@
     }
 
     .round_info {
-        top: 14%;
-        right: inherit;
-        left: 2%;
+        top: 25%;
+
     }
 
     .round_address {
         top: 23%;
-        right: inherit;
-        left: 2%;
-    }
+     }
 
     .round_nebenwirkung {
-        top: 32%;
-        right: inherit;
-        left: 2%
+        top: 35%;
+     }
+
+    .round_aufbewahrung {
+        top: 45%;
+
     }
 
     .gradient {

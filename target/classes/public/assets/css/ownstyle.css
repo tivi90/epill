@@ -222,11 +222,25 @@ Navbar
     margin-bottom: 60px;
 }
 
+.searchbox a {
+    -webkit-animation-name: none !important;
+    animation-name: none !important;
+    animation-duration: unset !important;
+    animation-fill-mode: none !important;
+}
+
+.tab-pane {
+    width: 100%;
+    overflow-x: scroll;
+}
+
 .searchimg {
+    animation-fill-mode: none !important;
     width: 95px !important;
     margin-top: 10px !important;
     -webkit-animation-name: none !important;
     animation-name: none !important;
+    animation-duration: unset !important;
 }
 
 .drugname_search {
@@ -840,6 +854,11 @@ footer .glyphicon {
 }
 
 @media screen and (max-width: 480px) {
+    #myCarousel .carousel-item h4 {
+        margin-top: 12%;
+        margin-left: 22%;
+    }
+
     .carousel-indicators {
         bottom: 0px;
     }
@@ -853,7 +872,7 @@ footer .glyphicon {
     }
 
     #myCarousel .carousel-item .mask img {
-        margin-left: 20%
+        margin-left: 25%
     }
 
     .navbar-toggle {

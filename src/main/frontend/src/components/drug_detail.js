@@ -368,7 +368,7 @@ class DrugDetail extends React.Component {
                         <div className="modal-dialog" role="document">
                             <div className="modal-content">
                                 <div className="modal-header">
-                                    <i class="fas fa-question"></i>
+                                    <i className="fas fa-question"></i>
                                     <h3>{section.name}
                                     </h3>
                                     <button type="button" className="close" data-dismiss="modal" aria-label="Close">
@@ -603,6 +603,23 @@ class DrugDetail extends React.Component {
             })).reduce((prev, curr) => [prev, curr]);
     }
 
+    renderPackSecaufbewahrung(drug) {
+        if (!drug.packagingSection) {
+            return null;
+        }
+
+        return drug.packagingSection
+            .filter(section => {
+                return section.topic.id === 7
+            })
+            .map((section => {
+                return (
+                    <p key={section.id}><span dangerouslySetInnerHTML={this.createMarkup(section.text)}/>
+                    </p>
+                );
+            })).reduce((prev, curr) => [prev, curr]);
+    }
+
     renderPackSecdesc(drug) {
         if (!drug.packagingSection) {
             return null;
@@ -734,7 +751,7 @@ class DrugDetail extends React.Component {
                         return (
                             <tr id="sehrhaeufig" key={section.id} className={section.number}>
                                 <td key={section.id}>{section.purpose}</td>
-                                <td dangerouslySetInnerHTML={this.createMarkup(section.text)}/>
+                                <td className="sectiontext" dangerouslySetInnerHTML={this.createMarkup(section.text)}/>
                             </tr>
                         );
                     }))
@@ -760,7 +777,8 @@ class DrugDetail extends React.Component {
                                             <h4>Erkrankung</h4>
                                             <b> <span key={section.id}>{section.purpose}</span></b>
                                             <h4>Nebenwirkung:</h4>
-                                            <span dangerouslySetInnerHTML={this.createMarkup(section.text)}/>
+                                            <span className="sectiontext"
+                                                  dangerouslySetInnerHTML={this.createMarkup(section.text)}/>
                                         </div>
                                     </div>
                                 </div>
@@ -790,7 +808,7 @@ class DrugDetail extends React.Component {
                         return (
                             <tr id="haeufig" key={section.id} className={section.number}>
                                 <td key={section.id}>{section.purpose}</td>
-                                <td dangerouslySetInnerHTML={this.createMarkup(section.text)}/>
+                                <td className="sectiontext" dangerouslySetInnerHTML={this.createMarkup(section.text)}/>
                             </tr>
                         );
                     }))
@@ -810,12 +828,13 @@ class DrugDetail extends React.Component {
                     .map((section => {
                         return (
                             <div className="haeufig_cont hidden-sm hidden-md hidden-lg  ">
-                                <div key={section.id} className={section.number} >
+                                <div key={section.id} className={section.number}>
                                     <div className="neben_xs">
                                         <h4>Erkrankung</h4>
                                         <b> <span key={section.id}>{section.purpose}</span></b>
                                         <h4>Nebenwirkung:</h4>
-                                        <span dangerouslySetInnerHTML={this.createMarkup(section.text)}/>
+                                        <span className="sectiontext"
+                                              dangerouslySetInnerHTML={this.createMarkup(section.text)}/>
                                     </div>
                                 </div>
                             </div>
@@ -844,7 +863,7 @@ class DrugDetail extends React.Component {
                         return (
                             <tr id="gelegentlich" key={section.id} className={section.number}>
                                 <td key={section.id}>{section.purpose}</td>
-                                <td dangerouslySetInnerHTML={this.createMarkup(section.text)}/>
+                                <td className="sectiontext" dangerouslySetInnerHTML={this.createMarkup(section.text)}/>
                             </tr>
                         );
                     }))
@@ -864,12 +883,13 @@ class DrugDetail extends React.Component {
                     .map((section => {
                         return (
                             <div className="gelegentlich_cont hidden-sm hidden-md hidden-lg  ">
-                                <div key={section.id} className={section.number} >
+                                <div key={section.id} className={section.number}>
                                     <div className="neben_xs">
                                         <h4>Erkrankung</h4>
                                         <b> <span key={section.id}>{section.purpose}</span></b>
                                         <h4>Nebenwirkung:</h4>
-                                        <span dangerouslySetInnerHTML={this.createMarkup(section.text)}/>
+                                        <span className="sectiontext"
+                                              dangerouslySetInnerHTML={this.createMarkup(section.text)}/>
                                     </div>
                                 </div>
                             </div>
@@ -898,7 +918,7 @@ class DrugDetail extends React.Component {
                         return (
                             <tr id="selten" key={section.id} className={section.number}>
                                 <td key={section.id}>{section.purpose}</td>
-                                <td dangerouslySetInnerHTML={this.createMarkup(section.text)}/>
+                                <td className="sectiontext" dangerouslySetInnerHTML={this.createMarkup(section.text)}/>
                             </tr>
                         );
                     }))
@@ -918,12 +938,13 @@ class DrugDetail extends React.Component {
                     .map((section => {
                         return (
                             <div className="selten_cont hidden-sm hidden-md hidden-lg  ">
-                                <div key={section.id} className={section.number} >
+                                <div key={section.id} className={section.number}>
                                     <div className="neben_xs">
                                         <h4>Erkrankung</h4>
                                         <b> <span key={section.id}>{section.purpose}</span></b>
                                         <h4>Nebenwirkung:</h4>
-                                        <span dangerouslySetInnerHTML={this.createMarkup(section.text)}/>
+                                        <span className="sectiontext"
+                                              dangerouslySetInnerHTML={this.createMarkup(section.text)}/>
                                     </div>
                                 </div>
                             </div>
@@ -952,7 +973,7 @@ class DrugDetail extends React.Component {
                         return (
                             <tr id="sehrselten" key={section.id} className={section.number}>
                                 <td key={section.id}>{section.purpose}</td>
-                                <td dangerouslySetInnerHTML={this.createMarkup(section.text)}/>
+                                <td className="sectiontext" dangerouslySetInnerHTML={this.createMarkup(section.text)}/>
                             </tr>
                         );
                     }))
@@ -972,12 +993,13 @@ class DrugDetail extends React.Component {
                     .map((section => {
                         return (
                             <div className="sehrselten_cont hidden-sm hidden-md hidden-lg  ">
-                                <div key={section.id} className={section.number} >
+                                <div key={section.id} className={section.number}>
                                     <div className="neben_xs">
                                         <h4>Erkrankung</h4>
                                         <b> <span key={section.id}>{section.purpose}</span></b>
                                         <h4>Nebenwirkung:</h4>
-                                        <span dangerouslySetInnerHTML={this.createMarkup(section.text)}/>
+                                        <span className="sectiontext"
+                                              dangerouslySetInnerHTML={this.createMarkup(section.text)}/>
                                     </div>
                                 </div>
                             </div>
@@ -1006,9 +1028,8 @@ class DrugDetail extends React.Component {
                         return (
                             <tr id="nichtbekannt" key={section.id} className={section.number}>
                                 <td key={section.id}>{section.purpose}</td>
-                                <td dangerouslySetInnerHTML={this.createMarkup(section.text)}/>
+                                <td className="sectiontext" dangerouslySetInnerHTML={this.createMarkup(section.text)}/>
 
-                                {}
                             </tr>
                         );
                     }))
@@ -1028,12 +1049,77 @@ class DrugDetail extends React.Component {
                     .map((section => {
                         return (
                             <div className="nichtbekannt_cont hidden-sm hidden-md hidden-lg ">
-                                <div key={section.id} className={section.number} >
+                                <div key={section.id} className={section.number}>
                                     <div className="neben_xs">
                                         <h4>Erkrankung</h4>
                                         <b> <span key={section.id}>{section.purpose}</span></b>
                                         <h4>Nebenwirkung:</h4>
-                                        <span dangerouslySetInnerHTML={this.createMarkup(section.text)}/>
+                                        <span className="sectiontext"
+                                              dangerouslySetInnerHTML={this.createMarkup(section.text)}/>
+                                    </div>
+                                </div>
+                            </div>
+                        )
+                    }))
+                    .reduce((prev, curr) => [prev, curr])
+                }</div>
+        )
+    }
+
+    renderalldesktop(drug) {
+        if (!drug.sideEffectContent) {
+            return null;
+        }
+        return (
+            <div>
+
+                <input type="text"  id="search" placeholder="Suche"
+                       className="hidden-xs myInput"/>
+                <table id="table" className="sideffect_table hidden-xs">
+                    <thead>
+                    <tr>
+                        <th>Erkrankung</th>
+                        <th>Nebenwirkung</th>
+                    </tr>
+                    </thead>
+                    <tbody className=" ">
+                    {drug.sideEffectContent
+                        .map((section => {
+                            return (
+                                <tr key={section.id}>
+                                    <td key={section.id}>{section.purpose}</td>
+                                    <td className="sectiontext"
+                                        dangerouslySetInnerHTML={this.createMarkup(section.text)}/>
+                                </tr>
+                            );
+                        }))
+                        .reduce((prev, curr) => [prev, curr])
+                    }
+                    </tbody>
+                </table>
+            </div>
+        )
+    }
+
+    renderallmobile(drug) {
+        if (!drug.sideEffectContent) {
+            return null;
+        }
+        return (
+            <div>
+                <input id="myInput" onKeyUp={this.searchanything.bind(this)} type="text" placeholder="Search.."
+                       className="hidden-sm hidden-md hidden-lg"/>
+                {drug.sideEffectContent
+                    .map((section => {
+                        return (
+                            <div id="myDIV" className="all_cont hidden-sm hidden-md hidden-lg ">
+                                <div key={section.id} className={section.number}>
+                                    <div className="neben_xs">
+                                        <h4>Erkrankung</h4>
+                                        <b> <span key={section.id}>{section.purpose}</span></b>
+                                        <h4>Nebenwirkung:</h4>
+                                        <span className="sectiontext"
+                                              dangerouslySetInnerHTML={this.createMarkup(section.text)}/>
                                     </div>
                                 </div>
                             </div>
@@ -1076,7 +1162,6 @@ class DrugDetail extends React.Component {
         $(".nichtbekannt_cont > .3").css("display", "none");
         $(".nichtbekannt_cont > .4").css("display", "none");
         $(".nichtbekannt_cont > .5").css("display", "none");
-
     }
 
     scrollToTop = () => {
@@ -1111,6 +1196,20 @@ class DrugDetail extends React.Component {
         }
     }
 
+
+    searchanything = () => {
+        $("#myInput").on("keyup", function () {
+            var value = $(this).val().toLowerCase();
+            $("#myDIV div").filter(function () {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+        });
+    }
+
+    windowscroll= () => {
+        window.scroll(0,300);
+    }
+
     render() {
         let that = this;
         setTimeout(function () {
@@ -1134,7 +1233,7 @@ class DrugDetail extends React.Component {
             );
         }
         return (
-            <div onload="window.scroll(0,300);">
+            <div onLoad={this.windowscroll.bind(this)}>
                 <div id="myCarousel" className="carousel carousel-fade" data-ride="carousel">
                     <div className="carousel-inner">
                         <div className="carousel-item active item_drug">
@@ -1185,33 +1284,6 @@ class DrugDetail extends React.Component {
                         </div>
                     </div>
                     {/*Button INFO ENDE*/}
-
-                    {/*Button Address*/}
-                    <div className="round-button-outer report-round-button no_animation round_address">
-                        <div id="reportBtn" className="round-button-inner-main no_animation" data-toggle="modal"
-                             data-target="#address">
-                            <FontAwesomeIcon icon={faAddressCard}/></div>
-                    </div>
-                    <div className="modal fade" id="address" tabIndex="-1" role="dialog"
-                         aria-labelledby="addressLabel"
-                         aria-hidden="true">
-                        <div className="modal-dialog" role="document">
-                            <div className="modal-content">
-                                <div className="modal-header">
-                                    <h2>Pharmazeutischer Unternehmer und Hersteller</h2>
-                                    <button type="button" className="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                                <div className="modal-body" style={{color: "black"}}>
-                                    {this.renderPackcompany(drug)}
-                                </div>
-                                <span dangerouslySetInnerHTML={this.createMarkup(t("modal_close"))}/>
-                            </div>
-                        </div>
-                    </div>
-                    {/*Button  Address ENDE*/}
-
                     {/*Button REPORT*/}
                     <div className="round-button-outer report-round-button no_animation round_nebenwirkung">
                         <div id="reportBtn" className="round-button-inner-main no_animation" data-toggle="modal"
@@ -1239,6 +1311,34 @@ class DrugDetail extends React.Component {
                         </div>
                     </div>
                     {/*Button REPORT ENDE*/}
+
+
+                    {/*Button STORE*/}
+                    <div className="round-button-outer report-round-button no_animation round_aufbewahrung">
+                        <div id="reportBtn" className="round-button-inner-main no_animation" data-toggle="modal"
+                             data-target="#aufbewahrung">
+                            <i className="fas fa-archive"></i>
+                        </div>
+                    </div>
+                    <div className="modal fade" id="aufbewahrung" tabIndex="-1" role="dialog"
+                         aria-labelledby="addressLabel"
+                         aria-hidden="true">
+                        <div className="modal-dialog" role="document">
+                            <div className="modal-content">
+                                <div className="modal-header">
+                                    <button type="button" className="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <h2>Aufbewahrung des Medikaments</h2>
+                                </div>
+                                <div className="modal-body" style={{color: "black"}}>
+                                    {this.renderPackSecaufbewahrung(drug)}
+                                </div>
+                                <span dangerouslySetInnerHTML={this.createMarkup(t("modal_close"))}/>
+                            </div>
+                        </div>
+                    </div>
+                    {/*Button STORE ENDE*/}
 
 
                     {/*Button INFO*/}
@@ -1271,10 +1371,8 @@ class DrugDetail extends React.Component {
 
                     <div className='page-header bg_grey'>
                         <div className="container  no-banner">
-                            <div className=' pull-right'>
-                                <span>v. {drug.version} | {t('publishingDate')}: {new Date(drug.year).toLocaleDateString()}</span>
-                            </div>
-                            <br/>
+
+
                             {User.isAuthenticated()
                             &&
                             <div className='btn-toolbar pull-right'>
@@ -1457,7 +1555,7 @@ class DrugDetail extends React.Component {
                                                                 <div className="row">
                                                                     <div
                                                                         className="col-sm-2 col-xs-12 xs-center"><i
-                                                                        className="druf_pack_icon fas fa-prescription-bottle-alt"></i>
+                                                                        className="drug_pack_icon fas fa-prescription-bottle-alt"></i>
                                                                     </div>
                                                                     <div className="col-sm-10 col-xs-12 xs-center"
                                                                          style={{paddingTop: "10px"}}>
@@ -1533,6 +1631,8 @@ class DrugDetail extends React.Component {
                                                     </a>
                                                 </p>
                                             </div>
+                                            <span dangerouslySetInnerHTML={this.createMarkup(t("helptext_general"))}/>
+
                                         </div>
                                         <div role="tabpanel" className="tab-pane w3-animate-opacity" id="tab2">
                                             {this.renderPackSecvor(drug)}
@@ -1545,7 +1645,7 @@ class DrugDetail extends React.Component {
                                             {this.renderPackSecdos(drug)}
                                         </div>
                                         <div role="tabpanel" className="tab-pane w3-animate-opacity" id="tab4">
-                                            <div class="row content_header">
+                                            <div className="row content_header">
                                                 <h1> Nebenwirkungen </h1>
                                                 <hr/>
                                                 <h4>Wie alle Arzneimittel kann auch dieses Arzneimittel
@@ -1556,14 +1656,14 @@ class DrugDetail extends React.Component {
 
                                                 <div className="row" style={{marginBottom: "30px"}}>
 
-                                                    <h4>Weiterhin können folgende Nebenwirkungen auftreten.
+                                                    <h4>Folgende Nebenwirkungen können auftreten:
                                                     </h4>
                                                     <p style={{fontStyle: "italic"}}> Bei der
                                                         Bewertung von Nebenwirkungen werden folgende Häufigkeitsangaben
                                                         zugrunde gelegt. Klicken Sie auf die Kachel um
                                                         Informationen zu den Nebenwikungen zu erhalten </p>
                                                     <div onClick={this.renderhide.bind(this)}
-                                                         className="col-lg-6 col-xs-12 neben_tile brightgreen"
+                                                         className="col-sm-6 col-xs-12 neben_tile brightgreen"
                                                          data-toggle="modal"
                                                          data-target="#neben_sehrhaeufig">
                                                         <h1>Sehr häufig</h1>
@@ -1571,7 +1671,7 @@ class DrugDetail extends React.Component {
                                                         </p>
                                                     </div>
                                                     <div onClick={this.renderhide.bind(this)}
-                                                         className="col-lg-6 col-xs-12  neben_tile brightgreen"
+                                                         className="col-sm-6 col-xs-12  neben_tile brightgreen"
                                                          data-toggle="modal"
                                                          data-target="#neben_haeufig">
                                                         <h1>Häufig</h1>
@@ -1579,7 +1679,7 @@ class DrugDetail extends React.Component {
                                                         </p>
                                                     </div>
                                                     <div onClick={this.renderhide.bind(this)}
-                                                         className="col-lg-6 col-xs-12  neben_tile brightyellow"
+                                                         className="col-sm-6 col-xs-12  neben_tile brightyellow"
                                                          data-toggle="modal"
                                                          data-target="#neben_gelegentlich">
                                                         <h1>Gelegentlich</h1>
@@ -1587,7 +1687,7 @@ class DrugDetail extends React.Component {
                                                         </p>
                                                     </div>
                                                     <div onClick={this.renderhide.bind(this)}
-                                                         className="col-lg-6 col-xs-12  neben_tile brightred"
+                                                         className="col-sm-6 col-xs-12  neben_tile brightred"
                                                          data-toggle="modal"
                                                          data-target="#neben_selten">
                                                         <h1>Selten</h1>
@@ -1595,7 +1695,7 @@ class DrugDetail extends React.Component {
                                                         </p>
                                                     </div>
                                                     <div onClick={this.renderhide.bind(this)}
-                                                         className="col-lg-6 col-xs-12  neben_tile brightred"
+                                                         className="col-sm-6 col-xs-12  neben_tile brightred"
                                                          data-toggle="modal"
                                                          data-target="#neben_sehrselten">
                                                         <h1>Sehr selten</h1>
@@ -1604,12 +1704,19 @@ class DrugDetail extends React.Component {
                                                         </p>
                                                     </div>
                                                     <div onClick={this.renderhide.bind(this)}
-                                                         className="col-lg-6 col-xs-12  neben_tile brightgrey"
+                                                         className="col-sm-6 col-xs-12  neben_tile brightgrey"
                                                          data-toggle="modal"
                                                          data-target="#neben_nichtbekannt">
                                                         <h1>Nicht bekannt</h1>
                                                         <p>Häufigkeit auf Grundlage der verfügbaren Daten nicht
                                                             abschätzbar
+                                                        </p>
+                                                    </div>
+                                                    <div className="col-sm-12 col-xs-12  neben_tile nebenall"
+                                                         data-toggle="modal"
+                                                         data-target="#neben_all">
+                                                        <h1>Alle Nebenwirkungen</h1>
+                                                        <p>Hier werden alle möglichen Nebenwirkungen aufgelistet
                                                         </p>
                                                     </div>
                                                 </div>
@@ -1630,7 +1737,7 @@ class DrugDetail extends React.Component {
                                                                 </h2>
                                                                 <p>Die Nebenwirkung betrifft mehr als 1 Behandelten von
                                                                     10 </p>
-                                                                <p><b>Bedeutung</b> Bei mehr als 10 % der Behandelten
+                                                                <p><b>Bedeutung</b> <br/>Bei mehr als 10 % der Behandelten
                                                                     ist die Nebenwirkung aufgetreten.
                                                                 </p>
                                                             </div>
@@ -1657,7 +1764,7 @@ class DrugDetail extends React.Component {
                                                                     Häufig </h2>
                                                                 <p>Die Nebenwirkung betrifft 1 bis 10 Behandelte von
                                                                     100 </p>
-                                                                <p><b>Bedeutung</b> Bei 1 bis 10 % der Behandelten ist
+                                                                <p><b>Bedeutung</b> <br/>Bei 1 bis 10 % der Behandelten ist
                                                                     die Nebenwirkung aufgetreten.
                                                                 </p>
                                                             </div>
@@ -1684,7 +1791,7 @@ class DrugDetail extends React.Component {
                                                                     Gelegentlich </h2>
                                                                 <p> Die Nebenwirkung betrifft 1 bis 10 Behandelte von
                                                                     1.000 </p>
-                                                                <p><b>Bedeutung</b> Bei 0,1 % bis 1 % der Behandelten
+                                                                <p><b>Bedeutung</b> <br/>Bei 0,1 % bis 1 % der Behandelten
                                                                     ist die Nebenwirkung aufgetreten.
                                                                 </p>
 
@@ -1712,7 +1819,7 @@ class DrugDetail extends React.Component {
                                                                     Selten </h2>
                                                                 <p> Die Nebenwirkung betriff 1 bis 10 Behandelte von
                                                                     10.000 </p>
-                                                                <p><b>Bedeutung</b> Bei 0,01 % bis 0,1 % der Behandelten
+                                                                <p><b>Bedeutung</b><br/> Bei 0,01 % bis 0,1 % der Behandelten
                                                                     ist die Nebenwirkung aufgetreten.
                                                                 </p>
                                                             </div>
@@ -1740,7 +1847,7 @@ class DrugDetail extends React.Component {
                                                                 </h2>
                                                                 <p> Die Nebenwirkung betrifft weniger als 1 Behandelten
                                                                     von 10.000 </p>
-                                                                <p><b>Bedeutung</b> Bei weniger als 0,01 % der
+                                                                <p><b>Bedeutung</b> <br/>Bei weniger als 0,01 % der
                                                                     Behandelten ist die Nebenwirkung aufgetreten.
                                                                 </p>
                                                             </div>
@@ -1767,7 +1874,7 @@ class DrugDetail extends React.Component {
                                                                     Nicht Bekannt </h2>
                                                                 <p> Häufigkeit auf Grundlage der verfügbaren Daten nicht
                                                                     abschätzbar </p>
-                                                                <p><b>Bedeutung</b> Es sind nur Einzelfälle bekannt,
+                                                                <p><b>Bedeutung</b> <br/> Es sind nur Einzelfälle bekannt,
                                                                     daraus kann die Häufigkeit des Auftretens nicht
                                                                     bestimmt werden.
 
@@ -1776,6 +1883,29 @@ class DrugDetail extends React.Component {
                                                             <div className="modal-body" style={{color: "black"}}>
                                                                 {this.rendernichtbekanntdesktop(drug)}
                                                                 {this.rendernichtbekanntmobile(drug)}
+                                                            </div>
+                                                            <span
+                                                                dangerouslySetInnerHTML={this.createMarkup(t("modal_close"))}/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div className="modal fade" id="neben_all" tabIndex="-1"
+                                                     role="dialog" aria-labelledby="neben_all"
+                                                     aria-hidden="true">
+                                                    <div className="modal-dialog modal-lg" role="document">
+                                                        <div className="modal-content brightgrey">
+                                                            <div className="modal-header">
+                                                                <button type="button" className="close"
+                                                                        data-dismiss="modal" aria-label="Close">
+                                                                    <span aria-hidden="true">&times;</span>
+                                                                </button>
+                                                                <h2>
+                                                                    Alle Nebenwirkungen</h2>
+                                                                <p> Hier finden Sie alle möglichen Nebenwirkungen. </p>
+                                                            </div>
+                                                            <div className="modal-body" style={{color: "black"}}>
+                                                                {this.renderalldesktop(drug)}
+                                                                {this.renderallmobile(drug)}
                                                             </div>
                                                             <span
                                                                 dangerouslySetInnerHTML={this.createMarkup(t("modal_close"))}/>
@@ -1800,10 +1930,37 @@ class DrugDetail extends React.Component {
                             </div>
                         </div>
                     </div>
-                    <div className="row xs-center backtomed">
-                        <a href="#/drug/list"> <i className="far fa-arrow-alt-circle-left"/> zurück zu den
-                            Medkamenten</a>
+                    <div className="row">
+                        <div className="col-sm-8 col-xs-12 xs-center backtomed">
+                            <a href="#/drug/list"> <i className="far fa-arrow-alt-circle-left"/> zurück zu den
+                                Medkamenten</a>
+                        </div>
+                        <div className='col-sm-4 col-xs-12 xs-center backtomed'>
+                            <span>v. {drug.version} | {t('publishingDate')}: {new Date(drug.year).toLocaleDateString()}</span> <br/>
+                                 <span className="pharmadetails" data-toggle="modal"
+                                     data-target="#address">
+                                    <FontAwesomeIcon icon={faAddressCard}/> Pharmazeutischer Unternehmer und Hersteller</span>
+                         </div>
                     </div>
+                    <div className="modal fade" id="address" tabIndex="-1" role="dialog"
+                         aria-labelledby="addressLabel"
+                         aria-hidden="true">
+                        <div className="modal-dialog" role="document">
+                            <div className="modal-content">
+                                <div className="modal-header">
+                                    <h2>Pharmazeutischer Unternehmer und Hersteller</h2>
+                                    <button type="button" className="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div className="modal-body" style={{color: "black"}}>
+                                    {this.renderPackcompany(drug)}
+                                </div>
+                                <span dangerouslySetInnerHTML={this.createMarkup(t("modal_close"))}/>
+                            </div>
+                        </div>
+                    </div>
+                    {/*Button  Address ENDE*/}
                     {this.renderWordExplaination(drug)}
                     {this.renderGoTopIcon()}
 

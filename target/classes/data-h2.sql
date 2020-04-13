@@ -1117,6 +1117,92 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
     </h1>
     <hr>
 </div>
+<h3 class="not_take"><i class="fas fa-exclamation-triangle bolt_red" aria-hidden="true"></i> <br>Metformin Lich nicht
+    einnehmen
+    bei
+</h3>
+<div class="row">
+    <div class="col-sm-6 nopadd">
+        <div class="row">
+            <div class="col-sm-12 info_notuse"><b>Allergisch </b> gegen
+                <ul>
+                    <li>Metforminhydrochlorid</li>
+                    <li>Hypromellose</li>
+                    <li>Povidon K25</li>
+                    <li>Magnesiumstearat (Ph. Eur.)</li>
+                    <li>Macrogol 6000</li>
+                    <li>Titandioxid (E 171)</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 info_notuse"> <b>Leberprobleme </b> </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 info_notuse"><b>Schwere Einschränkung der Nierenfunktion </b> (glomeruläre
+                Filtrationsrate
+                unter 30 ml/min).</div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 info_notuse"><b>Unkontrollierten Diabetes</b>
+                Beispiel mit
+                <ul>
+                    <li>schwerer Hyperglykämie (sehr hohem Blutzucker), </li>
+                    <li>Übelkeit, </li>
+                    <li>Erbrechen, </li>
+                    <li>Durchfall, </li>
+                    <li>schneller Gewichtsabnahme,</li>
+                    <li><a class="info_words" type="button" data-toggle="modal"
+                            data-target="#laktatazidose">Laktatazidose</a>
+                    </li>
+                    <li><a class="info_words" type="button" data-toggle="modal"
+                            data-target="#ketoazidose">Ketoazidose</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 info_notuse">Trinken von viel Alkohol oder Leiden unter einer
+                Alkoholvergiftung
+                leiden.</div>
+        </div>
+    </div>
+    <div class="col-sm-6 nopadd">
+        <div class="row">
+            <div class="col-sm-12 info_notuse"><b>Verlust von zu viel Körperwasser (Dehydratation) </b>
+                Beispiel durch
+                <ul>
+                    <li>lang andauernden oder starken Durchfall</li>
+                    <li>wenn Sie sich mehrmals hintereinander erbrochen
+                        haben.</li>
+                </ul>
+                Dieser Flüssigkeitsverlust könnte zu Nierenproblemen führen, wodurch Sie gefährdet
+                sind, eine Übersäuerung mit Milchsäure (<a class="info_words" type="button" data-toggle="modal"
+                    data-target="#laktatazidose">Laktatazidose</a>) zu entwickeln .
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 info_notuse"><b>Leiden an schweren Infektion </b>
+                Beispiel einer Infektion der Lunge, der Bronchien oder der Niere. </br>
+                Schwere Infektionen könnten zu Nierenproblemen führen, wodurch Sie gefährdet sind, eine
+                Übersäuerung mit
+                Milchsäure (<a class="info_words" type="button" data-toggle="modal"
+                    data-target="#laktatazidose">Laktatazidose</a>) zu
+                entwickeln.
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 info_notuse"> Behandlung wegen dekompensierter Herzschwäche oder Erleiden
+                eines
+                Herzinfarkt vor
+                Kurzem, schwere Kreislaufprobleme (wie zum Beispiel einen Schock) oder
+                Schwierigkeiten mit der Atmung haben. <br> Dies könnte zu einem Sauerstoffmangel im Gewebe
+                führen, wodurch Sie gefährdet sind, eine Übersäuerung mit Milchsäure (<a class="info_words"
+                    type="button" data-toggle="modal" data-target="#laktatazidose">Laktatazidose</a>) zu
+                entwickeln.</div>
+        </div>
+    </div>
+</div>
 <div>
     <h3 class="not_take"><i class="fas fa-user-injured bolt_grey"></i><i style="    font-size: 47px;
         " class="fas fa-comments bolt_grey"></i><i class="fas fa-user-md bolt_grey" aria-hidden="true"></i> </h3>
@@ -1351,140 +1437,102 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
         </div>
     </div>
 </div>
-<h3 class="not_take"><i class="fas fa-bolt bolt_red" aria-hidden="true"></i> <br>Metformin Lich nicht einnehmen
-    bei
-</h3>
-<div class="row">
-    <div class="col-sm-6 nopadd">
-        <div class="row">
-            <div class="col-sm-12 info_notuse"><b>Allergisch </b> gegen
-                <ul>
-                    <li>Metforminhydrochlorid</li>
-                    <li>Hypromellose</li>
-                    <li>Povidon K25</li>
-                    <li>Magnesiumstearat (Ph. Eur.)</li>
-                    <li>Macrogol 6000</li>
-                    <li>Titandioxid (E 171)</li>
-                </ul>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-12 info_notuse"> <b>Leberprobleme </b> </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-12 info_notuse"><b>Schwere Einschränkung der Nierenfunktion </b> (glomeruläre
-                Filtrationsrate
-                unter 30 ml/min).</div>
-        </div>
-        <div class="row">
-            <div class="col-sm-12 info_notuse"><b>Unkontrollierten Diabetes</b>
-                Beispiel mit
-                <ul>
-                    <li>schwerer Hyperglykämie (sehr hohem Blutzucker), </li>
-                    <li>Übelkeit, </li>
-                    <li>Erbrechen, </li>
-                    <li>Durchfall, </li>
-                    <li>schneller Gewichtsabnahme,</li>
-                    <li><a class="info_words" type="button" data-toggle="modal"
-                            data-target="#laktatazidose">Laktatazidose</a>
-                    </li>
-                    <li><a class="info_words" type="button" data-toggle="modal"
-                            data-target="#ketoazidose">Ketoazidose</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-12 info_notuse">Trinken von viel Alkohol oder Leiden unter einer
-                Alkoholvergiftung
-                leiden.</div>
-        </div>
-    </div>
-    <div class="col-sm-6 nopadd">
-        <div class="row">
-            <div class="col-sm-12 info_notuse"><b>Verlust von zu viel Körperwasser (Dehydratation) </b>
-                Beispiel durch
-                <ul>
-                    <li>lang andauernden oder starken Durchfall</li>
-                    <li>wenn Sie sich mehrmals hintereinander erbrochen
-                        haben.</li>
-                </ul>
-                Dieser Flüssigkeitsverlust könnte zu Nierenproblemen führen, wodurch Sie gefährdet
-                sind, eine Übersäuerung mit Milchsäure (<a class="info_words" type="button" data-toggle="modal"
-                    data-target="#laktatazidose">Laktatazidose</a>) zu entwickeln .
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-12 info_notuse"><b>Leiden an schweren Infektion </b>
-                Beispiel einer Infektion der Lunge, der Bronchien oder der Niere. </br>
-                Schwere Infektionen könnten zu Nierenproblemen führen, wodurch Sie gefährdet sind, eine
-                Übersäuerung mit
-                Milchsäure (<a class="info_words" type="button" data-toggle="modal"
-                    data-target="#laktatazidose">Laktatazidose</a>) zu
-                entwickeln.
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-12 info_notuse"> Behandlung wegen dekompensierter Herzschwäche oder Erleiden
-                eines
-                Herzinfarkt vor
-                Kurzem, schwere Kreislaufprobleme (wie zum Beispiel einen Schock) oder
-                Schwierigkeiten mit der Atmung haben. <br> Dies könnte zu einem Sauerstoffmangel im Gewebe
-                führen, wodurch Sie gefährdet sind, eine Übersäuerung mit Milchsäure (<a class="info_words"
-                    type="button" data-toggle="modal" data-target="#laktatazidose">Laktatazidose</a>) zu
-                entwickeln.</div>
-        </div>
-    </div>
-</div>
+
 ',11,3);
 INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic, ADDRESS) VALUES
 (92,0,'Beispieltext4',11,4,'
 <div class="row">
-    <div class="col-md-9">
-        <h3>Pharmazeutischer Unternehmer </h3>
-
-        <p> Winthrop Arzneimittel GmbH <br />
-            65927 Frankfurt am Main<br />
-        </p>
-    </div>
-    <div class="col-md-3">
-        <img class="img-responsive" src="/assets/images/company/winthrop.png" />
-    </div>
-</div>
-<div class="row">
-    <div class="col-md-9">
-        <h3>Mitvertrieb </h3>
-
-        <p> Zentiva Pharma GmbH <br />
-            65927 Frankfurt am Main<br />
-            <b>Tel.:</b> (01 80) 2 02 00 10* <br />
-            <b>Fax:</b> (01 80) 2 02 00 11* <br />
-        </p>
-    </div>
-    <div class="col-md-3">
-        <img class="img-responsive" src="/assets/images/company/zentiva.png" />
+    <h3>Pharmazeutischer Unternehmer </h3>
+    <div class="row">
+        <div class="col-md-9">
+            <div class="row">
+                <div class="col-sm-1 addressicons"><i class="fas fa-building"></i></div>
+                <div class="col-sm-11 addresstext"> Winthrop Arzneimittel GmbH</div>
+                <div class="col-sm-1 addressicons"><a target="_blank"
+                    href="https://www.google.com/maps/dir//Winthrop+Arzneimittel+GmbH,+Br%C3%BCningstra%C3%9Fe+50,+65929+Frankfurt+am+Main/@50.0952921,8.5009685,13z/data=!4m9!4m8!1m0!1m5!1m1!1s0x47bda095e911ecb7:0xb5fbe8c54559b16!2m2!1d8.5359878!2d50.0952423!3e0"><i
+                        class="fas fa-location-arrow"></i></a></div>
+                <div class="col-sm-11 addresstext"> 65927 Frankfurt am Main</div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <img class="img-responsive" src="/assets/images/company/winthrop.png" />
+        </div>
     </div>
 </div>
 <div class="row">
-    <div class="col-md-9">
-        <h3>Hersteller</h3>
-        <p> Chinoin Pharmaceutical and Chemical Works Private Co. Ltd. <br />
-            Tó Utca 1-5 <br />
-            H-1045 Budapest IV<br />
-            Ungarn
-        </p>
-        <p> Chinoin Pharmaceutical and Chemical Works Private Co. Ltd. <br />
-            5 Lévai utca<br />
-            H-2112 Veresegyhàz<br />
-            Ungarn
-        </p>
-        <p> S.C. Zentiva S.A.<br />
-            B-dul Theodor Pallady nr. 50, sector 3, <br />
-            032266 Bukarest<br />
-            Rumänien
-        </p>
+    <h3>Mitvertrieb </h3>
+    <div class="row">
+        <div class="col-md-9">
+            <div class="row">
+                <div class="col-sm-1 addressicons"><i class="fas fa-building"></i></div>
+                <div class="col-sm-11 addresstext"> Zentiva Pharma GmbH</div>
+                <div class="col-sm-1 addressicons"><a target="_blank"
+                        href="https://www.google.com/maps/dir//Zentiva+Pharma+GmbH,+Industriepark+H%C3%B6chst+Geb+703,+65926+Frankfurt+am+Main/@50.0989498,8.5116507,13z/data=!4m8!4m7!1m0!1m5!1m1!1s0x47bda0a3179e8633:0xa88e06588048d613!2m2!1d8.54667!2d50.0989"><i
+                            class="fas fa-location-arrow"></i></a></div>
+                <div class="col-sm-11 addresstext "> 65927 Frankfurt am Main</div>
+                <div class="col-sm-1 addressicons"><i class="fas fa-phone"></i></div>
+                <div class="col-sm-11 addresstext"> <a href="tel:+01802020010">(01 80) 2 02 00 10</a>
+                </div>
+                <div class="col-sm-1 addressicons"><i class="fas fa-fax"></i></div>
+                <div class="col-sm-11 addresstext"> (01 80) 2 02 00 11</div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <img class="img-responsive" src="/assets/images/company/zentiva.png" />
+        </div>
     </div>
-    <div class="col-md-3">
+</div>
+<div class="row">
+    <h3>Hersteller</h3>
+    <div class="row">
+        <div class="col-md-9">
+            <div class="row">
+                <div class="col-sm-1 addressicons"><i class="fas fa-building"></i></div>
+                <div class="col-sm-11 addresstext"> Chinoin Pharmaceutical and Chemical Works Private Co. Ltd.</div>
+                <div class="col-sm-1 addressicons"><a target="_blank"
+                        href="https://www.google.com/maps/dir//Budapest,+CHINOIN+Zrt.,+T%C3%B3+u.+1,+1045+Hungary/@47.5547176,19.0658987,13z/data=!3m1!4b1!4m9!4m8!1m0!1m5!1m1!1s0x4741da4c50f05c65:0x105b3bb5d53429df!2m2!1d19.100918!2d47.554665!3e0"><i
+                            class="fas fa-location-arrow"></i></a></div>
+                <div class="col-sm-11 addresstext"> Tó Utca 1-5 <br />
+                    H-1045 Budapest IV<br />
+                    Ungarn</div>
+            </div>
+        </div>
+        <div class="col-md-3">
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-md-9">
+            <div class="row">
+                <div class="col-sm-1 addressicons"><i class="fas fa-building"></i></div>
+                <div class="col-sm-11 addresstext"> Chinoin Pharmaceutical and Chemical Works Private Co. Ltd.</div>
+                <div class="col-sm-1 addressicons"><a target="_blank"
+                        href="https://www.google.com/maps/dir//L%C3%A9vai+u.+5,+Veresegyh%C3%A1z,+2112+Hungary/@47.6630433,19.2814932,17z/data=!4m9!4m8!1m0!1m5!1m1!1s0x4741cd954be98599:0x11594fda1621167!2m2!1d19.2836819!2d47.6630397!3e0"><i
+                            class="fas fa-location-arrow"></i></a></div>
+                <div class="col-sm-11 addresstext"> 5 Lévai utca<br />
+                    H-2112 Veresegyhàz<br />
+                    Ungarn</div>
+            </div>
+        </div>
+        <div class="col-md-3">
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-md-9">
+            <div class="row">
+                <div class="col-sm-1 addressicons"><i class="fas fa-building"></i></div>
+                <div class="col-sm-11 addresstext"> S.C. Zentiva S.A.</div>
+                <div class="col-sm-1 addressicons"><a target="_blank"
+                        href="https://www.google.com/maps/dir//Bulevardul+Theodor+Pallady+50,+Bucure%C8%99ti,+Romania/@44.4074356,26.1884463,17z/data=!4m9!4m8!1m0!1m5!1m1!1s0x40b1fc15fb0a6ef1:0x6638f157e3ba87ae!2m2!1d26.190635!2d44.4074318!3e0"><i
+                            class="fas fa-location-arrow"></i></a></div>
+                <div class="col-sm-11 addresstext"> B-dul Theodor Pallady nr. 50, sector 3, <br />
+                    032266 Bukarest<br />
+                    Rumänien</div>
+            </div>
+        </div>
+        <div class="col-md-3">
+        </div>
     </div>
 </div>
 ');
@@ -1671,7 +1719,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic)VALUES
     </div>
     <div class="row hidden-xs" style="margin-top: 30px;">
         <div class="col-sm-12">
-            <h4>Gleiche Aufteilung der Dosen</h4>
+            <h4>Gleichmäßige Aufteilung der Dosen</h4>
             <table class="sideffect_table">
                 <thead class="text-center">
                     <tr>
@@ -1731,7 +1779,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic)VALUES
     </div>
     <div class="row hidden-sm hidden-lg hidden-md" style="margin-top: 30px;">
         <div class="col-sm-12">
-            <h4>Gleiche Aufteilung der Dosen</h4>
+            <h4>Gleichmäßige Aufteilung der Dosen</h4>
             <table class="sideffect_table">
                 <thead class="text-center">
                     <tr>
@@ -1844,24 +1892,25 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic)VALUES
                 </div>
                 <div id="collapseOnee" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
                     <div class="panel-body">
-                        <p>Wenn Sie eine größere Menge von Metformin Lich eingenommen haben, als Sie
-                            sollten, kann
-                            es zu
-                            einer Übersäuerung des Blutes mit Milchsäure kommen (<a class=" info_words" type="button"
-                                data-toggle="modal" data-target="#laktatazidose">Laktatazidose</a>).
-                            <br>Wenn Sie eine größere Menge von Metformin Lich eingenommen haben, als
-                            Sie sollten,
-                            kann
-                            eine
-                            Entzündung der Bauchspeicheldrüse auftreten, die starke Bauch- und
-                            Rückenschmerzen
-                            verursacht.
-                            <br>
-                            Beenden Sie sofort die Einnahme von Metformin Lich und setzen Sie sich
-                            unverzüglich mit einem Arzt oder mit dem nächstgelegenen Krankenhaus in
-                            Verbindung.
-
-                        </p>
+                        <ul>
+                            <li>Wenn Sie eine größere Menge von Metformin Lich eingenommen haben, als Sie
+                                sollten, kann
+                                es zu
+                                einer Übersäuerung des Blutes mit Milchsäure kommen (<a class=" info_words"
+                                    type="button" data-toggle="modal" data-target="#laktatazidose">Laktatazidose</a>).
+                            </li>
+                            <li>Wenn Sie eine größere Menge von Metformin Lich eingenommen haben, als
+                                Sie sollten,
+                                kann
+                                eine
+                                Entzündung der Bauchspeicheldrüse auftreten, die starke Bauch- und
+                                Rückenschmerzen
+                                verursacht.</li>
+                            <li>
+                                Beenden Sie sofort die Einnahme von Metformin Lich und setzen Sie sich
+                                unverzüglich mit einem Arzt oder mit dem nächstgelegenen Krankenhaus in
+                                Verbindung.</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -1874,13 +1923,15 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic)VALUES
                 </div>
                 <div id="collapseTwoe" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
                     <div class="panel-body">
-                        <p>Nehmen Sie nicht die doppelte Menge ein, wenn Sie die vorherige Einnahme
-                            vergessen haben.
-                            Nehmen Sie die nächste Dosis zur vorgesehenen Zeit ein.
-                            Wenn Sie weitere Fragen zur Anwendung des Arzneimittels haben, fragen Sie
-                            Ihren Arzt
-                            oder
-                            Apotheker.</p>
+                        <ul>
+                            <li>Nehmen Sie nicht die doppelte Menge ein, wenn Sie die vorherige Einnahme
+                                vergessen haben.</li>
+                            <li> Nehmen Sie die nächste Dosis zur vorgesehenen Zeit ein.</li>
+                            <li> Wenn Sie weitere Fragen zur Anwendung des Arzneimittels haben, fragen Sie
+                                Ihren Arzt
+                                oder
+                                Apotheker.</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -1891,11 +1942,11 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic)VALUES
 ',11,5);
 INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (94,0,'
 <div class="alert alert-info" style="margin-top: 15px;">
-    Metformin Lich kann eine sehr seltent, aber sehr schwerwiegende Nebenwirkung, die sogenannte <a class=" info_words" type="button"
-    data-toggle="modal" data-target="#laktatazidose">Laktatazidose</a>,
+    Metformin Lich kann eine sehr seltent, aber sehr schwerwiegende Nebenwirkung, die sogenannte <a class=" info_words"
+        type="button" data-toggle="modal" data-target="#laktatazidose">Laktatazidose</a>,
     hervorrufen. Falls diese bei Ihnen auftritt, müssen Sie die Einnahme von Metformin Lich beenden und umgehend einen
-    Arzt oder das nächstgelegene Krankenhaus aufsuchen, da eine <a class=" info_words" type="button"
-    data-toggle="modal" data-target="#laktatazidose">Laktatazidose</a> zum Koma führen kann.
+    Arzt oder das nächstgelegene Krankenhaus aufsuchen, da eine <a class=" info_words" type="button" data-toggle="modal"
+        data-target="#laktatazidose">Laktatazidose</a> zum Koma führen kann.
     <hr>
     <h5>Nebenwirkungen für Kinder und Jugendliche <i class="fas fa-child"></i> </h5>
     Begrenzte Daten für Kinder und Jugendliche zeigten, dass die Nebenwirkungen in Art und
@@ -1978,7 +2029,6 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
 ',11,11);
 
 --Amlodipin--
-
 INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (100,0,'Beispieltext1',12,1);
 INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (101,0,'Beispieltext2',12,2);
 INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (102,0,'
@@ -1987,17 +2037,52 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
     </h1>
     <hr>
 </div>
+<h3 class="not_take"><i class="fas fa-exclamation-triangle bolt_red" aria-hidden="true"></i> <br> Amlodipin (besilat)
+    Dexcel 5 mg
+    nicht
+    einnehmen bei </h3>
+<div class="row">
+    <div class="col-sm-6 nopadd">
+        <div class="row">
+            <div class="col-sm-12 info_notuse"><b>Allergisch </b> gegen
+                <ul>
+                    <li>Amlodipin</li>
+                    <li>Mikrokristalline Cellulose</li>
+                    <li>CalciumhydrogenphosphatDihydrat</li>
+                    <li>Carboxymethylstärke-Natrium (Typ A) (Ph. Eur.)</li>
+                    <li>Magnesiumstearat (Ph.Eur.)
+                        [pflanzlich]</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 info_notuse"> <b>Leiden an stark erniedrigtem Blutdruck (Hypotonie) </b> </div>
+        </div>
+    </div>
+    <div class="col-sm-6 nopadd">
+        <div class="row">
+            <div class="col-sm-12 info_notuse"><b>Leiden an schwerer Verengung des Ausflusstraktes der linken
+                    Herzkammer</b>
+                (Aortenstenose) oder an einem <b>kardiogenen Schock</b> (dann kann Ihr Herz den Körper
+                nicht mehr mit genügend Blut versorgen)</div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 info_notuse"><b>Leiden an Herzinsuffizienz nach einem Herzinfarkt </b>
+            </div>
+        </div>
+    </div>
+</div>
 <div>
-    <h3 class="not_take"><i class="fas fa-user-injured bolt_grey"></i><i style="    font-size: 47px;
-        " class="fas fa-comments bolt_grey"></i><i class="fas fa-user-md bolt_grey" aria-hidden="true"></i> </h3>
-
-
+    <h3 class="not_take">
+        <i class="fas fa-user-injured bolt_grey"></i>
+        <i style="font-size: 47px; " class="fas fa-comments bolt_grey"></i>
+        <i class="fas fa-user-md bolt_grey" aria-hidden="true"> </i>
+    </h3>
     Bitte sprechen Sie mit Ihrem Arzt oder Apotheker, bevor Sie Amlodipin (besilat) Dexcel 5
     mg einnehmen.<br>
     Informieren Sie Ihren Arzt, wenn eine der folgenden Voraussetzungen auf Sie zutrifft oder
     einmal zutraf:
     <br><br>
-
     <div class="row">
         <div class="col-sm-6 nopadd">
             <div class="row">
@@ -2089,9 +2174,9 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
     <div class="panel panel-default">
         <div class="panel-heading">
             <h4 class="panel-title text-center-xs" data-toggle="collapse" data-target="#collapse3">
-                <img width="40" src="./../../assets/icons/10.svg" /> <span
-                    class="hidden-lg hidden-sm hidden-md"><br><br></span> Einnahme von Amlodipin zusammen mit
-                anderen Medikamente
+                <img width="40" src="./../../assets/icons/10.svg" />
+                <span class="hidden-lg hidden-sm hidden-md"><br><br>
+                </span> Einnahme von Amlodipin zusammen mit anderen Medikamente
             </h4>
         </div>
         <div id="collapse3" class="panel-collapse collapse in">
@@ -2120,10 +2205,9 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
     <div class="panel panel-default">
         <div class="panel-heading">
             <h4 class="panel-title text-center-xs" data-toggle="collapse" data-target="#collapse4">
-                <img width="40" src="./../../assets/icons/11.svg" /> <span
-                    class="hidden-lg hidden-sm hidden-md"><br><br></span> Einnahme von Amlodipin zusammen mit
-                Nahrungsmitteln und
-                Getränken
+                <img width="40" src="./../../assets/icons/11.svg" />
+                <span class="hidden-lg hidden-sm hidden-md"><br><br>
+                </span> Einnahme von Amlodipin zusammen mit Nahrungsmitteln und Getränken
             </h4>
         </div>
         <div id="collapse4" class="panel-collapse collapse">
@@ -2162,15 +2246,15 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
     <div class="panel panel-default">
         <div class="panel-heading">
             <h4 class="panel-title text-center-xs" data-toggle="collapse" data-target="#collapse6">
-                <img width="40" src="./../../assets/icons/3.svg" /><span
-                    class="hidden-lg hidden-sm hidden-md"><br><br></span>
+                <img width="40" src="./../../assets/icons/3.svg" />
+                <span class="hidden-lg hidden-sm hidden-md"><br><br>
+                </span>
                 Verkehrstüchtigkeit und Fähigkeit zum Bedienen von Maschinen
             </h4>
         </div>
         <div id="collapse6" class="panel-collapse collapse">
             <div class="panel-body">Die Fähigkeit zur aktiven Teilnahme am Straßenverkehr oder zum Bedienen von
-                Maschinen
-                kann durch Amlodipin (besilat) Dexcel 5 mg beeinträchtigt werden. Falls die Tabletten bei
+                Maschinen kann durch Amlodipin (besilat) Dexcel 5 mg beeinträchtigt werden. Falls die Tabletten bei
                 Ihnen ein Krankheitsgefühl, Schwindel oder Müdigkeit hervorrufen oder Kopfschmerzen
                 auftreten, fahren Sie kein Auto oder bedienen Sie keine Maschinen und suchen Sie
                 umgehend Ihren Arzt auf. </div>
@@ -2178,66 +2262,50 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
     </div>
 </div>
 </div>
-<h3 class="not_take"><i class="fas fa-bolt bolt_red" aria-hidden="true"></i> <br> Amlodipin (besilat) Dexcel 5 mg
-    nicht
-    einnehmen bei </h3>
-<div class="row">
-    <div class="col-sm-6 nopadd">
-        <div class="row">
-            <div class="col-sm-12 info_notuse"><b>Allergisch </b> gegen
-                <ul>
-                    <li>Amlodipin</li>
-                    <li>Mikrokristalline Cellulose</li>
-                    <li>CalciumhydrogenphosphatDihydrat</li>
-                    <li>Carboxymethylstärke-Natrium (Typ A) (Ph. Eur.)</li>
-                    <li>Magnesiumstearat (Ph.Eur.)
-                        [pflanzlich]</li>
-                </ul>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-12 info_notuse"> <b>Leiden an stark erniedrigtem Blutdruck (Hypotonie) </b> </div>
-        </div>
-    </div>
-    <div class="col-sm-6 nopadd">
-        <div class="row">
-            <div class="col-sm-12 info_notuse"><b>Leiden an schwerer Verengung des Ausflusstraktes der linken
-                    Herzkammer</b>
-                (Aortenstenose) oder an einem <b>kardiogenen Schock</b> (dann kann Ihr Herz den Körper
-                nicht mehr mit genügend Blut versorgen)</div>
-        </div>
-        <div class="row">
-            <div class="col-sm-12 info_notuse"><b>Leiden an Herzinsuffizienz nach einem Herzinfarkt </b>
-            </div>
-        </div>
-    </div>
-</div>
+
 ',12,3);
 INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic, address) VALUES (103,0,'Beispieltext',12,4, '
 <div class="row">
-    <div class="col-md-9">
-        <h3>Pharmazeutischer Unternehmer </h3>
-        <p> Dexcel Pharma GmbH <br />
-            Carl-Zeiss-Str. 2<br />
-            63755 Alzenau<br />
-            <b>Tel.:</b> 0 60 23 - 94 80 - 0 <br />
-            <b>Fax:</b> 0 60 23 - 94 80 - 50 <br />
-        </p>
-    </div>
-    <div class="col-md-3">
-        <img class="img-responsive" src="/assets/images/company/dexcel.jpeg" />
+    <h3>Pharmazeutischer Unternehmer </h3>
+    <div class="row">
+        <div class="col-md-9">
+            <div class="row">
+                <div class="col-sm-1 addressicons"><i class="fas fa-building"></i></div>
+                <div class="col-sm-11 addresstext"> Dexcel &#174; Pharma GmbH</div>
+                <div class="col-sm-1 addressicons"><a target="_blank"
+                        href="https://www.google.com/maps/dir//Dexcel%C2%AE+Pharma+GmbH,+Carl-Zeiss-Stra%C3%9Fe+2,+63755+Alzenau/@50.0906865,9.0420783,17z/data=!4m9!4m8!1m0!1m5!1m1!1s0x47bd3c3014e2cf79:0xd1bcfa9606f28314!2m2!1d9.044267!2d50.0906865!3e0"><i
+                            class="fas fa-location-arrow"></i></a></div>
+                <div class="col-sm-11 addresstext "> Carl-Zeiss-Str. 2<br />
+                    63755 Alzenau</div>
+                <div class="col-sm-1 addressicons"><i class="fas fa-phone"></i></div>
+                <div class="col-sm-11 addresstext"> <a href="tel:+0602394800">0 60 23 - 94 80 - 0</a>
+                </div>
+                <div class="col-sm-1 addressicons"><i class="fas fa-fax"></i></div>
+                <div class="col-sm-11 addresstext"> 0 60 23 - 94 80 - 50</div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <img class="img-responsive" src="/assets/images/company/dexcel.jpeg" />
+        </div>
     </div>
 </div>
 <div class="row">
-    <div class="col-md-9">
-        <h3>Hersteller </h3>
-        <p> Dexcel Pharma GmbH <br />
-            Steinbruch 2, Halle 15<br />
-            Lager im Industriepark Giesbert G.b.R. </br>
-            63755 Alzenau<br />
-        </p>
-    </div>
-    <div class="col-md-3">
+    <h3>Hersteller </h3>
+    <div class="row">
+        <div class="col-md-9">
+            <div class="row">
+                <div class="col-sm-1 addressicons"><i class="fas fa-building"></i></div>
+                <div class="col-sm-11 addresstext"> Dexcel &#174; Pharma GmbH</div>
+                <div class="col-sm-1 addressicons"><a target="_blank"
+                        href="https://www.google.com/maps/dir//Dexcel%C2%AE+Pharma+GmbH,+Carl-Zeiss-Stra%C3%9Fe+2,+63755+Alzenau/@50.0906865,9.0420783,17z/data=!4m9!4m8!1m0!1m5!1m1!1s0x47bd3c3014e2cf79:0xd1bcfa9606f28314!2m2!1d9.044267!2d50.0906865!3e0"><i
+                            class="fas fa-location-arrow"></i></a></div>
+                <div class="col-sm-11 addresstext "> Steinbruch 2, Halle 15<br />
+                    Lager im Industriepark Giesbert G.b.R. </br>
+                    63755 Alzenau</div>
+            </div>
+        </div>
+        <div class="col-md-3">
+        </div>
     </div>
 </div>');
 INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (104,0,'
@@ -2404,15 +2472,17 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                 </div>
                 <div id="collapseOne1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
                     <div class="panel-body">
-                        <p>Wenn Sie zu viele Tabletten eingenommen haben, kann Ihr Blutdruck abfallen oder auch
-                            gefährlich niedrig werden.
-                            <br>Sie können sich schwindelig, benommen und schwach fühlen
-                            oder ohnmächtig werden. Wenn der Blutdruckabfall stark genug ist, kann es zu einem
-                            Schock kommen.
-                            <br>Ihre Haut kann sich dann kalt und feucht anfühlen und Sie könnten das
-                            Bewusstsein verlieren. Begeben Sie sich sofort in medizinische Überwachung, wenn Sie zu
-                            viele Amlodipin (besilat) Dexcel Tabletten eingenommen haben.
-                        </p>
+                        <ul>
+                            <li>Wenn Sie zu viele Tabletten eingenommen haben, kann Ihr Blutdruck abfallen oder auch
+                                gefährlich niedrig werden.
+                                <br>Sie können sich schwindelig, benommen und schwach fühlen
+                                oder ohnmächtig werden.</li>
+                            <li>Wenn der Blutdruckabfall stark genug ist, kann es zu einem
+                                Schock kommen.
+                                <br>Ihre Haut kann sich dann kalt und feucht anfühlen und Sie könnten das
+                                Bewusstsein verlieren. Begeben Sie sich sofort in medizinische Überwachung, wenn Sie zu
+                                viele Amlodipin (besilat) Dexcel Tabletten eingenommen haben.</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -2533,10 +2603,8 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
 </ul>
 ',12,11);
 -- Dump tailored_text
--- Dump tailored_text
 
 --Enalapril--
-
 INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (112,0,'Beispieltext1',13,1);
 INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (113,0,'Beispieltext2',13,2);
 INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (114,0,'
@@ -2545,10 +2613,37 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
     </h1>
     <hr>
 </div>
+<h3 class="not_take"><i class="fas fa-exclamation-triangle bolt_red" aria-hidden="true"></i> <br> Enalapril AL(besilat)
+    Dexcel 5 mg
+    nicht
+    einnehmen </h3>
+<div class="row">
+    <div class="col-sm-6 nopadd">
+        <div class="row">
+            <div class="col-sm-12 info_notuse">
+                Allergie gegen Enalaprilmaleat, einen anderen ACE-Hemmer oder einen der sonstigen
+                Bestandteile, wie Croscarmellose-Natrium, Lactose-Monohydrat, Magnesiumstearat (Ph. Eur.),
+                vorverkleisterte Maisstärke, Natriumhydrogencarbonat dieses Arzneimittels sind
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 info_notuse"> Wenn bei Ihnen während einer früheren Behandlung mit einem
+                ACE-Hemmer
+                Gewebeschwellungen (angioneurotische Ödeme) auftraten wenn Sie eine vererbte Neigung zu
+                Gewebeschwellungen oder Gewebeschwellungen aus unbekannter Ursache haben (hereditäres oder
+                idiopathisches Angioödem)</div>
+        </div>
+    </div>
+    <div class="col-sm-6 nopadd">
+        <div class="row">
+            <div class="col-sm-12 info_notuse">Wenn Sie mehr als drei Monate schwanger sind. (Es wird empfohlen,
+                Enalapril AL 5mg auch in der frühen Phase der Schwangerschaft nicht anzuwenden, siehe Abschnitt
+                Schwangerschaft, Stillzeit und Zeugungs-/Gebärfähigkeit).</div>
+        </div>
+
+    </div>
+</div>
 <div>
-
-
-
     <h3 class="not_take"><i class="fas fa-user-injured bolt_grey"></i><i style="    font-size: 47px;
         " class="fas fa-comments bolt_grey"></i><i class="fas fa-user-md bolt_grey" aria-hidden="true"></i> </h3>
     Bitte sprechen Sie mit Ihrem Arzt oder Apotheker, bevor Sie enalapril-corax 5 mg einnehmen, wenn Sie an folgenden
@@ -2842,285 +2937,260 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
             </div>
         </div>
     </div>
-
-
-
     <div class="row">
-        Ihr Arzt wird gegebenenfalls Ihre Nierenfunktion, Ihren Blutdruck und die Elektrolytwerte (z.B. Kalium)
-        in Ihrem
-        Blut in regelmäßigen Abständen überprüfen.<br><br>
+        <div class="alert alert-info">
+            <h3>Weitere Hinweise </h3>
+            <ul>
+                <li> Ihr Arzt wird gegebenenfalls Ihre Nierenfunktion, Ihren Blutdruck und die Elektrolytwerte (z.B.
+                    Kalium)
+                    in Ihrem
+                    Blut in regelmäßigen Abständen überprüfen.</li>
 
-        Bitte beachten Sie, dass bei Patienten mit schwarzer Hautfarbe die Blutdrucksenkung durch ACE-Hemmer im
-        Vergleich zu Patienten mit nicht schwarzer Hautfarbe weniger stark ist.<br><br>
-
-        Teilen Sie Ihrem Arzt mit, wenn Sie vermuten, schwanger zu sein (oder schwanger werden könnten). Die
-        Einnahme
-        von Enalapril AL in der frühen Phase der Schwangerschaft wird nicht empfohlen, und Enalapril AL darf
-        nicht mehr
-        nach dem dritten Schwangerschaftsmonat eingenommen werden, da die Einnahme von Enalapril AL in diesem
-        Stadium zu
-        schweren Schädigungen Ihres ungeborenen Kindes führen kann (siehe unter Abschnitt 2.: Schwangerschaft
-        und
-        Stillzeit).<br><br>
-
-        Wenn Sie sich nicht sicher sind, ob einer oder mehrere der oben genannten Punkte auf Sie zutreffen,
-        wenden Sie
-        sich bitte an Ihren Arzt oder Apotheker, bevor Sie Enalapril AL einnehmen.<br><br>
-    </div>
-    <div class="row">
-        WENN SIE EINE BESONDERE BEHANDLUNG ERHALTEN SOLLEN:
-        <ul>
-            <li>Wenn eine der folgenden Behandlungen für Sie geplant ist, informieren Sie bitte Ihren Arzt, dass
-                Sie
-                ENALAPRIL
-                AL einnehmen:
+                <li> Bitte beachten Sie, dass bei Patienten mit schwarzer Hautfarbe die Blutdrucksenkung durch
+                    ACE-Hemmer im
+                    Vergleich zu Patienten mit nicht schwarzer Hautfarbe weniger stark ist.</li>
+            </ul>
+            <li>
+                <b> Wenn Sie eine besondere Behandlung erhalten sollen:</b>
                 <ul>
-                    <li>alle Operationen oder jeder Einsatz von Betäubungs- oder Narkosemitteln (auch beim
-                        Zahnarzt),
+                    <li>Wenn eine der folgenden Behandlungen für Sie geplant ist, informieren Sie bitte Ihren Arzt, dass
+                        Sie Enalapril-ratiopharm®
+                        AL einnehmen:
+                        <ul>
+                            <li>alle Operationen oder jeder Einsatz von Betäubungs- oder Narkosemitteln (auch beim
+                                Zahnarzt),
+                            </li>
+                            <li> eine Behandlung zur Entfernung von Cholesterin aus dem Blut, die als LDL-Apherese
+                                bezeichnet
+                                wird,
+                            </li>
+                            <li> eine Desensibilisierungsbehandlung, um das Ausmaß einer allergischen Reaktion auf
+                                Bienen- oder
+                                Wespenstiche zu
+                                vermindern.</li>
+                        </ul>
                     </li>
-                    <li> eine Behandlung zur Entfernung von Cholesterin aus dem Blut, die als LDL-Apherese
-                        bezeichnet
-                        wird,
-                    </li>
-                    <li> eine Desensibilisierungsbehandlung, um das Ausmaß einer allergischen Reaktion auf
-                        Bienen- oder
-                        Wespenstiche zu
-                        vermindern.</li>
+                    <li> Wenn eine der o. g. Behandlungen oder Eingriffe für Sie geplant ist, sprechen Sie vorher mit
+                        Ihrem
+                        Arzt oder
+                        Zahnarzt.</li>
                 </ul>
             </li>
-            <li> Wenn eine der o. g. Behandlungen oder Eingriffe für Sie geplant ist, sprechen Sie vorher mit
-                Ihrem
-                Arzt oder
-                Zahnarzt.</li>
-        </ul>
-    </div>
-</div>
-<div class="panel-group" id="accordion" style="margin: 30 0 30 0;">
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <h4 class="panel-title text-center-xs" data-toggle="collapse" data-target="#collapse3">
-                <img width="40" src="./../../assets/icons/10.svg" /> <span
-                    class="hidden-lg hidden-sm hidden-md"><br><br></span> Einnahme von Enalapril ALzusammen mit
-                anderen Medikamente
-            </h4>
         </div>
-        <div id="collapse3" class="panel-collapse collapse in">
-            <div class="panel-body">
-                Informieren Sie Ihren Arzt oder Apotheker, wenn Sie andere Arzneimittel anwenden, kürzlich
-                andere
-                Arzneimittel angewendet haben oder beabsichtigen, andere Arzneimittel anzuwenden.
-                <br><br>
-                Einige Arzneimittel können in ihrer Wirkung durch Enalapril AL beeinflusst werden, sowie auch
-                andere
-                Arzneimittel die Wirkung von Enalapril AL beeinflussen können. Daher ist es wichtig, Ihren Arzt
-                oder
-                Apotheker zu informieren, insbesondere wenn Sie eines oder mehrere der folgenden Arzneimittel
-                einnehmen
-                oder anwenden:
-                <ul>
-                    <li> andere blutdrucksenkende Arzneimittel, wie z.B. Betablocker oder harntreibende
-                        Arzneimittel
-                        (Diuretika),</li>
-                    <li> Kalium-Ergänzungsmittel oder kaliumhaltige Salzersatzstoffe, Diuretika
-                        (Wassertabletten,
-                        insbesondere jene, die als kaliumsparend bezeichnet werden), andere Arzneimittel, die
-                        den
-                        Kaliumspiegel in Ihrem Körper erhöhen können (wie Heparin und Co-Trimoxazol, auch
-                        bekannt als
-                        Trimethoprim/ Sulfamethoxazol),</li>
-                    <li> Arzneimittel zur Behandlung der Zuckerkrankheit (einschließlich blutzuckersenkender
-                        Arzneimittel zur
-                        Einnahme und Insulin),</li>
-                    <li> Lithium (Arzneimittel gegen bestimmte Depressionen),</li>
-                    <li> Arzneimittel gegen Depressionen, die als trizyklische Antidepressiva bezeichnet werden,
-                    </li>
-                    <li> Arzneimittel zur Behandlung seelischer Probleme, die als Antipsychotika bezeichnet
-                        werden,</li>
-                    <li> bestimmte Arzneimittel zur Behandlung von Husten und Erkältungen oder Arzneimittel zur
-                        Gewichtsabnahme, die einen als „Sympathomimetikum“ bezeichneten Stoff enthalten,</li>
-                    <li> bestimmte Arzneimittel zur Behandlung von Schmerzen oder Gelenkerkrankungen, darunter
-                        auch
-                        Goldpräparate,</li>
-                    <li> Acetylsalicylsäure (z.B. Aspirin),</li>
-                    <li>Arzneimittel zur Auflösung von Blutgerinnseln (Thrombolytika),</li>
-                    <li> Alkohol,</li>
-                    <li> Arzneimittel, die sehr oft zur Verhinderung einer Abstoßung des Organtransplantats
-                        verwendet
-                        werden
-                        (Sirolimus, Everolimus und andere Arzneimittel, die zur Klasse der mTORInhibitoren
-                        gehören).
-                        Siehe
-                        unter Abschnitt 2.: Warnhinweise und Vorsichtsmaßnahmen.</li>
-                </ul>
-                Ihr Arzt muss unter Umständen Ihre Dosierung anpassen und/ oder sonstige Vorsichtsmaßnahmen
-                treffen:
-                <ul>
-                    <li>
-                        wenn Sie einen Angiotensin-II-Rezeptor-AnTagonisten oder Aliskiren einnehmen (siehe
-                        unter
-                        Abschnitt 2.:
-                        „Enalapril AL darf NICHT eingenommen werden“ und „Warnhinweise und Vorsichtsmaßnahmen“).
-                    </li>
-                </ul>
-                Wenn Sie sich nicht sicher sind, ob einer oder mehrere der oben genannten Punkte auf Sie
-                zutreffen,
-                wenden Sie sich bitte an Ihren Arzt oder Apotheker, bevor Sie Enalapril AL einnehmen.
+    </div>
+    <div class="panel-group" id="accordion" style="margin: 30 0 30 0;">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title text-center-xs" data-toggle="collapse" data-target="#collapse3">
+                    <img width="40" src="./../../assets/icons/10.svg" /> <span
+                        class="hidden-lg hidden-sm hidden-md"><br><br></span> Einnahme von Enalapril ALzusammen mit
+                    anderen Medikamente
+                </h4>
+            </div>
+            <div id="collapse3" class="panel-collapse collapse in">
+                <div class="panel-body">
+                    <div class="alert alert-info">
+                        Informieren Sie Ihren Arzt oder Apotheker, wenn Sie andere Arzneimittel anwenden, kürzlich
+                        andere
+                        Arzneimittel angewendet haben oder beabsichtigen, andere Arzneimittel anzuwenden.
+                        Einige Arzneimittel können in ihrer Wirkung durch Enalapril AL beeinflusst werden, sowie auch
+                        andere
+                        Arzneimittel die Wirkung von Enalapril AL beeinflussen können.
+                    </div>
+                    <b> Daher ist es wichtig, Ihren Arzt
+                        oder
+                        Apotheker zu informieren, insbesondere wenn Sie eines oder mehrere der folgenden Arzneimittel
+                        einnehmen
+                        oder anwenden:</b>
+                    <ul>
+                        <li> andere blutdrucksenkende Arzneimittel, wie z.B. Betablocker oder harntreibende
+                            Arzneimittel
+                            (Diuretika),</li>
+                        <li> Kalium-Ergänzungsmittel oder kaliumhaltige Salzersatzstoffe, Diuretika
+                            (Wassertabletten,
+                            insbesondere jene, die als kaliumsparend bezeichnet werden), andere Arzneimittel, die
+                            den
+                            Kaliumspiegel in Ihrem Körper erhöhen können (wie Heparin und Co-Trimoxazol, auch
+                            bekannt als
+                            Trimethoprim/ Sulfamethoxazol),</li>
+                        <li> Arzneimittel zur Behandlung der Zuckerkrankheit (einschließlich blutzuckersenkender
+                            Arzneimittel zur
+                            Einnahme und Insulin),</li>
+                        <li> Lithium (Arzneimittel gegen bestimmte Depressionen),</li>
+                        <li> Arzneimittel gegen Depressionen, die als trizyklische Antidepressiva bezeichnet werden,
+                        </li>
+                        <li> Arzneimittel zur Behandlung seelischer Probleme, die als Antipsychotika bezeichnet
+                            werden,</li>
+                        <li> bestimmte Arzneimittel zur Behandlung von Husten und Erkältungen oder Arzneimittel zur
+                            Gewichtsabnahme, die einen als „Sympathomimetikum“ bezeichneten Stoff enthalten,</li>
+                        <li> bestimmte Arzneimittel zur Behandlung von Schmerzen oder Gelenkerkrankungen, darunter
+                            auch
+                            Goldpräparate,</li>
+                        <li> Acetylsalicylsäure (z.B. Aspirin),</li>
+                        <li>Arzneimittel zur Auflösung von Blutgerinnseln (Thrombolytika),</li>
+                        <li> Alkohol,</li>
+                        <li> Arzneimittel, die sehr oft zur Verhinderung einer Abstoßung des Organtransplantats
+                            verwendet
+                            werden
+                            (Sirolimus, Everolimus und andere Arzneimittel, die zur Klasse der mTORInhibitoren
+                            gehören (siehe <a href="#tab2" aria-controls="tab2" role="tab" data-toggle="tab"
+                                aria-expanded="true" data-dismiss="modal">"Warnhinweise und
+                                Vorsichtsmaßnahmen"
+                            </a>))</li>
+                    </ul>
+                    <b> Ihr Arzt muss unter Umständen Ihre Dosierung anpassen und/ oder sonstige Vorsichtsmaßnahmen
+                        treffen:</b>
+                    <ul>
+                        <li>
+                            wenn Sie einen Angiotensin-II-Rezeptor-AnTagonisten oder Aliskiren einnehmen (siehe
+                            „Enalapril AL darf NICHT eingenommen werden“ und <a href="#tab2" aria-controls="tab2"
+                                role="tab" data-toggle="tab" aria-expanded="true" data-dismiss="modal">"Warnhinweise und
+                                Vorsichtsmaßnahmen"
+                            </a>).
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <h4 class="panel-title text-center-xs" data-toggle="collapse" data-target="#collapse4">
-                <img width="40" src="./../../assets/icons/16.svg" /> <span
-                    class="hidden-lg hidden-sm hidden-md"><br><br></span> Einnahme von Enalapril ALzusammen mit
-                Nahrungsmitteln und
-                Getränken
-            </h4>
-        </div>
-        <div id="collapse4" class="panel-collapse collapse">
-            <div class="panel-body">
-                Enalapril AL kann mit oder ohne Nahrung eingenommen werden. Die meisten Patienten nehmen
-                Enalapril AL
-                mit etwas Wasser ein.
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title text-center-xs" data-toggle="collapse" data-target="#collapse4">
+                    <img width="40" src="./../../assets/icons/16.svg" /> <span
+                        class="hidden-lg hidden-sm hidden-md"><br><br></span> Einnahme von Enalapril ALzusammen mit
+                    Nahrungsmitteln und
+                    Getränken
+                </h4>
+            </div>
+            <div id="collapse4" class="panel-collapse collapse">
+                <div class="panel-body">
+                    Enalapril AL kann mit oder ohne Nahrung eingenommen werden. Die meisten Patienten nehmen
+                    Enalapril AL
+                    mit etwas Wasser ein.
+                </div>
             </div>
         </div>
-    </div>
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <h4 class="panel-title text-center-xs" data-toggle="collapse" data-target="#collapse5">
-                <img width="40" src="./../../assets/icons/8.svg" /> <span
-                    class="hidden-lg hidden-sm hidden-md"><br><br></span> Schwangerschaft und Stillzeit
-            </h4>
-        </div>
-        <div id="collapse5" class="panel-collapse collapse">
-            <div class="panel-body">
-                Wenn Sie schwanger sind oder stillen, oder wenn Sie vermuten, schwanger zu sein oder
-                beabsichtigen,
-                schwanger zu werden, fragen Sie vor der Anwendung dieses Arzneimittels Ihren Arzt oder Apotheker
-                um Rat.
-                <h4>Schwangerschaft</h4>
-                Teilen Sie Ihrem Arzt mit, wenn Sie vermuten, schwanger zu sein (oder schwanger werden könnten).
-                In der
-                Regel wird Ihr Arzt Ihnen empfehlen, Enalapril AL vor einer Schwangerschaft bzw. sobald Sie
-                wissen, dass
-                Sie schwanger sind, abzusetzen, und er wird Ihnen ein anderes Arzneimittel empfehlen. Die
-                Anwendung von
-                Enalapril AL in der frühen Schwangerschaft wird nicht empfohlen und Enalapril AL darf nicht mehr
-                nach
-                dem dritten Schwangerschaftsmonat eingenommen werden, da die Einnahme von Enalapril AL in diesem
-                Stadium
-                zu schweren Schädigungen Ihres ungeborenen Kindes führen kann.</br>
-                <h4>Stillzeit</h4>
-                Teilen sie Ihrem Arzt mit, wenn Sie stillen oder mit dem Stillen beginnen wollen. Das Stillen
-                von
-                Neugeborenen (in den ersten Wochen nach der Geburt) und besonders von Frühgeburten wird nicht
-                empfohlen,
-                wenn Sie Enalapril AL einnehmen.
-                <br>
-                Bei älteren Säuglingen sollte der Arzt Sie über Nutzen und mögliche Schäden der Anwendung von
-                ENALAPRIL
-                AL in der Stillzeit im Vergleich zu Behandlungsalternativen aufklären.
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title text-center-xs" data-toggle="collapse" data-target="#collapse5">
+                    <img width="40" src="./../../assets/icons/8.svg" /> <span
+                        class="hidden-lg hidden-sm hidden-md"><br><br></span> Schwangerschaft und Stillzeit
+                </h4>
+            </div>
+            <div id="collapse5" class="panel-collapse collapse">
+                <div class="panel-body">
+                    Wenn Sie schwanger sind oder stillen, oder wenn Sie vermuten, schwanger zu sein oder
+                    beabsichtigen,
+                    schwanger zu werden, fragen Sie vor der Anwendung dieses Arzneimittels Ihren Arzt oder Apotheker
+                    um Rat.
+                    <h4>Schwangerschaft</h4>
+                    Teilen Sie Ihrem Arzt mit, wenn Sie vermuten, schwanger zu sein (oder schwanger werden könnten).
+                    In der
+                    Regel wird Ihr Arzt Ihnen empfehlen, Enalapril AL vor einer Schwangerschaft bzw. sobald Sie
+                    wissen, dass
+                    Sie schwanger sind, abzusetzen, und er wird Ihnen ein anderes Arzneimittel empfehlen. Die
+                    Anwendung von
+                    Enalapril AL in der frühen Schwangerschaft wird nicht empfohlen und Enalapril AL darf nicht mehr
+                    nach
+                    dem dritten Schwangerschaftsmonat eingenommen werden, da die Einnahme von Enalapril AL in diesem
+                    Stadium
+                    zu schweren Schädigungen Ihres ungeborenen Kindes führen kann.</br>
+                    <h4>Stillzeit</h4>
+                    Teilen sie Ihrem Arzt mit, wenn Sie stillen oder mit dem Stillen beginnen wollen. Das Stillen
+                    von
+                    Neugeborenen (in den ersten Wochen nach der Geburt) und besonders von Frühgeburten wird nicht
+                    empfohlen,
+                    wenn Sie Enalapril AL einnehmen.
+                    <br>
+                    Bei älteren Säuglingen sollte der Arzt Sie über Nutzen und mögliche Schäden der Anwendung von
+                    ENALAPRIL
+                    AL in der Stillzeit im Vergleich zu Behandlungsalternativen aufklären.
+                </div>
             </div>
         </div>
-    </div>
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <h4 class="panel-title text-center-xs" data-toggle="collapse" data-target="#collapse6">
-                <img width="40" src="./../../assets/icons/3.svg" /><span
-                    class="hidden-lg hidden-sm hidden-md"><br><br></span>
-                Verkehrstüchtigkeit und Fähigkeit zum Bedienen von Maschinen
-            </h4>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title text-center-xs" data-toggle="collapse" data-target="#collapse6">
+                    <img width="40" src="./../../assets/icons/3.svg" /><span
+                        class="hidden-lg hidden-sm hidden-md"><br><br></span>
+                    Verkehrstüchtigkeit und Fähigkeit zum Bedienen von Maschinen
+                </h4>
+            </div>
+            <div id="collapse6" class="panel-collapse collapse">
+                <div class="panel-body">Sie können unter der Behandlung Schwindel oder Müdigkeit spüren. Wenn dies
+                    der Fall
+                    ist, sollten Sie kein Fahrzeug steuern oder Werkzeuge bzw. Maschinen bedienen. </div>
+            </div>
         </div>
-        <div id="collapse6" class="panel-collapse collapse">
-            <div class="panel-body">Sie können unter der Behandlung Schwindel oder Müdigkeit spüren. Wenn dies
-                der Fall
-                ist, sollten Sie kein Fahrzeug steuern oder Werkzeuge bzw. Maschinen bedienen. </div>
-        </div>
-    </div>
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <h4 class="panel-title text-center-xs" data-toggle="collapse" data-target="#collapse7">
-                <img width="40" src="./../../assets/icons/15.svg" /><span
-                    class="hidden-lg hidden-sm hidden-md"><br><br></span>
-                Enalapril AL enthält Lactose
-            </h4>
-        </div>
-        <div id="collapse7" class="panel-collapse collapse">
-            <div class="panel-body">Bitte nehmen Sie Enalapril AL daher erst nach Rücksprache mit Ihrem Arzt
-                ein, wenn
-                Ihnen bekannt ist, dass Sie unter einer Unverträglichkeit gegenüber bestimmten Zuckern leiden.
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title text-center-xs" data-toggle="collapse" data-target="#collapse7">
+                    <img width="40" src="./../../assets/icons/15.svg" /><span
+                        class="hidden-lg hidden-sm hidden-md"><br><br></span>
+                    Enalapril AL enthält Lactose
+                </h4>
+            </div>
+            <div id="collapse7" class="panel-collapse collapse">
+                <div class="panel-body">Bitte nehmen Sie Enalapril AL daher erst nach Rücksprache mit Ihrem Arzt
+                    ein, wenn
+                    Ihnen bekannt ist, dass Sie unter einer Unverträglichkeit gegenüber bestimmten Zuckern leiden.
 
+                </div>
             </div>
         </div>
     </div>
 </div>
-</div>
-<h3 class="not_take"><i class="fas fa-bolt bolt_red" aria-hidden="true"></i> <br> Enalapril AL(besilat) Dexcel 5 mg
-    nicht
-    einnehmen </h3>
-<div class="row">
-    <div class="col-sm-6 nopadd">
-        <div class="row">
-            <div class="col-sm-12 info_notuse">
-                Allergie gegen Enalaprilmaleat, einen anderen ACE-Hemmer oder einen der sonstigen
-                Bestandteile, wie Croscarmellose-Natrium, Lactose-Monohydrat, Magnesiumstearat (Ph. Eur.),
-                vorverkleisterte Maisstärke, Natriumhydrogencarbonat dieses Arzneimittels sind
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-12 info_notuse"> Wenn bei Ihnen während einer früheren Behandlung mit einem
-                ACE-Hemmer
-                Gewebeschwellungen (angioneurotische Ödeme) auftraten wenn Sie eine vererbte Neigung zu
-                Gewebeschwellungen oder Gewebeschwellungen aus unbekannter Ursache haben (hereditäres oder
-                idiopathisches Angioödem)</div>
-        </div>
-    </div>
-    <div class="col-sm-6 nopadd">
-        <div class="row">
-            <div class="col-sm-12 info_notuse">Wenn Sie mehr als drei Monate schwanger sind. (Es wird empfohlen,
-                Enalapril AL 5mg auch in der frühen Phase der Schwangerschaft nicht anzuwenden, siehe Abschnitt
-                Schwangerschaft, Stillzeit und Zeugungs-/Gebärfähigkeit).</div>
-        </div>
 
-    </div>
-</div>
 ',13,3);
 INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic, address) VALUES
 (115,0,'Beispieltext',13,4, '
 <div class="row">
-    <div class="col-md-9">
-        <h3>Pharmazeutischer Unternehmer </h3>
-        <p> ALIUD PHARMA® GmbH
-
-            <br />
-            Gottlieb-Daimler-Straße 19
-            <br />
-            89150 Laichingen
-            <br />
-            <b>Tel.:</b> +49 7333 9651-0<br />
-            <b>Fax:</b> +49 7333 9651-4000<br />
-            <b>E-mail:</b> info@aliud.de<br />
-            <b>Web:</b> https://www.aliud.de/<br />
-
-        </p>
-    </div>
-    <div class="col-md-3">
-        <img class="img-responsive" src="/assets/images/company/aliud_pharma.png" />
+    <h3>Pharmazeutischer Unternehmer </h3>
+    <div class="row">
+        <div class="col-md-9">
+            <div class="row">
+                <div class="col-sm-1 addressicons"><i class="fas fa-building"></i></div>
+                <div class="col-sm-11 addresstext"> ALIUD PHARMA&#174; GmbH </div>
+                <div class="col-sm-1 addressicons"><a target="_blank"
+                        href="https://www.google.com/maps/dir//ALIUD+PHARMA+GmbH,+Gottlieb-Daimler-Stra%C3%9Fe+19,+89150+Laichingen/@48.4899986,9.6696289,13z/data=!4m9!4m8!1m0!1m5!1m1!1s0x479977e01269a341:0x773bf99f29081b09!2m2!1d9.7046482!2d48.489947!3e0"><i
+                            class="fas fa-location-arrow"></i></a></div>
+                <div class="col-sm-11 addresstext ">  Gottlieb-Daimler-Straße 19
+                    <br />
+                    89150 Laichingen</div>
+                <div class="col-sm-1 addressicons"><i class="fas fa-phone"></i></div>
+                <div class="col-sm-11 addresstext"> <a href="tel:+4973339651-0">+49 7333 9651-0</a>
+                </div>
+                <div class="col-sm-1 addressicons"><i class="fas fa-fax"></i></div>
+                <div class="col-sm-11 addresstext"> +49 7333 9651-4000</div>
+                <div class="col-sm-1 addressicons"><i class="fas fa-envelope"></i></div>
+                <div class="col-sm-11 addresstext"> <a href="mailto:info@aliud.de">info@aliud.de</a>
+                    </div>
+                <div class="col-sm-1 addressicons"><i class="fas fa-globe"></i></div>
+                <div class="col-sm-11 addresstext"> <a href="https://www.aliud.de/">https://www.aliud.de/</a></div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <img class="img-responsive" src="/assets/images/company/aliud_pharma.png" />
+        </div>
     </div>
 </div>
 <div class="row">
-    <div class="col-md-9">
-        <h3>Hersteller </h3>
-        <p> STADA Arzneimittel AG
-            <br />
-            Stadastraße 2-18
-            <br />
-            61118 Bad Vilbel
-            <br />
-        </p>
-    </div>
-    <div class="col-md-3">
-        <img class="img-responsive" src="/assets/images/company/stada.png" />
+    <h3>Hersteller </h3>
+    <div class="row">
+        <div class="col-md-9">
+            <div class="row">
+                <div class="col-sm-1 addressicons"><i class="fas fa-building"></i></div>
+                <div class="col-sm-11 addresstext"> STADA Arzneimittel AG</div>
+                <div class="col-sm-1 addressicons"><a target="_blank"
+                    href="https://www.google.com/maps/dir//STADA+Arzneimittel+AG,+Stadastra%C3%9Fe+2+-+18,+61118+Bad+Vilbel/@50.2025518,8.7100077,13z/data=!4m9!4m8!1m0!1m5!1m1!1s0x47bd055e775a5881:0xb95e3aa98e269e66!2m2!1d8.745027!2d50.2025021!3e0"><i
+                        class="fas fa-location-arrow"></i></a></i></div>
+                <div class="col-sm-11 addresstext">  Stadastraße 2-18
+                    <br />
+                    61118 Bad Vilbel</div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <img class="img-responsive" src="/assets/images/company/stada.png" />
+        </div>
     </div>
 </div>');
 INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (116,0,'
@@ -3674,7 +3744,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
     und wenden Sie sich umgehend an einen Arzt, wenn Sie
     eines oder mehrere der folgenden Anzeichen bemerken:
     <ul>
-        <li>>Schwellungen an Gesicht, Lippen, Zunge oder Rachen, die
+        <li>Schwellungen an Gesicht, Lippen, Zunge oder Rachen, die
             Atem- und Schluckbeschwerden bereiten können</li>
         <li>Schwellungen an Händen, Füßen oder Knöcheln</li>
         <li>Auftreten eines Hautausschlages mit roten Quaddeln
@@ -3782,7 +3852,6 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
 ',13,11);
 
 --Salbutamol--
-
 INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (123,0,'Beispieltext1',14,1);
 INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (124,0,'Beispieltext2',14,2);
 INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (125,0,'
@@ -3790,6 +3859,29 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
     <h1>Warnhinweise und Vorsichtsmaßnahmen
     </h1>
     <hr>
+</div>
+<h3 class="not_take"><i class="fas fa-exclamation-triangle bolt_red" aria-hidden="true"></i> <br> Salbutamol
+    nicht anwenden bei </h3>
+<div class="row">
+    <div class="col-sm-6 nopadd">
+        <div class="row">
+            <div class="col-sm-12 info_notuse"><b>Allergisch </b> gegen
+                <ul>
+                    <li>Salbutamol</li>
+                    <li>Ethanol (3,9 mg/Sprühstoß)</li>
+                    <li>Norfluran (HFA-134a)</li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6 nopadd">
+        <div class="row">
+            <div class="col-sm-12 info_notuse"><b>Bei gleichzeitiger Behandlung mit Beta-Rezeptorenblockern.
+                    Beta-Rezeptorenblocker können schwere Bronchialkrämpfe
+                    auslösen.</div>
+        </div>
+    </div>
 </div>
 <div>
     <h3 class="not_take"><i class="fas fa-user-injured bolt_grey"></i><i style="font-size: 47px;
@@ -4134,67 +4226,80 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
     </div>
 </div>
 </div>
-<h3 class="not_take"><i class="fas fa-bolt bolt_red" aria-hidden="true"></i> <br> Salbutamol
-    nicht anwenden bei </h3>
-<div class="row">
-    <div class="col-sm-6 nopadd">
-        <div class="row">
-            <div class="col-sm-12 info_notuse"><b>Allergisch </b> gegen
-                <ul>
-                    <li>Salbutamol</li>
-                    <li>Ethanol (3,9 mg/Sprühstoß)</li>
-                    <li>Norfluran (HFA-134a)</li>
 
-                </ul>
-            </div>
-        </div>
-
-    </div>
-    <div class="col-sm-6 nopadd">
-        <div class="row">
-            <div class="col-sm-12 info_notuse"><b>Bei gleichzeitiger Behandlung mit Beta-Rezeptorenblockern.
-                    Beta-Rezeptorenblocker können schwere Bronchialkrämpfe
-                    auslösen.</div>
-        </div>
-
-    </div>
-</div>
 ',14,3);
 INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic, address) VALUES (126,0,'Beispieltext',14,4, '
 <div class="row">
-    <div class="col-md-9">
-        <h3>Pharmazeutischer Unternehmer </h3>
-        <p> ratiopharm GmbH <br />
-            Graf-Arco-Str. 3<br />
-            89079 Ulm<br />
-            <b>Tel.:</b> 0 60 23 - 94 80 - 0 <br />
-            <b>Fax:</b> 0 60 23 - 94 80 - 50 <br />
-        </p>
-    </div>
-    <div class="col-md-3">
-        <img class="img-responsive" src="/assets/images/company/ratiopharm.png" />
+    <h3>Pharmazeutischer Unternehmer </h3>
+    <div class="row">
+        <div class="col-md-9">
+            <div class="row">
+                <div class="col-sm-1 addressicons"><i class="fas fa-building"></i></div>
+                <div class="col-sm-11 addresstext"> ratiopharm GmbH</div>
+                <div class="col-sm-1 addressicons"><a target="_blank"
+                        href="https://www.google.com/maps/dir//ratiopharm+GmbH,+Graf-Arco-Stra%C3%9Fe+3,+89079+Ulm/@48.3601717,9.9048307,13z/data=!3m1!4b1!4m9!4m8!1m0!1m5!1m1!1s0x4799638d5ca0c72d:0x1c035547b1518d2b!2m2!1d9.93985!2d48.36012!3e0"><i
+                            class="fas fa-location-arrow"></i></a></div>
+                <div class="col-sm-11 addresstext "> Graf-Arco-Str. 3<br />
+                    89079 Ulm<br /></div>
+                <div class="col-sm-1 addressicons"><i class="fas fa-phone"></i></div>
+                <div class="col-sm-11 addresstext"> <a href="tel:+0602394800">0 60 23 - 94 80 - 0/a>
+                </div>
+                <div class="col-sm-1 addressicons"><i class="fas fa-fax"></i></div>
+                <div class="col-sm-11 addresstext"> 0 60 23 - 94 80 - 50</div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <img class="img-responsive" src="/assets/images/company/ratiopharm.png" />
+        </div>
     </div>
 </div>
 <div class="row">
-    <div class="col-md-9">
-        <h3>Hersteller </h3>
-        <p> Merckle GmbH<br />
-            Ludwig-Merckle-Str. 3<br />
-            89143 Blaubeuren<br />
-        </p>
-        <p> Norton (Waterford) Limited<br>
-            T/A Ivax Pharmaceuticals Ireland<br>
-            T/A Teva Pharmaceuticals Ireland<br />
-            Unit 301 IDA Industrial Park<br>
-            Cork Road<br />
-            Waterford<br />
-            Irland
-        </p>
+    <h3>Hersteller</h3>
+    <div class="row">
+        <div class="col-md-9">
+            <div class="row">
+                <div class="col-sm-1 addressicons"><i class="fas fa-building"></i></div>
+                <div class="col-sm-11 addresstext"> Merckle GmbH</div>
+                <div class="col-sm-1 addressicons"><a target="_blank"
+                        href="https://www.google.com/maps/dir//Budapest,+CHINOIN+Zrt.,+T%C3%B3+u.+1,+1045+Hungary/@47.5547176,19.0658987,13z/data=!3m1!4b1!4m9!4m8!1m0!1m5!1m1!1s0x4741da4c50f05c65:0x105b3bb5d53429df!2m2!1d19.100918!2d47.554665!3e0"><i
+                            class="fas fa-location-arrow"></i></a></div>
+                <div class="col-sm-11 addresstext"> Merckle GmbH<br />
+                    Ludwig-Merckle-Str. 3<br />
+                    89143 Blaubeuren</div>
+            </div>
+        </div>
+        <div class="col-md-3">
+        </div>
     </div>
-    <div class="col-md-3">
-        <img class="img-responsive" src="/assets/images/company/merkle.png" />
+    <hr>
+    <div class="row">
+        <h3>Hersteller</h3>
+        <div class="row">
+            <div class="col-md-9">
+                <div class="col-sm-1 addressicons"><i class="fas fa-building"></i></div>
+                <div class="col-sm-11 addresstext"> Norton (Waterford) Limited<br>
+                    T/A Ivax Pharmaceuticals Ireland<br>
+                    T/A Teva Pharmaceuticals Ireland<br /></div>
+            </div>
+            <div class="col-md-3">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-9">
+                <div class="col-sm-1 addressicons"><a target="_blank"
+                        href="https://www.google.com/maps/dir//Norton+(Waterford)+Limited+Unit+301+IDA+Industrial+Park/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x4842c46bde1714e5:0x87702daf31da7cd3?sa=X&ved=2ahUKEwjsreTgheboAhWJM-wKHRaTAlcQ9RcwC3oECBMQEA"><i
+                            class="fas fa-location-arrow"></i></a></div>
+                <div class="col-sm-11 addresstext"> Unit 301 IDA Industrial Park<br>
+                    Cork Road<br />
+                    Waterford<br />
+                    Irland</div>
+            </div>
+            <div class="col-md-3">
+                <img class="img-responsive" src="/assets/images/company/merkle.png" />
+            </div>
+        </div>
+    </div>
 
-    </div>
 </div>');
 INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (127,0,'
 <!--Anwendung und Dosierung-->
@@ -4577,10 +4682,19 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                             schnell und gegebenenfalls in verstärktem Umfang in
                             Erscheinung.<br><br>
                             <b>Symptome bzw. Anzeichen einer Überdosierung sind:</b><br>
-                            Herzrasen, Herzklopfen, unregelmäßiger und/oder
-                            beschleunigter Herzschlag, Ruhelosigkeit, Schlafstörungen,
-                            Brustschmerzen und heftiges Zittern insbesondere an den
-                            Händen, aber auch am ganzen Körper. Gelegentlich sind nach
+                            <ul>
+                                <li>Herzrasen</li>
+                                <li>Herzklopfen</li>
+                                <li>unregelmäßiger und/oder
+                                    beschleunigter Herzschlag</li>
+                                <li>Ruhelosigkeit</li>
+                                <li>Schlafstörungen</li>
+                                <li>
+                                    Brustschmerzen</li>
+                                <li>heftiges Zittern insbesondere an den
+                                    Händen, aber auch am ganzen Körper</li>
+                            </ul>
+                            Gelegentlich sind nach
                             exzessiven Salbutamol-Anwendungen psychotische
                             Reaktionen beobachtet worden. Weiterhin kann es zum
                             Auftreten einer Laktatazidose kommen, die sich durch eine
@@ -4643,18 +4757,22 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
     bei Fortführung der Behandlung im Verlaufe von 1 – 2 Wochen
     zurückbilden.<br><br>
     Vereinzelt ist über zentralnervös stimulierende Wirkungen
-            nach Inhalation von Salbutamol berichtet worden, die sich in
-            Übererregbarkeit, hyperaktiven Verhaltensauffälligkeiten,
-            Schlafstörungen sowie Halluzinationen äußerten. Diese
-            Beobachtungen wurden überwiegend (zu 90 %) bei Kindern
-            im Alter bis zu 12 Jahren gemacht.<br>
-            Einige der unten genannten Nebenwirkungen können unter
-            Umständen akut lebensbedrohlich sein (wie z. B. lebensbedrohliche Tachykardien). Darum sollten Sie sofort
-            einen
-            Arzt informieren, falls ein derartiges Ereignis plötzlich auftritt
-            oder sich unerwartet stark entwickelt.
+    nach Inhalation von Salbutamol berichtet worden, die sich in
+    Übererregbarkeit, hyperaktiven Verhaltensauffälligkeiten,
+    Schlafstörungen sowie Halluzinationen äußerten. Diese
+    Beobachtungen wurden überwiegend (zu 90 %) bei Kindern
+    im Alter bis zu 12 Jahren gemacht.<br>
 </div>
- ',14,6);
+<div class="alert alert-danger">
+
+    Einige der unten genannten Nebenwirkungen können unter
+    Umständen akut lebensbedrohlich sein (wie z. B. lebensbedrohliche Tachykardien). Darum sollten Sie sofort
+    einen
+    Arzt informieren, falls ein derartiges Ereignis plötzlich auftritt
+    oder sich unerwartet stark entwickelt.
+</div>
+
+',14,6);
 INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (129,0,'Beispieltext',14,7);
 INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (130,0,'
 <!-- Allgemein -->
@@ -4720,7 +4838,7 @@ von 0,09 mg Salbutamol.<br>
 
 </ul>
 ',14,11);
--- Dump tailored_text--
+-- Dump tailored_text---
 
 
 INSERT INTO tailored_text (id, idgender, iddrug, min_age, max_age, text) VALUES (1, 1, 1, 16, 30, 'Hey %firstname% %lastname%, Hier steht eine wichtige Information für Männer im Alter von %age% Jahren, die sich für dieses Medikament interessieren.<br />2 mal täglich einnehmen<br />1 Tablette morgens gegen 9:00<br />1 Tablette am Abend gegen 20:00');
