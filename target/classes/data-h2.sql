@@ -1614,7 +1614,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic)VALUES
                 </div>
                 <div class="tab-pane fade" id="tab2default">
                     <div class="row content_header" style="margin-top: 15px;">
-                        <table class="sideffect_table hidden-xs">
+                        <table class="sideffect_table ">
 
                             <tbody>
                                 <tr>
@@ -1879,7 +1879,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic)VALUES
 <div class="row content_header" style="margin-top: 30px;">
     <h1 xs-center>Weitere Informationen</h1>
     <hr />
-    <div class="col-md-12">
+    <div class="col-md-12 xs_nopadd">
         <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
             <div class="panel panel-default">
                 <div class="panel-heading head_panel" role="tab" id="headingOne">
@@ -2461,7 +2461,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
 <div class="row content_header" style="margin-top: 30px;">
     <h3 class="modal-title xs-center">Weitere Informationen</h3>
     <hr />
-    <div class="col-md-12">
+    <div class="col-md-12 xs_nopadd">
         <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
             <div class="panel panel-default">
                 <div class="panel-heading head_panel" role="tab" id="headingOne">
@@ -3677,7 +3677,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
 <div class="row content_header" style="margin-top: 30px;">
     <h3 class="modal-title xs-center">Weitere Informationen</h3>
     <hr />
-    <div class="col-md-12">
+    <div class="col-md-12 xs_nopadd">
         <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
             <div class="panel panel-default">
                 <div class="panel-heading head_panel" role="tab" id="headingOne">
@@ -4666,7 +4666,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
 <div class="row content_header" style="margin-top: 30px;">
     <h3 class="modal-title xs-center">Weitere Informationen</h3>
     <hr />
-    <div class="col-md-12">
+    <div class="col-md-12 xs_nopadd">
         <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
             <div class="panel panel-default panel_neben">
                 <div class="panel-heading head_panel" role="tab" id="headingOne">
@@ -4838,7 +4838,7 @@ von 0,09 mg Salbutamol.<br>
 
 </ul>
 ',14,11);
--- Dump tailored_text---
+-- Dump tailored_text--
 
 
 INSERT INTO tailored_text (id, idgender, iddrug, min_age, max_age, text) VALUES (1, 1, 1, 16, 30, 'Hey %firstname% %lastname%, Hier steht eine wichtige Information für Männer im Alter von %age% Jahren, die sich für dieses Medikament interessieren.<br />2 mal täglich einnehmen<br />1 Tablette morgens gegen 9:00<br />1 Tablette am Abend gegen 20:00');

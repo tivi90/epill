@@ -511,6 +511,7 @@ img.group.list-group-image {
     padding: 0px !important;
 }
 
+
 .big_btn {
     width: 100%;
     border-radius: 0 !important;
@@ -914,6 +915,9 @@ footer .glyphicon {
         text-align: center !important;
     }
 
+    .xs_nopadd {
+        padding: 0 !important;
+    }
 
     .bubble_left {
         z-index: 5;
