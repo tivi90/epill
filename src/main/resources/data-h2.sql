@@ -1449,8 +1449,8 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic, ADDRE
                 <div class="col-sm-1 addressicons"><i class="fas fa-building"></i></div>
                 <div class="col-sm-11 addresstext"> Winthrop Arzneimittel GmbH</div>
                 <div class="col-sm-1 addressicons"><a target="_blank"
-                    href="https://www.google.com/maps/dir//Winthrop+Arzneimittel+GmbH,+Br%C3%BCningstra%C3%9Fe+50,+65929+Frankfurt+am+Main/@50.0952921,8.5009685,13z/data=!4m9!4m8!1m0!1m5!1m1!1s0x47bda095e911ecb7:0xb5fbe8c54559b16!2m2!1d8.5359878!2d50.0952423!3e0"><i
-                        class="fas fa-location-arrow"></i></a></div>
+                        href="https://www.google.com/maps/dir//Winthrop+Arzneimittel+GmbH,+Br%C3%BCningstra%C3%9Fe+50,+65929+Frankfurt+am+Main/@50.0952921,8.5009685,13z/data=!4m9!4m8!1m0!1m5!1m1!1s0x47bda095e911ecb7:0xb5fbe8c54559b16!2m2!1d8.5359878!2d50.0952423!3e0"><i
+                            class="fas fa-location-arrow"></i></a></div>
                 <div class="col-sm-11 addresstext"> 65927 Frankfurt am Main</div>
             </div>
         </div>
@@ -1953,7 +1953,29 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
     Schwere jenen glichen, wie sie für Erwachsene gemeldet wurden.
 </div>
 ',11,6);
-INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (95,0,'Beispieltext7',11,7);
+INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (95,0,'
+<h3><i class="fas fa-exclamation-triangle epillcolor"></i> Hinweis</h3>
+<p>Bewahren Sie dieses Arzneimittel für Kinder unzugänglich auf. <br>Wenn Metformin - Lich
+    zur Behandlung von Kindern eingesetzt wird,
+    sollten Eltern und Betreuer die Anwendung dieses Arzneimittels überwachen.</p>
+<hr>
+<h3><i class="fas fa-archive epillcolor"></i> Lagerbedingung</h3>
+<p>Für dieses Arzneimittel sind keine besonderen
+    Lagerungsbedingungen erforderlich.</p>
+<hr>
+<h3><i class="far fa-calendar-alt epillcolor"></i> Verfallsdatum</h3>
+<p>Sie dürfen dieses Arzneimittel nach dem auf
+    dem Umkarton und der Blisterpackung nach
+    „verwendbar bis“ angegebenen Verfallsdatum
+    nicht mehr verwenden.<br> Das Verfallsdatum bezieht sich auf den letzten Tag des angegebenen
+    Monats.</p>
+<hr>
+<h3><i class="fas fa-trash-alt epillcolor"></i> Entsorgung des Medikaments</h3>
+<p>Entsorgen Sie Arzneimittel nicht im Abwasser
+    oder Haushaltsabfall.<br> Fragen Sie Ihren Apotheker, wie das Arzneimittel zu entsorgen ist, wenn
+    Sie es nicht mehr verwenden. Sie tragen damit
+    zum Schutz der Umwelt bei.</p>
+',11,7);
 INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (96,0,'
 
 <div class="row">
@@ -2544,7 +2566,23 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
 </div>
 
 ',12,6);
-INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (106,0,'Beispieltext',12,7);
+INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (106,0,'
+<h3><i class="fas fa-exclamation-triangle epillcolor"></i> Hinweis</h3>
+<p>Bewahren Sie dieses Arzneimittel für Kinder unzugänglich auf. </p>
+<hr>
+<h3><i class="fas fa-archive epillcolor"></i> Lagerbedingung</h3>
+<p><b>Nicht über 25 °C</b> lagern. <br> In der Originalverpackung aufbewahren, um den Inhalt vor Licht zu schützen.</p>
+<hr>
+<h3><i class="far fa-calendar-alt epillcolor"></i> Verfallsdatum</h3>
+<p>Sie dürfen dieses Arzneimittel nach dem auf der Blisterpackung und der Faltschachtel nach
+    < Verwendbar bis > angegebenen Verfalldatum nicht mehr verwenden. Das Verfalldatum
+    bezieht sich auf den letzten Tag des angegebenen Monats.</p>
+<hr>
+<h3><i class="fas fa-trash-alt epillcolor"></i> Entsorgung des Medikaments</h3>
+<p>Entsorgen Sie Arzneimittel nicht im Abwasser. <br>Entsorgen Sie diese im Haushaltsabfall.<br>
+    Fragen Sie Ihren Apotheker, wie das Arzneimittel zu entsorgen ist, wenn Sie es nicht mehr
+    verwenden. Sie tragen damit zum Schutz der Umwelt bei.</p>
+',12,7);
 INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (107,0,'
 <!-- Allgemein -->
 
@@ -3795,7 +3833,26 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
     </div>
 </div>
 ',13,6);
-INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (118,0,'Beispieltext',13,7);
+INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (118,0,'
+<h3><i class="fas fa-exclamation-triangle epillcolor"></i> Hinweis</h3>
+<p>Bewahren Sie dieses Arzneimittel für Kinder unzugänglich auf.</p>
+<hr>
+<h3><i class="fas fa-archive epillcolor"></i> Lagerbedingung</h3>
+<p><b>Nicht über 25 °C</b> lagern. <br> In der Originalverpackung aufbewahren, um den Inhalt vor
+    Feuchtigkeit zu schützen.</p>
+<hr>
+<h3><i class="far fa-calendar-alt epillcolor"></i> Verfallsdatum</h3>
+<p>Sie dürfen dieses Arzneimittel nach dem auf dem Umkarton
+    und den Blisterpackungen nach „Verwendbar bis“
+    angegebenen Verfalldatum nicht mehr verwenden. Das Verfalldatum bezieht sich auf den letzten Tag des angegebenen
+    Monats.</p>
+<hr>
+<h3><i class="fas fa-trash-alt epillcolor"></i> Entsorgung des Medikaments</h3>
+<p>Entsorgen Sie Arzneimittel nicht im Abwasser. <br>Fragen Sie
+    Ihren Apotheker, wie das Arzneimittel zu entsorgen ist, wenn
+    Sie es nicht mehr verwenden. Sie tragen damit zum Schutz
+    der Umwelt bei.</p>
+',13,7);
 INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (119,0,'
 <!-- Allgemein -->
 <div class="row" style="padding-left: 15px;">
@@ -4773,7 +4830,37 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
 </div>
 
 ',14,6);
-INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (129,0,'Beispieltext',14,7);
+INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (129,0,'
+<h3><i class="fas fa-exclamation-triangle epillcolor"></i> Hinweis</h3>
+<p>Bewahren Sie dieses Arzneimittel für Kinder unzugänglich auf. <br>
+    Die Schutzkappe wieder auf das Mundrohr aufsetzen, indem
+    diese bis zum Einrasten fest auf das Mundrohr gedrückt wird.</p>
+<hr>
+<h3><i class="fas fa-archive epillcolor"></i> Lagerbedingung</h3>
+<ul>
+    <li>Behälter steht unter Druck.</li>
+    <li> Nicht über 25 °C lagern.</li>
+    <li> Vor Hitze, direkter Sonneneinstrahlung und Frost schützen.<br>
+        Vor Temperaturen über 50 °C schützen.</li>
+    <li> Nicht im Kühlschrank lagern oder einfrieren.</li>
+    <li> Nicht gegen Flammen oder auf glühende Gegenstände
+        sprühen. Nicht gewaltsam öffnen oder verbrennen.</li>
+</ul>
+<hr>
+<h3><i class="far fa-calendar-alt epillcolor"></i> Verfallsdatum</h3>
+<p>Sie dürfen dieses Arzneimittel nach dem auf dem Umkarton
+    nach „Verwendbar bis“ angegebenen Verfalldatum nicht mehr
+    verwenden. Das Verfalldatum bezieht sich auf den letzten Tag
+    des angegebenen Monats.</p>
+<hr>
+<h3><i class="fas fa-trash-alt epillcolor"></i> Entsorgung des Medikaments</h3>
+<p>
+    Entsorgen Sie Arzneimittel gemäß den örtlichen Anforderungen.
+    Fragen Sie Ihren Apotheker, wie das Arzneimittel zu entsorgen
+    ist, wenn Sie es nicht mehr verwenden. Sie tragen damit zum
+    Schutz der Umwelt bei.
+</p>
+',14,7);
 INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (130,0,'
 <!-- Allgemein -->
 <div class="row" style="padding-left: 15px;">

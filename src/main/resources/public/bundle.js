@@ -46258,7 +46258,7 @@ var DrugDetail = function (_React$Component) {
                                                         { onClick: this.toggleShowAdditionalInfo },
                                                         _react2.default.createElement(
                                                             "button",
-                                                            { className: "btn btn-secondary" },
+                                                            { className: "btn btn-secondary black" },
                                                             !showAdditionalInfo && _react2.default.createElement(
                                                                 "span",
                                                                 null,

@@ -1624,7 +1624,7 @@ class DrugDetail extends React.Component {
                                             <div className="row text-center">
                                                 <p>
                                                     <a onClick={this.toggleShowAdditionalInfo}>
-                                                        <button className="btn btn-secondary">
+                                                        <button className="btn btn-secondary black">
                                                             {!showAdditionalInfo && <span>{t('viewDetails')}</span>}
                                                             {showAdditionalInfo && <span>{t('hideDetails')}</span>}
                                                         </button>
