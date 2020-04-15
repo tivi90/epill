@@ -562,11 +562,7 @@ img.group.list-group-image {
     font-size: 16px;
 }
 
-.infopart {
-    padding: 15px;
-    height: 180px;
-    color: #616161;
-}
+
 
 
 .brand-pills > li > a {
@@ -852,9 +848,7 @@ footer .glyphicon {
 }
 
 @media screen and (max-width: 768px) {
-    .col-sm-4 {
-        margin: 25px 0;
-    }
+
 
     .btn-lg {
         width: 100%;

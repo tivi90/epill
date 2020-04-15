@@ -927,6 +927,13 @@ INSERT INTO drug_word_explaination (iddrug, idword_Explaination) VALUES (12,7);
 
 INSERT INTO interaction (id, interaction) VALUES (1, 'Kann zu Durchfall führen');
 INSERT INTO interaction (id, interaction) VALUES (2, 'Kann sehr ermüdend wirken');
+INSERT INTO interaction (id, interaction) VALUES (3, 'Unterzuckerung kann erhöht werden');
+INSERT INTO interaction (id, interaction) VALUES (4, 'plötzlichem Heißhunger');
+INSERT INTO interaction (id, interaction) VALUES (5, '  Schwitzen');
+INSERT INTO interaction (id, interaction) VALUES (6, '  Zittern');
+INSERT INTO interaction (id, interaction) VALUES (7, '  Herzklopfen');
+INSERT INTO interaction (id, interaction) VALUES (8, '  Anstieg des Blutzuckerspiegels');
+
 
 
 --
@@ -4909,7 +4916,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
 ',14,9);
 INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (132,0,'
 <!--Darstellung des Medikaments-->
-
+---
 ',14,10);
 INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (133,0,'
 <!-- Wirkstoff -->

@@ -941,7 +941,7 @@ INSERT INTO interaction (id, interaction) VALUES (8, '  Anstieg des Blutzuckersp
 --
 
 INSERT INTO interaction_drug (idinteraction, iddrug) VALUES (1, 2), (1, 3), (1, 5), (2, 3);
- 
+
 --
 -- Dumping data for table `drug_interaction`
 --
@@ -4916,7 +4916,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
 ',14,9);
 INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (132,0,'
 <!--Darstellung des Medikaments-->
-
+---
 ',14,10);
 INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUES (133,0,'
 <!-- Wirkstoff -->

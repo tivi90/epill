@@ -1,7 +1,7 @@
 
 .row {
-    margin-left: 0  !important;
-    margin-right: 0  !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
 }
 
 .med_header {
@@ -52,6 +52,7 @@
     border: 1px solid #ddd;
     margin-bottom: 12px;
 }
+
 .myInput {
     background-image: url('./../../assets/images/searchicon.png');
     background-position: 10px 10px;
@@ -67,6 +68,12 @@
     font-size: 12px;
     font-style: italic;
     color: #525252;
+    margin: 30px 0px 30px 0px;
+    text-align: center;
+}
+
+.weiter_btn{
+    margin: 30px 0px 30px 0px;
 }
 
 .med_head {
@@ -113,6 +120,7 @@
     margin-bottom: 10px;
     font-size: 40px;
     height: 45px;
+    cursor: pointer;
 }
 
 .not_take {
@@ -158,7 +166,7 @@
     cursor: pointer;
 }
 
-.neben_tile:hover{
+.neben_tile:hover {
     background-color: #26a076;
     color: white;
 }
@@ -168,7 +176,17 @@
     vertical-align: middle;
     margin-top: 0;
 }
+.infopart {
+    padding: 15px;
+    height: 180px;
+    color: #616161;
+    border: 1px solid #c7c3c3;
+}
 
+.infopart:hover {
+    background-color: #0da59b;
+    color: white;
+}
 
 .img-drugform {
     width: 90%;
@@ -274,6 +292,7 @@
 .round_nebenwirkung {
     top: 37%;
 }
+
 .round_aufbewahrung {
     top: 30%;
 }
@@ -281,6 +300,7 @@
 .round_info {
     bottom: 28%;
 }
+
 .round_heart {
     bottom: 40%;
 }
@@ -321,14 +341,16 @@
     padding-left: 2px;
     color: white;
 }
-.like-round-button .like-button-inner-main{
+
+.like-round-button .like-button-inner-main {
     vertical-align: middle;
     text-align: center;
     font-size: 24px;
     padding-left: 2px;
     color: white;
 }
-.like-round-button{
+
+.like-round-button {
 
     float: right;
 
@@ -341,13 +363,13 @@
     font-size: 19px;
 }
 
-.like-button-heart{
+.like-button-heart {
     background-color: #ef6e6e;
     padding-left: 5px;
     padding-top: 6px;
 }
 
-.like-button-plus{
+.like-button-plus {
     background-color: #0da59b;
     padding-left: 5px;
     padding-top: 4px;
@@ -382,14 +404,14 @@
     cursor: pointer;
 }
 
-.addresicons{
+.addresicons {
     padding: 2px;
     text-align: center;
     margin-bottom: 10px;
     color: #0a887f;
 }
 
-.addresstext{
+.addresstext {
     margin-bottom: 10px;
 }
 
@@ -419,10 +441,10 @@
 
 .thumbnail {
     margin-bottom: 20px;
-    padding: 0 ;
+    padding: 0;
     -webkit-border-radius: 0px;
     -moz-border-radius: 0px;
-    border-radius: 0 ;
+    border-radius: 0;
 }
 
 .di > .diseases {
@@ -493,7 +515,8 @@
 .list-group-item-text {
     margin: 0 0 11px;
 }
-.mostvis_h3{
+
+.mostvis_h3 {
     margin-left: 15px;
 }
 
@@ -534,7 +557,7 @@
     margin-bottom: 15px;
 }
 
-.nebenall{
+.nebenall {
     margin-top: 30px;
 }
 
@@ -593,10 +616,10 @@
     text-align: right;
 }
 
-.pharmadetails{
+.pharmadetails {
     color: #11a59b;
     cursor: pointer;
- }
+}
 
 .panel-title[aria-expanded="true"]::after {
     content: "\f106";
@@ -604,14 +627,14 @@
 
 
 .panelinfo {
-    margin-bottom: 0  !important;
+    margin-bottom: 0 !important;
     background-color: inherit !important;
     border: none !important;
 }
 
 .panelinfo > .panel-heading-info {
     background-color: inherit !important;
-    padding: 0  !important;
+    padding: 0 !important;
 }
 
 .panel-heading-info p {
@@ -710,8 +733,9 @@
     }
 
     .infopart {
-        padding: 0;
-        height: 115px;
+
+        padding: 7px;
+        height: 150px;
     }
 
     .panel-title::after {
@@ -725,6 +749,16 @@
 
     .panel-default > .panel-heading {
         height: inherit !important;
+    }
+
+    .mob_title::after {
+        top: -7px !important;
+    }
+
+    .mob_heading{
+        padding: 15px !important;
+        height: 50px;
+        background-color: #d3d3d3bd !important;
     }
 
     .content_header h1 {
@@ -743,11 +777,11 @@
 
     .round_address {
         top: 23%;
-     }
+    }
 
     .round_nebenwirkung {
         top: 35%;
-     }
+    }
 
     .round_aufbewahrung {
         top: 45%;
@@ -769,7 +803,7 @@
     }
 
     .img-drugform {
-        width: 29%;
+        width: 65px;
         text-align: center;
         padding-bottom: 15px;
     }
@@ -783,6 +817,7 @@
     .featurette-image {
         max-width: 190px;
     }
+
     .round-button-outer1 .round-button-inner-main1 {
         width: 50px;
         height: 50px;
@@ -790,11 +825,12 @@
         padding-top: 13px;
         padding-right: 3px;
     }
+
     .report-round-button1 {
         bottom: 9%;
     }
 
-    .like-round-button{
+    .like-round-button {
         right: 4%;
         position: fixed;
         z-index: 1001;
@@ -802,12 +838,14 @@
         float: none;
 
     }
+
     .round_plus {
         bottom: 10%;
         right: 4%;
         margin-right: inherit;
     }
-    .round_heart{
+
+    .round_heart {
         bottom: 15%;
         right: 4%;
     }

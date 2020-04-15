@@ -322,20 +322,30 @@ class DrugDetail extends React.Component {
 
         const {t} = this.props;
         return (
-            <section className="diseases row" style={{cursor: "pointer"}}>
-                {drug.pharmaceuticalForm.map(pharmaceuticalForm => <img key={pharmaceuticalForm.id}
-                                                                        src={"./../../assets/p_form/" + pharmaceuticalForm.id + ".svg"}
-                                                                        className="drug-feature-icon infopic"
-                                                                        alt={pharmaceuticalForm.name}
-                                                                        title={pharmaceuticalForm.name}></img>
-                )
-                    .reduce((prev, curr) => [prev, curr])}
+            <div className="col-sm-4 col-xs-6 text-center infopart" data-toggle="modal"
+                 data-target="#drugform">
 
-                <p><b>  {t('pharmaceuticalForm') + ": "} </b></p>
-                <span>{drug.pharmaceuticalForm.map(pharmaceuticalForm => <span
-                    key={pharmaceuticalForm.id}>{pharmaceuticalForm.name} <br/> </span>)
-                    .reduce((prev, curr) => [prev, ', ', curr])}</span>
-            </section>
+                    <section className="diseases row" style={{cursor: "pointer"}}>
+                        {drug.pharmaceuticalForm.map(pharmaceuticalForm =>
+                            <img key={pharmaceuticalForm.id}
+                                 src={"./../../assets/p_form/" + pharmaceuticalForm.id + ".svg"}
+                                 className="drug-feature-icon infopic"
+                                 alt={pharmaceuticalForm.name}
+                                 title={pharmaceuticalForm.name}></img>
+                        )
+                            .reduce((prev, curr) => [prev, curr])}
+
+                        <p><b>  {t('pharmaceuticalForm') + ": "} </b></p>
+                        <span>
+                    {drug.pharmaceuticalForm.map(pharmaceuticalForm => <span
+                        key={pharmaceuticalForm.id}>{pharmaceuticalForm.name} <br/> </span>)
+                        .reduce((prev, curr) => [prev, ', ', curr])}
+                </span>
+                    </section>
+                <div style={{cursor: "pointer"}} data-toggle="modal"
+                     data-target="#drugform"><i
+                    className="fas fa-info-circle"/></div>
+            </div>
         );
     }
 
@@ -624,17 +634,20 @@ class DrugDetail extends React.Component {
         if (!drug.packagingSection) {
             return null;
         }
-
-        return drug.packagingSection
-            .filter(section => {
-                return section.topic.id === 8
-            })
-            .map((section => {
-                return (
-                    <p key={section.id}><span dangerouslySetInnerHTML={this.createMarkup(section.text)}/>
-                    </p>
-                );
-            })).reduce((prev, curr) => [prev, curr]);
+        return (<div>
+            <h1>Allgemeine Informationen</h1>
+            <hr/>
+            {drug.packagingSection
+                .filter(section => {
+                    return section.topic.id === 8
+                })
+                .map((section => {
+                    return (
+                        <p key={section.id}><span dangerouslySetInnerHTML={this.createMarkup(section.text)}/>
+                        </p>
+                    )
+                })).reduce((prev, curr) => [prev, curr])
+            } </div>)
     }
 
     renderPackSecvor(drug) {
@@ -676,16 +689,85 @@ class DrugDetail extends React.Component {
             return null;
         }
 
-        return drug.packagingSection
-            .filter(section => {
-                return section.topic.id === 6
-            })
-            .map((section => {
-                return (
-                    <p key={section.id}><span dangerouslySetInnerHTML={this.createMarkup(section.text)}/>
-                    </p>
-                );
-            })).reduce((prev, curr) => [prev, curr]);
+        return (
+            <div>
+                {drug.packagingSection
+                    .filter(section => {
+                        return section.topic.id === 6
+                    })
+                    .map((section => {
+                        return (
+                            <p key={section.id}><span dangerouslySetInnerHTML={this.createMarkup(section.text)}/>
+                            </p>
+                        );
+                    })).reduce((prev, curr) => [prev, curr])}
+                <div className="row" style={{marginBottom: "30px"}}>
+                    <h4>Folgende Nebenwirkungen können auftreten:
+                    </h4>
+                    <p style={{fontStyle: "italic"}}> Bei der
+                        Bewertung von Nebenwirkungen werden folgende Häufigkeitsangaben
+                        zugrunde gelegt. Klicken Sie auf die Kachel um
+                        Informationen zu den Nebenwikungen zu erhalten </p>
+                    <div onClick={this.renderhide.bind(this)}
+                         className="col-sm-6 col-xs-12 neben_tile brightgreen"
+                         data-toggle="modal"
+                         data-target="#neben_sehrhaeufig">
+                        <h1>Sehr häufig</h1>
+                        <p>Die Nebenwirkung betrifft mehr als 1 Behandelten von 10
+                        </p>
+                    </div>
+                    <div onClick={this.renderhide.bind(this)}
+                         className="col-sm-6 col-xs-12  neben_tile brightgreen"
+                         data-toggle="modal"
+                         data-target="#neben_haeufig">
+                        <h1>Häufig</h1>
+                        <p>Die Nebenwirkung betrifft 1 bis 10 Behandelte von 100
+                        </p>
+                    </div>
+                    <div onClick={this.renderhide.bind(this)}
+                         className="col-sm-6 col-xs-12  neben_tile brightyellow"
+                         data-toggle="modal"
+                         data-target="#neben_gelegentlich">
+                        <h1>Gelegentlich</h1>
+                        <p>Die Nebenwirkung betrifft 1 bis 10 Behandelte von 1.000
+                        </p>
+                    </div>
+                    <div onClick={this.renderhide.bind(this)}
+                         className="col-sm-6 col-xs-12  neben_tile brightred"
+                         data-toggle="modal"
+                         data-target="#neben_selten">
+                        <h1>Selten</h1>
+                        <p>Die Nebenwirkung betrifft 1 bis 10 Behandelte von 10.000
+                        </p>
+                    </div>
+                    <div onClick={this.renderhide.bind(this)}
+                         className="col-sm-6 col-xs-12  neben_tile brightred"
+                         data-toggle="modal"
+                         data-target="#neben_sehrselten">
+                        <h1>Sehr selten</h1>
+                        <p>Die Nebenwirkung betrifft weniger als 1 Behandelten von
+                            10.000
+                        </p>
+                    </div>
+                    <div onClick={this.renderhide.bind(this)}
+                         className="col-sm-6 col-xs-12  neben_tile brightgrey"
+                         data-toggle="modal"
+                         data-target="#neben_nichtbekannt">
+                        <h1>Nicht bekannt</h1>
+                        <p>Häufigkeit auf Grundlage der verfügbaren Daten nicht
+                            abschätzbar
+                        </p>
+                    </div>
+                    <div className="col-sm-12 col-xs-12  neben_tile nebenall"
+                         data-toggle="modal"
+                         data-target="#neben_all">
+                        <h1>Alle Nebenwirkungen</h1>
+                        <p>Hier werden alle möglichen Nebenwirkungen aufgelistet
+                        </p>
+                    </div>
+                </div>
+            </div>
+        )
     }
 
     renderPackSecpack(drug) {
@@ -1073,7 +1155,7 @@ class DrugDetail extends React.Component {
         return (
             <div>
 
-                <input type="text"  id="search" placeholder="Suche"
+                <input type="text" id="search" placeholder="Suche"
                        className="hidden-xs myInput"/>
                 <table id="table" className="sideffect_table hidden-xs">
                     <thead>
@@ -1206,11 +1288,11 @@ class DrugDetail extends React.Component {
         });
     }
 
-    windowscroll= () => {
-        window.scroll(0,300);
+    windowscroll = () => {
+        window.scroll(0, 300);
     }
 
-      render() {
+    render() {
         let that = this;
         setTimeout(function () {
             that.setState({timePassed: true})
@@ -1365,33 +1447,30 @@ class DrugDetail extends React.Component {
                             </div>
                         </div>
                     </div>
-
                     {/*Button INFO ENDE*/}
 
 
                     <div className='page-header bg_grey'>
                         <div className="container  no-banner">
-
-
                             {User.isAuthenticated()
                             &&
                             <div>
-                            <div className="like-button-outer1 like-round-button round_heart">
+                                <div className="like-button-outer1 like-round-button round_heart">
                                     <div type="button" className="like-button-inner-main1 like-button-heart"
-                                            onClick={() => this.toggleTaking(drug)}>
+                                         onClick={() => this.toggleTaking(drug)}>
                                         <span
                                             className={" white" + ((!drug.isTaken) ? " far fa-heart" : " fas fa-heart")}/>
                                     </div>
-                            </div>
+                                </div>
                                 <div className="like-button-outer1 like-round-button round_plus">
 
-                                <div type="button" className="like-button-inner-main1 like-button-plus"
-                                            onClick={() => this.toggleRemember(drug)}>
+                                    <div type="button" className="like-button-inner-main1 like-button-plus"
+                                         onClick={() => this.toggleRemember(drug)}>
                                         <span
                                             className={"glyphicon white" + ((!drug.isRemembered) ? " glyphicon-plus" : " glyphicon-minus")}/>
                                     </div>
-                            </div>                            </div>
-
+                                </div>
+                            </div>
                             }
                             {/*<h3>{drug.name} {drug.productGroup && drug.productGroup.name && <span className="text-muted">{drug.productGroup.name}</span> }</h3>*/}
 
@@ -1427,60 +1506,140 @@ class DrugDetail extends React.Component {
                                             <div style={{cursor: "pointer"}} data-toggle="modal"
                                                  data-target="#infoicons"><i
                                                 className="fas fa-info-circle"/></div>
-                                            <div className="modal fade" id="infoicons" tabIndex="-1" role="dialog"
-                                                 aria-labelledby="addressLabel"
-                                                 aria-hidden="true">
-                                                <div className="modal-dialog" role="document">
-                                                    <div className="modal-content">
-                                                        <div className="modal-header">
-                                                            <button type="button" className="close"
-                                                                    data-dismiss="modal"
-                                                                    aria-label="Close">
-                                                                <span aria-hidden="true">&times;</span>
-                                                            </button>
-                                                            <h2> Was bedeuten die Symbole?
-                                                            </h2>
+
+                                        </div>
+                                    </div>
+                                    <div className="row tab_headers  hidden-lg hidden-md hidden-sm">
+                                        <div className="panel-group" id="accordion">
+                                            <div className="panel panel-default">
+                                                <div className="panel-heading mob_heading">
+                                                    <h4 className="panel-title text-center-xs mob_title" data-toggle="collapse"
+                                                        data-target="#mobile_tab1">
+                 <span className="hidden-lg hidden-sm hidden-md">
+                </span> Allgemeine Informationen
+                                                    </h4>
+                                                </div>
+                                                <div id="mobile_tab1" className="panel-collapse collapse ">
+                                                    <div className="panel-body">
+                                                        <div className="row content_header">
+                                                            {this.renderPackSecdesc(drug)}
                                                         </div>
-                                                        <div className="modal-body" style={{color: "black"}}>
-                                                            {drug.drugFeature.map(feature =>
-                                                                    <div className="row">
-                                                                        <div className="col-sm-1 col-xs-12">
-                                                                            <img key={feature.id}
-                                                                                 src={"./../../assets/icons/" + feature.id + ".svg"}
-                                                                                 alt={feature.drugFeature}
-                                                                                 title={feature.drugFeature}
-                                                                                 className="drug-feature-icon icon_page"/>
-                                                                        </div>
-                                                                        <div
-                                                                            className="col-sm-11 col-xs-12 drug-feature-title">
-                                        <span className="drug-feature-title"
-                                              key={feature.id}>{feature.drugFeature}</span>
-                                                                        </div>
-                                                                    </div>
-                                                            ).reduce((prev, curr) => [prev, ', ', curr])}
-                                                            <div className="row">
-                                                                Weitere Informationen finden Sie unter der Rubrik <a
-                                                                href="#tab2" aria-controls="tab2" role="tab"
-                                                                data-toggle="tab" aria-expanded="true"
-                                                                data-dismiss="modal">Warnhinweise und
-                                                                Vorsichtsmaßnahmen
-                                                            </a></div>
+                                                        <div className="row">
+                                                                <span dangerouslySetInnerHTML={this.createMarkup(t("helptext_general"))}/>
+
+                                                            {this.renderPharmaceuticalForm(drug)}
+                                                            <div className="col-sm-4 col-xs-6 text-center infopart">
+                                                                {this.renderDisease(drug)}
+                                                            </div>
+                                                            <div className="col-sm-4 col-xs-6 text-center infopart" data-toggle="modal"
+                                                                 data-target="#infosubstance">
+                                                                {this.renderActiveSubstance(drug)}
+                                                                <div style={{cursor: "pointer"}} data-toggle="modal"
+                                                                     data-target="#infosubstance"><i
+                                                                    className="fas fa-info-circle"/></div>
+                                                            </div>
+                                                            {showAdditionalInfo &&
+                                                            <div className="">
+                                                                <div className="additional-information">
+                                                                    <section>
+                                                                        {this.renderIndicationGroup(drug)}
+                                                                        {this.renderProductGroup(drug)}
+                                                                        {this.renderPZN(drug)}
+                                                                    </section>
+                                                                </div>
+                                                            </div>}
                                                         </div>
-                                                        <span
-                                                            dangerouslySetInnerHTML={this.createMarkup(t("modal_close"))}/>
+                                                        <div className="row text-center">
+                                                            <p>
+                                                                <a onClick={this.toggleShowAdditionalInfo}>
+                                                                    <button className="btn btn-secondary black weiter_btn">
+                                                                        {!showAdditionalInfo &&
+                                                                        <span>{t('viewDetails')}</span>}
+                                                                        {showAdditionalInfo &&
+                                                                        <span>{t('hideDetails')}</span>}
+                                                                    </button>
+                                                                </a>
+                                                            </p>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="panel panel-default">
+                                                <div className="panel-heading mob_heading">
+                                                    <h4 className="panel-title mob_title text-center-xs" data-toggle="collapse"
+                                                        data-target="#mobile_tab2">
+                 <span className="hidden-lg hidden-sm hidden-md">
+                </span> Vor der Anwendung
+                                                    </h4>
+                                                </div>
+                                                <div id="mobile_tab2" className="panel-collapse collapse ">
+                                                    <div className="panel-body">
+                                                        {this.renderPackSecvor(drug)}
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="panel panel-default">
+                                                <div className="panel-heading mob_heading">
+                                                    <h4 className="panel-title mob_title text-center-xs" data-toggle="collapse"
+                                                        data-target="#mobile_tab3">
+                 <span className="hidden-lg hidden-sm hidden-md">
+                </span> Anwendung
+                                                    </h4>
+                                                </div>
+                                                <div id="mobile_tab3" className="panel-collapse collapse ">
+                                                    <div className="panel-body">
+                                                        <div className="row content_header">
+                                                            <h1>Dosierung und Anwendung</h1>
+                                                            <hr/>
+                                                        </div>
+                                                        {this.renderPackSecdos(drug)}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="panel panel-default">
+                                                <div className="panel-heading mob_heading">
+                                                    <h4 className="panel-title mob_title text-center-xs" data-toggle="collapse"
+                                                        data-target="#mobile_tab4">
+                 <span className="hidden-lg hidden-sm hidden-md">
+                </span> Nebenwirkungen
+                                                    </h4>
+                                                </div>
+                                                <div id="mobile_tab4" className="panel-collapse collapse ">
+                                                    <div className="panel-body">
+                                                        <div className="row content_header">
+                                                            <h1> Nebenwirkungen </h1>
+                                                            <hr/>
+                                                            <h4>Wie alle Arzneimittel kann auch dieses Arzneimittel
+                                                                Nebenwirkungen
+                                                                haben, die aber nicht
+                                                                bei jedem auftreten müssen.</h4>
+                                                            {this.renderPackSecneben(drug)}
+                                                            {/*Button REPORT*/}
+                                                            <div className="text-right">
+                                                                <button type="button"
+                                                                        className="btn btn-success neben_button"
+                                                                        data-toggle="modal"
+                                                                        data-target="#melden">Meldung von Nebenwirkungen
+                                                                    <i className="fas fa-comment-medical"
+                                                                       style={{marginLeft: "15px"}}/>
+                                                                </button>
+                                                            </div>
+                                                            {/*Button REPORT ENDE*/}
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-
-                                    <div className="row tab_headers nomargin">
-                                        <ul className="nav nav-pills brand-pills nav-stacked" role="tablist">
+                                    <div>
+                                        <ul className="nav nav-pills brand-pills nav-stacked hidden-xs" role="tablist">
                                             <li role="presentation" className="brand-nav active">
                                                 <a href="#tab1"
                                                    aria-controls="tab1"
                                                    role="tab"
-                                                   data-toggle="tab" >Allgemeine
+                                                   data-toggle="tab">Allgemeine
                                                     Informationen</a></li>
                                             <div id="arrow-down">
                                                 <FontAwesomeIcon icon={faChevronDown}/>
@@ -1489,7 +1648,7 @@ class DrugDetail extends React.Component {
                                                 <a href="#tab2"
                                                    aria-controls="tab2"
                                                    role="tab"
-                                                   data-toggle="tab" >Vor der
+                                                   data-toggle="tab">Vor der
                                                     Anwendung </a></li>
                                             <div id="arrow-down">
                                                 <FontAwesomeIcon icon={faChevronDown}/>
@@ -1498,7 +1657,7 @@ class DrugDetail extends React.Component {
                                                 <a href="#tab3"
                                                    aria-controls="tab3"
                                                    role="tab"
-                                                   data-toggle="tab" >Anwendung</a>
+                                                   data-toggle="tab">Anwendung</a>
                                             </li>
                                             <div id="arrow-down">
                                                 <FontAwesomeIcon icon={faChevronDown}/>
@@ -1507,110 +1666,31 @@ class DrugDetail extends React.Component {
                                                 <a href="#tab4"
                                                    aria-controls="tab4"
                                                    role="tab"
-                                                   data-toggle="tab" >Nebenwirkungen
+                                                   data-toggle="tab">Nebenwirkungen
                                                 </a></li>
                                         </ul>
                                     </div>
                                 </div>
-                                <div className="col-xs-12 col-sm-12 col-md-9 infobox">
+                                <div className="col-xs-12 col-sm-12 col-md-9 hidden-xs infobox">
                                     <div className="tab-content">
                                         <div role="tabpanel" className="tab-pane active w3-animate-opacity tab1"
                                              id="tab1" name="tab1">
                                             <div className="row content_header">
-                                                <h1>Allgemeine Informationen</h1>
-                                                <hr/>
                                                 {this.renderPackSecdesc(drug)}
-
                                             </div>
                                             <div className="row">
-                                                <div className="col-sm-4 col-xs-6 text-center infopart">
-                                                    <div data-toggle="modal"
-                                                         data-target="#drugform">
-                                                        {this.renderPharmaceuticalForm(drug)}
-                                                    </div>
-                                                    <div style={{cursor: "pointer"}} data-toggle="modal"
-                                                         data-target="#drugform"><i
-                                                        className="fas fa-info-circle"/></div>
-                                                </div>
+                                                    <span dangerouslySetInnerHTML={this.createMarkup(t("helptext_general"))}/>
 
-                                                <div className="modal fade" id="drugform" tabIndex="-1"
-                                                     role="dialog"
-                                                     aria-labelledby="addressLabel"
-                                                     aria-hidden="true">
-                                                    <div className="modal-dialog" role="document">
-                                                        <div className="modal-content">
-                                                            <div className="modal-header">
-                                                                <button type="button" className="close"
-                                                                        data-dismiss="modal" aria-label="Close">
-                                                                    <span aria-hidden="true">&times;</span>
-                                                                </button>
-                                                                <h2>Inhalt und Darstellung des
-                                                                    Medikaments</h2>
-                                                            </div>
-                                                            <div className="modal-body" style={{color: "black"}}>
-                                                                <div className="row">
-                                                                    <div
-                                                                        className="col-sm-2 col-xs-12 xs-center">{this.renderFormImg(drug)}</div>
-                                                                    <div className="col-sm-10 col-xs-12 xs-center">
-                                                                        {this.renderFormdesc(drug)}
-                                                                    </div>
-                                                                </div>
-                                                                <div className="row">
-                                                                    <div
-                                                                        className="col-sm-2 col-xs-12 xs-center"><i
-                                                                        className="drug_pack_icon fas fa-prescription-bottle-alt"></i>
-                                                                    </div>
-                                                                    <div className="col-sm-10 col-xs-12 xs-center"
-                                                                         style={{paddingTop: "10px"}}>
-                                                                        {this.renderPackSecpack(drug)}
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <span
-                                                                dangerouslySetInnerHTML={this.createMarkup(t("modal_close"))}/>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                                {this.renderPharmaceuticalForm(drug)}
                                                 <div className="col-sm-4 col-xs-6 text-center infopart">
                                                     {this.renderDisease(drug)}
                                                 </div>
-                                                <div className="col-sm-4 col-xs-6 text-center infopart">
+                                                <div className="col-sm-4 col-xs-6 text-center infopart" data-toggle="modal"
+                                                     data-target="#infosubstance">
                                                     {this.renderActiveSubstance(drug)}
                                                     <div style={{cursor: "pointer"}} data-toggle="modal"
                                                          data-target="#infosubstance"><i
                                                         className="fas fa-info-circle"/></div>
-                                                </div>
-                                                <div className="modal fade" id="infosubstance" tabIndex="-1"
-                                                     role="dialog"
-                                                     aria-labelledby="addressLabel"
-                                                     aria-hidden="true">
-                                                    <div className="modal-dialog" role="document">
-                                                        <div className="modal-content">
-                                                            <div className="modal-header">
-                                                                <button type="button" className="close"
-                                                                        data-dismiss="modal"
-                                                                        aria-label="Close">
-                                                                    <span aria-hidden="true">&times;</span>
-                                                                </button>
-                                                                {drug.activeSubstance.map(substance =>
-                                                                    <h2 key={substance.id}><img
-                                                                        src={"./../../assets/images/lab.svg"}
-                                                                        className="infopic"
-                                                                        alt={"lab"}/> {substance.name}
-                                                                    </h2>)
-                                                                    .reduce((prev, curr) => [prev, ', ', curr])}
-                                                            </div>
-                                                            <div className="modal-body" style={{color: "black"}}>
-            <span> {drug.activeSubstance.map(substance =>
-                <span
-                    key={substance.id}>{substance.name} ist ein Arzneistoff aus der Gruppe der sogenannten {substance.substanceGroup.name}.</span>)
-                .reduce((prev, curr) => [prev, ', ', curr])} </span>
-                                                                {this.renderPackSecMoreSub(drug)}
-                                                            </div>
-                                                            <span
-                                                                dangerouslySetInnerHTML={this.createMarkup(t("modal_close"))}/>
-                                                        </div>
-                                                    </div>
                                                 </div>
                                                 {showAdditionalInfo &&
                                                 <div className="">
@@ -1623,31 +1703,31 @@ class DrugDetail extends React.Component {
                                                     </div>
                                                 </div>}
                                             </div>
-
                                             <div className="row text-center">
                                                 <p>
                                                     <a onClick={this.toggleShowAdditionalInfo}>
-                                                        <button className="btn btn-secondary black">
+                                                        <button className="btn btn-secondary black weiter_btn">
                                                             {!showAdditionalInfo && <span>{t('viewDetails')}</span>}
                                                             {showAdditionalInfo && <span>{t('hideDetails')}</span>}
                                                         </button>
                                                     </a>
                                                 </p>
                                             </div>
-                                            <span dangerouslySetInnerHTML={this.createMarkup(t("helptext_general"))}/>
-
                                         </div>
-                                        <div role="tabpanel" className="tab-pane w3-animate-opacity" id="tab2" name="tab2">
+                                        <div role="tabpanel" className="tab-pane w3-animate-opacity" id="tab2"
+                                             name="tab2">
                                             {this.renderPackSecvor(drug)}
                                         </div>
-                                        <div role="tabpanel" className="tab-pane w3-animate-opacity" id="tab3" name="tab3">
+                                        <div role="tabpanel" className="tab-pane w3-animate-opacity" id="tab3"
+                                             name="tab3">
                                             <div className="row content_header">
                                                 <h1>Dosierung und Anwendung</h1>
                                                 <hr/>
                                             </div>
                                             {this.renderPackSecdos(drug)}
                                         </div>
-                                        <div role="tabpanel" className="tab-pane w3-animate-opacity" id="tab4" name="tab4">
+                                        <div role="tabpanel" className="tab-pane w3-animate-opacity" id="tab4"
+                                             name="tab4">
                                             <div className="row content_header">
                                                 <h1> Nebenwirkungen </h1>
                                                 <hr/>
@@ -1657,264 +1737,6 @@ class DrugDetail extends React.Component {
                                                     bei jedem auftreten müssen.</h4>
                                                 {this.renderPackSecneben(drug)}
 
-                                                <div className="row" style={{marginBottom: "30px"}}>
-
-                                                    <h4>Folgende Nebenwirkungen können auftreten:
-                                                    </h4>
-                                                    <p style={{fontStyle: "italic"}}> Bei der
-                                                        Bewertung von Nebenwirkungen werden folgende Häufigkeitsangaben
-                                                        zugrunde gelegt. Klicken Sie auf die Kachel um
-                                                        Informationen zu den Nebenwikungen zu erhalten </p>
-                                                    <div onClick={this.renderhide.bind(this)}
-                                                         className="col-sm-6 col-xs-12 neben_tile brightgreen"
-                                                         data-toggle="modal"
-                                                         data-target="#neben_sehrhaeufig">
-                                                        <h1>Sehr häufig</h1>
-                                                        <p>Die Nebenwirkung betrifft mehr als 1 Behandelten von 10
-                                                        </p>
-                                                    </div>
-                                                    <div onClick={this.renderhide.bind(this)}
-                                                         className="col-sm-6 col-xs-12  neben_tile brightgreen"
-                                                         data-toggle="modal"
-                                                         data-target="#neben_haeufig">
-                                                        <h1>Häufig</h1>
-                                                        <p>Die Nebenwirkung betrifft 1 bis 10 Behandelte von 100
-                                                        </p>
-                                                    </div>
-                                                    <div onClick={this.renderhide.bind(this)}
-                                                         className="col-sm-6 col-xs-12  neben_tile brightyellow"
-                                                         data-toggle="modal"
-                                                         data-target="#neben_gelegentlich">
-                                                        <h1>Gelegentlich</h1>
-                                                        <p>Die Nebenwirkung betrifft 1 bis 10 Behandelte von 1.000
-                                                        </p>
-                                                    </div>
-                                                    <div onClick={this.renderhide.bind(this)}
-                                                         className="col-sm-6 col-xs-12  neben_tile brightred"
-                                                         data-toggle="modal"
-                                                         data-target="#neben_selten">
-                                                        <h1>Selten</h1>
-                                                        <p>Die Nebenwirkung betrifft 1 bis 10 Behandelte von 10.000
-                                                        </p>
-                                                    </div>
-                                                    <div onClick={this.renderhide.bind(this)}
-                                                         className="col-sm-6 col-xs-12  neben_tile brightred"
-                                                         data-toggle="modal"
-                                                         data-target="#neben_sehrselten">
-                                                        <h1>Sehr selten</h1>
-                                                        <p>Die Nebenwirkung betrifft weniger als 1 Behandelten von
-                                                            10.000
-                                                        </p>
-                                                    </div>
-                                                    <div onClick={this.renderhide.bind(this)}
-                                                         className="col-sm-6 col-xs-12  neben_tile brightgrey"
-                                                         data-toggle="modal"
-                                                         data-target="#neben_nichtbekannt">
-                                                        <h1>Nicht bekannt</h1>
-                                                        <p>Häufigkeit auf Grundlage der verfügbaren Daten nicht
-                                                            abschätzbar
-                                                        </p>
-                                                    </div>
-                                                    <div className="col-sm-12 col-xs-12  neben_tile nebenall"
-                                                         data-toggle="modal"
-                                                         data-target="#neben_all">
-                                                        <h1>Alle Nebenwirkungen</h1>
-                                                        <p>Hier werden alle möglichen Nebenwirkungen aufgelistet
-                                                        </p>
-                                                    </div>
-                                                </div>
-
-
-                                                <div className="modal fade" id="neben_sehrhaeufig" tabIndex="-1"
-                                                     role="dialog" aria-labelledby="neben_info"
-                                                     aria-hidden="true">
-                                                    <div className="modal-dialog modal-lg" role="document">
-                                                        <div className="modal-content brightgreen">
-                                                            <div className="modal-header">
-                                                                <button type="button" className="close"
-                                                                        data-dismiss="modal" aria-label="Close">
-                                                                    <span aria-hidden="true">&times;</span>
-                                                                </button>
-                                                                <h2>
-                                                                    Sehr häufig
-                                                                </h2>
-                                                                <p>Die Nebenwirkung betrifft mehr als 1 Behandelten von
-                                                                    10 </p>
-                                                                <p><b>Bedeutung</b> <br/>Bei mehr als 10 % der Behandelten
-                                                                    ist die Nebenwirkung aufgetreten.
-                                                                </p>
-                                                            </div>
-                                                            <div className="modal-body" style={{color: "black"}}>
-                                                                {this.rendersehrhaeufigdesktop(drug)}
-                                                                {this.rendersehrhaeufigmobile(drug)}
-                                                            </div>
-                                                            <span
-                                                                dangerouslySetInnerHTML={this.createMarkup(t("modal_close"))}/>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div className="modal fade" id="neben_haeufig" tabIndex="-1"
-                                                     role="dialog" aria-labelledby="neben_haeufig"
-                                                     aria-hidden="true">
-                                                    <div className="modal-dialog modal-lg" role="document">
-                                                        <div className="modal-content brightgreen">
-                                                            <div className="modal-header">
-                                                                <button type="button" className="close"
-                                                                        data-dismiss="modal" aria-label="Close">
-                                                                    <span aria-hidden="true">&times;</span>
-                                                                </button>
-                                                                <h2>
-                                                                    Häufig </h2>
-                                                                <p>Die Nebenwirkung betrifft 1 bis 10 Behandelte von
-                                                                    100 </p>
-                                                                <p><b>Bedeutung</b> <br/>Bei 1 bis 10 % der Behandelten ist
-                                                                    die Nebenwirkung aufgetreten.
-                                                                </p>
-                                                            </div>
-                                                            <div className="modal-body" style={{color: "black"}}>
-                                                                {this.renderhaeufigdesktop(drug)}
-                                                                {this.renderhaeufigmobile(drug)}
-                                                            </div>
-                                                            <span
-                                                                dangerouslySetInnerHTML={this.createMarkup(t("modal_close"))}/>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div className="modal fade" id="neben_gelegentlich" tabIndex="-1"
-                                                     role="dialog" aria-labelledby="neben_gelegentlich"
-                                                     aria-hidden="true">
-                                                    <div className="modal-dialog modal-lg" role="document">
-                                                        <div className="modal-content brightyellow">
-                                                            <div className="modal-header">
-                                                                <button type="button" className="close"
-                                                                        data-dismiss="modal" aria-label="Close">
-                                                                    <span aria-hidden="true">&times;</span>
-                                                                </button>
-                                                                <h2>
-                                                                    Gelegentlich </h2>
-                                                                <p> Die Nebenwirkung betrifft 1 bis 10 Behandelte von
-                                                                    1.000 </p>
-                                                                <p><b>Bedeutung</b> <br/>Bei 0,1 % bis 1 % der Behandelten
-                                                                    ist die Nebenwirkung aufgetreten.
-                                                                </p>
-
-                                                            </div>
-                                                            <div className="modal-body" style={{color: "black"}}>
-                                                                {this.rendergelegentlichdesktop(drug)}
-                                                                {this.rendergelegentlichmobile(drug)}
-                                                            </div>
-                                                            <span
-                                                                dangerouslySetInnerHTML={this.createMarkup(t("modal_close"))}/>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div className="modal fade" id="neben_selten" tabIndex="-1"
-                                                     role="dialog" aria-labelledby="neben_selten"
-                                                     aria-hidden="true">
-                                                    <div className="modal-dialog modal-lg" role="document">
-                                                        <div className="modal-content brightred">
-                                                            <div className="modal-header">
-                                                                <button type="button" className="close"
-                                                                        data-dismiss="modal" aria-label="Close">
-                                                                    <span aria-hidden="true">&times;</span>
-                                                                </button>
-                                                                <h2>
-                                                                    Selten </h2>
-                                                                <p> Die Nebenwirkung betriff 1 bis 10 Behandelte von
-                                                                    10.000 </p>
-                                                                <p><b>Bedeutung</b><br/> Bei 0,01 % bis 0,1 % der Behandelten
-                                                                    ist die Nebenwirkung aufgetreten.
-                                                                </p>
-                                                            </div>
-                                                            <div className="modal-body" style={{color: "black"}}>
-                                                                {this.renderseltendesktop(drug)}
-                                                                {this.renderseltenmobile(drug)}
-                                                            </div>
-                                                            <span
-                                                                dangerouslySetInnerHTML={this.createMarkup(t("modal_close"))}/>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div className="modal fade" id="neben_sehrselten" tabIndex="-1"
-                                                     role="dialog" aria-labelledby="neben_sehrselten"
-                                                     aria-hidden="true">
-                                                    <div className="modal-dialog modal-lg" role="document">
-                                                        <div className="modal-content brightred">
-                                                            <div className="modal-header">
-                                                                <button type="button" className="close"
-                                                                        data-dismiss="modal" aria-label="Close">
-                                                                    <span aria-hidden="true">&times;</span>
-                                                                </button>
-                                                                <h2>
-                                                                    Sehr selten
-                                                                </h2>
-                                                                <p> Die Nebenwirkung betrifft weniger als 1 Behandelten
-                                                                    von 10.000 </p>
-                                                                <p><b>Bedeutung</b> <br/>Bei weniger als 0,01 % der
-                                                                    Behandelten ist die Nebenwirkung aufgetreten.
-                                                                </p>
-                                                            </div>
-                                                            <div className="modal-body" style={{color: "black"}}>
-                                                                {this.rendersehrseltendesktop(drug)}
-                                                                {this.rendersehrseltenmobile(drug)}
-                                                            </div>
-                                                            <span
-                                                                dangerouslySetInnerHTML={this.createMarkup(t("modal_close"))}/>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div className="modal fade" id="neben_nichtbekannt" tabIndex="-1"
-                                                     role="dialog" aria-labelledby="neben_nichtbekannt"
-                                                     aria-hidden="true">
-                                                    <div className="modal-dialog modal-lg" role="document">
-                                                        <div className="modal-content brightgrey">
-                                                            <div className="modal-header">
-                                                                <button type="button" className="close"
-                                                                        data-dismiss="modal" aria-label="Close">
-                                                                    <span aria-hidden="true">&times;</span>
-                                                                </button>
-                                                                <h2>
-                                                                    Nicht Bekannt </h2>
-                                                                <p> Häufigkeit auf Grundlage der verfügbaren Daten nicht
-                                                                    abschätzbar </p>
-                                                                <p><b>Bedeutung</b> <br/> Es sind nur Einzelfälle bekannt,
-                                                                    daraus kann die Häufigkeit des Auftretens nicht
-                                                                    bestimmt werden.
-
-                                                                </p>
-                                                            </div>
-                                                            <div className="modal-body" style={{color: "black"}}>
-                                                                {this.rendernichtbekanntdesktop(drug)}
-                                                                {this.rendernichtbekanntmobile(drug)}
-                                                            </div>
-                                                            <span
-                                                                dangerouslySetInnerHTML={this.createMarkup(t("modal_close"))}/>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div className="modal fade" id="neben_all" tabIndex="-1"
-                                                     role="dialog" aria-labelledby="neben_all"
-                                                     aria-hidden="true">
-                                                    <div className="modal-dialog modal-lg" role="document">
-                                                        <div className="modal-content brightgrey">
-                                                            <div className="modal-header">
-                                                                <button type="button" className="close"
-                                                                        data-dismiss="modal" aria-label="Close">
-                                                                    <span aria-hidden="true">&times;</span>
-                                                                </button>
-                                                                <h2>
-                                                                    Alle Nebenwirkungen</h2>
-                                                                <p> Hier finden Sie alle möglichen Nebenwirkungen. </p>
-                                                            </div>
-                                                            <div className="modal-body" style={{color: "black"}}>
-                                                                {this.renderalldesktop(drug)}
-                                                                {this.renderallmobile(drug)}
-                                                            </div>
-                                                            <span
-                                                                dangerouslySetInnerHTML={this.createMarkup(t("modal_close"))}/>
-                                                        </div>
-                                                    </div>
-                                                </div>
                                             </div>
                                             {/*Button REPORT*/}
                                             <div className="text-right">
@@ -1939,11 +1761,12 @@ class DrugDetail extends React.Component {
                                 Medikamenten</a>
                         </div>
                         <div className='col-sm-4 col-xs-12 xs-center backtomed'>
-                            <span>v. {drug.version} | {t('publishingDate')}: {new Date(drug.year).toLocaleDateString()}</span> <br/>
-                                 <span className="pharmadetails" data-toggle="modal"
-                                     data-target="#address">
+                            <span>v. {drug.version} | {t('publishingDate')}: {new Date(drug.year).toLocaleDateString()}</span>
+                            <br/>
+                            <span className="pharmadetails" data-toggle="modal"
+                                  data-target="#address">
                                     <FontAwesomeIcon icon={faAddressCard}/> Pharmazeutischer Unternehmer und Hersteller</span>
-                         </div>
+                        </div>
                     </div>
                     <div className="modal fade" id="address" tabIndex="-1" role="dialog"
                          aria-labelledby="addressLabel"
@@ -1983,6 +1806,315 @@ class DrugDetail extends React.Component {
                                     <span dangerouslySetInnerHTML={this.createMarkup(t("frequency_sideeffect"))}/>
                                 </div>
                                 <span dangerouslySetInnerHTML={this.createMarkup(t("modal_close"))}/>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="modal fade" id="drugform" tabIndex="-1"
+                         role="dialog"
+                         aria-labelledby="addressLabel"
+                         aria-hidden="true">
+                        <div className="modal-dialog" role="document">
+                            <div className="modal-content">
+                                <div className="modal-header">
+                                    <button type="button" className="close"
+                                            data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <h2>Inhalt und Darstellung des
+                                        Medikaments</h2>
+                                </div>
+                                <div className="modal-body" style={{color: "black"}}>
+                                    <div className="row">
+                                        <div
+                                            className="col-sm-2 col-xs-12 xs-center">{this.renderFormImg(drug)}</div>
+                                        <div className="col-sm-10 col-xs-12  ">
+                                            {this.renderFormdesc(drug)}
+                                        </div>
+                                    </div>
+                                    <div className="row">
+                                        <div
+                                            className="col-sm-2 col-xs-12 xs-center"><i
+                                            className="drug_pack_icon fas fa-prescription-bottle-alt"></i>
+                                        </div>
+                                        <div className="col-sm-10 col-xs-12 xs-center"
+                                             style={{paddingTop: "10px"}}>
+                                            {this.renderPackSecpack(drug)}
+                                        </div>
+                                    </div>
+                                </div>
+                                <span
+                                    dangerouslySetInnerHTML={this.createMarkup(t("modal_close"))}/>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="modal fade" id="infosubstance" tabIndex="-1"
+                         role="dialog"
+                         aria-labelledby="addressLabel"
+                         aria-hidden="true">
+                        <div className="modal-dialog" role="document">
+                            <div className="modal-content">
+                                <div className="modal-header">
+                                    <button type="button" className="close"
+                                            data-dismiss="modal"
+                                            aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    {drug.activeSubstance.map(substance =>
+                                        <h2 key={substance.id}><img
+                                            src={"./../../assets/images/lab.svg"}
+                                            className="infopic"
+                                            alt={"lab"}/> {substance.name}
+                                        </h2>)
+                                        .reduce((prev, curr) => [prev, ', ', curr])}
+                                </div>
+                                <div className="modal-body" style={{color: "black"}}>
+            <span> {drug.activeSubstance.map(substance =>
+                <span
+                    key={substance.id}>{substance.name} ist ein Arzneistoff aus der Gruppe der sogenannten {substance.substanceGroup.name}.</span>)
+                .reduce((prev, curr) => [prev, ', ', curr])} </span>
+                                    {this.renderPackSecMoreSub(drug)}
+                                </div>
+                                <span
+                                    dangerouslySetInnerHTML={this.createMarkup(t("modal_close"))}/>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="modal fade" id="neben_sehrhaeufig" tabIndex="-1"
+                         role="dialog" aria-labelledby="neben_info"
+                         aria-hidden="true">
+                        <div className="modal-dialog modal-lg" role="document">
+                            <div className="modal-content brightgreen">
+                                <div className="modal-header">
+                                    <button type="button" className="close"
+                                            data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <h2>
+                                        Sehr häufig
+                                    </h2>
+                                    <p>Die Nebenwirkung betrifft mehr als 1 Behandelten von
+                                        10 </p>
+                                    <p><b>Bedeutung</b> <br/>Bei mehr als 10 % der
+                                        Behandelten
+                                        ist die Nebenwirkung aufgetreten.
+                                    </p>
+                                </div>
+                                <div className="modal-body" style={{color: "black"}}>
+                                    {this.rendersehrhaeufigdesktop(drug)}
+                                    {this.rendersehrhaeufigmobile(drug)}
+                                </div>
+                                <span
+                                    dangerouslySetInnerHTML={this.createMarkup(t("modal_close"))}/>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="modal fade" id="neben_haeufig" tabIndex="-1"
+                         role="dialog" aria-labelledby="neben_haeufig"
+                         aria-hidden="true">
+                        <div className="modal-dialog modal-lg" role="document">
+                            <div className="modal-content brightgreen">
+                                <div className="modal-header">
+                                    <button type="button" className="close"
+                                            data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <h2>
+                                        Häufig </h2>
+                                    <p>Die Nebenwirkung betrifft 1 bis 10 Behandelte von
+                                        100 </p>
+                                    <p><b>Bedeutung</b> <br/>Bei 1 bis 10 % der Behandelten
+                                        ist
+                                        die Nebenwirkung aufgetreten.
+                                    </p>
+                                </div>
+                                <div className="modal-body" style={{color: "black"}}>
+                                    {this.renderhaeufigdesktop(drug)}
+                                    {this.renderhaeufigmobile(drug)}
+                                </div>
+                                <span
+                                    dangerouslySetInnerHTML={this.createMarkup(t("modal_close"))}/>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="modal fade" id="neben_gelegentlich" tabIndex="-1"
+                         role="dialog" aria-labelledby="neben_gelegentlich"
+                         aria-hidden="true">
+                        <div className="modal-dialog modal-lg" role="document">
+                            <div className="modal-content brightyellow">
+                                <div className="modal-header">
+                                    <button type="button" className="close"
+                                            data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <h2>
+                                        Gelegentlich </h2>
+                                    <p> Die Nebenwirkung betrifft 1 bis 10 Behandelte von
+                                        1.000 </p>
+                                    <p><b>Bedeutung</b> <br/>Bei 0,1 % bis 1 % der
+                                        Behandelten
+                                        ist die Nebenwirkung aufgetreten.
+                                    </p>
+
+                                </div>
+                                <div className="modal-body" style={{color: "black"}}>
+                                    {this.rendergelegentlichdesktop(drug)}
+                                    {this.rendergelegentlichmobile(drug)}
+                                </div>
+                                <span
+                                    dangerouslySetInnerHTML={this.createMarkup(t("modal_close"))}/>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="modal fade" id="neben_selten" tabIndex="-1"
+                         role="dialog" aria-labelledby="neben_selten"
+                         aria-hidden="true">
+                        <div className="modal-dialog modal-lg" role="document">
+                            <div className="modal-content brightred">
+                                <div className="modal-header">
+                                    <button type="button" className="close"
+                                            data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <h2>
+                                        Selten </h2>
+                                    <p> Die Nebenwirkung betriff 1 bis 10 Behandelte von
+                                        10.000 </p>
+                                    <p><b>Bedeutung</b><br/> Bei 0,01 % bis 0,1 % der
+                                        Behandelten
+                                        ist die Nebenwirkung aufgetreten.
+                                    </p>
+                                </div>
+                                <div className="modal-body" style={{color: "black"}}>
+                                    {this.renderseltendesktop(drug)}
+                                    {this.renderseltenmobile(drug)}
+                                </div>
+                                <span
+                                    dangerouslySetInnerHTML={this.createMarkup(t("modal_close"))}/>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="modal fade" id="neben_sehrselten" tabIndex="-1"
+                         role="dialog" aria-labelledby="neben_sehrselten"
+                         aria-hidden="true">
+                        <div className="modal-dialog modal-lg" role="document">
+                            <div className="modal-content brightred">
+                                <div className="modal-header">
+                                    <button type="button" className="close"
+                                            data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <h2>
+                                        Sehr selten
+                                    </h2>
+                                    <p> Die Nebenwirkung betrifft weniger als 1 Behandelten
+                                        von 10.000 </p>
+                                    <p><b>Bedeutung</b> <br/>Bei weniger als 0,01 % der
+                                        Behandelten ist die Nebenwirkung aufgetreten.
+                                    </p>
+                                </div>
+                                <div className="modal-body" style={{color: "black"}}>
+                                    {this.rendersehrseltendesktop(drug)}
+                                    {this.rendersehrseltenmobile(drug)}
+                                </div>
+                                <span
+                                    dangerouslySetInnerHTML={this.createMarkup(t("modal_close"))}/>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="modal fade" id="neben_nichtbekannt" tabIndex="-1"
+                         role="dialog" aria-labelledby="neben_nichtbekannt"
+                         aria-hidden="true">
+                        <div className="modal-dialog modal-lg" role="document">
+                            <div className="modal-content brightgrey">
+                                <div className="modal-header">
+                                    <button type="button" className="close"
+                                            data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <h2>
+                                        Nicht Bekannt </h2>
+                                    <p> Häufigkeit auf Grundlage der verfügbaren Daten nicht
+                                        abschätzbar </p>
+                                    <p><b>Bedeutung</b> <br/> Es sind nur Einzelfälle
+                                        bekannt,
+                                        daraus kann die Häufigkeit des Auftretens nicht
+                                        bestimmt werden.
+
+                                    </p>
+                                </div>
+                                <div className="modal-body" style={{color: "black"}}>
+                                    {this.rendernichtbekanntdesktop(drug)}
+                                    {this.rendernichtbekanntmobile(drug)}
+                                </div>
+                                <span
+                                    dangerouslySetInnerHTML={this.createMarkup(t("modal_close"))}/>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="modal fade" id="neben_all" tabIndex="-1"
+                         role="dialog" aria-labelledby="neben_all"
+                         aria-hidden="true">
+                        <div className="modal-dialog modal-lg" role="document">
+                            <div className="modal-content brightgrey">
+                                <div className="modal-header">
+                                    <button type="button" className="close"
+                                            data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <h2>
+                                        Alle Nebenwirkungen</h2>
+                                    <p> Hier finden Sie alle möglichen Nebenwirkungen. </p>
+                                </div>
+                                <div className="modal-body" style={{color: "black"}}>
+                                    {this.renderalldesktop(drug)}
+                                    {this.renderallmobile(drug)}
+                                </div>
+                                <span
+                                    dangerouslySetInnerHTML={this.createMarkup(t("modal_close"))}/>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="modal fade" id="infoicons" tabIndex="-1" role="dialog"
+                         aria-labelledby="addressLabel"
+                         aria-hidden="true">
+                        <div className="modal-dialog" role="document">
+                            <div className="modal-content">
+                                <div className="modal-header">
+                                    <button type="button" className="close"
+                                            data-dismiss="modal"
+                                            aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <h2> Was bedeuten die Symbole?
+                                    </h2>
+                                </div>
+                                <div className="modal-body" style={{color: "black"}}>
+                                    {drug.drugFeature.map(feature =>
+                                        <div className="row">
+                                            <div className="col-sm-1 col-xs-12">
+                                                <img key={feature.id}
+                                                     src={"./../../assets/icons/" + feature.id + ".svg"}
+                                                     alt={feature.drugFeature}
+                                                     title={feature.drugFeature}
+                                                     className="drug-feature-icon icon_page"/>
+                                            </div>
+                                            <div
+                                                className="col-sm-11 col-xs-12 drug-feature-title">
+                                        <span className="drug-feature-title"
+                                              key={feature.id}>{feature.drugFeature}</span>
+                                            </div>
+                                        </div>
+                                    ).reduce((prev, curr) => [prev, ', ', curr])}
+                                    <div className="row">
+                                        Weitere Informationen finden Sie unter der Rubrik <a
+                                        href="#tab2" aria-controls="tab2" role="tab"
+                                        data-toggle="tab" aria-expanded="true"
+                                        data-dismiss="modal">Warnhinweise und
+                                        Vorsichtsmaßnahmen
+                                    </a></div>
+                                </div>
+                                <span
+                                    dangerouslySetInnerHTML={this.createMarkup(t("modal_close"))}/>
                             </div>
                         </div>
                     </div>
