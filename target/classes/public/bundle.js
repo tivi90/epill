@@ -14230,34 +14230,17 @@ var MostVisitedItems = function (_React$Component) {
 
             return _react2.default.createElement(
                 "div",
-                { className: "container" },
-                _react2.default.createElement(
-                    "div",
-                    { className: "row" },
-                    _react2.default.createElement(
-                        "h5",
-                        null,
-                        t('mostVisitedItems')
-                    )
-                ),
+                { className: "container", style: { paddingBottom: "60px" } },
                 _react2.default.createElement(
                     "div",
                     { className: "row" },
                     _react2.default.createElement(
                         "div",
                         { className: "col-md-12" },
-                        _react2.default.createElement(
-                            "div",
-                            { id: "Carousel", className: "carousel slide" },
-                            _react2.default.createElement(
-                                "div",
-                                { className: "carousel-inner" },
-                                invocations.map(function (invocation) {
-                                    return _react2.default.createElement(_drug_miniature2.default, { invocation: invocation,
-                                        key: invocation.drug.id });
-                                })
-                            )
-                        )
+                        invocations.map(function (invocation) {
+                            return _react2.default.createElement(_drug_miniature2.default, { invocation: invocation,
+                                key: invocation.drug.id });
+                        })
                     )
                 )
             );
@@ -45797,29 +45780,34 @@ var DrugDetail = function (_React$Component) {
                             { className: "container  no-banner" },
                             _User2.default.isAuthenticated() && _react2.default.createElement(
                                 "div",
-                                { className: "btn-toolbar pull-right" },
+                                null,
                                 _react2.default.createElement(
                                     "div",
-                                    { className: "btn-group" },
+                                    { className: "like-button-outer1 like-round-button round_heart" },
                                     _react2.default.createElement(
-                                        "button",
-                                        { type: "button", className: "btn btn-like",
+                                        "div",
+                                        { type: "button", className: "like-button-inner-main1 like-button-heart",
                                             onClick: function onClick() {
                                                 return _this36.toggleTaking(drug);
                                             } },
                                         _react2.default.createElement("span", {
-                                            className: "glyphicon white" + (!drug.isTaken ? " glyphicon-heart" : " glyphicon-minus") })
-                                    ),
+                                            className: " white" + (!drug.isTaken ? " far fa-heart" : " fas fa-heart") })
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    "div",
+                                    { className: "like-button-outer1 like-round-button round_plus" },
                                     _react2.default.createElement(
-                                        "button",
-                                        { type: "button", className: "btn btn-add",
+                                        "div",
+                                        { type: "button", className: "like-button-inner-main1 like-button-plus",
                                             onClick: function onClick() {
                                                 return _this36.toggleRemember(drug);
                                             } },
                                         _react2.default.createElement("span", {
                                             className: "glyphicon white" + (!drug.isRemembered ? " glyphicon-plus" : " glyphicon-minus") })
                                     )
-                                )
+                                ),
+                                "                            "
                             ),
                             _User2.default.isAuthenticated() && drug.personalizedInformation && _react2.default.createElement(
                                 "div",
@@ -45973,7 +45961,7 @@ var DrugDetail = function (_React$Component) {
                                                     { href: "#tab1",
                                                         "aria-controls": "tab1",
                                                         role: "tab",
-                                                        "data-toggle": "tab", onClick: this.handleScrollToStats },
+                                                        "data-toggle": "tab" },
                                                     "Allgemeine Informationen"
                                                 )
                                             ),
@@ -46040,7 +46028,7 @@ var DrugDetail = function (_React$Component) {
                                         _react2.default.createElement(
                                             "div",
                                             { role: "tabpanel", className: "tab-pane active w3-animate-opacity tab1",
-                                                id: "tab1" },
+                                                id: "tab1", name: "tab1" },
                                             _react2.default.createElement(
                                                 "div",
                                                 { className: "row content_header" },
@@ -46258,7 +46246,7 @@ var DrugDetail = function (_React$Component) {
                                                         { onClick: this.toggleShowAdditionalInfo },
                                                         _react2.default.createElement(
                                                             "button",
-                                                            { className: "btn btn-secondary" },
+                                                            { className: "btn btn-secondary black" },
                                                             !showAdditionalInfo && _react2.default.createElement(
                                                                 "span",
                                                                 null,
@@ -46277,12 +46265,12 @@ var DrugDetail = function (_React$Component) {
                                         ),
                                         _react2.default.createElement(
                                             "div",
-                                            { role: "tabpanel", className: "tab-pane w3-animate-opacity", id: "tab2" },
+                                            { role: "tabpanel", className: "tab-pane w3-animate-opacity", id: "tab2", name: "tab2" },
                                             this.renderPackSecvor(drug)
                                         ),
                                         _react2.default.createElement(
                                             "div",
-                                            { role: "tabpanel", className: "tab-pane w3-animate-opacity", id: "tab3" },
+                                            { role: "tabpanel", className: "tab-pane w3-animate-opacity", id: "tab3", name: "tab3" },
                                             _react2.default.createElement(
                                                 "div",
                                                 { className: "row content_header" },
@@ -46297,7 +46285,7 @@ var DrugDetail = function (_React$Component) {
                                         ),
                                         _react2.default.createElement(
                                             "div",
-                                            { role: "tabpanel", className: "tab-pane w3-animate-opacity", id: "tab4" },
+                                            { role: "tabpanel", className: "tab-pane w3-animate-opacity", id: "tab4", name: "tab4" },
                                             _react2.default.createElement(
                                                 "div",
                                                 { className: "row content_header" },
@@ -46869,7 +46857,7 @@ var DrugDetail = function (_React$Component) {
                                 { href: "#/drug/list" },
                                 " ",
                                 _react2.default.createElement("i", { className: "far fa-arrow-alt-circle-left" }),
-                                " zur\xFCck zu den Medkamenten"
+                                " zur\xFCck zu den Medikamenten"
                             )
                         ),
                         _react2.default.createElement(
@@ -47436,7 +47424,7 @@ var DrugList = function (_React$Component) {
 
             return _react2.default.createElement(
                 "section",
-                { className: "diseases" },
+                { className: "diseases row" },
                 _react2.default.createElement(
                     "div",
                     { className: "col-sm-12" },
@@ -47477,7 +47465,7 @@ var DrugList = function (_React$Component) {
 
             return _react2.default.createElement(
                 "section",
-                { className: "diseases " },
+                { className: "diseases row" },
                 _react2.default.createElement(
                     "div",
                     { className: "col-xs-7" },
@@ -47571,7 +47559,7 @@ var DrugList = function (_React$Component) {
             return drugs.map(function (drug) {
                 var t = _this10.props.t;
 
-                var itemClass = ["item  col-md-4 col-lg-4 grid-group-item  padd_md"];
+                var itemClass = ["item col-sm-6 col-md-6 col-xs-12 col-lg-4 grid-group-item padd_md"];
                 var drugname = ["group inner list-group-item-heading med_header hidden"];
                 var drugname1 = ["group inner med_header"];
                 var medfeat = ["row med_drugfeature hidden"];
@@ -47649,7 +47637,7 @@ var DrugList = function (_React$Component) {
                                     _this10.renderDisease(drug),
                                     _User2.default.isAuthenticated() && _react2.default.createElement(
                                         "section",
-                                        { className: "diseases" },
+                                        { className: "diseases row" },
                                         _react2.default.createElement(
                                             "div",
                                             { className: "col-sm-12" },
@@ -47699,7 +47687,7 @@ var DrugList = function (_React$Component) {
                                                                 return _this10.toggleTaking(drug);
                                                             } },
                                                         _react2.default.createElement("span", {
-                                                            className: "glyphicon white " + (drug.isTaken ? 'glyphicon-minus' : 'glyphicon-heart') })
+                                                            className: " white" + (!drug.isTaken ? " far fa-heart" : " fas fa-heart") })
                                                     )
                                                 ),
                                                 _react2.default.createElement(
@@ -47774,10 +47762,14 @@ var DrugList = function (_React$Component) {
                 _react2.default.createElement(
                     "div",
                     { className: "container" },
-                    _User2.default.isAuthenticated() && _react2.default.createElement(_most_visited_items2.default, null),
+                    _react2.default.createElement(
+                        "h2",
+                        null,
+                        title
+                    ),
                     _react2.default.createElement(
                         "div",
-                        { className: "well well-sm hidden-xs" },
+                        { className: "well well-sm hidden-sm hidden-xs" },
                         _react2.default.createElement(
                             "div",
                             { className: "btn-group" },
@@ -47865,6 +47857,22 @@ var DrugList = function (_React$Component) {
                             !this.state.loading && drugs && drugs.length > 0 && this.renderDrugs(drugs)
                         )
                     )
+                ),
+                _react2.default.createElement("hr", null),
+                _User2.default.isAuthenticated() && drugs && drugs.length > 0 && _react2.default.createElement(
+                    "div",
+                    null,
+                    _react2.default.createElement(
+                        "div",
+                        { className: "row xs-center text-center" },
+                        _react2.default.createElement(
+                            "h4",
+                            { className: "mostvis_h3" },
+                            t('mostVisitedItems')
+                        )
+                    ),
+                    _react2.default.createElement("hr", null),
+                    _react2.default.createElement(_most_visited_items2.default, null)
                 )
             );
         }
@@ -47950,24 +47958,27 @@ var DrugMiniature = function (_React$Component) {
 
             return _react2.default.createElement(
                 "div",
-                { className: "carousel-item active" },
+                { className: "col-md-2 col-xs-4 carousel-haeufig" },
                 _react2.default.createElement(
-                    "div",
-                    { className: "col-md-2 col-xs-12 carousel-haeufig" },
+                    _reactRouterDom.Link,
+                    { to: "/drug/" + invocation.drug.id + "/de" },
                     _react2.default.createElement(
-                        _reactRouterDom.Link,
-                        {
-                            to: "/drug/" + invocation.drug.id + "/de" },
+                        "div",
+                        { className: "row carousel-haeufig-pic" },
                         _react2.default.createElement(
                             "div",
-                            { className: "row carousel-haeufig-pic" },
+                            { className: "col-md-12" },
                             _react2.default.createElement("img", { src: "/image/drug/" + invocation.drug.id, alt: invocation.drug.name,
                                 title: invocation.drug.name,
-                                className: "img-responsive center-block" })
-                        ),
+                                className: "img-haeufig center-block img-responsive" })
+                        )
+                    ),
+                    _react2.default.createElement(
+                        "div",
+                        { className: "row" },
                         _react2.default.createElement(
                             "div",
-                            { className: "row" },
+                            { className: "col-md-12" },
                             _react2.default.createElement(
                                 "p",
                                 { className: "carousel-haeufig-text" },
@@ -48383,14 +48394,14 @@ var Home = function (_React$Component) {
                 _react2.default.createElement(
                     "div",
                     { className: "container marketing" },
-                    _User2.default.isAuthenticated() && _react2.default.createElement(_most_visited_items2.default, null),
                     _react2.default.createElement(
                         "div",
                         { className: "row text_home" },
                         _react2.default.createElement(
                             "div",
                             { className: "col-sm-4 text-center" },
-                            _react2.default.createElement("img", { className: "img-circle", src: "/assets/images/logo_s.svg", alt: "Generic placeholder image", width: "140", height: "140" }),
+                            _react2.default.createElement("img", { className: "img-circle", src: "/assets/images/logo_s.svg", alt: "Generic placeholder image",
+                                width: "140", height: "140" }),
                             _react2.default.createElement(
                                 "h2",
                                 null,
@@ -48406,7 +48417,8 @@ var Home = function (_React$Component) {
                                 { className: "text-center" },
                                 _react2.default.createElement(
                                     "a",
-                                    { className: "btn btn-default m40t", href: "#/about", role: "button" },
+                                    { className: "btn btn-default m40t", href: "#/about",
+                                        role: "button" },
                                     t('viewDetails'),
                                     " \xBB"
                                 )
@@ -48415,7 +48427,8 @@ var Home = function (_React$Component) {
                         _react2.default.createElement(
                             "div",
                             { className: "col-sm-4 text-center" },
-                            _react2.default.createElement("img", { className: "img-circle", src: "/assets/images/prof_sunyaev.jpg", alt: "Generic placeholder image", width: "140", height: "140" }),
+                            _react2.default.createElement("img", { className: "img-circle", src: "/assets/images/prof_sunyaev.jpg",
+                                alt: "Generic placeholder image", width: "140", height: "140" }),
                             _react2.default.createElement(
                                 "h2",
                                 null,
@@ -48431,7 +48444,9 @@ var Home = function (_React$Component) {
                                 { className: "text-center" },
                                 _react2.default.createElement(
                                     "a",
-                                    { className: "btn btn-default m40t", href: "http://www.aifb.kit.edu/web/Critical_Information_Infrastructures/en", role: "button", target: "blank" },
+                                    { className: "btn btn-default m40t",
+                                        href: "http://www.aifb.kit.edu/web/Critical_Information_Infrastructures/en",
+                                        role: "button", target: "blank" },
                                     t('viewDetails'),
                                     " \xBB"
                                 )
@@ -48440,7 +48455,8 @@ var Home = function (_React$Component) {
                         _react2.default.createElement(
                             "div",
                             { className: "col-sm-4 text-center" },
-                            _react2.default.createElement("img", { className: "img-circle", src: "/assets/images/article.jpg", alt: "Generic placeholder image", width: "140", height: "140" }),
+                            _react2.default.createElement("img", { className: "img-circle", src: "/assets/images/article.jpg", alt: "Generic placeholder image",
+                                width: "140", height: "140" }),
                             _react2.default.createElement(
                                 "h2",
                                 null,
@@ -48456,13 +48472,26 @@ var Home = function (_React$Component) {
                                 { className: "text-center" },
                                 _react2.default.createElement(
                                     "a",
-                                    { className: "btn btn-default m40t", href: "http://www.aifb.kit.edu/web/Critical_Information_Infrastructures/en", role: "button", target: "blank" },
+                                    { className: "btn btn-default m40t",
+                                        href: "http://www.aifb.kit.edu/web/Critical_Information_Infrastructures/en",
+                                        role: "button", target: "blank" },
                                     t('viewDetails'),
                                     " \xBB"
                                 )
                             )
                         )
-                    )
+                    ),
+                    _react2.default.createElement(
+                        "div",
+                        { className: "row xs-center text-center" },
+                        _react2.default.createElement(
+                            "h4",
+                            { className: "mostvis_h3" },
+                            t('mostVisitedItems')
+                        )
+                    ),
+                    _react2.default.createElement("hr", null),
+                    _User2.default.isAuthenticated() && _react2.default.createElement(_most_visited_items2.default, null)
                 )
             );
         }
@@ -48613,7 +48642,7 @@ var MenueItem = function (_React$Component) {
 				null,
 				_react2.default.createElement(
 					_reactRouterDom.Link,
-					{ to: this.props.to, "data-toggle": "collapse", "data-target": ".nav-collapse" },
+					{ to: this.props.to },
 					t(this.props.title)
 				)
 			);
@@ -49817,16 +49846,19 @@ var UserMenue = function (_React$Component) {
                     { className: "nav navbar-nav navbar-right", onClick: this.toggleShow },
                     _react2.default.createElement(
                         "li",
-                        { className: "dropdown open" },
+                        { className: "dropdown" },
                         _react2.default.createElement(
                             "a",
-                            { className: "dropdown-toggle" },
+                            { className: "dropdown-toggle", "data-toggle": "dropdown", role: "button", "aria-haspopup": "true", "aria-expanded": "false" },
                             _react2.default.createElement("span", {
                                 className: "glyphicon glyphicon-user" }),
                             " ",
                             _User2.default.firstname,
                             " ",
-                            _User2.default.lastname
+                            _User2.default.lastname,
+                            " ",
+                            _react2.default.createElement("span", {
+                                className: "caret" })
                         ),
                         show && _react2.default.createElement(
                             "ul",

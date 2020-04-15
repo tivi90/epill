@@ -27,9 +27,10 @@ class UserMenue extends React.Component {
         let menue = null;
         if (User.isAuthenticated()) {
             menue = <ul className="nav navbar-nav navbar-right" onClick={this.toggleShow}>
-                <li className="dropdown open">
-                    <a className="dropdown-toggle"><span
-                        className="glyphicon glyphicon-user"></span> {User.firstname} {User.lastname}</a>
+                <li className="dropdown">
+                    <a className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span
+                        className="glyphicon glyphicon-user"></span> {User.firstname} {User.lastname} <span
+                        className="caret"></span></a>
                     {show &&
                     <ul className="dropdown-menu">
                         <li><Link to="/drug/taking">{t('userDrugs')}</Link></li>

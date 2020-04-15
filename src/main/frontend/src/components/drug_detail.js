@@ -1210,7 +1210,7 @@ class DrugDetail extends React.Component {
         window.scroll(0,300);
     }
 
-    render() {
+      render() {
         let that = this;
         setTimeout(function () {
             that.setState({timePassed: true})
@@ -1375,20 +1375,23 @@ class DrugDetail extends React.Component {
 
                             {User.isAuthenticated()
                             &&
-                            <div className='btn-toolbar pull-right'>
-                                <div className='btn-group'>
-                                    <button type="button" className="btn btn-like"
+                            <div>
+                            <div className="like-button-outer1 like-round-button round_heart">
+                                    <div type="button" className="like-button-inner-main1 like-button-heart"
                                             onClick={() => this.toggleTaking(drug)}>
                                         <span
-                                            className={"glyphicon white" + ((!drug.isTaken) ? " glyphicon-heart" : " glyphicon-minus")}/>
-                                    </button>
-                                    <button type="button" className="btn btn-add"
+                                            className={" white" + ((!drug.isTaken) ? " far fa-heart" : " fas fa-heart")}/>
+                                    </div>
+                            </div>
+                                <div className="like-button-outer1 like-round-button round_plus">
+
+                                <div type="button" className="like-button-inner-main1 like-button-plus"
                                             onClick={() => this.toggleRemember(drug)}>
                                         <span
                                             className={"glyphicon white" + ((!drug.isRemembered) ? " glyphicon-plus" : " glyphicon-minus")}/>
-                                    </button>
-                                </div>
-                            </div>
+                                    </div>
+                            </div>                            </div>
+
                             }
                             {/*<h3>{drug.name} {drug.productGroup && drug.productGroup.name && <span className="text-muted">{drug.productGroup.name}</span> }</h3>*/}
 
@@ -1477,7 +1480,7 @@ class DrugDetail extends React.Component {
                                                 <a href="#tab1"
                                                    aria-controls="tab1"
                                                    role="tab"
-                                                   data-toggle="tab" onClick={this.handleScrollToStats}>Allgemeine
+                                                   data-toggle="tab" >Allgemeine
                                                     Informationen</a></li>
                                             <div id="arrow-down">
                                                 <FontAwesomeIcon icon={faChevronDown}/>
@@ -1486,7 +1489,7 @@ class DrugDetail extends React.Component {
                                                 <a href="#tab2"
                                                    aria-controls="tab2"
                                                    role="tab"
-                                                   data-toggle="tab">Vor der
+                                                   data-toggle="tab" >Vor der
                                                     Anwendung </a></li>
                                             <div id="arrow-down">
                                                 <FontAwesomeIcon icon={faChevronDown}/>
@@ -1495,7 +1498,7 @@ class DrugDetail extends React.Component {
                                                 <a href="#tab3"
                                                    aria-controls="tab3"
                                                    role="tab"
-                                                   data-toggle="tab">Anwendung</a>
+                                                   data-toggle="tab" >Anwendung</a>
                                             </li>
                                             <div id="arrow-down">
                                                 <FontAwesomeIcon icon={faChevronDown}/>
@@ -1504,7 +1507,7 @@ class DrugDetail extends React.Component {
                                                 <a href="#tab4"
                                                    aria-controls="tab4"
                                                    role="tab"
-                                                   data-toggle="tab">Nebenwirkungen
+                                                   data-toggle="tab" >Nebenwirkungen
                                                 </a></li>
                                         </ul>
                                     </div>
@@ -1512,7 +1515,7 @@ class DrugDetail extends React.Component {
                                 <div className="col-xs-12 col-sm-12 col-md-9 infobox">
                                     <div className="tab-content">
                                         <div role="tabpanel" className="tab-pane active w3-animate-opacity tab1"
-                                             id="tab1">
+                                             id="tab1" name="tab1">
                                             <div className="row content_header">
                                                 <h1>Allgemeine Informationen</h1>
                                                 <hr/>
@@ -1634,17 +1637,17 @@ class DrugDetail extends React.Component {
                                             <span dangerouslySetInnerHTML={this.createMarkup(t("helptext_general"))}/>
 
                                         </div>
-                                        <div role="tabpanel" className="tab-pane w3-animate-opacity" id="tab2">
+                                        <div role="tabpanel" className="tab-pane w3-animate-opacity" id="tab2" name="tab2">
                                             {this.renderPackSecvor(drug)}
                                         </div>
-                                        <div role="tabpanel" className="tab-pane w3-animate-opacity" id="tab3">
+                                        <div role="tabpanel" className="tab-pane w3-animate-opacity" id="tab3" name="tab3">
                                             <div className="row content_header">
                                                 <h1>Dosierung und Anwendung</h1>
                                                 <hr/>
                                             </div>
                                             {this.renderPackSecdos(drug)}
                                         </div>
-                                        <div role="tabpanel" className="tab-pane w3-animate-opacity" id="tab4">
+                                        <div role="tabpanel" className="tab-pane w3-animate-opacity" id="tab4" name="tab4">
                                             <div className="row content_header">
                                                 <h1> Nebenwirkungen </h1>
                                                 <hr/>
@@ -1933,7 +1936,7 @@ class DrugDetail extends React.Component {
                     <div className="row">
                         <div className="col-sm-8 col-xs-12 xs-center backtomed">
                             <a href="#/drug/list"> <i className="far fa-arrow-alt-circle-left"/> zurück zu den
-                                Medkamenten</a>
+                                Medikamenten</a>
                         </div>
                         <div className='col-sm-4 col-xs-12 xs-center backtomed'>
                             <span>v. {drug.version} | {t('publishingDate')}: {new Date(drug.year).toLocaleDateString()}</span> <br/>

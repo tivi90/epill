@@ -7,45 +7,23 @@ $(window).scroll(function () {
     }
 });
 
+$(window).scroll(function () {
 
-$(window).scroll(function() {
-    if ($(window).scrollTop() > 300) {
-        $('#button_top').addClass('show');
+    if ($(this).scrollTop() > 440) {
+        $('.like-round-button').fadeOut();
     } else {
-        $('#button_top').removeClass('show');
+        $('.like-round-button').fadeIn();
     }
 });
 
-$('#button_top').on('click', function(e) {
-    e.preventDefault();
-    $('html, body').animate({scrollTop:0}, '300');
-});
+
+
 
 $(window).on('beforeunload', function(){
     $(window).scrollTop(0);
 });
 
-$(".haeufig_cont > .1").css("display", "none");
 
-
-function myFunction() {
-    var input, filter, table, tr, td, i, txtValue;
-    input = document.getElementById("myInput");
-    filter = input.value.toUpperCase();
-    table = document.getElementById("myTable");
-    tr = table.getElementsByTagName("tr");
-    for (i = 0; i < tr.length; i++) {
-        td = tr[i].getElementsByTagName("td")[0];
-        if (td) {
-            txtValue = td.textContent || td.innerText;
-            if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                tr[i].style.display = "";
-            } else {
-                tr[i].style.display = "none";
-            }
-        }
-    }
-}
 
 
 $(document).ready(function(){

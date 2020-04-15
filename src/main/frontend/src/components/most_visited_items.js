@@ -41,27 +41,21 @@ class MostVisitedItems extends React.Component {
             return null;
         }
 
-            return (
-                <div className="container">
-                    <div className="row"><h5>{t('mostVisitedItems')}</h5></div>
-                    <div className="row">
-                        <div className="col-md-12">
-                            <div id="Carousel" className="carousel slide">
-                                <div className="carousel-inner">
-                                    {invocations
-                                        .map(invocation => <DrugMiniature invocation={invocation}
-                                                                                  key={invocation.drug.id}/>)}
-                                </div>
-                            </div>
-                        </div>
+        return (
+             <div className="container" style={{paddingBottom: "60px"}}>
+                <div className="row">
+                    <div className="col-md-12">
+                        {invocations
+                            .map(invocation => <DrugMiniature invocation={invocation}
+                                                              key={invocation.drug.id}/>)}
                     </div>
                 </div>
+            </div>
 
-            );
-        }
+        );
+    }
 
 }
-
 
 
 export default translate()(MostVisitedItems);

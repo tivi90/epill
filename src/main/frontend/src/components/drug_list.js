@@ -331,7 +331,7 @@ class DrugList extends React.Component {
         const {t} = this.props;
 
         return (
-            <section className="diseases">
+            <section className="diseases row">
                 <div className="col-sm-12">
                     <p><b> {t('usedWhen') + ": "}</b></p>
                     <ul> {drug.disease.map(disease => <li key={disease.id}>{disease.name}</li>)
@@ -347,7 +347,7 @@ class DrugList extends React.Component {
         }
         const {t} = this.props;
         return (
-            <section className="diseases ">
+            <section className="diseases row">
                 <div className="col-xs-7">
                     <p><b>  {t('pharmaceuticalForm') + ": "} </b></p>
                     <ul>  {drug.pharmaceuticalForm.map(pharmaceuticalForm =>
@@ -394,7 +394,7 @@ class DrugList extends React.Component {
     renderDrugs(drugs) {
         return drugs.map((drug => {
             const {t} = this.props;
-            let itemClass = ["item  col-md-4 col-lg-4 grid-group-item  padd_md"];
+            let itemClass = ["item col-sm-6 col-md-6 col-xs-12 col-lg-4 grid-group-item padd_md"];
             let drugname = ["group inner list-group-item-heading med_header hidden"];
             let drugname1 = ["group inner med_header"];
             let medfeat = ["row med_drugfeature hidden"];
@@ -449,7 +449,7 @@ class DrugList extends React.Component {
                                     {this.renderPharmaceuticalForm(drug)}
                                     {this.renderDisease(drug)}
                                     {User.isAuthenticated() &&
-                                    <section className="diseases">
+                                    <section className="diseases row">
                                         <div className="col-sm-12">
                                             <p><b> {t('application') + ": "}</b></p>
                                             {drug.personalizedInformation &&
@@ -473,7 +473,7 @@ class DrugList extends React.Component {
                                                     <button type="button" className={btnlike.join(' btnheight ')}
                                                             onClick={() => this.toggleTaking(drug)}>
                                                 <span
-                                                    className={"glyphicon white " + (drug.isTaken ? 'glyphicon-minus' : 'glyphicon-heart')}/>
+                                                    className={" white" + ((!drug.isTaken) ? " far fa-heart" : " fas fa-heart")}/>
                                                     </button>
                                                 </div>
                                                 <div className={coltorowClass.join(' ')}>
@@ -530,14 +530,10 @@ class DrugList extends React.Component {
 
         return (
             <div><Carousel1/>
+
                 <div className="container">
-
-                    {User.isAuthenticated() &&
-                    <MostVisitedItems />
-                    }
-
-
-                    <div className="well well-sm hidden-xs">
+                    <h2>{title}</h2>
+                    <div className="well well-sm hidden-sm hidden-xs">
                         <div className="btn-group">
                             <div id="list" className="btn btn-default btn-sm"
                                  onClick={this.toggle.bind(this)}> {this.state.addClass ?
@@ -582,7 +578,14 @@ class DrugList extends React.Component {
                     </div>
 
                 </div>
-
+                <hr/>
+                {User.isAuthenticated() && drugs && drugs.length > 0 &&
+                    <div>
+                        <div className="row xs-center text-center"><h4 className="mostvis_h3">{t('mostVisitedItems')}</h4>
+                        </div>
+                        <hr/>
+                        <MostVisitedItems /></div>
+                }
             </div>
         );
     }
