@@ -48481,17 +48481,22 @@ var Home = function (_React$Component) {
                             )
                         )
                     ),
-                    _react2.default.createElement(
+                    _User2.default.isAuthenticated() && _react2.default.createElement(
                         "div",
-                        { className: "row xs-center text-center" },
+                        null,
                         _react2.default.createElement(
-                            "h4",
-                            { className: "mostvis_h3" },
-                            t('mostVisitedItems')
-                        )
-                    ),
-                    _react2.default.createElement("hr", null),
-                    _User2.default.isAuthenticated() && _react2.default.createElement(_most_visited_items2.default, null)
+                            "div",
+                            { className: "row xs-center text-center" },
+                            _react2.default.createElement(
+                                "h4",
+                                {
+                                    className: "mostvis_h3" },
+                                t('mostVisitedItems')
+                            )
+                        ),
+                        _react2.default.createElement("hr", null),
+                        _react2.default.createElement(_most_visited_items2.default, null)
+                    )
                 )
             );
         }

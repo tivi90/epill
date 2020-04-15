@@ -69,11 +69,15 @@ class Home extends React.Component {
                         </div>
                     </div>
 
-                    <div className="row xs-center text-center"><h4 className="mostvis_h3">{t('mostVisitedItems')}</h4>
-                    </div>
-                    <hr/>
+
                     {User.isAuthenticated() &&
-                    <MostVisitedItems/>
+                    <div>
+                        <div className="row xs-center text-center"><h4
+                            className="mostvis_h3">{t('mostVisitedItems')}</h4>
+                        </div>
+                        <hr/>
+                        <MostVisitedItems/>
+                    </div>
                     }
                 </div>
             </div>

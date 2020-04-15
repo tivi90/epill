@@ -927,6 +927,13 @@ INSERT INTO drug_word_explaination (iddrug, idword_Explaination) VALUES (12,7);
 
 INSERT INTO interaction (id, interaction) VALUES (1, 'Kann zu Durchfall führen');
 INSERT INTO interaction (id, interaction) VALUES (2, 'Kann sehr ermüdend wirken');
+INSERT INTO interaction (id, interaction) VALUES (3, 'Unterzuckerung kann erhöht werden');
+INSERT INTO interaction (id, interaction) VALUES (4, 'plötzlichem Heißhunger');
+INSERT INTO interaction (id, interaction) VALUES (5, '  Schwitzen');
+INSERT INTO interaction (id, interaction) VALUES (6, '  Zittern');
+INSERT INTO interaction (id, interaction) VALUES (7, '  Herzklopfen');
+INSERT INTO interaction (id, interaction) VALUES (8, '  Anstieg des Blutzuckerspiegels');
+
 
 
 --
@@ -934,7 +941,7 @@ INSERT INTO interaction (id, interaction) VALUES (2, 'Kann sehr ermüdend wirken
 --
 
 INSERT INTO interaction_drug (idinteraction, iddrug) VALUES (1, 2), (1, 3), (1, 5), (2, 3);
-
+ 
 --
 -- Dumping data for table `drug_interaction`
 --
