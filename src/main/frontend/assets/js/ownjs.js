@@ -9,7 +9,7 @@ $(window).scroll(function () {
 
 $(window).scroll(function () {
 
-    if ($(this).scrollTop() > 530) {
+    if ($(this).scrollTop() > 600) {
         $('.like-round-button').fadeOut();
     } else {
         $('.like-round-button').fadeIn();

@@ -1,6 +1,6 @@
 $(window).scroll(function () {
 
-    if ($(this).scrollTop() > 340) {
+    if ($(this).scrollTop() > 390) {
         $('.report-round-button').fadeOut();
     } else {
         $('.report-round-button').fadeIn();
@@ -9,7 +9,7 @@ $(window).scroll(function () {
 
 $(window).scroll(function () {
 
-    if ($(this).scrollTop() > 440) {
+    if ($(this).scrollTop() > 600) {
         $('.like-round-button').fadeOut();
     } else {
         $('.like-round-button').fadeIn();

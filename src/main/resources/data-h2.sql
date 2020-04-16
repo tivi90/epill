@@ -1322,7 +1322,8 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
 <div class="panel-group" id="accordion" style="margin: 30 0 30 0;">
     <div class="panel panel-default">
         <div class="panel-heading">
-            <h4 class="panel-title text-center-xs" data-toggle="collapse" data-target="#collapseOne">
+            <h4 class="panel-title text-center-xs" data-toggle="collapse" data-target="#collapseOne"
+                data-parent="#accordion">
                 <img width="40" src="./../../assets/icons/10.svg" /> <span
                     class="hidden-lg hidden-sm hidden-md"><br><br></span> Einnahme von Metformin Lich zusammen
                 mit
@@ -1368,7 +1369,8 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
     </div>
     <div class="panel panel-default">
         <div class="panel-heading">
-            <h4 class="panel-title text-center-xs" data-toggle="collapse" data-target="#collapseTwo">
+            <h4 class="panel-title text-center-xs" data-toggle="collapse" data-target="#collapseTwo"
+                data-parent="#accordion">
 
                 <img width="40" src="./../../assets/icons/5.svg" /> <span
                     class="hidden-lg hidden-sm hidden-md"><br><br></span> Einnahme von Metformin Lich zusammen
@@ -1392,7 +1394,8 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
     </div>
     <div class="panel panel-default">
         <div class="panel-heading">
-            <h4 class="panel-title text-center-xs" data-toggle="collapse" data-target="#collapseThree">
+            <h4 class="panel-title text-center-xs" data-toggle="collapse" data-target="#collapseThree"
+                data-parent="#accordion">
                 <img width="40" src="./../../assets/icons/8.svg" /> <span
                     class="hidden-lg hidden-sm hidden-md"><br><br></span> Schwangerschaft und Stillzeit
             </h4>
@@ -1412,7 +1415,8 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
     </div>
     <div class="panel panel-default">
         <div class="panel-heading">
-            <h4 class="panel-title text-center-xs" data-toggle="collapse" data-target="#collapseFour">
+            <h4 class="panel-title text-center-xs" data-toggle="collapse" data-target="#collapseFour"
+                data-parent="#accordion">
 
                 <img width="40" src="./../../assets/icons/3.svg" /> <span
                     class="hidden-lg hidden-sm hidden-md"><br><br></span>
@@ -1588,7 +1592,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic)VALUES
         </div>
         <div class="panel-body">
             <div class="tab-content">
-                <div class="tab-pane fade in active" id="tab1default">
+                <div class="tab-pane fade in active" name="tab1default" id="tab1default">
                     <div class="row content_header" style="margin-top: 15px;">
                         <table class="sideffect_table  ">
 
@@ -1619,7 +1623,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic)VALUES
                     </div>
 
                 </div>
-                <div class="tab-pane fade" id="tab2default">
+                <div class="tab-pane fade" name="tab2default"  id="tab2default">
                     <div class="row content_header" style="margin-top: 15px;">
                         <table class="sideffect_table ">
 
@@ -1657,7 +1661,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic)VALUES
                         </table>
                     </div>
                 </div>
-                <div class="tab-pane fade" id="tab3default">
+                <div class="tab-pane fade" name="tab3default" id="tab3default">
                     <div class="row content_header" style="margin-top: 15px;">
                         <table class="sideffect_table ">
 
@@ -1846,10 +1850,10 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic)VALUES
             <h4 class="modal-title xs-center">Teilung der Tablette</h4>
             <hr />
 
-            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+            <div id="carousel-med" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
-                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                    <li data-target="#carousel-med" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-med" data-slide-to="1"></li>
 
                 </ol>
                 <div class="carousel-inner">
@@ -1873,11 +1877,12 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic)VALUES
                         </div>
                     </div>
 
-                    <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
-                        <span class="glyphicon glyphicon-chevron-left"></span></a><a class="right carousel-control"
-                        href="#carousel-example-generic" data-slide="next"><span
-                            class="glyphicon glyphicon-chevron-right">
-                        </span></a>
+                    <a class="left carousel-control" href="#carousel-med" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                    </a>
+                    <a class="right carousel-control" href="#carousel-med" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"> </span>
+                    </a>
                 </div>
             </div>
         </div>
@@ -1890,7 +1895,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic)VALUES
         <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
             <div class="panel panel-default">
                 <div class="panel-heading head_panel" role="tab" id="headingOne">
-                    <h4 class="panel-title" data-toggle="collapse" data-target="#collapseOnee">
+                    <h4 class="panel-title" data-toggle="collapse" data-target="#collapseOnee" data-parent="#accordion">
 
                         Wenn Sie eine größere Menge von Metformin Lich eingenommen haben, als Sie
                         sollten
@@ -1923,7 +1928,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic)VALUES
             </div>
             <div class="panel panel-default">
                 <div class="panel-heading head_panel" role="tab" id="headingTwo">
-                    <h4 class="panel-title" data-toggle="collapse" data-target="#collapseTwoe">
+                    <h4 class="panel-title" data-toggle="collapse" data-target="#collapseTwoe" data-parent="#accordion">
 
                         Wenn Sie die Einnahme von Metformin Lich vergessen haben
                     </h4>

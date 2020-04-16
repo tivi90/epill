@@ -3,7 +3,12 @@ import React from "react";
 import scrollToComponent from 'react-scroll-to-component';
 import {translate} from "react-i18next";
 import {toast} from 'react-toastify';
-
+import {
+    BrowserView,
+    MobileView,
+    isBrowser,
+    isMobile
+} from 'react-device-detect';
 import Accordion from "./accordion";
 import Loading from "./loading";
 import User from "./../util/User";
@@ -325,23 +330,23 @@ class DrugDetail extends React.Component {
             <div className="col-sm-4 col-xs-6 text-center infopart" data-toggle="modal"
                  data-target="#drugform">
 
-                    <section className="diseases row" style={{cursor: "pointer"}}>
-                        {drug.pharmaceuticalForm.map(pharmaceuticalForm =>
-                            <img key={pharmaceuticalForm.id}
-                                 src={"./../../assets/p_form/" + pharmaceuticalForm.id + ".svg"}
-                                 className="drug-feature-icon infopic"
-                                 alt={pharmaceuticalForm.name}
-                                 title={pharmaceuticalForm.name}></img>
-                        )
-                            .reduce((prev, curr) => [prev, curr])}
+                <section className="diseases row" style={{cursor: "pointer"}}>
+                    {drug.pharmaceuticalForm.map(pharmaceuticalForm =>
+                        <img key={pharmaceuticalForm.id}
+                             src={"./../../assets/p_form/" + pharmaceuticalForm.id + ".svg"}
+                             className="drug-feature-icon infopic"
+                             alt={pharmaceuticalForm.name}
+                             title={pharmaceuticalForm.name}></img>
+                    )
+                        .reduce((prev, curr) => [prev, curr])}
 
-                        <p><b>  {t('pharmaceuticalForm') + ": "} </b></p>
-                        <span>
+                    <p><b>  {t('pharmaceuticalForm') + ": "} </b></p>
+                    <span>
                     {drug.pharmaceuticalForm.map(pharmaceuticalForm => <span
                         key={pharmaceuticalForm.id}>{pharmaceuticalForm.name} <br/> </span>)
                         .reduce((prev, curr) => [prev, ', ', curr])}
                 </span>
-                    </section>
+                </section>
                 <div style={{cursor: "pointer"}} data-toggle="modal"
                      data-target="#drugform"><i
                     className="fas fa-info-circle"/></div>
@@ -1509,11 +1514,13 @@ class DrugDetail extends React.Component {
 
                                         </div>
                                     </div>
+                                    <MobileView>
                                     <div className="row tab_headers  hidden-lg hidden-md hidden-sm">
                                         <div className="panel-group" id="accordion">
                                             <div className="panel panel-default">
                                                 <div className="panel-heading mob_heading">
-                                                    <h4 className="panel-title text-center-xs mob_title" data-toggle="collapse"
+                                                    <h4 className="panel-title text-center-xs mob_title"
+                                                        data-toggle="collapse"
                                                         data-target="#mobile_tab1">
                  <span className="hidden-lg hidden-sm hidden-md">
                 </span> Allgemeine Informationen
@@ -1525,13 +1532,15 @@ class DrugDetail extends React.Component {
                                                             {this.renderPackSecdesc(drug)}
                                                         </div>
                                                         <div className="row">
-                                                                <span dangerouslySetInnerHTML={this.createMarkup(t("helptext_general"))}/>
+                                                            <span
+                                                                dangerouslySetInnerHTML={this.createMarkup(t("helptext_general"))}/>
 
                                                             {this.renderPharmaceuticalForm(drug)}
                                                             <div className="col-sm-4 col-xs-6 text-center infopart">
                                                                 {this.renderDisease(drug)}
                                                             </div>
-                                                            <div className="col-sm-4 col-xs-6 text-center infopart" data-toggle="modal"
+                                                            <div className="col-sm-4 col-xs-6 text-center infopart"
+                                                                 data-toggle="modal"
                                                                  data-target="#infosubstance">
                                                                 {this.renderActiveSubstance(drug)}
                                                                 <div style={{cursor: "pointer"}} data-toggle="modal"
@@ -1552,7 +1561,8 @@ class DrugDetail extends React.Component {
                                                         <div className="row text-center">
                                                             <p>
                                                                 <a onClick={this.toggleShowAdditionalInfo}>
-                                                                    <button className="btn btn-secondary black weiter_btn">
+                                                                    <button
+                                                                        className="btn btn-secondary black weiter_btn">
                                                                         {!showAdditionalInfo &&
                                                                         <span>{t('viewDetails')}</span>}
                                                                         {showAdditionalInfo &&
@@ -1567,7 +1577,8 @@ class DrugDetail extends React.Component {
                                             </div>
                                             <div className="panel panel-default">
                                                 <div className="panel-heading mob_heading">
-                                                    <h4 className="panel-title mob_title text-center-xs" data-toggle="collapse"
+                                                    <h4 className="panel-title mob_title text-center-xs"
+                                                        data-toggle="collapse"
                                                         data-target="#mobile_tab2">
                  <span className="hidden-lg hidden-sm hidden-md">
                 </span> Vor der Anwendung
@@ -1582,7 +1593,8 @@ class DrugDetail extends React.Component {
                                             </div>
                                             <div className="panel panel-default">
                                                 <div className="panel-heading mob_heading">
-                                                    <h4 className="panel-title mob_title text-center-xs" data-toggle="collapse"
+                                                    <h4 className="panel-title mob_title text-center-xs"
+                                                        data-toggle="collapse"
                                                         data-target="#mobile_tab3">
                  <span className="hidden-lg hidden-sm hidden-md">
                 </span> Anwendung
@@ -1600,7 +1612,8 @@ class DrugDetail extends React.Component {
                                             </div>
                                             <div className="panel panel-default">
                                                 <div className="panel-heading mob_heading">
-                                                    <h4 className="panel-title mob_title text-center-xs" data-toggle="collapse"
+                                                    <h4 className="panel-title mob_title text-center-xs"
+                                                        data-toggle="collapse"
                                                         data-target="#mobile_tab4">
                  <span className="hidden-lg hidden-sm hidden-md">
                 </span> Nebenwirkungen
@@ -1633,6 +1646,8 @@ class DrugDetail extends React.Component {
                                             </div>
                                         </div>
                                     </div>
+                                    </MobileView>
+                                    <BrowserView>
                                     <div>
                                         <ul className="nav nav-pills brand-pills nav-stacked hidden-xs" role="tablist">
                                             <li role="presentation" className="brand-nav active">
@@ -1670,7 +1685,11 @@ class DrugDetail extends React.Component {
                                                 </a></li>
                                         </ul>
                                     </div>
+                                    </BrowserView>
+
                                 </div>
+                                <BrowserView>
+
                                 <div className="col-xs-12 col-sm-12 col-md-9 hidden-xs infobox">
                                     <div className="tab-content">
                                         <div role="tabpanel" className="tab-pane active w3-animate-opacity tab1"
@@ -1679,13 +1698,15 @@ class DrugDetail extends React.Component {
                                                 {this.renderPackSecdesc(drug)}
                                             </div>
                                             <div className="row">
-                                                    <span dangerouslySetInnerHTML={this.createMarkup(t("helptext_general"))}/>
+                                                <span
+                                                    dangerouslySetInnerHTML={this.createMarkup(t("helptext_general"))}/>
 
                                                 {this.renderPharmaceuticalForm(drug)}
                                                 <div className="col-sm-4 col-xs-6 text-center infopart">
                                                     {this.renderDisease(drug)}
                                                 </div>
-                                                <div className="col-sm-4 col-xs-6 text-center infopart" data-toggle="modal"
+                                                <div className="col-sm-4 col-xs-6 text-center infopart"
+                                                     data-toggle="modal"
                                                      data-target="#infosubstance">
                                                     {this.renderActiveSubstance(drug)}
                                                     <div style={{cursor: "pointer"}} data-toggle="modal"
@@ -1752,6 +1773,8 @@ class DrugDetail extends React.Component {
                                         </div>
                                     </div>
                                 </div>
+                                </BrowserView>
+
                             </div>
                         </div>
                     </div>

@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 462);
+/******/ 	return __webpack_require__(__webpack_require__.s = 464);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -4265,7 +4265,7 @@
     return _moment;
 
 }));
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(461)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(463)(module)))
 
 /***/ }),
 /* 1 */
@@ -4773,23 +4773,23 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.Trans = exports.I18nextProvider = exports.Interpolate = exports.translate = exports.loadNamespaces = undefined;
 
-var _translate = __webpack_require__(414);
+var _translate = __webpack_require__(415);
 
 var _translate2 = _interopRequireDefault(_translate);
 
-var _interpolate = __webpack_require__(411);
+var _interpolate = __webpack_require__(412);
 
 var _interpolate2 = _interopRequireDefault(_interpolate);
 
-var _trans = __webpack_require__(413);
+var _trans = __webpack_require__(414);
 
 var _trans2 = _interopRequireDefault(_trans);
 
-var _I18nextProvider = __webpack_require__(410);
+var _I18nextProvider = __webpack_require__(411);
 
 var _I18nextProvider2 = _interopRequireDefault(_I18nextProvider);
 
-var _loadNamespaces = __webpack_require__(412);
+var _loadNamespaces = __webpack_require__(413);
 
 var _loadNamespaces2 = _interopRequireDefault(_loadNamespaces);
 
@@ -5165,33 +5165,33 @@ exports.default = new User();
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__BrowserRouter__ = __webpack_require__(418);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__BrowserRouter__ = __webpack_require__(419);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "BrowserRouter", function() { return __WEBPACK_IMPORTED_MODULE_0__BrowserRouter__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__HashRouter__ = __webpack_require__(419);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__HashRouter__ = __webpack_require__(420);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "HashRouter", function() { return __WEBPACK_IMPORTED_MODULE_1__HashRouter__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Link__ = __webpack_require__(223);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Link", function() { return __WEBPACK_IMPORTED_MODULE_2__Link__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__MemoryRouter__ = __webpack_require__(420);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__MemoryRouter__ = __webpack_require__(421);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "MemoryRouter", function() { return __WEBPACK_IMPORTED_MODULE_3__MemoryRouter__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__NavLink__ = __webpack_require__(421);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__NavLink__ = __webpack_require__(422);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "NavLink", function() { return __WEBPACK_IMPORTED_MODULE_4__NavLink__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Prompt__ = __webpack_require__(422);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Prompt__ = __webpack_require__(423);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Prompt", function() { return __WEBPACK_IMPORTED_MODULE_5__Prompt__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Redirect__ = __webpack_require__(423);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Redirect__ = __webpack_require__(424);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Redirect", function() { return __WEBPACK_IMPORTED_MODULE_6__Redirect__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Route__ = __webpack_require__(224);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Route", function() { return __WEBPACK_IMPORTED_MODULE_7__Route__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__Router__ = __webpack_require__(73);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Router", function() { return __WEBPACK_IMPORTED_MODULE_8__Router__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__StaticRouter__ = __webpack_require__(424);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__StaticRouter__ = __webpack_require__(425);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "StaticRouter", function() { return __WEBPACK_IMPORTED_MODULE_9__StaticRouter__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__Switch__ = __webpack_require__(425);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__Switch__ = __webpack_require__(426);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Switch", function() { return __WEBPACK_IMPORTED_MODULE_10__Switch__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__generatePath__ = __webpack_require__(426);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__generatePath__ = __webpack_require__(427);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "generatePath", function() { return __WEBPACK_IMPORTED_MODULE_11__generatePath__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__matchPath__ = __webpack_require__(427);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__matchPath__ = __webpack_require__(428);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "matchPath", function() { return __WEBPACK_IMPORTED_MODULE_12__matchPath__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__withRouter__ = __webpack_require__(428);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__withRouter__ = __webpack_require__(429);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "withRouter", function() { return __WEBPACK_IMPORTED_MODULE_13__withRouter__["a"]; });
 
 
@@ -5893,7 +5893,7 @@ module.exports = {
 var debugTool = null;
 
 if (process.env.NODE_ENV !== 'production') {
-  var ReactDebugTool = __webpack_require__(368);
+  var ReactDebugTool = __webpack_require__(369);
   debugTool = ReactDebugTool;
 }
 
@@ -6833,11 +6833,11 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.toast = exports.ToastContainer = undefined;
 
-var _ToastContainer = __webpack_require__(434);
+var _ToastContainer = __webpack_require__(435);
 
 var _ToastContainer2 = _interopRequireDefault(_ToastContainer);
 
-var _toastify = __webpack_require__(435);
+var _toastify = __webpack_require__(436);
 
 var _toastify2 = _interopRequireDefault(_toastify);
 
@@ -7486,10 +7486,10 @@ module.exports = reactProdInvariant;
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_extends__ = __webpack_require__(250);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_resolve_pathname__ = __webpack_require__(452);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_value_equal__ = __webpack_require__(460);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_tiny_warning__ = __webpack_require__(457);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_tiny_invariant__ = __webpack_require__(456);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_resolve_pathname__ = __webpack_require__(453);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_value_equal__ = __webpack_require__(462);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_tiny_warning__ = __webpack_require__(458);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_tiny_invariant__ = __webpack_require__(457);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return createBrowserHistory; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return createHashHistory; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return createMemoryHistory; });
@@ -8555,7 +8555,7 @@ module.exports = DOMLazyTree;
 
 
 
-var ReactRef = __webpack_require__(382);
+var ReactRef = __webpack_require__(383);
 var ReactInstrumentation = __webpack_require__(16);
 
 var warning = __webpack_require__(4);
@@ -8729,16 +8729,16 @@ module.exports = ReactReconciler;
 
 var _assign = __webpack_require__(6);
 
-var ReactChildren = __webpack_require__(441);
+var ReactChildren = __webpack_require__(442);
 var ReactComponent = __webpack_require__(76);
-var ReactPureComponent = __webpack_require__(446);
-var ReactClass = __webpack_require__(442);
-var ReactDOMFactories = __webpack_require__(443);
+var ReactPureComponent = __webpack_require__(447);
+var ReactClass = __webpack_require__(443);
+var ReactDOMFactories = __webpack_require__(444);
 var ReactElement = __webpack_require__(27);
-var ReactPropTypes = __webpack_require__(444);
-var ReactVersion = __webpack_require__(447);
+var ReactPropTypes = __webpack_require__(445);
+var ReactVersion = __webpack_require__(448);
 
-var onlyChild = __webpack_require__(450);
+var onlyChild = __webpack_require__(451);
 var warning = __webpack_require__(4);
 
 var createElement = ReactElement.createElement;
@@ -9451,7 +9451,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _Cookies = __webpack_require__(458);
+var _Cookies = __webpack_require__(460);
 
 var _Cookies2 = _interopRequireDefault(_Cookies);
 
@@ -9483,7 +9483,7 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactRouterDom = __webpack_require__(13);
 
-var _reactRouter = __webpack_require__(429);
+var _reactRouter = __webpack_require__(430);
 
 var _reactI18next = __webpack_require__(8);
 
@@ -10055,10 +10055,10 @@ module.exports = EventPluginRegistry;
 var _assign = __webpack_require__(6);
 
 var EventPluginRegistry = __webpack_require__(42);
-var ReactEventEmitterMixin = __webpack_require__(372);
+var ReactEventEmitterMixin = __webpack_require__(373);
 var ViewportMetrics = __webpack_require__(212);
 
-var getVendorPrefixedEventName = __webpack_require__(407);
+var getVendorPrefixedEventName = __webpack_require__(408);
 var isEventSupported = __webpack_require__(70);
 
 /**
@@ -11523,7 +11523,7 @@ module.exports = ReactPropTypesSecret;
 
 
 var DOMLazyTree = __webpack_require__(30);
-var Danger = __webpack_require__(345);
+var Danger = __webpack_require__(346);
 var ReactDOMComponentTree = __webpack_require__(9);
 var ReactInstrumentation = __webpack_require__(16);
 
@@ -25368,7 +25368,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 "use strict";
 
 
-module.exports = __webpack_require__(353);
+module.exports = __webpack_require__(354);
 
 
 /***/ }),
@@ -25671,7 +25671,7 @@ var DOMProperty = __webpack_require__(22);
 var ReactDOMComponentTree = __webpack_require__(9);
 var ReactInstrumentation = __webpack_require__(16);
 
-var quoteAttributeValueForBrowser = __webpack_require__(408);
+var quoteAttributeValueForBrowser = __webpack_require__(409);
 var warning = __webpack_require__(4);
 
 var VALID_ATTRIBUTE_NAME_REGEX = new RegExp('^[' + DOMProperty.ATTRIBUTE_NAME_START_CHAR + '][' + DOMProperty.ATTRIBUTE_NAME_CHAR + ']*$');
@@ -26261,7 +26261,7 @@ module.exports = ReactHostComponent;
 
 
 
-var ReactDOMSelection = __webpack_require__(363);
+var ReactDOMSelection = __webpack_require__(364);
 
 var containsNode = __webpack_require__(296);
 var focusNode = __webpack_require__(89);
@@ -26395,12 +26395,12 @@ var React = __webpack_require__(32);
 var ReactBrowserEventEmitter = __webpack_require__(43);
 var ReactCurrentOwner = __webpack_require__(19);
 var ReactDOMComponentTree = __webpack_require__(9);
-var ReactDOMContainerInfo = __webpack_require__(355);
-var ReactDOMFeatureFlags = __webpack_require__(357);
+var ReactDOMContainerInfo = __webpack_require__(356);
+var ReactDOMFeatureFlags = __webpack_require__(358);
 var ReactFeatureFlags = __webpack_require__(206);
 var ReactInstanceMap = __webpack_require__(37);
 var ReactInstrumentation = __webpack_require__(16);
-var ReactMarkupChecksum = __webpack_require__(377);
+var ReactMarkupChecksum = __webpack_require__(378);
 var ReactReconciler = __webpack_require__(31);
 var ReactUpdateQueue = __webpack_require__(65);
 var ReactUpdates = __webpack_require__(18);
@@ -27315,11 +27315,11 @@ module.exports = inputValueTracking;
 var _prodInvariant = __webpack_require__(5),
     _assign = __webpack_require__(6);
 
-var ReactCompositeComponent = __webpack_require__(352);
+var ReactCompositeComponent = __webpack_require__(353);
 var ReactEmptyComponent = __webpack_require__(205);
 var ReactHostComponent = __webpack_require__(207);
 
-var getNextDebugID = __webpack_require__(449);
+var getNextDebugID = __webpack_require__(450);
 var invariant = __webpack_require__(3);
 var warning = __webpack_require__(4);
 
@@ -27557,9 +27557,9 @@ module.exports = setTextContent;
 var _prodInvariant = __webpack_require__(5);
 
 var ReactCurrentOwner = __webpack_require__(19);
-var REACT_ELEMENT_TYPE = __webpack_require__(371);
+var REACT_ELEMENT_TYPE = __webpack_require__(372);
 
-var getIteratorFn = __webpack_require__(405);
+var getIteratorFn = __webpack_require__(406);
 var invariant = __webpack_require__(3);
 var KeyEscapeUtils = __webpack_require__(61);
 var warning = __webpack_require__(4);
@@ -27727,9 +27727,9 @@ module.exports = traverseAllChildren;
 /* WEBPACK VAR INJECTION */(function(process) {
 
 if (process.env.NODE_ENV === 'production') {
-  module.exports = __webpack_require__(417);
+  module.exports = __webpack_require__(418);
 } else {
-  module.exports = __webpack_require__(416);
+  module.exports = __webpack_require__(417);
 }
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
@@ -28640,7 +28640,7 @@ var ReactCurrentOwner = __webpack_require__(19);
 var ReactComponentTreeHook = __webpack_require__(14);
 var ReactElement = __webpack_require__(27);
 
-var checkReactTypeSpec = __webpack_require__(448);
+var checkReactTypeSpec = __webpack_require__(449);
 
 var canDefineProperty = __webpack_require__(51);
 var getIteratorFn = __webpack_require__(237);
@@ -31552,7 +31552,7 @@ var autoReplace = function autoReplace() {
 
 
 
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(1), __webpack_require__(78), __webpack_require__(455).setImmediate))
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(1), __webpack_require__(78), __webpack_require__(456).setImmediate))
 
 /***/ }),
 /* 240 */
@@ -43673,13 +43673,15 @@ var _react = __webpack_require__(2);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactScrollToComponent = __webpack_require__(430);
+var _reactScrollToComponent = __webpack_require__(431);
 
 var _reactScrollToComponent2 = _interopRequireDefault(_reactScrollToComponent);
 
 var _reactI18next = __webpack_require__(8);
 
 var _reactToastify = __webpack_require__(23);
+
+var _reactDeviceDetect = __webpack_require__(340);
 
 var _accordion = __webpack_require__(269);
 
@@ -46024,209 +46026,220 @@ var DrugDetail = function (_React$Component) {
                                         )
                                     ),
                                     _react2.default.createElement(
-                                        "div",
-                                        { className: "row tab_headers  hidden-lg hidden-md hidden-sm" },
+                                        _reactDeviceDetect.MobileView,
+                                        null,
                                         _react2.default.createElement(
                                             "div",
-                                            { className: "panel-group", id: "accordion" },
+                                            { className: "row tab_headers  hidden-lg hidden-md hidden-sm" },
                                             _react2.default.createElement(
                                                 "div",
-                                                { className: "panel panel-default" },
+                                                { className: "panel-group", id: "accordion" },
                                                 _react2.default.createElement(
                                                     "div",
-                                                    { className: "panel-heading mob_heading" },
-                                                    _react2.default.createElement(
-                                                        "h4",
-                                                        { className: "panel-title text-center-xs mob_title", "data-toggle": "collapse",
-                                                            "data-target": "#mobile_tab1" },
-                                                        _react2.default.createElement("span", { className: "hidden-lg hidden-sm hidden-md" }),
-                                                        " Allgemeine Informationen"
-                                                    )
-                                                ),
-                                                _react2.default.createElement(
-                                                    "div",
-                                                    { id: "mobile_tab1", className: "panel-collapse collapse " },
+                                                    { className: "panel panel-default" },
                                                     _react2.default.createElement(
                                                         "div",
-                                                        { className: "panel-body" },
+                                                        { className: "panel-heading mob_heading" },
+                                                        _react2.default.createElement(
+                                                            "h4",
+                                                            { className: "panel-title text-center-xs mob_title",
+                                                                "data-toggle": "collapse",
+                                                                "data-target": "#mobile_tab1" },
+                                                            _react2.default.createElement("span", { className: "hidden-lg hidden-sm hidden-md" }),
+                                                            " Allgemeine Informationen"
+                                                        )
+                                                    ),
+                                                    _react2.default.createElement(
+                                                        "div",
+                                                        { id: "mobile_tab1", className: "panel-collapse collapse " },
                                                         _react2.default.createElement(
                                                             "div",
-                                                            { className: "row content_header" },
-                                                            this.renderPackSecdesc(drug)
-                                                        ),
-                                                        _react2.default.createElement(
-                                                            "div",
-                                                            { className: "row" },
-                                                            _react2.default.createElement("span", { dangerouslySetInnerHTML: this.createMarkup(t("helptext_general")) }),
-                                                            this.renderPharmaceuticalForm(drug),
+                                                            { className: "panel-body" },
                                                             _react2.default.createElement(
                                                                 "div",
-                                                                { className: "col-sm-4 col-xs-6 text-center infopart" },
-                                                                this.renderDisease(drug)
+                                                                { className: "row content_header" },
+                                                                this.renderPackSecdesc(drug)
                                                             ),
                                                             _react2.default.createElement(
                                                                 "div",
-                                                                { className: "col-sm-4 col-xs-6 text-center infopart", "data-toggle": "modal",
-                                                                    "data-target": "#infosubstance" },
-                                                                this.renderActiveSubstance(drug),
+                                                                { className: "row" },
+                                                                _react2.default.createElement("span", {
+                                                                    dangerouslySetInnerHTML: this.createMarkup(t("helptext_general")) }),
+                                                                this.renderPharmaceuticalForm(drug),
                                                                 _react2.default.createElement(
                                                                     "div",
-                                                                    { style: { cursor: "pointer" }, "data-toggle": "modal",
+                                                                    { className: "col-sm-4 col-xs-6 text-center infopart" },
+                                                                    this.renderDisease(drug)
+                                                                ),
+                                                                _react2.default.createElement(
+                                                                    "div",
+                                                                    { className: "col-sm-4 col-xs-6 text-center infopart",
+                                                                        "data-toggle": "modal",
                                                                         "data-target": "#infosubstance" },
-                                                                    _react2.default.createElement("i", {
-                                                                        className: "fas fa-info-circle" })
-                                                                )
-                                                            ),
-                                                            showAdditionalInfo && _react2.default.createElement(
-                                                                "div",
-                                                                { className: "" },
-                                                                _react2.default.createElement(
-                                                                    "div",
-                                                                    { className: "additional-information" },
+                                                                    this.renderActiveSubstance(drug),
                                                                     _react2.default.createElement(
-                                                                        "section",
-                                                                        null,
-                                                                        this.renderIndicationGroup(drug),
-                                                                        this.renderProductGroup(drug),
-                                                                        this.renderPZN(drug)
+                                                                        "div",
+                                                                        { style: { cursor: "pointer" }, "data-toggle": "modal",
+                                                                            "data-target": "#infosubstance" },
+                                                                        _react2.default.createElement("i", {
+                                                                            className: "fas fa-info-circle" })
+                                                                    )
+                                                                ),
+                                                                showAdditionalInfo && _react2.default.createElement(
+                                                                    "div",
+                                                                    { className: "" },
+                                                                    _react2.default.createElement(
+                                                                        "div",
+                                                                        { className: "additional-information" },
+                                                                        _react2.default.createElement(
+                                                                            "section",
+                                                                            null,
+                                                                            this.renderIndicationGroup(drug),
+                                                                            this.renderProductGroup(drug),
+                                                                            this.renderPZN(drug)
+                                                                        )
                                                                     )
                                                                 )
-                                                            )
-                                                        ),
-                                                        _react2.default.createElement(
-                                                            "div",
-                                                            { className: "row text-center" },
+                                                            ),
                                                             _react2.default.createElement(
-                                                                "p",
-                                                                null,
+                                                                "div",
+                                                                { className: "row text-center" },
                                                                 _react2.default.createElement(
-                                                                    "a",
-                                                                    { onClick: this.toggleShowAdditionalInfo },
+                                                                    "p",
+                                                                    null,
                                                                     _react2.default.createElement(
-                                                                        "button",
-                                                                        { className: "btn btn-secondary black weiter_btn" },
-                                                                        !showAdditionalInfo && _react2.default.createElement(
-                                                                            "span",
-                                                                            null,
-                                                                            t('viewDetails')
-                                                                        ),
-                                                                        showAdditionalInfo && _react2.default.createElement(
-                                                                            "span",
-                                                                            null,
-                                                                            t('hideDetails')
+                                                                        "a",
+                                                                        { onClick: this.toggleShowAdditionalInfo },
+                                                                        _react2.default.createElement(
+                                                                            "button",
+                                                                            {
+                                                                                className: "btn btn-secondary black weiter_btn" },
+                                                                            !showAdditionalInfo && _react2.default.createElement(
+                                                                                "span",
+                                                                                null,
+                                                                                t('viewDetails')
+                                                                            ),
+                                                                            showAdditionalInfo && _react2.default.createElement(
+                                                                                "span",
+                                                                                null,
+                                                                                t('hideDetails')
+                                                                            )
                                                                         )
                                                                     )
                                                                 )
                                                             )
                                                         )
                                                     )
-                                                )
-                                            ),
-                                            _react2.default.createElement(
-                                                "div",
-                                                { className: "panel panel-default" },
-                                                _react2.default.createElement(
-                                                    "div",
-                                                    { className: "panel-heading mob_heading" },
-                                                    _react2.default.createElement(
-                                                        "h4",
-                                                        { className: "panel-title mob_title text-center-xs", "data-toggle": "collapse",
-                                                            "data-target": "#mobile_tab2" },
-                                                        _react2.default.createElement("span", { className: "hidden-lg hidden-sm hidden-md" }),
-                                                        " Vor der Anwendung"
-                                                    )
                                                 ),
                                                 _react2.default.createElement(
                                                     "div",
-                                                    { id: "mobile_tab2", className: "panel-collapse collapse " },
+                                                    { className: "panel panel-default" },
                                                     _react2.default.createElement(
                                                         "div",
-                                                        { className: "panel-body" },
-                                                        this.renderPackSecvor(drug)
-                                                    )
-                                                )
-                                            ),
-                                            _react2.default.createElement(
-                                                "div",
-                                                { className: "panel panel-default" },
-                                                _react2.default.createElement(
-                                                    "div",
-                                                    { className: "panel-heading mob_heading" },
-                                                    _react2.default.createElement(
-                                                        "h4",
-                                                        { className: "panel-title mob_title text-center-xs", "data-toggle": "collapse",
-                                                            "data-target": "#mobile_tab3" },
-                                                        _react2.default.createElement("span", { className: "hidden-lg hidden-sm hidden-md" }),
-                                                        " Anwendung"
-                                                    )
-                                                ),
-                                                _react2.default.createElement(
-                                                    "div",
-                                                    { id: "mobile_tab3", className: "panel-collapse collapse " },
+                                                        { className: "panel-heading mob_heading" },
+                                                        _react2.default.createElement(
+                                                            "h4",
+                                                            { className: "panel-title mob_title text-center-xs",
+                                                                "data-toggle": "collapse",
+                                                                "data-target": "#mobile_tab2" },
+                                                            _react2.default.createElement("span", { className: "hidden-lg hidden-sm hidden-md" }),
+                                                            " Vor der Anwendung"
+                                                        )
+                                                    ),
                                                     _react2.default.createElement(
                                                         "div",
-                                                        { className: "panel-body" },
+                                                        { id: "mobile_tab2", className: "panel-collapse collapse " },
                                                         _react2.default.createElement(
                                                             "div",
-                                                            { className: "row content_header" },
-                                                            _react2.default.createElement(
-                                                                "h1",
-                                                                null,
-                                                                "Dosierung und Anwendung"
-                                                            ),
-                                                            _react2.default.createElement("hr", null)
-                                                        ),
-                                                        this.renderPackSecdos(drug)
-                                                    )
-                                                )
-                                            ),
-                                            _react2.default.createElement(
-                                                "div",
-                                                { className: "panel panel-default" },
-                                                _react2.default.createElement(
-                                                    "div",
-                                                    { className: "panel-heading mob_heading" },
-                                                    _react2.default.createElement(
-                                                        "h4",
-                                                        { className: "panel-title mob_title text-center-xs", "data-toggle": "collapse",
-                                                            "data-target": "#mobile_tab4" },
-                                                        _react2.default.createElement("span", { className: "hidden-lg hidden-sm hidden-md" }),
-                                                        " Nebenwirkungen"
+                                                            { className: "panel-body" },
+                                                            this.renderPackSecvor(drug)
+                                                        )
                                                     )
                                                 ),
                                                 _react2.default.createElement(
                                                     "div",
-                                                    { id: "mobile_tab4", className: "panel-collapse collapse " },
+                                                    { className: "panel panel-default" },
                                                     _react2.default.createElement(
                                                         "div",
-                                                        { className: "panel-body" },
+                                                        { className: "panel-heading mob_heading" },
+                                                        _react2.default.createElement(
+                                                            "h4",
+                                                            { className: "panel-title mob_title text-center-xs",
+                                                                "data-toggle": "collapse",
+                                                                "data-target": "#mobile_tab3" },
+                                                            _react2.default.createElement("span", { className: "hidden-lg hidden-sm hidden-md" }),
+                                                            " Anwendung"
+                                                        )
+                                                    ),
+                                                    _react2.default.createElement(
+                                                        "div",
+                                                        { id: "mobile_tab3", className: "panel-collapse collapse " },
                                                         _react2.default.createElement(
                                                             "div",
-                                                            { className: "row content_header" },
-                                                            _react2.default.createElement(
-                                                                "h1",
-                                                                null,
-                                                                " Nebenwirkungen "
-                                                            ),
-                                                            _react2.default.createElement("hr", null),
-                                                            _react2.default.createElement(
-                                                                "h4",
-                                                                null,
-                                                                "Wie alle Arzneimittel kann auch dieses Arzneimittel Nebenwirkungen haben, die aber nicht bei jedem auftreten m\xFCssen."
-                                                            ),
-                                                            this.renderPackSecneben(drug),
+                                                            { className: "panel-body" },
                                                             _react2.default.createElement(
                                                                 "div",
-                                                                { className: "text-right" },
+                                                                { className: "row content_header" },
                                                                 _react2.default.createElement(
-                                                                    "button",
-                                                                    { type: "button",
-                                                                        className: "btn btn-success neben_button",
-                                                                        "data-toggle": "modal",
-                                                                        "data-target": "#melden" },
-                                                                    "Meldung von Nebenwirkungen",
-                                                                    _react2.default.createElement("i", { className: "fas fa-comment-medical",
-                                                                        style: { marginLeft: "15px" } })
+                                                                    "h1",
+                                                                    null,
+                                                                    "Dosierung und Anwendung"
+                                                                ),
+                                                                _react2.default.createElement("hr", null)
+                                                            ),
+                                                            this.renderPackSecdos(drug)
+                                                        )
+                                                    )
+                                                ),
+                                                _react2.default.createElement(
+                                                    "div",
+                                                    { className: "panel panel-default" },
+                                                    _react2.default.createElement(
+                                                        "div",
+                                                        { className: "panel-heading mob_heading" },
+                                                        _react2.default.createElement(
+                                                            "h4",
+                                                            { className: "panel-title mob_title text-center-xs",
+                                                                "data-toggle": "collapse",
+                                                                "data-target": "#mobile_tab4" },
+                                                            _react2.default.createElement("span", { className: "hidden-lg hidden-sm hidden-md" }),
+                                                            " Nebenwirkungen"
+                                                        )
+                                                    ),
+                                                    _react2.default.createElement(
+                                                        "div",
+                                                        { id: "mobile_tab4", className: "panel-collapse collapse " },
+                                                        _react2.default.createElement(
+                                                            "div",
+                                                            { className: "panel-body" },
+                                                            _react2.default.createElement(
+                                                                "div",
+                                                                { className: "row content_header" },
+                                                                _react2.default.createElement(
+                                                                    "h1",
+                                                                    null,
+                                                                    " Nebenwirkungen "
+                                                                ),
+                                                                _react2.default.createElement("hr", null),
+                                                                _react2.default.createElement(
+                                                                    "h4",
+                                                                    null,
+                                                                    "Wie alle Arzneimittel kann auch dieses Arzneimittel Nebenwirkungen haben, die aber nicht bei jedem auftreten m\xFCssen."
+                                                                ),
+                                                                this.renderPackSecneben(drug),
+                                                                _react2.default.createElement(
+                                                                    "div",
+                                                                    { className: "text-right" },
+                                                                    _react2.default.createElement(
+                                                                        "button",
+                                                                        { type: "button",
+                                                                            className: "btn btn-success neben_button",
+                                                                            "data-toggle": "modal",
+                                                                            "data-target": "#melden" },
+                                                                        "Meldung von Nebenwirkungen",
+                                                                        _react2.default.createElement("i", { className: "fas fa-comment-medical",
+                                                                            style: { marginLeft: "15px" } })
+                                                                    )
                                                                 )
                                                             )
                                                         )
@@ -46236,211 +46249,221 @@ var DrugDetail = function (_React$Component) {
                                         )
                                     ),
                                     _react2.default.createElement(
-                                        "div",
+                                        _reactDeviceDetect.BrowserView,
                                         null,
                                         _react2.default.createElement(
-                                            "ul",
-                                            { className: "nav nav-pills brand-pills nav-stacked hidden-xs", role: "tablist" },
+                                            "div",
+                                            null,
                                             _react2.default.createElement(
-                                                "li",
-                                                { role: "presentation", className: "brand-nav active" },
+                                                "ul",
+                                                { className: "nav nav-pills brand-pills nav-stacked hidden-xs", role: "tablist" },
                                                 _react2.default.createElement(
-                                                    "a",
-                                                    { href: "#tab1",
-                                                        "aria-controls": "tab1",
-                                                        role: "tab",
-                                                        "data-toggle": "tab" },
-                                                    "Allgemeine Informationen"
-                                                )
-                                            ),
-                                            _react2.default.createElement(
-                                                "div",
-                                                { id: "arrow-down" },
-                                                _react2.default.createElement(_reactFontawesome.FontAwesomeIcon, { icon: _freeSolidSvgIcons.faChevronDown })
-                                            ),
-                                            _react2.default.createElement(
-                                                "li",
-                                                { role: "presentation", className: "brand-nav" },
+                                                    "li",
+                                                    { role: "presentation", className: "brand-nav active" },
+                                                    _react2.default.createElement(
+                                                        "a",
+                                                        { href: "#tab1",
+                                                            "aria-controls": "tab1",
+                                                            role: "tab",
+                                                            "data-toggle": "tab" },
+                                                        "Allgemeine Informationen"
+                                                    )
+                                                ),
                                                 _react2.default.createElement(
-                                                    "a",
-                                                    { href: "#tab2",
-                                                        "aria-controls": "tab2",
-                                                        role: "tab",
-                                                        "data-toggle": "tab" },
-                                                    "Vor der Anwendung "
-                                                )
-                                            ),
-                                            _react2.default.createElement(
-                                                "div",
-                                                { id: "arrow-down" },
-                                                _react2.default.createElement(_reactFontawesome.FontAwesomeIcon, { icon: _freeSolidSvgIcons.faChevronDown })
-                                            ),
-                                            _react2.default.createElement(
-                                                "li",
-                                                { role: "presentation", className: "brand-nav" },
+                                                    "div",
+                                                    { id: "arrow-down" },
+                                                    _react2.default.createElement(_reactFontawesome.FontAwesomeIcon, { icon: _freeSolidSvgIcons.faChevronDown })
+                                                ),
                                                 _react2.default.createElement(
-                                                    "a",
-                                                    { href: "#tab3",
-                                                        "aria-controls": "tab3",
-                                                        role: "tab",
-                                                        "data-toggle": "tab" },
-                                                    "Anwendung"
-                                                )
-                                            ),
-                                            _react2.default.createElement(
-                                                "div",
-                                                { id: "arrow-down" },
-                                                _react2.default.createElement(_reactFontawesome.FontAwesomeIcon, { icon: _freeSolidSvgIcons.faChevronDown })
-                                            ),
-                                            _react2.default.createElement(
-                                                "li",
-                                                { role: "presentation", className: "brand-nav" },
+                                                    "li",
+                                                    { role: "presentation", className: "brand-nav" },
+                                                    _react2.default.createElement(
+                                                        "a",
+                                                        { href: "#tab2",
+                                                            "aria-controls": "tab2",
+                                                            role: "tab",
+                                                            "data-toggle": "tab" },
+                                                        "Vor der Anwendung "
+                                                    )
+                                                ),
                                                 _react2.default.createElement(
-                                                    "a",
-                                                    { href: "#tab4",
-                                                        "aria-controls": "tab4",
-                                                        role: "tab",
-                                                        "data-toggle": "tab" },
-                                                    "Nebenwirkungen"
+                                                    "div",
+                                                    { id: "arrow-down" },
+                                                    _react2.default.createElement(_reactFontawesome.FontAwesomeIcon, { icon: _freeSolidSvgIcons.faChevronDown })
+                                                ),
+                                                _react2.default.createElement(
+                                                    "li",
+                                                    { role: "presentation", className: "brand-nav" },
+                                                    _react2.default.createElement(
+                                                        "a",
+                                                        { href: "#tab3",
+                                                            "aria-controls": "tab3",
+                                                            role: "tab",
+                                                            "data-toggle": "tab" },
+                                                        "Anwendung"
+                                                    )
+                                                ),
+                                                _react2.default.createElement(
+                                                    "div",
+                                                    { id: "arrow-down" },
+                                                    _react2.default.createElement(_reactFontawesome.FontAwesomeIcon, { icon: _freeSolidSvgIcons.faChevronDown })
+                                                ),
+                                                _react2.default.createElement(
+                                                    "li",
+                                                    { role: "presentation", className: "brand-nav" },
+                                                    _react2.default.createElement(
+                                                        "a",
+                                                        { href: "#tab4",
+                                                            "aria-controls": "tab4",
+                                                            role: "tab",
+                                                            "data-toggle": "tab" },
+                                                        "Nebenwirkungen"
+                                                    )
                                                 )
                                             )
                                         )
                                     )
                                 ),
                                 _react2.default.createElement(
-                                    "div",
-                                    { className: "col-xs-12 col-sm-12 col-md-9 hidden-xs infobox" },
+                                    _reactDeviceDetect.BrowserView,
+                                    null,
                                     _react2.default.createElement(
                                         "div",
-                                        { className: "tab-content" },
+                                        { className: "col-xs-12 col-sm-12 col-md-9 hidden-xs infobox" },
                                         _react2.default.createElement(
                                             "div",
-                                            { role: "tabpanel", className: "tab-pane active w3-animate-opacity tab1",
-                                                id: "tab1", name: "tab1" },
+                                            { className: "tab-content" },
                                             _react2.default.createElement(
                                                 "div",
-                                                { className: "row content_header" },
-                                                this.renderPackSecdesc(drug)
-                                            ),
-                                            _react2.default.createElement(
-                                                "div",
-                                                { className: "row" },
-                                                _react2.default.createElement("span", { dangerouslySetInnerHTML: this.createMarkup(t("helptext_general")) }),
-                                                this.renderPharmaceuticalForm(drug),
+                                                { role: "tabpanel", className: "tab-pane active w3-animate-opacity tab1",
+                                                    id: "tab1", name: "tab1" },
                                                 _react2.default.createElement(
                                                     "div",
-                                                    { className: "col-sm-4 col-xs-6 text-center infopart" },
-                                                    this.renderDisease(drug)
+                                                    { className: "row content_header" },
+                                                    this.renderPackSecdesc(drug)
                                                 ),
                                                 _react2.default.createElement(
                                                     "div",
-                                                    { className: "col-sm-4 col-xs-6 text-center infopart", "data-toggle": "modal",
-                                                        "data-target": "#infosubstance" },
-                                                    this.renderActiveSubstance(drug),
+                                                    { className: "row" },
+                                                    _react2.default.createElement("span", {
+                                                        dangerouslySetInnerHTML: this.createMarkup(t("helptext_general")) }),
+                                                    this.renderPharmaceuticalForm(drug),
                                                     _react2.default.createElement(
                                                         "div",
-                                                        { style: { cursor: "pointer" }, "data-toggle": "modal",
+                                                        { className: "col-sm-4 col-xs-6 text-center infopart" },
+                                                        this.renderDisease(drug)
+                                                    ),
+                                                    _react2.default.createElement(
+                                                        "div",
+                                                        { className: "col-sm-4 col-xs-6 text-center infopart",
+                                                            "data-toggle": "modal",
                                                             "data-target": "#infosubstance" },
-                                                        _react2.default.createElement("i", {
-                                                            className: "fas fa-info-circle" })
-                                                    )
-                                                ),
-                                                showAdditionalInfo && _react2.default.createElement(
-                                                    "div",
-                                                    { className: "" },
-                                                    _react2.default.createElement(
-                                                        "div",
-                                                        { className: "additional-information" },
+                                                        this.renderActiveSubstance(drug),
                                                         _react2.default.createElement(
-                                                            "section",
-                                                            null,
-                                                            this.renderIndicationGroup(drug),
-                                                            this.renderProductGroup(drug),
-                                                            this.renderPZN(drug)
+                                                            "div",
+                                                            { style: { cursor: "pointer" }, "data-toggle": "modal",
+                                                                "data-target": "#infosubstance" },
+                                                            _react2.default.createElement("i", {
+                                                                className: "fas fa-info-circle" })
+                                                        )
+                                                    ),
+                                                    showAdditionalInfo && _react2.default.createElement(
+                                                        "div",
+                                                        { className: "" },
+                                                        _react2.default.createElement(
+                                                            "div",
+                                                            { className: "additional-information" },
+                                                            _react2.default.createElement(
+                                                                "section",
+                                                                null,
+                                                                this.renderIndicationGroup(drug),
+                                                                this.renderProductGroup(drug),
+                                                                this.renderPZN(drug)
+                                                            )
                                                         )
                                                     )
-                                                )
-                                            ),
-                                            _react2.default.createElement(
-                                                "div",
-                                                { className: "row text-center" },
+                                                ),
                                                 _react2.default.createElement(
-                                                    "p",
-                                                    null,
+                                                    "div",
+                                                    { className: "row text-center" },
                                                     _react2.default.createElement(
-                                                        "a",
-                                                        { onClick: this.toggleShowAdditionalInfo },
+                                                        "p",
+                                                        null,
                                                         _react2.default.createElement(
-                                                            "button",
-                                                            { className: "btn btn-secondary black weiter_btn" },
-                                                            !showAdditionalInfo && _react2.default.createElement(
-                                                                "span",
-                                                                null,
-                                                                t('viewDetails')
-                                                            ),
-                                                            showAdditionalInfo && _react2.default.createElement(
-                                                                "span",
-                                                                null,
-                                                                t('hideDetails')
+                                                            "a",
+                                                            { onClick: this.toggleShowAdditionalInfo },
+                                                            _react2.default.createElement(
+                                                                "button",
+                                                                { className: "btn btn-secondary black weiter_btn" },
+                                                                !showAdditionalInfo && _react2.default.createElement(
+                                                                    "span",
+                                                                    null,
+                                                                    t('viewDetails')
+                                                                ),
+                                                                showAdditionalInfo && _react2.default.createElement(
+                                                                    "span",
+                                                                    null,
+                                                                    t('hideDetails')
+                                                                )
                                                             )
                                                         )
                                                     )
                                                 )
-                                            )
-                                        ),
-                                        _react2.default.createElement(
-                                            "div",
-                                            { role: "tabpanel", className: "tab-pane w3-animate-opacity", id: "tab2",
-                                                name: "tab2" },
-                                            this.renderPackSecvor(drug)
-                                        ),
-                                        _react2.default.createElement(
-                                            "div",
-                                            { role: "tabpanel", className: "tab-pane w3-animate-opacity", id: "tab3",
-                                                name: "tab3" },
-                                            _react2.default.createElement(
-                                                "div",
-                                                { className: "row content_header" },
-                                                _react2.default.createElement(
-                                                    "h1",
-                                                    null,
-                                                    "Dosierung und Anwendung"
-                                                ),
-                                                _react2.default.createElement("hr", null)
-                                            ),
-                                            this.renderPackSecdos(drug)
-                                        ),
-                                        _react2.default.createElement(
-                                            "div",
-                                            { role: "tabpanel", className: "tab-pane w3-animate-opacity", id: "tab4",
-                                                name: "tab4" },
-                                            _react2.default.createElement(
-                                                "div",
-                                                { className: "row content_header" },
-                                                _react2.default.createElement(
-                                                    "h1",
-                                                    null,
-                                                    " Nebenwirkungen "
-                                                ),
-                                                _react2.default.createElement("hr", null),
-                                                _react2.default.createElement(
-                                                    "h4",
-                                                    null,
-                                                    "Wie alle Arzneimittel kann auch dieses Arzneimittel Nebenwirkungen haben, die aber nicht bei jedem auftreten m\xFCssen."
-                                                ),
-                                                this.renderPackSecneben(drug)
                                             ),
                                             _react2.default.createElement(
                                                 "div",
-                                                { className: "text-right" },
+                                                { role: "tabpanel", className: "tab-pane w3-animate-opacity", id: "tab2",
+                                                    name: "tab2" },
+                                                this.renderPackSecvor(drug)
+                                            ),
+                                            _react2.default.createElement(
+                                                "div",
+                                                { role: "tabpanel", className: "tab-pane w3-animate-opacity", id: "tab3",
+                                                    name: "tab3" },
                                                 _react2.default.createElement(
-                                                    "button",
-                                                    { type: "button", className: "btn btn-success neben_button",
-                                                        "data-toggle": "modal",
-                                                        "data-target": "#melden" },
-                                                    "Meldung von Nebenwirkungen",
-                                                    _react2.default.createElement("i", { className: "fas fa-comment-medical",
-                                                        style: { marginLeft: "15px" } })
+                                                    "div",
+                                                    { className: "row content_header" },
+                                                    _react2.default.createElement(
+                                                        "h1",
+                                                        null,
+                                                        "Dosierung und Anwendung"
+                                                    ),
+                                                    _react2.default.createElement("hr", null)
+                                                ),
+                                                this.renderPackSecdos(drug)
+                                            ),
+                                            _react2.default.createElement(
+                                                "div",
+                                                { role: "tabpanel", className: "tab-pane w3-animate-opacity", id: "tab4",
+                                                    name: "tab4" },
+                                                _react2.default.createElement(
+                                                    "div",
+                                                    { className: "row content_header" },
+                                                    _react2.default.createElement(
+                                                        "h1",
+                                                        null,
+                                                        " Nebenwirkungen "
+                                                    ),
+                                                    _react2.default.createElement("hr", null),
+                                                    _react2.default.createElement(
+                                                        "h4",
+                                                        null,
+                                                        "Wie alle Arzneimittel kann auch dieses Arzneimittel Nebenwirkungen haben, die aber nicht bei jedem auftreten m\xFCssen."
+                                                    ),
+                                                    this.renderPackSecneben(drug)
+                                                ),
+                                                _react2.default.createElement(
+                                                    "div",
+                                                    { className: "text-right" },
+                                                    _react2.default.createElement(
+                                                        "button",
+                                                        { type: "button", className: "btn btn-success neben_button",
+                                                            "data-toggle": "modal",
+                                                            "data-target": "#melden" },
+                                                        "Meldung von Nebenwirkungen",
+                                                        _react2.default.createElement("i", { className: "fas fa-comment-medical",
+                                                            style: { marginLeft: "15px" } })
+                                                    )
                                                 )
                                             )
                                         )
@@ -55005,6 +55028,794 @@ module.exports = exports['default'];
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
+
+
+Object.defineProperty(exports, '__esModule', { value: true });
+
+function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'default' in ex) ? ex['default'] : ex; }
+
+var React = __webpack_require__(2);
+var React__default = _interopDefault(React);
+
+var UAParser = __webpack_require__(459);
+
+var UA = new UAParser();
+var browser = UA.getBrowser();
+var cpu = UA.getCPU();
+var device = UA.getDevice();
+var engine = UA.getEngine();
+var os = UA.getOS();
+var ua = UA.getUA();
+
+var setDefaults = function setDefaults(p) {
+  var d = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'none';
+  return p ? p : d;
+};
+var getNavigatorInstance = function getNavigatorInstance() {
+  if (typeof window !== 'undefined') {
+    if (window.navigator || navigator) {
+      return window.navigator || navigator;
+    }
+  }
+
+  return false;
+};
+var isIOS13Check = function isIOS13Check(type) {
+  var nav = getNavigatorInstance();
+  return nav && (nav.platform.includes(type) || nav.platform === 'MacIntel' && nav.maxTouchPoints > 1 && !window.MSStream);
+};
+
+function _typeof(obj) {
+  if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
+    _typeof = function (obj) {
+      return typeof obj;
+    };
+  } else {
+    _typeof = function (obj) {
+      return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
+    };
+  }
+
+  return _typeof(obj);
+}
+
+function _classCallCheck(instance, Constructor) {
+  if (!(instance instanceof Constructor)) {
+    throw new TypeError("Cannot call a class as a function");
+  }
+}
+
+function _defineProperties(target, props) {
+  for (var i = 0; i < props.length; i++) {
+    var descriptor = props[i];
+    descriptor.enumerable = descriptor.enumerable || false;
+    descriptor.configurable = true;
+    if ("value" in descriptor) descriptor.writable = true;
+    Object.defineProperty(target, descriptor.key, descriptor);
+  }
+}
+
+function _createClass(Constructor, protoProps, staticProps) {
+  if (protoProps) _defineProperties(Constructor.prototype, protoProps);
+  if (staticProps) _defineProperties(Constructor, staticProps);
+  return Constructor;
+}
+
+function _defineProperty(obj, key, value) {
+  if (key in obj) {
+    Object.defineProperty(obj, key, {
+      value: value,
+      enumerable: true,
+      configurable: true,
+      writable: true
+    });
+  } else {
+    obj[key] = value;
+  }
+
+  return obj;
+}
+
+function _extends() {
+  _extends = Object.assign || function (target) {
+    for (var i = 1; i < arguments.length; i++) {
+      var source = arguments[i];
+
+      for (var key in source) {
+        if (Object.prototype.hasOwnProperty.call(source, key)) {
+          target[key] = source[key];
+        }
+      }
+    }
+
+    return target;
+  };
+
+  return _extends.apply(this, arguments);
+}
+
+function ownKeys(object, enumerableOnly) {
+  var keys = Object.keys(object);
+
+  if (Object.getOwnPropertySymbols) {
+    var symbols = Object.getOwnPropertySymbols(object);
+    if (enumerableOnly) symbols = symbols.filter(function (sym) {
+      return Object.getOwnPropertyDescriptor(object, sym).enumerable;
+    });
+    keys.push.apply(keys, symbols);
+  }
+
+  return keys;
+}
+
+function _objectSpread2(target) {
+  for (var i = 1; i < arguments.length; i++) {
+    var source = arguments[i] != null ? arguments[i] : {};
+
+    if (i % 2) {
+      ownKeys(source, true).forEach(function (key) {
+        _defineProperty(target, key, source[key]);
+      });
+    } else if (Object.getOwnPropertyDescriptors) {
+      Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
+    } else {
+      ownKeys(source).forEach(function (key) {
+        Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
+      });
+    }
+  }
+
+  return target;
+}
+
+function _inherits(subClass, superClass) {
+  if (typeof superClass !== "function" && superClass !== null) {
+    throw new TypeError("Super expression must either be null or a function");
+  }
+
+  subClass.prototype = Object.create(superClass && superClass.prototype, {
+    constructor: {
+      value: subClass,
+      writable: true,
+      configurable: true
+    }
+  });
+  if (superClass) _setPrototypeOf(subClass, superClass);
+}
+
+function _getPrototypeOf(o) {
+  _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {
+    return o.__proto__ || Object.getPrototypeOf(o);
+  };
+  return _getPrototypeOf(o);
+}
+
+function _setPrototypeOf(o, p) {
+  _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) {
+    o.__proto__ = p;
+    return o;
+  };
+
+  return _setPrototypeOf(o, p);
+}
+
+function _assertThisInitialized(self) {
+  if (self === void 0) {
+    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+  }
+
+  return self;
+}
+
+function _possibleConstructorReturn(self, call) {
+  if (call && (typeof call === "object" || typeof call === "function")) {
+    return call;
+  }
+
+  return _assertThisInitialized(self);
+}
+
+var DEVICE_TYPES = {
+  MOBILE: 'mobile',
+  TABLET: 'tablet',
+  SMART_TV: 'smarttv',
+  CONSOLE: 'console',
+  WEARABLE: 'wearable',
+  BROWSER: undefined
+};
+var BROWSER_TYPES = {
+  CHROME: 'Chrome',
+  FIREFOX: "Firefox",
+  OPERA: "Opera",
+  YANDEX: "Yandex",
+  SAFARI: "Safari",
+  INTERNET_EXPLORER: "Internet Explorer",
+  EDGE: "Edge",
+  CHROMIUM: "Chromium",
+  IE: 'IE',
+  MOBILE_SAFARI: "Mobile Safari"
+};
+var OS_TYPES = {
+  IOS: 'iOS',
+  ANDROID: "Android",
+  WINDOWS_PHONE: "Windows Phone"
+};
+var initialData = {
+  isMobile: false,
+  isTablet: false,
+  isBrowser: false,
+  isSmartTV: false,
+  isConsole: false,
+  isWearable: false
+};
+var checkType = function checkType(type) {
+  switch (type) {
+    case DEVICE_TYPES.MOBILE:
+      return {
+        isMobile: true
+      };
+
+    case DEVICE_TYPES.TABLET:
+      return {
+        isTablet: true
+      };
+
+    case DEVICE_TYPES.SMART_TV:
+      return {
+        isSmartTV: true
+      };
+
+    case DEVICE_TYPES.CONSOLE:
+      return {
+        isConsole: true
+      };
+
+    case DEVICE_TYPES.WEARABLE:
+      return {
+        isWearable: true
+      };
+
+    case DEVICE_TYPES.BROWSER:
+      return {
+        isBrowser: true
+      };
+
+    default:
+      return initialData;
+  }
+};
+var broPayload = function broPayload(isBrowser, browser, engine, os, ua) {
+  return {
+    isBrowser: isBrowser,
+    browserMajorVersion: setDefaults(browser.major),
+    browserFullVersion: setDefaults(browser.version),
+    browserName: setDefaults(browser.name),
+    engineName: setDefaults(engine.name),
+    engineVersion: setDefaults(engine.version),
+    osName: setDefaults(os.name),
+    osVersion: setDefaults(os.version),
+    userAgent: setDefaults(ua)
+  };
+};
+var mobilePayload = function mobilePayload(type, device, os, ua) {
+  return _objectSpread2({}, type, {
+    vendor: setDefaults(device.vendor),
+    model: setDefaults(device.model),
+    os: setDefaults(os.name),
+    osVersion: setDefaults(os.version),
+    ua: setDefaults(ua)
+  });
+};
+var stvPayload = function stvPayload(isSmartTV, engine, os, ua) {
+  return {
+    isSmartTV: isSmartTV,
+    engineName: setDefaults(engine.name),
+    engineVersion: setDefaults(engine.version),
+    osName: setDefaults(os.name),
+    osVersion: setDefaults(os.version),
+    userAgent: setDefaults(ua)
+  };
+};
+var consolePayload = function consolePayload(isConsole, engine, os, ua) {
+  return {
+    isConsole: isConsole,
+    engineName: setDefaults(engine.name),
+    engineVersion: setDefaults(engine.version),
+    osName: setDefaults(os.name),
+    osVersion: setDefaults(os.version),
+    userAgent: setDefaults(ua)
+  };
+};
+var wearPayload = function wearPayload(isWearable, engine, os, ua) {
+  return {
+    isWearable: isWearable,
+    engineName: setDefaults(engine.name),
+    engineVersion: setDefaults(engine.version),
+    osName: setDefaults(os.name),
+    osVersion: setDefaults(os.version),
+    userAgent: setDefaults(ua)
+  };
+};
+
+var type = checkType(device.type);
+
+function deviceDetect() {
+  var isBrowser = type.isBrowser,
+      isMobile = type.isMobile,
+      isTablet = type.isTablet,
+      isSmartTV = type.isSmartTV,
+      isConsole = type.isConsole,
+      isWearable = type.isWearable;
+
+  if (isBrowser) {
+    return broPayload(isBrowser, browser, engine, os, ua);
+  }
+
+  if (isSmartTV) {
+    return stvPayload(isSmartTV, engine, os, ua);
+  }
+
+  if (isConsole) {
+    return consolePayload(isConsole, engine, os, ua);
+  }
+
+  if (isMobile) {
+    return mobilePayload(type, device, os, ua);
+  }
+
+  if (isTablet) {
+    return mobilePayload(type, device, os, ua);
+  }
+
+  if (isWearable) {
+    return wearPayload(isWearable, engine, os, ua);
+  }
+}
+
+var isMobileType = function isMobileType() {
+  return device.type === DEVICE_TYPES.MOBILE;
+};
+
+var isTabletType = function isTabletType() {
+  return device.type === DEVICE_TYPES.TABLET;
+};
+
+var isMobileAndTabletType = function isMobileAndTabletType() {
+  switch (device.type) {
+    case DEVICE_TYPES.MOBILE:
+    case DEVICE_TYPES.TABLET:
+      return true;
+
+    default:
+      return false;
+  }
+};
+
+var isSmartTVType = function isSmartTVType() {
+  return device.type === DEVICE_TYPES.SMART_TV;
+};
+
+var isBrowserType = function isBrowserType() {
+  return device.type === DEVICE_TYPES.BROWSER;
+};
+
+var isWearableType = function isWearableType() {
+  return device.type === DEVICE_TYPES.WEARABLE;
+};
+
+var isConsoleType = function isConsoleType() {
+  return device.type === DEVICE_TYPES.CONSOLE;
+};
+
+var isAndroidType = function isAndroidType() {
+  return os.name === OS_TYPES.ANDROID;
+};
+
+var isWinPhoneType = function isWinPhoneType() {
+  return os.name === OS_TYPES.WINDOWS_PHONE;
+};
+
+var isIOSType = function isIOSType() {
+  return os.name === OS_TYPES.IOS;
+};
+
+var isChromeType = function isChromeType() {
+  return browser.name === BROWSER_TYPES.CHROME;
+};
+
+var isFirefoxType = function isFirefoxType() {
+  return browser.name === BROWSER_TYPES.FIREFOX;
+};
+
+var isChromiumType = function isChromiumType() {
+  return browser.name === BROWSER_TYPES.CHROMIUM;
+};
+
+var isEdgeType = function isEdgeType() {
+  return browser.name === BROWSER_TYPES.EDGE;
+};
+
+var isYandexType = function isYandexType() {
+  return browser.name === BROWSER_TYPES.YANDEX;
+};
+
+var isSafariType = function isSafariType() {
+  return browser.name === BROWSER_TYPES.SAFARI || browser.name === BROWSER_TYPES.MOBILE_SAFARI;
+};
+
+var isMobileSafariType = function isMobileSafariType() {
+  return browser.name === BROWSER_TYPES.MOBILE_SAFARI;
+};
+
+var isOperaType = function isOperaType() {
+  return browser.name === BROWSER_TYPES.OPERA;
+};
+
+var isIEType = function isIEType() {
+  return browser.name === BROWSER_TYPES.INTERNET_EXPLORER || browser.name === BROWSER_TYPES.IE;
+};
+
+var isElectronType = function isElectronType() {
+  var nav = getNavigatorInstance();
+  var ua = nav && nav.userAgent.toLowerCase();
+  return typeof ua === 'string' ? ua.includes('electron') : false;
+};
+
+var getIOS13 = function getIOS13() {
+  var nav = getNavigatorInstance();
+  return nav && (/iPad|iPhone|iPod/.test(nav.platform) || nav.platform === 'MacIntel' && nav.maxTouchPoints > 1) && !window.MSStream;
+};
+
+var getIPad13 = function getIPad13() {
+  return isIOS13Check('iPad');
+};
+
+var getIphone13 = function getIphone13() {
+  return isIOS13Check('iPhone');
+};
+
+var getIPod13 = function getIPod13() {
+  return isIOS13Check('iPod');
+};
+
+var getBrowserFullVersion = function getBrowserFullVersion() {
+  return setDefaults(browser.version);
+};
+
+var getBrowserVersion = function getBrowserVersion() {
+  return setDefaults(browser.major);
+};
+
+var getOsVersion = function getOsVersion() {
+  return setDefaults(os.version);
+};
+
+var getOsName = function getOsName() {
+  return setDefaults(os.name);
+};
+
+var getBrowserName = function getBrowserName() {
+  return setDefaults(browser.name);
+};
+
+var getMobileVendor = function getMobileVendor() {
+  return setDefaults(device.vendor);
+};
+
+var getMobileModel = function getMobileModel() {
+  return setDefaults(device.model);
+};
+
+var getEngineName = function getEngineName() {
+  return setDefaults(engine.name);
+};
+
+var getEngineVersion = function getEngineVersion() {
+  return setDefaults(engine.version);
+};
+
+var getUseragent = function getUseragent() {
+  return setDefaults(ua);
+};
+
+var getDeviceType = function getDeviceType() {
+  return setDefaults(device.type, 'browser');
+};
+
+var isSmartTV = isSmartTVType();
+var isConsole = isConsoleType();
+var isWearable = isWearableType();
+var isMobileSafari = isMobileSafariType();
+var isChromium = isChromiumType();
+var isMobile = isMobileAndTabletType();
+var isMobileOnly = isMobileType();
+var isTablet = isTabletType();
+var isBrowser = isBrowserType();
+var isAndroid = isAndroidType();
+var isWinPhone = isWinPhoneType();
+var isIOS = isIOSType();
+var isChrome = isChromeType();
+var isFirefox = isFirefoxType();
+var isSafari = isSafariType();
+var isOpera = isOperaType();
+var isIE = isIEType();
+var osVersion = getOsVersion();
+var osName = getOsName();
+var fullBrowserVersion = getBrowserFullVersion();
+var browserVersion = getBrowserVersion();
+var browserName = getBrowserName();
+var mobileVendor = getMobileVendor();
+var mobileModel = getMobileModel();
+var engineName = getEngineName();
+var engineVersion = getEngineVersion();
+var getUA = getUseragent();
+var isEdge = isEdgeType();
+var isYandex = isYandexType();
+var deviceType = getDeviceType();
+var isIOS13 = getIOS13();
+var isIPad13 = getIPad13();
+var isIPhone13 = getIphone13();
+var isIPod13 = getIPod13();
+var isElectron = isElectronType();
+
+var AndroidView = function AndroidView(_ref) {
+  var renderWithFragment = _ref.renderWithFragment,
+      children = _ref.children,
+      viewClassName = _ref.viewClassName,
+      style = _ref.style;
+  return isAndroid ? renderWithFragment ? React__default.createElement(React.Fragment, null, children) : React__default.createElement("div", {
+    className: viewClassName,
+    style: style
+  }, children) : null;
+};
+var BrowserView = function BrowserView(_ref2) {
+  var renderWithFragment = _ref2.renderWithFragment,
+      children = _ref2.children,
+      viewClassName = _ref2.viewClassName,
+      style = _ref2.style;
+  return isBrowser ? renderWithFragment ? React__default.createElement(React.Fragment, null, children) : React__default.createElement("div", {
+    className: viewClassName,
+    style: style
+  }, children) : null;
+};
+var IEView = function IEView(_ref3) {
+  var renderWithFragment = _ref3.renderWithFragment,
+      children = _ref3.children,
+      viewClassName = _ref3.viewClassName,
+      style = _ref3.style;
+  return isIE ? renderWithFragment ? React__default.createElement(React.Fragment, null, children) : React__default.createElement("div", {
+    className: viewClassName,
+    style: style
+  }, children) : null;
+};
+var IOSView = function IOSView(_ref4) {
+  var renderWithFragment = _ref4.renderWithFragment,
+      children = _ref4.children,
+      viewClassName = _ref4.viewClassName,
+      style = _ref4.style;
+  return isIOS ? renderWithFragment ? React__default.createElement(React.Fragment, null, children) : React__default.createElement("div", {
+    className: viewClassName,
+    style: style
+  }, children) : null;
+};
+var MobileView = function MobileView(_ref5) {
+  var renderWithFragment = _ref5.renderWithFragment,
+      children = _ref5.children,
+      viewClassName = _ref5.viewClassName,
+      style = _ref5.style;
+  return isMobile ? renderWithFragment ? React__default.createElement(React.Fragment, null, children) : React__default.createElement("div", {
+    className: viewClassName,
+    style: style
+  }, children) : null;
+};
+var TabletView = function TabletView(_ref6) {
+  var renderWithFragment = _ref6.renderWithFragment,
+      children = _ref6.children,
+      viewClassName = _ref6.viewClassName,
+      style = _ref6.style;
+  return isTablet ? renderWithFragment ? React__default.createElement(React.Fragment, null, children) : React__default.createElement("div", {
+    className: viewClassName,
+    style: style
+  }, children) : null;
+};
+var WinPhoneView = function WinPhoneView(_ref7) {
+  var renderWithFragment = _ref7.renderWithFragment,
+      children = _ref7.children,
+      viewClassName = _ref7.viewClassName,
+      style = _ref7.style;
+  return isWinPhone ? renderWithFragment ? React__default.createElement(React.Fragment, null, children) : React__default.createElement("div", {
+    className: viewClassName,
+    style: style
+  }, children) : null;
+};
+var MobileOnlyView = function MobileOnlyView(_ref8) {
+  var renderWithFragment = _ref8.renderWithFragment,
+      children = _ref8.children,
+      viewClassName = _ref8.viewClassName,
+      style = _ref8.style;
+  return isMobileOnly ? renderWithFragment ? React__default.createElement(React.Fragment, null, children) : React__default.createElement("div", {
+    className: viewClassName,
+    style: style
+  }, children) : null;
+};
+var SmartTVView = function SmartTVView(_ref9) {
+  var renderWithFragment = _ref9.renderWithFragment,
+      children = _ref9.children,
+      viewClassName = _ref9.viewClassName,
+      style = _ref9.style;
+  return isSmartTV ? renderWithFragment ? React__default.createElement(React.Fragment, null, children) : React__default.createElement("div", {
+    className: viewClassName,
+    style: style
+  }, children) : null;
+};
+var ConsoleView = function ConsoleView(_ref10) {
+  var renderWithFragment = _ref10.renderWithFragment,
+      children = _ref10.children,
+      viewClassName = _ref10.viewClassName,
+      style = _ref10.style;
+  return isConsole ? renderWithFragment ? React__default.createElement(React.Fragment, null, children) : React__default.createElement("div", {
+    className: viewClassName,
+    style: style
+  }, children) : null;
+};
+var WearableView = function WearableView(_ref11) {
+  var renderWithFragment = _ref11.renderWithFragment,
+      children = _ref11.children,
+      viewClassName = _ref11.viewClassName,
+      style = _ref11.style;
+  return isWearable ? renderWithFragment ? React__default.createElement(React.Fragment, null, children) : React__default.createElement("div", {
+    className: viewClassName,
+    style: style
+  }, children) : null;
+};
+var CustomView = function CustomView(_ref12) {
+  var renderWithFragment = _ref12.renderWithFragment,
+      children = _ref12.children,
+      viewClassName = _ref12.viewClassName,
+      style = _ref12.style,
+      condition = _ref12.condition;
+  return condition ? renderWithFragment ? React__default.createElement(React.Fragment, null, children) : React__default.createElement("div", {
+    className: viewClassName,
+    style: style
+  }, children) : null;
+};
+
+function withOrientationChange(WrappedComponent) {
+  return (
+    /*#__PURE__*/
+    function (_React$Component) {
+      _inherits(_class, _React$Component);
+
+      function _class(props) {
+        var _this;
+
+        _classCallCheck(this, _class);
+
+        _this = _possibleConstructorReturn(this, _getPrototypeOf(_class).call(this, props));
+        _this.isEventListenerAdded = false;
+        _this.handleOrientationChange = _this.handleOrientationChange.bind(_assertThisInitialized(_this));
+        _this.onOrientationChange = _this.onOrientationChange.bind(_assertThisInitialized(_this));
+        _this.onPageLoad = _this.onPageLoad.bind(_assertThisInitialized(_this));
+        _this.state = {
+          isLandscape: false,
+          isPortrait: false
+        };
+        return _this;
+      }
+
+      _createClass(_class, [{
+        key: "handleOrientationChange",
+        value: function handleOrientationChange() {
+          if (!this.isEventListenerAdded) {
+            this.isEventListenerAdded = true;
+          }
+
+          var orientation = window.innerWidth > window.innerHeight ? 90 : 0;
+          this.setState({
+            isPortrait: orientation === 0,
+            isLandscape: orientation === 90
+          });
+        }
+      }, {
+        key: "onOrientationChange",
+        value: function onOrientationChange() {
+          this.handleOrientationChange();
+        }
+      }, {
+        key: "onPageLoad",
+        value: function onPageLoad() {
+          this.handleOrientationChange();
+        }
+      }, {
+        key: "componentDidMount",
+        value: function componentDidMount() {
+          if ((typeof window === "undefined" ? "undefined" : _typeof(window)) !== undefined && isMobile) {
+            if (!this.isEventListenerAdded) {
+              this.handleOrientationChange();
+              window.addEventListener("load", this.onPageLoad, false);
+            } else {
+              window.removeEventListener("load", this.onPageLoad, false);
+            }
+
+            window.addEventListener("resize", this.onOrientationChange, false);
+          }
+        }
+      }, {
+        key: "componentWillUnmount",
+        value: function componentWillUnmount() {
+          window.removeEventListener("resize", this.onOrientationChange, false);
+        }
+      }, {
+        key: "render",
+        value: function render() {
+          return React__default.createElement(WrappedComponent, _extends({}, this.props, {
+            isLandscape: this.state.isLandscape,
+            isPortrait: this.state.isPortrait
+          }));
+        }
+      }]);
+
+      return _class;
+    }(React__default.Component)
+  );
+}
+
+exports.AndroidView = AndroidView;
+exports.BrowserView = BrowserView;
+exports.ConsoleView = ConsoleView;
+exports.CustomView = CustomView;
+exports.IEView = IEView;
+exports.IOSView = IOSView;
+exports.MobileOnlyView = MobileOnlyView;
+exports.MobileView = MobileView;
+exports.SmartTVView = SmartTVView;
+exports.TabletView = TabletView;
+exports.WearableView = WearableView;
+exports.WinPhoneView = WinPhoneView;
+exports.browserName = browserName;
+exports.browserVersion = browserVersion;
+exports.deviceDetect = deviceDetect;
+exports.deviceType = deviceType;
+exports.engineName = engineName;
+exports.engineVersion = engineVersion;
+exports.fullBrowserVersion = fullBrowserVersion;
+exports.getUA = getUA;
+exports.isAndroid = isAndroid;
+exports.isBrowser = isBrowser;
+exports.isChrome = isChrome;
+exports.isChromium = isChromium;
+exports.isConsole = isConsole;
+exports.isEdge = isEdge;
+exports.isElectron = isElectron;
+exports.isFirefox = isFirefox;
+exports.isIE = isIE;
+exports.isIOS = isIOS;
+exports.isIOS13 = isIOS13;
+exports.isIPad13 = isIPad13;
+exports.isIPhone13 = isIPhone13;
+exports.isIPod13 = isIPod13;
+exports.isMobile = isMobile;
+exports.isMobileOnly = isMobileOnly;
+exports.isMobileSafari = isMobileSafari;
+exports.isOpera = isOpera;
+exports.isSafari = isSafari;
+exports.isSmartTV = isSmartTV;
+exports.isTablet = isTablet;
+exports.isWearable = isWearable;
+exports.isWinPhone = isWinPhone;
+exports.isYandex = isYandex;
+exports.mobileModel = mobileModel;
+exports.mobileVendor = mobileVendor;
+exports.osName = osName;
+exports.osVersion = osVersion;
+exports.withOrientationChange = withOrientationChange;
+
+
+/***/ }),
+/* 341 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -55078,7 +55889,7 @@ var ARIADOMPropertyConfig = {
 module.exports = ARIADOMPropertyConfig;
 
 /***/ }),
-/* 341 */
+/* 342 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -55105,7 +55916,7 @@ var AutoFocusUtils = {
 module.exports = AutoFocusUtils;
 
 /***/ }),
-/* 342 */
+/* 343 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -55121,9 +55932,9 @@ module.exports = AutoFocusUtils;
 
 var EventPropagators = __webpack_require__(36);
 var ExecutionEnvironment = __webpack_require__(10);
-var FallbackCompositionState = __webpack_require__(348);
-var SyntheticCompositionEvent = __webpack_require__(391);
-var SyntheticInputEvent = __webpack_require__(394);
+var FallbackCompositionState = __webpack_require__(349);
+var SyntheticCompositionEvent = __webpack_require__(392);
+var SyntheticInputEvent = __webpack_require__(395);
 
 var END_KEYCODES = [9, 13, 27, 32]; // Tab, Return, Esc, Space
 var START_KEYCODE = 229;
@@ -55492,7 +56303,7 @@ var BeforeInputEventPlugin = {
 module.exports = BeforeInputEventPlugin;
 
 /***/ }),
-/* 343 */
+/* 344 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -55511,7 +56322,7 @@ var ExecutionEnvironment = __webpack_require__(10);
 var ReactInstrumentation = __webpack_require__(16);
 
 var camelizeStyleName = __webpack_require__(295);
-var dangerousStyleValue = __webpack_require__(401);
+var dangerousStyleValue = __webpack_require__(402);
 var hyphenateStyleName = __webpack_require__(302);
 var memoizeStringOnly = __webpack_require__(305);
 var warning = __webpack_require__(4);
@@ -55711,7 +56522,7 @@ module.exports = CSSPropertyOperations;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 344 */
+/* 345 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -56026,7 +56837,7 @@ var ChangeEventPlugin = {
 module.exports = ChangeEventPlugin;
 
 /***/ }),
-/* 345 */
+/* 346 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -56076,7 +56887,7 @@ module.exports = Danger;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 346 */
+/* 347 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -56105,7 +56916,7 @@ var DefaultEventPluginOrder = ['ResponderEventPlugin', 'SimpleEventPlugin', 'Tap
 module.exports = DefaultEventPluginOrder;
 
 /***/ }),
-/* 347 */
+/* 348 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -56206,7 +57017,7 @@ var EnterLeaveEventPlugin = {
 module.exports = EnterLeaveEventPlugin;
 
 /***/ }),
-/* 348 */
+/* 349 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -56304,7 +57115,7 @@ PooledClass.addPoolingTo(FallbackCompositionState);
 module.exports = FallbackCompositionState;
 
 /***/ }),
-/* 349 */
+/* 350 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -56544,7 +57355,7 @@ var HTMLDOMPropertyConfig = {
 module.exports = HTMLDOMPropertyConfig;
 
 /***/ }),
-/* 350 */
+/* 351 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -56701,7 +57512,7 @@ module.exports = ReactChildReconciler;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 351 */
+/* 352 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -56716,7 +57527,7 @@ module.exports = ReactChildReconciler;
 
 
 var DOMChildrenOperations = __webpack_require__(58);
-var ReactDOMIDOperations = __webpack_require__(358);
+var ReactDOMIDOperations = __webpack_require__(359);
 
 /**
  * Abstracts away all functionality of the reconciler that requires knowledge of
@@ -56732,7 +57543,7 @@ var ReactComponentBrowserEnvironment = {
 module.exports = ReactComponentBrowserEnvironment;
 
 /***/ }),
-/* 352 */
+/* 353 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -56759,7 +57570,7 @@ var ReactNodeTypes = __webpack_require__(210);
 var ReactReconciler = __webpack_require__(31);
 
 if (process.env.NODE_ENV !== 'production') {
-  var checkReactTypeSpec = __webpack_require__(400);
+  var checkReactTypeSpec = __webpack_require__(401);
 }
 
 var emptyObject = __webpack_require__(33);
@@ -57636,7 +58447,7 @@ module.exports = ReactCompositeComponent;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 353 */
+/* 354 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -57653,15 +58464,15 @@ module.exports = ReactCompositeComponent;
 
 
 var ReactDOMComponentTree = __webpack_require__(9);
-var ReactDefaultInjection = __webpack_require__(370);
+var ReactDefaultInjection = __webpack_require__(371);
 var ReactMount = __webpack_require__(209);
 var ReactReconciler = __webpack_require__(31);
 var ReactUpdates = __webpack_require__(18);
-var ReactVersion = __webpack_require__(385);
+var ReactVersion = __webpack_require__(386);
 
-var findDOMNode = __webpack_require__(402);
+var findDOMNode = __webpack_require__(403);
 var getHostComponentFromComposite = __webpack_require__(215);
-var renderSubtreeIntoContainer = __webpack_require__(409);
+var renderSubtreeIntoContainer = __webpack_require__(410);
 var warning = __webpack_require__(4);
 
 ReactDefaultInjection.inject();
@@ -57738,9 +58549,9 @@ if (process.env.NODE_ENV !== 'production') {
 
 if (process.env.NODE_ENV !== 'production') {
   var ReactInstrumentation = __webpack_require__(16);
-  var ReactDOMUnknownPropertyHook = __webpack_require__(367);
-  var ReactDOMNullInputValuePropHook = __webpack_require__(361);
-  var ReactDOMInvalidARIAHook = __webpack_require__(360);
+  var ReactDOMUnknownPropertyHook = __webpack_require__(368);
+  var ReactDOMNullInputValuePropHook = __webpack_require__(362);
+  var ReactDOMInvalidARIAHook = __webpack_require__(361);
 
   ReactInstrumentation.debugTool.addHook(ReactDOMUnknownPropertyHook);
   ReactInstrumentation.debugTool.addHook(ReactDOMNullInputValuePropHook);
@@ -57751,7 +58562,7 @@ module.exports = ReactDOM;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 354 */
+/* 355 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -57770,8 +58581,8 @@ module.exports = ReactDOM;
 var _prodInvariant = __webpack_require__(5),
     _assign = __webpack_require__(6);
 
-var AutoFocusUtils = __webpack_require__(341);
-var CSSPropertyOperations = __webpack_require__(343);
+var AutoFocusUtils = __webpack_require__(342);
+var CSSPropertyOperations = __webpack_require__(344);
 var DOMLazyTree = __webpack_require__(30);
 var DOMNamespaces = __webpack_require__(59);
 var DOMProperty = __webpack_require__(22);
@@ -57781,13 +58592,13 @@ var EventPluginRegistry = __webpack_require__(42);
 var ReactBrowserEventEmitter = __webpack_require__(43);
 var ReactDOMComponentFlags = __webpack_require__(203);
 var ReactDOMComponentTree = __webpack_require__(9);
-var ReactDOMInput = __webpack_require__(359);
-var ReactDOMOption = __webpack_require__(362);
+var ReactDOMInput = __webpack_require__(360);
+var ReactDOMOption = __webpack_require__(363);
 var ReactDOMSelect = __webpack_require__(204);
-var ReactDOMTextarea = __webpack_require__(365);
+var ReactDOMTextarea = __webpack_require__(366);
 var ReactInstrumentation = __webpack_require__(16);
-var ReactMultiChild = __webpack_require__(378);
-var ReactServerRenderingTransaction = __webpack_require__(383);
+var ReactMultiChild = __webpack_require__(379);
+var ReactServerRenderingTransaction = __webpack_require__(384);
 
 var emptyFunction = __webpack_require__(17);
 var escapeTextContentForBrowser = __webpack_require__(46);
@@ -58769,7 +59580,7 @@ module.exports = ReactDOMComponent;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 355 */
+/* 356 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -58806,7 +59617,7 @@ module.exports = ReactDOMContainerInfo;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 356 */
+/* 357 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -58869,7 +59680,7 @@ _assign(ReactDOMEmptyComponent.prototype, {
 module.exports = ReactDOMEmptyComponent;
 
 /***/ }),
-/* 357 */
+/* 358 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -58891,7 +59702,7 @@ var ReactDOMFeatureFlags = {
 module.exports = ReactDOMFeatureFlags;
 
 /***/ }),
-/* 358 */
+/* 359 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -58927,7 +59738,7 @@ var ReactDOMIDOperations = {
 module.exports = ReactDOMIDOperations;
 
 /***/ }),
-/* 359 */
+/* 360 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -59218,7 +60029,7 @@ module.exports = ReactDOMInput;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 360 */
+/* 361 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -59315,7 +60126,7 @@ module.exports = ReactDOMInvalidARIAHook;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 361 */
+/* 362 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -59362,7 +60173,7 @@ module.exports = ReactDOMNullInputValuePropHook;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 362 */
+/* 363 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -59488,7 +60299,7 @@ module.exports = ReactDOMOption;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 363 */
+/* 364 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -59504,7 +60315,7 @@ module.exports = ReactDOMOption;
 
 var ExecutionEnvironment = __webpack_require__(10);
 
-var getNodeForCharacterOffset = __webpack_require__(406);
+var getNodeForCharacterOffset = __webpack_require__(407);
 var getTextContentAccessor = __webpack_require__(216);
 
 /**
@@ -59703,7 +60514,7 @@ var ReactDOMSelection = {
 module.exports = ReactDOMSelection;
 
 /***/ }),
-/* 364 */
+/* 365 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -59869,7 +60680,7 @@ module.exports = ReactDOMTextComponent;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 365 */
+/* 366 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -60033,7 +60844,7 @@ module.exports = ReactDOMTextarea;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 366 */
+/* 367 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -60173,7 +60984,7 @@ module.exports = {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 367 */
+/* 368 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -60289,7 +61100,7 @@ module.exports = ReactDOMUnknownPropertyHook;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 368 */
+/* 369 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -60304,8 +61115,8 @@ module.exports = ReactDOMUnknownPropertyHook;
 
 
 
-var ReactInvalidSetStateWarningHook = __webpack_require__(376);
-var ReactHostOperationHistoryHook = __webpack_require__(374);
+var ReactInvalidSetStateWarningHook = __webpack_require__(377);
+var ReactHostOperationHistoryHook = __webpack_require__(375);
 var ReactComponentTreeHook = __webpack_require__(14);
 var ExecutionEnvironment = __webpack_require__(10);
 
@@ -60654,7 +61465,7 @@ module.exports = ReactDebugTool;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 369 */
+/* 370 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -60725,7 +61536,7 @@ var ReactDefaultBatchingStrategy = {
 module.exports = ReactDefaultBatchingStrategy;
 
 /***/ }),
-/* 370 */
+/* 371 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -60739,25 +61550,25 @@ module.exports = ReactDefaultBatchingStrategy;
 
 
 
-var ARIADOMPropertyConfig = __webpack_require__(340);
-var BeforeInputEventPlugin = __webpack_require__(342);
-var ChangeEventPlugin = __webpack_require__(344);
-var DefaultEventPluginOrder = __webpack_require__(346);
-var EnterLeaveEventPlugin = __webpack_require__(347);
-var HTMLDOMPropertyConfig = __webpack_require__(349);
-var ReactComponentBrowserEnvironment = __webpack_require__(351);
-var ReactDOMComponent = __webpack_require__(354);
+var ARIADOMPropertyConfig = __webpack_require__(341);
+var BeforeInputEventPlugin = __webpack_require__(343);
+var ChangeEventPlugin = __webpack_require__(345);
+var DefaultEventPluginOrder = __webpack_require__(347);
+var EnterLeaveEventPlugin = __webpack_require__(348);
+var HTMLDOMPropertyConfig = __webpack_require__(350);
+var ReactComponentBrowserEnvironment = __webpack_require__(352);
+var ReactDOMComponent = __webpack_require__(355);
 var ReactDOMComponentTree = __webpack_require__(9);
-var ReactDOMEmptyComponent = __webpack_require__(356);
-var ReactDOMTreeTraversal = __webpack_require__(366);
-var ReactDOMTextComponent = __webpack_require__(364);
-var ReactDefaultBatchingStrategy = __webpack_require__(369);
-var ReactEventListener = __webpack_require__(373);
-var ReactInjection = __webpack_require__(375);
-var ReactReconcileTransaction = __webpack_require__(381);
-var SVGDOMPropertyConfig = __webpack_require__(386);
-var SelectEventPlugin = __webpack_require__(387);
-var SimpleEventPlugin = __webpack_require__(388);
+var ReactDOMEmptyComponent = __webpack_require__(357);
+var ReactDOMTreeTraversal = __webpack_require__(367);
+var ReactDOMTextComponent = __webpack_require__(365);
+var ReactDefaultBatchingStrategy = __webpack_require__(370);
+var ReactEventListener = __webpack_require__(374);
+var ReactInjection = __webpack_require__(376);
+var ReactReconcileTransaction = __webpack_require__(382);
+var SVGDOMPropertyConfig = __webpack_require__(387);
+var SelectEventPlugin = __webpack_require__(388);
+var SimpleEventPlugin = __webpack_require__(389);
 
 var alreadyInjected = false;
 
@@ -60814,7 +61625,7 @@ module.exports = {
 };
 
 /***/ }),
-/* 371 */
+/* 372 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -60837,7 +61648,7 @@ var REACT_ELEMENT_TYPE = typeof Symbol === 'function' && Symbol['for'] && Symbol
 module.exports = REACT_ELEMENT_TYPE;
 
 /***/ }),
-/* 372 */
+/* 373 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -60872,7 +61683,7 @@ var ReactEventEmitterMixin = {
 module.exports = ReactEventEmitterMixin;
 
 /***/ }),
-/* 373 */
+/* 374 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -61030,7 +61841,7 @@ var ReactEventListener = {
 module.exports = ReactEventListener;
 
 /***/ }),
-/* 374 */
+/* 375 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -61067,7 +61878,7 @@ var ReactHostOperationHistoryHook = {
 module.exports = ReactHostOperationHistoryHook;
 
 /***/ }),
-/* 375 */
+/* 376 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -61104,7 +61915,7 @@ var ReactInjection = {
 module.exports = ReactInjection;
 
 /***/ }),
-/* 376 */
+/* 377 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -61145,7 +61956,7 @@ module.exports = ReactInvalidSetStateWarningHook;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 377 */
+/* 378 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -61159,7 +61970,7 @@ module.exports = ReactInvalidSetStateWarningHook;
 
 
 
-var adler32 = __webpack_require__(399);
+var adler32 = __webpack_require__(400);
 
 var TAG_END = /\/?>/;
 var COMMENT_START = /^<\!\-\-/;
@@ -61198,7 +62009,7 @@ var ReactMarkupChecksum = {
 module.exports = ReactMarkupChecksum;
 
 /***/ }),
-/* 378 */
+/* 379 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -61220,10 +62031,10 @@ var ReactInstrumentation = __webpack_require__(16);
 
 var ReactCurrentOwner = __webpack_require__(19);
 var ReactReconciler = __webpack_require__(31);
-var ReactChildReconciler = __webpack_require__(350);
+var ReactChildReconciler = __webpack_require__(351);
 
 var emptyFunction = __webpack_require__(17);
-var flattenChildren = __webpack_require__(403);
+var flattenChildren = __webpack_require__(404);
 var invariant = __webpack_require__(3);
 
 /**
@@ -61648,7 +62459,7 @@ module.exports = ReactMultiChild;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 379 */
+/* 380 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -61745,7 +62556,7 @@ module.exports = ReactOwner;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 380 */
+/* 381 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -61774,7 +62585,7 @@ module.exports = ReactPropTypeLocationNames;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 381 */
+/* 382 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -61956,7 +62767,7 @@ module.exports = ReactReconcileTransaction;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 382 */
+/* 383 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -61971,7 +62782,7 @@ module.exports = ReactReconcileTransaction;
 
 
 
-var ReactOwner = __webpack_require__(379);
+var ReactOwner = __webpack_require__(380);
 
 var ReactRef = {};
 
@@ -62048,7 +62859,7 @@ ReactRef.detachRefs = function (instance, element) {
 module.exports = ReactRef;
 
 /***/ }),
-/* 383 */
+/* 384 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -62067,7 +62878,7 @@ var _assign = __webpack_require__(6);
 var PooledClass = __webpack_require__(26);
 var Transaction = __webpack_require__(45);
 var ReactInstrumentation = __webpack_require__(16);
-var ReactServerUpdateQueue = __webpack_require__(384);
+var ReactServerUpdateQueue = __webpack_require__(385);
 
 /**
  * Executed within the scope of the `Transaction` instance. Consider these as
@@ -62142,7 +62953,7 @@ module.exports = ReactServerRenderingTransaction;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 384 */
+/* 385 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -62285,7 +63096,7 @@ module.exports = ReactServerUpdateQueue;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 385 */
+/* 386 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -62302,7 +63113,7 @@ module.exports = ReactServerUpdateQueue;
 module.exports = '15.6.2';
 
 /***/ }),
-/* 386 */
+/* 387 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -62607,7 +63418,7 @@ Object.keys(ATTRS).forEach(function (key) {
 module.exports = SVGDOMPropertyConfig;
 
 /***/ }),
-/* 387 */
+/* 388 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -62798,7 +63609,7 @@ var SelectEventPlugin = {
 module.exports = SelectEventPlugin;
 
 /***/ }),
-/* 388 */
+/* 389 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -62818,17 +63629,17 @@ var _prodInvariant = __webpack_require__(5);
 var EventListener = __webpack_require__(88);
 var EventPropagators = __webpack_require__(36);
 var ReactDOMComponentTree = __webpack_require__(9);
-var SyntheticAnimationEvent = __webpack_require__(389);
-var SyntheticClipboardEvent = __webpack_require__(390);
+var SyntheticAnimationEvent = __webpack_require__(390);
+var SyntheticClipboardEvent = __webpack_require__(391);
 var SyntheticEvent = __webpack_require__(20);
-var SyntheticFocusEvent = __webpack_require__(393);
-var SyntheticKeyboardEvent = __webpack_require__(395);
+var SyntheticFocusEvent = __webpack_require__(394);
+var SyntheticKeyboardEvent = __webpack_require__(396);
 var SyntheticMouseEvent = __webpack_require__(44);
-var SyntheticDragEvent = __webpack_require__(392);
-var SyntheticTouchEvent = __webpack_require__(396);
-var SyntheticTransitionEvent = __webpack_require__(397);
+var SyntheticDragEvent = __webpack_require__(393);
+var SyntheticTouchEvent = __webpack_require__(397);
+var SyntheticTransitionEvent = __webpack_require__(398);
 var SyntheticUIEvent = __webpack_require__(38);
-var SyntheticWheelEvent = __webpack_require__(398);
+var SyntheticWheelEvent = __webpack_require__(399);
 
 var emptyFunction = __webpack_require__(17);
 var getEventCharCode = __webpack_require__(67);
@@ -63028,7 +63839,7 @@ module.exports = SimpleEventPlugin;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 389 */
+/* 390 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -63070,7 +63881,7 @@ SyntheticEvent.augmentClass(SyntheticAnimationEvent, AnimationEventInterface);
 module.exports = SyntheticAnimationEvent;
 
 /***/ }),
-/* 390 */
+/* 391 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -63111,7 +63922,7 @@ SyntheticEvent.augmentClass(SyntheticClipboardEvent, ClipboardEventInterface);
 module.exports = SyntheticClipboardEvent;
 
 /***/ }),
-/* 391 */
+/* 392 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -63150,7 +63961,7 @@ SyntheticEvent.augmentClass(SyntheticCompositionEvent, CompositionEventInterface
 module.exports = SyntheticCompositionEvent;
 
 /***/ }),
-/* 392 */
+/* 393 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -63189,7 +64000,7 @@ SyntheticMouseEvent.augmentClass(SyntheticDragEvent, DragEventInterface);
 module.exports = SyntheticDragEvent;
 
 /***/ }),
-/* 393 */
+/* 394 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -63228,7 +64039,7 @@ SyntheticUIEvent.augmentClass(SyntheticFocusEvent, FocusEventInterface);
 module.exports = SyntheticFocusEvent;
 
 /***/ }),
-/* 394 */
+/* 395 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -63268,7 +64079,7 @@ SyntheticEvent.augmentClass(SyntheticInputEvent, InputEventInterface);
 module.exports = SyntheticInputEvent;
 
 /***/ }),
-/* 395 */
+/* 396 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -63285,7 +64096,7 @@ module.exports = SyntheticInputEvent;
 var SyntheticUIEvent = __webpack_require__(38);
 
 var getEventCharCode = __webpack_require__(67);
-var getEventKey = __webpack_require__(404);
+var getEventKey = __webpack_require__(405);
 var getEventModifierState = __webpack_require__(68);
 
 /**
@@ -63355,7 +64166,7 @@ SyntheticUIEvent.augmentClass(SyntheticKeyboardEvent, KeyboardEventInterface);
 module.exports = SyntheticKeyboardEvent;
 
 /***/ }),
-/* 396 */
+/* 397 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -63403,7 +64214,7 @@ SyntheticUIEvent.augmentClass(SyntheticTouchEvent, TouchEventInterface);
 module.exports = SyntheticTouchEvent;
 
 /***/ }),
-/* 397 */
+/* 398 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -63445,7 +64256,7 @@ SyntheticEvent.augmentClass(SyntheticTransitionEvent, TransitionEventInterface);
 module.exports = SyntheticTransitionEvent;
 
 /***/ }),
-/* 398 */
+/* 399 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -63499,7 +64310,7 @@ SyntheticMouseEvent.augmentClass(SyntheticWheelEvent, WheelEventInterface);
 module.exports = SyntheticWheelEvent;
 
 /***/ }),
-/* 399 */
+/* 400 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -63546,7 +64357,7 @@ function adler32(data) {
 module.exports = adler32;
 
 /***/ }),
-/* 400 */
+/* 401 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -63562,7 +64373,7 @@ module.exports = adler32;
 
 var _prodInvariant = __webpack_require__(5);
 
-var ReactPropTypeLocationNames = __webpack_require__(380);
+var ReactPropTypeLocationNames = __webpack_require__(381);
 var ReactPropTypesSecret = __webpack_require__(211);
 
 var invariant = __webpack_require__(3);
@@ -63637,7 +64448,7 @@ module.exports = checkReactTypeSpec;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 401 */
+/* 402 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -63720,7 +64531,7 @@ module.exports = dangerousStyleValue;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 402 */
+/* 403 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -63784,7 +64595,7 @@ module.exports = findDOMNode;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 403 */
+/* 404 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -63864,7 +64675,7 @@ module.exports = flattenChildren;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 404 */
+/* 405 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -63979,7 +64790,7 @@ function getEventKey(nativeEvent) {
 module.exports = getEventKey;
 
 /***/ }),
-/* 405 */
+/* 406 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -64023,7 +64834,7 @@ function getIteratorFn(maybeIterable) {
 module.exports = getIteratorFn;
 
 /***/ }),
-/* 406 */
+/* 407 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -64100,7 +64911,7 @@ function getNodeForCharacterOffset(root, offset) {
 module.exports = getNodeForCharacterOffset;
 
 /***/ }),
-/* 407 */
+/* 408 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -64204,7 +65015,7 @@ function getVendorPrefixedEventName(eventName) {
 module.exports = getVendorPrefixedEventName;
 
 /***/ }),
-/* 408 */
+/* 409 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -64233,7 +65044,7 @@ function quoteAttributeValueForBrowser(value) {
 module.exports = quoteAttributeValueForBrowser;
 
 /***/ }),
-/* 409 */
+/* 410 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -64252,7 +65063,7 @@ var ReactMount = __webpack_require__(209);
 module.exports = ReactMount.renderSubtreeIntoContainer;
 
 /***/ }),
-/* 410 */
+/* 411 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -64333,7 +65144,7 @@ I18nextProvider.childContextTypes = {
 exports.default = I18nextProvider;
 
 /***/ }),
-/* 411 */
+/* 412 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -64468,7 +65279,7 @@ Interpolate.contextTypes = {
 exports.default = Interpolate;
 
 /***/ }),
-/* 412 */
+/* 413 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -64547,7 +65358,7 @@ function loadNamespaces(_ref) {
 }
 
 /***/ }),
-/* 413 */
+/* 414 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -64734,7 +65545,7 @@ Trans.contextTypes = {
 };
 
 /***/ }),
-/* 414 */
+/* 415 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -64758,7 +65569,7 @@ var _propTypes = __webpack_require__(7);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _hoistNonReactStatics = __webpack_require__(415);
+var _hoistNonReactStatics = __webpack_require__(416);
 
 var _hoistNonReactStatics2 = _interopRequireDefault(_hoistNonReactStatics);
 
@@ -64972,7 +65783,7 @@ function translate(namespaces) {
 }
 
 /***/ }),
-/* 415 */
+/* 416 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -65029,7 +65840,7 @@ module.exports = function hoistNonReactStatics(targetComponent, sourceComponent,
 
 
 /***/ }),
-/* 416 */
+/* 417 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -65273,7 +66084,7 @@ exports.isSuspense = isSuspense;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 417 */
+/* 418 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -65295,7 +66106,7 @@ exports.isElement=function(a){return"object"===typeof a&&null!==a&&a.$$typeof===
 
 
 /***/ }),
-/* 418 */
+/* 419 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -65361,7 +66172,7 @@ BrowserRouter.propTypes = {
 /* harmony default export */ __webpack_exports__["a"] = (BrowserRouter);
 
 /***/ }),
-/* 419 */
+/* 420 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -65426,7 +66237,7 @@ HashRouter.propTypes = {
 /* harmony default export */ __webpack_exports__["a"] = (HashRouter);
 
 /***/ }),
-/* 420 */
+/* 421 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -65437,7 +66248,7 @@ HashRouter.propTypes = {
 /* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_react_router_es_MemoryRouter__["a" /* default */]);
 
 /***/ }),
-/* 421 */
+/* 422 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -65523,7 +66334,7 @@ NavLink.defaultProps = {
 /* harmony default export */ __webpack_exports__["a"] = (NavLink);
 
 /***/ }),
-/* 422 */
+/* 423 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -65534,7 +66345,7 @@ NavLink.defaultProps = {
 /* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_react_router_es_Prompt__["a" /* default */]);
 
 /***/ }),
-/* 423 */
+/* 424 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -65545,7 +66356,7 @@ NavLink.defaultProps = {
 /* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_react_router_es_Redirect__["a" /* default */]);
 
 /***/ }),
-/* 424 */
+/* 425 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -65556,7 +66367,7 @@ NavLink.defaultProps = {
 /* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_react_router_es_StaticRouter__["a" /* default */]);
 
 /***/ }),
-/* 425 */
+/* 426 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -65567,7 +66378,7 @@ NavLink.defaultProps = {
 /* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_react_router_es_Switch__["a" /* default */]);
 
 /***/ }),
-/* 426 */
+/* 427 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -65578,7 +66389,7 @@ NavLink.defaultProps = {
 /* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_react_router_es_generatePath__["a" /* default */]);
 
 /***/ }),
-/* 427 */
+/* 428 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -65589,7 +66400,7 @@ NavLink.defaultProps = {
 /* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_react_router_es_matchPath__["a" /* default */]);
 
 /***/ }),
-/* 428 */
+/* 429 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -65600,7 +66411,7 @@ NavLink.defaultProps = {
 /* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_react_router_es_withRouter__["a" /* default */]);
 
 /***/ }),
-/* 429 */
+/* 430 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -65647,11 +66458,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 /***/ }),
-/* 430 */
+/* 431 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var ReactDOM = __webpack_require__(199);
-var scroll = __webpack_require__(453);
+var scroll = __webpack_require__(454);
 
 function calculateScrollOffset(element, offset, alignment) {
   var body = document.body,
@@ -65684,7 +66495,7 @@ module.exports = function (ref, options) {
 };
 
 /***/ }),
-/* 431 */
+/* 432 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -65726,7 +66537,7 @@ DefaultCloseButton.propTypes = {
 exports.default = DefaultCloseButton;
 
 /***/ }),
-/* 432 */
+/* 433 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -65809,7 +66620,7 @@ ProgressBar.defaultProps = {
 exports.default = ProgressBar;
 
 /***/ }),
-/* 433 */
+/* 434 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -65829,7 +66640,7 @@ var _propTypes = __webpack_require__(7);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _ProgressBar = __webpack_require__(432);
+var _ProgressBar = __webpack_require__(433);
 
 var _ProgressBar2 = _interopRequireDefault(_ProgressBar);
 
@@ -65984,7 +66795,7 @@ Toast.defaultProps = {
 exports.default = Toast;
 
 /***/ }),
-/* 434 */
+/* 435 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -66006,15 +66817,15 @@ var _propTypes = __webpack_require__(7);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _TransitionGroup = __webpack_require__(436);
+var _TransitionGroup = __webpack_require__(437);
 
 var _TransitionGroup2 = _interopRequireDefault(_TransitionGroup);
 
-var _Toast = __webpack_require__(433);
+var _Toast = __webpack_require__(434);
 
 var _Toast2 = _interopRequireDefault(_Toast);
 
-var _DefaultCloseButton = __webpack_require__(431);
+var _DefaultCloseButton = __webpack_require__(432);
 
 var _DefaultCloseButton2 = _interopRequireDefault(_DefaultCloseButton);
 
@@ -66305,7 +67116,7 @@ ToastContainer.defaultProps = {
 exports.default = ToastContainer;
 
 /***/ }),
-/* 435 */
+/* 436 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -66395,7 +67206,7 @@ exports.default = Object.assign(function (content, options) {
 });
 
 /***/ }),
-/* 436 */
+/* 437 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -66417,11 +67228,11 @@ var _propTypes = __webpack_require__(7);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _warning = __webpack_require__(437);
+var _warning = __webpack_require__(438);
 
 var _warning2 = _interopRequireDefault(_warning);
 
-var _ChildMapping = __webpack_require__(438);
+var _ChildMapping = __webpack_require__(439);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -66671,7 +67482,7 @@ module.exports = exports['default'];
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 437 */
+/* 438 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -66739,7 +67550,7 @@ module.exports = warning;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 438 */
+/* 439 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -66836,7 +67647,7 @@ function mergeChildMappings(prev, next) {
 }
 
 /***/ }),
-/* 439 */
+/* 440 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -66900,7 +67711,7 @@ var KeyEscapeUtils = {
 module.exports = KeyEscapeUtils;
 
 /***/ }),
-/* 440 */
+/* 441 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -67018,7 +67829,7 @@ module.exports = PooledClass;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 441 */
+/* 442 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -67034,11 +67845,11 @@ module.exports = PooledClass;
 
 
 
-var PooledClass = __webpack_require__(440);
+var PooledClass = __webpack_require__(441);
 var ReactElement = __webpack_require__(27);
 
 var emptyFunction = __webpack_require__(17);
-var traverseAllChildren = __webpack_require__(451);
+var traverseAllChildren = __webpack_require__(452);
 
 var twoArgumentPooler = PooledClass.twoArgumentPooler;
 var fourArgumentPooler = PooledClass.fourArgumentPooler;
@@ -67214,7 +68025,7 @@ var ReactChildren = {
 module.exports = ReactChildren;
 
 /***/ }),
-/* 442 */
+/* 443 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -67943,7 +68754,7 @@ module.exports = ReactClass;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 443 */
+/* 444 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -68119,7 +68930,7 @@ module.exports = ReactDOMFactories;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 444 */
+/* 445 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -68143,7 +68954,7 @@ var factory = __webpack_require__(196);
 module.exports = factory(isValidElement);
 
 /***/ }),
-/* 445 */
+/* 446 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -68165,7 +68976,7 @@ var ReactPropTypesSecret = 'SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED';
 module.exports = ReactPropTypesSecret;
 
 /***/ }),
-/* 446 */
+/* 447 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -68212,7 +69023,7 @@ ReactPureComponent.prototype.isPureReactComponent = true;
 module.exports = ReactPureComponent;
 
 /***/ }),
-/* 447 */
+/* 448 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -68231,7 +69042,7 @@ module.exports = ReactPureComponent;
 module.exports = '15.5.4';
 
 /***/ }),
-/* 448 */
+/* 449 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -68250,7 +69061,7 @@ module.exports = '15.5.4';
 var _prodInvariant = __webpack_require__(28);
 
 var ReactPropTypeLocationNames = __webpack_require__(236);
-var ReactPropTypesSecret = __webpack_require__(445);
+var ReactPropTypesSecret = __webpack_require__(446);
 
 var invariant = __webpack_require__(3);
 var warning = __webpack_require__(4);
@@ -68324,7 +69135,7 @@ module.exports = checkReactTypeSpec;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 449 */
+/* 450 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -68350,7 +69161,7 @@ function getNextDebugID() {
 module.exports = getNextDebugID;
 
 /***/ }),
-/* 450 */
+/* 451 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -68394,7 +69205,7 @@ module.exports = onlyChild;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 451 */
+/* 452 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -68417,7 +69228,7 @@ var REACT_ELEMENT_TYPE = __webpack_require__(234);
 
 var getIteratorFn = __webpack_require__(237);
 var invariant = __webpack_require__(3);
-var KeyEscapeUtils = __webpack_require__(439);
+var KeyEscapeUtils = __webpack_require__(440);
 var warning = __webpack_require__(4);
 
 var SEPARATOR = '.';
@@ -68576,7 +69387,7 @@ module.exports = traverseAllChildren;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 452 */
+/* 453 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -68658,7 +69469,7 @@ function resolvePathname(to, from) {
 
 
 /***/ }),
-/* 453 */
+/* 454 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -68730,7 +69541,7 @@ function scroll() {
 
 
 /***/ }),
-/* 454 */
+/* 455 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global, process) {(function (global, undefined) {
@@ -68923,7 +69734,7 @@ function scroll() {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(78), __webpack_require__(1)))
 
 /***/ }),
-/* 455 */
+/* 456 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {var scope = (typeof global !== "undefined" && global) ||
@@ -68979,7 +69790,7 @@ exports._unrefActive = exports.active = function(item) {
 };
 
 // setimmediate attaches itself to the global object
-__webpack_require__(454);
+__webpack_require__(455);
 // On some exotic environments, it's not clear which object `setimmediate` was
 // able to install onto.  Search each possibility in the same order as the
 // `setimmediate` library.
@@ -68993,7 +69804,7 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(78)))
 
 /***/ }),
-/* 456 */
+/* 457 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -69016,7 +69827,7 @@ function invariant(condition, message) {
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(1)))
 
 /***/ }),
-/* 457 */
+/* 458 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -69044,7 +69855,22 @@ function warning(condition, message) {
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(1)))
 
 /***/ }),
-/* 458 */
+/* 459 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var __WEBPACK_AMD_DEFINE_RESULT__;/*!
+ * UAParser.js v0.7.20
+ * Lightweight JavaScript-based User-Agent string parser
+ * https://github.com/faisalman/ua-parser-js
+ *
+ * Copyright © 2012-2019 Faisal Salman <f@faisalman.com>
+ * Licensed under MIT License
+ */
+(function(window,undefined){"use strict";var LIBVERSION="0.7.20",EMPTY="",UNKNOWN="?",FUNC_TYPE="function",UNDEF_TYPE="undefined",OBJ_TYPE="object",STR_TYPE="string",MAJOR="major",MODEL="model",NAME="name",TYPE="type",VENDOR="vendor",VERSION="version",ARCHITECTURE="architecture",CONSOLE="console",MOBILE="mobile",TABLET="tablet",SMARTTV="smarttv",WEARABLE="wearable",EMBEDDED="embedded";var util={extend:function(regexes,extensions){var mergedRegexes={};for(var i in regexes){if(extensions[i]&&extensions[i].length%2===0){mergedRegexes[i]=extensions[i].concat(regexes[i])}else{mergedRegexes[i]=regexes[i]}}return mergedRegexes},has:function(str1,str2){if(typeof str1==="string"){return str2.toLowerCase().indexOf(str1.toLowerCase())!==-1}else{return false}},lowerize:function(str){return str.toLowerCase()},major:function(version){return typeof version===STR_TYPE?version.replace(/[^\d\.]/g,"").split(".")[0]:undefined},trim:function(str){return str.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g,"")}};var mapper={rgx:function(ua,arrays){var i=0,j,k,p,q,matches,match;while(i<arrays.length&&!matches){var regex=arrays[i],props=arrays[i+1];j=k=0;while(j<regex.length&&!matches){matches=regex[j++].exec(ua);if(!!matches){for(p=0;p<props.length;p++){match=matches[++k];q=props[p];if(typeof q===OBJ_TYPE&&q.length>0){if(q.length==2){if(typeof q[1]==FUNC_TYPE){this[q[0]]=q[1].call(this,match)}else{this[q[0]]=q[1]}}else if(q.length==3){if(typeof q[1]===FUNC_TYPE&&!(q[1].exec&&q[1].test)){this[q[0]]=match?q[1].call(this,match,q[2]):undefined}else{this[q[0]]=match?match.replace(q[1],q[2]):undefined}}else if(q.length==4){this[q[0]]=match?q[3].call(this,match.replace(q[1],q[2])):undefined}}else{this[q]=match?match:undefined}}}}i+=2}},str:function(str,map){for(var i in map){if(typeof map[i]===OBJ_TYPE&&map[i].length>0){for(var j=0;j<map[i].length;j++){if(util.has(map[i][j],str)){return i===UNKNOWN?undefined:i}}}else if(util.has(map[i],str)){return i===UNKNOWN?undefined:i}}return str}};var maps={browser:{oldsafari:{version:{"1.0":"/8",1.2:"/1",1.3:"/3","2.0":"/412","2.0.2":"/416","2.0.3":"/417","2.0.4":"/419","?":"/"}}},device:{amazon:{model:{"Fire Phone":["SD","KF"]}},sprint:{model:{"Evo Shift 4G":"7373KT"},vendor:{HTC:"APA",Sprint:"Sprint"}}},os:{windows:{version:{ME:"4.90","NT 3.11":"NT3.51","NT 4.0":"NT4.0",2e3:"NT 5.0",XP:["NT 5.1","NT 5.2"],Vista:"NT 6.0",7:"NT 6.1",8:"NT 6.2",8.1:"NT 6.3",10:["NT 6.4","NT 10.0"],RT:"ARM"}}}};var regexes={browser:[[/(opera\smini)\/([\w\.-]+)/i,/(opera\s[mobiletab]+).+version\/([\w\.-]+)/i,/(opera).+version\/([\w\.]+)/i,/(opera)[\/\s]+([\w\.]+)/i],[NAME,VERSION],[/(opios)[\/\s]+([\w\.]+)/i],[[NAME,"Opera Mini"],VERSION],[/\s(opr)\/([\w\.]+)/i],[[NAME,"Opera"],VERSION],[/(kindle)\/([\w\.]+)/i,/(lunascape|maxthon|netfront|jasmine|blazer)[\/\s]?([\w\.]*)/i,/(avant\s|iemobile|slim|baidu)(?:browser)?[\/\s]?([\w\.]*)/i,/(?:ms|\()(ie)\s([\w\.]+)/i,/(rekonq)\/([\w\.]*)/i,/(chromium|flock|rockmelt|midori|epiphany|silk|skyfire|ovibrowser|bolt|iron|vivaldi|iridium|phantomjs|bowser|quark|qupzilla|falkon)\/([\w\.-]+)/i],[NAME,VERSION],[/(konqueror)\/([\w\.]+)/i],[[NAME,"Konqueror"],VERSION],[/(trident).+rv[:\s]([\w\.]+).+like\sgecko/i],[[NAME,"IE"],VERSION],[/(edge|edgios|edga|edg)\/((\d+)?[\w\.]+)/i],[[NAME,"Edge"],VERSION],[/(yabrowser)\/([\w\.]+)/i],[[NAME,"Yandex"],VERSION],[/(puffin)\/([\w\.]+)/i],[[NAME,"Puffin"],VERSION],[/(focus)\/([\w\.]+)/i],[[NAME,"Firefox Focus"],VERSION],[/(opt)\/([\w\.]+)/i],[[NAME,"Opera Touch"],VERSION],[/((?:[\s\/])uc?\s?browser|(?:juc.+)ucweb)[\/\s]?([\w\.]+)/i],[[NAME,"UCBrowser"],VERSION],[/(comodo_dragon)\/([\w\.]+)/i],[[NAME,/_/g," "],VERSION],[/(windowswechat qbcore)\/([\w\.]+)/i],[[NAME,"WeChat(Win) Desktop"],VERSION],[/(micromessenger)\/([\w\.]+)/i],[[NAME,"WeChat"],VERSION],[/(brave)\/([\w\.]+)/i],[[NAME,"Brave"],VERSION],[/(qqbrowserlite)\/([\w\.]+)/i],[NAME,VERSION],[/(QQ)\/([\d\.]+)/i],[NAME,VERSION],[/m?(qqbrowser)[\/\s]?([\w\.]+)/i],[NAME,VERSION],[/(BIDUBrowser)[\/\s]?([\w\.]+)/i],[NAME,VERSION],[/(2345Explorer)[\/\s]?([\w\.]+)/i],[NAME,VERSION],[/(MetaSr)[\/\s]?([\w\.]+)/i],[NAME],[/(LBBROWSER)/i],[NAME],[/xiaomi\/miuibrowser\/([\w\.]+)/i],[VERSION,[NAME,"MIUI Browser"]],[/;fbav\/([\w\.]+);/i],[VERSION,[NAME,"Facebook"]],[/safari\s(line)\/([\w\.]+)/i,/android.+(line)\/([\w\.]+)\/iab/i],[NAME,VERSION],[/headlesschrome(?:\/([\w\.]+)|\s)/i],[VERSION,[NAME,"Chrome Headless"]],[/\swv\).+(chrome)\/([\w\.]+)/i],[[NAME,/(.+)/,"$1 WebView"],VERSION],[/((?:oculus|samsung)browser)\/([\w\.]+)/i],[[NAME,/(.+(?:g|us))(.+)/,"$1 $2"],VERSION],[/android.+version\/([\w\.]+)\s+(?:mobile\s?safari|safari)*/i],[VERSION,[NAME,"Android Browser"]],[/(sailfishbrowser)\/([\w\.]+)/i],[[NAME,"Sailfish Browser"],VERSION],[/(chrome|omniweb|arora|[tizenoka]{5}\s?browser)\/v?([\w\.]+)/i],[NAME,VERSION],[/(dolfin)\/([\w\.]+)/i],[[NAME,"Dolphin"],VERSION],[/((?:android.+)crmo|crios)\/([\w\.]+)/i],[[NAME,"Chrome"],VERSION],[/(coast)\/([\w\.]+)/i],[[NAME,"Opera Coast"],VERSION],[/fxios\/([\w\.-]+)/i],[VERSION,[NAME,"Firefox"]],[/version\/([\w\.]+).+?mobile\/\w+\s(safari)/i],[VERSION,[NAME,"Mobile Safari"]],[/version\/([\w\.]+).+?(mobile\s?safari|safari)/i],[VERSION,NAME],[/webkit.+?(gsa)\/([\w\.]+).+?(mobile\s?safari|safari)(\/[\w\.]+)/i],[[NAME,"GSA"],VERSION],[/webkit.+?(mobile\s?safari|safari)(\/[\w\.]+)/i],[NAME,[VERSION,mapper.str,maps.browser.oldsafari.version]],[/(webkit|khtml)\/([\w\.]+)/i],[NAME,VERSION],[/(navigator|netscape)\/([\w\.-]+)/i],[[NAME,"Netscape"],VERSION],[/(swiftfox)/i,/(icedragon|iceweasel|camino|chimera|fennec|maemo\sbrowser|minimo|conkeror)[\/\s]?([\w\.\+]+)/i,/(firefox|seamonkey|k-meleon|icecat|iceape|firebird|phoenix|palemoon|basilisk|waterfox)\/([\w\.-]+)$/i,/(mozilla)\/([\w\.]+).+rv\:.+gecko\/\d+/i,/(polaris|lynx|dillo|icab|doris|amaya|w3m|netsurf|sleipnir)[\/\s]?([\w\.]+)/i,/(links)\s\(([\w\.]+)/i,/(gobrowser)\/?([\w\.]*)/i,/(ice\s?browser)\/v?([\w\._]+)/i,/(mosaic)[\/\s]([\w\.]+)/i],[NAME,VERSION]],cpu:[[/(?:(amd|x(?:(?:86|64)[_-])?|wow|win)64)[;\)]/i],[[ARCHITECTURE,"amd64"]],[/(ia32(?=;))/i],[[ARCHITECTURE,util.lowerize]],[/((?:i[346]|x)86)[;\)]/i],[[ARCHITECTURE,"ia32"]],[/windows\s(ce|mobile);\sppc;/i],[[ARCHITECTURE,"arm"]],[/((?:ppc|powerpc)(?:64)?)(?:\smac|;|\))/i],[[ARCHITECTURE,/ower/,"",util.lowerize]],[/(sun4\w)[;\)]/i],[[ARCHITECTURE,"sparc"]],[/((?:avr32|ia64(?=;))|68k(?=\))|arm(?:64|(?=v\d+[;l]))|(?=atmel\s)avr|(?:irix|mips|sparc)(?:64)?(?=;)|pa-risc)/i],[[ARCHITECTURE,util.lowerize]]],device:[[/\((ipad|playbook);[\w\s\),;-]+(rim|apple)/i],[MODEL,VENDOR,[TYPE,TABLET]],[/applecoremedia\/[\w\.]+ \((ipad)/],[MODEL,[VENDOR,"Apple"],[TYPE,TABLET]],[/(apple\s{0,1}tv)/i],[[MODEL,"Apple TV"],[VENDOR,"Apple"]],[/(archos)\s(gamepad2?)/i,/(hp).+(touchpad)/i,/(hp).+(tablet)/i,/(kindle)\/([\w\.]+)/i,/\s(nook)[\w\s]+build\/(\w+)/i,/(dell)\s(strea[kpr\s\d]*[\dko])/i],[VENDOR,MODEL,[TYPE,TABLET]],[/(kf[A-z]+)\sbuild\/.+silk\//i],[MODEL,[VENDOR,"Amazon"],[TYPE,TABLET]],[/(sd|kf)[0349hijorstuw]+\sbuild\/.+silk\//i],[[MODEL,mapper.str,maps.device.amazon.model],[VENDOR,"Amazon"],[TYPE,MOBILE]],[/android.+aft([bms])\sbuild/i],[MODEL,[VENDOR,"Amazon"],[TYPE,SMARTTV]],[/\((ip[honed|\s\w*]+);.+(apple)/i],[MODEL,VENDOR,[TYPE,MOBILE]],[/\((ip[honed|\s\w*]+);/i],[MODEL,[VENDOR,"Apple"],[TYPE,MOBILE]],[/(blackberry)[\s-]?(\w+)/i,/(blackberry|benq|palm(?=\-)|sonyericsson|acer|asus|dell|meizu|motorola|polytron)[\s_-]?([\w-]*)/i,/(hp)\s([\w\s]+\w)/i,/(asus)-?(\w+)/i],[VENDOR,MODEL,[TYPE,MOBILE]],[/\(bb10;\s(\w+)/i],[MODEL,[VENDOR,"BlackBerry"],[TYPE,MOBILE]],[/android.+(transfo[prime\s]{4,10}\s\w+|eeepc|slider\s\w+|nexus 7|padfone|p00c)/i],[MODEL,[VENDOR,"Asus"],[TYPE,TABLET]],[/(sony)\s(tablet\s[ps])\sbuild\//i,/(sony)?(?:sgp.+)\sbuild\//i],[[VENDOR,"Sony"],[MODEL,"Xperia Tablet"],[TYPE,TABLET]],[/android.+\s([c-g]\d{4}|so[-l]\w+)(?=\sbuild\/|\).+chrome\/(?![1-6]{0,1}\d\.))/i],[MODEL,[VENDOR,"Sony"],[TYPE,MOBILE]],[/\s(ouya)\s/i,/(nintendo)\s([wids3u]+)/i],[VENDOR,MODEL,[TYPE,CONSOLE]],[/android.+;\s(shield)\sbuild/i],[MODEL,[VENDOR,"Nvidia"],[TYPE,CONSOLE]],[/(playstation\s[34portablevi]+)/i],[MODEL,[VENDOR,"Sony"],[TYPE,CONSOLE]],[/(sprint\s(\w+))/i],[[VENDOR,mapper.str,maps.device.sprint.vendor],[MODEL,mapper.str,maps.device.sprint.model],[TYPE,MOBILE]],[/(htc)[;_\s-]+([\w\s]+(?=\)|\sbuild)|\w+)/i,/(zte)-(\w*)/i,/(alcatel|geeksphone|nexian|panasonic|(?=;\s)sony)[_\s-]?([\w-]*)/i],[VENDOR,[MODEL,/_/g," "],[TYPE,MOBILE]],[/(nexus\s9)/i],[MODEL,[VENDOR,"HTC"],[TYPE,TABLET]],[/d\/huawei([\w\s-]+)[;\)]/i,/(nexus\s6p)/i],[MODEL,[VENDOR,"Huawei"],[TYPE,MOBILE]],[/(microsoft);\s(lumia[\s\w]+)/i],[VENDOR,MODEL,[TYPE,MOBILE]],[/[\s\(;](xbox(?:\sone)?)[\s\);]/i],[MODEL,[VENDOR,"Microsoft"],[TYPE,CONSOLE]],[/(kin\.[onetw]{3})/i],[[MODEL,/\./g," "],[VENDOR,"Microsoft"],[TYPE,MOBILE]],[/\s(milestone|droid(?:[2-4x]|\s(?:bionic|x2|pro|razr))?:?(\s4g)?)[\w\s]+build\//i,/mot[\s-]?(\w*)/i,/(XT\d{3,4}) build\//i,/(nexus\s6)/i],[MODEL,[VENDOR,"Motorola"],[TYPE,MOBILE]],[/android.+\s(mz60\d|xoom[\s2]{0,2})\sbuild\//i],[MODEL,[VENDOR,"Motorola"],[TYPE,TABLET]],[/hbbtv\/\d+\.\d+\.\d+\s+\([\w\s]*;\s*(\w[^;]*);([^;]*)/i],[[VENDOR,util.trim],[MODEL,util.trim],[TYPE,SMARTTV]],[/hbbtv.+maple;(\d+)/i],[[MODEL,/^/,"SmartTV"],[VENDOR,"Samsung"],[TYPE,SMARTTV]],[/\(dtv[\);].+(aquos)/i],[MODEL,[VENDOR,"Sharp"],[TYPE,SMARTTV]],[/android.+((sch-i[89]0\d|shw-m380s|gt-p\d{4}|gt-n\d+|sgh-t8[56]9|nexus 10))/i,/((SM-T\w+))/i],[[VENDOR,"Samsung"],MODEL,[TYPE,TABLET]],[/smart-tv.+(samsung)/i],[VENDOR,[TYPE,SMARTTV],MODEL],[/((s[cgp]h-\w+|gt-\w+|galaxy\snexus|sm-\w[\w\d]+))/i,/(sam[sung]*)[\s-]*(\w+-?[\w-]*)/i,/sec-((sgh\w+))/i],[[VENDOR,"Samsung"],MODEL,[TYPE,MOBILE]],[/sie-(\w*)/i],[MODEL,[VENDOR,"Siemens"],[TYPE,MOBILE]],[/(maemo|nokia).*(n900|lumia\s\d+)/i,/(nokia)[\s_-]?([\w-]*)/i],[[VENDOR,"Nokia"],MODEL,[TYPE,MOBILE]],[/android[x\d\.\s;]+\s([ab][1-7]\-?[0178a]\d\d?)/i],[MODEL,[VENDOR,"Acer"],[TYPE,TABLET]],[/android.+([vl]k\-?\d{3})\s+build/i],[MODEL,[VENDOR,"LG"],[TYPE,TABLET]],[/android\s3\.[\s\w;-]{10}(lg?)-([06cv9]{3,4})/i],[[VENDOR,"LG"],MODEL,[TYPE,TABLET]],[/(lg) netcast\.tv/i],[VENDOR,MODEL,[TYPE,SMARTTV]],[/(nexus\s[45])/i,/lg[e;\s\/-]+(\w*)/i,/android.+lg(\-?[\d\w]+)\s+build/i],[MODEL,[VENDOR,"LG"],[TYPE,MOBILE]],[/(lenovo)\s?(s(?:5000|6000)(?:[\w-]+)|tab(?:[\s\w]+))/i],[VENDOR,MODEL,[TYPE,TABLET]],[/android.+(ideatab[a-z0-9\-\s]+)/i],[MODEL,[VENDOR,"Lenovo"],[TYPE,TABLET]],[/(lenovo)[_\s-]?([\w-]+)/i],[VENDOR,MODEL,[TYPE,MOBILE]],[/linux;.+((jolla));/i],[VENDOR,MODEL,[TYPE,MOBILE]],[/((pebble))app\/[\d\.]+\s/i],[VENDOR,MODEL,[TYPE,WEARABLE]],[/android.+;\s(oppo)\s?([\w\s]+)\sbuild/i],[VENDOR,MODEL,[TYPE,MOBILE]],[/crkey/i],[[MODEL,"Chromecast"],[VENDOR,"Google"]],[/android.+;\s(glass)\s\d/i],[MODEL,[VENDOR,"Google"],[TYPE,WEARABLE]],[/android.+;\s(pixel c)[\s)]/i],[MODEL,[VENDOR,"Google"],[TYPE,TABLET]],[/android.+;\s(pixel( [23])?( xl)?)[\s)]/i],[MODEL,[VENDOR,"Google"],[TYPE,MOBILE]],[/android.+;\s(\w+)\s+build\/hm\1/i,/android.+(hm[\s\-_]*note?[\s_]*(?:\d\w)?)\s+build/i,/android.+(mi[\s\-_]*(?:a\d|one|one[\s_]plus|note lte)?[\s_]*(?:\d?\w?)[\s_]*(?:plus)?)\s+build/i,/android.+(redmi[\s\-_]*(?:note)?(?:[\s_]*[\w\s]+))\s+build/i],[[MODEL,/_/g," "],[VENDOR,"Xiaomi"],[TYPE,MOBILE]],[/android.+(mi[\s\-_]*(?:pad)(?:[\s_]*[\w\s]+))\s+build/i],[[MODEL,/_/g," "],[VENDOR,"Xiaomi"],[TYPE,TABLET]],[/android.+;\s(m[1-5]\snote)\sbuild/i],[MODEL,[VENDOR,"Meizu"],[TYPE,MOBILE]],[/(mz)-([\w-]{2,})/i],[[VENDOR,"Meizu"],MODEL,[TYPE,MOBILE]],[/android.+a000(1)\s+build/i,/android.+oneplus\s(a\d{4})\s+build/i],[MODEL,[VENDOR,"OnePlus"],[TYPE,MOBILE]],[/android.+[;\/]\s*(RCT[\d\w]+)\s+build/i],[MODEL,[VENDOR,"RCA"],[TYPE,TABLET]],[/android.+[;\/\s]+(Venue[\d\s]{2,7})\s+build/i],[MODEL,[VENDOR,"Dell"],[TYPE,TABLET]],[/android.+[;\/]\s*(Q[T|M][\d\w]+)\s+build/i],[MODEL,[VENDOR,"Verizon"],[TYPE,TABLET]],[/android.+[;\/]\s+(Barnes[&\s]+Noble\s+|BN[RT])(V?.*)\s+build/i],[[VENDOR,"Barnes & Noble"],MODEL,[TYPE,TABLET]],[/android.+[;\/]\s+(TM\d{3}.*\b)\s+build/i],[MODEL,[VENDOR,"NuVision"],[TYPE,TABLET]],[/android.+;\s(k88)\sbuild/i],[MODEL,[VENDOR,"ZTE"],[TYPE,TABLET]],[/android.+[;\/]\s*(gen\d{3})\s+build.*49h/i],[MODEL,[VENDOR,"Swiss"],[TYPE,MOBILE]],[/android.+[;\/]\s*(zur\d{3})\s+build/i],[MODEL,[VENDOR,"Swiss"],[TYPE,TABLET]],[/android.+[;\/]\s*((Zeki)?TB.*\b)\s+build/i],[MODEL,[VENDOR,"Zeki"],[TYPE,TABLET]],[/(android).+[;\/]\s+([YR]\d{2})\s+build/i,/android.+[;\/]\s+(Dragon[\-\s]+Touch\s+|DT)(\w{5})\sbuild/i],[[VENDOR,"Dragon Touch"],MODEL,[TYPE,TABLET]],[/android.+[;\/]\s*(NS-?\w{0,9})\sbuild/i],[MODEL,[VENDOR,"Insignia"],[TYPE,TABLET]],[/android.+[;\/]\s*((NX|Next)-?\w{0,9})\s+build/i],[MODEL,[VENDOR,"NextBook"],[TYPE,TABLET]],[/android.+[;\/]\s*(Xtreme\_)?(V(1[045]|2[015]|30|40|60|7[05]|90))\s+build/i],[[VENDOR,"Voice"],MODEL,[TYPE,MOBILE]],[/android.+[;\/]\s*(LVTEL\-)?(V1[12])\s+build/i],[[VENDOR,"LvTel"],MODEL,[TYPE,MOBILE]],[/android.+;\s(PH-1)\s/i],[MODEL,[VENDOR,"Essential"],[TYPE,MOBILE]],[/android.+[;\/]\s*(V(100MD|700NA|7011|917G).*\b)\s+build/i],[MODEL,[VENDOR,"Envizen"],[TYPE,TABLET]],[/android.+[;\/]\s*(Le[\s\-]+Pan)[\s\-]+(\w{1,9})\s+build/i],[VENDOR,MODEL,[TYPE,TABLET]],[/android.+[;\/]\s*(Trio[\s\-]*.*)\s+build/i],[MODEL,[VENDOR,"MachSpeed"],[TYPE,TABLET]],[/android.+[;\/]\s*(Trinity)[\-\s]*(T\d{3})\s+build/i],[VENDOR,MODEL,[TYPE,TABLET]],[/android.+[;\/]\s*TU_(1491)\s+build/i],[MODEL,[VENDOR,"Rotor"],[TYPE,TABLET]],[/android.+(KS(.+))\s+build/i],[MODEL,[VENDOR,"Amazon"],[TYPE,TABLET]],[/android.+(Gigaset)[\s\-]+(Q\w{1,9})\s+build/i],[VENDOR,MODEL,[TYPE,TABLET]],[/\s(tablet|tab)[;\/]/i,/\s(mobile)(?:[;\/]|\ssafari)/i],[[TYPE,util.lowerize],VENDOR,MODEL],[/[\s\/\(](smart-?tv)[;\)]/i],[[TYPE,SMARTTV]],[/(android[\w\.\s\-]{0,9});.+build/i],[MODEL,[VENDOR,"Generic"]]],engine:[[/windows.+\sedge\/([\w\.]+)/i],[VERSION,[NAME,"EdgeHTML"]],[/webkit\/537\.36.+chrome\/(?!27)/i],[[NAME,"Blink"]],[/(presto)\/([\w\.]+)/i,/(webkit|trident|netfront|netsurf|amaya|lynx|w3m|goanna)\/([\w\.]+)/i,/(khtml|tasman|links)[\/\s]\(?([\w\.]+)/i,/(icab)[\/\s]([23]\.[\d\.]+)/i],[NAME,VERSION],[/rv\:([\w\.]{1,9}).+(gecko)/i],[VERSION,NAME]],os:[[/microsoft\s(windows)\s(vista|xp)/i],[NAME,VERSION],[/(windows)\snt\s6\.2;\s(arm)/i,/(windows\sphone(?:\sos)*)[\s\/]?([\d\.\s\w]*)/i,/(windows\smobile|windows)[\s\/]?([ntce\d\.\s]+\w)/i],[NAME,[VERSION,mapper.str,maps.os.windows.version]],[/(win(?=3|9|n)|win\s9x\s)([nt\d\.]+)/i],[[NAME,"Windows"],[VERSION,mapper.str,maps.os.windows.version]],[/\((bb)(10);/i],[[NAME,"BlackBerry"],VERSION],[/(blackberry)\w*\/?([\w\.]*)/i,/(tizen)[\/\s]([\w\.]+)/i,/(android|webos|palm\sos|qnx|bada|rim\stablet\sos|meego|sailfish|contiki)[\/\s-]?([\w\.]*)/i],[NAME,VERSION],[/(symbian\s?os|symbos|s60(?=;))[\/\s-]?([\w\.]*)/i],[[NAME,"Symbian"],VERSION],[/\((series40);/i],[NAME],[/mozilla.+\(mobile;.+gecko.+firefox/i],[[NAME,"Firefox OS"],VERSION],[/(nintendo|playstation)\s([wids34portablevu]+)/i,/(mint)[\/\s\(]?(\w*)/i,/(mageia|vectorlinux)[;\s]/i,/(joli|[kxln]?ubuntu|debian|suse|opensuse|gentoo|(?=\s)arch|slackware|fedora|mandriva|centos|pclinuxos|redhat|zenwalk|linpus)[\/\s-]?(?!chrom)([\w\.-]*)/i,/(hurd|linux)\s?([\w\.]*)/i,/(gnu)\s?([\w\.]*)/i],[NAME,VERSION],[/(cros)\s[\w]+\s([\w\.]+\w)/i],[[NAME,"Chromium OS"],VERSION],[/(sunos)\s?([\w\.\d]*)/i],[[NAME,"Solaris"],VERSION],[/\s([frentopc-]{0,4}bsd|dragonfly)\s?([\w\.]*)/i],[NAME,VERSION],[/(haiku)\s(\w+)/i],[NAME,VERSION],[/cfnetwork\/.+darwin/i,/ip[honead]{2,4}(?:.*os\s([\w]+)\slike\smac|;\sopera)/i],[[VERSION,/_/g,"."],[NAME,"iOS"]],[/(mac\sos\sx)\s?([\w\s\.]*)/i,/(macintosh|mac(?=_powerpc)\s)/i],[[NAME,"Mac OS"],[VERSION,/_/g,"."]],[/((?:open)?solaris)[\/\s-]?([\w\.]*)/i,/(aix)\s((\d)(?=\.|\)|\s)[\w\.])*/i,/(plan\s9|minix|beos|os\/2|amigaos|morphos|risc\sos|openvms|fuchsia)/i,/(unix)\s?([\w\.]*)/i],[NAME,VERSION]]};var UAParser=function(uastring,extensions){if(typeof uastring==="object"){extensions=uastring;uastring=undefined}if(!(this instanceof UAParser)){return new UAParser(uastring,extensions).getResult()}var ua=uastring||(window&&window.navigator&&window.navigator.userAgent?window.navigator.userAgent:EMPTY);var rgxmap=extensions?util.extend(regexes,extensions):regexes;this.getBrowser=function(){var browser={name:undefined,version:undefined};mapper.rgx.call(browser,ua,rgxmap.browser);browser.major=util.major(browser.version);return browser};this.getCPU=function(){var cpu={architecture:undefined};mapper.rgx.call(cpu,ua,rgxmap.cpu);return cpu};this.getDevice=function(){var device={vendor:undefined,model:undefined,type:undefined};mapper.rgx.call(device,ua,rgxmap.device);return device};this.getEngine=function(){var engine={name:undefined,version:undefined};mapper.rgx.call(engine,ua,rgxmap.engine);return engine};this.getOS=function(){var os={name:undefined,version:undefined};mapper.rgx.call(os,ua,rgxmap.os);return os};this.getResult=function(){return{ua:this.getUA(),browser:this.getBrowser(),engine:this.getEngine(),os:this.getOS(),device:this.getDevice(),cpu:this.getCPU()}};this.getUA=function(){return ua};this.setUA=function(uastring){ua=uastring;return this};return this};UAParser.VERSION=LIBVERSION;UAParser.BROWSER={NAME:NAME,MAJOR:MAJOR,VERSION:VERSION};UAParser.CPU={ARCHITECTURE:ARCHITECTURE};UAParser.DEVICE={MODEL:MODEL,VENDOR:VENDOR,TYPE:TYPE,CONSOLE:CONSOLE,MOBILE:MOBILE,SMARTTV:SMARTTV,TABLET:TABLET,WEARABLE:WEARABLE,EMBEDDED:EMBEDDED};UAParser.ENGINE={NAME:NAME,VERSION:VERSION};UAParser.OS={NAME:NAME,VERSION:VERSION};if(typeof exports!==UNDEF_TYPE){if(typeof module!==UNDEF_TYPE&&module.exports){exports=module.exports=UAParser}exports.UAParser=UAParser}else{if(true){!(__WEBPACK_AMD_DEFINE_RESULT__ = function(){return UAParser}.call(exports, __webpack_require__, exports, module),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))}else if(window){window.UAParser=UAParser}}var $=window&&(window.jQuery||window.Zepto);if(typeof $!==UNDEF_TYPE&&!$.ua){var parser=new UAParser;$.ua=parser.getResult();$.ua.get=function(){return parser.getUA()};$.ua.set=function(uastring){parser.setUA(uastring);var result=parser.getResult();for(var prop in result){$.ua[prop]=result[prop]}}}})(typeof window==="object"?window:this);
+
+/***/ }),
+/* 460 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -69066,7 +69892,7 @@ var _objectAssign = __webpack_require__(6);
 
 var _objectAssign2 = _interopRequireDefault(_objectAssign);
 
-var _utils = __webpack_require__(459);
+var _utils = __webpack_require__(461);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -69216,7 +70042,7 @@ function readCookie(value) {
 module.exports = exports['default'];
 
 /***/ }),
-/* 459 */
+/* 461 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -69246,7 +70072,7 @@ function cleanCookies() {
 }
 
 /***/ }),
-/* 460 */
+/* 462 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -69289,7 +70115,7 @@ function valueEqual(a, b) {
 
 
 /***/ }),
-/* 461 */
+/* 463 */
 /***/ (function(module, exports) {
 
 module.exports = function(module) {
@@ -69317,7 +70143,7 @@ module.exports = function(module) {
 
 
 /***/ }),
-/* 462 */
+/* 464 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(238);
