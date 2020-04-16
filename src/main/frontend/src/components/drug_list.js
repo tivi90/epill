@@ -399,6 +399,7 @@ class DrugList extends React.Component {
             let drugname1 = ["group inner med_header"];
             let medfeat = ["row med_drugfeature hidden"];
             let medfeat1 = ["row med_drugfeature"];
+            let col1Class = [""];
             let col2Class = [""];
             let col4Class = [""];
             let col5Class = [""];
@@ -415,6 +416,7 @@ class DrugList extends React.Component {
                 drugname1.push('');
                 medfeat.push('');
                 col2Class.push('col-md-2 ');
+                col1Class.push('col-md-1 ');
                 col4Class.push('col-md-4 ');
                 col5Class.push('col-md-5 ');
                 col7Class.push('col-md-7 ');
@@ -464,7 +466,7 @@ class DrugList extends React.Component {
                                         {this.renderDrugFeatures(drug)}
                                     </div>
                                 </div>
-                                <div className={col2Class.join('col-md-offset-3 ')}>
+                                <div className={col1Class.join('col-md-offset-4 ')}>
                                     {User.isAuthenticated() &&
                                     <div className="row">
                                         <div className="action-pattern">

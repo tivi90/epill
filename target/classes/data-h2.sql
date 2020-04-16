@@ -4973,8 +4973,8 @@ INSERT INTO tailored_text (id, idgender, iddrug, min_age, max_age, text) VALUES 
 INSERT INTO tailored_text (id, idgender, iddrug, min_age, max_age, text) VALUES (36, 1, 3, 0, 0, 'Eine Zusammenfassung für Männer ohne Altersbezug. 2 mal täglich einnehmen<br />1 Tablette morgens gegen 9:00<br />1 Tablette am Abend gegen 20:00');
 INSERT INTO tailored_text (id, idgender, iddrug, min_age, max_age, text) VALUES (37, 2, 3, 0, 0, 'Eine Zusammenfassung für Frauen ohne Altersbezug, %firstname%.');
 INSERT INTO tailored_text (id, idgender, iddrug, min_age, max_age, text) VALUES (38, 2, 4, 0, 0, 'Eine Zusammenfassung für dieses Medikament Frauen ohne Altersbezug, %firstname%.');
-INSERT INTO tailored_text (id, idgender, iddrug, min_age, max_age, text) VALUES (61, 1, 11, 0, 0, 'Bitte nehme pro 5mg Amlodipin zu dir.  %firstname%.');
-INSERT INTO tailored_text (id, idgender, iddrug, min_age, max_age, text) VALUES (62, 1, 12, 0, 0, 'Bitte nehme pro 5mg Amlodipin zu dir.  %firstname%.');
+INSERT INTO tailored_text (id, idgender, iddrug, min_age, max_age, text) VALUES (61, 1, 11, 0, 0, 'Bitte nehme pro 500mg Metformin 1x täglich zu dir.  %firstname%.');
+INSERT INTO tailored_text (id, idgender, iddrug, min_age, max_age, text) VALUES (62, 1, 13, 0, 0, 'Bitte nehme pro 20mg Enalapril 1x täglich zu dir.  %firstname%.');
 
 
 -- minimum summaries for listing

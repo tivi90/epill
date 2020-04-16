@@ -35,6 +35,7 @@
 .list_pic {
     background-color: white;
     border: 1px solid #c7c7c7;
+    height: 291px;
 }
 
 .full_contentdi {
@@ -477,8 +478,8 @@
 }
 
 .btnheight {
-    padding: 34px 0px 34px 1px !important;
-    width: 76% !important;
+    padding: 40px 0px 41px 1px !important;
+    width: 200% !important;
 }
 
 .btn-open {
@@ -486,7 +487,7 @@
 }
 
 .item.list-group-item .list-group-image {
-    height: 130px;
+    height: 176px;
 }
 
 .item.list-group-item .thumbnail {

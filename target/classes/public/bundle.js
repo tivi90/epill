@@ -47782,6 +47782,7 @@ var DrugList = function (_React$Component) {
                 var drugname1 = ["group inner med_header"];
                 var medfeat = ["row med_drugfeature hidden"];
                 var medfeat1 = ["row med_drugfeature"];
+                var col1Class = [""];
                 var col2Class = [""];
                 var col4Class = [""];
                 var col5Class = [""];
@@ -47798,6 +47799,7 @@ var DrugList = function (_React$Component) {
                     drugname1.push('');
                     medfeat.push('');
                     col2Class.push('col-md-2 ');
+                    col1Class.push('col-md-1 ');
                     col4Class.push('col-md-4 ');
                     col5Class.push('col-md-5 ');
                     col7Class.push('col-md-7 ');
@@ -47885,7 +47887,7 @@ var DrugList = function (_React$Component) {
                                 ),
                                 _react2.default.createElement(
                                     "div",
-                                    { className: col2Class.join('col-md-offset-3 ') },
+                                    { className: col1Class.join('col-md-offset-4 ') },
                                     _User2.default.isAuthenticated() && _react2.default.createElement(
                                         "div",
                                         { className: "row" },
