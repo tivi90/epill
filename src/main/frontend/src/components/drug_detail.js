@@ -243,120 +243,23 @@ class DrugDetail extends React.Component {
             });
     }
 
-    renderDrugFeatures(drug) {
 
-        if (!drug.drugFeature) {
-            return;
-        }
-        return (
-            <p>
-                {drug.drugFeature.map(feature => <img key={feature.id}
-                                                      src={"./../../assets/icons/" + feature.id + ".svg"}
-                                                      alt={feature.drugFeature} title={feature.drugFeature}
-                                                      className="drug-feature-icon"></img>)}
-            </p>
-        );
-    }
-
-    renderDrugFeaturesDesc(drug) {
-        const {t} = this.props;
-        if (!drug.drugFeature) {
+    renderSectionList(drug) {
+        if (!drug.packagingSection) {
             return null;
         }
-        return (
-
-            <span>
-        {drug.drugFeature.map(feature => {
-            return (
-                <span key={feature.id}>
-                     <img key={feature.id} data-toggle="modal" data-target={"#" + feature.id}
-                          src={"./../../assets/icons/" + feature.id + ".svg"} className="drug-feature-icon"
-                          alt={feature.drugFeature} title={feature.drugFeature}/>
-                                                <div id={feature.id} className="modal fade" role="dialog">
-                                                    <div className="modal-dialog">
-                                                        <div className="modal-content">
-                                                            <div className="modal-header">
-                                                                <button type="button" className="close"
-                                                                        data-dismiss="modal">&times;</button>
-                                                                <h2 className="modal-title">
-                                                                    <img style={{width: "40px"}}
-                                                                         key={feature.id}
-                                                                         data-toggle="modal"
-                                                                         data-target={"#" + feature.id}
-                                                                         src={"./../../assets/icons/" + feature.id + ".svg"}
-                                                                         className="drug-feature-icon"
-                                                                         alt={feature.drugFeature}
-                                                                         title={feature.drugFeature}></img> {feature.drugFeature}
-                                                                </h2>
-                                                            </div>
-                                                            <div className="modal-body text-left">
-                                                                <div
-                                                                    dangerouslySetInnerHTML={this.createMarkup(feature.descriptionDrug)}/>
-                                                            </div>
-                                                             <span
-                                                                 dangerouslySetInnerHTML={this.createMarkup(t("modal_close"))}></span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </span>
-
-            )
-        })
-        }</span>)
+        return drug.packagingSection.map((section => {
+            return (<Accordion section={section} toggleOriginalAndTailoredText={this.toggleOriginalAndTailoredText}
+                               key={section.id}/>);
+        }));
     }
 
-    renderDisease(drug) {
-        if (!drug.disease) {
-            return null;
-        }
 
-        const {t} = this.props;
-        return (
-            <section className="diseases">
-                <FontAwesomeIcon className="infopic" icon={faCrosshairs}/>
+    /**
+     * Buttons
+     */
 
-                <p><b> {t('usedWhen') + " "}</b></p>
-                <p>   {drug.disease.map(disease => <span key={disease.id}>{disease.name} <br/></span>)
-                    .reduce((prev, curr) => [prev, curr])}</p>
-            </section>
-        );
-    }
-
-    renderPharmaceuticalForm(drug) {
-        if (!drug.pharmaceuticalForm) {
-            return null;
-        }
-
-        const {t} = this.props;
-        return (
-            <div className="col-sm-4 col-xs-6 text-center infopart" data-toggle="modal"
-                 data-target="#drugform">
-
-                <section className="diseases row" style={{cursor: "pointer"}}>
-                    {drug.pharmaceuticalForm.map(pharmaceuticalForm =>
-                        <img key={pharmaceuticalForm.id}
-                             src={"./../../assets/p_form/" + pharmaceuticalForm.id + ".svg"}
-                             className="drug-feature-icon infopic"
-                             alt={pharmaceuticalForm.name}
-                             title={pharmaceuticalForm.name}></img>
-                    )
-                        .reduce((prev, curr) => [prev, curr])}
-
-                    <p><b>  {t('pharmaceuticalForm') + ": "} </b></p>
-                    <span>
-                    {drug.pharmaceuticalForm.map(pharmaceuticalForm => <span
-                        key={pharmaceuticalForm.id}>{pharmaceuticalForm.name} <br/> </span>)
-                        .reduce((prev, curr) => [prev, ', ', curr])}
-                </span>
-                </section>
-                <div style={{cursor: "pointer"}} data-toggle="modal"
-                     data-target="#drugform"><i
-                    className="fas fa-info-circle"/></div>
-            </div>
-        );
-    }
-
-    renderWordExplainationButton(drug) {
+    renderWordExplanationButton(drug) {
         if (!drug.wordExplaination) {
             return null;
         }
@@ -364,13 +267,12 @@ class DrugDetail extends React.Component {
         return (
             <div className="round-button-outer1 report-round-button1 round_def">
                 <div id="defBtn" className="round-button-inner-main1" data-toggle="modal" data-target="#def">
-                    <i className="fas fa-book"></i></div>
+                    <i className="fas fa-book"/></div>
             </div>
         );
-
     }
 
-    renderWordExplaination(drug) {
+    renderWordExplanation(drug) {
 
         if (!drug.wordExplaination) {
             return null;
@@ -406,7 +308,7 @@ class DrugDetail extends React.Component {
 
     }
 
-    renderWordExplainationsdesktop(drug) {
+    renderWordExplanationsdesktop(drug) {
 
         if (!drug.wordExplaination) {
             return null;
@@ -414,7 +316,7 @@ class DrugDetail extends React.Component {
         const {t} = this.props;
         return (
             <div>
-                <input type="text" id="myInput" onKeyUp={this.myFunction.bind(this)} placeholder="Begriff eingeben"
+                <input type="text" id="myInput" onKeyUp={this.searchWord.bind(this)} placeholder="Begriff eingeben"
                        title="Begriff eingeben"/>
                 <table id="myTable" className="table table-bordered table-striped hidden-xs">
                     <thead>
@@ -443,8 +345,7 @@ class DrugDetail extends React.Component {
 
     }
 
-
-    renderWordExplainationsmobile(drug) {
+    renderWordExplanationsmobile(drug) {
 
         if (!drug.wordExplaination) {
             return null;
@@ -472,12 +373,194 @@ class DrugDetail extends React.Component {
 
     }
 
-
-    renderFormdesc(drug) {
+    renderPackcompany(drug) {
         if (!drug.packagingSection) {
             return null;
         }
+        return drug.packagingSection
+            .filter(section => {
+                return section.topic.id === 4
+            })
+            .map((section => {
+                return (
+                    <p key={section.id}><span dangerouslySetInnerHTML={this.createMarkup(section.address)}/>
+                    </p>
+                );
+            }))
+            .reduce((prev, curr) => [prev, curr]);
+    }
 
+    renderPackSecaufbewahrung(drug) {
+        if (!drug.packagingSection) {
+            return null;
+        }
+        return drug.packagingSection
+            .filter(section => {
+                return section.topic.id === 7
+            })
+            .map((section => {
+                return (
+                    <p key={section.id}><span dangerouslySetInnerHTML={this.createMarkup(section.text)}/>
+                    </p>
+                );
+            }))
+            .reduce((prev, curr) => [prev, curr]);
+    }
+
+    /**
+     * Level 1:  General Informations
+     */
+
+    renderPackGeneralInstructions(drug) {
+        if (!drug.packagingSection) {
+            return null;
+        }
+        return (<div>
+                <h1>Allgemeine Informationen</h1>
+                <hr/>
+                {drug.packagingSection
+                    .filter(section => {
+                        return section.topic.id === 8
+                    })
+                    .map((section => {
+                        return (
+                            <p key={section.id}><span dangerouslySetInnerHTML={this.createMarkup(section.text)}/>
+                            </p>
+                        )
+                    }))
+                    .reduce((prev, curr) => [prev, curr])
+                }
+            </div>
+        )
+    }
+
+    renderDrugFeatures(drug) {
+        if (!drug.drugFeature) {
+            return;
+        }
+        return (
+            <span>
+            {drug.drugFeature
+                    .map(feature =>
+                        <img key={feature.id} src={"./../../assets/icons/" + feature.id + ".svg"}
+                             alt={feature.drugFeature}
+                             title={feature.drugFeature} className="drug-feature-icon">
+                        </img>
+                    )
+            }
+            </span>
+        );
+    }
+
+    renderDrugFeaturesDesc(drug) {
+        const {t} = this.props;
+        if (!drug.drugFeature) {
+            return null;
+        }
+        return (
+
+            <span>
+        {drug.drugFeature.map(feature => {
+            return (
+                <span key={feature.id}>
+                     <img key={feature.id} data-toggle="modal" data-target={"#" + feature.id}
+                          src={"./../../assets/icons/" + feature.id + ".svg"} className="drug-feature-icon"
+                          alt={feature.drugFeature} title={feature.drugFeature}/>
+                                                <div id={feature.id} className="modal fade" role="dialog">
+                                                    <div className="modal-dialog">
+                                                        <div className="modal-content">
+                                                            <div className="modal-header">
+                                                                <button type="button" className="close"
+                                                                        data-dismiss="modal">&times;</button>
+                                                                <h2 className="modal-title">
+                                                                    <img style={{width: "40px"}}
+                                                                         key={feature.id}
+                                                                         data-toggle="modal"
+                                                                         data-target={"#" + feature.id}
+                                                                         src={"./../../assets/icons/" + feature.id + ".svg"}
+                                                                         className="drug-feature-icon"
+                                                                         alt={feature.drugFeature}
+                                                                         title={feature.drugFeature}>
+                                                                    </img>
+                                                                    {feature.drugFeature}
+                                                                </h2>
+                                                            </div>
+                                                            <div className="modal-body text-left">
+                                                                <div
+                                                                    dangerouslySetInnerHTML={this.createMarkup(feature.descriptionDrug)}/>
+                                                            </div>
+                                                             <span
+                                                                 dangerouslySetInnerHTML={this.createMarkup(t("modal_close"))}/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </span>
+
+            )
+        })
+        }</span>)
+    }
+
+    renderDisease(drug) {
+        if (!drug.disease) {
+            return null;
+        }
+        const {t} = this.props;
+        return (
+            <section className="diseases">
+                <FontAwesomeIcon className="infopic" icon={faCrosshairs}/>
+                <p><b> {t('usedWhen') + " "}</b></p>
+                <p>{drug.disease.map(disease => <span key={disease.id}>{disease.name} <br/></span>)
+                    .reduce((prev, curr) => [prev, curr])}</p>
+            </section>
+        );
+    }
+
+    renderPharmaceuticalForm(drug) {
+        if (!drug.pharmaceuticalForm) {
+            return null;
+        }
+        const {t} = this.props;
+        return (
+            <div className="col-sm-4 col-xs-6 text-center infopart" data-toggle="modal"
+                 data-target="#drugform">
+                <section className="diseases row" style={{cursor: "pointer"}}>
+                    {drug.pharmaceuticalForm
+                        .map(pharmaceuticalForm =>
+                            <img key={pharmaceuticalForm.id}
+                                 src={"./../../assets/p_form/" + pharmaceuticalForm.id + ".svg"}
+                                 className="drug-feature-icon infopic" alt={pharmaceuticalForm.name}
+                                 title={pharmaceuticalForm.name}/>
+                        )
+                        .reduce((prev, curr) => [prev, curr]
+                        )
+                    }
+                    <p>
+                        <b>{t('pharmaceuticalForm') + ": "} </b>
+                    </p>
+                    <span>
+                    {drug.pharmaceuticalForm
+                        .map(pharmaceuticalForm =>
+                            <span
+                                key={pharmaceuticalForm.id}>{pharmaceuticalForm.name} <br/>
+                            </span>
+                        )
+                        .reduce((prev, curr) => [prev, ', ', curr]
+                        )
+                    }
+                </span>
+                </section>
+                <div style={{cursor: "pointer"}} data-toggle="modal"
+                     data-target="#drugform"><i
+                    className="fas fa-info-circle"/></div>
+            </div>
+        );
+    }
+
+    renderPharmaceuticalFormDesc(drug) {
+        if (!drug.packagingSection) {
+            return null;
+        }
         return drug.packagingSection
             .filter(section => {
                 return section.topic.id === 9
@@ -490,62 +573,104 @@ class DrugDetail extends React.Component {
             })).reduce((prev, curr) => [prev, curr]);
     }
 
-    renderFormImg(drug) {
+    renderPharmaceuticalFormImg(drug) {
         if (!drug.pharmaceuticalForm) {
             return;
         }
-
         const {t} = this.props;
         return (
             <span>
-                    {drug.pharmaceuticalForm.map(pharmaceuticalForm => <img key={pharmaceuticalForm.id}
-                                                                            src={"./../../assets/p_form/" + pharmaceuticalForm.id + ".svg"}
-                                                                            className="img-drugform"
-                                                                            alt={pharmaceuticalForm.name}
-                                                                            title={pharmaceuticalForm.name}/>
-                    )
+                    {drug.pharmaceuticalForm
+                        .map(pharmaceuticalForm =>
+                            <img key={pharmaceuticalForm.id}
+                                 src={"./../../assets/p_form/" + pharmaceuticalForm.id + ".svg"}
+                                 className="img-drugform"
+                                 alt={pharmaceuticalForm.name}
+                                 title={pharmaceuticalForm.name}/>
+                        )
                         .reduce((prev, curr) => [prev, curr])
                     }
-                    </span>
-
+             </span>
         );
+    }
+
+    renderPackContent(drug) {
+        if (!drug.packagingSection) {
+            return null;
+        }
+        return drug.packagingSection
+            .filter(section => {
+                return section.topic.id === 10
+            })
+            .map((section => {
+                return (
+                    <p key={section.id}><span dangerouslySetInnerHTML={this.createMarkup(section.text)}/>
+                    </p>
+                );
+            }))
+            .reduce((prev, curr) => [prev, curr]);
     }
 
     renderActiveSubstance(drug) {
         if (!drug.activeSubstance)
             return null;
-
         const {t} = this.props;
-
         return (
             <section><img src={"./../../assets/images/lab.svg"} className="infopic" alt={"lab"}/>
-
-                <p><b> {t('activeSubstance') + " "}</b></p>
-                <p>    {drug.activeSubstance.map(substance => <span key={substance.id}>{substance.name}
-                    <br/></span>
-                )
-                    .reduce((prev, curr) => [prev, ', ', curr])}</p>
+                <p>
+                    <b> {t('activeSubstance') + " "}</b>
+                </p>
+                <p>
+                    {drug.activeSubstance
+                        .map(substance =>
+                            <span key={substance.id}>{substance.name} <br/></span>
+                        )
+                        .reduce((prev, curr) => [prev, ', ', curr])
+                    }
+                </p>
             </section>
         );
     }
 
+    renderPackMoreActiveSubstance(drug) {
+        if (!drug.packagingSection) {
+            return null;
+        }
+        return drug.packagingSection
+            .filter(section => {
+                return section.topic.id === 11
+            })
+            .map((section => {
+                return (
+                    <p key={section.id}><span dangerouslySetInnerHTML={this.createMarkup(section.text)}/>
+                    </p>
+                );
+            })).reduce((prev, curr) => [prev, curr]);
+    }
 
     renderPZN(drug) {
         if (!drug.packaging) {
             return null;
         }
         const {t} = this.props;
-
         return (
             <div className="col-sm-4 col-xs-6 text-center infopart">
                 <section className="pzn diseases row">
                     <FontAwesomeIcon className="infopic" icon={faHashtag}/>
-
-                    <p><b>  {t('pzn') + " "}</b>
-                        {drug.packaging.map(packaging => <span key={packaging.id}> <br/>{packaging.name}
-                            <br/>{packaging.pzn}
-                            <br/></span>)
-                            .reduce((prev, curr) => [prev, curr])}</p>
+                    <p>
+                        <b>{t('pzn') + " "}</b>
+                        {drug.packaging
+                            .map(packaging =>
+                                <span key={packaging.id}>
+                                    <br/>
+                                    {packaging.name}
+                                    <br/>
+                                    {packaging.pzn}
+                                    <br/>
+                                </span>)
+                            .reduce((prev, curr) => [prev, curr])
+                        }
+                    </p>
                 </section>
             </div>
         );
@@ -556,112 +681,62 @@ class DrugDetail extends React.Component {
             return null;
         }
         const {t} = this.props;
-
         return (
             <div className="col-sm-4 col-xs-6 text-center infopart">
                 <section className="row diseases">
                     <img src={"./../../assets/images/ind_group.svg"} alt={"ind_group"} className="infopic"/>
-
-                    <p><b>     {t('indicationGroup') + " "}  </b></p>
-                    <p>{drug.indicationGroup.name}</p>
-
+                    <p>
+                        <b> {t('indicationGroup') + " "}  </b>
+                    </p>
+                    <p>
+                        {drug.indicationGroup.name}
+                    </p>
                 </section>
             </div>
         );
     }
 
     renderProductGroup(drug) {
-
         if (!drug.productGroup || !drug.productGroup.name) {
             return null;
         }
         const {t} = this.props;
-
         return (
             <div className="col-sm-4 col-xs-6 text-center infopart">
                 <section className="row diseases">
                     <img src={"./../../assets/images/productgroup.png"} alt={"productgroup"} className="infopic"/>
-
-                    <p><b>      {t('productGroup') + " "}</b></p>
-
-                    <p>{drug.productGroup.name}</p>
-
+                    <p>
+                        <b>{t('productGroup') + " "}</b>
+                    </p>
+                    <p>
+                        {drug.productGroup.name}
+                    </p>
                 </section>
             </div>
         );
     }
 
-    renderSectionOverview(drug) {
+    // renderSectionOverview(drug) {
+    //     if (!drug.packagingSection) {
+    //         return null;
+    //     }
+    //     return drug.packagingSection.map((section => {
+    //         return (
+    //             <p key={section.id}>{section.topic.title}</p>
+    //         );
+    //     }));
+    // }
+
+    //END Level 1:  General Informations
+
+
+    /**
+     * Level 2: Before Application
+     */
+    renderPackLevel2Warning(drug) {
         if (!drug.packagingSection) {
             return null;
         }
-
-        return drug.packagingSection.map((section => {
-            return (
-                <p key={section.id}>{section.topic.title}</p>
-            );
-        }));
-    }
-
-    renderPackcompany(drug) {
-        if (!drug.packagingSection) {
-            return null;
-        }
-
-        return drug.packagingSection
-            .filter(section => {
-                return section.topic.id === 4
-            })
-            .map((section => {
-                return (
-                    <p key={section.id}><span dangerouslySetInnerHTML={this.createMarkup(section.address)}/>
-                    </p>
-                );
-            })).reduce((prev, curr) => [prev, curr]);
-    }
-
-    renderPackSecaufbewahrung(drug) {
-        if (!drug.packagingSection) {
-            return null;
-        }
-
-        return drug.packagingSection
-            .filter(section => {
-                return section.topic.id === 7
-            })
-            .map((section => {
-                return (
-                    <p key={section.id}><span dangerouslySetInnerHTML={this.createMarkup(section.text)}/>
-                    </p>
-                );
-            })).reduce((prev, curr) => [prev, curr]);
-    }
-
-    renderPackSecdesc(drug) {
-        if (!drug.packagingSection) {
-            return null;
-        }
-        return (<div>
-            <h1>Allgemeine Informationen</h1>
-            <hr/>
-            {drug.packagingSection
-                .filter(section => {
-                    return section.topic.id === 8
-                })
-                .map((section => {
-                    return (
-                        <p key={section.id}><span dangerouslySetInnerHTML={this.createMarkup(section.text)}/>
-                        </p>
-                    )
-                })).reduce((prev, curr) => [prev, curr])
-            } </div>)
-    }
-
-    renderPackSecvor(drug) {
-        if (!drug.packagingSection) {
-            return null;
-        }
-
         return drug.packagingSection
             .filter(section => {
                 return section.topic.id === 3
@@ -671,14 +746,20 @@ class DrugDetail extends React.Component {
                     <p key={section.id}><span dangerouslySetInnerHTML={this.createMarkup(section.text)}/>
                     </p>
                 );
-            })).reduce((prev, curr) => [prev, curr]);
+            }))
+            .reduce((prev, curr) => [prev, curr]);
     }
 
-    renderPackSecdos(drug) {
+    //END Level 2: Before Application
+
+
+    /**
+     * Level 3: Application
+     */
+    renderPackLevel3Dosage(drug) {
         if (!drug.packagingSection) {
             return null;
         }
-
         return drug.packagingSection
             .filter(section => {
                 return section.topic.id === 5
@@ -688,14 +769,20 @@ class DrugDetail extends React.Component {
                     <p key={section.id}><span dangerouslySetInnerHTML={this.createMarkup(section.text)}/>
                     </p>
                 );
-            })).reduce((prev, curr) => [prev, curr]);
+            }))
+            .reduce((prev, curr) => [prev, curr]);
     }
 
-    renderPackSecneben(drug) {
+    //END Level 3: Application
+
+
+    /**
+     * Level 4: Adverse effects
+     */
+    renderPackLevel4Adverse(drug) {
         if (!drug.packagingSection) {
             return null;
         }
-
         return (
             <div>
                 {drug.packagingSection
@@ -707,14 +794,15 @@ class DrugDetail extends React.Component {
                             <p key={section.id}><span dangerouslySetInnerHTML={this.createMarkup(section.text)}/>
                             </p>
                         );
-                    })).reduce((prev, curr) => [prev, curr])}
+                    }))
+                    .reduce((prev, curr) => [prev, curr])}
                 <div className="row" style={{marginBottom: "30px"}}>
                     <h4>Folgende Nebenwirkungen können auftreten:
                     </h4>
-                    <p style={{fontStyle: "italic"}}> Bei der
-                        Bewertung von Nebenwirkungen werden folgende Häufigkeitsangaben
-                        zugrunde gelegt. Klicken Sie auf die Kachel um
-                        Informationen zu den Nebenwikungen zu erhalten </p>
+                    <p style={{fontStyle: "italic"}}>
+                        Bei der Bewertung von Nebenwirkungen werden folgende Häufigkeitsangaben zugrunde gelegt. Klicken
+                        Sie auf die Kachel um Informationen zu den Nebenwikungen zu erhalten
+                    </p>
                     <div onClick={this.renderhide.bind(this)}
                          className="col-sm-6 col-xs-12 neben_tile brightgreen"
                          data-toggle="modal"
@@ -777,51 +865,6 @@ class DrugDetail extends React.Component {
         )
     }
 
-    renderPackSecpack(drug) {
-        if (!drug.packagingSection) {
-            return null;
-        }
-
-        return drug.packagingSection
-            .filter(section => {
-                return section.topic.id === 10
-            })
-            .map((section => {
-                return (
-                    <p key={section.id}><span dangerouslySetInnerHTML={this.createMarkup(section.text)}/>
-                    </p>
-                );
-            })).reduce((prev, curr) => [prev, curr]);
-    }
-
-    renderPackSecMoreSub(drug) {
-        if (!drug.packagingSection) {
-            return null;
-        }
-
-        return drug.packagingSection
-            .filter(section => {
-                return section.topic.id === 11
-            })
-            .map((section => {
-                return (
-                    <p key={section.id}><span dangerouslySetInnerHTML={this.createMarkup(section.text)}/>
-                    </p>
-                );
-            })).reduce((prev, curr) => [prev, curr]);
-    }
-
-    renderSectionList(drug) {
-        if (!drug.packagingSection) {
-            return null;
-        }
-
-        return drug.packagingSection.map((section => {
-            return (<Accordion section={section} toggleOriginalAndTailoredText={this.toggleOriginalAndTailoredText}
-                               key={section.id}/>);
-        }));
-    }
-
     rendersehrhaeufigdesktop(drug) {
         if (!drug.sideEffectContent) {
             return null;
@@ -850,35 +893,6 @@ class DrugDetail extends React.Component {
             </table>
         )
     }
-
-    rendersehrhaeufigmobile(drug) {
-        if (!drug.sideEffectContent) {
-            return null;
-        }
-        return (<div>
-                {drug.sideEffectContent
-                    .map((section => {
-                        return (
-                            <div className="sehrhaeufig_cont hidden-sm hidden-md hidden-lg  ">
-                                <div key={section.id} className={section.number}>
-                                    <div className="neben_xs">
-                                        <div className="neben_xs">
-                                            <h4>Erkrankung</h4>
-                                            <b> <span key={section.id}>{section.purpose}</span></b>
-                                            <h4>Nebenwirkung:</h4>
-                                            <span className="sectiontext"
-                                                  dangerouslySetInnerHTML={this.createMarkup(section.text)}/>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        )
-                    }))
-                    .reduce((prev, curr) => [prev, curr])
-                }</div>
-        )
-    }
-
     renderhaeufigdesktop(drug) {
         if (!drug.sideEffectContent) {
             return null;
@@ -907,33 +921,6 @@ class DrugDetail extends React.Component {
             </table>
         )
     }
-
-    renderhaeufigmobile(drug) {
-        if (!drug.sideEffectContent) {
-            return null;
-        }
-        return (<div>
-                {drug.sideEffectContent
-                    .map((section => {
-                        return (
-                            <div className="haeufig_cont hidden-sm hidden-md hidden-lg  ">
-                                <div key={section.id} className={section.number}>
-                                    <div className="neben_xs">
-                                        <h4>Erkrankung</h4>
-                                        <b> <span key={section.id}>{section.purpose}</span></b>
-                                        <h4>Nebenwirkung:</h4>
-                                        <span className="sectiontext"
-                                              dangerouslySetInnerHTML={this.createMarkup(section.text)}/>
-                                    </div>
-                                </div>
-                            </div>
-                        )
-                    }))
-                    .reduce((prev, curr) => [prev, curr])
-                }</div>
-        )
-    }
-
     rendergelegentlichdesktop(drug) {
         if (!drug.sideEffectContent) {
             return null;
@@ -962,33 +949,6 @@ class DrugDetail extends React.Component {
             </table>
         )
     }
-
-    rendergelegentlichmobile(drug) {
-        if (!drug.sideEffectContent) {
-            return null;
-        }
-        return (<div>
-                {drug.sideEffectContent
-                    .map((section => {
-                        return (
-                            <div className="gelegentlich_cont hidden-sm hidden-md hidden-lg  ">
-                                <div key={section.id} className={section.number}>
-                                    <div className="neben_xs">
-                                        <h4>Erkrankung</h4>
-                                        <b> <span key={section.id}>{section.purpose}</span></b>
-                                        <h4>Nebenwirkung:</h4>
-                                        <span className="sectiontext"
-                                              dangerouslySetInnerHTML={this.createMarkup(section.text)}/>
-                                    </div>
-                                </div>
-                            </div>
-                        )
-                    }))
-                    .reduce((prev, curr) => [prev, curr])
-                }</div>
-        )
-    }
-
     renderseltendesktop(drug) {
         if (!drug.sideEffectContent) {
             return null;
@@ -1017,33 +977,6 @@ class DrugDetail extends React.Component {
             </table>
         )
     }
-
-    renderseltenmobile(drug) {
-        if (!drug.sideEffectContent) {
-            return null;
-        }
-        return (<div>
-                {drug.sideEffectContent
-                    .map((section => {
-                        return (
-                            <div className="selten_cont hidden-sm hidden-md hidden-lg  ">
-                                <div key={section.id} className={section.number}>
-                                    <div className="neben_xs">
-                                        <h4>Erkrankung</h4>
-                                        <b> <span key={section.id}>{section.purpose}</span></b>
-                                        <h4>Nebenwirkung:</h4>
-                                        <span className="sectiontext"
-                                              dangerouslySetInnerHTML={this.createMarkup(section.text)}/>
-                                    </div>
-                                </div>
-                            </div>
-                        )
-                    }))
-                    .reduce((prev, curr) => [prev, curr])
-                }</div>
-        )
-    }
-
     rendersehrseltendesktop(drug) {
         if (!drug.sideEffectContent) {
             return null;
@@ -1072,33 +1005,6 @@ class DrugDetail extends React.Component {
             </table>
         )
     }
-
-    rendersehrseltenmobile(drug) {
-        if (!drug.sideEffectContent) {
-            return null;
-        }
-        return (<div>
-                {drug.sideEffectContent
-                    .map((section => {
-                        return (
-                            <div className="sehrselten_cont hidden-sm hidden-md hidden-lg  ">
-                                <div key={section.id} className={section.number}>
-                                    <div className="neben_xs">
-                                        <h4>Erkrankung</h4>
-                                        <b> <span key={section.id}>{section.purpose}</span></b>
-                                        <h4>Nebenwirkung:</h4>
-                                        <span className="sectiontext"
-                                              dangerouslySetInnerHTML={this.createMarkup(section.text)}/>
-                                    </div>
-                                </div>
-                            </div>
-                        )
-                    }))
-                    .reduce((prev, curr) => [prev, curr])
-                }</div>
-        )
-    }
-
     rendernichtbekanntdesktop(drug) {
         if (!drug.sideEffectContent) {
             return null;
@@ -1128,33 +1034,6 @@ class DrugDetail extends React.Component {
             </table>
         )
     }
-
-    rendernichtbekanntmobile(drug) {
-        if (!drug.sideEffectContent) {
-            return null;
-        }
-        return (<div>
-                {drug.sideEffectContent
-                    .map((section => {
-                        return (
-                            <div className="nichtbekannt_cont hidden-sm hidden-md hidden-lg ">
-                                <div key={section.id} className={section.number}>
-                                    <div className="neben_xs">
-                                        <h4>Erkrankung</h4>
-                                        <b> <span key={section.id}>{section.purpose}</span></b>
-                                        <h4>Nebenwirkung:</h4>
-                                        <span className="sectiontext"
-                                              dangerouslySetInnerHTML={this.createMarkup(section.text)}/>
-                                    </div>
-                                </div>
-                            </div>
-                        )
-                    }))
-                    .reduce((prev, curr) => [prev, curr])
-                }</div>
-        )
-    }
-
     renderalldesktop(drug) {
         if (!drug.sideEffectContent) {
             return null;
@@ -1190,13 +1069,165 @@ class DrugDetail extends React.Component {
         )
     }
 
+    rendersehrhaeufigmobile(drug) {
+        if (!drug.sideEffectContent) {
+            return null;
+        }
+        return (<div>
+                {drug.sideEffectContent
+                    .map((section => {
+                        return (
+                            <div className="sehrhaeufig_cont hidden-sm hidden-md hidden-lg  ">
+                                <div key={section.id} className={section.number}>
+                                    <div className="neben_xs">
+                                        <div className="neben_xs">
+                                            <h4>Erkrankung</h4>
+                                            <b> <span key={section.id}>{section.purpose}</span></b>
+                                            <h4>Nebenwirkung:</h4>
+                                            <span className="sectiontext"
+                                                  dangerouslySetInnerHTML={this.createMarkup(section.text)}/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        )
+                    }))
+                    .reduce((prev, curr) => [prev, curr])
+                }</div>
+        )
+    }
+    renderhaeufigmobile(drug) {
+        if (!drug.sideEffectContent) {
+            return null;
+        }
+        return (<div>
+                {drug.sideEffectContent
+                    .map((section => {
+                        return (
+                            <div className="haeufig_cont hidden-sm hidden-md hidden-lg  ">
+                                <div key={section.id} className={section.number}>
+                                    <div className="neben_xs">
+                                        <h4>Erkrankung</h4>
+                                        <b> <span key={section.id}>{section.purpose}</span></b>
+                                        <h4>Nebenwirkung:</h4>
+                                        <span className="sectiontext"
+                                              dangerouslySetInnerHTML={this.createMarkup(section.text)}/>
+                                    </div>
+                                </div>
+                            </div>
+                        )
+                    }))
+                    .reduce((prev, curr) => [prev, curr])
+                }</div>
+        )
+    }
+    rendergelegentlichmobile(drug) {
+        if (!drug.sideEffectContent) {
+            return null;
+        }
+        return (<div>
+                {drug.sideEffectContent
+                    .map((section => {
+                        return (
+                            <div className="gelegentlich_cont hidden-sm hidden-md hidden-lg  ">
+                                <div key={section.id} className={section.number}>
+                                    <div className="neben_xs">
+                                        <h4>Erkrankung</h4>
+                                        <b> <span key={section.id}>{section.purpose}</span></b>
+                                        <h4>Nebenwirkung:</h4>
+                                        <span className="sectiontext"
+                                              dangerouslySetInnerHTML={this.createMarkup(section.text)}/>
+                                    </div>
+                                </div>
+                            </div>
+                        )
+                    }))
+                    .reduce((prev, curr) => [prev, curr])
+                }</div>
+        )
+    }
+    renderseltenmobile(drug) {
+        if (!drug.sideEffectContent) {
+            return null;
+        }
+        return (<div>
+                {drug.sideEffectContent
+                    .map((section => {
+                        return (
+                            <div className="selten_cont hidden-sm hidden-md hidden-lg  ">
+                                <div key={section.id} className={section.number}>
+                                    <div className="neben_xs">
+                                        <h4>Erkrankung</h4>
+                                        <b> <span key={section.id}>{section.purpose}</span></b>
+                                        <h4>Nebenwirkung:</h4>
+                                        <span className="sectiontext"
+                                              dangerouslySetInnerHTML={this.createMarkup(section.text)}/>
+                                    </div>
+                                </div>
+                            </div>
+                        )
+                    }))
+                    .reduce((prev, curr) => [prev, curr])
+                }</div>
+        )
+    }
+    rendersehrseltenmobile(drug) {
+        if (!drug.sideEffectContent) {
+            return null;
+        }
+        return (<div>
+                {drug.sideEffectContent
+                    .map((section => {
+                        return (
+                            <div className="sehrselten_cont hidden-sm hidden-md hidden-lg  ">
+                                <div key={section.id} className={section.number}>
+                                    <div className="neben_xs">
+                                        <h4>Erkrankung</h4>
+                                        <b> <span key={section.id}>{section.purpose}</span></b>
+                                        <h4>Nebenwirkung:</h4>
+                                        <span className="sectiontext"
+                                              dangerouslySetInnerHTML={this.createMarkup(section.text)}/>
+                                    </div>
+                                </div>
+                            </div>
+                        )
+                    }))
+                    .reduce((prev, curr) => [prev, curr])
+                }</div>
+        )
+    }
+    rendernichtbekanntmobile(drug) {
+        if (!drug.sideEffectContent) {
+            return null;
+        }
+        return (<div>
+                {drug.sideEffectContent
+                    .map((section => {
+                        return (
+                            <div className="nichtbekannt_cont hidden-sm hidden-md hidden-lg ">
+                                <div key={section.id} className={section.number}>
+                                    <div className="neben_xs">
+                                        <h4>Erkrankung</h4>
+                                        <b> <span key={section.id}>{section.purpose}</span></b>
+                                        <h4>Nebenwirkung:</h4>
+                                        <span className="sectiontext"
+                                              dangerouslySetInnerHTML={this.createMarkup(section.text)}/>
+                                    </div>
+                                </div>
+                            </div>
+                        )
+                    }))
+                    .reduce((prev, curr) => [prev, curr])
+                }</div>
+        )
+    }
     renderallmobile(drug) {
         if (!drug.sideEffectContent) {
             return null;
         }
         return (
             <div>
-                <input id="myInput" onKeyUp={this.searchanything.bind(this)} type="text" placeholder="Search.."
+                <input id="myInput" onKeyUp={this.searchAdverseEffect.bind(this)} type="text" placeholder="Search.."
                        className="hidden-sm hidden-md hidden-lg"/>
                 {drug.sideEffectContent
                     .map((section => {
@@ -1218,7 +1249,6 @@ class DrugDetail extends React.Component {
                 }</div>
         )
     }
-
 
     renderhide = () => {
         $(".sehrhaeufig_cont > .2").css("display", "none");
@@ -1253,6 +1283,16 @@ class DrugDetail extends React.Component {
         $(".nichtbekannt_cont > .5").css("display", "none");
     }
 
+    //END Level 4: Adverse effects
+
+
+    /**
+     * Functions
+     */
+    windowscroll = () => {
+        window.scroll(0, 300);
+    }
+
     scrollToTop = () => {
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
@@ -1263,10 +1303,9 @@ class DrugDetail extends React.Component {
                 <span onClick={this.scrollToTop.bind(this)} id="button_top"></span>
             </div>
         )
-
     }
 
-    myFunction = () => {
+    searchWord = () => {
         var input, filter, table, tr, td, i, txtValue;
         input = document.getElementById("myInput");
         filter = input.value.toUpperCase();
@@ -1285,8 +1324,7 @@ class DrugDetail extends React.Component {
         }
     }
 
-
-    searchanything = () => {
+    searchAdverseEffect = () => {
         $("#myInput").on("keyup", function () {
             var value = $(this).val().toLowerCase();
             $("#myDIV div").filter(function () {
@@ -1295,16 +1333,10 @@ class DrugDetail extends React.Component {
         });
     }
 
-    windowscroll = () => {
-        window.scroll(0, 300);
-    }
-
     componentWillMount() {
         window.addEventListener('resize', this.handleWindowSizeChange);
     }
 
-// make sure to remove the listener
-// when the component is not mounted anymore
     componentWillUnmount() {
         window.removeEventListener('resize', this.handleWindowSizeChange);
     }
@@ -1313,11 +1345,11 @@ class DrugDetail extends React.Component {
         this.setState({width: window.innerWidth});
     };
 
+    //END Functions
+    
+
     renderContent = () => {
         let that = this;
-        setTimeout(function () {
-            that.setState({timePassed: true})
-        }, 1000);
         const {t} = this.props;
         const drug = this.state.drug;
         const showAdditionalInfo = this.state.showAdditionalInfo;
@@ -1338,7 +1370,7 @@ class DrugDetail extends React.Component {
                             <div id="mobile_tab1" className="panel-collapse collapse ">
                                 <div className="panel-body">
                                     <div className="row content_header">
-                                        {this.renderPackSecdesc(drug)}
+                                        {this.renderPackGeneralInstructions(drug)}
                                     </div>
                                     <div className="row">
                                                             <span
@@ -1395,7 +1427,7 @@ class DrugDetail extends React.Component {
                             </div>
                             <div id="mobile_tab2" className="panel-collapse collapse ">
                                 <div className="panel-body">
-                                    {this.renderPackSecvor(drug)}
+                                    {this.renderPackLevel2Warning(drug)}
 
                                 </div>
                             </div>
@@ -1415,7 +1447,7 @@ class DrugDetail extends React.Component {
                                         <h1>Dosierung und Anwendung</h1>
                                         <hr/>
                                     </div>
-                                    {this.renderPackSecdos(drug)}
+                                    {this.renderPackLevel3Dosage(drug)}
                                 </div>
                             </div>
                         </div>
@@ -1437,7 +1469,7 @@ class DrugDetail extends React.Component {
                                             Nebenwirkungen
                                             haben, die aber nicht
                                             bei jedem auftreten müssen.</h4>
-                                        {this.renderPackSecneben(drug)}
+                                        {this.renderPackLevel4Adverse(drug)}
                                         {/*Button REPORT*/}
                                         <div className="text-right">
                                             <button type="button"
@@ -1462,7 +1494,7 @@ class DrugDetail extends React.Component {
                 <div role="tabpanel" className="tab-pane active w3-animate-opacity tab1"
                      id="tab1" name="tab1">
                     <div className="row content_header">
-                        {this.renderPackSecdesc(drug)}
+                        {this.renderPackGeneralInstructions(drug)}
                     </div>
                     <div className="row">
                                                 <span
@@ -1504,7 +1536,7 @@ class DrugDetail extends React.Component {
                 </div>
                 <div role="tabpanel" className="tab-pane w3-animate-opacity" id="tab2"
                      name="tab2">
-                    {this.renderPackSecvor(drug)}
+                    {this.renderPackLevel2Warning(drug)}
                 </div>
                 <div role="tabpanel" className="tab-pane w3-animate-opacity" id="tab3"
                      name="tab3">
@@ -1512,7 +1544,7 @@ class DrugDetail extends React.Component {
                         <h1>Dosierung und Anwendung</h1>
                         <hr/>
                     </div>
-                    {this.renderPackSecdos(drug)}
+                    {this.renderPackLevel3Dosage(drug)}
                 </div>
                 <div role="tabpanel" className="tab-pane w3-animate-opacity" id="tab4"
                      name="tab4">
@@ -1523,7 +1555,7 @@ class DrugDetail extends React.Component {
                             Nebenwirkungen
                             haben, die aber nicht
                             bei jedem auftreten müssen.</h4>
-                        {this.renderPackSecneben(drug)}
+                        {this.renderPackLevel4Adverse(drug)}
 
                     </div>
                     {/*Button REPORT*/}
@@ -1540,7 +1572,7 @@ class DrugDetail extends React.Component {
                 </div>
             </div>
         )
-     }
+    }
 
 
     render() {
@@ -1551,8 +1583,6 @@ class DrugDetail extends React.Component {
         const {t} = this.props;
         const drug = this.state.drug;
         const showAdditionalInfo = this.state.showAdditionalInfo;
-        const {width} = this.state;
-        const isMobile = width <= 500;
         let itemClass = ["item  col-xs-4 col-sm-4 grid-group-item"];
         if (this.state.addClass) {
             itemClass.push('list-group-item');
@@ -1592,112 +1622,112 @@ class DrugDetail extends React.Component {
                 </div>
                 <div className="no-banner">
                     <div>
-                    {/*Button INFO*/}
-                    <div className="round-button-outer report-round-button round_info hidden-lg hidden-md">
-                        <div id="reportBtn" className="round-button-inner-main" data-toggle="modal"
-                             data-target="#info">
-                            <FontAwesomeIcon icon={faInfo}/>
+                        {/*Button INFO*/}
+                        <div className="round-button-outer report-round-button round_info hidden-lg hidden-md">
+                            <div id="reportBtn" className="round-button-inner-main" data-toggle="modal"
+                                 data-target="#info">
+                                <FontAwesomeIcon icon={faInfo}/>
+                            </div>
                         </div>
-                    </div>
-                    <div className="modal fade" id="info" tabIndex="-1" role="dialog" aria-labelledby="addressLabel"
-                         aria-hidden="true">
-                        <div className="modal-dialog" role="document">
-                            <div className="modal-content">
-                                <div className="modal-header">
-                                    <button type="button" className="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                    <h2>Informationen
-                                    </h2>
+                        <div className="modal fade" id="info" tabIndex="-1" role="dialog" aria-labelledby="addressLabel"
+                             aria-hidden="true">
+                            <div className="modal-dialog" role="document">
+                                <div className="modal-content">
+                                    <div className="modal-header">
+                                        <button type="button" className="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                        <h2>Informationen
+                                        </h2>
 
-                                </div>
-                                <div className="modal-body" style={{color: "black"}}>
+                                    </div>
+                                    <div className="modal-body" style={{color: "black"}}>
             <span
                 dangerouslySetInnerHTML={this.createMarkup(t("textinfo").replace("%XXX%", drug.name))}/>
-                                </div>
-                                <span dangerouslySetInnerHTML={this.createMarkup(t("modal_close"))}/>
-                            </div>
-                        </div>
-                    </div>
-                    {/*Button INFO ENDE*/}
-                    {/*Button REPORT*/}
-                    <div className="round-button-outer report-round-button no_animation round_nebenwirkung">
-                        <div id="reportBtn" className="round-button-inner-main no_animation" data-toggle="modal"
-                             data-target="#melden">
-                            <FontAwesomeIcon icon={faCommentMedical}/>
-                        </div>
-                    </div>
-                    <div className="modal fade" id="melden" tabIndex="-1" role="dialog"
-                         aria-labelledby="addressLabel"
-                         aria-hidden="true">
-                        <div className="modal-dialog" role="document">
-                            <div className="modal-content">
-                                <div className="modal-header">
-                                    <button type="button" className="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                    <h2>Meldung von Nebenwirkungen </h2>
-
-                                </div>
-                                <div className="modal-body" style={{color: "black"}}>
-                                    <span dangerouslySetInnerHTML={this.createMarkup(t("inform"))}/>
-                                </div>
-                                <span dangerouslySetInnerHTML={this.createMarkup(t("modal_close"))}/>
-                            </div>
-                        </div>
-                    </div>
-                    {/*Button REPORT ENDE*/}
-                    {/*Button STORE*/}
-                    <div className="round-button-outer report-round-button no_animation round_aufbewahrung">
-                        <div id="reportBtn" className="round-button-inner-main no_animation" data-toggle="modal"
-                             data-target="#aufbewahrung">
-                            <i className="fas fa-archive"></i>
-                        </div>
-                    </div>
-                    <div className="modal fade" id="aufbewahrung" tabIndex="-1" role="dialog"
-                         aria-labelledby="addressLabel"
-                         aria-hidden="true">
-                        <div className="modal-dialog" role="document">
-                            <div className="modal-content">
-                                <div className="modal-header">
-                                    <button type="button" className="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                    <h2>Aufbewahrung des Medikaments</h2>
-                                </div>
-                                <div className="modal-body" style={{color: "black"}}>
-                                    {this.renderPackSecaufbewahrung(drug)}
-                                </div>
-                                <span dangerouslySetInnerHTML={this.createMarkup(t("modal_close"))}/>
-                            </div>
-                        </div>
-                    </div>
-                    {/*Button STORE ENDE*/}
-                    {/*Button INFO*/}
-                    {this.renderWordExplainationButton(drug)}
-                    <div className="modal fade" id="def" tabIndex="-1" role="dialog" aria-labelledby="addressLabel"
-                         aria-hidden="true">
-                        <div className="modal-dialog modal-lg" role="document">
-                            <div className="modal-content">
-                                <div className="modal-header">
-                                    <button type="button" className="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                    <h2>Fachausdrücke
-                                    </h2>
-
-                                </div>
-                                <div className="modal-body" style={{color: "black"}}>
-
-                                    {this.renderWordExplainationsdesktop(drug)}
-                                    {this.renderWordExplainationsmobile(drug)}
-
+                                    </div>
                                     <span dangerouslySetInnerHTML={this.createMarkup(t("modal_close"))}/>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    {/*Button INFO ENDE*/}
+                        {/*Button INFO ENDE*/}
+                        {/*Button REPORT*/}
+                        <div className="round-button-outer report-round-button no_animation round_nebenwirkung">
+                            <div id="reportBtn" className="round-button-inner-main no_animation" data-toggle="modal"
+                                 data-target="#melden">
+                                <FontAwesomeIcon icon={faCommentMedical}/>
+                            </div>
+                        </div>
+                        <div className="modal fade" id="melden" tabIndex="-1" role="dialog"
+                             aria-labelledby="addressLabel"
+                             aria-hidden="true">
+                            <div className="modal-dialog" role="document">
+                                <div className="modal-content">
+                                    <div className="modal-header">
+                                        <button type="button" className="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                        <h2>Meldung von Nebenwirkungen </h2>
+
+                                    </div>
+                                    <div className="modal-body" style={{color: "black"}}>
+                                        <span dangerouslySetInnerHTML={this.createMarkup(t("inform"))}/>
+                                    </div>
+                                    <span dangerouslySetInnerHTML={this.createMarkup(t("modal_close"))}/>
+                                </div>
+                            </div>
+                        </div>
+                        {/*Button REPORT ENDE*/}
+                        {/*Button STORE*/}
+                        <div className="round-button-outer report-round-button no_animation round_aufbewahrung">
+                            <div id="reportBtn" className="round-button-inner-main no_animation" data-toggle="modal"
+                                 data-target="#aufbewahrung">
+                                <i className="fas fa-archive"></i>
+                            </div>
+                        </div>
+                        <div className="modal fade" id="aufbewahrung" tabIndex="-1" role="dialog"
+                             aria-labelledby="addressLabel"
+                             aria-hidden="true">
+                            <div className="modal-dialog" role="document">
+                                <div className="modal-content">
+                                    <div className="modal-header">
+                                        <button type="button" className="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                        <h2>Aufbewahrung des Medikaments</h2>
+                                    </div>
+                                    <div className="modal-body" style={{color: "black"}}>
+                                        {this.renderPackSecaufbewahrung(drug)}
+                                    </div>
+                                    <span dangerouslySetInnerHTML={this.createMarkup(t("modal_close"))}/>
+                                </div>
+                            </div>
+                        </div>
+                        {/*Button STORE ENDE*/}
+                        {/*Button INFO*/}
+                        {this.renderWordExplanationButton(drug)}
+                        <div className="modal fade" id="def" tabIndex="-1" role="dialog" aria-labelledby="addressLabel"
+                             aria-hidden="true">
+                            <div className="modal-dialog modal-lg" role="document">
+                                <div className="modal-content">
+                                    <div className="modal-header">
+                                        <button type="button" className="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                        <h2>Fachausdrücke
+                                        </h2>
+
+                                    </div>
+                                    <div className="modal-body" style={{color: "black"}}>
+
+                                        {this.renderWordExplanationsdesktop(drug)}
+                                        {this.renderWordExplanationsmobile(drug)}
+
+                                        <span dangerouslySetInnerHTML={this.createMarkup(t("modal_close"))}/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {/*Button INFO ENDE*/}
                     </div>
                     <div className='page-header bg_grey'>
                         <div className="container  no-banner">
@@ -1759,7 +1789,8 @@ class DrugDetail extends React.Component {
                                         </div>
                                     </div>
                                     <div>
-                                        <ul className="nav nav-pills brand-pills nav-stacked hidden-xs hidden-sm hidden-md" role="tablist">
+                                        <ul className="nav nav-pills brand-pills nav-stacked hidden-xs hidden-sm hidden-md"
+                                            role="tablist">
                                             <li role="presentation" className="brand-nav active">
                                                 <a href="#tab1"
                                                    aria-controls="tab1"
@@ -1798,7 +1829,6 @@ class DrugDetail extends React.Component {
 
 
                                 </div>
-
 
 
                                 <div className="col-xs-12 col-sm-12 col-md-9 infobox">
@@ -1842,7 +1872,7 @@ class DrugDetail extends React.Component {
                         </div>
                     </div>
                     {/*Button  Address ENDE*/}
-                    {this.renderWordExplaination(drug)}
+                    {this.renderWordExplanation(drug)}
                     {this.renderGoTopIcon()}
 
                     <div className="modal fade" id="neben_info" tabIndex="-1" role="dialog"
@@ -1881,9 +1911,9 @@ class DrugDetail extends React.Component {
                                 <div className="modal-body" style={{color: "black"}}>
                                     <div className="row">
                                         <div
-                                            className="col-sm-2 col-xs-12 xs-center">{this.renderFormImg(drug)}</div>
+                                            className="col-sm-2 col-xs-12 xs-center">{this.renderPharmaceuticalFormImg(drug)}</div>
                                         <div className="col-sm-10 col-xs-12  ">
-                                            {this.renderFormdesc(drug)}
+                                            {this.renderPharmaceuticalFormDesc(drug)}
                                         </div>
                                     </div>
                                     <div className="row">
@@ -1893,7 +1923,7 @@ class DrugDetail extends React.Component {
                                         </div>
                                         <div className="col-sm-10 col-xs-12 xs-center"
                                              style={{paddingTop: "10px"}}>
-                                            {this.renderPackSecpack(drug)}
+                                            {this.renderPackContent(drug)}
                                         </div>
                                     </div>
                                 </div>
@@ -1927,7 +1957,7 @@ class DrugDetail extends React.Component {
                 <span
                     key={substance.id}>{substance.name} ist ein Arzneistoff aus der Gruppe der sogenannten {substance.substanceGroup.name}.</span>)
                 .reduce((prev, curr) => [prev, ', ', curr])} </span>
-                                    {this.renderPackSecMoreSub(drug)}
+                                    {this.renderPackMoreActiveSubstance(drug)}
                                 </div>
                                 <span
                                     dangerouslySetInnerHTML={this.createMarkup(t("modal_close"))}/>
