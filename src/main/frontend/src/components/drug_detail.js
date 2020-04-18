@@ -32,7 +32,9 @@ class DrugDetail extends React.Component {
             drug: undefined,
             showAdditionalInfo: false,
             intervalId: 0,
-            thePosition: false
+            thePosition: false,
+            width: window.innerWidth,
+
         }
 
         this.toggleShowAdditionalInfo = this.toggleShowAdditionalInfo.bind(this);
@@ -1297,6 +1299,250 @@ class DrugDetail extends React.Component {
         window.scroll(0, 300);
     }
 
+    componentWillMount() {
+        window.addEventListener('resize', this.handleWindowSizeChange);
+    }
+
+// make sure to remove the listener
+// when the component is not mounted anymore
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.handleWindowSizeChange);
+    }
+
+    handleWindowSizeChange = () => {
+        this.setState({width: window.innerWidth});
+    };
+
+    renderContent = () => {
+        let that = this;
+        setTimeout(function () {
+            that.setState({timePassed: true})
+        }, 1000);
+        const {t} = this.props;
+        const drug = this.state.drug;
+        const showAdditionalInfo = this.state.showAdditionalInfo;
+        const {width} = this.state;
+        const isMobile = width <= 992;
+        if (isMobile) {
+            return (<div className="row tab_headers  hidden-lg  ">
+                    <div className="panel-group" id="accordion">
+                        <div className="panel panel-default">
+                            <div className="panel-heading mob_heading">
+                                <h4 className="panel-title text-center-xs mob_title"
+                                    data-toggle="collapse"
+                                    data-target="#mobile_tab1">
+                 <span className="hidden-lg   ">
+                </span> Allgemeine Informationen
+                                </h4>
+                            </div>
+                            <div id="mobile_tab1" className="panel-collapse collapse ">
+                                <div className="panel-body">
+                                    <div className="row content_header">
+                                        {this.renderPackSecdesc(drug)}
+                                    </div>
+                                    <div className="row">
+                                                            <span
+                                                                dangerouslySetInnerHTML={this.createMarkup(t("helptext_general"))}/>
+
+                                        {this.renderPharmaceuticalForm(drug)}
+                                        <div className="col-sm-4 col-xs-6 text-center infopart">
+                                            {this.renderDisease(drug)}
+                                        </div>
+                                        <div className="col-sm-4 col-xs-6 text-center infopart"
+                                             data-toggle="modal"
+                                             data-target="#infosubstance">
+                                            {this.renderActiveSubstance(drug)}
+                                            <div style={{cursor: "pointer"}} data-toggle="modal"
+                                                 data-target="#infosubstance"><i
+                                                className="fas fa-info-circle"/></div>
+                                        </div>
+                                        {showAdditionalInfo &&
+                                        <div className="">
+                                            <div className="additional-information">
+                                                <section>
+                                                    {this.renderIndicationGroup(drug)}
+                                                    {this.renderProductGroup(drug)}
+                                                    {this.renderPZN(drug)}
+                                                </section>
+                                            </div>
+                                        </div>}
+                                    </div>
+                                    <div className="row text-center">
+                                        <p>
+                                            <a onClick={this.toggleShowAdditionalInfo}>
+                                                <button
+                                                    className="btn btn-secondary black weiter_btn">
+                                                    {!showAdditionalInfo &&
+                                                    <span>{t('viewDetails')}</span>}
+                                                    {showAdditionalInfo &&
+                                                    <span>{t('hideDetails')}</span>}
+                                                </button>
+                                            </a>
+                                        </p>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div className="panel panel-default">
+                            <div className="panel-heading mob_heading">
+                                <h4 className="panel-title mob_title text-center-xs"
+                                    data-toggle="collapse"
+                                    data-target="#mobile_tab2">
+                 <span className="hidden-lg  ">
+                </span> Vor der Anwendung
+                                </h4>
+                            </div>
+                            <div id="mobile_tab2" className="panel-collapse collapse ">
+                                <div className="panel-body">
+                                    {this.renderPackSecvor(drug)}
+
+                                </div>
+                            </div>
+                        </div>
+                        <div className="panel panel-default">
+                            <div className="panel-heading mob_heading">
+                                <h4 className="panel-title mob_title text-center-xs"
+                                    data-toggle="collapse"
+                                    data-target="#mobile_tab3">
+                 <span className="hidden-lg  ">
+                </span> Anwendung
+                                </h4>
+                            </div>
+                            <div id="mobile_tab3" className="panel-collapse collapse ">
+                                <div className="panel-body">
+                                    <div className="row content_header">
+                                        <h1>Dosierung und Anwendung</h1>
+                                        <hr/>
+                                    </div>
+                                    {this.renderPackSecdos(drug)}
+                                </div>
+                            </div>
+                        </div>
+                        <div className="panel panel-default">
+                            <div className="panel-heading mob_heading">
+                                <h4 className="panel-title mob_title text-center-xs"
+                                    data-toggle="collapse"
+                                    data-target="#mobile_tab4">
+                 <span className="hidden-lg ">
+                </span> Nebenwirkungen
+                                </h4>
+                            </div>
+                            <div id="mobile_tab4" className="panel-collapse collapse ">
+                                <div className="panel-body">
+                                    <div className="row content_header">
+                                        <h1> Nebenwirkungen </h1>
+                                        <hr/>
+                                        <h4>Wie alle Arzneimittel kann auch dieses Arzneimittel
+                                            Nebenwirkungen
+                                            haben, die aber nicht
+                                            bei jedem auftreten müssen.</h4>
+                                        {this.renderPackSecneben(drug)}
+                                        {/*Button REPORT*/}
+                                        <div className="text-right">
+                                            <button type="button"
+                                                    className="btn btn-success neben_button"
+                                                    data-toggle="modal"
+                                                    data-target="#melden">Meldung von Nebenwirkungen
+                                                <i className="fas fa-comment-medical"
+                                                   style={{marginLeft: "15px"}}/>
+                                            </button>
+                                        </div>
+                                        {/*Button REPORT ENDE*/}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            )
+        }
+        return (
+            <div className="tab-content ">
+                <div role="tabpanel" className="tab-pane active w3-animate-opacity tab1"
+                     id="tab1" name="tab1">
+                    <div className="row content_header">
+                        {this.renderPackSecdesc(drug)}
+                    </div>
+                    <div className="row">
+                                                <span
+                                                    dangerouslySetInnerHTML={this.createMarkup(t("helptext_general"))}/>
+
+                        {this.renderPharmaceuticalForm(drug)}
+                        <div className="col-sm-4 col-xs-6 text-center infopart">
+                            {this.renderDisease(drug)}
+                        </div>
+                        <div className="col-sm-4 col-xs-6 text-center infopart"
+                             data-toggle="modal"
+                             data-target="#infosubstance">
+                            {this.renderActiveSubstance(drug)}
+                            <div style={{cursor: "pointer"}} data-toggle="modal"
+                                 data-target="#infosubstance"><i
+                                className="fas fa-info-circle"/></div>
+                        </div>
+                        {showAdditionalInfo &&
+                        <div className="">
+                            <div className="additional-information">
+                                <section>
+                                    {this.renderIndicationGroup(drug)}
+                                    {this.renderProductGroup(drug)}
+                                    {this.renderPZN(drug)}
+                                </section>
+                            </div>
+                        </div>}
+                    </div>
+                    <div className="row text-center">
+                        <p>
+                            <a onClick={this.toggleShowAdditionalInfo}>
+                                <button className="btn btn-secondary black weiter_btn">
+                                    {!showAdditionalInfo && <span>{t('viewDetails')}</span>}
+                                    {showAdditionalInfo && <span>{t('hideDetails')}</span>}
+                                </button>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+                <div role="tabpanel" className="tab-pane w3-animate-opacity" id="tab2"
+                     name="tab2">
+                    {this.renderPackSecvor(drug)}
+                </div>
+                <div role="tabpanel" className="tab-pane w3-animate-opacity" id="tab3"
+                     name="tab3">
+                    <div className="row content_header">
+                        <h1>Dosierung und Anwendung</h1>
+                        <hr/>
+                    </div>
+                    {this.renderPackSecdos(drug)}
+                </div>
+                <div role="tabpanel" className="tab-pane w3-animate-opacity" id="tab4"
+                     name="tab4">
+                    <div className="row content_header">
+                        <h1> Nebenwirkungen </h1>
+                        <hr/>
+                        <h4>Wie alle Arzneimittel kann auch dieses Arzneimittel
+                            Nebenwirkungen
+                            haben, die aber nicht
+                            bei jedem auftreten müssen.</h4>
+                        {this.renderPackSecneben(drug)}
+
+                    </div>
+                    {/*Button REPORT*/}
+                    <div className="text-right">
+                        <button type="button" className="btn btn-success neben_button"
+                                data-toggle="modal"
+                                data-target="#melden">Meldung von Nebenwirkungen
+                            <i className="fas fa-comment-medical"
+                               style={{marginLeft: "15px"}}/>
+                        </button>
+                    </div>
+                    {/*Button REPORT ENDE*/
+                    }
+                </div>
+            </div>
+        )
+     }
+
+
     render() {
         let that = this;
         setTimeout(function () {
@@ -1305,6 +1551,8 @@ class DrugDetail extends React.Component {
         const {t} = this.props;
         const drug = this.state.drug;
         const showAdditionalInfo = this.state.showAdditionalInfo;
+        const {width} = this.state;
+        const isMobile = width <= 500;
         let itemClass = ["item  col-xs-4 col-sm-4 grid-group-item"];
         if (this.state.addClass) {
             itemClass.push('list-group-item');
@@ -1343,6 +1591,7 @@ class DrugDetail extends React.Component {
                     </div>
                 </div>
                 <div className="no-banner">
+                    <div>
                     {/*Button INFO*/}
                     <div className="round-button-outer report-round-button round_info hidden-lg hidden-md">
                         <div id="reportBtn" className="round-button-inner-main" data-toggle="modal"
@@ -1398,8 +1647,6 @@ class DrugDetail extends React.Component {
                         </div>
                     </div>
                     {/*Button REPORT ENDE*/}
-
-
                     {/*Button STORE*/}
                     <div className="round-button-outer report-round-button no_animation round_aufbewahrung">
                         <div id="reportBtn" className="round-button-inner-main no_animation" data-toggle="modal"
@@ -1426,8 +1673,6 @@ class DrugDetail extends React.Component {
                         </div>
                     </div>
                     {/*Button STORE ENDE*/}
-
-
                     {/*Button INFO*/}
                     {this.renderWordExplainationButton(drug)}
                     <div className="modal fade" id="def" tabIndex="-1" role="dialog" aria-labelledby="addressLabel"
@@ -1453,8 +1698,7 @@ class DrugDetail extends React.Component {
                         </div>
                     </div>
                     {/*Button INFO ENDE*/}
-
-
+                    </div>
                     <div className='page-header bg_grey'>
                         <div className="container  no-banner">
                             {User.isAuthenticated()
@@ -1478,7 +1722,6 @@ class DrugDetail extends React.Component {
                             </div>
                             }
                             {/*<h3>{drug.name} {drug.productGroup && drug.productGroup.name && <span className="text-muted">{drug.productGroup.name}</span> }</h3>*/}
-
                             {User.isAuthenticated() && drug.personalizedInformation &&
                             <div className="alert modal1 " data-dismiss="alert">
                                 <div className="alert bubble_right  row w3-animate-right">
@@ -1493,6 +1736,7 @@ class DrugDetail extends React.Component {
                                 </div>
                             </div>
                             }
+
 
                             <div className="row featurette drug-detail-header">
                                 <div className="col-xs-12 col-sm-12 col-md-3">
@@ -1514,142 +1758,8 @@ class DrugDetail extends React.Component {
 
                                         </div>
                                     </div>
-                                    <MobileView>
-                                    <div className="row tab_headers  hidden-lg hidden-md hidden-sm">
-                                        <div className="panel-group" id="accordion">
-                                            <div className="panel panel-default">
-                                                <div className="panel-heading mob_heading">
-                                                    <h4 className="panel-title text-center-xs mob_title"
-                                                        data-toggle="collapse"
-                                                        data-target="#mobile_tab1">
-                 <span className="hidden-lg hidden-sm hidden-md">
-                </span> Allgemeine Informationen
-                                                    </h4>
-                                                </div>
-                                                <div id="mobile_tab1" className="panel-collapse collapse ">
-                                                    <div className="panel-body">
-                                                        <div className="row content_header">
-                                                            {this.renderPackSecdesc(drug)}
-                                                        </div>
-                                                        <div className="row">
-                                                            <span
-                                                                dangerouslySetInnerHTML={this.createMarkup(t("helptext_general"))}/>
-
-                                                            {this.renderPharmaceuticalForm(drug)}
-                                                            <div className="col-sm-4 col-xs-6 text-center infopart">
-                                                                {this.renderDisease(drug)}
-                                                            </div>
-                                                            <div className="col-sm-4 col-xs-6 text-center infopart"
-                                                                 data-toggle="modal"
-                                                                 data-target="#infosubstance">
-                                                                {this.renderActiveSubstance(drug)}
-                                                                <div style={{cursor: "pointer"}} data-toggle="modal"
-                                                                     data-target="#infosubstance"><i
-                                                                    className="fas fa-info-circle"/></div>
-                                                            </div>
-                                                            {showAdditionalInfo &&
-                                                            <div className="">
-                                                                <div className="additional-information">
-                                                                    <section>
-                                                                        {this.renderIndicationGroup(drug)}
-                                                                        {this.renderProductGroup(drug)}
-                                                                        {this.renderPZN(drug)}
-                                                                    </section>
-                                                                </div>
-                                                            </div>}
-                                                        </div>
-                                                        <div className="row text-center">
-                                                            <p>
-                                                                <a onClick={this.toggleShowAdditionalInfo}>
-                                                                    <button
-                                                                        className="btn btn-secondary black weiter_btn">
-                                                                        {!showAdditionalInfo &&
-                                                                        <span>{t('viewDetails')}</span>}
-                                                                        {showAdditionalInfo &&
-                                                                        <span>{t('hideDetails')}</span>}
-                                                                    </button>
-                                                                </a>
-                                                            </p>
-                                                        </div>
-
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="panel panel-default">
-                                                <div className="panel-heading mob_heading">
-                                                    <h4 className="panel-title mob_title text-center-xs"
-                                                        data-toggle="collapse"
-                                                        data-target="#mobile_tab2">
-                 <span className="hidden-lg hidden-sm hidden-md">
-                </span> Vor der Anwendung
-                                                    </h4>
-                                                </div>
-                                                <div id="mobile_tab2" className="panel-collapse collapse ">
-                                                    <div className="panel-body">
-                                                        {this.renderPackSecvor(drug)}
-
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="panel panel-default">
-                                                <div className="panel-heading mob_heading">
-                                                    <h4 className="panel-title mob_title text-center-xs"
-                                                        data-toggle="collapse"
-                                                        data-target="#mobile_tab3">
-                 <span className="hidden-lg hidden-sm hidden-md">
-                </span> Anwendung
-                                                    </h4>
-                                                </div>
-                                                <div id="mobile_tab3" className="panel-collapse collapse ">
-                                                    <div className="panel-body">
-                                                        <div className="row content_header">
-                                                            <h1>Dosierung und Anwendung</h1>
-                                                            <hr/>
-                                                        </div>
-                                                        {this.renderPackSecdos(drug)}
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="panel panel-default">
-                                                <div className="panel-heading mob_heading">
-                                                    <h4 className="panel-title mob_title text-center-xs"
-                                                        data-toggle="collapse"
-                                                        data-target="#mobile_tab4">
-                 <span className="hidden-lg hidden-sm hidden-md">
-                </span> Nebenwirkungen
-                                                    </h4>
-                                                </div>
-                                                <div id="mobile_tab4" className="panel-collapse collapse ">
-                                                    <div className="panel-body">
-                                                        <div className="row content_header">
-                                                            <h1> Nebenwirkungen </h1>
-                                                            <hr/>
-                                                            <h4>Wie alle Arzneimittel kann auch dieses Arzneimittel
-                                                                Nebenwirkungen
-                                                                haben, die aber nicht
-                                                                bei jedem auftreten müssen.</h4>
-                                                            {this.renderPackSecneben(drug)}
-                                                            {/*Button REPORT*/}
-                                                            <div className="text-right">
-                                                                <button type="button"
-                                                                        className="btn btn-success neben_button"
-                                                                        data-toggle="modal"
-                                                                        data-target="#melden">Meldung von Nebenwirkungen
-                                                                    <i className="fas fa-comment-medical"
-                                                                       style={{marginLeft: "15px"}}/>
-                                                                </button>
-                                                            </div>
-                                                            {/*Button REPORT ENDE*/}
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    </MobileView>
-                                    <BrowserView>
                                     <div>
-                                        <ul className="nav nav-pills brand-pills nav-stacked hidden-xs" role="tablist">
+                                        <ul className="nav nav-pills brand-pills nav-stacked hidden-xs hidden-sm hidden-md" role="tablist">
                                             <li role="presentation" className="brand-nav active">
                                                 <a href="#tab1"
                                                    aria-controls="tab1"
@@ -1685,95 +1795,17 @@ class DrugDetail extends React.Component {
                                                 </a></li>
                                         </ul>
                                     </div>
-                                    </BrowserView>
+
 
                                 </div>
-                                <BrowserView>
 
-                                <div className="col-xs-12 col-sm-12 col-md-9 hidden-xs infobox">
-                                    <div className="tab-content">
-                                        <div role="tabpanel" className="tab-pane active w3-animate-opacity tab1"
-                                             id="tab1" name="tab1">
-                                            <div className="row content_header">
-                                                {this.renderPackSecdesc(drug)}
-                                            </div>
-                                            <div className="row">
-                                                <span
-                                                    dangerouslySetInnerHTML={this.createMarkup(t("helptext_general"))}/>
 
-                                                {this.renderPharmaceuticalForm(drug)}
-                                                <div className="col-sm-4 col-xs-6 text-center infopart">
-                                                    {this.renderDisease(drug)}
-                                                </div>
-                                                <div className="col-sm-4 col-xs-6 text-center infopart"
-                                                     data-toggle="modal"
-                                                     data-target="#infosubstance">
-                                                    {this.renderActiveSubstance(drug)}
-                                                    <div style={{cursor: "pointer"}} data-toggle="modal"
-                                                         data-target="#infosubstance"><i
-                                                        className="fas fa-info-circle"/></div>
-                                                </div>
-                                                {showAdditionalInfo &&
-                                                <div className="">
-                                                    <div className="additional-information">
-                                                        <section>
-                                                            {this.renderIndicationGroup(drug)}
-                                                            {this.renderProductGroup(drug)}
-                                                            {this.renderPZN(drug)}
-                                                        </section>
-                                                    </div>
-                                                </div>}
-                                            </div>
-                                            <div className="row text-center">
-                                                <p>
-                                                    <a onClick={this.toggleShowAdditionalInfo}>
-                                                        <button className="btn btn-secondary black weiter_btn">
-                                                            {!showAdditionalInfo && <span>{t('viewDetails')}</span>}
-                                                            {showAdditionalInfo && <span>{t('hideDetails')}</span>}
-                                                        </button>
-                                                    </a>
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div role="tabpanel" className="tab-pane w3-animate-opacity" id="tab2"
-                                             name="tab2">
-                                            {this.renderPackSecvor(drug)}
-                                        </div>
-                                        <div role="tabpanel" className="tab-pane w3-animate-opacity" id="tab3"
-                                             name="tab3">
-                                            <div className="row content_header">
-                                                <h1>Dosierung und Anwendung</h1>
-                                                <hr/>
-                                            </div>
-                                            {this.renderPackSecdos(drug)}
-                                        </div>
-                                        <div role="tabpanel" className="tab-pane w3-animate-opacity" id="tab4"
-                                             name="tab4">
-                                            <div className="row content_header">
-                                                <h1> Nebenwirkungen </h1>
-                                                <hr/>
-                                                <h4>Wie alle Arzneimittel kann auch dieses Arzneimittel
-                                                    Nebenwirkungen
-                                                    haben, die aber nicht
-                                                    bei jedem auftreten müssen.</h4>
-                                                {this.renderPackSecneben(drug)}
 
-                                            </div>
-                                            {/*Button REPORT*/}
-                                            <div className="text-right">
-                                                <button type="button" className="btn btn-success neben_button"
-                                                        data-toggle="modal"
-                                                        data-target="#melden">Meldung von Nebenwirkungen
-                                                    <i className="fas fa-comment-medical"
-                                                       style={{marginLeft: "15px"}}/>
-                                                </button>
-                                            </div>
-                                            {/*Button REPORT ENDE*/
-                                            }
-                                        </div>
-                                    </div>
+                                <div className="col-xs-12 col-sm-12 col-md-9 infobox">
+                                    {this.renderContent()}
+
                                 </div>
-                                </BrowserView>
+
 
                             </div>
                         </div>
