@@ -263,11 +263,11 @@ class DrugDetail extends React.Component {
         const drug = this.state.drug;
         return (
             <div>
-                <div className="alert modal1 " data-dismis="alert">
+                <div className="alert modal1 " data-dismiss="alert">
                     <div className=" alert bubble_right row w3-animate-right">
                         <div className=" speech-bubble_right">
                             <a href="#" className="close" data-dismiss="alert"
-                               aria-label="close">&times;</a>
+                               aria-label="close1">&times;</a>
                             <span
                                 dangerouslySetInnerHTML={this.createMarkup(drug.personalizedInformation)}/>
                         </div>

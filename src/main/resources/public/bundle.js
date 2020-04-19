@@ -43727,7 +43727,7 @@ var DrugDetail = function (_React$Component) {
                 null,
                 _react2.default.createElement(
                     "div",
-                    { className: "alert modal1 ", "data-dismis": "alert" },
+                    { className: "alert modal1 ", "data-dismiss": "alert" },
                     _react2.default.createElement(
                         "div",
                         { className: " alert bubble_right row w3-animate-right" },
@@ -43737,7 +43737,7 @@ var DrugDetail = function (_React$Component) {
                             _react2.default.createElement(
                                 "a",
                                 { href: "#", className: "close", "data-dismiss": "alert",
-                                    "aria-label": "close" },
+                                    "aria-label": "close1" },
                                 "\xD7"
                             ),
                             _react2.default.createElement("span", {
@@ -48253,7 +48253,7 @@ var DrugList = function (_React$Component) {
                         null,
                         _User2.default.isAuthenticated() && _User2.default.levelOfDetail > 1 && _react2.default.createElement(
                             "div",
-                            { className: "alert modal1 ", "data-dismiss": "alert" },
+                            { className: "alert modal1", "data-dismiss": "alert" },
                             _react2.default.createElement(
                                 "div",
                                 { className: "alert bubble_left  row " },

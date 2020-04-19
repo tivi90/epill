@@ -546,7 +546,7 @@ class DrugList extends React.Component {
                     </div>
                     <div>
                         {User.isAuthenticated() && User.levelOfDetail > 1 &&
-                        <div className="alert modal1 " data-dismiss="alert">
+                        <div className="alert modal1" data-dismiss="alert">
                             <div className="alert bubble_left  row ">
                                 <div className="speech-bubble_left">
                                     <a href="#" className="close" data-dismiss="alert"
