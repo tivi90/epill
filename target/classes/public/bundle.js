@@ -44215,7 +44215,7 @@ var DrugDetail = function (_React$Component) {
         };
 
         _this.searchAdverseEffect = function () {
-            $("#mysideEffect").on("keyup", function () {
+            $("#myadverseEffect").on("keyup", function () {
                 var value = $(this).val().toLowerCase();
                 $("#myDIV div").filter(function () {
                     $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
@@ -44269,7 +44269,7 @@ var DrugDetail = function (_React$Component) {
                             _react2.default.createElement(
                                 "div",
                                 { className: "modal-body", style: { color: "black" } },
-                                _react2.default.createElement("span", { dangerouslySetInnerHTML: _this.createMarkup(t("frequency_sideeffect")) })
+                                _react2.default.createElement("span", { dangerouslySetInnerHTML: _this.createMarkup(t("frequency_adverseeffect")) })
                             ),
                             _react2.default.createElement("span", { dangerouslySetInnerHTML: _this.createMarkup(t("modal_close")) })
                         )
@@ -46548,12 +46548,12 @@ var DrugDetail = function (_React$Component) {
         value: function rendersehrhaeufigdesktop(drug) {
             var _this22 = this;
 
-            if (!drug.sideEffectContent) {
+            if (!drug.adverseEffectContent) {
                 return null;
             }
             return _react2.default.createElement(
                 "table",
-                { className: "sideffect_table hidden-xs" },
+                { className: "adverseffect_table hidden-xs" },
                 _react2.default.createElement(
                     "thead",
                     null,
@@ -46575,7 +46575,7 @@ var DrugDetail = function (_React$Component) {
                 _react2.default.createElement(
                     "tbody",
                     { className: "sehrhaeufig_cont" },
-                    drug.sideEffectContent.map(function (section) {
+                    drug.adverseEffectContent.map(function (section) {
                         return _react2.default.createElement(
                             "tr",
                             { id: "sehrhaeufig", key: section.id, className: section.number },
@@ -46598,12 +46598,12 @@ var DrugDetail = function (_React$Component) {
         value: function renderhaeufigdesktop(drug) {
             var _this23 = this;
 
-            if (!drug.sideEffectContent) {
+            if (!drug.adverseEffectContent) {
                 return null;
             }
             return _react2.default.createElement(
                 "table",
-                { className: "sideffect_table hidden-xs" },
+                { className: "adverseffect_table hidden-xs" },
                 _react2.default.createElement(
                     "thead",
                     null,
@@ -46625,7 +46625,7 @@ var DrugDetail = function (_React$Component) {
                 _react2.default.createElement(
                     "tbody",
                     { className: "haeufig_cont" },
-                    drug.sideEffectContent.map(function (section) {
+                    drug.adverseEffectContent.map(function (section) {
                         return _react2.default.createElement(
                             "tr",
                             { id: "haeufig", key: section.id, className: section.number },
@@ -46648,12 +46648,12 @@ var DrugDetail = function (_React$Component) {
         value: function rendergelegentlichdesktop(drug) {
             var _this24 = this;
 
-            if (!drug.sideEffectContent) {
+            if (!drug.adverseEffectContent) {
                 return null;
             }
             return _react2.default.createElement(
                 "table",
-                { className: "sideffect_table hidden-xs" },
+                { className: "adverseffect_table hidden-xs" },
                 _react2.default.createElement(
                     "thead",
                     null,
@@ -46675,7 +46675,7 @@ var DrugDetail = function (_React$Component) {
                 _react2.default.createElement(
                     "tbody",
                     { className: "gelegentlich_cont" },
-                    drug.sideEffectContent.map(function (section) {
+                    drug.adverseEffectContent.map(function (section) {
                         return _react2.default.createElement(
                             "tr",
                             { id: "gelegentlich", key: section.id, className: section.number },
@@ -46698,12 +46698,12 @@ var DrugDetail = function (_React$Component) {
         value: function renderseltendesktop(drug) {
             var _this25 = this;
 
-            if (!drug.sideEffectContent) {
+            if (!drug.adverseEffectContent) {
                 return null;
             }
             return _react2.default.createElement(
                 "table",
-                { className: "sideffect_table hidden-xs" },
+                { className: "adverseffect_table hidden-xs" },
                 _react2.default.createElement(
                     "thead",
                     null,
@@ -46725,7 +46725,7 @@ var DrugDetail = function (_React$Component) {
                 _react2.default.createElement(
                     "tbody",
                     { className: "selten_cont" },
-                    drug.sideEffectContent.map(function (section) {
+                    drug.adverseEffectContent.map(function (section) {
                         return _react2.default.createElement(
                             "tr",
                             { id: "selten", key: section.id, className: section.number },
@@ -46748,12 +46748,12 @@ var DrugDetail = function (_React$Component) {
         value: function rendersehrseltendesktop(drug) {
             var _this26 = this;
 
-            if (!drug.sideEffectContent) {
+            if (!drug.adverseEffectContent) {
                 return null;
             }
             return _react2.default.createElement(
                 "table",
-                { className: "sideffect_table hidden-xs" },
+                { className: "adverseffect_table hidden-xs" },
                 _react2.default.createElement(
                     "thead",
                     null,
@@ -46775,7 +46775,7 @@ var DrugDetail = function (_React$Component) {
                 _react2.default.createElement(
                     "tbody",
                     { className: "sehrselten_cont" },
-                    drug.sideEffectContent.map(function (section) {
+                    drug.adverseEffectContent.map(function (section) {
                         return _react2.default.createElement(
                             "tr",
                             { id: "sehrselten", key: section.id, className: section.number },
@@ -46798,12 +46798,12 @@ var DrugDetail = function (_React$Component) {
         value: function rendernichtbekanntdesktop(drug) {
             var _this27 = this;
 
-            if (!drug.sideEffectContent) {
+            if (!drug.adverseEffectContent) {
                 return null;
             }
             return _react2.default.createElement(
                 "table",
-                { className: "sideffect_table hidden-xs" },
+                { className: "adverseffect_table hidden-xs" },
                 _react2.default.createElement(
                     "thead",
                     null,
@@ -46825,7 +46825,7 @@ var DrugDetail = function (_React$Component) {
                 _react2.default.createElement(
                     "tbody",
                     { className: "nichtbekannt_cont" },
-                    drug.sideEffectContent.map(function (section) {
+                    drug.adverseEffectContent.map(function (section) {
                         return _react2.default.createElement(
                             "tr",
                             { id: "nichtbekannt", key: section.id, className: section.number },
@@ -46848,7 +46848,7 @@ var DrugDetail = function (_React$Component) {
         value: function renderalldesktop(drug) {
             var _this28 = this;
 
-            if (!drug.sideEffectContent) {
+            if (!drug.adverseEffectContent) {
                 return null;
             }
             return _react2.default.createElement(
@@ -46858,7 +46858,7 @@ var DrugDetail = function (_React$Component) {
                     className: "hidden-xs myInput" }),
                 _react2.default.createElement(
                     "table",
-                    { id: "table", className: "sideffect_table hidden-sm hidden-xs" },
+                    { id: "table", className: "adverseffect_table hidden-sm hidden-xs" },
                     _react2.default.createElement(
                         "thead",
                         null,
@@ -46880,7 +46880,7 @@ var DrugDetail = function (_React$Component) {
                     _react2.default.createElement(
                         "tbody",
                         { className: " " },
-                        drug.sideEffectContent.map(function (section) {
+                        drug.adverseEffectContent.map(function (section) {
                             return _react2.default.createElement(
                                 "tr",
                                 { key: section.id },
@@ -46904,13 +46904,13 @@ var DrugDetail = function (_React$Component) {
         value: function rendersehrhaeufigmobile(drug) {
             var _this29 = this;
 
-            if (!drug.sideEffectContent) {
+            if (!drug.adverseEffectContent) {
                 return null;
             }
             return _react2.default.createElement(
                 "div",
                 null,
-                drug.sideEffectContent.map(function (section) {
+                drug.adverseEffectContent.map(function (section) {
                     return _react2.default.createElement(
                         "div",
                         { className: "sehrhaeufig_cont hidden-sm hidden-md hidden-lg  " },
@@ -46959,13 +46959,13 @@ var DrugDetail = function (_React$Component) {
         value: function renderhaeufigmobile(drug) {
             var _this30 = this;
 
-            if (!drug.sideEffectContent) {
+            if (!drug.adverseEffectContent) {
                 return null;
             }
             return _react2.default.createElement(
                 "div",
                 null,
-                drug.sideEffectContent.map(function (section) {
+                drug.adverseEffectContent.map(function (section) {
                     return _react2.default.createElement(
                         "div",
                         { className: "haeufig_cont hidden-sm hidden-md hidden-lg  " },
@@ -47010,13 +47010,13 @@ var DrugDetail = function (_React$Component) {
         value: function rendergelegentlichmobile(drug) {
             var _this31 = this;
 
-            if (!drug.sideEffectContent) {
+            if (!drug.adverseEffectContent) {
                 return null;
             }
             return _react2.default.createElement(
                 "div",
                 null,
-                drug.sideEffectContent.map(function (section) {
+                drug.adverseEffectContent.map(function (section) {
                     return _react2.default.createElement(
                         "div",
                         { className: "gelegentlich_cont hidden-sm hidden-md hidden-lg  " },
@@ -47061,13 +47061,13 @@ var DrugDetail = function (_React$Component) {
         value: function renderseltenmobile(drug) {
             var _this32 = this;
 
-            if (!drug.sideEffectContent) {
+            if (!drug.adverseEffectContent) {
                 return null;
             }
             return _react2.default.createElement(
                 "div",
                 null,
-                drug.sideEffectContent.map(function (section) {
+                drug.adverseEffectContent.map(function (section) {
                     return _react2.default.createElement(
                         "div",
                         { className: "selten_cont hidden-sm hidden-md hidden-lg  " },
@@ -47112,13 +47112,13 @@ var DrugDetail = function (_React$Component) {
         value: function rendersehrseltenmobile(drug) {
             var _this33 = this;
 
-            if (!drug.sideEffectContent) {
+            if (!drug.adverseEffectContent) {
                 return null;
             }
             return _react2.default.createElement(
                 "div",
                 null,
-                drug.sideEffectContent.map(function (section) {
+                drug.adverseEffectContent.map(function (section) {
                     return _react2.default.createElement(
                         "div",
                         { className: "sehrselten_cont hidden-sm hidden-md hidden-lg  " },
@@ -47163,13 +47163,13 @@ var DrugDetail = function (_React$Component) {
         value: function rendernichtbekanntmobile(drug) {
             var _this34 = this;
 
-            if (!drug.sideEffectContent) {
+            if (!drug.adverseEffectContent) {
                 return null;
             }
             return _react2.default.createElement(
                 "div",
                 null,
-                drug.sideEffectContent.map(function (section) {
+                drug.adverseEffectContent.map(function (section) {
                     return _react2.default.createElement(
                         "div",
                         { className: "nichtbekannt_cont hidden-sm hidden-md hidden-lg " },
@@ -47214,15 +47214,15 @@ var DrugDetail = function (_React$Component) {
         value: function renderallmobile(drug) {
             var _this35 = this;
 
-            if (!drug.sideEffectContent) {
+            if (!drug.adverseEffectContent) {
                 return null;
             }
             return _react2.default.createElement(
                 "div",
                 null,
-                _react2.default.createElement("input", { id: "mysideEffect", onKeyUp: this.searchAdverseEffect.bind(this), type: "text", placeholder: "Search..",
+                _react2.default.createElement("input", { id: "myadverseEffect", onKeyUp: this.searchAdverseEffect.bind(this), type: "text", placeholder: "Search..",
                     className: "hidden-sm hidden-md hidden-lg myInput" }),
-                drug.sideEffectContent.map(function (section) {
+                drug.adverseEffectContent.map(function (section) {
                     return _react2.default.createElement(
                         "div",
                         { id: "myDIV", className: "all_cont   hidden-md hidden-lg " },

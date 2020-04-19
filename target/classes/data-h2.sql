@@ -20,7 +20,7 @@ DELETE FROM user_drug_feature;
 DELETE FROM user_query;
 DELETE FROM interaction_drug;
 DELETE FROM drug_interaction;
-
+DELETE FROM adverse_effect;
 DELETE FROM tag;
 DELETE FROM packaging;
 DELETE FROM packaging_section;
@@ -229,9 +229,6 @@ INSERT INTO drug_active_substance (iddrug, idactive_substance) VALUES (14,14);
 
 
 
---
--- Dumping data for table `adverse_effect`
---
 
 --
 -- Dumping data for table `pharmaceutical_form`
@@ -532,17 +529,17 @@ INSERT INTO drug_drug_feature (iddrug, iddrug_feature) VALUES (14,12);
 
 
 --
--- Dumping data for table `side_Effect`
+-- Dumping data for table `adverse_Effect`
 --
-INSERT INTO side_effect (id, side_effect ) VALUES (1,'sehrhäufig');
-INSERT INTO side_effect (id, side_effect ) VALUES (2,'haeufig');
-INSERT INTO side_effect (id, side_effect ) VALUES (3,'gelegentlich');
-INSERT INTO side_effect (id, side_effect ) VALUES (4,'selten');
-INSERT INTO side_effect (id, side_effect ) VALUES (5,'sehrselten');
-INSERT INTO side_effect (id, side_effect ) VALUES (6,'nichtbekannt');
+INSERT INTO adverse_effect (id, adverse_effect ) VALUES (1,'sehrhäufig');
+INSERT INTO adverse_effect (id, adverse_effect ) VALUES (2,'haeufig');
+INSERT INTO adverse_effect (id, adverse_effect ) VALUES (3,'gelegentlich');
+INSERT INTO adverse_effect (id, adverse_effect ) VALUES (4,'selten');
+INSERT INTO adverse_effect (id, adverse_effect ) VALUES (5,'sehrselten');
+INSERT INTO adverse_effect (id, adverse_effect ) VALUES (6,'nichtbekannt');
 
 
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text ) VALUES (1,1,0,11,1,'Verdauungsprobleme','
+INSERT INTO adverse_effect_content (id, number, state,iddrug, idadverse_effect,purpose, text ) VALUES (1,1,0,11,1,'Verdauungsprobleme','
 <ul>
     <li>Übelkeit</li>
     <li>Erbrechen</li>
@@ -560,8 +557,8 @@ Einnahmen und die Einnahme von Metformin Lich mit oder direkt nach einer Mahlzei
     nicht weiter ein
     und sprechen Sie mit Ihrem
     Arzt.</span>');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (2,2,0,11,2,'Geschmackempfinden','Geschmacksveränderungen');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (3,5,0,11,5,'Blut und Stoffwechselerkrankung
+INSERT INTO adverse_effect_content (id, number, state,iddrug, idadverse_effect,purpose, text )VALUES (2,2,0,11,2,'Geschmackempfinden','Geschmacksveränderungen');
+INSERT INTO adverse_effect_content (id, number, state,iddrug, idadverse_effect,purpose, text )VALUES (3,5,0,11,5,'Blut und Stoffwechselerkrankung
 Bekannt','<b>Übersäuerung des Blutes mit Milchsäure (<a class=" info_words" type="button" data-toggle="modal"
         data-target="#laktatazidose">Laktatazidose</a>)</b> </br>Dies
 ist eine
@@ -582,7 +579,7 @@ Metformin Lich nicht weiter ein und sprechen Sie sofort mit Ihrem Arzt.</br></br
 </ul>
 </br>
 <b>Niedrige Konzentration von Vitamin B12 im Blut.</b>');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (4,6,0,11,6,'Bluterkrankung','<ul>
+INSERT INTO adverse_effect_content (id, number, state,iddrug, idadverse_effect,purpose, text )VALUES (4,6,0,11,6,'Bluterkrankung','<ul>
     <li>Verringerte Anzahl der roten Blutkörperchen, die eine blassgelbe Haut,
         Schwächegefühl
         oder Atemlosigkeit verursachen kann (hämolytische Anämie).</li>
@@ -599,8 +596,8 @@ INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose
         Kribbeln oder Taubheitsgefühl verursachen kann (periphere Neuropathie).
     </li>
 </ul>');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (5,1,0,12,1,'Schwellungen','Knöchelschwellungen (Ödeme)');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (6,2,0,12,2,'
+INSERT INTO adverse_effect_content (id, number, state,iddrug, idadverse_effect,purpose, text )VALUES (5,1,0,12,1,'Schwellungen','Knöchelschwellungen (Ödeme)');
+INSERT INTO adverse_effect_content (id, number, state,iddrug, idadverse_effect,purpose, text )VALUES (6,2,0,12,2,'
 Erkrankungen des Nervensystems',' <ul>
     <li>Kopfschmerzen, Schwindel, Schläfrigkeit (insbesondere zu Beginn der Behandlung)</li>
     <li>Herzklopfen (Palpitationen), Hautrötung mit Wärmegefühl</li>
@@ -611,7 +608,7 @@ Erkrankungen des Nervensystems',' <ul>
     <li>Sehstörungen, Doppeltsehen</li>
     <li>Muskelkrämpfe</li>
 </ul>');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (7,3,0,12,3,'Nicht
+INSERT INTO adverse_effect_content (id, number, state,iddrug, idadverse_effect,purpose, text )VALUES (7,3,0,12,3,'Nicht
 Bekannt',' <ul>
     <li>Stimmungsschwankungen, Angst, Depression, Schlaflosigkeit</li>
     <li>Zittern, Geschmacksstörungen, kurze Bewusstlosigkeit</li>
@@ -631,9 +628,9 @@ Bekannt',' <ul>
     <li>Gelenk- oder Muskelschmerzen, Rückenschmerzen</li>
     <li>Gewichtszunahme oder Gewichtsabnahme</li>
 </ul>');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (8,4,0,12,4,'Nicht
+INSERT INTO adverse_effect_content (id, number, state,iddrug, idadverse_effect,purpose, text )VALUES (8,4,0,12,4,'Nicht
 Bekannt','Verwirrung');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (9,5,0,12,5,'Nicht
+INSERT INTO adverse_effect_content (id, number, state,iddrug, idadverse_effect,purpose, text )VALUES (9,5,0,12,5,'Nicht
 Bekannt',' <ul>
     <li>Verminderung der weißen Blutkörperchen, Verminderung der Blutplättchen, was zu
         ungewöhnlichen blauen Flecken oder leichtem Bluten führen kann (Schädigung der
@@ -652,152 +649,152 @@ Bekannt',' <ul>
     <li>Störungen, die sich aus Steifheit, Zittern und/oder Bewegungsstörungen
         zusammensetzen</li>
 </ul>');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (10,3,0,13,3,'
+INSERT INTO adverse_effect_content (id, number, state,iddrug, idadverse_effect,purpose, text )VALUES (10,3,0,13,3,'
 Erkrankungen des Blutes-und Lymphsystems
 ','Blutarmut durch vermehrten Zerfall roter Blutkörperchen (hämolytische Anämie), Blutarmut durch Blutbildungsstörung im
 Knochenmark (aplastische Anämie)');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (11,4,0,13,4,'
+INSERT INTO adverse_effect_content (id, number, state,iddrug, idadverse_effect,purpose, text )VALUES (11,4,0,13,4,'
 Erkrankungen des Blutes-und Lymphsystems
 ','Verminderung der Anzahl bestimmter Blutzellen (Neutropenie, Thrombozytopenie, Panzytopenie) bis zu einer hochgradigen
 Verminderung bestimmter weißer Blutkörperchen mit Infektneigung und schweren Allgemeinsymptomen (Agranulozytose),
 Abnahme bestimmter Laborwerte (Hämoglobin und Hämatokrit), herabgesetzte Funktion des Knochenmarks
 (Knochenmarksdepression), Lymphknotenschwellung, Autoimmunkrankheiten.
 ');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (12,3,0,13,3,'
+INSERT INTO adverse_effect_content (id, number, state,iddrug, idadverse_effect,purpose, text )VALUES (12,3,0,13,3,'
 Stoffwechsel- und Ernährungsstörungen ','Zu niedrige Blutzuckerwerte (Hypoglykämie).
 ');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (13,1,0,13,1,'
+INSERT INTO adverse_effect_content (id, number, state,iddrug, idadverse_effect,purpose, text )VALUES (13,1,0,13,1,'
 Augenerkrankungen ','Verschwommensehen
 ');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (14,1,0,13,1,'
+INSERT INTO adverse_effect_content (id, number, state,iddrug, idadverse_effect,purpose, text )VALUES (14,1,0,13,1,'
 Herz-Kreislauf-System ','Schwindel ');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (15,2,0,13,2,'
+INSERT INTO adverse_effect_content (id, number, state,iddrug, idadverse_effect,purpose, text )VALUES (15,2,0,13,2,'
 Herz-Kreislauf-System ','Übermäßige Blutdrucksenkung einschließlich übermäßiger Blutdruckabfall bei Lagewechsel vom
 Liegen zum Stehen (orthostatische Hypotonie), kurzzeitiger Bewusstseinsverlust (Synkope), Herzinfarkt oder Schlaganfall,
 vermutlich infolge übermäßigen Blutdruckabfalls bei gefährdeten Patienten (Patienten mit Durchblutungsstörungen im
 Bereich des Herzens und/oder des Gehirns), Schmerzenim Brustkorb, Herzrhythmusstörungen, Herzengegefühl (Angina
 pectoris), beschleunigter Herzschlag (Tachykardie). ');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (16,3,0,13,3,'
+INSERT INTO adverse_effect_content (id, number, state,iddrug, idadverse_effect,purpose, text )VALUES (16,3,0,13,3,'
 Herz-Kreislauf-System ','Übermäßiger Blutdruckabfall bei Lagewechsel vom Liegen zum Stehen (orthostatische Hypotonie),
 Herzklopfen.
 ');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (17,4,0,13,4,'
+INSERT INTO adverse_effect_content (id, number, state,iddrug, idadverse_effect,purpose, text )VALUES (17,4,0,13,4,'
 Herz-Kreislauf-System ','Durch Gefäßkrämpfe bedingte Durchblutungsstörungen an Händen und Füßen (Raynaud-Phänomen).
 ');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (18,1,0,13,1,'
+INSERT INTO adverse_effect_content (id, number, state,iddrug, idadverse_effect,purpose, text )VALUES (18,1,0,13,1,'
 Erkrankungen der Atemwege, des Brustraums und Mediastinums
 ','Übelkeit
 ');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (19,2,0,13,2,'
+INSERT INTO adverse_effect_content (id, number, state,iddrug, idadverse_effect,purpose, text )VALUES (19,2,0,13,2,'
 Erkrankungen der Atemwege, des Brustraums und Mediastinums
 ','Durchfall, Bauchschmerzen, Geschmacksveränderungen.
 ');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (20,3,0,13,3,'
+INSERT INTO adverse_effect_content (id, number, state,iddrug, idadverse_effect,purpose, text )VALUES (20,3,0,13,3,'
 Erkrankungen der Atemwege, des Brustraums und Mediastinums
 ','Darmverschluss (Ileus), Entzündung der Bauchspeicheldrüse, Erbrechen, Verdauungsstörungen, Verstopfung,
 Appetitlosigkeit, Magenreizung, Mundtrockenheit, Magengeschwür (peptisches Ulkus).
 ');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (21,4,0,13,4,'
+INSERT INTO adverse_effect_content (id, number, state,iddrug, idadverse_effect,purpose, text )VALUES (21,4,0,13,4,'
 Erkrankungen der Atemwege, des Brustraums und Mediastinums
 ','Entzündungen der Mundschleimhaut mit Geschwürbildung (Stomatitis/aphthöse Ulzerationen), Entzündungen der
 Zungenschleimhaut (Glossitis).
 ');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (22,5,0,13,5,'
+INSERT INTO adverse_effect_content (id, number, state,iddrug, idadverse_effect,purpose, text )VALUES (22,5,0,13,5,'
 Erkrankungen der Atemwege, des Brustraums und Mediastinums
 ','Gewebeschwellung des Darms (intestinales angioneurotisches Ödem).
 ');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (23,4,0,13,4,' Leber- und
+INSERT INTO adverse_effect_content (id, number, state,iddrug, idadverse_effect,purpose, text )VALUES (23,4,0,13,4,' Leber- und
 Gallenerkrankungen ','Leberversagen, Leberentzündung (Hepatitis - hepatozellulär oder cholestatisch, einschließlich
 hepatische Nekrose), Gelbsucht.
 ');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (24,2,0,13,2,'
+INSERT INTO adverse_effect_content (id, number, state,iddrug, idadverse_effect,purpose, text )VALUES (24,2,0,13,2,'
 Erkrankungen der Haut und des Unterhautzellgewebes ','Ausschlag, Überempfindlichkeit/Gewebeschwellung (angioneurotisches
 Ödem): angioneurotische Ödeme mit Beteiligung von Gesicht, Gliedmaßen, Lippen, Zunge, Stimmapparat des Kehlkopfes
 (Glottis) und/oder Kehlkopf wurden beobachtet.
 ');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (25,3,0,13,3,'
+INSERT INTO adverse_effect_content (id, number, state,iddrug, idadverse_effect,purpose, text )VALUES (25,3,0,13,3,'
 Erkrankungen der Haut und des Unterhautzellgewebes ','Vermehrtes Schwitzen, Juckreiz, Nesselsucht, Haarausfall. Selten:
 Schwerwiegende Hautreaktionen (Erythema multiforme, Stevens-Johnson-Syndrom, exfoliative Dermatitis, toxische epidermale
 Nekrolyse, Pemphigus, Erythroderma).
 ');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (26,6,0,13,6,'
+INSERT INTO adverse_effect_content (id, number, state,iddrug, idadverse_effect,purpose, text )VALUES (26,6,0,13,6,'
 Erkrankungen der Haut und des Unterhautzellgewebes ','Ein Symptomenkomplex wurde beschrieben, der mit einigen oder allen
 der folgenden Nebenwirkungen einhergehen kann: Fieber, Entzündung seröser Häute (Serositis), Gefäßentzündung
 (Vaskulitis), Muskel- und Gelenkschmerzen/Muskel- und Gelenkentzündungen (Myalgien/Myositis, Arthralgien/Arthritis) und
 bestimmten Laborwertveränderungen (positive ANA-Titer, erhöhte Blutkörperchensenkungsgeschwindigkeit, Eosinophilie und
 Leukozytose). Hautausschlag, Lichtempfindlichkeit oder andere Reaktionen der Haut können auftreten.
 ');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (27,3,0,13,3,'
+INSERT INTO adverse_effect_content (id, number, state,iddrug, idadverse_effect,purpose, text )VALUES (27,3,0,13,3,'
 Erkrankungen der Nieren und Harnwege ','Nierenfunktionsstörungen, Nierenversagen, vermehrte Eiweißausscheidung im Urin
 (Proteinurie).
 ');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (28,4,0,13,4,'
+INSERT INTO adverse_effect_content (id, number, state,iddrug, idadverse_effect,purpose, text )VALUES (28,4,0,13,4,'
 Erkrankungen der Nieren und Harnwege ','Verminderte Harnausscheidung
 ');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (29,3,0,13,3,'
+INSERT INTO adverse_effect_content (id, number, state,iddrug, idadverse_effect,purpose, text )VALUES (29,3,0,13,3,'
 Erkrankungen der Geschlechtsorgane und der Brustdrüse ','Impotenz
 ');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (30,4,0,13,4,'
+INSERT INTO adverse_effect_content (id, number, state,iddrug, idadverse_effect,purpose, text )VALUES (30,4,0,13,4,'
 Erkrankungen der Geschlechtsorgane und der Brustdrüse ','Vergrößerung der Brust bei Männern (Gynäkomastie).
 ');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (31,1,0,13,1,' Allgemeine
+INSERT INTO adverse_effect_content (id, number, state,iddrug, idadverse_effect,purpose, text )VALUES (31,1,0,13,1,' Allgemeine
 Erkrankungen und Beschwerden am Verabreichungsort ','Schwächegefühl
 ');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (32,2,0,13,2,' Allgemeine
+INSERT INTO adverse_effect_content (id, number, state,iddrug, idadverse_effect,purpose, text )VALUES (32,2,0,13,2,' Allgemeine
 Erkrankungen und Beschwerden am Verabreichungsort ','Müdigkeit ');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (33,3,0,13,3,' Allgemeine
+INSERT INTO adverse_effect_content (id, number, state,iddrug, idadverse_effect,purpose, text )VALUES (33,3,0,13,3,' Allgemeine
 Erkrankungen und Beschwerden am Verabreichungsort ','Muskelkrämpfe, Gesichtsrötung (Flush), Ohrgeräusche (Tinnitus),
 Unwohlsein, Fieber.
 ');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (34,2,0,13,2,'
+INSERT INTO adverse_effect_content (id, number, state,iddrug, idadverse_effect,purpose, text )VALUES (34,2,0,13,2,'
 Untersuchungen ','Schwächegefühl ');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (35,3,0,13,3,'
+INSERT INTO adverse_effect_content (id, number, state,iddrug, idadverse_effect,purpose, text )VALUES (35,3,0,13,3,'
 Untersuchungen ','Müdigkeit
 ');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (36,4,0,13,4,'
+INSERT INTO adverse_effect_content (id, number, state,iddrug, idadverse_effect,purpose, text )VALUES (36,4,0,13,4,'
 Untersuchungen ','Muskelkrämpfe, Gesichtsrötung (Flush), Ohrgeräusche (Tinnitus), Unwohlsein, Fieber.
 ');
 
 
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (37,6,0,14,6,'
+INSERT INTO adverse_effect_content (id, number, state,iddrug, idadverse_effect,purpose, text )VALUES (37,6,0,14,6,'
 Erkrankungen des Immunsystems ','Überempfindlichkeitsreaktionen einschließlich Juckreiz, Nesselsucht (Urtikaria),
 Schwellung im Mund-Rachenbereich (Quincke-Ödem), Hautausschlag (Exanthem), Bronchialkrampf (Bronchospasmus),
 Blutdruckabfall und Kollaps.
 ');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (38,2,0,14,2,'
+INSERT INTO adverse_effect_content (id, number, state,iddrug, idadverse_effect,purpose, text )VALUES (38,2,0,14,2,'
 Stoffwechsel- und Ernährungsstörungen
 ','Erhöhter Blutzuckergehalt (Hyperglykämie).
 ');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (39,6,0,14,6,'
+INSERT INTO adverse_effect_content (id, number, state,iddrug, idadverse_effect,purpose, text )VALUES (39,6,0,14,6,'
 Stoffwechsel- und Ernährungsstörungen ','Senkung des Blut-Kaliumspiegels (Hypokaliämie): unter der Therapie mit Beta2-
 Agonisten kann es möglicherweise zu einer sehr ausgeprägten Senkung des BlutkaliumSpiegels kommen; Übersäuerung des
 Blutes (Laktatazidose).
 ');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (40,6,0,14,6,'
+INSERT INTO adverse_effect_content (id, number, state,iddrug, idadverse_effect,purpose, text )VALUES (40,6,0,14,6,'
 Psychiatrische Erkrankungen
 ','Schlaflosigkeit (Insomnie) ');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (41,2,0,14,2,'
+INSERT INTO adverse_effect_content (id, number, state,iddrug, idadverse_effect,purpose, text )VALUES (41,2,0,14,2,'
 Erkrankungen des Nervensystems ','Zittern (Tremor), Kopfschmerzen
 ');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (42,3,0,14,3,'
+INSERT INTO adverse_effect_content (id, number, state,iddrug, idadverse_effect,purpose, text )VALUES (42,3,0,14,3,'
 Erkrankungen des Nervensystems ','Unruhe
 ');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (43,6,0,14,6,'
+INSERT INTO adverse_effect_content (id, number, state,iddrug, idadverse_effect,purpose, text )VALUES (43,6,0,14,6,'
 Erkrankungen des Nervensystems ','Schwindel');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (44,2,0,14,2,'
+INSERT INTO adverse_effect_content (id, number, state,iddrug, idadverse_effect,purpose, text )VALUES (44,2,0,14,2,'
 Herzerkrankungen
 ','Herzrasen (Tachykardie). Herzrhythmusstörungen einschließlich Vorhofflimmern, Anstieg der Herzfrequenz
 (supraventrikuläre Tachykardie) und unregelmäßigem Puls (ventrikuläre Extrasystolie), Brustenge (pektanginöse
 Beschwerden) und Herzklopfen (Palpitationen), Sauerstoffmangel am Herzmuskel (myokardiale Ischämie)
 ');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (45,6,0,14,6,'
+INSERT INTO adverse_effect_content (id, number, state,iddrug, idadverse_effect,purpose, text )VALUES (45,6,0,14,6,'
 Herzerkrankungen
 ','Minderdurchblutung des Herzmuskels (Myokardischämie).
 ');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (46,6,0,14,6,'
+INSERT INTO adverse_effect_content (id, number, state,iddrug, idadverse_effect,purpose, text )VALUES (46,6,0,14,6,'
 Gefäßerkrankungen ','Periphere Erweiterung der Blutgefäße
 ');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (47,6,0,14,6,'
+INSERT INTO adverse_effect_content (id, number, state,iddrug, idadverse_effect,purpose, text )VALUES (47,6,0,14,6,'
 Erkrankungen der Atemwege, des Brustraums und Mediastinums ','Husten, Bronchialkrampf (paradoxer Bronchospasmus),
 Reizung im Rachenbereich. <br> <b>Hinweis</b> <br> Wie bei anderen Inhalationstherapien kann nach der Anwendung von
 Salbutamol ein Bronchialkrampf auftreten mit einer sofortigen Zunahme des Giemens (Keuchens). In diesem Fall sollte
@@ -805,12 +802,12 @@ sofort ein anderes bronchienerweiterndes Arzneimittel mit schnellem Wirkungseint
 mit Salbutamol soll unverzüglich abgebrochen und der behandelnde Arzt informiert werden. Dieser entscheidet, ob weitere
 Maßnahmen erforderlich sind.
 ');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (48,3,0,14,3,'
+INSERT INTO adverse_effect_content (id, number, state,iddrug, idadverse_effect,purpose, text )VALUES (48,3,0,14,3,'
 Erkrankungen des Gastrointestinaltrakts ','Reizung im Mund oder Rachenbereich und Änderung des Geschmackempfindens.
 ');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (49,3,0,14,3,'
+INSERT INTO adverse_effect_content (id, number, state,iddrug, idadverse_effect,purpose, text )VALUES (49,3,0,14,3,'
 Skelettmuskulatur-, Bindegewebs- und Knochenerkrankungen ','Muskelkrämpfe');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (50,4,0,14,4,'
+INSERT INTO adverse_effect_content (id, number, state,iddrug, idadverse_effect,purpose, text )VALUES (50,4,0,14,4,'
 Skelettmuskulatur-, Bindegewebs- und Knochenerkrankungen
 ','Störungen beim Wasserlassen, Sodbrennen sowie Blutdrucksteigerungen oder -senkungen .');
 
@@ -1082,7 +1079,7 @@ INSERT INTO packaging_section (id, state, iddrug, idpackaging_topic, text) VALUE
 INSERT INTO packaging_section (id, state, iddrug, idpackaging_topic, text) VALUES (4,0,1,8,'<h4>Inhalt der Packung und weitere Informationen</h4> <p> <b>Was Accupro 10 enthält</b> </p> <p>Der Wirkstoff ist: Quinaprilhydrochlorid. 1 Filmtablette enthält 10,832 mg Quinaprilhydrochlorid (entsprechend 10 mg Quinapril).</p> <p>Die sonstigen Bestandteile sind: Candelillawachs, Crospovidon, Gelatine, Hyprolose, Lactose-Monohydrat, Macrogol 400, schweres basisches Magnesiumcarbonat, Magnesiumstearat (Ph.Eur.), Hypromellose, Titandioxid (E 171).</p> <p> <b>Wie Accupro 10 aussieht und Inhalt der Packung</b> </p> <p>Die Filmtabletten sind weiß, dreieckig, beiderseits nach außen gewölbt, haben auf einer Seite eine „10“ eingeprägt und besitzen eine Bruchrille.</p> <p>Packung mit 30 Filmtabletten</p> <p>Packung mit 100 Filmtabletten</p>');
 INSERT INTO packaging_section (id, state, iddrug, idpackaging_topic, text) VALUES (5,0,1,6,'<h4>Welche Nebenwirkungen sind möglich?</h4> <p>Wie alle Arzneimittel kann auch dieses Arzneimittel Nebenwirkungen haben, die aber nicht bei jedem auftreten müssen.</p> <p> <b>Bedeutsame Nebenwirkungen oder Zeichen, auf die Sie achten sollten, und Maßnahmen, wenn Sie betroffen sind</b> </p> <p>Wenn Sie von einer der nachfolgend genannten Nebenwirkungen betroffen sind, nehmen Sie Accupro 10 nicht weiter ein und suchen Sie Ihren Arzt möglichst umgehend auf.</p> <p>Bei Verdacht auf eine schwerwiegende Hautreaktion muss sofort der behandelnde Arzt aufgesucht und ggf. die Therapie mit Accupro 10 abgebrochen werden. Hinweis: Es besteht eine erhöhte Gefahr der Ausbildung einer Schwellung im Gesichtsbereich bei schwarzhäutigen Patienten. Hautveränderungen können mit Fieber, Muskel- und Gelenkschmerzen <i>(Myalgien, Arthralgien, Arthritis)</i>, Gefäßentzündungen <i>(Vaskulitiden)</i>, Entzündungen seröser Häute und bestimmten Laborwertveränderungen <i>(Eosinophilie, Leukozytose und/ oder erhöhte ANA-Titer, erhöhte BSG)</i> einhergehen.</p> <p> <i>In Einzelfällen verliefen durch ACE-Hemmer ausgelöste Schwellungen im Gesichtsbereich (angioneurotische Ödeme) mit Beteiligung von Zunge, Rachen und/ oder Kehlkopf. Liegt eine derartige Verlaufsform vor, müssen sofort 0,3 bis 0,5 mg Epinephrin subkutan bzw. 0,1 mg Epinephrin (Verdünnungsanweisung beachten) <u>langsam</u> intravenös unter EKG- und Blutdruckkontrolle gegeben werden, im Anschluss daran Glukokortikoidgabe. Ferner wird die intravenöse Gabe von Antihistaminika und H<sub>2</sub>-Rezeptor-Antagonisten empfohlen. Zusätzlich zur Epinephrin-Anwendung kann bei bekanntem C<sub>1</sub>-Inaktivator-Mangel die Gabe von C<sub>1</sub>-Inaktivator erwogen werden.</i> </p> <p> <i>Bei Auftreten von Gelbsucht (Ikterus) oder bei einem deutlichen Anstieg der Leberenzyme ist die Therapie mit dem ACE-Hemmer abzubrechen.</i> </p> <p> <b>Andere mögliche Nebenwirkungen</b> </p> <p>Bei den Häufigkeitsangaben zu Nebenwirkungen werden folgende Kategorien zugrunde gelegt:</p> <table> <tbody> <tr> <td> <p>Sehr häufig: kann mehr als 1 von 10 Behandelten betreffen</p> </td> </tr> <tr> <td> <p>Häufig: kann bis zu 1 von 10 Behandelten betreffen</p> </td> </tr> <tr> <td> <p>Gelegentlich: kann bis zu 1 von 100 Behandelten betreffen</p> </td> </tr> <tr> <td> <p>Selten: kann bis zu 1 von 1.000 Behandelten betreffen</p> </td> </tr> <tr> <td> <p>Sehr selten: kann bis zu 1 von 10.000 Behandelten betreffen</p> </td> </tr> <tr> <td> <p>Nicht bekannt: Häufigkeit auf Grundlage der verfügbaren Daten nicht abschätzbar</p> </td> </tr> </tbody> </table> <p> <u>Allgemeine Erkrankungen und Beschwerden am Verabreichungsort</u> </p> <p>Häufig: Schmerzen im Brustkorb, Erschöpfung, Schwächegefühl</p> <p>Gelegentlich: Fieber, Wasseransammlungen im Gewebe</p> <p> <u>Erkrankungen des Immunsystems</u> </p> <p>Nicht bekannt: Überempfindlichkeitsreaktionen</p> <p> <u>Herzerkrankungen</u> </p> <p>Gelegentlich:<i> </i>Angina pectoris, Herzklopfen, erhöhte Herzschlagfolge, Wasseransammlungen im Gewebe, Herzinfarkt</p> <p>Sehr selten: Herzrhythmusstörungen, Schlaganfall</p> <p> <u>Gefäßerkrankungen</u> </p> <p>Häufig: Insbesondere zu Beginn der Accupro-10-Therapie sowie bei Patienten mit Salz- und/ oder Flüssigkeitsmangel (z. B. bei Erbrechen, Durchfall, Vorbehandlung mit harntreibenden Arzneimitteln), Herzleistungsschwäche oder schwerem Bluthochdruck, aber auch bei Erhöhung der Dosierung von Accupro 10 und/ oder Diuretika kann eine übermäßige Blutdrucksenkung mit Beschwerden wie Schwindel, Schwächegefühl, Sehstörungen, gelegentlich auch mit Bewusstseinsverlust auftreten.</p> <p>Gelegentlich: Erweiterung von Blutgefäßen, kurzfristige Mangeldurchblutung des Gehirns</p> <p>Nicht bekannt: Schwindel beim Aufstehen vom Sitzen oder Liegen</p> <p> <u>Erkrankungen des Gastrointestinaltrakts (Verdauungssystems)</u> </p> <p>Häufig: Übelkeit, Erbrechen, Durchfall, (Ober-)Bauchschmerzen, Sodbrennen, Entzündung des Rachenraums, Verdauungsstörungen</p> <p>Gelegentlich: Mundtrockenheit, trockener Hals, Blähungen, Bauchspeicheldrüsenentzündung (in einigen Fällen mit tödlichem Ausgang), Verstopfung, Appetitlosigkeit</p> <p>Selten: Geschmacksveränderungen, entzündliche Veränderung der Zungenschleimhaut</p> <p>Sehr selten:<i> </i>Darmverschluss, Schwellungen im Darmkanal</p> <p> <u>Erkrankungen des Blutes und des Lymphsystems</u> </p> <p>Gelegentlich: Veränderung der Blutplättchenzahl</p> <p>Nicht bekannt: krankhafte Verringerung oder Veränderung der Blutzellenzahl <i>(Neutropenie, hämolytische Anämie, Thrombozytopenie)</i>, vollständiger Verlust bestimmter Blutzellen (<i>Agranulozytose</i>)</p> <p> <u>Psychiatrische Erkrankungen/ Erkrankungen des Nervensystems</u> </p> <p>Häufig: Kopfschmerzen, Benommenheit, Erschöpfung, Schlaflosigkeit, Taubheits- und Kältegefühl an den Gliedmaßen, Müdigkeit, Schwindel</p> <p>Gelegentlich: Depressionen, Nervosität, Schläfrigkeit, Schlafstörungen, Kribbeln, Gleichgewichtsstörungen, Verwirrtheit, vorübergehender Geschmacksverlust</p> <p>Selten: Bewusstseinsverlust</p> <p> <u>Erkrankungen der Haut und des Unterhautzellgewebes</u> </p> <p>Häufig: allergische Hautreaktionen wie Hautausschlag</p> <p>Gelegentlich: Haarausfall, vermehrte Schweißbildung, Blasensucht, Juckreiz, Hautausschlag, Wasseransammlungen in den Lippen, Gesicht und/ oder den Extremitäten (sehr selten mit Beteiligung von Kehlkopf, Rachen und/ oder Zunge), Nesselsucht, Lichtempfindlichkeit</p> <p>Selten: schwerwiegende Hautreaktionen <i>(Erythema multiforme)</i> </p> <p>Sehr selten: schwerwiegende Hautreaktionen (wie psoriasiforme Hautveränderungen), Gesichtsrötung, Schwitzen, Nagelablösung, Zunahme der Gefäßkrämpfe bei Raynaud-Krankheit</p> <p>Nicht bekannt: schwerwiegende Hautreaktionen <i>(Stevens-Johnson-Syndrom, exfoliative Dermatitis, epidermale Nekrolyse)</i> </p> <p> <u>Erkrankungen der Nieren und Harnwege</u> </p> <p>Häufig: Nierenfunktionsstörungen</p> <p>Gelegentlich: Harnwegsinfektionen, vermehrte Eiweißausscheidung im Urin (teilweise mit gleichzeitiger Verschlechterung der Nierenfunktion)</p> <p>Sehr selten: akutes Nierenversagen</p> <p> <u>Erkrankungen der Geschlechtsorgane und der Brustdrüse</u> </p> <p>Gelegentlich: Impotenz</p> <p>Selten: erektile Dysfunktion</p> <p> <u>Augenerkrankungen</u> </p> <p>Gelegentlich: Schwachsichtigkeit</p> <p>Sehr selten: verschwommenes Sehen</p> <p> <u>Erkrankungen des Ohrs und des Labyrinths</u> </p> <p>Gelegentlich: Ohrgeräusche (<i>Tinnitus</i>), Schwindel</p> <p> <u>Skelettmuskulatur-, Bindegewebs- und Knochenerkrankungen</u> </p> <p>Häufig: Rückenschmerzen, Muskelschmerzen</p> <p> <u>Erkrankungen der Atemwege, des Brustraums und Mediastinums</u> </p> <p>Häufig: Husten, trockener Reizhusten, Atemnot, Schnupfen</p> <p>Gelegentlich: Nasennebenhöhlenentzündung, obere Atemwegsinfektionen, Entzündung der Bronchien, Lungenentzündung</p> <p>Selten: Durst</p> <p>Nicht bekannt: krampfartige Verengung der Bronchien mit daraus folgender Atemnot</p> <p>In Einzelfällen kam es bei Wasseransammlung im Gesichtsbereich zur Verlegung der Atemwege mit tödlichem Ausgang.</p> <p> <u>Leber- und Gallenerkrankungen</u> </p> <p>Gelegentlich: Leberentzündung</p> <p>Sehr selten: Gelbsucht durch Gallestau oder Leberfunktionsstörungen</p> <p> <u>Untersuchungen</u> </p> <p>Häufig<i>:</i> bestimmte Blutbildveränderungen (<i>Abfall von Hämoglobinkonzentration, Hämatokrit, Leukozytenzahl, Thrombozytenzahl sowie, insbesondere bei Patienten mit Nierenfunktionsstörungen, Anstieg der Serumkonzentrationen von Harnstoff oder Kreatinin [bei Begleittherapie mit Diuretika häufiger als unter Monotherapie mit Quinapril; häufig reversibel bei fortgesetzter Therapie], Kalium, Abfall der Natriumkonzentration im Serum</i>)</p> <p>Gelegentlich: bestimmte Blutbildveränderungen <i>(Insbesondere bei Patienten mit eingeschränkter Nierenfunktion, Kollagenkrankheiten [Kollagenosen] oder gleichzeitiger Therapie mit Allopurinol, Procainamid oder bestimmten Arzneimitteln, die die Abwehrreaktionen unterdrücken, kann es zu Anämie, Eosinophilie, selten sogar zu Panzytopenie kommen.)</i> </p> <p>Sehr selten: bestimmte Blutbildveränderungen <i>(Hämolyse, Erhöhung der Bilirubin- und Leberenzymkonzentrationen)</i> </p> <p>Nicht bekannt: bestimmte Blutbildveränderungen <i>(hämolytische Anämie im Zusammenhang mit G-6-PDH-Mangel)</i> </p> <p> <i>Bei Patienten mit Diabetes mellitus wurde ein Anstieg des Serumkaliums beobachtet. Im Urin kann eine vermehrte Eiweißausscheidung auftreten.</i> </p> <p> <u>Stoffwechsel- und Ernährungsstörungen</u> </p> <p>Häufig: erhöhte Kaliumkonzentrationen im Blut</p> <p> <i> <u>Hinweise:</u> </i> </p> <p> <i>Die o. g. Laborwerte sollen vor und regelmäßig während der Behandlung mit Accupro 10 kontrolliert werden.</i> </p> <p> <i>Sollten im Verlauf einer Accupro-10-Therapie Symptome wie Fieber, Lymphknotenschwellungen und/ oder Halsentzündungen auftreten, muss vom behandelnden Arzt umgehend das weiße Blutbild untersucht werden.</i> </p> <p> <b>Meldung von Nebenwirkungen</b> </p> <p>Wenn Sie Nebenwirkungen bemerken, wenden Sie sich an Ihren Arzt, Apotheker oder das medizinische Fachpersonal. Dies gilt auch für Nebenwirkungen, die nicht in dieser Packungsbeilage angegeben sind. Sie können Nebenwirkungen auch direkt dem Bundesinstitut für Arzneimittel und Medizinprodukte, Abt. Pharmakovigilanz, Kurt-Georg-Kiesinger-Allee 3, D-53175 Bonn, Website: www.bfarm.de anzeigen. Indem Sie Nebenwirkungen melden, können Sie dazu beitragen, dass mehr Informationen über die Sicherheit dieses Arzneimittels zur Verfügung gestellt werden.</p> ');
 INSERT INTO packaging_section (id, state, iddrug, idpackaging_topic, text) VALUES (6,0,1,7,'<h4>Wie ist Accupro 10 aufzubewahren?</h4> <p>Bewahren Sie dieses Arzneimittel für Kinder unzugänglich auf.</p> <p>Sie dürfen dieses Arzneimittel nach dem auf dem Umkarton bzw. dem Behältnis nach „Verwendbar bis“ angegebenen Verfalldatum nicht mehr verwenden. Das Verfalldatum bezieht sich auf den letzten Tag des angegebenen Monats.</p> <p>Entsorgen Sie Arzneimittel nicht im Abwasser oder Haushaltsabfall. Fragen Sie Ihren Apotheker, wie das Arzneimittel zu entsorgen ist, wenn Sie es nicht mehr verwenden. Sie tragen damit zum Schutz der Umwelt bei.</p> <p> <b>Aufbewahrungsbedingungen</b> </p> <p>Nicht über 25 ºC aufbewahren.</p>');
-INSERT INTO packaging_section (id, state, iddrug, idpackaging_topic, text) VALUES (7,0,1,3,'<h4>Was sollten Sie vor der Einnahme von Accupro 10 beachten?</h4> <p> <b>2.1 Accupro 10 darf <u>nicht eingenommen</u> werden:</b> <i>(Gegenanzeigen)</i> </p> <ul> <li> <p>wenn Sie allergisch (überempfindlich) gegen Quinaprilhydrochlorid oder einen der in Abschnitt 6 genannten sonstigen Bestandteile dieses Arzneimittels sind</p> </li> <li> <p>wenn Sie zu Gewebeschwellung neigen <i>(angioneurotisches Ödem oder sonstiges Angioödem, auch infolge einer früheren ACE-Hemmer-Therapie)</i> </p> </li> <li> <p>wenn Sie eine Nierenarterienverengung haben <i>(beidseitig bzw. einseitig bei Einzelniere)</i> </p> </li> <li> <p>wenn bei Ihnen eine Nierentransplantation durchgeführt wurde</p> </li> <li> <p>wenn Sie Veränderungen an der linken Herzkammer <i>(Aorten- oder Mitralklappenstenose)</i> bzw. andere Ausflussbehinderungen der linken Herzkammer haben <i>(z. B. hypertrophe Kardiomyopathie)</i> </p> </li> <li> <p>wenn bei Ihnen durch eine Überfunktion der Nebenniere das Hormon Aldosteron im Blut erhöht ist <i>(primärer Hyperaldosteronismus)</i> </p> </li> <li> <p>wenn Sie Diabetes mellitus oder eine eingeschränkte Nierenfunktion haben und mit einem blutdrucksenkenden Arzneimittel, das Aliskiren enthält, behandelt werden</p> </li> <li> <p>wenn Sie schwanger sind <i>(vorheriger Ausschluss sowie Verhütung des Eintritts einer Schwangerschaft)</i> </p> </li> <li> <p>wenn Sie stillen (abstillen!)</p> </li> </ul> <p>Sprechen Sie mit Ihrem Arzt, wenn einer der oben aufgeführten Punkte auf Sie zutrifft, da Sie dann Accupro 10 nicht einnehmen dürfen.</p> <p> <u>Hinweis für Dialysepatienten</u> </p> <p>Während der Behandlung mit Accupro 10 darf keine Blutwäsche <i>(Dialyse oder Hämofiltration)</i> mit speziellen Membranen <i>(Poly[acrylonitril,natrium-2-methylallylsulfonat]-high-flux-Membranen, z. B. „AN 69“)</i> erfolgen, da im Rahmen einer Dialysebehandlung oder Hämofiltration die Gefahr besteht, dass Überempfindlichkeitsreaktionen <i>(anaphylaktoide Reaktionen)</i> bis hin zum lebensbedrohlichen Schock auftreten können.</p> <p>Im Falle einer notfallmäßigen Dialyse oder Hämofiltration muss deshalb vorher auf ein anderes Arzneimittel gegen Bluthochdruck <i>(Hypertonie)</i> bzw. Herzleistungsschwäche <i>(Herzinsuffizienz)</i>, das kein ACE-Hemmer sein darf, umgestellt oder eine andere Dialysemembran verwendet werden.</p> <p>Teilen Sie Ihren behandelnden Ärzten mit, dass Sie mit Accupro 10 behandelt werden bzw. Dialyse benötigen, damit die Ärzte dies bei der Behandlung berücksichtigen können.</p> <p> <i> <u>Patienten mit einer LDL-Apherese-Behandlung</u> </i> </p> <p> <i>Während einer LDL(low-density lipoprotein)-Apherese (bei schwerer Hypercholesterinämie) mit Dextransulfat können unter der Anwendung eines ACE-Hemmers lebensbedrohliche Überempfindlichkeitsreaktionen auftreten.</i> </p> <p> <u>Hinweis für Patienten mit einer Hyposensibilisierungstherapie (gegen Insektengift)</u> </p> <p>Während einer Behandlung zur Schwächung bzw. Aufhebung der allergischen Reaktionsbereitschaft <i>(Hyposensibilisierungstherapie)</i> gegen Insektengifte (z. B. Bienen-, Wespenstich) und gleichzeitiger Anwendung eines ACE-Hemmers können z. T. lebensbedrohliche Überempfindlichkeitsreaktionen (z. B. Blutdruckabfall, Atemnot, Erbrechen, allergische Hautreaktionen) auftreten.</p> <p> <i>Falls eine LDL-Apherese bzw. Hyposensibilisierungstherapie gegen Insektengifte notwendig ist, ist das Präparat vorübergehend durch andere Arzneimittel zur Senkung des Bluthochdrucks und zur Behandlung der Herzleistungsschwäche zu ersetzen (siehe folgender Abschnitt).</i> </p> <p> <b>2.2 Warnhinweise und Vorsichtsmaßnahmen</b> </p> <p>Bitte sprechen Sie mit Ihrem Arzt oder Apotheker, bevor Sie Accupro 10 einnehmen.</p> <ul> <li> <p>wenn Sie eines der folgenden Arzneimittel zur Behandlung von hohem Blutdruck einnehmen:</p> <ul> <li> <p>einen Angiotensin-II-Rezeptor-Antagonisten (diese werden auch als Sartane bezeichnet – z. B. Valsartan, Telmisartan, Irbesartan), insbesondere wenn Sie Nierenprobleme aufgrund von Diabetes mellitus haben.</p> </li> <li> <p>Aliskiren.</p> </li> </ul> </li> </ul> <p>Ihr Arzt wird gegebenenfalls Ihre Nierenfunktion, Ihren Blutdruck und die Elektrolytwerte (z. B. Kalium) in Ihrem Blut in regelmäßigen Abständen überprüfen.</p> <p>Siehe auch Abschnitt„Accupro 10 darf nicht eingenommen werden“.</p> <p>Da keine ausreichenden Therapieerfahrungen vorliegen, darf Accupro 10 nicht angewendet werden bei:</p> <ul> <li> <p>sehr schweren Nierenfunktionsstörungen <i>(Kreatinin-Clearance &lt; 10 ml/min)</i> </p> </li> <li> <p>Dialysepatienten</p> </li> <li> <p>primärer Lebererkrankung oder Leberfunktionsstörungen</p> </li> </ul> <p>Teilen Sie Ihrem Arzt mit, wenn Sie vermuten schwanger zu sein (<u>oder schwanger werden könnten</u>).</p> <p> <u>Kinder und Jugendliche</u> </p> <p>Aus klinischen Studien liegen derzeit nur begrenzte Erfahrungen vor, sodass keine Dosierungsempfehlungen gemacht werden können.</p> <p> <i> <u>Hinweis</u> </i> </p> <p> <i>Vor Anwendung von Accupro 10 muss die Nierenfunktion überprüft worden sein.</i> </p> <p> <i>Insbesondere zu Therapiebeginn und bei Risikopatienten sollte Accupro 10 nur unter intensiver Überwachung von Blutdruck und/ oder bestimmten Laborwerten angewendet werden.</i> </p> <p> <i>Serumelektrolyte, Serumkreatinin und Blutzucker sowie Blutbild sind engmaschig zu kontrollieren.</i> </p> <p> <i>Accupro 10 darf nur nach sehr kritischer Nutzen-Risiko-Abwägung unter regelmäßiger Kontrolle von bestimmten klinischen Befunden und Laborwerten angewendet werden bei:</i> </p> <ul> <li> <p> <i>schweren Nierenfunktionsstörungen (Kreatinin-Clearance zwischen 10 und 30 ml/min)</i> </p> </li> <li> <p> <i>vermehrter Eiweißausscheidung im Urin (&gt; 1 g/Tag)</i> </p> </li> <li> <p> <i>schweren Elektrolytstörungen</i> </p> </li> <li> <p> <i>gestörter Immunreaktion oder Kollagenosen (z. B. Lupus erythematodes, Sklerodermie)</i> </p> </li> <li> <p> <i>gleichzeitiger Therapie mit Arzneimitteln, die die Abwehrreaktionen unterdrücken (z. B. Kortikoide, Zytostatika, Antimetaboliten), Allopurinol, Procainamid, Lithium, Digitalisglykosiden oder Laxanzien</i> </p> </li> <li> <p> <i>Patienten mit Salz- und/ oder Flüssigkeitsmangel</i> </p> </li> <li> <p> <i>Patienten mit eingeschränkter Nierenfunktion</i> </p> </li> <li> <p> <i>Patienten mit Bluthochdruck</i> </p> </li> <li> <p> <i>Patienten &gt; 65 Jahre (bei Patienten &gt; 65 Jahre sollte die Nierenfunktion überprüft und gegebenenfalls die Dosis reduziert werden)</i> </p> </li> <li> <p> <i>Patienten mit Herzleistungsschwäche (kardiogener Schock)</i> </p> </li> </ul> <p> <i>Bei Patienten mit oder ohne Allergie oder Bronchialasthma in der Krankengeschichte können Überempfindlichkeitsreaktionen auftreten, wie z. B. Hautblutungen (Purpura), Lichtempfindlichkeit, Nesselfieber (Urtikaria), Blutgefäßentzündung (nekrotisierende Angiitis), Atemnot einschließlich Lungenentzündung (Pneumonitis) und Lungenödem, anaphylaktische Reaktionen.</i> </p> <p> <i>Accupro 10 nicht zusammen mit Poly(acrylonitril,natrium-2-methylallylsulfonat)-high-flux-Membranen (z. B. „AN 69“), während einer LDL-Apherese mit Dextransulfat oder während einer Hyposensibilisierungsbehandlung gegen Insektengifte anwenden (siehe auch „Accupro 10 darf nicht eingenommen werden“).</i> </p> <p> <i>Patienten, die zu therapeutischen Zwecken gleichzeitig einen mTOR(mammalian Target of Rapamycin)-Hemmer (z. B. Temsirolimus) oder DPP-4(Dipeptidyl-Peptidase-4)-Hemmer (z. B. Vildagliptin) erhalten, haben möglicherweise ein erhöhtes Risiko für angioneurotische Ödeme. Besondere Vorsicht ist geboten, wenn bei Patienten, die schon einen ACE-Hemmer erhalten, eine Therapie mit einem mTOR-Hemmer oder DPP-4-Hemmer begonnen wird.</i> </p> <p> <i>Bei Patienten mit Herzschwäche kann während der Behandlung der Blutdruck massiv abfallen. Bei diesen Patienten kann die Therapie mit Quinapril zudem eine verminderte Urinausscheidung, einen erhöhten Gehalt an harnpflichtigen Substanzen im Blut, Nierenversagen und/oder den Tod zur Folge haben. Darum müssen diese Patienten sehr engmaschig vom behandelnden Arzt überwacht werden.</i> </p> <p> <b>2.3 Einnahme von Accupro 10 zusammen mit anderen Arzneimitteln</b> <br/>(<i>Wechselwirkungen</i>)</p> <p> <b>Informieren Sie Ihren Arzt oder Apotheker, wenn Sie andere Arzneimittel anwenden, kürzlich andere Arzneimittel angewendet haben oder beabsichtigen, andere Arzneimittel anzuwenden.</b> </p> <p>Bei der Verwendung von Accupro 10 sind Wechselwirkungen mit folgenden Wirkstoffen anderer Arzneimittel möglich (die Wirkstoffbezeichnungen finden Sie auf der Packung und der Packungsbeilage Ihrer Medikamente).</p> <p>Die Wirkung von Accupro 10 wird verstärkt durch:</p> <ul> <li> <p>andere blutdrucksenkende Arzneimittel, insbesondere durch harntreibende Arzneimittel <i>(Diuretika)</i> </p> </li> <li> <p>Schlafmittel, Betäubungsmittel (Information des Narkosearztes bezüglich der Accupro-10-Therapie!). Weiterhin kann es vermehrt zu Schwindelgefühlen beim Aufstehen vom Sitzen oder Liegen kommen</p> </li> <li> <p>Neuroleptika (bei Psychosen), Imipramin (bei Depression)</p> </li> </ul> <p>Die Wirkung von Accupro 10 wird abgeschwächt durch:</p> <ul> <li> <p>Arzneimittel gegen Schmerzen und Entzündungen (z. B. Acetylsalicylsäure, Indometacin, nichtsteroidale Antirheumatika [NSAR] einschließlich COX-2-Hemmer); NSAR können zusammen mit Accupro 10 verstärkt die Nierenfunktion beeinträchtigen und eine additive Zunahme der Serumkaliumkonzentration bewirken.</p> </li> </ul> <p>Arzneimittel, die das Serumkalium erhöhen: Die gleichzeitige Behandlung mit kaliumsparenden harntreibenden Arzneimitteln (z. B. Spironolacton, Amilorid, Triamteren), Kaliumsalzen oder anderen Arzneimitteln, die den Serumkaliumspiegel erhöhen, sollte mit Vorsicht erfolgen und die Serumkaliumkonzentration engmaschig überwacht werden.</p> <p> <i>Die gleichzeitige Verabreichung von Accupro 10 mit Arzneimitteln, die das Antibiotikum Trimethoprim enthalten, sollte bei älteren Patienten und bei Patienten mit eingeschränkter Nierenfunktion mit Vorsicht erfolgen, da es zu einer Erhöhung des Kaliumwertes im Blut kommen kann. Der Serumkaliumspiegel sollte daher regelmäßig kontrolliert werden!</i> </p> <p>Lithium (bei Depression): Erhöhung der Serumlithiumkonzentration (regelmäßige Kontrolle), somit Verstärkung der herz- und nervenschädigenden Wirkung von Lithium</p> <p>Allopurinol (bei erhöhtem Harnsäurespiegel im Blut): Abnahme der weißen Blutzellen <i>(Leukopenie)</i> </p> <p>Arzneimittel, die die Abwehrreaktion unterdrücken (Zytostatika, Immunsuppressiva, systemische Kortikoide): Abnahme der weißen Blutzellen <i>(Leukopenie)</i> </p> <p>Procainamid (bei Herzrhythmusstörungen): Abnahme der weißen Blutzellen <i>(Leukopenie)</i> </p> <p>Blutzuckersenkende Arzneimittel zum Einnehmen (z. B. Sulfonylharnstoffe/Biguanide), Insulin: Verstärkung des blutzuckersenkenden Effekts durch Accupro 10. Während des 1. Behandlungsmonats mit Accupro 10 sollten Sie daher Ihren Blutzuckerspiegel genau kontrollieren.</p> <p>Tetracycline (Antibiotika) und andere Wirkstoffe, die mit Magnesium reagieren: verminderte Aufnahme in den Körper</p> <p>Goldhaltige Arzneimittel (z. B. bei Rheuma): Hier sind z. B. Erweiterungen der Blutgefäße <i>(nitroide Reaktionen) </i>möglich.</p> <p>Bestimmte Schlaf- oder Beruhigungsmittel (Barbiturate): Es kann vermehrt zu Schwindelgefühlen beim Aufstehen vom Sitzen oder Liegen kommen.</p> <p>Arzneimittel gegen Übersäuerung des Magens (Antazida): verminderte Aufnahme von Quinapril in den Körper.</p> <p>mTOR-Hemmer (z. B. Temsirolimus) oder DPP-4-Hemmer (z. B. Vildagliptin): eventuell erhöhtes Risiko für angioneurotische Ödeme. Besondere Vorsicht ist geboten, wenn Sie schon einen ACE-Hemmer (z. B. Accupro 10) erhalten und eine Therapie mit einem mTOR-Hemmer oder DPP-4-Hemmer begonnen wird.</p> <p>Ihr Arzt muss unter Umständen Ihre Dosierung anpassen und/oder sonstige Vorsichtsmaßnahmen treffen:</p> <p>wenn Sie einen Angiotensin-II-Rezeptor-Antagonisten oder Aliskiren einnehmen (siehe auch Abschnitte „Accupro 10 darf nicht eingenommen werden“<i> </i>und<i> </i>„Warnhinweise und Vorsichtsmaßnahmen“).</p> <p> <b>Einnahme von Accupro 10 zusammen mit Nahrungsmitteln, Getränken und Alkohol</b> </p> <ul> <li> <p>Kochsalz kann die blutdrucksenkende Wirkung von Accupro 10 verringern. Sprechen Sie mit Ihrem Arzt, ob eine kochsalzarme Kost für Sie notwendig ist.</p> </li> <li> <p>Meiden Sie Alkohol, da Accupro 10 die Wirkung von Alkohol verstärkt und es vermehrt zu Schwindelgefühlen beim Aufstehen vom Sitzen oder Liegen kommen kann.</p> </li> </ul> <p> <b>2.4 Schwangerschaft, Stillzeit und Zeugungsfähigkeit</b> </p> <p>Wenn Sie schwanger sind oder stillen oder wenn Sie vermuten, schwanger zu sein, oder beabsichtigen, schwanger zu werden, fragen Sie vor der Einnahme dieses Arzneimittels Ihren Arzt oder Apotheker um Rat.</p> <p> <u>Schwangerschaft</u> </p> <p>Teilen Sie Ihrem Arzt mit, wenn Sie vermuten, schwanger zu sein (<u>oder schwanger werden könnten</u>). Ihr Arzt wird Ihnen empfehlen, Accupro 10 vor einer Schwangerschaft bzw. sobald Sie wissen, dass Sie schwanger sind, abzusetzen, und er wird Ihnen ein anderes Arzneimittel empfehlen, denn die Einnahme von Accupro 10 kann zu schweren Schädigungen Ihres ungeborenen Kindes führen<i>.</i> </p> <p> <u>Stillzeit</u> </p> <p>Teilen Sie Ihrem Arzt mit, wenn Sie stillen oder mit dem Stillen beginnen wollen. Das Stillen von Neugeborenen (in den ersten Wochen nach der Geburt) und besonders von Frühgeburten wird nicht empfohlen, wenn Sie Accupro 10 einnehmen. </p> <p> <b>2.5 Verkehrstüchtigkeit und Fähigkeit zum Bedienen von Maschinen</b> </p> <p>Die Fähigkeit zur aktiven Teilnahme am Straßenverkehr oder zum Bedienen von Maschinen kann beeinträchtigt werden. Dies gilt in verstärktem Maße bei Behandlungsbeginn, Dosiserhöhung und beim Wechsel des Arzneimittels sowie im Zusammenwirken mit Alkohol.</p> <p> <b>Dieses Arzneimittel enthält Milchzucker (Lactose)</b> </p> <p>Bitte nehmen Sie Accupro 10 daher erst nach Rücksprache mit Ihrem Arzt ein, wenn Ihnen bekannt ist, dass Sie an einer Unverträglichkeit gegenüber bestimmten Zuckern leiden.</p>');
+INSERT INTO packaging_section (id, state, iddrug, idpackaging_topic, text) VALUES (7,0,1,3,'<h4>Was sollten Sie vor der Einnahme von Accupro 10 beachten?</h4> <p> <b>2.1 Accupro 10 darf <u>nicht eingenommen</u> werden:</b> <i>(Gegenanzeigen)</i> </p> <ul> <li> <p>wenn Sie allergisch (überempfindlich) gegen Quinaprilhydrochlorid oder einen der in Abschnitt 6 genannten sonstigen Bestandteile dieses Arzneimittels sind</p> </li> <li> <p>wenn Sie zu Gewebeschwellung neigen <i>(angioneurotisches Ödem oder sonstiges Angioödem, auch infolge einer früheren ACE-Hemmer-Therapie)</i> </p> </li> <li> <p>wenn Sie eine Nierenarterienverengung haben <i>(beidseitig bzw. einseitig bei Einzelniere)</i> </p> </li> <li> <p>wenn bei Ihnen eine Nierentransplantation durchgeführt wurde</p> </li> <li> <p>wenn Sie Veränderungen an der linken Herzkammer <i>(Aorten- oder Mitralklappenstenose)</i> bzw. andere Ausflussbehinderungen der linken Herzkammer haben <i>(z. B. hypertrophe Kardiomyopathie)</i> </p> </li> <li> <p>wenn bei Ihnen durch eine Überfunktion der Nebenniere das Hormon Aldosteron im Blut erhöht ist <i>(primärer Hyperaldosteronismus)</i> </p> </li> <li> <p>wenn Sie Diabetes mellitus oder eine eingeschränkte Nierenfunktion haben und mit einem blutdrucksenkenden Arzneimittel, das Aliskiren enthält, behandelt werden</p> </li> <li> <p>wenn Sie schwanger sind <i>(vorheriger Ausschluss sowie Verhütung des Eintritts einer Schwangerschaft)</i> </p> </li> <li> <p>wenn Sie stillen (abstillen!)</p> </li> </ul> <p>Sprechen Sie mit Ihrem Arzt, wenn einer der oben aufgeführten Punkte auf Sie zutrifft, da Sie dann Accupro 10 nicht einnehmen dürfen.</p> <p> <u>Hinweis für Dialysepatienten</u> </p> <p>Während der Behandlung mit Accupro 10 darf keine Blutwäsche <i>(Dialyse oder Hämofiltration)</i> mit speziellen Membranen <i>(Poly[acrylonitril,natrium-2-methylallylsulfonat]-high-flux-Membranen, z. B. „AN 69“)</i> erfolgen, da im Rahmen einer Dialysebehandlung oder Hämofiltration die Gefahr besteht, dass Überempfindlichkeitsreaktionen <i>(anaphylaktoide Reaktionen)</i> bis hin zum lebensbedrohlichen Schock auftreten können.</p> <p>Im Falle einer notfallmäßigen Dialyse oder Hämofiltration muss deshalb vorher auf ein anderes Arzneimittel gegen Bluthochdruck <i>(Hypertonie)</i> bzw. Herzleistungsschwäche <i>(Herzinsuffizienz)</i>, das kein ACE-Hemmer sein darf, umgestellt oder eine andere Dialysemembran verwendet werden.</p> <p>Teilen Sie Ihren behandelnden Ärzten mit, dass Sie mit Accupro 10 behandelt werden bzw. Dialyse benötigen, damit die Ärzte dies bei der Behandlung berücksichtigen können.</p> <p> <i> <u>Patienten mit einer LDL-Apherese-Behandlung</u> </i> </p> <p> <i>Während einer LDL(low-density lipoprotein)-Apherese (bei schwerer Hypercholesterinämie) mit Dextransulfat können unter der Anwendung eines ACE-Hemmers lebensbedrohliche Überempfindlichkeitsreaktionen auftreten.</i> </p> <p> <u>Hinweis für Patienten mit einer Hyposensibilisierungstherapie (gegen Insektengift)</u> </p> <p>Während einer Behandlung zur Schwächung bzw. Aufhebung der allergischen Reaktionsbereitschaft <i>(Hyposensibilisierungstherapie)</i> gegen Insektengifte (z. B. Bienen-, Wespenstich) und gleichzeitiger Anwendung eines ACE-Hemmers können z. T. lebensbedrohliche Überempfindlichkeitsreaktionen (z. B. Blutdruckabfall, Atemnot, Erbrechen, allergische Hautreaktionen) auftreten.</p> <p> <i>Falls eine LDL-Apherese bzw. Hyposensibilisierungstherapie gegen Insektengifte notwendig ist, ist das Präparat vorübergehend durch andere Arzneimittel zur Senkung des Bluthochdrucks und zur Behandlung der Herzleistungsschwäche zu ersetzen (siehe folgender Abschnitt).</i> </p> <p> <b>2.2 Warnhinweise und Vorsichtsmaßnahmen</b> </p> <p>Bitte sprechen Sie mit Ihrem Arzt oder Apotheker, bevor Sie Accupro 10 einnehmen.</p> <ul> <li> <p>wenn Sie eines der folgenden Arzneimittel zur Behandlung von hohem Blutdruck einnehmen:</p> <ul> <li> <p>einen Angiotensin-II-Rezeptor-Antagonisten (diese werden auch als Sartane bezeichnet – z. B. Valsartan, Telmisartan, Irbesartan), insbesondere wenn Sie Nierenprobleme aufgrund von Diabetes mellitus haben.</p> </li> <li> <p>Aliskiren.</p> </li> </ul> </li> </ul> <p>Ihr Arzt wird gegebenenfalls Ihre Nierenfunktion, Ihren Blutdruck und die Elektrolytwerte (z. B. Kalium) in Ihrem Blut in regelmäßigen Abständen überprüfen.</p> <p>Siehe auch Abschnitt„Accupro 10 darf nicht eingenommen werden“.</p> <p>Da keine ausreichenden Therapieerfahrungen vorliegen, darf Accupro 10 nicht angewendet werden bei:</p> <ul> <li> <p>sehr schweren Nierenfunktionsstörungen <i>(Kreatinin-Clearance &lt; 10 ml/min)</i> </p> </li> <li> <p>Dialysepatienten</p> </li> <li> <p>primärer Lebererkrankung oder Leberfunktionsstörungen</p> </li> </ul> <p>Teilen Sie Ihrem Arzt mit, wenn Sie vermuten schwanger zu sein (<u>oder schwanger werden könnten</u>).</p> <p> <u>Kinder und Jugendliche</u> </p> <p>Aus klinischen Studien liegen derzeit nur begrenzte Erfahrungen vor, sodass keine Dosierungsempfehlungen gemacht werden können.</p> <p> <i> <u>Hinweis</u> </i> </p> <p> <i>Vor Anwendung von Accupro 10 muss die Nierenfunktion überprüft worden sein.</i> </p> <p> <i>Insbesondere zu Therapiebeginn und bei Risikopatienten sollte Accupro 10 nur unter intensiver Überwachung von Blutdruck und/ oder bestimmten Laborwerten angewendet werden.</i> </p> <p> <i>Serumelektrolyte, Serumkreatinin und Blutzucker sowie Blutbild sind engmaschig zu kontrollieren.</i> </p> <p> <i>Accupro 10 darf nur nach sehr kritischer Nutzen-Risiko-Abwägung unter regelmäßiger Kontrolle von bestimmten klinischen Befunden und Laborwerten angewendet werden bei:</i> </p> <ul> <li> <p> <i>schweren Nierenfunktionsstörungen (Kreatinin-Clearance zwischen 10 und 30 ml/min)</i> </p> </li> <li> <p> <i>vermehrter Eiweißausscheidung im Urin (&gt; 1 g/Tag)</i> </p> </li> <li> <p> <i>schweren Elektrolytstörungen</i> </p> </li> <li> <p> <i>gestörter Immunreaktion oder Kollagenosen (z. B. Lupus erythematodes, Sklerodermie)</i> </p> </li> <li> <p> <i>gleichzeitiger Therapie mit Arzneimitteln, die die Abwehrreaktionen unterdrücken (z. B. Kortikoide, Zytostatika, Antimetaboliten), Allopurinol, Procainamid, Lithium, Digitalisglykoadversen oder Laxanzien</i> </p> </li> <li> <p> <i>Patienten mit Salz- und/ oder Flüssigkeitsmangel</i> </p> </li> <li> <p> <i>Patienten mit eingeschränkter Nierenfunktion</i> </p> </li> <li> <p> <i>Patienten mit Bluthochdruck</i> </p> </li> <li> <p> <i>Patienten &gt; 65 Jahre (bei Patienten &gt; 65 Jahre sollte die Nierenfunktion überprüft und gegebenenfalls die Dosis reduziert werden)</i> </p> </li> <li> <p> <i>Patienten mit Herzleistungsschwäche (kardiogener Schock)</i> </p> </li> </ul> <p> <i>Bei Patienten mit oder ohne Allergie oder Bronchialasthma in der Krankengeschichte können Überempfindlichkeitsreaktionen auftreten, wie z. B. Hautblutungen (Purpura), Lichtempfindlichkeit, Nesselfieber (Urtikaria), Blutgefäßentzündung (nekrotisierende Angiitis), Atemnot einschließlich Lungenentzündung (Pneumonitis) und Lungenödem, anaphylaktische Reaktionen.</i> </p> <p> <i>Accupro 10 nicht zusammen mit Poly(acrylonitril,natrium-2-methylallylsulfonat)-high-flux-Membranen (z. B. „AN 69“), während einer LDL-Apherese mit Dextransulfat oder während einer Hyposensibilisierungsbehandlung gegen Insektengifte anwenden (siehe auch „Accupro 10 darf nicht eingenommen werden“).</i> </p> <p> <i>Patienten, die zu therapeutischen Zwecken gleichzeitig einen mTOR(mammalian Target of Rapamycin)-Hemmer (z. B. Temsirolimus) oder DPP-4(Dipeptidyl-Peptidase-4)-Hemmer (z. B. Vildagliptin) erhalten, haben möglicherweise ein erhöhtes Risiko für angioneurotische Ödeme. Besondere Vorsicht ist geboten, wenn bei Patienten, die schon einen ACE-Hemmer erhalten, eine Therapie mit einem mTOR-Hemmer oder DPP-4-Hemmer begonnen wird.</i> </p> <p> <i>Bei Patienten mit Herzschwäche kann während der Behandlung der Blutdruck massiv abfallen. Bei diesen Patienten kann die Therapie mit Quinapril zudem eine verminderte Urinausscheidung, einen erhöhten Gehalt an harnpflichtigen Substanzen im Blut, Nierenversagen und/oder den Tod zur Folge haben. Darum müssen diese Patienten sehr engmaschig vom behandelnden Arzt überwacht werden.</i> </p> <p> <b>2.3 Einnahme von Accupro 10 zusammen mit anderen Arzneimitteln</b> <br/>(<i>Wechselwirkungen</i>)</p> <p> <b>Informieren Sie Ihren Arzt oder Apotheker, wenn Sie andere Arzneimittel anwenden, kürzlich andere Arzneimittel angewendet haben oder beabsichtigen, andere Arzneimittel anzuwenden.</b> </p> <p>Bei der Verwendung von Accupro 10 sind Wechselwirkungen mit folgenden Wirkstoffen anderer Arzneimittel möglich (die Wirkstoffbezeichnungen finden Sie auf der Packung und der Packungsbeilage Ihrer Medikamente).</p> <p>Die Wirkung von Accupro 10 wird verstärkt durch:</p> <ul> <li> <p>andere blutdrucksenkende Arzneimittel, insbesondere durch harntreibende Arzneimittel <i>(Diuretika)</i> </p> </li> <li> <p>Schlafmittel, Betäubungsmittel (Information des Narkosearztes bezüglich der Accupro-10-Therapie!). Weiterhin kann es vermehrt zu Schwindelgefühlen beim Aufstehen vom Sitzen oder Liegen kommen</p> </li> <li> <p>Neuroleptika (bei Psychosen), Imipramin (bei Depression)</p> </li> </ul> <p>Die Wirkung von Accupro 10 wird abgeschwächt durch:</p> <ul> <li> <p>Arzneimittel gegen Schmerzen und Entzündungen (z. B. Acetylsalicylsäure, Indometacin, nichtsteroidale Antirheumatika [NSAR] einschließlich COX-2-Hemmer); NSAR können zusammen mit Accupro 10 verstärkt die Nierenfunktion beeinträchtigen und eine additive Zunahme der Serumkaliumkonzentration bewirken.</p> </li> </ul> <p>Arzneimittel, die das Serumkalium erhöhen: Die gleichzeitige Behandlung mit kaliumsparenden harntreibenden Arzneimitteln (z. B. Spironolacton, Amilorid, Triamteren), Kaliumsalzen oder anderen Arzneimitteln, die den Serumkaliumspiegel erhöhen, sollte mit Vorsicht erfolgen und die Serumkaliumkonzentration engmaschig überwacht werden.</p> <p> <i>Die gleichzeitige Verabreichung von Accupro 10 mit Arzneimitteln, die das Antibiotikum Trimethoprim enthalten, sollte bei älteren Patienten und bei Patienten mit eingeschränkter Nierenfunktion mit Vorsicht erfolgen, da es zu einer Erhöhung des Kaliumwertes im Blut kommen kann. Der Serumkaliumspiegel sollte daher regelmäßig kontrolliert werden!</i> </p> <p>Lithium (bei Depression): Erhöhung der Serumlithiumkonzentration (regelmäßige Kontrolle), somit Verstärkung der herz- und nervenschädigenden Wirkung von Lithium</p> <p>Allopurinol (bei erhöhtem Harnsäurespiegel im Blut): Abnahme der weißen Blutzellen <i>(Leukopenie)</i> </p> <p>Arzneimittel, die die Abwehrreaktion unterdrücken (Zytostatika, Immunsuppressiva, systemische Kortikoide): Abnahme der weißen Blutzellen <i>(Leukopenie)</i> </p> <p>Procainamid (bei Herzrhythmusstörungen): Abnahme der weißen Blutzellen <i>(Leukopenie)</i> </p> <p>Blutzuckersenkende Arzneimittel zum Einnehmen (z. B. Sulfonylharnstoffe/Biguanide), Insulin: Verstärkung des blutzuckersenkenden Effekts durch Accupro 10. Während des 1. Behandlungsmonats mit Accupro 10 sollten Sie daher Ihren Blutzuckerspiegel genau kontrollieren.</p> <p>Tetracycline (Antibiotika) und andere Wirkstoffe, die mit Magnesium reagieren: verminderte Aufnahme in den Körper</p> <p>Goldhaltige Arzneimittel (z. B. bei Rheuma): Hier sind z. B. Erweiterungen der Blutgefäße <i>(nitroide Reaktionen) </i>möglich.</p> <p>Bestimmte Schlaf- oder Beruhigungsmittel (Barbiturate): Es kann vermehrt zu Schwindelgefühlen beim Aufstehen vom Sitzen oder Liegen kommen.</p> <p>Arzneimittel gegen Übersäuerung des Magens (Antazida): verminderte Aufnahme von Quinapril in den Körper.</p> <p>mTOR-Hemmer (z. B. Temsirolimus) oder DPP-4-Hemmer (z. B. Vildagliptin): eventuell erhöhtes Risiko für angioneurotische Ödeme. Besondere Vorsicht ist geboten, wenn Sie schon einen ACE-Hemmer (z. B. Accupro 10) erhalten und eine Therapie mit einem mTOR-Hemmer oder DPP-4-Hemmer begonnen wird.</p> <p>Ihr Arzt muss unter Umständen Ihre Dosierung anpassen und/oder sonstige Vorsichtsmaßnahmen treffen:</p> <p>wenn Sie einen Angiotensin-II-Rezeptor-Antagonisten oder Aliskiren einnehmen (siehe auch Abschnitte „Accupro 10 darf nicht eingenommen werden“<i> </i>und<i> </i>„Warnhinweise und Vorsichtsmaßnahmen“).</p> <p> <b>Einnahme von Accupro 10 zusammen mit Nahrungsmitteln, Getränken und Alkohol</b> </p> <ul> <li> <p>Kochsalz kann die blutdrucksenkende Wirkung von Accupro 10 verringern. Sprechen Sie mit Ihrem Arzt, ob eine kochsalzarme Kost für Sie notwendig ist.</p> </li> <li> <p>Meiden Sie Alkohol, da Accupro 10 die Wirkung von Alkohol verstärkt und es vermehrt zu Schwindelgefühlen beim Aufstehen vom Sitzen oder Liegen kommen kann.</p> </li> </ul> <p> <b>2.4 Schwangerschaft, Stillzeit und Zeugungsfähigkeit</b> </p> <p>Wenn Sie schwanger sind oder stillen oder wenn Sie vermuten, schwanger zu sein, oder beabsichtigen, schwanger zu werden, fragen Sie vor der Einnahme dieses Arzneimittels Ihren Arzt oder Apotheker um Rat.</p> <p> <u>Schwangerschaft</u> </p> <p>Teilen Sie Ihrem Arzt mit, wenn Sie vermuten, schwanger zu sein (<u>oder schwanger werden könnten</u>). Ihr Arzt wird Ihnen empfehlen, Accupro 10 vor einer Schwangerschaft bzw. sobald Sie wissen, dass Sie schwanger sind, abzusetzen, und er wird Ihnen ein anderes Arzneimittel empfehlen, denn die Einnahme von Accupro 10 kann zu schweren Schädigungen Ihres ungeborenen Kindes führen<i>.</i> </p> <p> <u>Stillzeit</u> </p> <p>Teilen Sie Ihrem Arzt mit, wenn Sie stillen oder mit dem Stillen beginnen wollen. Das Stillen von Neugeborenen (in den ersten Wochen nach der Geburt) und besonders von Frühgeburten wird nicht empfohlen, wenn Sie Accupro 10 einnehmen. </p> <p> <b>2.5 Verkehrstüchtigkeit und Fähigkeit zum Bedienen von Maschinen</b> </p> <p>Die Fähigkeit zur aktiven Teilnahme am Straßenverkehr oder zum Bedienen von Maschinen kann beeinträchtigt werden. Dies gilt in verstärktem Maße bei Behandlungsbeginn, Dosiserhöhung und beim Wechsel des Arzneimittels sowie im Zusammenwirken mit Alkohol.</p> <p> <b>Dieses Arzneimittel enthält Milchzucker (Lactose)</b> </p> <p>Bitte nehmen Sie Accupro 10 daher erst nach Rücksprache mit Ihrem Arzt ein, wenn Ihnen bekannt ist, dass Sie an einer Unverträglichkeit gegenüber bestimmten Zuckern leiden.</p>');
 INSERT INTO packaging_section (id, state, iddrug, idpackaging_topic, text) VALUES (8,0,1,9,'Beispieltext');
 
 INSERT INTO packaging_section (id, state, iddrug, idpackaging_topic, text) VALUES (9,0,2,2,'Beispieltext für Allgemeine Hinweise');
@@ -1727,7 +1724,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic)VALUES
             <div class="tab-content">
                 <div class="tab-pane fade in active" name="tab1default" id="tab1default">
                     <div class="row content_header" style="margin-top: 15px;">
-                        <table class="sideffect_table  ">
+                        <table class="adverseffect_table  ">
 
 
                             <tbody>
@@ -1758,7 +1755,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic)VALUES
                 </div>
                 <div class="tab-pane fade" name="tab2default"  id="tab2default">
                     <div class="row content_header" style="margin-top: 15px;">
-                        <table class="sideffect_table ">
+                        <table class="adverseffect_table ">
 
                             <tbody>
                                 <tr>
@@ -1796,7 +1793,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic)VALUES
                 </div>
                 <div class="tab-pane fade" name="tab3default" id="tab3default">
                     <div class="row content_header" style="margin-top: 15px;">
-                        <table class="sideffect_table ">
+                        <table class="adverseffect_table ">
 
                             <tbody>
                                 <tr>
@@ -1864,7 +1861,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic)VALUES
     <div class="row hidden-xs" style="margin-top: 30px;">
         <div class="col-sm-12">
             <h4>Gleichmäßige Aufteilung der Dosen</h4>
-            <table class="sideffect_table">
+            <table class="adverseffect_table">
                 <thead class="text-center">
                     <tr>
                         <th>Anzahl der Einnahmen pro Tag </th>
@@ -1924,7 +1921,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic)VALUES
     <div class="row hidden-sm hidden-lg hidden-md" style="margin-top: 30px;">
         <div class="col-sm-12">
             <h4>Gleichmäßige Aufteilung der Dosen</h4>
-            <table class="sideffect_table">
+            <table class="adverseffect_table">
                 <thead class="text-center">
                     <tr>
                         <th>Anzahl der Einnahmen pro Tag </th>
@@ -2149,7 +2146,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
 
 <div class="row" style="padding:30px 0 30px 0px;">
 
-    <table class="sideffect_table">
+    <table class="adverseffect_table">
         <tr>
             <td style="width: 32%;">
                 <div class="col-sm-1 text-center-xs"> <i class="fas fa-male allg_icon"></i></div>
@@ -2540,7 +2537,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
             <div class="tab-content">
                 <div class="tab-pane fade in active" id="tab1default">
                     <div class="row content_header" style="margin-top: 15px;">
-                        <table class="sideffect_table ">
+                        <table class="adverseffect_table ">
                             <tbody>
                                 <tr>
                                     <td> <b>Dosis</b></td>
@@ -2575,7 +2572,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                 </div>
                 <div class="tab-pane fade" id="tab2default">
                     <div class="row content_header" style="margin-top: 15px;">
-                        <table class="sideffect_table ">
+                        <table class="adverseffect_table ">
                             <tbody>
                                 <tr>
                                     <td> <b>Dosis</b></td>
@@ -2783,7 +2780,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
 </div>
 
 <div class="row" style="padding:30px 0 30px 15px;">
-    <table class="sideffect_table">
+    <table class="adverseffect_table">
         <tr>
             <td style="width: 32%;">
                 <div class="col-sm-12" style="padding-top:5px"> <b>Patienten mit hohem Blutdruck </b> </div>
@@ -3491,7 +3488,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                     <div class="row content_header" style="margin-top: 15px;">
                         <h4>Anfangsdosis</h4>
                         <hr>
-                        <table class="sideffect_table ">
+                        <table class="adverseffect_table ">
 
                             <tbody>
                                 <tr>
@@ -3521,7 +3518,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                     <div class="row content_header">
                         <h4> Leichter Bluthochdruck </h4>
                         <hr>
-                        <table class="sideffect_table ">
+                        <table class="adverseffect_table ">
                             <thead>
                                 <tr>
                                     <th></th>
@@ -3574,7 +3571,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                         <h4> Patienten mit vorausgegangener Therapie mit hoch dosierten harntreibenden Arzneimitteln
                             (Diuretika)</h4>
                         <hr>
-                        <table class="sideffect_table ">
+                        <table class="adverseffect_table ">
 
                             <tbody>
                                 <tr>
@@ -3616,7 +3613,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                     <div class="row content_header">
                         <h4> Erhaltungsdosis</h4>
                         <hr>
-                        <table class="sideffect_table ">
+                        <table class="adverseffect_table ">
 
                             <tbody>
                                 <tr>
@@ -3649,7 +3646,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                     <div class="row content_header" style="margin-top: 15px;">
                         <h4>Anfangsdosis</h4>
                         <hr>
-                        <table class="sideffect_table ">
+                        <table class="adverseffect_table ">
                             <tbody>
                                 <tr>
                                     <td> <b>Dosis</b></td>
@@ -3692,7 +3689,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                         schrittweise über einen Zeitraum von 2-4 Wochen auf die Erhaltungsdosis von 20 mg
                         Enalaprilmaleat
                         täglich gesteigert werden.
-                        <table class="sideffect_table ">
+                        <table class="adverseffect_table ">
                             <tbody>
                                 <tr>
                                     <td> <b>Dosis</b></td>
@@ -3750,7 +3747,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                     Behandlung individuell festlegen. <br>
                     <ul>
                         <li><b>Bei mäßiger Einschränkung der Nierenfunktion</b> </br>
-                            <table class="sideffect_table ">
+                            <table class="adverseffect_table ">
                                 <tbody>
                                     <tr>
                                         <td> <b>Dosis</b></td>
@@ -3766,7 +3763,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                             </table>
                         </li>
                         <li><b> Bei schwerer Nierenfunktionseinschränkung</b> </br>
-                            <table class="sideffect_table ">
+                            <table class="adverseffect_table ">
 
                                 <tbody>
                                     <tr>
@@ -3783,7 +3780,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                             </table>
                         </li>
                         <li><b>Für Dialysepatienten</b> </br>
-                            <table class="sideffect_table ">
+                            <table class="adverseffect_table ">
 
                                 <tbody>
                                     <tr>
@@ -3851,7 +3848,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
     <div class="row hidden-xs" style="margin-top: 30px;">
         <div class="col-sm-12">
             <h4>Gleiche Aufteilung der Dosen</h4>
-            <table class="sideffect_table">
+            <table class="adverseffect_table">
                 <thead class="text-center">
                     <tr>
                         <th>Anzahl der Einnahmen pro Tag </th>
@@ -4258,7 +4255,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                 <div class="col-sm-12 info_notuse bg_orange">
                     <div class="row">
                         <div class="col-xs-10 nopadd">
-                            <b> Einnahme von Herzglykosiden (Arzneimittel zur Behandlung
+                            <b> Einnahme von Herzglykoadversen (Arzneimittel zur Behandlung
                                 von Herzschwäche)</b>
                         </div>
                         <div class="col-xs-2">
@@ -4359,7 +4356,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                 <ul>
                     <li>Beta-Rezeptorenblockern (Mittel zur Blutdrucksenkung)</li>
                     <li>Antidiabetika (Mittel gegen Zuckerkrankheit)</li>
-                    <li>Digitalisglykosiden (Herzglykoside) und Mitteln gegen
+                    <li>Digitalisglykoadversen (Herzglykoadverse) und Mitteln gegen
                         Herzrhythmusstörungen</li>
                     <li>Anästhetika (Narkosemittel)</li>
                     <li>Sympathomimetika (Mittel zur Beeinflussung des
@@ -4376,7 +4373,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                 möglicherweise ausgelöste Hypokaliämie (Senkung des
                 Blutkaliumspiegels) kann bei gleichzeitiger Einnahme von
                 Methylxanthinen (z. B. Theophyllin), Kortikoiden, Diuretika
-                oder Digitalisglykosiden noch verstärkt werden. <br>
+                oder Digitalisglykoadversen noch verstärkt werden. <br>
                 <b>Hinweis:</b><br>
                 Wenn bei Ihnen eine Narkose geplant ist, sollten Sie
                 Salbutamol eventuell 6 Stunden
@@ -4631,7 +4628,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
             <div class="tab-content">
                 <div class="tab-pane fade in active" id="tab1default">
                     <div class="row content_header" style="margin-top: 15px;">
-                        <table class="sideffect_table">
+                        <table class="adverseffect_table">
                             <tbody>
                                 <tr>
                                     <td> <b>Einzeldosis</b></td>
@@ -4681,7 +4678,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
                 </div>
                 <div class="tab-pane fade" id="tab2default">
                     <div class="row content_header" style="margin-top: 15px;">
-                        <table class="sideffect_table ">
+                        <table class="adverseffect_table ">
                             <tbody>
                                 <tr>
                                     <td> <b>Einzeldosis</b></td>

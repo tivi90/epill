@@ -32,7 +32,7 @@ import com.doccuty.epill.drug.Drug;
 import com.doccuty.epill.iteminvocation.ItemInvocation;
 import com.doccuty.epill.model.ActiveSubstance;
 import com.doccuty.epill.packagingsection.PackagingSection;
-import com.doccuty.epill.sideeffectcontent.SideEffectContent;
+import com.doccuty.epill.adverseeffectcontent.AdverseEffectContent;
 import com.doccuty.epill.model.ProductGroup;
 import com.doccuty.epill.model.IndicationGroup;
 import com.doccuty.epill.model.PharmaceuticalForm;
@@ -267,13 +267,13 @@ public class DrugSet extends HashSet<Drug>
     *
     * @return Set of PackagingSection objects reachable via packagingSection
     */
-   public SideEffectContentSet getSideEffectContent()
+   public AdverseEffectContentSet getAdverseEffectContent()
    {
-      SideEffectContentSet result = new SideEffectContentSet();
+      AdverseEffectContentSet result = new AdverseEffectContentSet();
 
       for (Drug obj : this)
       {
-         result.with(obj.getSideEffectContent());
+         result.with(obj.getAdverseEffectContent());
       }
 
       return result;
@@ -286,7 +286,7 @@ public class DrugSet extends HashSet<Drug>
     *
     * @return Set of PackagingSection objects referring to value via packagingSection
     */
-   public DrugSet filterSideEffectContent(Object value)
+   public DrugSet filterAdverseEffectContent(Object value)
    {
       ObjectSet neighbors = new ObjectSet();
 
@@ -303,7 +303,7 @@ public class DrugSet extends HashSet<Drug>
 
       for (Drug obj : this)
       {
-         if ( ! Collections.disjoint(neighbors, obj.getSideEffectContent()))
+         if ( ! Collections.disjoint(neighbors, obj.getAdverseEffectContent()))
          {
             answer.add(obj);
          }
@@ -317,11 +317,11 @@ public class DrugSet extends HashSet<Drug>
     *
     * @return The original set of ModelType objects now with the new neighbor attached to their PackagingSection attributes.
     */
-   public DrugSet withSideEffectContent(SideEffectContent value)
+   public DrugSet withAdverseEffectContent(AdverseEffectContent value)
    {
       for (Drug obj : this)
       {
-         obj.withSideEffectContent(value);
+         obj.withAdverseEffectContent(value);
       }
 
       return this;
@@ -332,11 +332,11 @@ public class DrugSet extends HashSet<Drug>
     *
     * @return The original set of ModelType objects now without the old neighbor.
     */
-   public DrugSet withoutSideEffectContent(SideEffectContent value)
+   public DrugSet withoutAdverseEffectContent(AdverseEffectContent value)
    {
       for (Drug obj : this)
       {
-         obj.withoutSideEffectContent(value);
+         obj.withoutAdverseEffectContent(value);
       }
 
       return this;

@@ -220,13 +220,13 @@
     background-color: #ffc992b5 !important;
 }
 
-.sideffect_table td, .sideffect_table th {
+.adverseffect_table td, .adverseffect_table th {
     border: solid 1px;
     padding: 10px;
     font-size: 14px;
 }
 
-.sideffect_table_info th, .sideffect_table_info td {
+.adverseffect_table_info th, .adverseffect_table_info td {
     padding: 1.0rem;
     vertical-align: top;
     border-bottom: 1px solid #dee2e6;
@@ -728,7 +728,7 @@
         margin: 25px 0 45px 0;
     }
 
-    .sideffect_table td, th {
+    .adverseffect_table td, th {
         padding: 5px;
         font-size: 12px;
     }

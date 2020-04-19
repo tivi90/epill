@@ -48,11 +48,11 @@ import com.doccuty.epill.model.Interaction;
 import com.doccuty.epill.model.util.ItemInvocationSet;
 import com.doccuty.epill.model.util.UserSet;
 import com.doccuty.epill.packagingsection.PackagingSection;
-import com.doccuty.epill.sideeffectcontent.SideEffectContent;
+import com.doccuty.epill.adverseeffectcontent.AdverseEffectContent;
 import com.doccuty.epill.user.User;
 import com.doccuty.epill.model.Packaging;
 import com.doccuty.epill.model.DrugFeature;
-import com.doccuty.epill.model.SideEffect;
+import com.doccuty.epill.model.AdverseEffect;
 
 
 @Entity
@@ -64,14 +64,14 @@ public class Drug extends SimpleDrug {
 		setProductGroup(null);
 		setIndicationGroup(null);
 		withoutPackagingSection(this.getPackagingSection().toArray(new PackagingSection[this.getPackagingSection().size()]));
-		withoutSideEffectContent(this.getSideEffectContent().toArray(new SideEffectContent[this.getSideEffectContent().size()]));
+		withoutAdverseEffectContent(this.getAdverseEffectContent().toArray(new AdverseEffectContent[this.getAdverseEffectContent().size()]));
 		withoutActiveSubstance(this.getActiveSubstance().toArray(new ActiveSubstance[this.getActiveSubstance().size()]));
 		withoutPharmaceuticalForm(this.getPharmaceuticalForm().toArray(new PharmaceuticalForm[this.getPharmaceuticalForm().size()]));
 		withoutWordExplaination(this.getWordExplaination().toArray(new WordExplaination[this.getWordExplaination().size()]));
 		withoutInteraction(this.getInteraction().toArray(new Interaction[this.getInteraction().size()]));
 		withoutClicks(this.getClicks().toArray(new ItemInvocation[this.getClicks().size()]));
 		withoutDisease(this.getDisease().toArray(new Disease[this.getDisease().size()]));
-		withoutSideEffect(this.getSideEffect().toArray(new SideEffect[this.getSideEffect().size()]));
+		withoutAdverseEffect(this.getAdverseEffect().toArray(new AdverseEffect[this.getAdverseEffect().size()]));
 		firePropertyChange("REMOVE_YOU", this, null);
 	}
 
@@ -147,30 +147,30 @@ public class Drug extends SimpleDrug {
 	 * </pre>
 	 */
 
-	public static final String PROPERTY_SIDEEFFECTCONTENT = "sideEffectContent";
+	public static final String PROPERTY_ADVERSEEFFECTCONTENT = "adverseEffectContent";
 
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "drug")
-	private List<SideEffectContent> sideEffectContent = null;
+	private List<AdverseEffectContent> adverseEffectContent = null;
 
-	public List<SideEffectContent> getSideEffectContent() {
-		if (this.sideEffectContent == null) {
-			return new ArrayList<SideEffectContent>();
+	public List<AdverseEffectContent> getAdverseEffectContent() {
+		if (this.adverseEffectContent == null) {
+			return new ArrayList<AdverseEffectContent>();
 		}
 
-		return this.sideEffectContent;
+		return this.adverseEffectContent;
 	}
 
-	public Drug withSideEffectContent(SideEffectContent... value) {
+	public Drug withAdverseEffectContent(AdverseEffectContent... value) {
 		if (value == null) {
 			return this;
 		}
-		for (SideEffectContent item : value) {
+		for (AdverseEffectContent item : value) {
 			if (item != null) {
-				if (this.sideEffectContent == null) {
-					this.sideEffectContent = new ArrayList<SideEffectContent>();
+				if (this.adverseEffectContent == null) {
+					this.adverseEffectContent = new ArrayList<AdverseEffectContent>();
 				}
 
-				boolean changed = this.sideEffectContent.add(item);
+				boolean changed = this.adverseEffectContent.add(item);
 
 				if (changed) {
 					item.withDrug(this);
@@ -181,21 +181,21 @@ public class Drug extends SimpleDrug {
 		return this;
 	}
 
-	public Drug withoutSideEffectContent(SideEffectContent... value) {
-		for (SideEffectContent item : value) {
-			if ((this.sideEffectContent != null) && (item != null)) {
-				if (this.sideEffectContent.remove(item)) {
+	public Drug withoutAdverseEffectContent(AdverseEffectContent... value) {
+		for (AdverseEffectContent item : value) {
+			if ((this.adverseEffectContent != null) && (item != null)) {
+				if (this.adverseEffectContent.remove(item)) {
 					item.setDrug(null);
-					firePropertyChange(PROPERTY_SIDEEFFECTCONTENT, item, null);
+					firePropertyChange(PROPERTY_ADVERSEEFFECTCONTENT, item, null);
 				}
 			}
 		}
 		return this;
 	}
 
-	public SideEffectContent createSideEffectContent() {
-		SideEffectContent value = new SideEffectContent();
-		withSideEffectContent(value);
+	public AdverseEffectContent createAdverseEffectContent() {
+		AdverseEffectContent value = new AdverseEffectContent();
+		withAdverseEffectContent(value);
 		return value;
 	}
 
@@ -325,35 +325,35 @@ public class Drug extends SimpleDrug {
 	 * <pre>
 	 *              many                       many
 	 * Drug ----------------------------------- Drug
-	 *              drug                   	sideEffect
+	 *              drug                   	adverseEffect
 	 * </pre>
 	 */
 
-	public static final String PROPERTY_SIDEEFFECT = "sideEffect";
+	public static final String PROPERTY_ADVERSEEFFECT = "adverseEffect";
 
 	@ManyToMany(cascade = CascadeType.MERGE)
-	@JoinTable(name = "drug_side_effect", joinColumns = @JoinColumn(name = "iddrug"), inverseJoinColumns = @JoinColumn(name = "idside_effect"))
-	private List<SideEffect> sideEffect = null;
+	@JoinTable(name = "drug_adverse_effect", joinColumns = @JoinColumn(name = "iddrug"), inverseJoinColumns = @JoinColumn(name = "idadverse_effect"))
+	private List<AdverseEffect> adverseEffect = null;
 
-	public List<SideEffect> getSideEffect() {
-		if (this.sideEffect == null) {
-			return new ArrayList<SideEffect>();
+	public List<AdverseEffect> getAdverseEffect() {
+		if (this.adverseEffect == null) {
+			return new ArrayList<AdverseEffect>();
 		}
 
-		return this.sideEffect;
+		return this.adverseEffect;
 	}
 
-	public Drug withSideEffect(SideEffect... value) {
+	public Drug withAdverseEffect(AdverseEffect... value) {
 		if (value == null) {
 			return this;
 		}
-		for (SideEffect item : value) {
+		for (AdverseEffect item : value) {
 			if (item != null) {
-				if (this.sideEffect == null) {
-					this.sideEffect = new ArrayList<SideEffect>();
+				if (this.adverseEffect == null) {
+					this.adverseEffect = new ArrayList<AdverseEffect>();
 				}
 
-				boolean changed = this.sideEffect.add(item);
+				boolean changed = this.adverseEffect.add(item);
 
 				if (changed) {
 					item.withDrug(this);
@@ -364,10 +364,10 @@ public class Drug extends SimpleDrug {
 		return this;
 	}
 
-	public Drug withoutSideEffect(SideEffect... value) {
-		for (SideEffect item : value) {
-			if ((this.sideEffect != null) && (item != null)) {
-				if (this.sideEffect.remove(item)) {
+	public Drug withoutAdverseEffect(AdverseEffect... value) {
+		for (AdverseEffect item : value) {
+			if ((this.adverseEffect != null) && (item != null)) {
+				if (this.adverseEffect.remove(item)) {
 					item.withoutDrug(this);
 					firePropertyChange(PROPERTY_ACTIVESUBSTANCE, item, null);
 				}
@@ -376,9 +376,9 @@ public class Drug extends SimpleDrug {
 		return this;
 	}
 
-	public SideEffect createSideEffect() {
-		SideEffect value = new SideEffect();
-		withSideEffect(value);
+	public AdverseEffect createAdverseEffect() {
+		AdverseEffect value = new AdverseEffect();
+		withAdverseEffect(value);
 		return value;
 	}
 

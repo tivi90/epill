@@ -1,5 +1,15 @@
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text ) VALUES (1,1,0,11,1,'Nicht
-Bekannt','<b>Verdauungsprobleme wie</b>
+--
+-- Dumping data for table `adverse_Effect`
+--
+INSERT INTO adverse_effect (id, adverse_effect ) VALUES (1,'sehrhäufig');
+INSERT INTO adverse_effect (id, adverse_effect ) VALUES (2,'haeufig');
+INSERT INTO adverse_effect (id, adverse_effect ) VALUES (3,'gelegentlich');
+INSERT INTO adverse_effect (id, adverse_effect ) VALUES (4,'selten');
+INSERT INTO adverse_effect (id, adverse_effect ) VALUES (5,'sehrselten');
+INSERT INTO adverse_effect (id, adverse_effect ) VALUES (6,'nichtbekannt');
+
+
+INSERT INTO adverse_effect_content (id, number, state,iddrug, idadverse_effect,purpose, text ) VALUES (1,1,0,11,1,'Verdauungsprobleme','
 <ul>
     <li>Übelkeit</li>
     <li>Erbrechen</li>
@@ -17,9 +27,8 @@ Einnahmen und die Einnahme von Metformin Lich mit oder direkt nach einer Mahlzei
     nicht weiter ein
     und sprechen Sie mit Ihrem
     Arzt.</span>');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (2,2,0,11,2,'Nicht
-Bekannt','Geschmacksveränderungen');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (3,5,0,11,5,'Nicht
+INSERT INTO adverse_effect_content (id, number, state,iddrug, idadverse_effect,purpose, text )VALUES (2,2,0,11,2,'Geschmackempfinden','Geschmacksveränderungen');
+INSERT INTO adverse_effect_content (id, number, state,iddrug, idadverse_effect,purpose, text )VALUES (3,5,0,11,5,'Blut und Stoffwechselerkrankung
 Bekannt','<b>Übersäuerung des Blutes mit Milchsäure (<a class=" info_words" type="button" data-toggle="modal"
         data-target="#laktatazidose">Laktatazidose</a>)</b> </br>Dies
 ist eine
@@ -40,8 +49,7 @@ Metformin Lich nicht weiter ein und sprechen Sie sofort mit Ihrem Arzt.</br></br
 </ul>
 </br>
 <b>Niedrige Konzentration von Vitamin B12 im Blut.</b>');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (4,6,0,11,6,'Nicht
-Bekannt','<ul>
+INSERT INTO adverse_effect_content (id, number, state,iddrug, idadverse_effect,purpose, text )VALUES (4,6,0,11,6,'Bluterkrankung','<ul>
     <li>Verringerte Anzahl der roten Blutkörperchen, die eine blassgelbe Haut,
         Schwächegefühl
         oder Atemlosigkeit verursachen kann (hämolytische Anämie).</li>
@@ -58,10 +66,9 @@ Bekannt','<ul>
         Kribbeln oder Taubheitsgefühl verursachen kann (periphere Neuropathie).
     </li>
 </ul>');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (5,1,0,12,1,'Nicht
-Bekannt','Knöchelschwellungen (Ödeme)');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (6,2,0,12,2,'Nicht
-Bekannt',' <ul>
+INSERT INTO adverse_effect_content (id, number, state,iddrug, idadverse_effect,purpose, text )VALUES (5,1,0,12,1,'Schwellungen','Knöchelschwellungen (Ödeme)');
+INSERT INTO adverse_effect_content (id, number, state,iddrug, idadverse_effect,purpose, text )VALUES (6,2,0,12,2,'
+Erkrankungen des Nervensystems',' <ul>
     <li>Kopfschmerzen, Schwindel, Schläfrigkeit (insbesondere zu Beginn der Behandlung)</li>
     <li>Herzklopfen (Palpitationen), Hautrötung mit Wärmegefühl</li>
     <li>Bauchschmerzen, Übelkeit</li>
@@ -71,7 +78,7 @@ Bekannt',' <ul>
     <li>Sehstörungen, Doppeltsehen</li>
     <li>Muskelkrämpfe</li>
 </ul>');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (7,3,0,12,3,'Nicht
+INSERT INTO adverse_effect_content (id, number, state,iddrug, idadverse_effect,purpose, text )VALUES (7,3,0,12,3,'Nicht
 Bekannt',' <ul>
     <li>Stimmungsschwankungen, Angst, Depression, Schlaflosigkeit</li>
     <li>Zittern, Geschmacksstörungen, kurze Bewusstlosigkeit</li>
@@ -91,9 +98,9 @@ Bekannt',' <ul>
     <li>Gelenk- oder Muskelschmerzen, Rückenschmerzen</li>
     <li>Gewichtszunahme oder Gewichtsabnahme</li>
 </ul>');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (8,4,0,12,4,'Nicht
+INSERT INTO adverse_effect_content (id, number, state,iddrug, idadverse_effect,purpose, text )VALUES (8,4,0,12,4,'Nicht
 Bekannt','Verwirrung');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (9,5,0,12,5,'Nicht
+INSERT INTO adverse_effect_content (id, number, state,iddrug, idadverse_effect,purpose, text )VALUES (9,5,0,12,5,'Nicht
 Bekannt',' <ul>
     <li>Verminderung der weißen Blutkörperchen, Verminderung der Blutplättchen, was zu
         ungewöhnlichen blauen Flecken oder leichtem Bluten führen kann (Schädigung der
@@ -112,157 +119,152 @@ Bekannt',' <ul>
     <li>Störungen, die sich aus Steifheit, Zittern und/oder Bewegungsstörungen
         zusammensetzen</li>
 </ul>');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (10,3,0,13,3,'
+INSERT INTO adverse_effect_content (id, number, state,iddrug, idadverse_effect,purpose, text )VALUES (10,3,0,13,3,'
 Erkrankungen des Blutes-und Lymphsystems
-','<ul>
-    <li> Blutarmut durch vermehrten Zerfall roter Blutkörperchen (hämolytische Anämie)
-    </li>
-    <li>Blutarmut durch Blutbildungsstörung im
-        Knochenmark (aplastische Anämie)
-    </li>
-</ul>');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (11,4,0,13,4,'
+','Blutarmut durch vermehrten Zerfall roter Blutkörperchen (hämolytische Anämie), Blutarmut durch Blutbildungsstörung im
+Knochenmark (aplastische Anämie)');
+INSERT INTO adverse_effect_content (id, number, state,iddrug, idadverse_effect,purpose, text )VALUES (11,4,0,13,4,'
 Erkrankungen des Blutes-und Lymphsystems
 ','Verminderung der Anzahl bestimmter Blutzellen (Neutropenie, Thrombozytopenie, Panzytopenie) bis zu einer hochgradigen
 Verminderung bestimmter weißer Blutkörperchen mit Infektneigung und schweren Allgemeinsymptomen (Agranulozytose),
 Abnahme bestimmter Laborwerte (Hämoglobin und Hämatokrit), herabgesetzte Funktion des Knochenmarks
 (Knochenmarksdepression), Lymphknotenschwellung, Autoimmunkrankheiten.
 ');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (12,3,0,13,3,'
+INSERT INTO adverse_effect_content (id, number, state,iddrug, idadverse_effect,purpose, text )VALUES (12,3,0,13,3,'
 Stoffwechsel- und Ernährungsstörungen ','Zu niedrige Blutzuckerwerte (Hypoglykämie).
 ');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (13,1,0,13,1,'
+INSERT INTO adverse_effect_content (id, number, state,iddrug, idadverse_effect,purpose, text )VALUES (13,1,0,13,1,'
 Augenerkrankungen ','Verschwommensehen
 ');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (14,1,0,13,1,'
+INSERT INTO adverse_effect_content (id, number, state,iddrug, idadverse_effect,purpose, text )VALUES (14,1,0,13,1,'
 Herz-Kreislauf-System ','Schwindel ');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (15,2,0,13,2,'
+INSERT INTO adverse_effect_content (id, number, state,iddrug, idadverse_effect,purpose, text )VALUES (15,2,0,13,2,'
 Herz-Kreislauf-System ','Übermäßige Blutdrucksenkung einschließlich übermäßiger Blutdruckabfall bei Lagewechsel vom
 Liegen zum Stehen (orthostatische Hypotonie), kurzzeitiger Bewusstseinsverlust (Synkope), Herzinfarkt oder Schlaganfall,
 vermutlich infolge übermäßigen Blutdruckabfalls bei gefährdeten Patienten (Patienten mit Durchblutungsstörungen im
 Bereich des Herzens und/oder des Gehirns), Schmerzenim Brustkorb, Herzrhythmusstörungen, Herzengegefühl (Angina
 pectoris), beschleunigter Herzschlag (Tachykardie). ');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (16,3,0,13,3,'
+INSERT INTO adverse_effect_content (id, number, state,iddrug, idadverse_effect,purpose, text )VALUES (16,3,0,13,3,'
 Herz-Kreislauf-System ','Übermäßiger Blutdruckabfall bei Lagewechsel vom Liegen zum Stehen (orthostatische Hypotonie),
 Herzklopfen.
 ');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (17,4,0,13,4,'
+INSERT INTO adverse_effect_content (id, number, state,iddrug, idadverse_effect,purpose, text )VALUES (17,4,0,13,4,'
 Herz-Kreislauf-System ','Durch Gefäßkrämpfe bedingte Durchblutungsstörungen an Händen und Füßen (Raynaud-Phänomen).
 ');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (18,1,0,13,1,'
+INSERT INTO adverse_effect_content (id, number, state,iddrug, idadverse_effect,purpose, text )VALUES (18,1,0,13,1,'
 Erkrankungen der Atemwege, des Brustraums und Mediastinums
 ','Übelkeit
 ');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (19,2,0,13,2,'
+INSERT INTO adverse_effect_content (id, number, state,iddrug, idadverse_effect,purpose, text )VALUES (19,2,0,13,2,'
 Erkrankungen der Atemwege, des Brustraums und Mediastinums
 ','Durchfall, Bauchschmerzen, Geschmacksveränderungen.
 ');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (20,3,0,13,3,'
+INSERT INTO adverse_effect_content (id, number, state,iddrug, idadverse_effect,purpose, text )VALUES (20,3,0,13,3,'
 Erkrankungen der Atemwege, des Brustraums und Mediastinums
 ','Darmverschluss (Ileus), Entzündung der Bauchspeicheldrüse, Erbrechen, Verdauungsstörungen, Verstopfung,
 Appetitlosigkeit, Magenreizung, Mundtrockenheit, Magengeschwür (peptisches Ulkus).
 ');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (21,4,0,13,4,'
+INSERT INTO adverse_effect_content (id, number, state,iddrug, idadverse_effect,purpose, text )VALUES (21,4,0,13,4,'
 Erkrankungen der Atemwege, des Brustraums und Mediastinums
 ','Entzündungen der Mundschleimhaut mit Geschwürbildung (Stomatitis/aphthöse Ulzerationen), Entzündungen der
 Zungenschleimhaut (Glossitis).
 ');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (22,5,0,13,5,'
+INSERT INTO adverse_effect_content (id, number, state,iddrug, idadverse_effect,purpose, text )VALUES (22,5,0,13,5,'
 Erkrankungen der Atemwege, des Brustraums und Mediastinums
 ','Gewebeschwellung des Darms (intestinales angioneurotisches Ödem).
 ');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (23,4,0,13,4,' Leber- und
+INSERT INTO adverse_effect_content (id, number, state,iddrug, idadverse_effect,purpose, text )VALUES (23,4,0,13,4,' Leber- und
 Gallenerkrankungen ','Leberversagen, Leberentzündung (Hepatitis - hepatozellulär oder cholestatisch, einschließlich
 hepatische Nekrose), Gelbsucht.
 ');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (24,2,0,13,2,'
+INSERT INTO adverse_effect_content (id, number, state,iddrug, idadverse_effect,purpose, text )VALUES (24,2,0,13,2,'
 Erkrankungen der Haut und des Unterhautzellgewebes ','Ausschlag, Überempfindlichkeit/Gewebeschwellung (angioneurotisches
 Ödem): angioneurotische Ödeme mit Beteiligung von Gesicht, Gliedmaßen, Lippen, Zunge, Stimmapparat des Kehlkopfes
 (Glottis) und/oder Kehlkopf wurden beobachtet.
 ');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (25,3,0,13,3,'
+INSERT INTO adverse_effect_content (id, number, state,iddrug, idadverse_effect,purpose, text )VALUES (25,3,0,13,3,'
 Erkrankungen der Haut und des Unterhautzellgewebes ','Vermehrtes Schwitzen, Juckreiz, Nesselsucht, Haarausfall. Selten:
 Schwerwiegende Hautreaktionen (Erythema multiforme, Stevens-Johnson-Syndrom, exfoliative Dermatitis, toxische epidermale
 Nekrolyse, Pemphigus, Erythroderma).
 ');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (26,6,0,13,6,'
+INSERT INTO adverse_effect_content (id, number, state,iddrug, idadverse_effect,purpose, text )VALUES (26,6,0,13,6,'
 Erkrankungen der Haut und des Unterhautzellgewebes ','Ein Symptomenkomplex wurde beschrieben, der mit einigen oder allen
 der folgenden Nebenwirkungen einhergehen kann: Fieber, Entzündung seröser Häute (Serositis), Gefäßentzündung
 (Vaskulitis), Muskel- und Gelenkschmerzen/Muskel- und Gelenkentzündungen (Myalgien/Myositis, Arthralgien/Arthritis) und
 bestimmten Laborwertveränderungen (positive ANA-Titer, erhöhte Blutkörperchensenkungsgeschwindigkeit, Eosinophilie und
 Leukozytose). Hautausschlag, Lichtempfindlichkeit oder andere Reaktionen der Haut können auftreten.
 ');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (27,3,0,13,3,'
+INSERT INTO adverse_effect_content (id, number, state,iddrug, idadverse_effect,purpose, text )VALUES (27,3,0,13,3,'
 Erkrankungen der Nieren und Harnwege ','Nierenfunktionsstörungen, Nierenversagen, vermehrte Eiweißausscheidung im Urin
 (Proteinurie).
 ');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (28,4,0,13,4,'
+INSERT INTO adverse_effect_content (id, number, state,iddrug, idadverse_effect,purpose, text )VALUES (28,4,0,13,4,'
 Erkrankungen der Nieren und Harnwege ','Verminderte Harnausscheidung
 ');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (29,3,0,13,3,'
+INSERT INTO adverse_effect_content (id, number, state,iddrug, idadverse_effect,purpose, text )VALUES (29,3,0,13,3,'
 Erkrankungen der Geschlechtsorgane und der Brustdrüse ','Impotenz
 ');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (30,4,0,13,4,'
+INSERT INTO adverse_effect_content (id, number, state,iddrug, idadverse_effect,purpose, text )VALUES (30,4,0,13,4,'
 Erkrankungen der Geschlechtsorgane und der Brustdrüse ','Vergrößerung der Brust bei Männern (Gynäkomastie).
 ');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (31,1,0,13,1,' Allgemeine
+INSERT INTO adverse_effect_content (id, number, state,iddrug, idadverse_effect,purpose, text )VALUES (31,1,0,13,1,' Allgemeine
 Erkrankungen und Beschwerden am Verabreichungsort ','Schwächegefühl
 ');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (32,2,0,13,2,' Allgemeine
+INSERT INTO adverse_effect_content (id, number, state,iddrug, idadverse_effect,purpose, text )VALUES (32,2,0,13,2,' Allgemeine
 Erkrankungen und Beschwerden am Verabreichungsort ','Müdigkeit ');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (33,3,0,13,3,' Allgemeine
+INSERT INTO adverse_effect_content (id, number, state,iddrug, idadverse_effect,purpose, text )VALUES (33,3,0,13,3,' Allgemeine
 Erkrankungen und Beschwerden am Verabreichungsort ','Muskelkrämpfe, Gesichtsrötung (Flush), Ohrgeräusche (Tinnitus),
 Unwohlsein, Fieber.
 ');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (34,2,0,13,2,'
+INSERT INTO adverse_effect_content (id, number, state,iddrug, idadverse_effect,purpose, text )VALUES (34,2,0,13,2,'
 Untersuchungen ','Schwächegefühl ');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (35,3,0,13,3,'
+INSERT INTO adverse_effect_content (id, number, state,iddrug, idadverse_effect,purpose, text )VALUES (35,3,0,13,3,'
 Untersuchungen ','Müdigkeit
 ');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (36,4,0,13,4,'
+INSERT INTO adverse_effect_content (id, number, state,iddrug, idadverse_effect,purpose, text )VALUES (36,4,0,13,4,'
 Untersuchungen ','Muskelkrämpfe, Gesichtsrötung (Flush), Ohrgeräusche (Tinnitus), Unwohlsein, Fieber.
 ');
 
 
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (37,6,0,14,6,'
+INSERT INTO adverse_effect_content (id, number, state,iddrug, idadverse_effect,purpose, text )VALUES (37,6,0,14,6,'
 Erkrankungen des Immunsystems ','Überempfindlichkeitsreaktionen einschließlich Juckreiz, Nesselsucht (Urtikaria),
 Schwellung im Mund-Rachenbereich (Quincke-Ödem), Hautausschlag (Exanthem), Bronchialkrampf (Bronchospasmus),
 Blutdruckabfall und Kollaps.
 ');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (38,2,0,14,2,'
+INSERT INTO adverse_effect_content (id, number, state,iddrug, idadverse_effect,purpose, text )VALUES (38,2,0,14,2,'
 Stoffwechsel- und Ernährungsstörungen
 ','Erhöhter Blutzuckergehalt (Hyperglykämie).
 ');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (39,6,0,14,6,'
+INSERT INTO adverse_effect_content (id, number, state,iddrug, idadverse_effect,purpose, text )VALUES (39,6,0,14,6,'
 Stoffwechsel- und Ernährungsstörungen ','Senkung des Blut-Kaliumspiegels (Hypokaliämie): unter der Therapie mit Beta2-
 Agonisten kann es möglicherweise zu einer sehr ausgeprägten Senkung des BlutkaliumSpiegels kommen; Übersäuerung des
 Blutes (Laktatazidose).
 ');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (40,6,0,14,6,'
+INSERT INTO adverse_effect_content (id, number, state,iddrug, idadverse_effect,purpose, text )VALUES (40,6,0,14,6,'
 Psychiatrische Erkrankungen
 ','Schlaflosigkeit (Insomnie) ');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (41,2,0,14,2,'
+INSERT INTO adverse_effect_content (id, number, state,iddrug, idadverse_effect,purpose, text )VALUES (41,2,0,14,2,'
 Erkrankungen des Nervensystems ','Zittern (Tremor), Kopfschmerzen
 ');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (42,3,0,14,3,'
+INSERT INTO adverse_effect_content (id, number, state,iddrug, idadverse_effect,purpose, text )VALUES (42,3,0,14,3,'
 Erkrankungen des Nervensystems ','Unruhe
 ');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (43,6,0,14,6,'
+INSERT INTO adverse_effect_content (id, number, state,iddrug, idadverse_effect,purpose, text )VALUES (43,6,0,14,6,'
 Erkrankungen des Nervensystems ','Schwindel');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (44,2,0,14,2,'
+INSERT INTO adverse_effect_content (id, number, state,iddrug, idadverse_effect,purpose, text )VALUES (44,2,0,14,2,'
 Herzerkrankungen
 ','Herzrasen (Tachykardie). Herzrhythmusstörungen einschließlich Vorhofflimmern, Anstieg der Herzfrequenz
 (supraventrikuläre Tachykardie) und unregelmäßigem Puls (ventrikuläre Extrasystolie), Brustenge (pektanginöse
 Beschwerden) und Herzklopfen (Palpitationen), Sauerstoffmangel am Herzmuskel (myokardiale Ischämie)
 ');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (45,6,0,14,6,'
+INSERT INTO adverse_effect_content (id, number, state,iddrug, idadverse_effect,purpose, text )VALUES (45,6,0,14,6,'
 Herzerkrankungen
 ','Minderdurchblutung des Herzmuskels (Myokardischämie).
 ');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (46,6,0,14,6,'
+INSERT INTO adverse_effect_content (id, number, state,iddrug, idadverse_effect,purpose, text )VALUES (46,6,0,14,6,'
 Gefäßerkrankungen ','Periphere Erweiterung der Blutgefäße
 ');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (47,6,0,14,6,'
+INSERT INTO adverse_effect_content (id, number, state,iddrug, idadverse_effect,purpose, text )VALUES (47,6,0,14,6,'
 Erkrankungen der Atemwege, des Brustraums und Mediastinums ','Husten, Bronchialkrampf (paradoxer Bronchospasmus),
 Reizung im Rachenbereich. <br> <b>Hinweis</b> <br> Wie bei anderen Inhalationstherapien kann nach der Anwendung von
 Salbutamol ein Bronchialkrampf auftreten mit einer sofortigen Zunahme des Giemens (Keuchens). In diesem Fall sollte
@@ -270,11 +272,12 @@ sofort ein anderes bronchienerweiterndes Arzneimittel mit schnellem Wirkungseint
 mit Salbutamol soll unverzüglich abgebrochen und der behandelnde Arzt informiert werden. Dieser entscheidet, ob weitere
 Maßnahmen erforderlich sind.
 ');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (48,3,0,14,3,'
+INSERT INTO adverse_effect_content (id, number, state,iddrug, idadverse_effect,purpose, text )VALUES (48,3,0,14,3,'
 Erkrankungen des Gastrointestinaltrakts ','Reizung im Mund oder Rachenbereich und Änderung des Geschmackempfindens.
 ');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (49,3,0,14,3,'
+INSERT INTO adverse_effect_content (id, number, state,iddrug, idadverse_effect,purpose, text )VALUES (49,3,0,14,3,'
 Skelettmuskulatur-, Bindegewebs- und Knochenerkrankungen ','Muskelkrämpfe');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (50,4,0,14,4,'
+INSERT INTO adverse_effect_content (id, number, state,iddrug, idadverse_effect,purpose, text )VALUES (50,4,0,14,4,'
 Skelettmuskulatur-, Bindegewebs- und Knochenerkrankungen
 ','Störungen beim Wasserlassen, Sodbrennen sowie Blutdrucksteigerungen oder -senkungen .');
+

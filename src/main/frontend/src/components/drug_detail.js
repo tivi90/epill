@@ -1154,11 +1154,11 @@ class DrugDetail extends React.Component {
     }
 
     rendersehrhaeufigdesktop(drug) {
-        if (!drug.sideEffectContent) {
+        if (!drug.adverseEffectContent) {
             return null;
         }
         return (
-            <table className="sideffect_table hidden-xs">
+            <table className="adverseffect_table hidden-xs">
                 <thead>
                 <tr>
                     <th>Erkrankung</th>
@@ -1166,7 +1166,7 @@ class DrugDetail extends React.Component {
                 </tr>
                 </thead>
                 <tbody className="sehrhaeufig_cont">
-                {drug.sideEffectContent
+                {drug.adverseEffectContent
                     .map((section => {
                         return (
                             <tr id="sehrhaeufig" key={section.id} className={section.number}>
@@ -1184,11 +1184,11 @@ class DrugDetail extends React.Component {
     }
 
     renderhaeufigdesktop(drug) {
-        if (!drug.sideEffectContent) {
+        if (!drug.adverseEffectContent) {
             return null;
         }
         return (
-            <table className="sideffect_table hidden-xs">
+            <table className="adverseffect_table hidden-xs">
                 <thead>
                 <tr>
                     <th>Erkrankung</th>
@@ -1196,7 +1196,7 @@ class DrugDetail extends React.Component {
                 </tr>
                 </thead>
                 <tbody className="haeufig_cont">
-                {drug.sideEffectContent
+                {drug.adverseEffectContent
                     .map((section => {
                         return (
                             <tr id="haeufig" key={section.id} className={section.number}>
@@ -1214,11 +1214,11 @@ class DrugDetail extends React.Component {
     }
 
     rendergelegentlichdesktop(drug) {
-        if (!drug.sideEffectContent) {
+        if (!drug.adverseEffectContent) {
             return null;
         }
         return (
-            <table className="sideffect_table hidden-xs">
+            <table className="adverseffect_table hidden-xs">
                 <thead>
                 <tr>
                     <th>Erkrankung</th>
@@ -1226,7 +1226,7 @@ class DrugDetail extends React.Component {
                 </tr>
                 </thead>
                 <tbody className="gelegentlich_cont">
-                {drug.sideEffectContent
+                {drug.adverseEffectContent
                     .map((section => {
                         return (
                             <tr id="gelegentlich" key={section.id} className={section.number}>
@@ -1244,11 +1244,11 @@ class DrugDetail extends React.Component {
     }
 
     renderseltendesktop(drug) {
-        if (!drug.sideEffectContent) {
+        if (!drug.adverseEffectContent) {
             return null;
         }
         return (
-            <table className="sideffect_table hidden-xs">
+            <table className="adverseffect_table hidden-xs">
                 <thead>
                 <tr>
                     <th>Erkrankung</th>
@@ -1256,7 +1256,7 @@ class DrugDetail extends React.Component {
                 </tr>
                 </thead>
                 <tbody className="selten_cont">
-                {drug.sideEffectContent
+                {drug.adverseEffectContent
                     .map((section => {
                         return (
                             <tr id="selten" key={section.id} className={section.number}>
@@ -1274,11 +1274,11 @@ class DrugDetail extends React.Component {
     }
 
     rendersehrseltendesktop(drug) {
-        if (!drug.sideEffectContent) {
+        if (!drug.adverseEffectContent) {
             return null;
         }
         return (
-            <table className="sideffect_table hidden-xs">
+            <table className="adverseffect_table hidden-xs">
                 <thead>
                 <tr>
                     <th>Erkrankung</th>
@@ -1286,7 +1286,7 @@ class DrugDetail extends React.Component {
                 </tr>
                 </thead>
                 <tbody className="sehrselten_cont">
-                {drug.sideEffectContent
+                {drug.adverseEffectContent
                     .map((section => {
                         return (
                             <tr id="sehrselten" key={section.id} className={section.number}>
@@ -1304,11 +1304,11 @@ class DrugDetail extends React.Component {
     }
 
     rendernichtbekanntdesktop(drug) {
-        if (!drug.sideEffectContent) {
+        if (!drug.adverseEffectContent) {
             return null;
         }
         return (
-            <table className="sideffect_table hidden-xs">
+            <table className="adverseffect_table hidden-xs">
                 <thead>
                 <tr>
                     <th>Erkrankung</th>
@@ -1316,7 +1316,7 @@ class DrugDetail extends React.Component {
                 </tr>
                 </thead>
                 <tbody className="nichtbekannt_cont">
-                {drug.sideEffectContent
+                {drug.adverseEffectContent
                     .map((section => {
                         return (
                             <tr id="nichtbekannt" key={section.id} className={section.number}>
@@ -1335,7 +1335,7 @@ class DrugDetail extends React.Component {
     }
 
     renderalldesktop(drug) {
-        if (!drug.sideEffectContent) {
+        if (!drug.adverseEffectContent) {
             return null;
         }
         return (
@@ -1343,7 +1343,7 @@ class DrugDetail extends React.Component {
 
                 <input onKeyUp={this.searchAdverseEffectDesktop.bind(this)} type="text" id="search" placeholder="Suche"
                        className="hidden-xs myInput"/>
-                <table id="table" className="sideffect_table hidden-sm hidden-xs">
+                <table id="table" className="adverseffect_table hidden-sm hidden-xs">
                     <thead>
                     <tr>
                         <th>Erkrankung</th>
@@ -1351,7 +1351,7 @@ class DrugDetail extends React.Component {
                     </tr>
                     </thead>
                     <tbody className=" ">
-                    {drug.sideEffectContent
+                    {drug.adverseEffectContent
                         .map((section => {
                             return (
                                 <tr key={section.id}>
@@ -1370,11 +1370,11 @@ class DrugDetail extends React.Component {
     }
 
     rendersehrhaeufigmobile(drug) {
-        if (!drug.sideEffectContent) {
+        if (!drug.adverseEffectContent) {
             return null;
         }
         return (<div>
-                {drug.sideEffectContent
+                {drug.adverseEffectContent
                     .map((section => {
                         return (
                             <div className="sehrhaeufig_cont hidden-sm hidden-md hidden-lg  ">
@@ -1398,11 +1398,11 @@ class DrugDetail extends React.Component {
     }
 
     renderhaeufigmobile(drug) {
-        if (!drug.sideEffectContent) {
+        if (!drug.adverseEffectContent) {
             return null;
         }
         return (<div>
-                {drug.sideEffectContent
+                {drug.adverseEffectContent
                     .map((section => {
                         return (
                             <div className="haeufig_cont hidden-sm hidden-md hidden-lg  ">
@@ -1424,11 +1424,11 @@ class DrugDetail extends React.Component {
     }
 
     rendergelegentlichmobile(drug) {
-        if (!drug.sideEffectContent) {
+        if (!drug.adverseEffectContent) {
             return null;
         }
         return (<div>
-                {drug.sideEffectContent
+                {drug.adverseEffectContent
                     .map((section => {
                         return (
                             <div className="gelegentlich_cont hidden-sm hidden-md hidden-lg  ">
@@ -1450,11 +1450,11 @@ class DrugDetail extends React.Component {
     }
 
     renderseltenmobile(drug) {
-        if (!drug.sideEffectContent) {
+        if (!drug.adverseEffectContent) {
             return null;
         }
         return (<div>
-                {drug.sideEffectContent
+                {drug.adverseEffectContent
                     .map((section => {
                         return (
                             <div className="selten_cont hidden-sm hidden-md hidden-lg  ">
@@ -1476,11 +1476,11 @@ class DrugDetail extends React.Component {
     }
 
     rendersehrseltenmobile(drug) {
-        if (!drug.sideEffectContent) {
+        if (!drug.adverseEffectContent) {
             return null;
         }
         return (<div>
-                {drug.sideEffectContent
+                {drug.adverseEffectContent
                     .map((section => {
                         return (
                             <div className="sehrselten_cont hidden-sm hidden-md hidden-lg  ">
@@ -1502,11 +1502,11 @@ class DrugDetail extends React.Component {
     }
 
     rendernichtbekanntmobile(drug) {
-        if (!drug.sideEffectContent) {
+        if (!drug.adverseEffectContent) {
             return null;
         }
         return (<div>
-                {drug.sideEffectContent
+                {drug.adverseEffectContent
                     .map((section => {
                         return (
                             <div className="nichtbekannt_cont hidden-sm hidden-md hidden-lg ">
@@ -1528,14 +1528,14 @@ class DrugDetail extends React.Component {
     }
 
     renderallmobile(drug) {
-        if (!drug.sideEffectContent) {
+        if (!drug.adverseEffectContent) {
             return null;
         }
         return (
             <div>
-                <input id="mysideEffect" onKeyUp={this.searchAdverseEffect.bind(this)} type="text" placeholder="Search.."
+                <input id="myadverseEffect" onKeyUp={this.searchAdverseEffect.bind(this)} type="text" placeholder="Search.."
                        className="hidden-sm hidden-md hidden-lg myInput"/>
-                {drug.sideEffectContent
+                {drug.adverseEffectContent
                     .map((section => {
                         return (
                             <div id="myDIV" className="all_cont   hidden-md hidden-lg ">
@@ -1644,7 +1644,7 @@ class DrugDetail extends React.Component {
     }
 
     searchAdverseEffect = () => {
-        $("#mysideEffect").on("keyup", function () {
+        $("#myadverseEffect").on("keyup", function () {
             var value = $(this).val().toLowerCase();
             $("#myDIV div").filter(function () {
                 $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
@@ -1687,7 +1687,7 @@ class DrugDetail extends React.Component {
                                 </h2>
                             </div>
                             <div className="modal-body" style={{color: "black"}}>
-                                <span dangerouslySetInnerHTML={this.createMarkup(t("frequency_sideeffect"))}/>
+                                <span dangerouslySetInnerHTML={this.createMarkup(t("frequency_adverseeffect"))}/>
                             </div>
                             <span dangerouslySetInnerHTML={this.createMarkup(t("modal_close"))}/>
                         </div>
