@@ -238,23 +238,23 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic, addre
 <div class="row">
     <h3>Pharmazeutischer Unternehmer </h3>
     <div class="row">
-        <div class="col-md-9">
+        <div class="col-md-9 col-xs-12">
             <div class="row">
-                <div class="col-sm-1 addressicons"><i class="fas fa-building"></i></div>
-                <div class="col-sm-11 addresstext"> Dexcel &#174; Pharma GmbH</div>
-                <div class="col-sm-1 addressicons"><a target="_blank"
+                <div class="col-sm-1 col-xs-2 addressicons"><i class="fas fa-building"></i></div>
+                <div class="col-sm-11 col-xs-10 addresstext"> Dexcel &#174; Pharma GmbH</div>
+                <div class="col-sm-1 col-xs-2 addressicons"><a target="_blank"
                         href="https://www.google.com/maps/dir//Dexcel%C2%AE+Pharma+GmbH,+Carl-Zeiss-Stra%C3%9Fe+2,+63755+Alzenau/@50.0906865,9.0420783,17z/data=!4m9!4m8!1m0!1m5!1m1!1s0x47bd3c3014e2cf79:0xd1bcfa9606f28314!2m2!1d9.044267!2d50.0906865!3e0"><i
                             class="fas fa-location-arrow"></i></a></div>
-                <div class="col-sm-11 addresstext "> Carl-Zeiss-Str. 2<br />
+                <div class="col-sm-11 col-xs-10 addresstext "> Carl-Zeiss-Str. 2<br />
                     63755 Alzenau</div>
-                <div class="col-sm-1 addressicons"><i class="fas fa-phone"></i></div>
-                <div class="col-sm-11 addresstext"> <a href="tel:+0602394800">0 60 23 - 94 80 - 0</a>
+                <div class="col-sm-1 col-xs-2 addressicons"><i class="fas fa-phone"></i></div>
+                <div class="col-sm-11 col-xs-10 addresstext"> <a href="tel:+0602394800">0 60 23 - 94 80 - 0</a>
                 </div>
-                <div class="col-sm-1 addressicons"><i class="fas fa-fax"></i></div>
-                <div class="col-sm-11 addresstext"> 0 60 23 - 94 80 - 50</div>
+                <div class="col-sm-1 col-xs-2 addressicons"><i class="fas fa-fax"></i></div>
+                <div class="col-sm-11 col-xs-10 addresstext"> 0 60 23 - 94 80 - 50</div>
             </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-3 col-xs-offset-3 col-xs-6">
             <img class="img-responsive" src="/assets/images/company/dexcel.jpeg" />
         </div>
     </div>
@@ -262,19 +262,19 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic, addre
 <div class="row">
     <h3>Hersteller </h3>
     <div class="row">
-        <div class="col-md-9">
+        <div class="col-md-9 col-xs-12">
             <div class="row">
-                <div class="col-sm-1 addressicons"><i class="fas fa-building"></i></div>
-                <div class="col-sm-11 addresstext"> Dexcel &#174; Pharma GmbH</div>
-                <div class="col-sm-1 addressicons"><a target="_blank"
+                <div class="col-sm-1 col-xs-2 addressicons"><i class="fas fa-building"></i></div>
+                <div class="col-sm-11 col-xs-10 addresstext"> Dexcel &#174; Pharma GmbH</div>
+                <div class="col-sm-1 col-xs-2 addressicons"><a target="_blank"
                         href="https://www.google.com/maps/dir//Dexcel%C2%AE+Pharma+GmbH,+Carl-Zeiss-Stra%C3%9Fe+2,+63755+Alzenau/@50.0906865,9.0420783,17z/data=!4m9!4m8!1m0!1m5!1m1!1s0x47bd3c3014e2cf79:0xd1bcfa9606f28314!2m2!1d9.044267!2d50.0906865!3e0"><i
                             class="fas fa-location-arrow"></i></a></div>
-                <div class="col-sm-11 addresstext "> Steinbruch 2, Halle 15<br />
+                <div class="col-sm-11 col-xs-10 addresstext "> Steinbruch 2, Halle 15<br />
                     Lager im Industriepark Giesbert G.b.R. </br>
                     63755 Alzenau</div>
             </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-3 col-xs-offset-3 col-xs-6">
         </div>
     </div>
 </div>');

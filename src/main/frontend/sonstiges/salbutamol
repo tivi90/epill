@@ -379,23 +379,23 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic, addre
 <div class="row">
     <h3>Pharmazeutischer Unternehmer </h3>
     <div class="row">
-        <div class="col-md-9">
+        <div class="col-md-9 col-xs-12">
             <div class="row">
-                <div class="col-sm-1 addressicons"><i class="fas fa-building"></i></div>
-                <div class="col-sm-11 addresstext"> ratiopharm GmbH</div>
-                <div class="col-sm-1 addressicons"><a target="_blank"
+                <div class="col-sm-1 col-xs-2 addressicons"><i class="fas fa-building"></i></div>
+                <div class="col-sm-11 col-xs-10 addresstext"> ratiopharm GmbH</div>
+                <div class="col-sm-1 col-xs-2 addressicons"><a target="_blank"
                         href="https://www.google.com/maps/dir//ratiopharm+GmbH,+Graf-Arco-Stra%C3%9Fe+3,+89079+Ulm/@48.3601717,9.9048307,13z/data=!3m1!4b1!4m9!4m8!1m0!1m5!1m1!1s0x4799638d5ca0c72d:0x1c035547b1518d2b!2m2!1d9.93985!2d48.36012!3e0"><i
                             class="fas fa-location-arrow"></i></a></div>
-                <div class="col-sm-11 addresstext "> Graf-Arco-Str. 3<br />
+                <div class="col-sm-11 col-xs-10 addresstext "> Graf-Arco-Str. 3<br />
                     89079 Ulm<br /></div>
-                <div class="col-sm-1 addressicons"><i class="fas fa-phone"></i></div>
-                <div class="col-sm-11 addresstext"> <a href="tel:+0602394800">0 60 23 - 94 80 - 0/a>
+                <div class="col-sm-1 col-xs-2 addressicons"><i class="fas fa-phone"></i></div>
+                <div class="col-sm-11 col-xs-10 addresstext"> <a href="tel:+0602394800">0 60 23 - 94 80 - 0/a>
                 </div>
-                <div class="col-sm-1 addressicons"><i class="fas fa-fax"></i></div>
-                <div class="col-sm-11 addresstext"> 0 60 23 - 94 80 - 50</div>
+                <div class="col-sm-1 col-xs-2 addressicons"><i class="fas fa-fax"></i></div>
+                <div class="col-sm-11 col-xs-10 addresstext"> 0 60 23 - 94 80 - 50</div>
             </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-3 col-xs-offset-3 col-xs-6">
             <img class="img-responsive" src="/assets/images/company/ratiopharm.png" />
         </div>
     </div>
@@ -403,45 +403,45 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic, addre
 <div class="row">
     <h3>Hersteller</h3>
     <div class="row">
-        <div class="col-md-9">
+        <div class="col-md-9 col-xs-12">
             <div class="row">
-                <div class="col-sm-1 addressicons"><i class="fas fa-building"></i></div>
-                <div class="col-sm-11 addresstext"> Merckle GmbH</div>
-                <div class="col-sm-1 addressicons"><a target="_blank"
+                <div class="col-sm-1 col-xs-2 addressicons"><i class="fas fa-building"></i></div>
+                <div class="col-sm-11 col-xs-10 addresstext"> Merckle GmbH</div>
+                <div class="col-sm-1 col-xs-2 addressicons"><a target="_blank"
                         href="https://www.google.com/maps/dir//Budapest,+CHINOIN+Zrt.,+T%C3%B3+u.+1,+1045+Hungary/@47.5547176,19.0658987,13z/data=!3m1!4b1!4m9!4m8!1m0!1m5!1m1!1s0x4741da4c50f05c65:0x105b3bb5d53429df!2m2!1d19.100918!2d47.554665!3e0"><i
                             class="fas fa-location-arrow"></i></a></div>
-                <div class="col-sm-11 addresstext"> Merckle GmbH<br />
+                <div class="col-sm-11 col-xs-10 addresstext"> Merckle GmbH<br />
                     Ludwig-Merckle-Str. 3<br />
                     89143 Blaubeuren</div>
             </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-3 col-xs-offset-3 col-xs-6">
         </div>
     </div>
     <hr>
     <div class="row">
         <h3>Hersteller</h3>
         <div class="row">
-            <div class="col-md-9">
-                <div class="col-sm-1 addressicons"><i class="fas fa-building"></i></div>
-                <div class="col-sm-11 addresstext"> Norton (Waterford) Limited<br>
+            <div class="col-md-9 col-xs-12">
+                <div class="col-sm-1 col-xs-2 addressicons"><i class="fas fa-building"></i></div>
+                <div class="col-sm-11 col-xs-10 addresstext"> Norton (Waterford) Limited<br>
                     T/A Ivax Pharmaceuticals Ireland<br>
                     T/A Teva Pharmaceuticals Ireland<br /></div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3 col-xs-offset-3 col-xs-6">
             </div>
         </div>
         <div class="row">
-            <div class="col-md-9">
-                <div class="col-sm-1 addressicons"><a target="_blank"
+            <div class="col-md-9 col-xs-12">
+                <div class="col-sm-1 col-xs-2 addressicons"><a target="_blank"
                         href="https://www.google.com/maps/dir//Norton+(Waterford)+Limited+Unit+301+IDA+Industrial+Park/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x4842c46bde1714e5:0x87702daf31da7cd3?sa=X&ved=2ahUKEwjsreTgheboAhWJM-wKHRaTAlcQ9RcwC3oECBMQEA"><i
                             class="fas fa-location-arrow"></i></a></div>
-                <div class="col-sm-11 addresstext"> Unit 301 IDA Industrial Park<br>
+                <div class="col-sm-11 col-xs-10 addresstext"> Unit 301 IDA Industrial Park<br>
                     Cork Road<br />
                     Waterford<br />
                     Irland</div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3 col-xs-offset-3 col-xs-6">
                 <img class="img-responsive" src="/assets/images/company/merkle.png" />
             </div>
         </div>

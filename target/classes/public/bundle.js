@@ -43991,9 +43991,13 @@ var DrugDetail = function (_React$Component) {
                 _react2.default.createElement(
                     "a",
                     { href: "#/drug/list" },
-                    " ",
-                    _react2.default.createElement("i", { className: "far fa-arrow-alt-circle-left" }),
-                    " zur\xFCck zu den Medikamenten"
+                    "  ",
+                    _react2.default.createElement(
+                        "button",
+                        { type: "button", className: "btn btn-primary" },
+                        _react2.default.createElement("i", { className: "far fa-arrow-alt-circle-left" }),
+                        " zur\xFCck zu den Medikamenten"
+                    )
                 )
             );
         };
@@ -44031,7 +44035,7 @@ var DrugDetail = function (_React$Component) {
                             { style: { cursor: "pointer" }, "data-toggle": "modal",
                                 "data-target": "#infoicons" },
                             _react2.default.createElement("i", {
-                                className: "fas fa-info-circle" })
+                                className: "fas fa-info-circle circleinfo_icon" })
                         )
                     )
                 )
@@ -44839,7 +44843,7 @@ var DrugDetail = function (_React$Component) {
                             ),
                             _react2.default.createElement(
                                 "div",
-                                { className: "modal-body", style: { color: "black" } },
+                                { className: "modal-body text-center-xs", style: { color: "black" } },
                                 drug.drugFeature.map(function (feature) {
                                     return _react2.default.createElement(
                                         "div",
@@ -44874,10 +44878,17 @@ var DrugDetail = function (_React$Component) {
                                     "Weitere Informationen finden Sie unter der Rubrik ",
                                     _react2.default.createElement(
                                         "a",
-                                        {
+                                        { className: "hidden-xs hidden-sm",
                                             href: "#tab2", "aria-controls": "tab2", role: "tab",
                                             "data-toggle": "tab", "aria-expanded": "true",
                                             "data-dismiss": "modal" },
+                                        "Warnhinweise und Vorsichtsma\xDFnahmen"
+                                    ),
+                                    _react2.default.createElement(
+                                        "a",
+                                        { className: "hidden-lg hidden-md", "data-toggle": "collapse",
+                                            "data-target": "#mobile_tab2",
+                                            "data-parent": "#accordion", "data-dismiss": "modal" },
                                         "Warnhinweise und Vorsichtsma\xDFnahmen"
                                     )
                                 )
@@ -44946,15 +44957,16 @@ var DrugDetail = function (_React$Component) {
                         { className: "panel-group", id: "accordion" },
                         _react2.default.createElement(
                             "div",
-                            { className: "panel panel-default" },
+                            { className: "panel panel-default mob_panel_default" },
                             _react2.default.createElement(
                                 "div",
-                                { className: "panel-heading mob_heading" },
+                                { className: "panel-heading mob_heading", "data-toggle": "collapse",
+                                    "data-target": "#mobile_tab1",
+                                    "data-parent": "#accordion" },
                                 _react2.default.createElement(
                                     "h4",
-                                    { className: "panel-title text-center-xs mob_title",
-                                        "data-toggle": "collapse",
-                                        "data-target": "#mobile_tab1" },
+                                    { className: "panel-title text-center-xs mob_title"
+                                    },
                                     _react2.default.createElement("span", { className: "hidden-lg   " }),
                                     " Allgemeine Informationen"
                                 )
@@ -44992,7 +45004,7 @@ var DrugDetail = function (_React$Component) {
                                                 { style: { cursor: "pointer" }, "data-toggle": "modal",
                                                     "data-target": "#infosubstance" },
                                                 _react2.default.createElement("i", {
-                                                    className: "fas fa-info-circle" })
+                                                    className: "fas fa-info-circle circleinfo_icon" })
                                             )
                                         ),
                                         showAdditionalInfo && _react2.default.createElement(
@@ -45043,15 +45055,16 @@ var DrugDetail = function (_React$Component) {
                         ),
                         _react2.default.createElement(
                             "div",
-                            { className: "panel panel-default" },
+                            { className: "panel panel-default mob_panel_default" },
                             _react2.default.createElement(
                                 "div",
-                                { className: "panel-heading mob_heading" },
+                                { className: "panel-heading mob_heading", "data-toggle": "collapse",
+                                    "data-target": "#mobile_tab2",
+                                    "data-parent": "#accordion" },
                                 _react2.default.createElement(
                                     "h4",
-                                    { className: "panel-title mob_title text-center-xs",
-                                        "data-toggle": "collapse",
-                                        "data-target": "#mobile_tab2" },
+                                    { className: "panel-title mob_title text-center-xs"
+                                    },
                                     _react2.default.createElement("span", { className: "hidden-lg  " }),
                                     " Vor der Anwendung"
                                 )
@@ -45068,15 +45081,16 @@ var DrugDetail = function (_React$Component) {
                         ),
                         _react2.default.createElement(
                             "div",
-                            { className: "panel panel-default" },
+                            { className: "panel panel-default mob_panel_default" },
                             _react2.default.createElement(
                                 "div",
-                                { className: "panel-heading mob_heading" },
+                                { className: "panel-heading mob_heading", "data-toggle": "collapse",
+                                    "data-target": "#mobile_tab3",
+                                    "data-parent": "#accordion" },
                                 _react2.default.createElement(
                                     "h4",
-                                    { className: "panel-title mob_title text-center-xs",
-                                        "data-toggle": "collapse",
-                                        "data-target": "#mobile_tab3" },
+                                    { className: "panel-title mob_title text-center-xs"
+                                    },
                                     _react2.default.createElement("span", { className: "hidden-lg  " }),
                                     " Anwendung"
                                 )
@@ -45103,15 +45117,16 @@ var DrugDetail = function (_React$Component) {
                         ),
                         _react2.default.createElement(
                             "div",
-                            { className: "panel panel-default" },
+                            { className: "panel panel-default mob_panel_default" },
                             _react2.default.createElement(
                                 "div",
-                                { className: "panel-heading mob_heading" },
+                                { className: "panel-heading mob_heading", "data-toggle": "collapse",
+                                    "data-target": "#mobile_tab4",
+                                    "data-parent": "#accordion" },
                                 _react2.default.createElement(
                                     "h4",
-                                    { className: "panel-title mob_title text-center-xs",
-                                        "data-toggle": "collapse",
-                                        "data-target": "#mobile_tab4" },
+                                    { className: "panel-title mob_title text-center-xs"
+                                    },
                                     _react2.default.createElement("span", { className: "hidden-lg " }),
                                     " Nebenwirkungen"
                                 )
@@ -45192,7 +45207,7 @@ var DrugDetail = function (_React$Component) {
                                 { style: { cursor: "pointer" }, "data-toggle": "modal",
                                     "data-target": "#infosubstance" },
                                 _react2.default.createElement("i", {
-                                    className: "fas fa-info-circle" })
+                                    className: "fas fa-info-circle circleinfo_icon" })
                             )
                         ),
                         showAdditionalInfo && _react2.default.createElement(
@@ -45644,7 +45659,8 @@ var DrugDetail = function (_React$Component) {
                                 _react2.default.createElement(
                                     "h2",
                                     null,
-                                    "Fachausdr\xFCcke"
+                                    _react2.default.createElement("i", { className: "fas fa-book" }),
+                                    " Fachausdr\xFCcke"
                                 )
                             ),
                             _react2.default.createElement(
@@ -46067,7 +46083,7 @@ var DrugDetail = function (_React$Component) {
                     { style: { cursor: "pointer" }, "data-toggle": "modal",
                         "data-target": "#drugform" },
                     _react2.default.createElement("i", {
-                        className: "fas fa-info-circle" })
+                        className: "fas fa-info-circle circleinfo_icon" })
                 )
             );
         }
@@ -47296,7 +47312,7 @@ var DrugDetail = function (_React$Component) {
                 { onLoad: this.windowscroll.bind(this) },
                 _react2.default.createElement(
                     "div",
-                    { id: "myCarousel", className: "carousel carousel-fade", "data-ride": "carousel" },
+                    { id: "myCarousel", className: "carousel carousel-fade hidden-xs hidden-sm", "data-ride": "carousel" },
                     _react2.default.createElement(
                         "div",
                         { className: "carousel-inner" },
@@ -47375,7 +47391,7 @@ var DrugDetail = function (_React$Component) {
                                 ),
                                 _react2.default.createElement(
                                     "div",
-                                    { className: "col-xs-12 col-sm-12 col-md-9 infobox" },
+                                    { className: "col-xs-12 col-sm-12 col-md-9 infobox nopadd-xs" },
                                     this.renderContent()
                                 )
                             )

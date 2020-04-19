@@ -7,6 +7,26 @@ $(window).scroll(function () {
     }
 });
 
+$('a[href*="#"]').on('click', function(e) {
+    e.preventDefault()
+
+    $('html, body').animate(
+        {
+            scrollTop: $($(this).attr('href')).offset().top,
+        },
+        500,
+        'linear'
+    )
+})
+
+$(window).scroll(function() {
+    if ($(window).scrollTop() > 300) {
+        $('#button_top').addClass('show');
+    } else {
+        $('#button_top').removeClass('show');
+    }
+});
+
 $(window).scroll(function () {
 
     if ($(this).scrollTop() > 600) {
@@ -19,9 +39,6 @@ $(window).scroll(function () {
 
 
 
-$(window).on('beforeunload', function(){
-    $(window).scrollTop(0);
-});
 
 
 

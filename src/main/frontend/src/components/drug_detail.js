@@ -451,7 +451,7 @@ class DrugDetail extends React.Component {
                                 <button type="button" className="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
-                                <h2>Fachausdrücke
+                                <h2><i className="fas fa-book"/> Fachausdrücke
                                 </h2>
 
                             </div>
@@ -600,8 +600,8 @@ class DrugDetail extends React.Component {
     renderBackToMedbutton = () => {
         return (
             <div>
-                <a href="#/drug/list"> <i className="far fa-arrow-alt-circle-left"/> zurück zu den
-                    Medikamenten</a>
+                <a href="#/drug/list">  <button type="button" className="btn btn-primary"><i className="far fa-arrow-alt-circle-left"/> zurück zu den
+                    Medikamenten</button></a>
             </div>
         )
     }
@@ -631,7 +631,7 @@ class DrugDetail extends React.Component {
                     <div>
                         <div style={{cursor: "pointer"}} data-toggle="modal"
                              data-target="#infoicons"><i
-                            className="fas fa-info-circle"/></div>
+                            className="fas fa-info-circle circleinfo_icon"/></div>
                     </div>
                 </div>
             </div>
@@ -838,7 +838,7 @@ class DrugDetail extends React.Component {
                 </section>
                 <div style={{cursor: "pointer"}} data-toggle="modal"
                      data-target="#drugform"><i
-                    className="fas fa-info-circle"/></div>
+                    className="fas fa-info-circle circleinfo_icon"/></div>
             </div>
         );
     }
@@ -1623,6 +1623,7 @@ class DrugDetail extends React.Component {
         });
     }
 
+
     searchWord = () => {
         var input, filter, table, tr, td, i, txtValue;
         input = document.getElementById("myInput");
@@ -1971,7 +1972,7 @@ class DrugDetail extends React.Component {
                                 <h2> Was bedeuten die Symbole?
                                 </h2>
                             </div>
-                            <div className="modal-body" style={{color: "black"}}>
+                            <div className="modal-body text-center-xs" style={{color: "black"}}>
                                 {drug.drugFeature.map(feature =>
                                         <div className="row">
                                             <div className="col-sm-1 col-xs-12">
@@ -1989,12 +1990,19 @@ class DrugDetail extends React.Component {
                                         </div>
                                 ).reduce((prev, curr) => [prev, ', ', curr])}
                                 <div className="row">
-                                    Weitere Informationen finden Sie unter der Rubrik <a
+                                    Weitere Informationen finden Sie unter der Rubrik <a className="hidden-xs hidden-sm"
                                     href="#tab2" aria-controls="tab2" role="tab"
                                     data-toggle="tab" aria-expanded="true"
                                     data-dismiss="modal">Warnhinweise und
                                     Vorsichtsmaßnahmen
-                                </a></div>
+                                </a>
+                                   <a className="hidden-lg hidden-md" data-toggle="collapse"
+                                    data-target="#mobile_tab2"
+                                    data-parent="#accordion" data-dismiss="modal">Warnhinweise und
+                                    Vorsichtsmaßnahmen
+                                </a>
+                                </div>
+
                             </div>
                             <span
                                 dangerouslySetInnerHTML={this.createMarkup(t("modal_close"))}/>
@@ -2033,11 +2041,12 @@ class DrugDetail extends React.Component {
         if (isMobile) {
             return (<div className="row tab_headers  hidden-lg  ">
                     <div className="panel-group" id="accordion">
-                        <div className="panel panel-default">
-                            <div className="panel-heading mob_heading">
+                        <div className="panel panel-default mob_panel_default">
+                            <div className="panel-heading mob_heading" data-toggle="collapse"
+                                 data-target="#mobile_tab1"
+                                 data-parent="#accordion">
                                 <h4 className="panel-title text-center-xs mob_title"
-                                    data-toggle="collapse"
-                                    data-target="#mobile_tab1">
+                                    >
                 <span className="hidden-lg   ">
                 </span> Allgemeine Informationen
                                 </h4>
@@ -2061,7 +2070,7 @@ class DrugDetail extends React.Component {
                                             {this.renderActiveSubstance(drug)}
                                             <div style={{cursor: "pointer"}} data-toggle="modal"
                                                  data-target="#infosubstance"><i
-                                                className="fas fa-info-circle"/></div>
+                                                className="fas fa-info-circle circleinfo_icon"/></div>
                                         </div>
                                         {showAdditionalInfo &&
                                         <div className="">
@@ -2091,11 +2100,12 @@ class DrugDetail extends React.Component {
                                 </div>
                             </div>
                         </div>
-                        <div className="panel panel-default">
-                            <div className="panel-heading mob_heading">
+                        <div className="panel panel-default mob_panel_default">
+                            <div className="panel-heading mob_heading" data-toggle="collapse"
+                                 data-target="#mobile_tab2"
+                                 data-parent="#accordion">
                                 <h4 className="panel-title mob_title text-center-xs"
-                                    data-toggle="collapse"
-                                    data-target="#mobile_tab2">
+                                    >
                 <span className="hidden-lg  ">
                 </span> Vor der Anwendung
                                 </h4>
@@ -2107,11 +2117,12 @@ class DrugDetail extends React.Component {
                                 </div>
                             </div>
                         </div>
-                        <div className="panel panel-default">
-                            <div className="panel-heading mob_heading">
+                        <div className="panel panel-default mob_panel_default">
+                            <div className="panel-heading mob_heading" data-toggle="collapse"
+                                 data-target="#mobile_tab3"
+                                 data-parent="#accordion">
                                 <h4 className="panel-title mob_title text-center-xs"
-                                    data-toggle="collapse"
-                                    data-target="#mobile_tab3">
+                                    >
                 <span className="hidden-lg  ">
                 </span> Anwendung
                                 </h4>
@@ -2126,11 +2137,12 @@ class DrugDetail extends React.Component {
                                 </div>
                             </div>
                         </div>
-                        <div className="panel panel-default">
-                            <div className="panel-heading mob_heading">
+                        <div className="panel panel-default mob_panel_default">
+                            <div className="panel-heading mob_heading" data-toggle="collapse"
+                                 data-target="#mobile_tab4"
+                                 data-parent="#accordion">
                                 <h4 className="panel-title mob_title text-center-xs"
-                                    data-toggle="collapse"
-                                    data-target="#mobile_tab4">
+                                    >
                 <span className="hidden-lg ">
                 </span> Nebenwirkungen
                                 </h4>
@@ -2185,7 +2197,7 @@ class DrugDetail extends React.Component {
                             {this.renderActiveSubstance(drug)}
                             <div style={{cursor: "pointer"}} data-toggle="modal"
                                  data-target="#infosubstance"><i
-                                className="fas fa-info-circle"/></div>
+                                className="fas fa-info-circle circleinfo_icon"/></div>
                         </div>
                         {showAdditionalInfo &&
                         <div className="">
@@ -2274,7 +2286,7 @@ class DrugDetail extends React.Component {
         }
         return (
             <div onLoad={this.windowscroll.bind(this)}>
-                <div id="myCarousel" className="carousel carousel-fade" data-ride="carousel">
+                <div id="myCarousel" className="carousel carousel-fade hidden-xs hidden-sm" data-ride="carousel">
                     <div className="carousel-inner">
                         <div className="carousel-item active item_drug">
                             <div className="mask flex-center">
@@ -2321,7 +2333,7 @@ class DrugDetail extends React.Component {
                                     {this.renderBasicInformation()}
                                     {this.renderListLevels()}
                                 </div>
-                                <div className="col-xs-12 col-sm-12 col-md-9 infobox">
+                                <div className="col-xs-12 col-sm-12 col-md-9 infobox nopadd-xs" >
                                     {this.renderContent()}
                                 </div>
                             </div>

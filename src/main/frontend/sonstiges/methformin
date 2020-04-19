@@ -95,7 +95,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
     </div>
 </div>
 <div>
-    <h3 class="not_take"><i class="fas fa-user-injured bolt_grey"></i><i style="    font-size: 47px;
+    <h3 class="not_take"><i class="fas fa-user-injured bolt_grey"></i><i style="font-size: 47px;
         " class="fas fa-comments bolt_grey"></i><i class="fas fa-user-md bolt_grey" aria-hidden="true"></i> </h3>
 
 
@@ -339,17 +339,17 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic, ADDRE
 <div class="row">
     <h3>Pharmazeutischer Unternehmer </h3>
     <div class="row">
-        <div class="col-md-9">
+        <div class="col-sm-9 col-xs-12">
             <div class="row">
-                <div class="col-sm-1 addressicons"><i class="fas fa-building"></i></div>
-                <div class="col-sm-11 addresstext"> Winthrop Arzneimittel GmbH</div>
-                <div class="col-sm-1 addressicons"><a target="_blank"
+                <div class="col-sm-1 col-xs-2 addressicons"><i class="fas fa-building"></i></div>
+                <div class="col-sm-11 col-xs-10 addresstext"> Winthrop Arzneimittel GmbH</div>
+                <div class="col-sm-1 col-xs-2 addressicons"><a target="_blank"
                         href="https://www.google.com/maps/dir//Winthrop+Arzneimittel+GmbH,+Br%C3%BCningstra%C3%9Fe+50,+65929+Frankfurt+am+Main/@50.0952921,8.5009685,13z/data=!4m9!4m8!1m0!1m5!1m1!1s0x47bda095e911ecb7:0xb5fbe8c54559b16!2m2!1d8.5359878!2d50.0952423!3e0"><i
                             class="fas fa-location-arrow"></i></a></div>
-                <div class="col-sm-11 addresstext"> 65927 Frankfurt am Main</div>
+                <div class="col-sm-11 col-xs-10 addresstext"> 65927 Frankfurt am Main</div>
             </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-3 col-xs-offset-3 col-xs-6">
             <img class="img-responsive" src="/assets/images/company/winthrop.png" />
         </div>
     </div>
@@ -357,22 +357,22 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic, ADDRE
 <div class="row">
     <h3>Mitvertrieb </h3>
     <div class="row">
-        <div class="col-md-9">
+        <div class="col-sm-9 col-xs-12">
             <div class="row">
-                <div class="col-sm-1 addressicons"><i class="fas fa-building"></i></div>
-                <div class="col-sm-11 addresstext"> Zentiva Pharma GmbH</div>
-                <div class="col-sm-1 addressicons"><a target="_blank"
+                <div class="col-sm-1 col-xs-2 addressicons"><i class="fas fa-building"></i></div>
+                <div class="col-sm-11 col-xs-10 addresstext"> Zentiva Pharma GmbH</div>
+                <div class="col-sm-1 col-xs-2 addressicons"><a target="_blank"
                         href="https://www.google.com/maps/dir//Zentiva+Pharma+GmbH,+Industriepark+H%C3%B6chst+Geb+703,+65926+Frankfurt+am+Main/@50.0989498,8.5116507,13z/data=!4m8!4m7!1m0!1m5!1m1!1s0x47bda0a3179e8633:0xa88e06588048d613!2m2!1d8.54667!2d50.0989"><i
                             class="fas fa-location-arrow"></i></a></div>
-                <div class="col-sm-11 addresstext "> 65927 Frankfurt am Main</div>
-                <div class="col-sm-1 addressicons"><i class="fas fa-phone"></i></div>
-                <div class="col-sm-11 addresstext"> <a href="tel:+01802020010">(01 80) 2 02 00 10</a>
+                <div class="col-sm-11 col-xs-10 addresstext "> 65927 Frankfurt am Main</div>
+                <div class="col-sm-1 col-xs-2 addressicons"><i class="fas fa-phone"></i></div>
+                <div class="col-sm-11 col-xs-10 addresstext"> <a href="tel:+01802020010">(01 80) 2 02 00 10</a>
                 </div>
-                <div class="col-sm-1 addressicons"><i class="fas fa-fax"></i></div>
-                <div class="col-sm-11 addresstext"> (01 80) 2 02 00 11</div>
+                <div class="col-sm-1 col-xs-2 addressicons"><i class="fas fa-fax"></i></div>
+                <div class="col-sm-11 col-xs-10 addresstext"> (01 80) 2 02 00 11</div>
             </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-3 col-xs-offset-3 col-xs-6">
             <img class="img-responsive" src="/assets/images/company/zentiva.png" />
         </div>
     </div>
@@ -380,53 +380,53 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic, ADDRE
 <div class="row">
     <h3>Hersteller</h3>
     <div class="row">
-        <div class="col-md-9">
+        <div class="col-md-9 col-xs-12">
             <div class="row">
-                <div class="col-sm-1 addressicons"><i class="fas fa-building"></i></div>
-                <div class="col-sm-11 addresstext"> Chinoin Pharmaceutical and Chemical Works Private Co. Ltd.</div>
-                <div class="col-sm-1 addressicons"><a target="_blank"
+                <div class="col-sm-1 col-xs-2 addressicons"><i class="fas fa-building"></i></div>
+                <div class="col-sm-11 col-xs-10 addresstext"> Chinoin Pharmaceutical and Chemical Works Private Co. Ltd.</div>
+                <div class="col-sm-1 col-xs-2 addressicons"><a target="_blank"
                         href="https://www.google.com/maps/dir//Budapest,+CHINOIN+Zrt.,+T%C3%B3+u.+1,+1045+Hungary/@47.5547176,19.0658987,13z/data=!3m1!4b1!4m9!4m8!1m0!1m5!1m1!1s0x4741da4c50f05c65:0x105b3bb5d53429df!2m2!1d19.100918!2d47.554665!3e0"><i
                             class="fas fa-location-arrow"></i></a></div>
-                <div class="col-sm-11 addresstext"> Tó Utca 1-5 <br />
+                <div class="col-sm-11 col-xs-10 addresstext"> Tó Utca 1-5 <br />
                     H-1045 Budapest IV<br />
                     Ungarn</div>
             </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-3 col-xs-offset-3 col-xs-6">
         </div>
     </div>
     <hr>
     <div class="row">
-        <div class="col-md-9">
+        <div class="col-md-9 col-xs-12">
             <div class="row">
-                <div class="col-sm-1 addressicons"><i class="fas fa-building"></i></div>
-                <div class="col-sm-11 addresstext"> Chinoin Pharmaceutical and Chemical Works Private Co. Ltd.</div>
-                <div class="col-sm-1 addressicons"><a target="_blank"
+                <div class="col-sm-1 col-xs-2 addressicons"><i class="fas fa-building"></i></div>
+                <div class="col-sm-11 col-xs-10 addresstext"> Chinoin Pharmaceutical and Chemical Works Private Co. Ltd.</div>
+                <div class="col-sm-1 col-xs-2 addressicons"><a target="_blank"
                         href="https://www.google.com/maps/dir//L%C3%A9vai+u.+5,+Veresegyh%C3%A1z,+2112+Hungary/@47.6630433,19.2814932,17z/data=!4m9!4m8!1m0!1m5!1m1!1s0x4741cd954be98599:0x11594fda1621167!2m2!1d19.2836819!2d47.6630397!3e0"><i
                             class="fas fa-location-arrow"></i></a></div>
-                <div class="col-sm-11 addresstext"> 5 Lévai utca<br />
+                <div class="col-sm-11 col-xs-10 addresstext"> 5 Lévai utca<br />
                     H-2112 Veresegyhàz<br />
                     Ungarn</div>
             </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-3 col-xs-offset-3 col-xs-6">
         </div>
     </div>
     <hr>
     <div class="row">
-        <div class="col-md-9">
+        <div class="col-md-9 col-xs-12">
             <div class="row">
-                <div class="col-sm-1 addressicons"><i class="fas fa-building"></i></div>
-                <div class="col-sm-11 addresstext"> S.C. Zentiva S.A.</div>
-                <div class="col-sm-1 addressicons"><a target="_blank"
+                <div class="col-sm-1 col-xs-2 addressicons"><i class="fas fa-building"></i></div>
+                <div class="col-sm-11 col-xs-10 addresstext"> S.C. Zentiva S.A.</div>
+                <div class="col-sm-1 col-xs-2 addressicons"><a target="_blank"
                         href="https://www.google.com/maps/dir//Bulevardul+Theodor+Pallady+50,+Bucure%C8%99ti,+Romania/@44.4074356,26.1884463,17z/data=!4m9!4m8!1m0!1m5!1m1!1s0x40b1fc15fb0a6ef1:0x6638f157e3ba87ae!2m2!1d26.190635!2d44.4074318!3e0"><i
                             class="fas fa-location-arrow"></i></a></div>
-                <div class="col-sm-11 addresstext"> B-dul Theodor Pallady nr. 50, sector 3, <br />
+                <div class="col-sm-11 col-xs-10 addresstext"> B-dul Theodor Pallady nr. 50, sector 3, <br />
                     032266 Bukarest<br />
                     Rumänien</div>
             </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-3 col-xs-offset-3 col-xs-6">
         </div>
     </div>
 </div>

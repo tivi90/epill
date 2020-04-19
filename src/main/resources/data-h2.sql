@@ -1211,7 +1211,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
     </div>
 </div>
 <div>
-    <h3 class="not_take"><i class="fas fa-user-injured bolt_grey"></i><i style="    font-size: 47px;
+    <h3 class="not_take"><i class="fas fa-user-injured bolt_grey"></i><i style="font-size: 47px;
         " class="fas fa-comments bolt_grey"></i><i class="fas fa-user-md bolt_grey" aria-hidden="true"></i> </h3>
 
 
@@ -1455,17 +1455,17 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic, ADDRE
 <div class="row">
     <h3>Pharmazeutischer Unternehmer </h3>
     <div class="row">
-        <div class="col-md-9">
+        <div class="col-sm-9 col-xs-12">
             <div class="row">
-                <div class="col-sm-1 addressicons"><i class="fas fa-building"></i></div>
-                <div class="col-sm-11 addresstext"> Winthrop Arzneimittel GmbH</div>
-                <div class="col-sm-1 addressicons"><a target="_blank"
+                <div class="col-sm-1 col-xs-2 addressicons"><i class="fas fa-building"></i></div>
+                <div class="col-sm-11 col-xs-10 addresstext"> Winthrop Arzneimittel GmbH</div>
+                <div class="col-sm-1 col-xs-2 addressicons"><a target="_blank"
                         href="https://www.google.com/maps/dir//Winthrop+Arzneimittel+GmbH,+Br%C3%BCningstra%C3%9Fe+50,+65929+Frankfurt+am+Main/@50.0952921,8.5009685,13z/data=!4m9!4m8!1m0!1m5!1m1!1s0x47bda095e911ecb7:0xb5fbe8c54559b16!2m2!1d8.5359878!2d50.0952423!3e0"><i
                             class="fas fa-location-arrow"></i></a></div>
-                <div class="col-sm-11 addresstext"> 65927 Frankfurt am Main</div>
+                <div class="col-sm-11 col-xs-10 addresstext"> 65927 Frankfurt am Main</div>
             </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-3 col-xs-offset-3 col-xs-6">
             <img class="img-responsive" src="/assets/images/company/winthrop.png" />
         </div>
     </div>
@@ -1473,22 +1473,22 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic, ADDRE
 <div class="row">
     <h3>Mitvertrieb </h3>
     <div class="row">
-        <div class="col-md-9">
+        <div class="col-sm-9 col-xs-12">
             <div class="row">
-                <div class="col-sm-1 addressicons"><i class="fas fa-building"></i></div>
-                <div class="col-sm-11 addresstext"> Zentiva Pharma GmbH</div>
-                <div class="col-sm-1 addressicons"><a target="_blank"
+                <div class="col-sm-1 col-xs-2 addressicons"><i class="fas fa-building"></i></div>
+                <div class="col-sm-11 col-xs-10 addresstext"> Zentiva Pharma GmbH</div>
+                <div class="col-sm-1 col-xs-2 addressicons"><a target="_blank"
                         href="https://www.google.com/maps/dir//Zentiva+Pharma+GmbH,+Industriepark+H%C3%B6chst+Geb+703,+65926+Frankfurt+am+Main/@50.0989498,8.5116507,13z/data=!4m8!4m7!1m0!1m5!1m1!1s0x47bda0a3179e8633:0xa88e06588048d613!2m2!1d8.54667!2d50.0989"><i
                             class="fas fa-location-arrow"></i></a></div>
-                <div class="col-sm-11 addresstext "> 65927 Frankfurt am Main</div>
-                <div class="col-sm-1 addressicons"><i class="fas fa-phone"></i></div>
-                <div class="col-sm-11 addresstext"> <a href="tel:+01802020010">(01 80) 2 02 00 10</a>
+                <div class="col-sm-11 col-xs-10 addresstext "> 65927 Frankfurt am Main</div>
+                <div class="col-sm-1 col-xs-2 addressicons"><i class="fas fa-phone"></i></div>
+                <div class="col-sm-11 col-xs-10 addresstext"> <a href="tel:+01802020010">(01 80) 2 02 00 10</a>
                 </div>
-                <div class="col-sm-1 addressicons"><i class="fas fa-fax"></i></div>
-                <div class="col-sm-11 addresstext"> (01 80) 2 02 00 11</div>
+                <div class="col-sm-1 col-xs-2 addressicons"><i class="fas fa-fax"></i></div>
+                <div class="col-sm-11 col-xs-10 addresstext"> (01 80) 2 02 00 11</div>
             </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-3 col-xs-offset-3 col-xs-6">
             <img class="img-responsive" src="/assets/images/company/zentiva.png" />
         </div>
     </div>
@@ -1496,53 +1496,53 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic, ADDRE
 <div class="row">
     <h3>Hersteller</h3>
     <div class="row">
-        <div class="col-md-9">
+        <div class="col-md-9 col-xs-12">
             <div class="row">
-                <div class="col-sm-1 addressicons"><i class="fas fa-building"></i></div>
-                <div class="col-sm-11 addresstext"> Chinoin Pharmaceutical and Chemical Works Private Co. Ltd.</div>
-                <div class="col-sm-1 addressicons"><a target="_blank"
+                <div class="col-sm-1 col-xs-2 addressicons"><i class="fas fa-building"></i></div>
+                <div class="col-sm-11 col-xs-10 addresstext"> Chinoin Pharmaceutical and Chemical Works Private Co. Ltd.</div>
+                <div class="col-sm-1 col-xs-2 addressicons"><a target="_blank"
                         href="https://www.google.com/maps/dir//Budapest,+CHINOIN+Zrt.,+T%C3%B3+u.+1,+1045+Hungary/@47.5547176,19.0658987,13z/data=!3m1!4b1!4m9!4m8!1m0!1m5!1m1!1s0x4741da4c50f05c65:0x105b3bb5d53429df!2m2!1d19.100918!2d47.554665!3e0"><i
                             class="fas fa-location-arrow"></i></a></div>
-                <div class="col-sm-11 addresstext"> Tó Utca 1-5 <br />
+                <div class="col-sm-11 col-xs-10 addresstext"> Tó Utca 1-5 <br />
                     H-1045 Budapest IV<br />
                     Ungarn</div>
             </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-3 col-xs-offset-3 col-xs-6">
         </div>
     </div>
     <hr>
     <div class="row">
-        <div class="col-md-9">
+        <div class="col-md-9 col-xs-12">
             <div class="row">
-                <div class="col-sm-1 addressicons"><i class="fas fa-building"></i></div>
-                <div class="col-sm-11 addresstext"> Chinoin Pharmaceutical and Chemical Works Private Co. Ltd.</div>
-                <div class="col-sm-1 addressicons"><a target="_blank"
+                <div class="col-sm-1 col-xs-2 addressicons"><i class="fas fa-building"></i></div>
+                <div class="col-sm-11 col-xs-10 addresstext"> Chinoin Pharmaceutical and Chemical Works Private Co. Ltd.</div>
+                <div class="col-sm-1 col-xs-2 addressicons"><a target="_blank"
                         href="https://www.google.com/maps/dir//L%C3%A9vai+u.+5,+Veresegyh%C3%A1z,+2112+Hungary/@47.6630433,19.2814932,17z/data=!4m9!4m8!1m0!1m5!1m1!1s0x4741cd954be98599:0x11594fda1621167!2m2!1d19.2836819!2d47.6630397!3e0"><i
                             class="fas fa-location-arrow"></i></a></div>
-                <div class="col-sm-11 addresstext"> 5 Lévai utca<br />
+                <div class="col-sm-11 col-xs-10 addresstext"> 5 Lévai utca<br />
                     H-2112 Veresegyhàz<br />
                     Ungarn</div>
             </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-3 col-xs-offset-3 col-xs-6">
         </div>
     </div>
     <hr>
     <div class="row">
-        <div class="col-md-9">
+        <div class="col-md-9 col-xs-12">
             <div class="row">
-                <div class="col-sm-1 addressicons"><i class="fas fa-building"></i></div>
-                <div class="col-sm-11 addresstext"> S.C. Zentiva S.A.</div>
-                <div class="col-sm-1 addressicons"><a target="_blank"
+                <div class="col-sm-1 col-xs-2 addressicons"><i class="fas fa-building"></i></div>
+                <div class="col-sm-11 col-xs-10 addresstext"> S.C. Zentiva S.A.</div>
+                <div class="col-sm-1 col-xs-2 addressicons"><a target="_blank"
                         href="https://www.google.com/maps/dir//Bulevardul+Theodor+Pallady+50,+Bucure%C8%99ti,+Romania/@44.4074356,26.1884463,17z/data=!4m9!4m8!1m0!1m5!1m1!1s0x40b1fc15fb0a6ef1:0x6638f157e3ba87ae!2m2!1d26.190635!2d44.4074318!3e0"><i
                             class="fas fa-location-arrow"></i></a></div>
-                <div class="col-sm-11 addresstext"> B-dul Theodor Pallady nr. 50, sector 3, <br />
+                <div class="col-sm-11 col-xs-10 addresstext"> B-dul Theodor Pallady nr. 50, sector 3, <br />
                     032266 Bukarest<br />
                     Rumänien</div>
             </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-3 col-xs-offset-3 col-xs-6">
         </div>
     </div>
 </div>
@@ -2302,23 +2302,23 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic, addre
 <div class="row">
     <h3>Pharmazeutischer Unternehmer </h3>
     <div class="row">
-        <div class="col-md-9">
+        <div class="col-md-9 col-xs-12">
             <div class="row">
-                <div class="col-sm-1 addressicons"><i class="fas fa-building"></i></div>
-                <div class="col-sm-11 addresstext"> Dexcel &#174; Pharma GmbH</div>
-                <div class="col-sm-1 addressicons"><a target="_blank"
+                <div class="col-sm-1 col-xs-2 addressicons"><i class="fas fa-building"></i></div>
+                <div class="col-sm-11 col-xs-10 addresstext"> Dexcel &#174; Pharma GmbH</div>
+                <div class="col-sm-1 col-xs-2 addressicons"><a target="_blank"
                         href="https://www.google.com/maps/dir//Dexcel%C2%AE+Pharma+GmbH,+Carl-Zeiss-Stra%C3%9Fe+2,+63755+Alzenau/@50.0906865,9.0420783,17z/data=!4m9!4m8!1m0!1m5!1m1!1s0x47bd3c3014e2cf79:0xd1bcfa9606f28314!2m2!1d9.044267!2d50.0906865!3e0"><i
                             class="fas fa-location-arrow"></i></a></div>
-                <div class="col-sm-11 addresstext "> Carl-Zeiss-Str. 2<br />
+                <div class="col-sm-11 col-xs-10 addresstext "> Carl-Zeiss-Str. 2<br />
                     63755 Alzenau</div>
-                <div class="col-sm-1 addressicons"><i class="fas fa-phone"></i></div>
-                <div class="col-sm-11 addresstext"> <a href="tel:+0602394800">0 60 23 - 94 80 - 0</a>
+                <div class="col-sm-1 col-xs-2 addressicons"><i class="fas fa-phone"></i></div>
+                <div class="col-sm-11 col-xs-10 addresstext"> <a href="tel:+0602394800">0 60 23 - 94 80 - 0</a>
                 </div>
-                <div class="col-sm-1 addressicons"><i class="fas fa-fax"></i></div>
-                <div class="col-sm-11 addresstext"> 0 60 23 - 94 80 - 50</div>
+                <div class="col-sm-1 col-xs-2 addressicons"><i class="fas fa-fax"></i></div>
+                <div class="col-sm-11 col-xs-10 addresstext"> 0 60 23 - 94 80 - 50</div>
             </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-3 col-xs-offset-3 col-xs-6">
             <img class="img-responsive" src="/assets/images/company/dexcel.jpeg" />
         </div>
     </div>
@@ -2326,19 +2326,19 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic, addre
 <div class="row">
     <h3>Hersteller </h3>
     <div class="row">
-        <div class="col-md-9">
+        <div class="col-md-9 col-xs-12">
             <div class="row">
-                <div class="col-sm-1 addressicons"><i class="fas fa-building"></i></div>
-                <div class="col-sm-11 addresstext"> Dexcel &#174; Pharma GmbH</div>
-                <div class="col-sm-1 addressicons"><a target="_blank"
+                <div class="col-sm-1 col-xs-2 addressicons"><i class="fas fa-building"></i></div>
+                <div class="col-sm-11 col-xs-10 addresstext"> Dexcel &#174; Pharma GmbH</div>
+                <div class="col-sm-1 col-xs-2 addressicons"><a target="_blank"
                         href="https://www.google.com/maps/dir//Dexcel%C2%AE+Pharma+GmbH,+Carl-Zeiss-Stra%C3%9Fe+2,+63755+Alzenau/@50.0906865,9.0420783,17z/data=!4m9!4m8!1m0!1m5!1m1!1s0x47bd3c3014e2cf79:0xd1bcfa9606f28314!2m2!1d9.044267!2d50.0906865!3e0"><i
                             class="fas fa-location-arrow"></i></a></div>
-                <div class="col-sm-11 addresstext "> Steinbruch 2, Halle 15<br />
+                <div class="col-sm-11 col-xs-10 addresstext "> Steinbruch 2, Halle 15<br />
                     Lager im Industriepark Giesbert G.b.R. </br>
                     63755 Alzenau</div>
             </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-3 col-xs-offset-3 col-xs-6">
         </div>
     </div>
 </div>');
@@ -3196,29 +3196,29 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic, addre
 <div class="row">
     <h3>Pharmazeutischer Unternehmer </h3>
     <div class="row">
-        <div class="col-md-9">
+        <div class="col-md-9 col-xs-12">
             <div class="row">
-                <div class="col-sm-1 addressicons"><i class="fas fa-building"></i></div>
-                <div class="col-sm-11 addresstext"> ALIUD PHARMA&#174; GmbH </div>
-                <div class="col-sm-1 addressicons"><a target="_blank"
+                <div class="col-sm-1 col-xs-2 addressicons"><i class="fas fa-building"></i></div>
+                <div class="col-sm-11 col-xs-10 addresstext"> ALIUD PHARMA&#174; GmbH </div>
+                <div class="col-sm-1 col-xs-2 addressicons"><a target="_blank"
                         href="https://www.google.com/maps/dir//ALIUD+PHARMA+GmbH,+Gottlieb-Daimler-Stra%C3%9Fe+19,+89150+Laichingen/@48.4899986,9.6696289,13z/data=!4m9!4m8!1m0!1m5!1m1!1s0x479977e01269a341:0x773bf99f29081b09!2m2!1d9.7046482!2d48.489947!3e0"><i
                             class="fas fa-location-arrow"></i></a></div>
-                <div class="col-sm-11 addresstext ">  Gottlieb-Daimler-Straße 19
+                <div class="col-sm-11 col-xs-10 addresstext ">  Gottlieb-Daimler-Straße 19
                     <br />
                     89150 Laichingen</div>
-                <div class="col-sm-1 addressicons"><i class="fas fa-phone"></i></div>
-                <div class="col-sm-11 addresstext"> <a href="tel:+4973339651-0">+49 7333 9651-0</a>
+                <div class="col-sm-1 col-xs-2 addressicons"><i class="fas fa-phone"></i></div>
+                <div class="col-sm-11 col-xs-10 addresstext"> <a href="tel:+4973339651-0">+49 7333 9651-0</a>
                 </div>
-                <div class="col-sm-1 addressicons"><i class="fas fa-fax"></i></div>
-                <div class="col-sm-11 addresstext"> +49 7333 9651-4000</div>
-                <div class="col-sm-1 addressicons"><i class="fas fa-envelope"></i></div>
-                <div class="col-sm-11 addresstext"> <a href="mailto:info@aliud.de">info@aliud.de</a>
+                <div class="col-sm-1 col-xs-2 addressicons"><i class="fas fa-fax"></i></div>
+                <div class="col-sm-11 col-xs-10 addresstext"> +49 7333 9651-4000</div>
+                <div class="col-sm-1 col-xs-2 addressicons"><i class="fas fa-envelope"></i></div>
+                <div class="col-sm-11 col-xs-10 addresstext"> <a href="mailto:info@aliud.de">info@aliud.de</a>
                     </div>
-                <div class="col-sm-1 addressicons"><i class="fas fa-globe"></i></div>
-                <div class="col-sm-11 addresstext"> <a href="https://www.aliud.de/">https://www.aliud.de/</a></div>
+                <div class="col-sm-1 col-xs-2 addressicons"><i class="fas fa-globe"></i></div>
+                <div class="col-sm-11 col-xs-10 addresstext"> <a href="https://www.aliud.de/">https://www.aliud.de/</a></div>
             </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-3 col-xs-offset-3 col-xs-6">
             <img class="img-responsive" src="/assets/images/company/aliud_pharma.png" />
         </div>
     </div>
@@ -3226,19 +3226,19 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic, addre
 <div class="row">
     <h3>Hersteller </h3>
     <div class="row">
-        <div class="col-md-9">
+        <div class="col-md-9 col-xs-12">
             <div class="row">
-                <div class="col-sm-1 addressicons"><i class="fas fa-building"></i></div>
-                <div class="col-sm-11 addresstext"> STADA Arzneimittel AG</div>
-                <div class="col-sm-1 addressicons"><a target="_blank"
+                <div class="col-sm-1 col-xs-2 addressicons"><i class="fas fa-building"></i></div>
+                <div class="col-sm-11 col-xs-10 addresstext"> STADA Arzneimittel AG</div>
+                <div class="col-sm-1 col-xs-2 addressicons"><a target="_blank"
                     href="https://www.google.com/maps/dir//STADA+Arzneimittel+AG,+Stadastra%C3%9Fe+2+-+18,+61118+Bad+Vilbel/@50.2025518,8.7100077,13z/data=!4m9!4m8!1m0!1m5!1m1!1s0x47bd055e775a5881:0xb95e3aa98e269e66!2m2!1d8.745027!2d50.2025021!3e0"><i
                         class="fas fa-location-arrow"></i></a></i></div>
-                <div class="col-sm-11 addresstext">  Stadastraße 2-18
+                <div class="col-sm-11 col-xs-10 addresstext">  Stadastraße 2-18
                     <br />
                     61118 Bad Vilbel</div>
             </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-3 col-xs-offset-3 col-xs-6">
             <img class="img-responsive" src="/assets/images/company/stada.png" />
         </div>
     </div>
@@ -4301,23 +4301,23 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic, addre
 <div class="row">
     <h3>Pharmazeutischer Unternehmer </h3>
     <div class="row">
-        <div class="col-md-9">
+        <div class="col-md-9 col-xs-12">
             <div class="row">
-                <div class="col-sm-1 addressicons"><i class="fas fa-building"></i></div>
-                <div class="col-sm-11 addresstext"> ratiopharm GmbH</div>
-                <div class="col-sm-1 addressicons"><a target="_blank"
+                <div class="col-sm-1 col-xs-2 addressicons"><i class="fas fa-building"></i></div>
+                <div class="col-sm-11 col-xs-10 addresstext"> ratiopharm GmbH</div>
+                <div class="col-sm-1 col-xs-2 addressicons"><a target="_blank"
                         href="https://www.google.com/maps/dir//ratiopharm+GmbH,+Graf-Arco-Stra%C3%9Fe+3,+89079+Ulm/@48.3601717,9.9048307,13z/data=!3m1!4b1!4m9!4m8!1m0!1m5!1m1!1s0x4799638d5ca0c72d:0x1c035547b1518d2b!2m2!1d9.93985!2d48.36012!3e0"><i
                             class="fas fa-location-arrow"></i></a></div>
-                <div class="col-sm-11 addresstext "> Graf-Arco-Str. 3<br />
+                <div class="col-sm-11 col-xs-10 addresstext "> Graf-Arco-Str. 3<br />
                     89079 Ulm<br /></div>
-                <div class="col-sm-1 addressicons"><i class="fas fa-phone"></i></div>
-                <div class="col-sm-11 addresstext"> <a href="tel:+0602394800">0 60 23 - 94 80 - 0/a>
+                <div class="col-sm-1 col-xs-2 addressicons"><i class="fas fa-phone"></i></div>
+                <div class="col-sm-11 col-xs-10 addresstext"> <a href="tel:+0602394800">0 60 23 - 94 80 - 0/a>
                 </div>
-                <div class="col-sm-1 addressicons"><i class="fas fa-fax"></i></div>
-                <div class="col-sm-11 addresstext"> 0 60 23 - 94 80 - 50</div>
+                <div class="col-sm-1 col-xs-2 addressicons"><i class="fas fa-fax"></i></div>
+                <div class="col-sm-11 col-xs-10 addresstext"> 0 60 23 - 94 80 - 50</div>
             </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-3 col-xs-offset-3 col-xs-6">
             <img class="img-responsive" src="/assets/images/company/ratiopharm.png" />
         </div>
     </div>
@@ -4325,45 +4325,45 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic, addre
 <div class="row">
     <h3>Hersteller</h3>
     <div class="row">
-        <div class="col-md-9">
+        <div class="col-md-9 col-xs-12">
             <div class="row">
-                <div class="col-sm-1 addressicons"><i class="fas fa-building"></i></div>
-                <div class="col-sm-11 addresstext"> Merckle GmbH</div>
-                <div class="col-sm-1 addressicons"><a target="_blank"
+                <div class="col-sm-1 col-xs-2 addressicons"><i class="fas fa-building"></i></div>
+                <div class="col-sm-11 col-xs-10 addresstext"> Merckle GmbH</div>
+                <div class="col-sm-1 col-xs-2 addressicons"><a target="_blank"
                         href="https://www.google.com/maps/dir//Budapest,+CHINOIN+Zrt.,+T%C3%B3+u.+1,+1045+Hungary/@47.5547176,19.0658987,13z/data=!3m1!4b1!4m9!4m8!1m0!1m5!1m1!1s0x4741da4c50f05c65:0x105b3bb5d53429df!2m2!1d19.100918!2d47.554665!3e0"><i
                             class="fas fa-location-arrow"></i></a></div>
-                <div class="col-sm-11 addresstext"> Merckle GmbH<br />
+                <div class="col-sm-11 col-xs-10 addresstext"> Merckle GmbH<br />
                     Ludwig-Merckle-Str. 3<br />
                     89143 Blaubeuren</div>
             </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-3 col-xs-offset-3 col-xs-6">
         </div>
     </div>
     <hr>
     <div class="row">
         <h3>Hersteller</h3>
         <div class="row">
-            <div class="col-md-9">
-                <div class="col-sm-1 addressicons"><i class="fas fa-building"></i></div>
-                <div class="col-sm-11 addresstext"> Norton (Waterford) Limited<br>
+            <div class="col-md-9 col-xs-12">
+                <div class="col-sm-1 col-xs-2 addressicons"><i class="fas fa-building"></i></div>
+                <div class="col-sm-11 col-xs-10 addresstext"> Norton (Waterford) Limited<br>
                     T/A Ivax Pharmaceuticals Ireland<br>
                     T/A Teva Pharmaceuticals Ireland<br /></div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3 col-xs-offset-3 col-xs-6">
             </div>
         </div>
         <div class="row">
-            <div class="col-md-9">
-                <div class="col-sm-1 addressicons"><a target="_blank"
+            <div class="col-md-9 col-xs-12">
+                <div class="col-sm-1 col-xs-2 addressicons"><a target="_blank"
                         href="https://www.google.com/maps/dir//Norton+(Waterford)+Limited+Unit+301+IDA+Industrial+Park/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x4842c46bde1714e5:0x87702daf31da7cd3?sa=X&ved=2ahUKEwjsreTgheboAhWJM-wKHRaTAlcQ9RcwC3oECBMQEA"><i
                             class="fas fa-location-arrow"></i></a></div>
-                <div class="col-sm-11 addresstext"> Unit 301 IDA Industrial Park<br>
+                <div class="col-sm-11 col-xs-10 addresstext"> Unit 301 IDA Industrial Park<br>
                     Cork Road<br />
                     Waterford<br />
                     Irland</div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3 col-xs-offset-3 col-xs-6">
                 <img class="img-responsive" src="/assets/images/company/merkle.png" />
             </div>
         </div>

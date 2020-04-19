@@ -10,7 +10,7 @@ Navbar
     border-radius: 4px;
     position: fixed;
     bottom: 30px;
-    right: 30px;
+    right: 60px;
     transition: background-color .3s,
     opacity .5s, visibility .5s;
     opacity: 0;
@@ -861,7 +861,7 @@ footer .glyphicon {
 
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
     #myCarousel .carousel-item h4 {
         margin-top: 12%;
         margin-left: 0%;
@@ -995,6 +995,9 @@ footer .glyphicon {
     .carousel-haeufig-text {
         color: black;
         font-size: 12px;
+    }
+    .nopadd-xs {
+        padding: 0px !important;
     }
 }
 

@@ -27,6 +27,10 @@
     width: 50px !important;
 }
 
+.circleinfo_icon{
+    font-size: 20px;
+}
+
 .drug-feature-title {
     padding: 25px;
     font-size: 18px;
@@ -704,9 +708,9 @@
     border-bottom-color: #ddd !important;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
     .report-round-button {
-        right: 20%;
+        right: 60px;
     }
 
     .featurette-image {
@@ -760,6 +764,12 @@
         padding: 15px !important;
         height: 50px;
         background-color: #d3d3d3bd !important;
+        border: none!important;
+        border-radius: 0!important;
+    }
+
+    .mob_panel_default{
+        margin-bottom: 15px;
     }
 
     .content_header h1 {
@@ -815,9 +825,7 @@
         margin-bottom: 15px;
     }
 
-    .featurette-image {
-        max-width: 190px;
-    }
+  
 
     .round-button-outer1 .round-button-inner-main1 {
         width: 50px;
@@ -832,7 +840,7 @@
     }
 
     .like-round-button {
-        right: 4%;
+        right: 20px;
         position: fixed;
         z-index: 1001;
         cursor: pointer;
@@ -842,12 +850,16 @@
 
     .round_plus {
         bottom: 10%;
-        right: 4%;
-        margin-right: inherit;
+         margin-right: inherit;
     }
 
     .round_heart {
         bottom: 15%;
-        right: 4%;
+     }
+    .drug-feature-title {
+        padding: 17px 0 10px 0;
+    }
+    .backtomed{
+        padding:15px;
     }
 }
