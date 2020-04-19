@@ -14,32 +14,71 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
 <div class="row">
     <div class="col-sm-6 nopadd">
         <div class="row">
-            <div class="col-sm-12 info_notuse"><b>Allergisch </b> gegen
-                <ul>
-                    <li>Amlodipin</li>
-                    <li>Mikrokristalline Cellulose</li>
-                    <li>CalciumhydrogenphosphatDihydrat</li>
-                    <li>Carboxymethylstärke-Natrium (Typ A) (Ph. Eur.)</li>
-                    <li>Magnesiumstearat (Ph.Eur.)
-                        [pflanzlich]</li>
-                </ul>
+            <div class="col-sm-12 info_notuse">
+                <div class="row">
+                    <div class="col-xs-10 nopadd">
+                        <b>Allergisch </b> gegen
+                    </div>
+                    <div class="col-xs-2">
+                        <img width="32" src="./../../assets/disease/allergy.svg"></div>
+                </div>
+                <div class="row">
+                    <ul>
+                        <li>Amlodipin</li>
+                        <li>Mikrokristalline Cellulose</li>
+                        <li>CalciumhydrogenphosphatDihydrat</li>
+                        <li>Carboxymethylstärke-Natrium (Typ A) (Ph. Eur.)</li>
+                        <li>Magnesiumstearat (Ph.Eur.)
+                            [pflanzlich]</li>
+                    </ul>
+                </div>
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-12 info_notuse"> <b>Leiden an stark erniedrigtem Blutdruck (Hypotonie) </b> </div>
+            <div class="col-sm-12 info_notuse">
+                <div class="row">
+                    <div class="col-xs-10 nopadd">
+                        <b>Leiden an stark erniedrigtem Blutdruck (Hypotonie) </b>
+                    </div>
+                    <div class="col-xs-2">
+                        <img width="32" src="./../../assets/disease/bloodpressure.svg"></div>
+                </div>
+
+            </div>
         </div>
     </div>
     <div class="col-sm-6 nopadd">
         <div class="row">
-            <div class="col-sm-12 info_notuse"><b>Leiden an schwerer Verengung des Ausflusstraktes der linken
-                    Herzkammer</b>
-                (Aortenstenose) oder an einem <b>kardiogenen Schock</b> (dann kann Ihr Herz den Körper
-                nicht mehr mit genügend Blut versorgen)</div>
-        </div>
-        <div class="row">
-            <div class="col-sm-12 info_notuse"><b>Leiden an Herzinsuffizienz nach einem Herzinfarkt </b>
+            <div class="col-sm-12 info_notuse">
+                <div class="row">
+                    <div class="col-xs-10 nopadd">
+                        <b>Leiden an schwerer Verengung des Ausflusstraktes der linken
+                            Herzkammer</b> </div>
+                    <div class="col-xs-2">
+                        <img width="32" src="./../../assets/disease/heart.svg"></div>
+                </div>
+                <div class="row">
+                    <ul>
+                        (Aortenstenose) oder an einem <b>kardiogenen Schock</b> (dann kann Ihr Herz den Körper
+                        nicht mehr mit genügend Blut versorgen)
+                    </ul>
+                </div>
             </div>
         </div>
+
+        <div class="row">
+            <div class="col-sm-12 info_notuse">
+                <div class="row">
+                    <div class="col-xs-10 nopadd">
+                        <b>Leiden an Herzinsuffizienz nach einem Herzinfarkt</b>
+                    </div>
+                    <div class="col-xs-2">
+                        <img width="32" src="./../../assets/disease/heart.svg"></div>
+                </div>
+
+            </div>
+        </div>
+
     </div>
 </div>
 <div>
@@ -523,8 +562,8 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
 <hr>
 <h3><i class="far fa-calendar-alt epillcolor"></i> Verfallsdatum</h3>
 <p>Sie dürfen dieses Arzneimittel nach dem auf der Blisterpackung und der Faltschachtel nach
-    < Verwendbar bis > angegebenen Verfalldatum nicht mehr verwenden. Das Verfalldatum
-    bezieht sich auf den letzten Tag des angegebenen Monats.</p>
+    < Verwendbar bis> angegebenen Verfalldatum nicht mehr verwenden. Das Verfalldatum
+        bezieht sich auf den letzten Tag des angegebenen Monats.</p>
 <hr>
 <h3><i class="fas fa-trash-alt epillcolor"></i> Entsorgung des Medikaments</h3>
 <p>Entsorgen Sie Arzneimittel nicht im Abwasser. <br>Entsorgen Sie diese im Haushaltsabfall.<br>

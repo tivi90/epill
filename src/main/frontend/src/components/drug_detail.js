@@ -1343,7 +1343,7 @@ class DrugDetail extends React.Component {
 
                 <input onKeyUp={this.searchAdverseEffectDesktop.bind(this)} type="text" id="search" placeholder="Suche"
                        className="hidden-xs myInput"/>
-                <table id="table" className="sideffect_table hidden-xs">
+                <table id="table" className="sideffect_table hidden-sm hidden-xs">
                     <thead>
                     <tr>
                         <th>Erkrankung</th>

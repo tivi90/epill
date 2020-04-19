@@ -45,7 +45,6 @@ public class DrugCreator implements SendableEntityCreatorNoIndex {
                     Drug.PROPERTY_PACKAGING,
                     Drug.PROPERTY_PACKAGINGSECTION,
                     Drug.PROPERTY_SIDEEFFECTCONTENT,
-                    Drug.PROPERTY_ADVERSEEFFECTS,
                     Drug.PROPERTY_ACTIVESUBSTANCE,
                     Drug.PROPERTY_PHARMACEUTICALFORM,
                     Drug.PROPERTY_WORDEXPLAINATION,
@@ -123,10 +122,6 @@ public class DrugCreator implements SendableEntityCreatorNoIndex {
        if (Drug.PROPERTY_WORDEXPLAINATION.equalsIgnoreCase(attribute)) {
           return ((Drug) target).getWordExplaination();
        }
-
-        if (Drug.PROPERTY_ADVERSEEFFECTS.equalsIgnoreCase(attribute)) {
-            return ((Drug) target).getAdverseEffects();
-        }
 
         if (Drug.PROPERTY_INTERACTION.equalsIgnoreCase(attribute)) {
             return ((Drug) target).getInteraction();
@@ -289,16 +284,6 @@ public class DrugCreator implements SendableEntityCreatorNoIndex {
           ((Drug) target).withoutWordExplaination((WordExplaination) value);
           return true;
        }
-
-        if (Drug.PROPERTY_ADVERSEEFFECTS.equalsIgnoreCase(attrName)) {
-            ((Drug) target).withAdverseEffects((AdverseEffect) value);
-            return true;
-        }
-
-        if ((Drug.PROPERTY_ADVERSEEFFECTS + SendableEntityCreator.REMOVE).equalsIgnoreCase(attrName)) {
-            ((Drug) target).withoutAdverseEffects((AdverseEffect) value);
-            return true;
-        }
 
         if (Drug.PROPERTY_INTERACTION.equalsIgnoreCase(attrName)) {
             ((Drug) target).withInteraction((Interaction) value);

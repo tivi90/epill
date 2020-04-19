@@ -46858,7 +46858,7 @@ var DrugDetail = function (_React$Component) {
                     className: "hidden-xs myInput" }),
                 _react2.default.createElement(
                     "table",
-                    { id: "table", className: "sideffect_table hidden-xs" },
+                    { id: "table", className: "sideffect_table hidden-sm hidden-xs" },
                     _react2.default.createElement(
                         "thead",
                         null,

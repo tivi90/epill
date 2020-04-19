@@ -44,7 +44,6 @@ import com.doccuty.epill.model.ProductGroup;
 import com.doccuty.epill.model.IndicationGroup;
 import com.doccuty.epill.model.PharmaceuticalForm;
 import com.doccuty.epill.model.WordExplaination;
-import com.doccuty.epill.model.AdverseEffect;
 import com.doccuty.epill.model.Interaction;
 import com.doccuty.epill.model.util.ItemInvocationSet;
 import com.doccuty.epill.model.util.UserSet;
@@ -69,7 +68,6 @@ public class Drug extends SimpleDrug {
 		withoutActiveSubstance(this.getActiveSubstance().toArray(new ActiveSubstance[this.getActiveSubstance().size()]));
 		withoutPharmaceuticalForm(this.getPharmaceuticalForm().toArray(new PharmaceuticalForm[this.getPharmaceuticalForm().size()]));
 		withoutWordExplaination(this.getWordExplaination().toArray(new WordExplaination[this.getWordExplaination().size()]));
-		withoutAdverseEffects(this.getAdverseEffects().toArray(new AdverseEffect[this.getAdverseEffects().size()]));
 		withoutInteraction(this.getInteraction().toArray(new Interaction[this.getInteraction().size()]));
 		withoutClicks(this.getClicks().toArray(new ItemInvocation[this.getClicks().size()]));
 		withoutDisease(this.getDisease().toArray(new Disease[this.getDisease().size()]));
@@ -680,66 +678,7 @@ public class Drug extends SimpleDrug {
 	}
 
 
-	/********************************************************************
-	 * <pre>
-	 *              many                       many
-	 * Drug ----------------------------------- AdverseEffect
-	 *              drug                   adverseEffects
-	 * </pre>
-	 */
 
-	public static final String PROPERTY_ADVERSEEFFECTS = "adverseEffects";
-
-	@ManyToMany(cascade = CascadeType.ALL)
-	@JoinTable(name = "drug_adverse_effect", joinColumns = @JoinColumn(name = "iddrug"), inverseJoinColumns = @JoinColumn(name = "idadverse_effect"))
-	private List<AdverseEffect> adverseEffects = null;
-
-	public List<AdverseEffect> getAdverseEffects() {
-		if (this.adverseEffects == null) {
-			return new ArrayList<AdverseEffect>();
-		}
-
-		return this.adverseEffects;
-	}
-
-	public Drug withAdverseEffects(AdverseEffect... value) {
-		if (value == null) {
-			return this;
-		}
-		for (AdverseEffect item : value) {
-			if (item != null) {
-				if (this.adverseEffects == null) {
-					this.adverseEffects = new ArrayList<AdverseEffect>();
-				}
-
-				boolean changed = this.adverseEffects.add(item);
-
-				if (changed) {
-					item.withDrug(this);
-					firePropertyChange(PROPERTY_ADVERSEEFFECTS, null, item);
-				}
-			}
-		}
-		return this;
-	}
-
-	public Drug withoutAdverseEffects(AdverseEffect... value) {
-		for (AdverseEffect item : value) {
-			if ((this.adverseEffects != null) && (item != null)) {
-				if (this.adverseEffects.remove(item)) {
-					item.withoutDrug(this);
-					firePropertyChange(PROPERTY_ADVERSEEFFECTS, item, null);
-				}
-			}
-		}
-		return this;
-	}
-
-	public AdverseEffect createAdverseEffects() {
-		AdverseEffect value = new AdverseEffect();
-		withAdverseEffects(value);
-		return value;
-	}
 
 	/********************************************************************
 	 * <pre>

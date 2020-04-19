@@ -77,7 +77,6 @@
 /home/tivi90/epill_t/src/main/java/com/doccuty/epill/model/util/PharmaceuticalFormSet.java
 /home/tivi90/epill_t/src/main/java/com/doccuty/epill/user/SimpleUserRepository.java
 /home/tivi90/epill_t/src/main/java/com/doccuty/epill/model/LoginAttempt.java
-/home/tivi90/epill_t/src/main/java/com/doccuty/epill/model/util/AdverseEffectSet.java
 /home/tivi90/epill_t/src/main/java/com/doccuty/epill/model/util/CountryCreator.java
 /home/tivi90/epill_t/src/main/java/com/doccuty/epill/packaging/PackagingTopicRepository.java
 /home/tivi90/epill_t/src/main/java/com/doccuty/epill/model/util/PackagingSectionSet.java
@@ -88,11 +87,9 @@
 /home/tivi90/epill_t/src/main/java/com/doccuty/epill/model/util/ActiveSubstanceSet.java
 /home/tivi90/epill_t/src/main/java/com/doccuty/epill/model/util/UserSet.java
 /home/tivi90/epill_t/src/main/java/com/doccuty/epill/model/util/PackagingTopicCreator.java
-/home/tivi90/epill_t/src/main/java/com/doccuty/epill/model/util/AdverseEffectCreator.java
 /home/tivi90/epill_t/src/main/java/com/doccuty/epill/util/AddressServiceImpl.java
 /home/tivi90/epill_t/src/main/java/com/doccuty/epill/user/SimpleUser.java
 /home/tivi90/epill_t/src/main/java/com/doccuty/epill/country/CountryService.java
-/home/tivi90/epill_t/src/main/java/com/doccuty/epill/model/AdverseEffect.java
 /home/tivi90/epill_t/src/main/java/com/doccuty/epill/model/util/PackagingCreator.java
 /home/tivi90/epill_t/src/main/java/com/doccuty/epill/model/util/CreatorCreator.java
 /home/tivi90/epill_t/src/main/java/com/doccuty/epill/authentication/JWTFilter.java

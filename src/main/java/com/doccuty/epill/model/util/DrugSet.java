@@ -26,29 +26,17 @@ import java.util.Collection;
 import de.uniks.networkparser.list.NumberList;
 import de.uniks.networkparser.list.ObjectSet;
 import java.util.Collections;
-import com.doccuty.epill.model.util.PackagingSectionSet;
-import com.doccuty.epill.model.util.ActiveSubstanceSet;
+
 import com.doccuty.epill.disease.Disease;
 import com.doccuty.epill.drug.Drug;
 import com.doccuty.epill.iteminvocation.ItemInvocation;
 import com.doccuty.epill.model.ActiveSubstance;
-import com.doccuty.epill.model.util.ProductGroupSet;
 import com.doccuty.epill.packagingsection.PackagingSection;
 import com.doccuty.epill.sideeffectcontent.SideEffectContent;
 import com.doccuty.epill.model.ProductGroup;
-import com.doccuty.epill.model.util.IndicationGroupSet;
 import com.doccuty.epill.model.IndicationGroup;
-import com.doccuty.epill.model.util.PharmaceuticalFormSet;
-import com.doccuty.epill.model.util.WordExplainationSet;
 import com.doccuty.epill.model.PharmaceuticalForm;
-import com.doccuty.epill.model.WordExplaination;
-import com.doccuty.epill.model.util.AdverseEffectSet;
-import com.doccuty.epill.model.AdverseEffect;
-import com.doccuty.epill.model.SideEffect;
-import com.doccuty.epill.model.util.InteractionSet;
 import com.doccuty.epill.model.Interaction;
-import com.doccuty.epill.model.util.ItemInvocationSet;
-import com.doccuty.epill.model.util.DiseaseSet;
 
 public class DrugSet extends HashSet<Drug>
 {
@@ -723,86 +711,6 @@ public class DrugSet extends HashSet<Drug>
       for (Drug obj : this)
       {
          obj.withoutPharmaceuticalForm(value);
-      }
-      
-      return this;
-   }
-
-   /**
-    * Loop through the current set of Drug objects and collect a set of the AdverseEffect objects reached via adverseEffects. 
-    * 
-    * @return Set of AdverseEffect objects reachable via adverseEffects
-    */
-   public AdverseEffectSet getAdverseEffects()
-   {
-      AdverseEffectSet result = new AdverseEffectSet();
-      
-      for (Drug obj : this)
-      {
-         result.with(obj.getAdverseEffects());
-      }
-      
-      return result;
-   }
-
-   /**
-    * Loop through the current set of Drug objects and collect all contained objects with reference adverseEffects pointing to the object passed as parameter. 
-    * 
-    * @param value The object required as adverseEffects neighbor of the collected results. 
-    * 
-    * @return Set of AdverseEffect objects referring to value via adverseEffects
-    */
-   public DrugSet filterAdverseEffects(Object value)
-   {
-      ObjectSet neighbors = new ObjectSet();
-
-      if (value instanceof Collection)
-      {
-         neighbors.addAll((Collection<?>) value);
-      }
-      else
-      {
-         neighbors.add(value);
-      }
-      
-      DrugSet answer = new DrugSet();
-      
-      for (Drug obj : this)
-      {
-         if ( ! Collections.disjoint(neighbors, obj.getAdverseEffects()))
-         {
-            answer.add(obj);
-         }
-      }
-      
-      return answer;
-   }
-
-   /**
-    * Loop through current set of ModelType objects and attach the Drug object passed as parameter to the AdverseEffects attribute of each of it. 
-    * 
-    * @return The original set of ModelType objects now with the new neighbor attached to their AdverseEffects attributes.
-    */
-   public DrugSet withAdverseEffects(AdverseEffect value)
-   {
-      for (Drug obj : this)
-      {
-         obj.withAdverseEffects(value);
-      }
-      
-      return this;
-   }
-
-   /**
-    * Loop through current set of ModelType objects and remove the Drug object passed as parameter from the AdverseEffects attribute of each of it. 
-    * 
-    * @return The original set of ModelType objects now without the old neighbor.
-    */
-   public DrugSet withoutAdverseEffects(AdverseEffect value)
-   {
-      for (Drug obj : this)
-      {
-         obj.withoutAdverseEffects(value);
       }
       
       return this;

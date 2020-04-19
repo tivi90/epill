@@ -15,83 +15,156 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
 <div class="row">
     <div class="col-sm-6 nopadd">
         <div class="row">
-            <div class="col-sm-12 info_notuse"><b>Allergisch </b> gegen
-                <ul>
-                    <li>Metforminhydrochlorid</li>
-                    <li>Hypromellose</li>
-                    <li>Povidon K25</li>
-                    <li>Magnesiumstearat (Ph. Eur.)</li>
-                    <li>Macrogol 6000</li>
-                    <li>Titandioxid (E 171)</li>
-                </ul>
+            <div class="col-sm-12 info_notuse">
+                <div class="row">
+                    <div class="col-xs-10 nopadd">
+                        <b>Allergisch </b> gegen
+                    </div>
+                    <div class="col-xs-2">
+                        <img width="32" src="./../../assets/disease/allergy.svg"></div>
+                </div>
+                <div class="row">
+                    <ul>
+                        <li>Metforminhydrochlorid</li>
+                        <li>Hypromellose</li>
+                        <li>Povidon K25</li>
+                        <li>Magnesiumstearat (Ph. Eur.)</li>
+                        <li>Macrogol 6000</li>
+                        <li>Titandioxid (E 171)</li>
+                    </ul>
+                </div>
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-12 info_notuse"> <b>Leberprobleme </b> </div>
+            <div class="col-sm-12 info_notuse">
+                <div class="row">
+                    <div class="col-xs-10 nopadd">
+                        <b>Leberprobleme</b>
+                    </div>
+                    <div class="col-xs-2">
+                        <img width="32" src="./../../assets/disease/liver.svg"></div>
+                </div>
+                    </div>
         </div>
         <div class="row">
-            <div class="col-sm-12 info_notuse"><b>Schwere Einschränkung der Nierenfunktion </b> (glomeruläre
-                Filtrationsrate
-                unter 30 ml/min).</div>
+            <div class="col-sm-12 info_notuse">
+                <div class="row">
+                    <div class="col-xs-10 nopadd">
+                        <b>Schwere Einschränkung der Nierenfunktion </b> (glomeruläre
+                        Filtrationsrate
+                        unter 30 ml/min)
+                    </div>
+                    <div class="col-xs-2">
+                        <img width="32" src="./../../assets/disease/kidney.svg"></div>
+                </div>
+                    </div>
         </div>
         <div class="row">
-            <div class="col-sm-12 info_notuse"><b>Unkontrollierten Diabetes</b>
-                Beispiel mit
-                <ul>
-                    <li>schwerer Hyperglykämie (sehr hohem Blutzucker), </li>
-                    <li>Übelkeit, </li>
-                    <li>Erbrechen, </li>
-                    <li>Durchfall, </li>
-                    <li>schneller Gewichtsabnahme,</li>
-                    <li><a class="info_words" type="button" data-toggle="modal"
-                            data-target="#laktatazidose">Laktatazidose</a>
-                    </li>
-                    <li><a class="info_words" type="button" data-toggle="modal"
-                            data-target="#ketoazidose">Ketoazidose</a>
-                    </li>
-                </ul>
+            <div class="col-sm-12 info_notuse">
+                <div class="row">
+                    <div class="col-xs-10 nopadd">
+                        <b>Unkontrollierten Diabetes </b> 
+                    </div>
+                    <div class="col-xs-2">
+                        <img width="32" src="./../../assets/disease/diabetes.svg"></div>
+                </div>
+                <div class="row">
+                    Beispiel mit
+                    <ul>
+                        <li>schwerer Hyperglykämie (sehr hohem Blutzucker), </li>
+                        <li>Übelkeit, </li>
+                        <li>Erbrechen, </li>
+                        <li>Durchfall, </li>
+                        <li>schneller Gewichtsabnahme,</li>
+                        <li><a class="info_words" type="button" data-toggle="modal"
+                                data-target="#laktatazidose">Laktatazidose</a>
+                        </li>
+                        <li><a class="info_words" type="button" data-toggle="modal"
+                                data-target="#ketoazidose">Ketoazidose</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-12 info_notuse">Trinken von viel Alkohol oder Leiden unter einer
-                Alkoholvergiftung
-                leiden.</div>
+            <div class="col-sm-12 info_notuse">
+                <div class="row">
+                    <div class="col-xs-10 nopadd">
+                        <b>Trinken von viel Alkohol oder Leiden unter einer
+                            Alkoholvergiftung
+                            leiden. </b> 
+                    </div>
+                    <div class="col-xs-2">
+                        <img width="32" src="./../../assets/disease/nonalcohol.svg"></div>
+                </div>
+                    </div>
         </div>
     </div>
     <div class="col-sm-6 nopadd">
         <div class="row">
-            <div class="col-sm-12 info_notuse"><b>Verlust von zu viel Körperwasser (Dehydratation) </b>
-                Beispiel durch
-                <ul>
-                    <li>lang andauernden oder starken Durchfall</li>
-                    <li>wenn Sie sich mehrmals hintereinander erbrochen
-                        haben.</li>
-                </ul>
-                Dieser Flüssigkeitsverlust könnte zu Nierenproblemen führen, wodurch Sie gefährdet
-                sind, eine Übersäuerung mit Milchsäure (<a class="info_words" type="button" data-toggle="modal"
-                    data-target="#laktatazidose">Laktatazidose</a>) zu entwickeln .
+            <div class="col-sm-12 info_notuse">
+                <div class="row">
+                    <div class="col-xs-10 nopadd">
+                        <b>Verlust von zu viel Körperwasser (Dehydratation) </b>
+                    </div>
+                    <div class="col-xs-2">
+                        <img width="32" src="./../../assets/disease/dehydratation.svg"></div>
+                </div>
+                <div class="row">
+                    Beispiel durch
+                    <ul>
+                        <li>lang andauernden oder starken Durchfall</li>
+                        <li>wenn Sie sich mehrmals hintereinander erbrochen
+                            haben.</li>
+                    </ul>
+                    Dieser Flüssigkeitsverlust könnte zu Nierenproblemen führen, wodurch Sie gefährdet
+                    sind, eine Übersäuerung mit Milchsäure (<a class="info_words" type="button" data-toggle="modal"
+                        data-target="#laktatazidose">Laktatazidose</a>) zu entwickeln .
+                </div>
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-12 info_notuse"><b>Leiden an schweren Infektion </b>
-                Beispiel einer Infektion der Lunge, der Bronchien oder der Niere. </br>
-                Schwere Infektionen könnten zu Nierenproblemen führen, wodurch Sie gefährdet sind, eine
-                Übersäuerung mit
-                Milchsäure (<a class="info_words" type="button" data-toggle="modal"
-                    data-target="#laktatazidose">Laktatazidose</a>) zu
-                entwickeln.
+            <div class="col-sm-12 info_notuse">
+                <div class="row">
+                    <div class="col-xs-10 nopadd">
+                        <b>Leiden an schweren Infektion </b>
+                    </div>
+                    <div class="col-xs-2">
+                        <img width="32" src="./../../assets/disease/infection.svg"></div>
+                </div>
+                <div class="row">
+                    Beispiel einer Infektion der Lunge, der Bronchien oder der Niere. </br>
+                    Schwere Infektionen könnten zu Nierenproblemen führen, wodurch Sie gefährdet sind, eine
+                    Übersäuerung mit
+                    Milchsäure (<a class="info_words" type="button" data-toggle="modal"
+                        data-target="#laktatazidose">Laktatazidose</a>) zu
+                    entwickeln.
+                </div>
             </div>
         </div>
+  
         <div class="row">
-            <div class="col-sm-12 info_notuse"> Behandlung wegen dekompensierter Herzschwäche oder Erleiden
-                eines
-                Herzinfarkt vor
-                Kurzem, schwere Kreislaufprobleme (wie zum Beispiel einen Schock) oder
-                Schwierigkeiten mit der Atmung haben. <br> Dies könnte zu einem Sauerstoffmangel im Gewebe
-                führen, wodurch Sie gefährdet sind, eine Übersäuerung mit Milchsäure (<a class="info_words"
-                    type="button" data-toggle="modal" data-target="#laktatazidose">Laktatazidose</a>) zu
-                entwickeln.</div>
+            <div class="col-sm-12 info_notuse">
+                <div class="row">
+                    <div class="col-xs-10 nopadd">
+                        <b>Behandlung wegen dekompensierter Herzschwäche oder Erleiden
+                            eines
+                            Herzinfarkt vor
+                            Kurzem, schwere Kreislaufprobleme (wie zum Beispiel einen Schock) oder
+                            Schwierigkeiten mit der Atmung haben. </b>
+                    </div>
+                    <div class="col-xs-2">
+                        <img width="32" src="./../../assets/disease/heart.svg"></div>
+                </div>
+                <div class="row">
+                    Dies könnte zu einem Sauerstoffmangel im Gewebe
+                    führen, wodurch Sie gefährdet sind, eine Übersäuerung mit Milchsäure (<a class="info_words"
+                        type="button" data-toggle="modal" data-target="#laktatazidose">Laktatazidose</a>) zu
+                    entwickeln.
+                </div>
+            </div>
         </div>
+
     </div>
 </div>
 <div>

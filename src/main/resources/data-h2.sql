@@ -14,7 +14,6 @@ DELETE FROM drug_pharmaceutical_form;
 DELETE FROM drug_word_explaination;
 DELETE FROM drug_drug_feature;
 DELETE FROM drug_disease;
-DELETE FROM drug_adverse_effect;
 DELETE FROM user_preferred_topic;
 DELETE FROM user_disease;
 DELETE FROM user_drug_feature;
@@ -23,7 +22,6 @@ DELETE FROM interaction_drug;
 DELETE FROM drug_interaction;
 
 DELETE FROM tag;
-DELETE FROM adverse_effect;
 DELETE FROM packaging;
 DELETE FROM packaging_section;
 DELETE FROM packaging_topic;
@@ -544,8 +542,7 @@ INSERT INTO side_effect (id, side_effect ) VALUES (5,'sehrselten');
 INSERT INTO side_effect (id, side_effect ) VALUES (6,'nichtbekannt');
 
 
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text ) VALUES (1,1,0,11,1,'Nicht
-Bekannt','<b>Verdauungsprobleme wie</b>
+INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text ) VALUES (1,1,0,11,1,'Verdauungsprobleme','
 <ul>
     <li>Übelkeit</li>
     <li>Erbrechen</li>
@@ -563,9 +560,8 @@ Einnahmen und die Einnahme von Metformin Lich mit oder direkt nach einer Mahlzei
     nicht weiter ein
     und sprechen Sie mit Ihrem
     Arzt.</span>');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (2,2,0,11,2,'Nicht
-Bekannt','Geschmacksveränderungen');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (3,5,0,11,5,'Nicht
+INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (2,2,0,11,2,'Geschmackempfinden','Geschmacksveränderungen');
+INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (3,5,0,11,5,'Blut und Stoffwechselerkrankung
 Bekannt','<b>Übersäuerung des Blutes mit Milchsäure (<a class=" info_words" type="button" data-toggle="modal"
         data-target="#laktatazidose">Laktatazidose</a>)</b> </br>Dies
 ist eine
@@ -586,8 +582,7 @@ Metformin Lich nicht weiter ein und sprechen Sie sofort mit Ihrem Arzt.</br></br
 </ul>
 </br>
 <b>Niedrige Konzentration von Vitamin B12 im Blut.</b>');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (4,6,0,11,6,'Nicht
-Bekannt','<ul>
+INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (4,6,0,11,6,'Bluterkrankung','<ul>
     <li>Verringerte Anzahl der roten Blutkörperchen, die eine blassgelbe Haut,
         Schwächegefühl
         oder Atemlosigkeit verursachen kann (hämolytische Anämie).</li>
@@ -604,10 +599,9 @@ Bekannt','<ul>
         Kribbeln oder Taubheitsgefühl verursachen kann (periphere Neuropathie).
     </li>
 </ul>');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (5,1,0,12,1,'Nicht
-Bekannt','Knöchelschwellungen (Ödeme)');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (6,2,0,12,2,'Nicht
-Bekannt',' <ul>
+INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (5,1,0,12,1,'Schwellungen','Knöchelschwellungen (Ödeme)');
+INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (6,2,0,12,2,'
+Erkrankungen des Nervensystems',' <ul>
     <li>Kopfschmerzen, Schwindel, Schläfrigkeit (insbesondere zu Beginn der Behandlung)</li>
     <li>Herzklopfen (Palpitationen), Hautrötung mit Wärmegefühl</li>
     <li>Bauchschmerzen, Übelkeit</li>
@@ -669,90 +663,156 @@ Verminderung bestimmter weißer Blutkörperchen mit Infektneigung und schweren A
 Abnahme bestimmter Laborwerte (Hämoglobin und Hämatokrit), herabgesetzte Funktion des Knochenmarks
 (Knochenmarksdepression), Lymphknotenschwellung, Autoimmunkrankheiten.
 ');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (12,3,0,13,3,' Stoffwechsel- und Ernährungsstörungen ','Zu niedrige Blutzuckerwerte (Hypoglykämie).
+INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (12,3,0,13,3,'
+Stoffwechsel- und Ernährungsstörungen ','Zu niedrige Blutzuckerwerte (Hypoglykämie).
 ');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (13,1,0,13,1,' Augenerkrankungen ','Verschwommensehen
+INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (13,1,0,13,1,'
+Augenerkrankungen ','Verschwommensehen
 ');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (14,1,0,13,1,' Herz-Kreislauf-System ','Schwindel ');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (15,2,0,13,2,' Herz-Kreislauf-System ','Übermäßige Blutdrucksenkung einschließlich übermäßiger Blutdruckabfall bei Lagewechsel vom Liegen zum Stehen (orthostatische Hypotonie), kurzzeitiger Bewusstseinsverlust (Synkope), Herzinfarkt oder Schlaganfall, vermutlich infolge übermäßigen Blutdruckabfalls bei gefährdeten Patienten (Patienten mit Durchblutungsstörungen im Bereich des Herzens und/oder des Gehirns), Schmerzenim Brustkorb, Herzrhythmusstörungen, Herzengegefühl (Angina pectoris), beschleunigter Herzschlag (Tachykardie). ');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (16,3,0,13,3,' Herz-Kreislauf-System ','Übermäßiger Blutdruckabfall bei Lagewechsel vom Liegen zum Stehen (orthostatische Hypotonie), Herzklopfen.
+INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (14,1,0,13,1,'
+Herz-Kreislauf-System ','Schwindel ');
+INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (15,2,0,13,2,'
+Herz-Kreislauf-System ','Übermäßige Blutdrucksenkung einschließlich übermäßiger Blutdruckabfall bei Lagewechsel vom
+Liegen zum Stehen (orthostatische Hypotonie), kurzzeitiger Bewusstseinsverlust (Synkope), Herzinfarkt oder Schlaganfall,
+vermutlich infolge übermäßigen Blutdruckabfalls bei gefährdeten Patienten (Patienten mit Durchblutungsstörungen im
+Bereich des Herzens und/oder des Gehirns), Schmerzenim Brustkorb, Herzrhythmusstörungen, Herzengegefühl (Angina
+pectoris), beschleunigter Herzschlag (Tachykardie). ');
+INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (16,3,0,13,3,'
+Herz-Kreislauf-System ','Übermäßiger Blutdruckabfall bei Lagewechsel vom Liegen zum Stehen (orthostatische Hypotonie),
+Herzklopfen.
 ');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (17,4,0,13,4,' Herz-Kreislauf-System ','Durch Gefäßkrämpfe bedingte Durchblutungsstörungen an Händen und Füßen (Raynaud-Phänomen).
+INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (17,4,0,13,4,'
+Herz-Kreislauf-System ','Durch Gefäßkrämpfe bedingte Durchblutungsstörungen an Händen und Füßen (Raynaud-Phänomen).
 ');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (18,1,0,13,1,' Erkrankungen der Atemwege, des Brustraums und Mediastinums
+INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (18,1,0,13,1,'
+Erkrankungen der Atemwege, des Brustraums und Mediastinums
 ','Übelkeit
 ');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (19,2,0,13,2,' Erkrankungen der Atemwege, des Brustraums und Mediastinums
+INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (19,2,0,13,2,'
+Erkrankungen der Atemwege, des Brustraums und Mediastinums
 ','Durchfall, Bauchschmerzen, Geschmacksveränderungen.
 ');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (20,3,0,13,3,' Erkrankungen der Atemwege, des Brustraums und Mediastinums
-','Darmverschluss (Ileus), Entzündung der Bauchspeicheldrüse, Erbrechen, Verdauungsstörungen, Verstopfung, Appetitlosigkeit, Magenreizung, Mundtrockenheit, Magengeschwür (peptisches Ulkus).
+INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (20,3,0,13,3,'
+Erkrankungen der Atemwege, des Brustraums und Mediastinums
+','Darmverschluss (Ileus), Entzündung der Bauchspeicheldrüse, Erbrechen, Verdauungsstörungen, Verstopfung,
+Appetitlosigkeit, Magenreizung, Mundtrockenheit, Magengeschwür (peptisches Ulkus).
 ');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (21,4,0,13,4,' Erkrankungen der Atemwege, des Brustraums und Mediastinums
-','Entzündungen der Mundschleimhaut mit Geschwürbildung (Stomatitis/aphthöse Ulzerationen), Entzündungen der Zungenschleimhaut (Glossitis).
+INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (21,4,0,13,4,'
+Erkrankungen der Atemwege, des Brustraums und Mediastinums
+','Entzündungen der Mundschleimhaut mit Geschwürbildung (Stomatitis/aphthöse Ulzerationen), Entzündungen der
+Zungenschleimhaut (Glossitis).
 ');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (22,5,0,13,5,' Erkrankungen der Atemwege, des Brustraums und Mediastinums
+INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (22,5,0,13,5,'
+Erkrankungen der Atemwege, des Brustraums und Mediastinums
 ','Gewebeschwellung des Darms (intestinales angioneurotisches Ödem).
 ');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (23,4,0,13,4,' Leber- und Gallenerkrankungen ','Leberversagen, Leberentzündung (Hepatitis - hepatozellulär oder cholestatisch, einschließlich hepatische Nekrose), Gelbsucht.
+INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (23,4,0,13,4,' Leber- und
+Gallenerkrankungen ','Leberversagen, Leberentzündung (Hepatitis - hepatozellulär oder cholestatisch, einschließlich
+hepatische Nekrose), Gelbsucht.
 ');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (24,2,0,13,2,' Erkrankungen der Haut und des Unterhautzellgewebes ','Ausschlag, Überempfindlichkeit/Gewebeschwellung (angioneurotisches Ödem): angioneurotische Ödeme mit Beteiligung von Gesicht, Gliedmaßen, Lippen, Zunge, Stimmapparat des Kehlkopfes (Glottis) und/oder Kehlkopf wurden beobachtet.
+INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (24,2,0,13,2,'
+Erkrankungen der Haut und des Unterhautzellgewebes ','Ausschlag, Überempfindlichkeit/Gewebeschwellung (angioneurotisches
+Ödem): angioneurotische Ödeme mit Beteiligung von Gesicht, Gliedmaßen, Lippen, Zunge, Stimmapparat des Kehlkopfes
+(Glottis) und/oder Kehlkopf wurden beobachtet.
 ');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (25,3,0,13,3,' Erkrankungen der Haut und des Unterhautzellgewebes ','Vermehrtes Schwitzen, Juckreiz, Nesselsucht, Haarausfall. Selten: Schwerwiegende Hautreaktionen (Erythema multiforme, Stevens-Johnson-Syndrom, exfoliative Dermatitis, toxische epidermale Nekrolyse, Pemphigus, Erythroderma).
+INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (25,3,0,13,3,'
+Erkrankungen der Haut und des Unterhautzellgewebes ','Vermehrtes Schwitzen, Juckreiz, Nesselsucht, Haarausfall. Selten:
+Schwerwiegende Hautreaktionen (Erythema multiforme, Stevens-Johnson-Syndrom, exfoliative Dermatitis, toxische epidermale
+Nekrolyse, Pemphigus, Erythroderma).
 ');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (26,6,0,13,6,' Erkrankungen der Haut und des Unterhautzellgewebes ','Ein Symptomenkomplex wurde beschrieben, der mit einigen oder allen der folgenden Nebenwirkungen einhergehen kann: Fieber, Entzündung seröser Häute (Serositis), Gefäßentzündung (Vaskulitis), Muskel- und Gelenkschmerzen/Muskel- und Gelenkentzündungen (Myalgien/Myositis, Arthralgien/Arthritis) und bestimmten Laborwertveränderungen (positive ANA-Titer, erhöhte Blutkörperchensenkungsgeschwindigkeit, Eosinophilie und Leukozytose). Hautausschlag, Lichtempfindlichkeit oder andere Reaktionen der Haut können auftreten.
+INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (26,6,0,13,6,'
+Erkrankungen der Haut und des Unterhautzellgewebes ','Ein Symptomenkomplex wurde beschrieben, der mit einigen oder allen
+der folgenden Nebenwirkungen einhergehen kann: Fieber, Entzündung seröser Häute (Serositis), Gefäßentzündung
+(Vaskulitis), Muskel- und Gelenkschmerzen/Muskel- und Gelenkentzündungen (Myalgien/Myositis, Arthralgien/Arthritis) und
+bestimmten Laborwertveränderungen (positive ANA-Titer, erhöhte Blutkörperchensenkungsgeschwindigkeit, Eosinophilie und
+Leukozytose). Hautausschlag, Lichtempfindlichkeit oder andere Reaktionen der Haut können auftreten.
 ');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (27,3,0,13,3,' Erkrankungen der Nieren und Harnwege ','Nierenfunktionsstörungen, Nierenversagen, vermehrte Eiweißausscheidung im Urin (Proteinurie).
+INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (27,3,0,13,3,'
+Erkrankungen der Nieren und Harnwege ','Nierenfunktionsstörungen, Nierenversagen, vermehrte Eiweißausscheidung im Urin
+(Proteinurie).
 ');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (28,4,0,13,4,' Erkrankungen der Nieren und Harnwege ','Verminderte Harnausscheidung
+INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (28,4,0,13,4,'
+Erkrankungen der Nieren und Harnwege ','Verminderte Harnausscheidung
 ');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (29,3,0,13,3,' Erkrankungen der Geschlechtsorgane und der Brustdrüse ','Impotenz
+INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (29,3,0,13,3,'
+Erkrankungen der Geschlechtsorgane und der Brustdrüse ','Impotenz
 ');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (30,4,0,13,4,' Erkrankungen der Geschlechtsorgane und der Brustdrüse ','Vergrößerung der Brust bei Männern (Gynäkomastie).
+INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (30,4,0,13,4,'
+Erkrankungen der Geschlechtsorgane und der Brustdrüse ','Vergrößerung der Brust bei Männern (Gynäkomastie).
 ');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (31,1,0,13,1,' Allgemeine Erkrankungen und Beschwerden am Verabreichungsort ','Schwächegefühl
+INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (31,1,0,13,1,' Allgemeine
+Erkrankungen und Beschwerden am Verabreichungsort ','Schwächegefühl
 ');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (32,2,0,13,2,' Allgemeine Erkrankungen und Beschwerden am Verabreichungsort ','Müdigkeit ');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (33,3,0,13,3,' Allgemeine Erkrankungen und Beschwerden am Verabreichungsort ','Muskelkrämpfe, Gesichtsrötung (Flush), Ohrgeräusche (Tinnitus), Unwohlsein, Fieber.
+INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (32,2,0,13,2,' Allgemeine
+Erkrankungen und Beschwerden am Verabreichungsort ','Müdigkeit ');
+INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (33,3,0,13,3,' Allgemeine
+Erkrankungen und Beschwerden am Verabreichungsort ','Muskelkrämpfe, Gesichtsrötung (Flush), Ohrgeräusche (Tinnitus),
+Unwohlsein, Fieber.
 ');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (34,2,0,13,2,' Untersuchungen ','Schwächegefühl ');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (35,3,0,13,3,' Untersuchungen ','Müdigkeit
+INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (34,2,0,13,2,'
+Untersuchungen ','Schwächegefühl ');
+INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (35,3,0,13,3,'
+Untersuchungen ','Müdigkeit
 ');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (36,4,0,13,4,' Untersuchungen ','Muskelkrämpfe, Gesichtsrötung (Flush), Ohrgeräusche (Tinnitus), Unwohlsein, Fieber.
+INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (36,4,0,13,4,'
+Untersuchungen ','Muskelkrämpfe, Gesichtsrötung (Flush), Ohrgeräusche (Tinnitus), Unwohlsein, Fieber.
 ');
 
 
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (37,6,0,14,6,' Erkrankungen des Immunsystems ','Überempfindlichkeitsreaktionen einschließlich Juckreiz, Nesselsucht (Urtikaria), Schwellung im Mund-Rachenbereich (Quincke-Ödem), Hautausschlag (Exanthem), Bronchialkrampf (Bronchospasmus), Blutdruckabfall und Kollaps.
+INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (37,6,0,14,6,'
+Erkrankungen des Immunsystems ','Überempfindlichkeitsreaktionen einschließlich Juckreiz, Nesselsucht (Urtikaria),
+Schwellung im Mund-Rachenbereich (Quincke-Ödem), Hautausschlag (Exanthem), Bronchialkrampf (Bronchospasmus),
+Blutdruckabfall und Kollaps.
 ');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (38,2,0,14,2,' Stoffwechsel- und Ernährungsstörungen
+INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (38,2,0,14,2,'
+Stoffwechsel- und Ernährungsstörungen
 ','Erhöhter Blutzuckergehalt (Hyperglykämie).
 ');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (39,6,0,14,6,' Stoffwechsel- und Ernährungsstörungen ','Senkung des Blut-Kaliumspiegels (Hypokaliämie): unter der Therapie mit Beta2- Agonisten kann es möglicherweise zu einer sehr ausgeprägten Senkung des BlutkaliumSpiegels kommen; Übersäuerung des Blutes (Laktatazidose).
+INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (39,6,0,14,6,'
+Stoffwechsel- und Ernährungsstörungen ','Senkung des Blut-Kaliumspiegels (Hypokaliämie): unter der Therapie mit Beta2-
+Agonisten kann es möglicherweise zu einer sehr ausgeprägten Senkung des BlutkaliumSpiegels kommen; Übersäuerung des
+Blutes (Laktatazidose).
 ');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (40,6,0,14,6,' Psychiatrische Erkrankungen
+INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (40,6,0,14,6,'
+Psychiatrische Erkrankungen
 ','Schlaflosigkeit (Insomnie) ');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (41,2,0,14,2,' Erkrankungen des Nervensystems ','Zittern (Tremor), Kopfschmerzen
+INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (41,2,0,14,2,'
+Erkrankungen des Nervensystems ','Zittern (Tremor), Kopfschmerzen
 ');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (42,3,0,14,3,' Erkrankungen des Nervensystems ','Unruhe
+INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (42,3,0,14,3,'
+Erkrankungen des Nervensystems ','Unruhe
 ');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (43,6,0,14,6,' Erkrankungen des Nervensystems ','Schwindel');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (44,2,0,14,2,' Herzerkrankungen
-','Herzrasen (Tachykardie). Herzrhythmusstörungen einschließlich Vorhofflimmern, Anstieg der Herzfrequenz (supraventrikuläre Tachykardie) und unregelmäßigem Puls (ventrikuläre Extrasystolie), Brustenge (pektanginöse Beschwerden) und Herzklopfen (Palpitationen), Sauerstoffmangel am Herzmuskel (myokardiale Ischämie)
+INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (43,6,0,14,6,'
+Erkrankungen des Nervensystems ','Schwindel');
+INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (44,2,0,14,2,'
+Herzerkrankungen
+','Herzrasen (Tachykardie). Herzrhythmusstörungen einschließlich Vorhofflimmern, Anstieg der Herzfrequenz
+(supraventrikuläre Tachykardie) und unregelmäßigem Puls (ventrikuläre Extrasystolie), Brustenge (pektanginöse
+Beschwerden) und Herzklopfen (Palpitationen), Sauerstoffmangel am Herzmuskel (myokardiale Ischämie)
 ');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (45,6,0,14,6,' Herzerkrankungen
+INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (45,6,0,14,6,'
+Herzerkrankungen
 ','Minderdurchblutung des Herzmuskels (Myokardischämie).
 ');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (46,6,0,14,6,' Gefäßerkrankungen ','Periphere Erweiterung der Blutgefäße
+INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (46,6,0,14,6,'
+Gefäßerkrankungen ','Periphere Erweiterung der Blutgefäße
 ');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (47,6,0,14,6,' Erkrankungen der Atemwege, des Brustraums und Mediastinums ','Husten, Bronchialkrampf (paradoxer Bronchospasmus), Reizung im Rachenbereich. <br> <b>Hinweis</b> <br> Wie bei anderen Inhalationstherapien kann nach der Anwendung von Salbutamol ein Bronchialkrampf auftreten mit einer sofortigen Zunahme des Giemens (Keuchens). In diesem Fall sollte sofort ein anderes bronchienerweiterndes Arzneimittel mit schnellem Wirkungseintritt inhaliert werden. Die Behandlung mit Salbutamol soll unverzüglich abgebrochen und der behandelnde Arzt informiert werden. Dieser entscheidet, ob weitere Maßnahmen erforderlich sind.
+INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (47,6,0,14,6,'
+Erkrankungen der Atemwege, des Brustraums und Mediastinums ','Husten, Bronchialkrampf (paradoxer Bronchospasmus),
+Reizung im Rachenbereich. <br> <b>Hinweis</b> <br> Wie bei anderen Inhalationstherapien kann nach der Anwendung von
+Salbutamol ein Bronchialkrampf auftreten mit einer sofortigen Zunahme des Giemens (Keuchens). In diesem Fall sollte
+sofort ein anderes bronchienerweiterndes Arzneimittel mit schnellem Wirkungseintritt inhaliert werden. Die Behandlung
+mit Salbutamol soll unverzüglich abgebrochen und der behandelnde Arzt informiert werden. Dieser entscheidet, ob weitere
+Maßnahmen erforderlich sind.
 ');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (48,3,0,14,3,' Erkrankungen des Gastrointestinaltrakts ','Reizung im Mund oder Rachenbereich und Änderung des Geschmackempfindens.
+INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (48,3,0,14,3,'
+Erkrankungen des Gastrointestinaltrakts ','Reizung im Mund oder Rachenbereich und Änderung des Geschmackempfindens.
 ');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (49,3,0,14,3,' Skelettmuskulatur-, Bindegewebs- und Knochenerkrankungen ','Muskelkrämpfe');
-INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (50,4,0,14,4,' Skelettmuskulatur-, Bindegewebs- und Knochenerkrankungen
+INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (49,3,0,14,3,'
+Skelettmuskulatur-, Bindegewebs- und Knochenerkrankungen ','Muskelkrämpfe');
+INSERT INTO side_effect_content (id, number, state,iddrug, idside_effect,purpose, text )VALUES (50,4,0,14,4,'
+Skelettmuskulatur-, Bindegewebs- und Knochenerkrankungen
 ','Störungen beim Wasserlassen, Sodbrennen sowie Blutdrucksteigerungen oder -senkungen .');
-
-
 
 
 --
@@ -1131,83 +1191,156 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
 <div class="row">
     <div class="col-sm-6 nopadd">
         <div class="row">
-            <div class="col-sm-12 info_notuse"><b>Allergisch </b> gegen
-                <ul>
-                    <li>Metforminhydrochlorid</li>
-                    <li>Hypromellose</li>
-                    <li>Povidon K25</li>
-                    <li>Magnesiumstearat (Ph. Eur.)</li>
-                    <li>Macrogol 6000</li>
-                    <li>Titandioxid (E 171)</li>
-                </ul>
+            <div class="col-sm-12 info_notuse">
+                <div class="row">
+                    <div class="col-xs-10 nopadd">
+                        <b>Allergisch </b> gegen
+                    </div>
+                    <div class="col-xs-2">
+                        <img width="32" src="./../../assets/disease/allergy.svg"></div>
+                </div>
+                <div class="row">
+                    <ul>
+                        <li>Metforminhydrochlorid</li>
+                        <li>Hypromellose</li>
+                        <li>Povidon K25</li>
+                        <li>Magnesiumstearat (Ph. Eur.)</li>
+                        <li>Macrogol 6000</li>
+                        <li>Titandioxid (E 171)</li>
+                    </ul>
+                </div>
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-12 info_notuse"> <b>Leberprobleme </b> </div>
+            <div class="col-sm-12 info_notuse">
+                <div class="row">
+                    <div class="col-xs-10 nopadd">
+                        <b>Leberprobleme</b>
+                    </div>
+                    <div class="col-xs-2">
+                        <img width="32" src="./../../assets/disease/liver.svg"></div>
+                </div>
+                    </div>
         </div>
         <div class="row">
-            <div class="col-sm-12 info_notuse"><b>Schwere Einschränkung der Nierenfunktion </b> (glomeruläre
-                Filtrationsrate
-                unter 30 ml/min).</div>
+            <div class="col-sm-12 info_notuse">
+                <div class="row">
+                    <div class="col-xs-10 nopadd">
+                        <b>Schwere Einschränkung der Nierenfunktion </b> (glomeruläre
+                        Filtrationsrate
+                        unter 30 ml/min)
+                    </div>
+                    <div class="col-xs-2">
+                        <img width="32" src="./../../assets/disease/kidney.svg"></div>
+                </div>
+                    </div>
         </div>
         <div class="row">
-            <div class="col-sm-12 info_notuse"><b>Unkontrollierten Diabetes</b>
-                Beispiel mit
-                <ul>
-                    <li>schwerer Hyperglykämie (sehr hohem Blutzucker), </li>
-                    <li>Übelkeit, </li>
-                    <li>Erbrechen, </li>
-                    <li>Durchfall, </li>
-                    <li>schneller Gewichtsabnahme,</li>
-                    <li><a class="info_words" type="button" data-toggle="modal"
-                            data-target="#laktatazidose">Laktatazidose</a>
-                    </li>
-                    <li><a class="info_words" type="button" data-toggle="modal"
-                            data-target="#ketoazidose">Ketoazidose</a>
-                    </li>
-                </ul>
+            <div class="col-sm-12 info_notuse">
+                <div class="row">
+                    <div class="col-xs-10 nopadd">
+                        <b>Unkontrollierten Diabetes </b>
+                    </div>
+                    <div class="col-xs-2">
+                        <img width="32" src="./../../assets/disease/diabetes.svg"></div>
+                </div>
+                <div class="row">
+                    Beispiel mit
+                    <ul>
+                        <li>schwerer Hyperglykämie (sehr hohem Blutzucker), </li>
+                        <li>Übelkeit, </li>
+                        <li>Erbrechen, </li>
+                        <li>Durchfall, </li>
+                        <li>schneller Gewichtsabnahme,</li>
+                        <li><a class="info_words" type="button" data-toggle="modal"
+                                data-target="#laktatazidose">Laktatazidose</a>
+                        </li>
+                        <li><a class="info_words" type="button" data-toggle="modal"
+                                data-target="#ketoazidose">Ketoazidose</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-12 info_notuse">Trinken von viel Alkohol oder Leiden unter einer
-                Alkoholvergiftung
-                leiden.</div>
+            <div class="col-sm-12 info_notuse">
+                <div class="row">
+                    <div class="col-xs-10 nopadd">
+                        <b>Trinken von viel Alkohol oder Leiden unter einer
+                            Alkoholvergiftung
+                            leiden. </b>
+                    </div>
+                    <div class="col-xs-2">
+                        <img width="32" src="./../../assets/disease/nonalcohol.svg"></div>
+                </div>
+                    </div>
         </div>
     </div>
     <div class="col-sm-6 nopadd">
         <div class="row">
-            <div class="col-sm-12 info_notuse"><b>Verlust von zu viel Körperwasser (Dehydratation) </b>
-                Beispiel durch
-                <ul>
-                    <li>lang andauernden oder starken Durchfall</li>
-                    <li>wenn Sie sich mehrmals hintereinander erbrochen
-                        haben.</li>
-                </ul>
-                Dieser Flüssigkeitsverlust könnte zu Nierenproblemen führen, wodurch Sie gefährdet
-                sind, eine Übersäuerung mit Milchsäure (<a class="info_words" type="button" data-toggle="modal"
-                    data-target="#laktatazidose">Laktatazidose</a>) zu entwickeln .
+            <div class="col-sm-12 info_notuse">
+                <div class="row">
+                    <div class="col-xs-10 nopadd">
+                        <b>Verlust von zu viel Körperwasser (Dehydratation) </b>
+                    </div>
+                    <div class="col-xs-2">
+                        <img width="32" src="./../../assets/disease/dehydratation.svg"></div>
+                </div>
+                <div class="row">
+                    Beispiel durch
+                    <ul>
+                        <li>lang andauernden oder starken Durchfall</li>
+                        <li>wenn Sie sich mehrmals hintereinander erbrochen
+                            haben.</li>
+                    </ul>
+                    Dieser Flüssigkeitsverlust könnte zu Nierenproblemen führen, wodurch Sie gefährdet
+                    sind, eine Übersäuerung mit Milchsäure (<a class="info_words" type="button" data-toggle="modal"
+                        data-target="#laktatazidose">Laktatazidose</a>) zu entwickeln .
+                </div>
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-12 info_notuse"><b>Leiden an schweren Infektion </b>
-                Beispiel einer Infektion der Lunge, der Bronchien oder der Niere. </br>
-                Schwere Infektionen könnten zu Nierenproblemen führen, wodurch Sie gefährdet sind, eine
-                Übersäuerung mit
-                Milchsäure (<a class="info_words" type="button" data-toggle="modal"
-                    data-target="#laktatazidose">Laktatazidose</a>) zu
-                entwickeln.
+            <div class="col-sm-12 info_notuse">
+                <div class="row">
+                    <div class="col-xs-10 nopadd">
+                        <b>Leiden an schweren Infektion </b>
+                    </div>
+                    <div class="col-xs-2">
+                        <img width="32" src="./../../assets/disease/infection.svg"></div>
+                </div>
+                <div class="row">
+                    Beispiel einer Infektion der Lunge, der Bronchien oder der Niere. </br>
+                    Schwere Infektionen könnten zu Nierenproblemen führen, wodurch Sie gefährdet sind, eine
+                    Übersäuerung mit
+                    Milchsäure (<a class="info_words" type="button" data-toggle="modal"
+                        data-target="#laktatazidose">Laktatazidose</a>) zu
+                    entwickeln.
+                </div>
             </div>
         </div>
+
         <div class="row">
-            <div class="col-sm-12 info_notuse"> Behandlung wegen dekompensierter Herzschwäche oder Erleiden
-                eines
-                Herzinfarkt vor
-                Kurzem, schwere Kreislaufprobleme (wie zum Beispiel einen Schock) oder
-                Schwierigkeiten mit der Atmung haben. <br> Dies könnte zu einem Sauerstoffmangel im Gewebe
-                führen, wodurch Sie gefährdet sind, eine Übersäuerung mit Milchsäure (<a class="info_words"
-                    type="button" data-toggle="modal" data-target="#laktatazidose">Laktatazidose</a>) zu
-                entwickeln.</div>
+            <div class="col-sm-12 info_notuse">
+                <div class="row">
+                    <div class="col-xs-10 nopadd">
+                        <b>Behandlung wegen dekompensierter Herzschwäche oder Erleiden
+                            eines
+                            Herzinfarkt vor
+                            Kurzem, schwere Kreislaufprobleme (wie zum Beispiel einen Schock) oder
+                            Schwierigkeiten mit der Atmung haben. </b>
+                    </div>
+                    <div class="col-xs-2">
+                        <img width="32" src="./../../assets/disease/heart.svg"></div>
+                </div>
+                <div class="row">
+                    Dies könnte zu einem Sauerstoffmangel im Gewebe
+                    führen, wodurch Sie gefährdet sind, eine Übersäuerung mit Milchsäure (<a class="info_words"
+                        type="button" data-toggle="modal" data-target="#laktatazidose">Laktatazidose</a>) zu
+                    entwickeln.
+                </div>
+            </div>
         </div>
+
     </div>
 </div>
 <div>
@@ -2078,32 +2211,71 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
 <div class="row">
     <div class="col-sm-6 nopadd">
         <div class="row">
-            <div class="col-sm-12 info_notuse"><b>Allergisch </b> gegen
-                <ul>
-                    <li>Amlodipin</li>
-                    <li>Mikrokristalline Cellulose</li>
-                    <li>CalciumhydrogenphosphatDihydrat</li>
-                    <li>Carboxymethylstärke-Natrium (Typ A) (Ph. Eur.)</li>
-                    <li>Magnesiumstearat (Ph.Eur.)
-                        [pflanzlich]</li>
-                </ul>
+            <div class="col-sm-12 info_notuse">
+                <div class="row">
+                    <div class="col-xs-10 nopadd">
+                        <b>Allergisch </b> gegen
+                    </div>
+                    <div class="col-xs-2">
+                        <img width="32" src="./../../assets/disease/allergy.svg"></div>
+                </div>
+                <div class="row">
+                    <ul>
+                        <li>Amlodipin</li>
+                        <li>Mikrokristalline Cellulose</li>
+                        <li>CalciumhydrogenphosphatDihydrat</li>
+                        <li>Carboxymethylstärke-Natrium (Typ A) (Ph. Eur.)</li>
+                        <li>Magnesiumstearat (Ph.Eur.)
+                            [pflanzlich]</li>
+                    </ul>
+                </div>
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-12 info_notuse"> <b>Leiden an stark erniedrigtem Blutdruck (Hypotonie) </b> </div>
+            <div class="col-sm-12 info_notuse">
+                <div class="row">
+                    <div class="col-xs-10 nopadd">
+                        <b>Leiden an stark erniedrigtem Blutdruck (Hypotonie) </b>
+                    </div>
+                    <div class="col-xs-2">
+                        <img width="32" src="./../../assets/disease/bloodpressure.png"></div>
+                </div>
+
+            </div>
         </div>
     </div>
     <div class="col-sm-6 nopadd">
         <div class="row">
-            <div class="col-sm-12 info_notuse"><b>Leiden an schwerer Verengung des Ausflusstraktes der linken
-                    Herzkammer</b>
-                (Aortenstenose) oder an einem <b>kardiogenen Schock</b> (dann kann Ihr Herz den Körper
-                nicht mehr mit genügend Blut versorgen)</div>
-        </div>
-        <div class="row">
-            <div class="col-sm-12 info_notuse"><b>Leiden an Herzinsuffizienz nach einem Herzinfarkt </b>
+            <div class="col-sm-12 info_notuse">
+                <div class="row">
+                    <div class="col-xs-10 nopadd">
+                        <b>Leiden an schwerer Verengung des Ausflusstraktes der linken
+                            Herzkammer</b> </div>
+                    <div class="col-xs-2">
+                        <img width="32" src="./../../assets/disease/heart.svg"></div>
+                </div>
+                <div class="row">
+                    <ul>
+                        (Aortenstenose) oder an einem <b>kardiogenen Schock</b> (dann kann Ihr Herz den Körper
+                        nicht mehr mit genügend Blut versorgen)
+                    </ul>
+                </div>
             </div>
         </div>
+
+        <div class="row">
+            <div class="col-sm-12 info_notuse">
+                <div class="row">
+                    <div class="col-xs-10 nopadd">
+                        <b>Leiden an Herzinsuffizienz nach einem Herzinfarkt</b>
+                    </div>
+                    <div class="col-xs-2">
+                        <img width="32" src="./../../assets/disease/heart.svg"></div>
+                </div>
+
+            </div>
+        </div>
+
     </div>
 </div>
 <div>
@@ -2587,8 +2759,8 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
 <hr>
 <h3><i class="far fa-calendar-alt epillcolor"></i> Verfallsdatum</h3>
 <p>Sie dürfen dieses Arzneimittel nach dem auf der Blisterpackung und der Faltschachtel nach
-    < Verwendbar bis > angegebenen Verfalldatum nicht mehr verwenden. Das Verfalldatum
-    bezieht sich auf den letzten Tag des angegebenen Monats.</p>
+    < Verwendbar bis> angegebenen Verfalldatum nicht mehr verwenden. Das Verfalldatum
+        bezieht sich auf den letzten Tag des angegebenen Monats.</p>
 <hr>
 <h3><i class="fas fa-trash-alt epillcolor"></i> Entsorgung des Medikaments</h3>
 <p>Entsorgen Sie Arzneimittel nicht im Abwasser. <br>Entsorgen Sie diese im Haushaltsabfall.<br>
@@ -2671,26 +2843,69 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
     <div class="col-sm-6 nopadd">
         <div class="row">
             <div class="col-sm-12 info_notuse">
-                Allergie gegen Enalaprilmaleat, einen anderen ACE-Hemmer oder einen der sonstigen
-                Bestandteile, wie Croscarmellose-Natrium, Lactose-Monohydrat, Magnesiumstearat (Ph. Eur.),
-                vorverkleisterte Maisstärke, Natriumhydrogencarbonat dieses Arzneimittels sind
+                <div class="row">
+                    <div class="col-xs-10 nopadd">
+                        <b> Allergie gegen</b>
+                    </div>
+                    <div class="col-xs-2">
+                        <img width="32" src="./../../assets/disease/allergy.svg"></div>
+                </div>
+                <div class="row">
+                    <ul>
+                        <li>Enalaprilmaleat</li>
+                        <li>nderen ACE-Hemmer</li>
+                        <li>Croscarmellose-Natrium</li>
+                        <li>Lactose-Monohydrat</li>
+                        <li>Magnesiumstearat (Ph. Eur.)</li>
+                        <li>vorverkleisterte Maisstärke</li>
+                        <li>Natriumhydrogencarbonat</li>
+                    </ul>
+                </div>
+
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-12 info_notuse"> Wenn bei Ihnen während einer früheren Behandlung mit einem
-                ACE-Hemmer
-                Gewebeschwellungen (angioneurotische Ödeme) auftraten wenn Sie eine vererbte Neigung zu
-                Gewebeschwellungen oder Gewebeschwellungen aus unbekannter Ursache haben (hereditäres oder
-                idiopathisches Angioödem)</div>
+            <div class="col-sm-12 info_notuse">
+                <div class="row">
+                    <div class="col-xs-10 nopadd">
+                        <b>Gewebeschwellungen (angioneurotische Ödeme)</b>
+                    </div>
+                    <div class="col-xs-2">
+                        <img width="32" src=" "></div>
+                </div>
+                <div class="row">
+                    <ul>
+                        <li>Wenn bei Ihnen während einer früheren Behandlung mit einem
+                            ACE-Hemmer
+                            Gewebeschwellungen (angioneurotische Ödeme) auftraten</li>
+                        <li>Wenn Sie eine vererbte Neigung zu
+                            Gewebeschwellungen oder Gewebeschwellungen aus unbekannter Ursache haben (hereditäres oder
+                            idiopathisches Angioödem)</li>
+                    </ul>
+                </div>
+
+            </div>
         </div>
+
     </div>
     <div class="col-sm-6 nopadd">
         <div class="row">
-            <div class="col-sm-12 info_notuse">Wenn Sie mehr als drei Monate schwanger sind. (Es wird empfohlen,
-                Enalapril AL 5mg auch in der frühen Phase der Schwangerschaft nicht anzuwenden, siehe Abschnitt
-                Schwangerschaft, Stillzeit und Zeugungs-/Gebärfähigkeit).</div>
-        </div>
+            <div class="col-sm-12 info_notuse">
+                <div class="row">
+                    <div class="col-xs-10 nopadd">
+                        <b>Wenn Sie mehr als drei Monate schwanger sind</b>
+                    </div>
+                    <div class="col-xs-2">
+                        <img width="32" src="./../../assets/disease/pregnant.svg"></div>
+                </div>
+                <div class="row">
+                    Es wird empfohlen,
+                    Enalapril AL 5mg auch in der frühen Phase der Schwangerschaft nicht anzuwenden, siehe Abschnitt
+                    Schwangerschaft, Stillzeit und Zeugungs-/Gebärfähigkeit
+                </div>
 
+            </div>
+        </div>
     </div>
 </div>
 <div>
@@ -3203,7 +3418,7 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic, addre
                 <div class="col-sm-1 col-xs-2 addressicons"><a target="_blank"
                         href="https://www.google.com/maps/dir//ALIUD+PHARMA+GmbH,+Gottlieb-Daimler-Stra%C3%9Fe+19,+89150+Laichingen/@48.4899986,9.6696289,13z/data=!4m9!4m8!1m0!1m5!1m1!1s0x479977e01269a341:0x773bf99f29081b09!2m2!1d9.7046482!2d48.489947!3e0"><i
                             class="fas fa-location-arrow"></i></a></div>
-                <div class="col-sm-11 col-xs-10 addresstext ">  Gottlieb-Daimler-Straße 19
+                <div class="col-sm-11 col-xs-10 addresstext "> Gottlieb-Daimler-Straße 19
                     <br />
                     89150 Laichingen</div>
                 <div class="col-sm-1 col-xs-2 addressicons"><i class="fas fa-phone"></i></div>
@@ -3213,9 +3428,10 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic, addre
                 <div class="col-sm-11 col-xs-10 addresstext"> +49 7333 9651-4000</div>
                 <div class="col-sm-1 col-xs-2 addressicons"><i class="fas fa-envelope"></i></div>
                 <div class="col-sm-11 col-xs-10 addresstext"> <a href="mailto:info@aliud.de">info@aliud.de</a>
-                    </div>
+                </div>
                 <div class="col-sm-1 col-xs-2 addressicons"><i class="fas fa-globe"></i></div>
-                <div class="col-sm-11 col-xs-10 addresstext"> <a href="https://www.aliud.de/">https://www.aliud.de/</a></div>
+                <div class="col-sm-11 col-xs-10 addresstext"> <a href="https://www.aliud.de/">https://www.aliud.de/</a>
+                </div>
             </div>
         </div>
         <div class="col-md-3 col-xs-offset-3 col-xs-6">
@@ -3231,9 +3447,9 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic, addre
                 <div class="col-sm-1 col-xs-2 addressicons"><i class="fas fa-building"></i></div>
                 <div class="col-sm-11 col-xs-10 addresstext"> STADA Arzneimittel AG</div>
                 <div class="col-sm-1 col-xs-2 addressicons"><a target="_blank"
-                    href="https://www.google.com/maps/dir//STADA+Arzneimittel+AG,+Stadastra%C3%9Fe+2+-+18,+61118+Bad+Vilbel/@50.2025518,8.7100077,13z/data=!4m9!4m8!1m0!1m5!1m1!1s0x47bd055e775a5881:0xb95e3aa98e269e66!2m2!1d8.745027!2d50.2025021!3e0"><i
-                        class="fas fa-location-arrow"></i></a></i></div>
-                <div class="col-sm-11 col-xs-10 addresstext">  Stadastraße 2-18
+                        href="https://www.google.com/maps/dir//STADA+Arzneimittel+AG,+Stadastra%C3%9Fe+2+-+18,+61118+Bad+Vilbel/@50.2025518,8.7100077,13z/data=!4m9!4m8!1m0!1m5!1m1!1s0x47bd055e775a5881:0xb95e3aa98e269e66!2m2!1d8.745027!2d50.2025021!3e0"><i
+                            class="fas fa-location-arrow"></i></a></i></div>
+                <div class="col-sm-11 col-xs-10 addresstext"> Stadastraße 2-18
                     <br />
                     61118 Bad Vilbel</div>
             </div>
@@ -3934,21 +4150,38 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
 <div class="row">
     <div class="col-sm-6 nopadd">
         <div class="row">
-            <div class="col-sm-12 info_notuse"><b>Allergisch </b> gegen
-                <ul>
-                    <li>Salbutamol</li>
-                    <li>Ethanol (3,9 mg/Sprühstoß)</li>
-                    <li>Norfluran (HFA-134a)</li>
-
-                </ul>
+            <div class="col-sm-12 info_notuse">
+                <div class="row">
+                    <div class="col-xs-10 nopadd">
+                        <b>Allergisch </b> gegen
+                    </div>
+                    <div class="col-xs-2">
+                        <img width="32" src="./../../assets/disease/allergy.svg"></div>
+                </div>
+                <div class="row">
+                    <ul>
+                        <li>Salbutamol</li>
+                        <li>Ethanol (3,9 mg/Sprühstoß)</li>
+                        <li>Norfluran (HFA-134a)</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
     <div class="col-sm-6 nopadd">
         <div class="row">
-            <div class="col-sm-12 info_notuse"><b>Bei gleichzeitiger Behandlung mit Beta-Rezeptorenblockern.
-                    Beta-Rezeptorenblocker können schwere Bronchialkrämpfe
-                    auslösen.</div>
+            <div class="col-sm-12 info_notuse">
+                <div class="row">
+                    <div class="col-xs-10 nopadd">
+                        <b>Bei gleichzeitiger Behandlung mit Beta-Rezeptorenblockern.
+                            Beta-Rezeptorenblocker können schwere Bronchialkrämpfe
+                            auslösen. </b>
+                    </div>
+                    <div class="col-xs-2">
+                        <img width="32" src="./../../assets/disease/drugs.svg"></div>
+                </div>
+
+            </div>
         </div>
     </div>
 </div>

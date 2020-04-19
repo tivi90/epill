@@ -12,21 +12,38 @@ INSERT INTO packaging_section (id, state, text, iddrug, idpackaging_topic) VALUE
 <div class="row">
     <div class="col-sm-6 nopadd">
         <div class="row">
-            <div class="col-sm-12 info_notuse"><b>Allergisch </b> gegen
-                <ul>
-                    <li>Salbutamol</li>
-                    <li>Ethanol (3,9 mg/Sprühstoß)</li>
-                    <li>Norfluran (HFA-134a)</li>
-
-                </ul>
+            <div class="col-sm-12 info_notuse">
+                <div class="row">
+                    <div class="col-xs-10 nopadd">
+                        <b>Allergisch </b> gegen
+                    </div>
+                    <div class="col-xs-2">
+                        <img width="32" src="./../../assets/disease/allergy.svg"></div>
+                </div>
+                <div class="row">
+                    <ul>
+                        <li>Salbutamol</li>
+                        <li>Ethanol (3,9 mg/Sprühstoß)</li>
+                        <li>Norfluran (HFA-134a)</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
     <div class="col-sm-6 nopadd">
         <div class="row">
-            <div class="col-sm-12 info_notuse"><b>Bei gleichzeitiger Behandlung mit Beta-Rezeptorenblockern.
-                    Beta-Rezeptorenblocker können schwere Bronchialkrämpfe
-                    auslösen.</div>
+            <div class="col-sm-12 info_notuse">
+                <div class="row">
+                    <div class="col-xs-10 nopadd">
+                        <b>Bei gleichzeitiger Behandlung mit Beta-Rezeptorenblockern.
+                            Beta-Rezeptorenblocker können schwere Bronchialkrämpfe
+                            auslösen. </b> 
+                    </div>
+                    <div class="col-xs-2">
+                        <img width="32" src="./../../assets/disease/drugs.svg"></div>
+                </div>
+                
+            </div>
         </div>
     </div>
 </div>
